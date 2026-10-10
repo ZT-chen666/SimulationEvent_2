@@ -38,6 +38,8 @@ BUILD_DIR = build
 C_SOURCES =  \
 app/agri_control.c\
 app/board_port.c\
+app/tank_sensor.c\
+app/ultrasonic.c\
 app/app_runtime.c\
 gd32vf103/SoC/gd32vf103/Board/Hardware/TFT/lcd_driver.c\
 gd32vf103/SoC/gd32vf103/Board/Hardware/TFT/lcd_calculate.c\

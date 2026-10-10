@@ -1,8 +1,0 @@
-liteos_m//kernel/src/los_sem.c:53:30:OsSemInit	16	static
-liteos_m//kernel/src/los_sem.c:87:30:OsSemCreate	32	static
-liteos_m//kernel/src/los_sem.c:133:30:LOS_SemCreate	0	static
-liteos_m//kernel/src/los_sem.c:145:30:LOS_BinarySemCreate	0	static
-liteos_m//kernel/src/los_sem.c:157:30:LOS_SemDelete	16	static
-liteos_m//kernel/src/los_sem.c:216:25:LOS_SemPend	48	static
-liteos_m//kernel/src/los_sem.c:277:25:LOS_SemPost	16	static
-liteos_m//kernel/src/los_sem.c:315:25:LOS_SemGetValue	16	static

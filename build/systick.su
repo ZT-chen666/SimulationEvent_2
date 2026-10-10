@@ -1,2 +1,0 @@
-gd32vf103/SoC/gd32vf103/Board/SYSTEM/systick/systick.c:44:6:delay_ms	48	static
-gd32vf103/SoC/gd32vf103/Board/SYSTEM/systick/systick.c:66:6:delay_us	48	static

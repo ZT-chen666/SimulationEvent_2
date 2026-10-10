@@ -1,6 +1,0 @@
-liteos_m//utils/los_debug.c:87:7:OsLogLevelCheck.part.0	16	static
-liteos_m//utils/los_debug.c:51:6:OsBackTraceHookSet	0	static
-liteos_m//utils/los_debug.c:58:6:OsBackTraceHookCall	16	static
-liteos_m//utils/los_debug.c:68:6:OsExcHookRegister	16	static
-liteos_m//utils/los_debug.c:77:6:OsDoExcHook	16	static
-liteos_m//utils/los_debug.c:87:7:OsLogLevelCheck	0	static

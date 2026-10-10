@@ -27,6 +27,7 @@ typedef struct {
     int16_t temperature10;
     uint16_t humidity10;
     uint8_t soil, light, water, valid;
+    uint16_t distance_mm, soil_adc, light_adc;
 } AgSample;
 
 typedef struct {

@@ -1,9 +1,0 @@
-app/board_port.c:38:13:pin	0	static
-app/board_port.c:55:13:row	112	static
-app/board_port.c:10:6:board_safe_init	16	static
-app/board_port.c:18:6:board_sensor_init	16	static
-app/board_port.c:19:6:board_read_sample	32	static
-app/board_port.c:40:6:board_apply	16	static
-app/board_port.c:42:9:board_buttons	16	static
-app/board_port.c:48:6:board_display_init	16	static
-app/board_port.c:91:6:board_display	64	static

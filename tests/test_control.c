@@ -6,7 +6,7 @@
 static unsigned assertions,scenarios;
 #define CHECK(x) do {assert(x);assertions++;}while(0)
 static AgSample sample(uint32_t t,unsigned soil,unsigned water)
-{AgSample s={t,250,600,(uint8_t)soil,60,(uint8_t)water,AG_ALL};return s;}
+{AgSample s={t,250,600,(uint8_t)soil,60,(uint8_t)water,AG_ALL,0,0,0};return s;}
 static void tick(AgControl *c,uint32_t t,unsigned soil,unsigned water)
 {AgSample s=sample(t,soil,water);ag_accept(c,&s);ag_step(c,t);}
 static void ready(AgControl *c,unsigned soil)

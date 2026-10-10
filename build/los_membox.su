@@ -1,6 +1,0 @@
-liteos_m//kernel/src/mm/los_membox.c:112:8:LOS_MemboxInit	32	static
-liteos_m//kernel/src/mm/los_membox.c:160:7:LOS_MemboxAlloc	16	static
-liteos_m//kernel/src/mm/los_membox.c:184:8:LOS_MemboxFree	16	static
-liteos_m//kernel/src/mm/los_membox.c:211:6:LOS_MemboxClr	0	static
-liteos_m//kernel/src/mm/los_membox.c:223:6:LOS_ShowBox	32	static
-liteos_m//kernel/src/mm/los_membox.c:250:8:LOS_MemboxStatisticsGet	0	static

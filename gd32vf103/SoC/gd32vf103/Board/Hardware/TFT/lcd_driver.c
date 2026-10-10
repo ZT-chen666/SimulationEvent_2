@@ -1,19 +1,10 @@
-
-/******************************************************************************
-//              GND   电源地
-//              VCC   接5V或3.3v电源
-//              SCL   接PA5（SCL）
-//              SDA   接PA7（SDA）
-//              RES   接PB0
-//              DC    接PB1
-//              CS    接PA4 
-//				BL	  背光控制，如无需控制可接3.3V常亮
-//            	取模参数：
-//            	    字体大小：16×16
-//            	    点阵格式：阴码
-//            	    取模方式：逐行式
-//            	    取模走向：顺向（高位在前）
-*******************************************************************************/
+/* ST7735S candidate display, 128 x 160, software SPI.
+ * User-confirmed platform instance: tft_st7735s_1.
+ * SCL PB6, SDA PB7, RES PA15, DC PB4, CS PB5.
+ * GND common; VCC and BL 3.3 V subject to module rating.
+ * Initialization sequence derived from the supplied ST7735 teaching driver;
+ * verify orientation, color order and timing in the official simulator.
+ */
 #include "lcd_driver.h"
 #include "systick.h"
 #include "stdlib.h"  //函数调用头文件
@@ -89,13 +80,13 @@ void Lcd_Reset(void)
 	delay_ms(50);
 }
 
-//LCD Init For 1.44Inch LCD Panel with ST7735R.
+// ST7735 teaching initialization retained; verify on tft_st7735s_1.
 void Lcd_Init(void)
 {	
 	LCD_GPIO_Init();
 	Lcd_Reset(); //Reset before LCD Init.
 
-	//LCD Init For 1.44Inch LCD Panel with ST7735R.
+	// ST7735 teaching initialization retained; verify on tft_st7735s_1.
 	Lcd_WriteIndex(0x11);//Sleep exit 
 	delay_ms (120);
 		
@@ -218,15 +209,15 @@ void Lcd_SetRegion(u16 x_start,u16 y_start,u16 x_end,u16 y_end)
 {		
 	Lcd_WriteIndex(0x2a);
 	Lcd_WriteData(0x00);
-	Lcd_WriteData(x_start);//Lcd_WriteData(x_start+2);
+	Lcd_WriteData(x_start);
 	Lcd_WriteData(0x00);
-	Lcd_WriteData(x_end+2);
+	Lcd_WriteData(x_end);
 
 	Lcd_WriteIndex(0x2b);
 	Lcd_WriteData(0x00);
-	Lcd_WriteData(y_start+0);
+	Lcd_WriteData(y_start);
 	Lcd_WriteData(0x00);
-	Lcd_WriteData(y_end+1);
+	Lcd_WriteData(y_end);
 	
 	Lcd_WriteIndex(0x2c);
 

@@ -1,8 +1,0 @@
-app/app_runtime.c:23:17:now_ms	32	static
-app/app_runtime.c:32:14:sensor_task	48	static
-app/app_runtime.c:30:13:check	32	static
-app/app_runtime.c:52:14:control_task	272	static
-app/app_runtime.c:133:13:task	64	static
-app/app_runtime.c:77:13:enqueue	32	static
-app/app_runtime.c:82:14:ui_task	304	static
-app/app_runtime.c:139:6:app_start	16	static

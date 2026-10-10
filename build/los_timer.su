@@ -1,7 +1,0 @@
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:56:13:HalTickStart	16	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:79:6:eclic_mtip_handler	0	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:87:11:HalSysTickReload	16	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:92:13:HalGetTickCycle	48	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:104:11:HalTickLock	0	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:109:11:HalTickUnlock	0	static
-liteos_m//kernel/arch/risc-v/nuclei/gcc/los_timer.c:114:8:HalEnterSleep	0	static

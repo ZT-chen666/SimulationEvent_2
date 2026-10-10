@@ -27,7 +27,7 @@ int main(int argc,char **argv)
         if(soil<0)soil=0;
         if(t%2000u==0) {
             AgSample s={t,(int16_t)(temp*10),(uint16_t)(rh*10),(uint8_t)(soil+0.5),
-                (uint8_t)(light+0.5),(uint8_t)(tank+0.5),AG_ALL};ag_accept(&c,&s);
+                (uint8_t)(light+0.5),(uint8_t)(tank+0.5),AG_ALL,0,0,0};ag_accept(&c,&s);
         }
         ag_step(&c,t);
         if(soil>ag_profiles[c.profile].soil_target)overshoot+=dt;

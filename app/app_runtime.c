@@ -24,7 +24,7 @@ static uint32_t now_ms(void)
 {return (uint32_t)(SysTimer_GetLoadValue()/(SystemCoreClock/4000u));}
 static void fail(const char *where,UINT32 rc)
 {
-    gpio_bit_reset(GPIOA,GPIO_PIN_6|GPIO_PIN_7);gpio_bit_reset(GPIOB,GPIO_PIN_0);
+    board_all_off();
     printf("FATAL,%s,0x%lx\n",where,(unsigned long)rc);while(1){}
 }
 static void check(const char *where,UINT32 rc) {if(rc!=LOS_OK)fail(where,rc);}
@@ -113,10 +113,11 @@ static VOID *ui_task(UINT32 arg)
             check("ui_lock",LOS_MuxPend(snapshot_mux,LOS_WAIT_FOREVER));copy=snapshot;
             check("ui_unlock",LOS_MuxPost(snapshot_mux));
             render_at=now;
-            printf("STATUS,%lu,valid=%u,drop=%lu/%lu/%lu,expired_cmd=%lu,heap_used=%lu\n",(unsigned long)now,
+            printf("STATUS,%lu,valid=%u,drop=%lu/%lu/%lu,expired_cmd=%lu,heap_used=%lu,distance_mm=%u,soil_adc=%u,light_adc=%u\n",(unsigned long)now,
                 copy.sample.valid,(unsigned long)sample_drops,(unsigned long)command_drops,
                 (unsigned long)event_drops,(unsigned long)expired_commands,
-                (unsigned long)LOS_MemTotalUsedGet(m_aucSysMem0));
+                (unsigned long)LOS_MemTotalUsedGet(m_aucSysMem0),copy.sample.distance_mm,
+                copy.sample.soil_adc,copy.sample.light_adc);
         }
         board_display(&copy); /* At most one changed display row per UI pass. */
         if(now-resource_at>=5000u) {

@@ -1,6 +1,0 @@
-liteos_m//kernel/src/los_event.c:39:30:LOS_EventInit	0	static
-liteos_m//kernel/src/los_event.c:50:25:LOS_EventPoll	32	static
-liteos_m//kernel/src/los_event.c:97:25:LOS_EventRead	32	static
-liteos_m//kernel/src/los_event.c:145:25:LOS_EventWrite	32	static
-liteos_m//kernel/src/los_event.c:189:30:LOS_EventDestroy	16	static
-liteos_m//kernel/src/los_event.c:207:31:LOS_EventClear	32	static

@@ -1,2 +1,0 @@
-liteos_m//components/bounds_checking_function/src/snprintf_s.c:48:5:snprintf_s	48	static
-liteos_m//components/bounds_checking_function/src/snprintf_s.c:94:5:snprintf_truncated_s	64	static

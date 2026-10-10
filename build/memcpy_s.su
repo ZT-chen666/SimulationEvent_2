@@ -1,4 +1,0 @@
-liteos_m//components/bounds_checking_function/src/memcpy_s.c:450:24:SecMemcpyError	16	static
-liteos_m//components/bounds_checking_function/src/memcpy_s.c:520:9:memcpy_s	16	static
-liteos_m//components/bounds_checking_function/src/memcpy_s.c:542:9:memcpy_sOptAsm	16	static
-liteos_m//components/bounds_checking_function/src/memcpy_s.c:553:9:memcpy_sOptTc	16	static

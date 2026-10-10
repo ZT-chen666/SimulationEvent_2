@@ -1,24 +1,14 @@
-
-/****************************************************************************
-//              GND   电源地
-//              VCC   接5V或3.3v电源
-//              SCL   接PA5（SCL）
-//              SDA   接PA7（SDA）
-//              RES   接PB0
-//              DC    接PB1
-//              CS    接PA4 
-//              BL    背光控制，如无需控制可接3.3V常亮
-//            	取模参数：
-//            	    字体大小：16×16
-//            	    点阵格式：阴码
-//            	    取模方式：逐行式
-//            	    取模走向：顺向（高位在前）
-*******************************************************************************/
-
+/* ST7735S candidate display, 128 x 160, software SPI.
+ * User-confirmed platform instance: tft_st7735s_1.
+ * SCL PB6, SDA PB7, RES PA15, DC PB4, CS PB5.
+ * GND common; VCC and BL 3.3 V subject to module rating.
+ * Initialization sequence derived from the supplied ST7735 teaching driver;
+ * verify orientation, color order and timing in the official simulator.
+ */
 #include "nuclei_sdk_soc.h"
 
-#define X_MAX_PIXEL	        140
-#define Y_MAX_PIXEL	        170
+#define X_MAX_PIXEL	        128
+#define Y_MAX_PIXEL	        160
 
 #define RED  	0xf800
 #define GREEN	0x07e0
@@ -40,11 +30,11 @@
 
 #define LCD_SCL        	GPIO_PIN_6	//PB6--->>TFT --SCL/SCK
 #define LCD_SDA        	GPIO_PIN_7	//PB7 MOSI--->>TFT --SDA/DIN
-#define LCD_CS        	GPIO_PIN_5  //MCU_PB5--->>TFT --CS/CE
+#define LCD_CS        	GPIO_PIN_5  // PB5 -> CS
 
 //#define LCD_LED        	GPIO_PIN_10  //DC
-#define LCD_RS         	GPIO_PIN_4	//PB11--->>TFT --RS/DC
-#define LCD_RST     	GPIO_PIN_15	//PB10--->>TFT --RST
+#define LCD_RS         	GPIO_PIN_4	// PB4 -> DC
+#define LCD_RST     	GPIO_PIN_15	// PA15 -> RES
 
 //#define LCD_CS_SET(x) LCD_CTRL->ODR=(LCD_CTRL->ODR&~LCD_CS)|(x ? LCD_CS:0)
 

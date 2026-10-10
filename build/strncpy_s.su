@@ -1,2 +1,0 @@
-liteos_m//components/bounds_checking_function/src/strncpy_s.c:54:9:strncpy_error	0	static
-liteos_m//components/bounds_checking_function/src/strncpy_s.c:104:9:strncpy_s	16	static

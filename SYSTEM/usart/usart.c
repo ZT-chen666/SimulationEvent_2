@@ -102,10 +102,10 @@ void Usart_Int2(uint32_t BaudRatePrescaler)
     rcu_periph_clock_enable(RCU_USART1);
 
     /* connect port to USARTx_Tx */
-    gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_9);
+    gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_2);
 
     /* connect port to USARTx_Rx */
-    gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+    gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_3);
 
     /* USART configure */
     usart_deinit(USART1);

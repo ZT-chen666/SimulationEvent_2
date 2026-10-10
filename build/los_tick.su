@@ -1,8 +1,0 @@
-liteos_m//kernel/src/los_tick.c:48:23:OsTickHandler	0	static
-liteos_m//kernel/src/los_tick.c:61:8:LOS_SysCycleGet	0	static
-liteos_m//kernel/src/los_tick.c:73:31:LOS_TickCountGet	16	static
-liteos_m//kernel/src/los_tick.c:85:31:LOS_CyclePerTickGet	0	static
-liteos_m//kernel/src/los_tick.c:97:31:LOS_MS2Tick	0	static
-liteos_m//kernel/src/los_tick.c:113:31:LOS_Tick2MS	0	static
-liteos_m//kernel/src/los_tick.c:126:30:OsCpuTick2MS	32	static
-liteos_m//kernel/src/los_tick.c:157:30:OsCpuTick2US	32	static

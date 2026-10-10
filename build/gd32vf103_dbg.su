@@ -1,5 +1,0 @@
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_dbg.c:43:10:dbg_id_get	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_dbg.c:58:6:dbg_low_power_enable	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_dbg.c:73:6:dbg_low_power_disable	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_dbg.c:90:6:dbg_periph_enable	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_dbg.c:107:6:dbg_periph_disable	0	static

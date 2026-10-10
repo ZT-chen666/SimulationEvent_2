@@ -9,6 +9,10 @@ foreach ($taskTest in 'test_control', 'closed_loop') {
 }
 & (Join-Path $taskOutput 'test_control.exe')
 if ($LASTEXITCODE -ne 0) { throw 'Control tests failed' }
+& $Gcc -std=c11 -Wall -Wextra -Werror -O2 -I (Join-Path $taskProject 'app') (Join-Path $PSScriptRoot 'test_tank.c') (Join-Path $taskProject 'app/tank_sensor.c') (Join-Path $taskProject 'app/agri_control.c') -lm -o (Join-Path $taskOutput 'test_tank.exe')
+if ($LASTEXITCODE -ne 0) { throw 'Tank test compile failed' }
+& (Join-Path $taskOutput 'test_tank.exe')
+if ($LASTEXITCODE -ne 0) { throw 'Tank tests failed' }
 foreach ($taskGain in 7, 10, 14) {
     foreach ($taskPolicy in 0, 1) {
         & (Join-Path $taskOutput 'closed_loop.exe') $taskPolicy (Join-Path $taskOutput "policy-$taskPolicy-gain-$taskGain.csv") $taskGain

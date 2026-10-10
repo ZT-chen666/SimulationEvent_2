@@ -1,7 +1,0 @@
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:48:6:wwdgt_deinit	16	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:60:6:wwdgt_enable	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:71:6:wwdgt_counter_update	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:94:6:wwdgt_config	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:117:6:wwdgt_interrupt_enable	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:128:12:wwdgt_flag_get	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_wwdgt.c:143:6:wwdgt_flag_clear	0	static

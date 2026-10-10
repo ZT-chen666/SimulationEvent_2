@@ -1,3 +1,0 @@
-gd32vf103/SoC/gd32vf103/Common/Source/gd32vf103_soc.c:8:10:measure_cpu_freq	48	static
-gd32vf103/SoC/gd32vf103/Common/Source/gd32vf103_soc.c:30:10:get_cpu_freq	16	static
-gd32vf103/SoC/gd32vf103/Common/Source/gd32vf103_soc.c:49:6:delay_1ms	48	static

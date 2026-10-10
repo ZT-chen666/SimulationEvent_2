@@ -1,7 +1,0 @@
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:46:6:crc_deinit	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:59:6:crc_data_register_reset	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:70:10:crc_data_register_read	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:83:9:crc_free_data_register_read	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:96:6:crc_free_data_register_write	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:107:10:crc_single_data_calculate	0	static
-gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_crc.c:120:10:crc_block_data_calculate	0	static

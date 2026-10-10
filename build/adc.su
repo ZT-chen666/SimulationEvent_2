@@ -1,2 +1,0 @@
-gd32vf103/SoC/gd32vf103/Board/SYSTEM/adc/adc.c:15:5:ADC0_DMA_Config	48	static
-gd32vf103/SoC/gd32vf103/Board/SYSTEM/adc/adc.c:49:5:ADC0_Read_Frame	16	static

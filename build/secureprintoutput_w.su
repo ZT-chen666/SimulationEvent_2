@@ -1,5 +1,0 @@
-liteos_m//components/bounds_checking_function/src/output.inl:130:20:SecFormatFloat	64	static
-liteos_m//components/bounds_checking_function/src/secureprintoutput_w.c:111:21:SecWriteCharW	0	static
-liteos_m//components/bounds_checking_function/src/output.inl:605:21:SecWriteTextAfterMbtowc	48	static
-liteos_m//components/bounds_checking_function/src/output.inl:1428:20:SecOutputSW	704	static
-liteos_m//components/bounds_checking_function/src/secureprintoutput_w.c:56:5:SecVswprintfImpl	32	static

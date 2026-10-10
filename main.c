@@ -10,6 +10,6 @@ int main(void)
     if(rc!=LOS_OK){printf("BOOT_FAIL,%lx\n",(unsigned long)rc);while(1){}}
     app_start();rc=LOS_Start();
     printf("SCHED_EXIT,%lx\n",(unsigned long)rc);
-    gpio_bit_reset(GPIOA,GPIO_PIN_6|GPIO_PIN_7);gpio_bit_reset(GPIOB,GPIO_PIN_0);
+    board_all_off();
     while(1){}
 }
