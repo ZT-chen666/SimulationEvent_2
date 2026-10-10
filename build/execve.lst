@@ -1,0 +1,82 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s 			page 1
+
+
+   1              		.file	"execve.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._execve,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_execve
+  13              	_execve:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 B147     		li	a5,12
+  21 0002 17070000 		sw	a5,errno,a4
+  21      2320F700 
+  22              	.LM4:
+  23              	.LM5:
+  24 000a 7D55     		li	a0,-1
+  25              	.LVL1:
+  26              	.LM6:
+  27 000c 8280     		ret
+  28              		.cfi_endproc
+  29              	.LFE150:
+  31              		.text
+  32              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 execve.c
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:10     .text._execve:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:13     .text._execve:00000000 _execve
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:17     .text._execve:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:28     .text._execve:0000000e .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:21     .text._execve:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:152    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:443    .debug_str:00000086 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:435    .debug_str:00000023 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:455    .debug_str:00000188 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:347    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:353    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:441    .debug_str:0000006f .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:431    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:429    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:459    .debug_str:0000019e .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:453    .debug_str:0000017c .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:445    .debug_str:0000014d .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:461    .debug_str:000001aa .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:451    .debug_str:00000169 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:449    .debug_str:00000160 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:437    .debug_str:00000058 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:447    .debug_str:0000015b .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:457    .debug_str:00000198 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:433    .debug_str:0000001b .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:15     .text._execve:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:29     .text._execve:0000000e .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:439    .debug_str:0000006a .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:314    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:309    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:463    .debug_str:000001b4 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:14     .text._execve:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:25     .text._execve:0000000c .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:34     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:16     .text._execve:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:18     .text._execve:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:19     .text._execve:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:22     .text._execve:0000000a .LM4
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:23     .text._execve:0000000a .LM5
+C:\Users\Administrator\AppData\Local\Temp\cckrsGrB.s:26     .text._execve:0000000c .LM6
+
+UNDEFINED SYMBOLS
+errno

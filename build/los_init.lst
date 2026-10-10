@@ -1,0 +1,684 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 1
+
+
+   1              		.file	"los_init.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.LOS_Reboot,"ax",@progbits
+  10              		.align	1
+  11              		.globl	LOS_Reboot
+  13              	LOS_Reboot:
+  14              	.LFB161:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18              	.LM3:
+  19 0000 4111     		addi	sp,sp,-16
+  20              	.LCFI0:
+  21              		.cfi_def_cfa_offset 16
+  22              	.LM4:
+  23 0002 0145     		li	a0,0
+  24              	.LM5:
+  25 0004 06C6     		sw	ra,12(sp)
+  26              		.cfi_offset 1, -4
+  27              	.LM6:
+  28 0006 97000000 		call	OsDoExcHook
+  28      E7800000 
+  29              	.LVL0:
+  30              	.LM7:
+  31 000e 97000000 		call	HalSysExit
+  31      E7800000 
+  32              	.LVL1:
+  33              		.cfi_endproc
+  34              	.LFE161:
+  36              		.section	.text.LOS_Panic,"ax",@progbits
+  37              		.align	1
+  38              		.globl	LOS_Panic
+  40              	LOS_Panic:
+  41              	.LVL2:
+  42              	.LFB162:
+  43              	.LM8:
+  44              		.cfi_startproc
+  45              	.LM9:
+  46              	.LM10:
+  47              	.LM11:
+  48 0000 3971     		addi	sp,sp,-64
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 64
+  51 0002 22CC     		sw	s0,24(sp)
+  52 0004 3EDA     		sw	a5,52(sp)
+  53              		.cfi_offset 8, -40
+  54 0006 2A84     		mv	s0,a0
+  55              	.LM12:
+  56 0008 5C10     		addi	a5,sp,36
+  57              	.LM13:
+  58 000a 0945     		li	a0,2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 2
+
+
+  59              	.LVL3:
+  60              	.LM14:
+  61 000c 06CE     		sw	ra,28(sp)
+  62              		.cfi_offset 1, -36
+  63              	.LM15:
+  64 000e 2ED2     		sw	a1,36(sp)
+  65 0010 32D4     		sw	a2,40(sp)
+  66 0012 36D6     		sw	a3,44(sp)
+  67 0014 3AD8     		sw	a4,48(sp)
+  68 0016 42DC     		sw	a6,56(sp)
+  69 0018 46DE     		sw	a7,60(sp)
+  70              	.LM16:
+  71 001a 3EC6     		sw	a5,12(sp)
+  72              	.LM17:
+  73              	.LM18:
+  74 001c 97000000 		call	OsLogLevelCheck
+  74      E7800000 
+  75              	.LVL4:
+  76              	.LM19:
+  77 0024 19E5     		bne	a0,zero,.L4
+  78              	.LM20:
+  79 0026 B245     		lw	a1,12(sp)
+  80 0028 2285     		mv	a0,s0
+  81 002a 97000000 		call	printf
+  81      E7800000 
+  82              	.LVL5:
+  83              	.L4:
+  84              	.LM21:
+  85              	.LM22:
+  86              	.LM23:
+  87 0032 97000000 		call	HalSysExit
+  87      E7800000 
+  88              	.LVL6:
+  89              		.cfi_endproc
+  90              	.LFE162:
+  92              		.section	.text.LOS_Start,"ax",@progbits
+  93              		.align	1
+  94              		.globl	LOS_Start
+  96              	LOS_Start:
+  97              	.LFB164:
+  98              	.LM24:
+  99              		.cfi_startproc
+ 100              	.LM25:
+ 101              	.LM26:
+ 102 0000 17030000 		tail	HalStartSchedule
+ 102      67000300 
+ 103              	.LVL7:
+ 104              		.cfi_endproc
+ 105              	.LFE164:
+ 107              		.section	.rodata.LOS_KernelInit.str1.4,"aMS",@progbits,1
+ 108              		.align	2
+ 109              	.LC0:
+ 110 0000 656E7465 		.string	"entering kernel init..."
+ 110      72696E67 
+ 110      206B6572 
+ 110      6E656C20 
+ 110      696E6974 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 3
+
+
+ 111              		.align	2
+ 112              	.LC1:
+ 113 0018 4F734D65 		.string	"OsMemSystemInit error %d\n"
+ 113      6D537973 
+ 113      74656D49 
+ 113      6E697420 
+ 113      6572726F 
+ 114 0032 0000     		.align	2
+ 115              	.LC2:
+ 116 0034 4F735461 		.string	"OsTaskInit error"
+ 116      736B496E 
+ 116      69742065 
+ 116      72726F72 
+ 116      00
+ 117 0045 000000   		.align	2
+ 118              	.LC3:
+ 119 0048 4F735175 		.string	"OsQueueInit error"
+ 119      65756549 
+ 119      6E697420 
+ 119      6572726F 
+ 119      7200
+ 120 005a 0000     		.align	2
+ 121              	.LC4:
+ 122 005c 4F735377 		.string	"OsSwtmrInit error"
+ 122      746D7249 
+ 122      6E697420 
+ 122      6572726F 
+ 122      7200
+ 123 006e 0000     		.align	2
+ 124              	.LC5:
+ 125 0070 506D2069 		.string	"Pm init failed!"
+ 125      6E697420 
+ 125      6661696C 
+ 125      65642100 
+ 126              		.section	.text.LOS_KernelInit,"ax",@progbits
+ 127              		.align	1
+ 128              		.globl	LOS_KernelInit
+ 130              	LOS_KernelInit:
+ 131              	.LFB165:
+ 132              	.LM27:
+ 133              		.cfi_startproc
+ 134              	.LM28:
+ 135              	.LM29:
+ 136              	.LM30:
+ 137              	.LM31:
+ 138 0000 4111     		addi	sp,sp,-16
+ 139              	.LCFI2:
+ 140              		.cfi_def_cfa_offset 16
+ 141              	.LM32:
+ 142 0002 0545     		li	a0,1
+ 143              	.LM33:
+ 144 0004 06C6     		sw	ra,12(sp)
+ 145 0006 22C4     		sw	s0,8(sp)
+ 146              		.cfi_offset 1, -4
+ 147              		.cfi_offset 8, -8
+ 148              	.LM34:
+ 149 0008 97000000 		call	OsLogLevelCheck
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 4
+
+
+ 149      E7800000 
+ 150              	.LVL8:
+ 151              	.LM35:
+ 152 0010 09E9     		bne	a0,zero,.L8
+ 153              	.LM36:
+ 154 0012 17050000 		lla	a0,.LC0
+ 154      13050500 
+ 155 001a 97000000 		call	puts
+ 155      E7800000 
+ 156              	.LVL9:
+ 157              	.L8:
+ 158              	.LM37:
+ 159              	.LM38:
+ 160              	.LBB4:
+ 161              	.LBI4:
+ 162              	.LM39:
+ 163              	.LBB5:
+ 164              	.LM40:
+ 165              	.LM41:
+ 166 0022 B547     		li	a5,13
+ 167 0024 17070000 		sw	a5,g_taskMaxNum,a4
+ 167      2320F700 
+ 168              	.LM42:
+ 169              	.LBE5:
+ 170              	.LBE4:
+ 171              	.LM43:
+ 172              	.LM44:
+ 173 002c 97000000 		call	OsMemSystemInit
+ 173      E7800000 
+ 174              	.LVL10:
+ 175 0034 2A84     		mv	s0,a0
+ 176              	.LVL11:
+ 177              	.LM45:
+ 178              	.LM46:
+ 179 0036 0DC5     		beq	a0,zero,.L9
+ 180              	.LM47:
+ 181              	.LM48:
+ 182 0038 0945     		li	a0,2
+ 183 003a 97000000 		call	OsLogLevelCheck
+ 183      E7800000 
+ 184              	.LVL12:
+ 185              	.LM49:
+ 186 0042 11E9     		bne	a0,zero,.L7
+ 187              	.LM50:
+ 188 0044 A285     		mv	a1,s0
+ 189 0046 17050000 		lla	a0,.LC1
+ 189      13050500 
+ 190 004e 97000000 		call	printf
+ 190      E7800000 
+ 191              	.LVL13:
+ 192              	.L7:
+ 193              	.LM51:
+ 194 0056 B240     		lw	ra,12(sp)
+ 195              		.cfi_remember_state
+ 196              		.cfi_restore 1
+ 197 0058 2285     		mv	a0,s0
+ 198 005a 2244     		lw	s0,8(sp)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 5
+
+
+ 199              		.cfi_restore 8
+ 200              	.LVL14:
+ 201              	.LM52:
+ 202 005c 4101     		addi	sp,sp,16
+ 203              	.LCFI3:
+ 204              		.cfi_def_cfa_offset 0
+ 205 005e 8280     		jr	ra
+ 206              	.LVL15:
+ 207              	.L9:
+ 208              	.LCFI4:
+ 209              		.cfi_restore_state
+ 210              	.LM53:
+ 211 0060 97000000 		call	HalArchInit
+ 211      E7800000 
+ 212              	.LVL16:
+ 213              	.LM54:
+ 214              	.LM55:
+ 215 0068 97000000 		call	OsTaskInit
+ 215      E7800000 
+ 216              	.LVL17:
+ 217 0070 2A84     		mv	s0,a0
+ 218              	.LVL18:
+ 219              	.LM56:
+ 220              	.LM57:
+ 221 0072 05C1     		beq	a0,zero,.L12
+ 222              	.LM58:
+ 223              	.LM59:
+ 224 0074 0945     		li	a0,2
+ 225 0076 97000000 		call	OsLogLevelCheck
+ 225      E7800000 
+ 226              	.LVL19:
+ 227              	.LM60:
+ 228 007e 61FD     		bne	a0,zero,.L7
+ 229              	.LM61:
+ 230 0080 17050000 		lla	a0,.LC2
+ 230      13050500 
+ 231              	.L23:
+ 232              	.LM62:
+ 233 0088 97000000 		call	puts
+ 233      E7800000 
+ 234              	.LVL20:
+ 235 0090 D9B7     		j	.L7
+ 236              	.L12:
+ 237              	.LM63:
+ 238              	.LM64:
+ 239 0092 97000000 		call	OsSemInit
+ 239      E7800000 
+ 240              	.LVL21:
+ 241 009a 2A84     		mv	s0,a0
+ 242              	.LVL22:
+ 243              	.LM65:
+ 244              	.LM66:
+ 245 009c 4DFD     		bne	a0,zero,.L7
+ 246              	.LM67:
+ 247              	.LM68:
+ 248 009e 97000000 		call	OsMuxInit
+ 248      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 6
+
+
+ 249              	.LVL23:
+ 250 00a6 2A84     		mv	s0,a0
+ 251              	.LVL24:
+ 252              	.LM69:
+ 253              	.LM70:
+ 254 00a8 5DF5     		bne	a0,zero,.L7
+ 255              	.LM71:
+ 256              	.LM72:
+ 257 00aa 97000000 		call	OsQueueInit
+ 257      E7800000 
+ 258              	.LVL25:
+ 259 00b2 2A84     		mv	s0,a0
+ 260              	.LVL26:
+ 261              	.LM73:
+ 262              	.LM74:
+ 263 00b4 01CD     		beq	a0,zero,.L14
+ 264              	.LM75:
+ 265              	.LM76:
+ 266 00b6 0945     		li	a0,2
+ 267 00b8 97000000 		call	OsLogLevelCheck
+ 267      E7800000 
+ 268              	.LVL27:
+ 269              	.LM77:
+ 270 00c0 59F9     		bne	a0,zero,.L7
+ 271              	.LM78:
+ 272 00c2 17050000 		lla	a0,.LC3
+ 272      13050500 
+ 273 00ca 7DBF     		j	.L23
+ 274              	.L14:
+ 275              	.LM79:
+ 276              	.LM80:
+ 277 00cc 97000000 		call	OsSwtmrInit
+ 277      E7800000 
+ 278              	.LVL28:
+ 279 00d4 2A84     		mv	s0,a0
+ 280              	.LVL29:
+ 281              	.LM81:
+ 282              	.LM82:
+ 283 00d6 01CD     		beq	a0,zero,.L16
+ 284              	.LM83:
+ 285              	.LM84:
+ 286 00d8 0945     		li	a0,2
+ 287 00da 97000000 		call	OsLogLevelCheck
+ 287      E7800000 
+ 288              	.LVL30:
+ 289              	.LM85:
+ 290 00e2 35F9     		bne	a0,zero,.L7
+ 291              	.LM86:
+ 292 00e4 17050000 		lla	a0,.LC4
+ 292      13050500 
+ 293 00ec 71BF     		j	.L23
+ 294              	.L16:
+ 295              	.LM87:
+ 296              	.LM88:
+ 297 00ee 97000000 		call	OsIdleTaskCreate
+ 297      E7800000 
+ 298              	.LVL31:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 7
+
+
+ 299 00f6 2A84     		mv	s0,a0
+ 300              	.LVL32:
+ 301              	.LM89:
+ 302              	.LM90:
+ 303 00f8 39FD     		bne	a0,zero,.L7
+ 304              	.LM91:
+ 305              	.LM92:
+ 306 00fa 97000000 		call	OsPmInit
+ 306      E7800000 
+ 307              	.LVL33:
+ 308 0102 2A84     		mv	s0,a0
+ 309              	.LVL34:
+ 310              	.LM93:
+ 311              	.LM94:
+ 312 0104 29D9     		beq	a0,zero,.L7
+ 313              	.LM95:
+ 314              	.LM96:
+ 315 0106 0945     		li	a0,2
+ 316 0108 97000000 		call	OsLogLevelCheck
+ 316      E7800000 
+ 317              	.LVL35:
+ 318              	.LM97:
+ 319 0110 39F1     		bne	a0,zero,.L7
+ 320              	.LM98:
+ 321 0112 17050000 		lla	a0,.LC5
+ 321      13050500 
+ 322 011a BDB7     		j	.L23
+ 323              		.cfi_endproc
+ 324              	.LFE165:
+ 326              		.text
+ 327              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 los_init.c
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:10     .text.LOS_Reboot:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:13     .text.LOS_Reboot:00000000 LOS_Reboot
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:16     .text.LOS_Reboot:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:21     .text.LOS_Reboot:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:26     .text.LOS_Reboot:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:33     .text.LOS_Reboot:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:37     .text.LOS_Panic:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:40     .text.LOS_Panic:00000000 LOS_Panic
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:44     .text.LOS_Panic:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:50     .text.LOS_Panic:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:53     .text.LOS_Panic:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:62     .text.LOS_Panic:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:89     .text.LOS_Panic:0000003a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:93     .text.LOS_Start:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:96     .text.LOS_Start:00000000 LOS_Start
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:99     .text.LOS_Start:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:104    .text.LOS_Start:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:127    .text.LOS_KernelInit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:130    .text.LOS_KernelInit:00000000 LOS_KernelInit
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:133    .text.LOS_KernelInit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:140    .text.LOS_KernelInit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:146    .text.LOS_KernelInit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:147    .text.LOS_KernelInit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:195    .text.LOS_KernelInit:00000058 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:196    .text.LOS_KernelInit:00000058 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:199    .text.LOS_KernelInit:0000005c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:204    .text.LOS_KernelInit:0000005e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:209    .text.LOS_KernelInit:00000060 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:323    .text.LOS_KernelInit:0000011c .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:83     .text.LOS_Panic:00000032 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:109    .rodata.LOS_KernelInit.str1.4:00000000 .LC0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:154    .text.LOS_KernelInit:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:167    .text.LOS_KernelInit:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:112    .rodata.LOS_KernelInit.str1.4:00000018 .LC1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:189    .text.LOS_KernelInit:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:115    .rodata.LOS_KernelInit.str1.4:00000034 .LC2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:230    .text.LOS_KernelInit:00000080 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:118    .rodata.LOS_KernelInit.str1.4:00000048 .LC3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:272    .text.LOS_KernelInit:000000c2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:121    .rodata.LOS_KernelInit.str1.4:0000005c .LC4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:292    .text.LOS_KernelInit:000000e4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:124    .rodata.LOS_KernelInit.str1.4:00000070 .LC5
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:321    .text.LOS_KernelInit:00000112 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:157    .text.LOS_KernelInit:00000022 .L8
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:207    .text.LOS_KernelInit:00000060 .L9
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:192    .text.LOS_KernelInit:00000056 .L7
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:236    .text.LOS_KernelInit:00000092 .L12
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:274    .text.LOS_KernelInit:000000cc .L14
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:231    .text.LOS_KernelInit:00000088 .L23
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:294    .text.LOS_KernelInit:000000ee .L16
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:879    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2319   .debug_str:0000008c .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2345   .debug_str:000001ef .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2343   .debug_str:000001df .LASF43
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 9
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1518   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1530   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2327   .debug_str:00000173 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2385   .debug_str:000002de .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2335   .debug_str:000001b5 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2349   .debug_str:00000218 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2369   .debug_str:0000028d .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2365   .debug_str:00000275 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2393   .debug_str:0000030b .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2329   .debug_str:00000182 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2381   .debug_str:000002c9 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2333   .debug_str:000001a2 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2387   .debug_str:000002f0 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2331   .debug_str:00000190 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2361   .debug_str:00000258 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2377   .debug_str:000002bb .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2363   .debug_str:0000026f .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2325   .debug_str:0000016d .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2339   .debug_str:000001ce .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2351   .debug_str:00000225 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2373   .debug_str:000002a7 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2317   .debug_str:00000081 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2303   .debug_str:0000002b .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2301   .debug_str:00000019 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2299   .debug_str:0000000b .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2355   .debug_str:00000235 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2311   .debug_str:0000005c .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2391   .debug_str:000002fe .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2347   .debug_str:0000020f .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2337   .debug_str:000001bd .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2305   .debug_str:00000036 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2357   .debug_str:00000242 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2359   .debug_str:0000024e .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2341   .debug_str:000001d5 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2297   .debug_str:00000000 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2371   .debug_str:0000029b .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2307   .debug_str:00000042 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2313   .debug_str:00000065 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2379   .debug_str:000002c2 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2323   .debug_str:0000015d .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2383   .debug_str:000002d3 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2367   .debug_str:00000281 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2375   .debug_str:000002ac .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:131    .text.LOS_KernelInit:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:324    .text.LOS_KernelInit:0000011c .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1412   .debug_loc:00000000 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1442   .debug_loc:0000003e .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1435   .debug_loc:00000038 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:161    .text.LOS_KernelInit:00000022 .LBI4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:160    .text.LOS_KernelInit:00000022 .LBB4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:170    .text.LOS_KernelInit:0000002c .LBE4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:150    .text.LOS_KernelInit:00000010 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:156    .text.LOS_KernelInit:00000022 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:174    .text.LOS_KernelInit:00000034 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:184    .text.LOS_KernelInit:00000042 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:191    .text.LOS_KernelInit:00000056 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:212    .text.LOS_KernelInit:00000068 .LVL16
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 10
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:216    .text.LOS_KernelInit:00000070 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:226    .text.LOS_KernelInit:0000007e .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:234    .text.LOS_KernelInit:00000090 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:240    .text.LOS_KernelInit:0000009a .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:249    .text.LOS_KernelInit:000000a6 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:258    .text.LOS_KernelInit:000000b2 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:268    .text.LOS_KernelInit:000000c0 .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:278    .text.LOS_KernelInit:000000d4 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:288    .text.LOS_KernelInit:000000e2 .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:298    .text.LOS_KernelInit:000000f6 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:307    .text.LOS_KernelInit:00000102 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:317    .text.LOS_KernelInit:00000110 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2321   .debug_str:00000153 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:97     .text.LOS_Start:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:105    .text.LOS_Start:00000008 .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:103    .text.LOS_Start:00000008 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2315   .debug_str:00000076 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2309   .debug_str:00000052 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:42     .text.LOS_Panic:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:90     .text.LOS_Panic:0000003a .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1457   .debug_loc:00000067 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1475   .debug_loc:0000008c .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1470   .debug_loc:00000088 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:75     .text.LOS_Panic:00000024 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:82     .text.LOS_Panic:00000032 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:88     .text.LOS_Panic:0000003a .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2353   .debug_str:0000022a .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:14     .text.LOS_Reboot:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:34     .text.LOS_Reboot:00000016 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:1486   .debug_loc:000000aa .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:29     .text.LOS_Reboot:0000000e .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:32     .text.LOS_Reboot:00000016 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2389   .debug_str:000002f9 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:2395   .debug_str:00000317 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:139    .text.LOS_KernelInit:00000002 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:203    .text.LOS_KernelInit:0000005e .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:208    .text.LOS_KernelInit:00000060 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:176    .text.LOS_KernelInit:00000036 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:200    .text.LOS_KernelInit:0000005c .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:206    .text.LOS_KernelInit:00000060 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:49     .text.LOS_Panic:00000002 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:41     .text.LOS_Panic:00000000 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:59     .text.LOS_Panic:0000000c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:20     .text.LOS_Reboot:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:329    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:15     .text.LOS_Reboot:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:17     .text.LOS_Reboot:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:18     .text.LOS_Reboot:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:22     .text.LOS_Reboot:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:24     .text.LOS_Reboot:00000004 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:27     .text.LOS_Reboot:00000006 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:30     .text.LOS_Reboot:0000000e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:43     .text.LOS_Panic:00000000 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:45     .text.LOS_Panic:00000000 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:46     .text.LOS_Panic:00000000 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:47     .text.LOS_Panic:00000000 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:55     .text.LOS_Panic:00000008 .LM12
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 11
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:57     .text.LOS_Panic:0000000a .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:60     .text.LOS_Panic:0000000c .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:63     .text.LOS_Panic:0000000e .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:70     .text.LOS_Panic:0000001a .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:72     .text.LOS_Panic:0000001c .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:73     .text.LOS_Panic:0000001c .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:76     .text.LOS_Panic:00000024 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:78     .text.LOS_Panic:00000026 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:84     .text.LOS_Panic:00000032 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:85     .text.LOS_Panic:00000032 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:86     .text.LOS_Panic:00000032 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:98     .text.LOS_Start:00000000 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:100    .text.LOS_Start:00000000 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:101    .text.LOS_Start:00000000 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:132    .text.LOS_KernelInit:00000000 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:134    .text.LOS_KernelInit:00000000 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:135    .text.LOS_KernelInit:00000000 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:136    .text.LOS_KernelInit:00000000 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:137    .text.LOS_KernelInit:00000000 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:141    .text.LOS_KernelInit:00000002 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:143    .text.LOS_KernelInit:00000004 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:148    .text.LOS_KernelInit:00000008 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:151    .text.LOS_KernelInit:00000010 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:153    .text.LOS_KernelInit:00000012 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:158    .text.LOS_KernelInit:00000022 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:159    .text.LOS_KernelInit:00000022 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:162    .text.LOS_KernelInit:00000022 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:164    .text.LOS_KernelInit:00000022 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:165    .text.LOS_KernelInit:00000022 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:168    .text.LOS_KernelInit:0000002c .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:171    .text.LOS_KernelInit:0000002c .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:172    .text.LOS_KernelInit:0000002c .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:177    .text.LOS_KernelInit:00000036 .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:178    .text.LOS_KernelInit:00000036 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:180    .text.LOS_KernelInit:00000038 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:181    .text.LOS_KernelInit:00000038 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:185    .text.LOS_KernelInit:00000042 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:187    .text.LOS_KernelInit:00000044 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:193    .text.LOS_KernelInit:00000056 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:201    .text.LOS_KernelInit:0000005c .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:210    .text.LOS_KernelInit:00000060 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:213    .text.LOS_KernelInit:00000068 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:214    .text.LOS_KernelInit:00000068 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:219    .text.LOS_KernelInit:00000072 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:220    .text.LOS_KernelInit:00000072 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:222    .text.LOS_KernelInit:00000074 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:223    .text.LOS_KernelInit:00000074 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:227    .text.LOS_KernelInit:0000007e .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:229    .text.LOS_KernelInit:00000080 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:232    .text.LOS_KernelInit:00000088 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:237    .text.LOS_KernelInit:00000092 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:238    .text.LOS_KernelInit:00000092 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:243    .text.LOS_KernelInit:0000009c .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:244    .text.LOS_KernelInit:0000009c .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:246    .text.LOS_KernelInit:0000009e .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:247    .text.LOS_KernelInit:0000009e .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:252    .text.LOS_KernelInit:000000a8 .LM69
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s 			page 12
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:253    .text.LOS_KernelInit:000000a8 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:255    .text.LOS_KernelInit:000000aa .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:256    .text.LOS_KernelInit:000000aa .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:261    .text.LOS_KernelInit:000000b4 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:262    .text.LOS_KernelInit:000000b4 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:264    .text.LOS_KernelInit:000000b6 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:265    .text.LOS_KernelInit:000000b6 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:269    .text.LOS_KernelInit:000000c0 .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:271    .text.LOS_KernelInit:000000c2 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:275    .text.LOS_KernelInit:000000cc .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:276    .text.LOS_KernelInit:000000cc .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:281    .text.LOS_KernelInit:000000d6 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:282    .text.LOS_KernelInit:000000d6 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:284    .text.LOS_KernelInit:000000d8 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:285    .text.LOS_KernelInit:000000d8 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:289    .text.LOS_KernelInit:000000e2 .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:291    .text.LOS_KernelInit:000000e4 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:295    .text.LOS_KernelInit:000000ee .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:296    .text.LOS_KernelInit:000000ee .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:301    .text.LOS_KernelInit:000000f8 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:302    .text.LOS_KernelInit:000000f8 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:304    .text.LOS_KernelInit:000000fa .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:305    .text.LOS_KernelInit:000000fa .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:310    .text.LOS_KernelInit:00000104 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:311    .text.LOS_KernelInit:00000104 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:313    .text.LOS_KernelInit:00000106 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:314    .text.LOS_KernelInit:00000106 .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:318    .text.LOS_KernelInit:00000110 .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccLkFSws.s:320    .text.LOS_KernelInit:00000112 .LM98
+
+UNDEFINED SYMBOLS
+OsDoExcHook
+HalSysExit
+OsLogLevelCheck
+printf
+HalStartSchedule
+puts
+g_taskMaxNum
+OsMemSystemInit
+HalArchInit
+OsTaskInit
+OsSemInit
+OsMuxInit
+OsQueueInit
+OsSwtmrInit
+OsIdleTaskCreate
+OsPmInit

@@ -1,0 +1,39 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s 			page 1
+
+
+   1              		.file	"los_backtrace.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 los_backtrace.c
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:80     .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:175    .debug_str:0000001b .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:179    .debug_str:000000f4 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:197    .debug_str:00000188 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:130    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:173    .debug_str:0000000e .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:171    .debug_str:00000000 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:195    .debug_str:0000017c .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:193    .debug_str:00000170 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:183    .debug_str:0000013a .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:201    .debug_str:0000019e .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:191    .debug_str:0000015d .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:187    .debug_str:0000014d .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:177    .debug_str:000000e2 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:181    .debug_str:00000123 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:199    .debug_str:00000198 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:189    .debug_str:00000156 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:185    .debug_str:00000148 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:11     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccsq5kdg.s:9      .text:00000000 .Letext0
+
+NO UNDEFINED SYMBOLS

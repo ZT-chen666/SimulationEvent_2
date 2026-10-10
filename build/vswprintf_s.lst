@@ -1,0 +1,193 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s 			page 1
+
+
+   1              		.file	"vswprintf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.vswprintf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	vswprintf_s
+  13              	vswprintf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21 0000 4111     		addi	sp,sp,-16
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 16
+  24 0002 22C4     		sw	s0,8(sp)
+  25 0004 06C6     		sw	ra,12(sp)
+  26              		.cfi_offset 8, -8
+  27              		.cfi_offset 1, -4
+  28              	.LM5:
+  29 0006 2A84     		mv	s0,a0
+  30              	.LM6:
+  31 0008 11CE     		beq	a2,zero,.L2
+  32              	.LM7:
+  33 000a 01C9     		beq	a0,zero,.L3
+  34              	.LM8:
+  35 000c 37070020 		li	a4,536870912
+  36 0010 9387F5FF 		addi	a5,a1,-1
+  37 0014 7917     		addi	a4,a4,-2
+  38 0016 6372F702 		bleu	a5,a4,.L13
+  39              	.LVL1:
+  40              	.L3:
+  41              	.LM9:
+  42 001a 7D55     		li	a0,-1
+  43              	.L1:
+  44              	.LM10:
+  45 001c B240     		lw	ra,12(sp)
+  46              		.cfi_remember_state
+  47              		.cfi_restore 1
+  48 001e 2244     		lw	s0,8(sp)
+  49              		.cfi_restore 8
+  50              	.LVL2:
+  51              	.LM11:
+  52 0020 4101     		addi	sp,sp,16
+  53              	.LCFI1:
+  54              		.cfi_def_cfa_offset 0
+  55 0022 8280     		jr	ra
+  56              	.LVL3:
+  57              	.L2:
+  58              	.LCFI2:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s 			page 2
+
+
+  59              		.cfi_restore_state
+  60              	.LM12:
+  61              	.LM13:
+  62 0024 7DD9     		beq	a0,zero,.L3
+  63              	.LM14:
+  64 0026 37070020 		li	a4,536870912
+  65 002a 9387F5FF 		addi	a5,a1,-1
+  66 002e 7917     		addi	a4,a4,-2
+  67 0030 E365F7FE 		bgtu	a5,a4,.L3
+  68              	.LVL4:
+  69              	.L6:
+  70              	.LM15:
+  71 0034 23200400 		sw	zero,0(s0)
+  72 0038 CDB7     		j	.L3
+  73              	.LVL5:
+  74              	.L13:
+  75              	.LM16:
+  76              	.LM17:
+  77 003a 97000000 		call	SecVswprintfImpl
+  77      E7800000 
+  78              	.LVL6:
+  79              	.LM18:
+  80              	.LM19:
+  81 0042 E35D05FC 		bge	a0,zero,.L1
+  82 0046 FDB7     		j	.L6
+  83              		.cfi_endproc
+  84              	.LFE4:
+  86              		.text
+  87              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vswprintf_s.c
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:10     .text.vswprintf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:13     .text.vswprintf_s:00000000 vswprintf_s
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:17     .text.vswprintf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:23     .text.vswprintf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:26     .text.vswprintf_s:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:27     .text.vswprintf_s:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:46     .text.vswprintf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:47     .text.vswprintf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:49     .text.vswprintf_s:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:54     .text.vswprintf_s:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:59     .text.vswprintf_s:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:83     .text.vswprintf_s:00000048 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:57     .text.vswprintf_s:00000024 .L2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:40     .text.vswprintf_s:0000001a .L3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:74     .text.vswprintf_s:0000003a .L13
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:43     .text.vswprintf_s:0000001c .L1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:69     .text.vswprintf_s:00000034 .L6
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:263    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:962    .debug_str:00000035 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:998    .debug_str:000001c4 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:994    .debug_str:000001ac .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:753    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:759    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:970    .debug_str:00000128 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:1004   .debug_str:0000021a .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:990    .debug_str:00000194 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:974    .debug_str:00000147 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:1002   .debug_str:00000210 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:988    .debug_str:00000181 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:980    .debug_str:00000162 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:968    .debug_str:00000116 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:954    .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:958    .debug_str:0000001d .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:972    .debug_str:0000013f .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:1000   .debug_str:00000204 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:956    .debug_str:0000000e .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:964    .debug_str:000000fc .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:984    .debug_str:00000172 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:978    .debug_str:0000015d .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:960    .debug_str:00000024 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:992    .debug_str:000001a0 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:15     .text.vswprintf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:84     .text.vswprintf_s:00000048 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:469    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:976    .debug_str:00000155 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:501    .debug_loc:00000040 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:492    .debug_loc:00000038 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:966    .debug_str:0000010e .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:542    .debug_loc:00000089 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:529    .debug_loc:0000007d .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:986    .debug_str:0000017a .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:609    .debug_loc:000000fa .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:596    .debug_loc:000000ee .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:996    .debug_str:000001bc .LASF18
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:676    .debug_loc:0000016b .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:663    .debug_loc:0000015f .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:982    .debug_str:0000016b .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:733    .debug_loc:000001d2 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:730    .debug_loc:000001d0 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:78     .text.vswprintf_s:00000042 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:22     .text.vswprintf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:53     .text.vswprintf_s:00000022 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:58     .text.vswprintf_s:00000024 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:14     .text.vswprintf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:39     .text.vswprintf_s:0000001a .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:50     .text.vswprintf_s:00000020 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:56     .text.vswprintf_s:00000024 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:68     .text.vswprintf_s:00000034 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:73     .text.vswprintf_s:0000003a .LVL5
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:89     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:16     .text.vswprintf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:18     .text.vswprintf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:19     .text.vswprintf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:20     .text.vswprintf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:28     .text.vswprintf_s:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:30     .text.vswprintf_s:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:32     .text.vswprintf_s:0000000a .LM7
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:34     .text.vswprintf_s:0000000c .LM8
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:41     .text.vswprintf_s:0000001a .LM9
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:44     .text.vswprintf_s:0000001c .LM10
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:51     .text.vswprintf_s:00000020 .LM11
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:60     .text.vswprintf_s:00000024 .LM12
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:61     .text.vswprintf_s:00000024 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:63     .text.vswprintf_s:00000026 .LM14
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:70     .text.vswprintf_s:00000034 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:75     .text.vswprintf_s:0000003a .LM16
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:76     .text.vswprintf_s:0000003a .LM17
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:79     .text.vswprintf_s:00000042 .LM18
+C:\Users\Administrator\AppData\Local\Temp\cciEHqpr.s:80     .text.vswprintf_s:00000042 .LM19
+
+UNDEFINED SYMBOLS
+SecVswprintfImpl

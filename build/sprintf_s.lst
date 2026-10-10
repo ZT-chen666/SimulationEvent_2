@@ -1,0 +1,136 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s 			page 1
+
+
+   1              		.file	"sprintf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.sprintf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	sprintf_s
+  13              	sprintf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22 0000 3971     		addi	sp,sp,-64
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 64
+  25 0002 36D6     		sw	a3,44(sp)
+  26              	.LM6:
+  27 0004 7410     		addi	a3,sp,44
+  28              	.LM7:
+  29 0006 06CE     		sw	ra,28(sp)
+  30              		.cfi_offset 1, -36
+  31              	.LM8:
+  32 0008 3AD8     		sw	a4,48(sp)
+  33 000a 3EDA     		sw	a5,52(sp)
+  34 000c 42DC     		sw	a6,56(sp)
+  35 000e 46DE     		sw	a7,60(sp)
+  36              	.LM9:
+  37 0010 36C6     		sw	a3,12(sp)
+  38              	.LM10:
+  39              	.LM11:
+  40 0012 97000000 		call	vsprintf_s
+  40      E7800000 
+  41              	.LVL1:
+  42              	.LM12:
+  43              	.LM13:
+  44              	.LM14:
+  45              	.LM15:
+  46 001a F240     		lw	ra,28(sp)
+  47              		.cfi_restore 1
+  48 001c 2161     		addi	sp,sp,64
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 0
+  51 001e 8280     		jr	ra
+  52              		.cfi_endproc
+  53              	.LFE4:
+  55              		.text
+  56              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 sprintf_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:10     .text.sprintf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:13     .text.sprintf_s:00000000 sprintf_s
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:17     .text.sprintf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:24     .text.sprintf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:30     .text.sprintf_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:47     .text.sprintf_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:50     .text.sprintf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:52     .text.sprintf_s:00000020 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:274    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:775    .debug_str:0000002b .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:791    .debug_str:0000014d .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:801    .debug_str:000001b9 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:612    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:618    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:781    .debug_str:00000116 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:811    .debug_str:000001f7 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:799    .debug_str:000001ad .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:773    .debug_str:0000001d .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:789    .debug_str:00000143 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:797    .debug_str:0000019a .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:787    .debug_str:0000013a .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:779    .debug_str:00000104 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:767    .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:771    .debug_str:00000016 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:807    .debug_str:000001e0 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:805    .debug_str:000001d1 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:777    .debug_str:000000f2 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:793    .debug_str:0000018b .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:785    .debug_str:00000135 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:809    .debug_str:000001ec .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:813    .debug_str:00000204 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:15     .text.sprintf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:53     .text.sprintf_s:00000020 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:496    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:769    .debug_str:0000000e .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:519    .debug_loc:00000031 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:514    .debug_loc:0000002d .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:783    .debug_str:0000012d .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:544    .debug_loc:0000005c .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:539    .debug_loc:00000058 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:795    .debug_str:00000193 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:569    .debug_loc:00000087 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:564    .debug_loc:00000083 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:592    .debug_loc:000000b0 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:589    .debug_loc:000000ae .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:803    .debug_str:000001c9 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:41     .text.sprintf_s:0000001a .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:23     .text.sprintf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:49     .text.sprintf_s:0000001e .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:14     .text.sprintf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:58     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:16     .text.sprintf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:18     .text.sprintf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:19     .text.sprintf_s:00000000 .LM3
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s 			page 3
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:20     .text.sprintf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:21     .text.sprintf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:26     .text.sprintf_s:00000004 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:28     .text.sprintf_s:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:31     .text.sprintf_s:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:36     .text.sprintf_s:00000010 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:38     .text.sprintf_s:00000012 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:39     .text.sprintf_s:00000012 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:42     .text.sprintf_s:0000001a .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:43     .text.sprintf_s:0000001a .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:44     .text.sprintf_s:0000001a .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccvFmJdB.s:45     .text.sprintf_s:0000001a .LM15
+
+UNDEFINED SYMBOLS
+vsprintf_s

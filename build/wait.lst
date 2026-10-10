@@ -1,0 +1,81 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s 			page 1
+
+
+   1              		.file	"wait.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._wait,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_wait
+  13              	_wait:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 A947     		li	a5,10
+  21 0002 17070000 		sw	a5,errno,a4
+  21      2320F700 
+  22              	.LM4:
+  23              	.LM5:
+  24 000a 7D55     		li	a0,-1
+  25              	.LVL1:
+  26              	.LM6:
+  27 000c 8280     		ret
+  28              		.cfi_endproc
+  29              	.LFE150:
+  31              		.text
+  32              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 wait.c
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:10     .text._wait:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:13     .text._wait:00000000 _wait
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:17     .text._wait:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:28     .text._wait:0000000e .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:21     .text._wait:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:133    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:380    .debug_str:0000001b .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:408    .debug_str:0000017f .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:400    .debug_str:00000153 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:294    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:300    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:386    .debug_str:000000fb .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:378    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:376    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:404    .debug_str:00000169 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:398    .debug_str:00000147 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:388    .debug_str:00000112 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:406    .debug_str:00000175 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:396    .debug_str:00000134 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:392    .debug_str:00000125 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:384    .debug_str:000000e9 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:390    .debug_str:00000120 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:402    .debug_str:00000163 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:394    .debug_str:0000012e .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:15     .text._wait:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:29     .text._wait:0000000e .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:382    .debug_str:000000e2 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:261    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:256    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:14     .text._wait:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:25     .text._wait:0000000c .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:34     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:16     .text._wait:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:18     .text._wait:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:19     .text._wait:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:22     .text._wait:0000000a .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:23     .text._wait:0000000a .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccWg9AKj.s:26     .text._wait:0000000c .LM6
+
+UNDEFINED SYMBOLS
+errno

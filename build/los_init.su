@@ -1,0 +1,4 @@
+liteos_m//kernel/src/los_init.c:76:28:LOS_Reboot	16	static
+liteos_m//kernel/src/los_init.c:82:28:LOS_Panic	64	static
+liteos_m//kernel/src/los_init.c:106:30:LOS_Start	0	static
+liteos_m//kernel/src/los_init.c:118:30:LOS_KernelInit	16	static

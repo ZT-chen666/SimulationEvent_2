@@ -1,0 +1,62 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s 			page 1
+
+
+   1              		.file	"getpid.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._getpid,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_getpid
+  13              	_getpid:
+  14              	.LFB150:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18              	.LM3:
+  19 0000 0545     		li	a0,1
+  20 0002 8280     		ret
+  21              		.cfi_endproc
+  22              	.LFE150:
+  24              		.text
+  25              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 getpid.c
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:10     .text._getpid:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:13     .text._getpid:00000000 _getpid
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:16     .text._getpid:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:21     .text._getpid:00000004 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:105    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:259    .debug_str:00000042 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:255    .debug_str:00000000 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:279    .debug_str:00000185 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:190    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:196    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:257    .debug_str:00000035 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:273    .debug_str:00000158 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:281    .debug_str:00000195 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:277    .debug_str:00000179 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:265    .debug_str:00000132 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:271    .debug_str:0000014e .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:275    .debug_str:00000166 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:269    .debug_str:00000145 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:261    .debug_str:00000109 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:263    .debug_str:0000011b .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:267    .debug_str:00000140 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:283    .debug_str:000001a1 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:14     .text._getpid:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:22     .text._getpid:00000004 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:27     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:15     .text._getpid:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:17     .text._getpid:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cccdKKh5.s:18     .text._getpid:00000000 .LM3
+
+NO UNDEFINED SYMBOLS

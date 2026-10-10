@@ -1,0 +1,2949 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 1
+
+
+   1              		.file	"lcd_driver.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.LCD_GPIO_Init,"ax",@progbits
+  10              		.align	1
+  11              		.globl	LCD_GPIO_Init
+  13              	LCD_GPIO_Init:
+  14              	.LFB153:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18 0000 37150140 		li	a0,1073811456
+  19              	.LM3:
+  20 0004 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              	.LM4:
+  24 0006 A166     		li	a3,32768
+  25 0008 0D46     		li	a2,3
+  26 000a C145     		li	a1,16
+  27 000c 13050580 		addi	a0,a0,-2048
+  28              	.LM5:
+  29 0010 06C6     		sw	ra,12(sp)
+  30              		.cfi_offset 1, -4
+  31              	.LM6:
+  32 0012 97000000 		call	gpio_init
+  32      E7800000 
+  33              	.LVL0:
+  34              	.LM7:
+  35 001a 37150140 		li	a0,1073811456
+  36 001e 9306000F 		li	a3,240
+  37 0022 0D46     		li	a2,3
+  38 0024 C145     		li	a1,16
+  39 0026 130505C0 		addi	a0,a0,-1024
+  40 002a 97000000 		call	gpio_init
+  40      E7800000 
+  41              	.LVL1:
+  42              	.LM8:
+  43 0032 37150140 		li	a0,1073811456
+  44 0036 9305000F 		li	a1,240
+  45 003a 130505C0 		addi	a0,a0,-1024
+  46 003e 97000000 		call	gpio_bit_set
+  46      E7800000 
+  47              	.LVL2:
+  48              	.LM9:
+  49              	.LM10:
+  50 0046 B240     		lw	ra,12(sp)
+  51              		.cfi_restore 1
+  52              	.LM11:
+  53 0048 37150140 		li	a0,1073811456
+  54              	.LM12:
+  55              	.LM13:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 2
+
+
+  56 004c A165     		li	a1,32768
+  57 004e 13050580 		addi	a0,a0,-2048
+  58              	.LM14:
+  59 0052 4101     		addi	sp,sp,16
+  60              	.LCFI1:
+  61              		.cfi_def_cfa_offset 0
+  62              	.LM15:
+  63 0054 17030000 		tail	gpio_bit_set
+  63      67000300 
+  64              	.LVL3:
+  65              		.cfi_endproc
+  66              	.LFE153:
+  68              		.section	.text.SPI_WriteData,"ax",@progbits
+  69              		.align	1
+  70              		.globl	SPI_WriteData
+  72              	SPI_WriteData:
+  73              	.LVL4:
+  74              	.LFB154:
+  75              	.LM16:
+  76              		.cfi_startproc
+  77              	.LM17:
+  78              	.LM18:
+  79              	.LM19:
+  80 0000 B7160140 		li	a3,1073811456
+  81              	.LM20:
+  82 0004 37170140 		li	a4,1073811456
+  83              	.LM21:
+  84 0008 A147     		li	a5,8
+  85 000a 93050008 		li	a1,128
+  86 000e 938646C1 		addi	a3,a3,-1004
+  87              	.LM22:
+  88 0012 130707C1 		addi	a4,a4,-1008
+  89              	.LM23:
+  90 0016 13060004 		li	a2,64
+  91              	.LVL5:
+  92              	.L6:
+  93              	.LM24:
+  94              	.LM25:
+  95 001a 13188501 		slli	a6,a0,24
+  96 001e 13588841 		srai	a6,a6,24
+  97 0022 635B0800 		bge	a6,zero,.L4
+  98              	.LM26:
+  99 0026 0CC3     		sw	a1,0(a4)
+ 100              	.L5:
+ 101              	.LM27:
+ 102 0028 90C2     		sw	a2,0(a3)
+ 103              	.LM28:
+ 104              	.LM29:
+ 105 002a FD17     		addi	a5,a5,-1
+ 106              	.LVL6:
+ 107              	.LM30:
+ 108 002c 10C3     		sw	a2,0(a4)
+ 109              	.LM31:
+ 110              	.LM32:
+ 111 002e 93F7F70F 		andi	a5,a5,0xff
+ 112              	.LM33:
+ 113 0032 0605     		slli	a0,a0,1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 3
+
+
+ 114              	.LVL7:
+ 115              	.LM34:
+ 116              	.LM35:
+ 117 0034 FDF3     		bne	a5,zero,.L6
+ 118              	.LM36:
+ 119 0036 8280     		ret
+ 120              	.LVL8:
+ 121              	.L4:
+ 122              	.LM37:
+ 123 0038 8CC2     		sw	a1,0(a3)
+ 124 003a FDB7     		j	.L5
+ 125              		.cfi_endproc
+ 126              	.LFE154:
+ 128              		.section	.text.Lcd_WriteIndex,"ax",@progbits
+ 129              		.align	1
+ 130              		.globl	Lcd_WriteIndex
+ 132              	Lcd_WriteIndex:
+ 133              	.LVL9:
+ 134              	.LFB155:
+ 135              	.LM38:
+ 136              		.cfi_startproc
+ 137              	.LM39:
+ 138              	.LM40:
+ 139 0000 4111     		addi	sp,sp,-16
+ 140              	.LCFI2:
+ 141              		.cfi_def_cfa_offset 16
+ 142              	.LM41:
+ 143 0002 B7170140 		li	a5,1073811456
+ 144              	.LM42:
+ 145 0006 22C4     		sw	s0,8(sp)
+ 146 0008 06C6     		sw	ra,12(sp)
+ 147              		.cfi_offset 8, -8
+ 148              		.cfi_offset 1, -4
+ 149              	.LM43:
+ 150 000a 938747C1 		addi	a5,a5,-1004
+ 151 000e 13040002 		li	s0,32
+ 152 0012 80C3     		sw	s0,0(a5)
+ 153              	.LM44:
+ 154 0014 4147     		li	a4,16
+ 155 0016 98C3     		sw	a4,0(a5)
+ 156              	.LM45:
+ 157 0018 97000000 		call	SPI_WriteData
+ 157      E7800000 
+ 158              	.LVL10:
+ 159              	.LM46:
+ 160 0020 B7170140 		li	a5,1073811456
+ 161              	.LM47:
+ 162 0024 B240     		lw	ra,12(sp)
+ 163              		.cfi_restore 1
+ 164              	.LM48:
+ 165 0026 23A887C0 		sw	s0,-1008(a5)
+ 166              	.LM49:
+ 167 002a 2244     		lw	s0,8(sp)
+ 168              		.cfi_restore 8
+ 169 002c 4101     		addi	sp,sp,16
+ 170              	.LCFI3:
+ 171              		.cfi_def_cfa_offset 0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 4
+
+
+ 172 002e 8280     		jr	ra
+ 173              		.cfi_endproc
+ 174              	.LFE155:
+ 176              		.section	.text.Lcd_WriteData,"ax",@progbits
+ 177              		.align	1
+ 178              		.globl	Lcd_WriteData
+ 180              	Lcd_WriteData:
+ 181              	.LVL11:
+ 182              	.LFB156:
+ 183              	.LM50:
+ 184              		.cfi_startproc
+ 185              	.LM51:
+ 186              	.LM52:
+ 187 0000 4111     		addi	sp,sp,-16
+ 188              	.LCFI4:
+ 189              		.cfi_def_cfa_offset 16
+ 190 0002 22C4     		sw	s0,8(sp)
+ 191 0004 26C2     		sw	s1,4(sp)
+ 192 0006 06C6     		sw	ra,12(sp)
+ 193              		.cfi_offset 8, -8
+ 194              		.cfi_offset 9, -12
+ 195              		.cfi_offset 1, -4
+ 196              	.LM53:
+ 197 0008 B7170140 		li	a5,1073811456
+ 198 000c 93040002 		li	s1,32
+ 199 0010 23AA97C0 		sw	s1,-1004(a5)
+ 200              	.LM54:
+ 201 0014 138407C1 		addi	s0,a5,-1008
+ 202 0018 C147     		li	a5,16
+ 203 001a 1CC0     		sw	a5,0(s0)
+ 204              	.LM55:
+ 205 001c 97000000 		call	SPI_WriteData
+ 205      E7800000 
+ 206              	.LVL12:
+ 207              	.LM56:
+ 208              	.LM57:
+ 209 0024 B240     		lw	ra,12(sp)
+ 210              		.cfi_restore 1
+ 211              	.LM58:
+ 212 0026 04C0     		sw	s1,0(s0)
+ 213              	.LM59:
+ 214 0028 2244     		lw	s0,8(sp)
+ 215              		.cfi_restore 8
+ 216 002a 9244     		lw	s1,4(sp)
+ 217              		.cfi_restore 9
+ 218 002c 4101     		addi	sp,sp,16
+ 219              	.LCFI5:
+ 220              		.cfi_def_cfa_offset 0
+ 221 002e 8280     		jr	ra
+ 222              		.cfi_endproc
+ 223              	.LFE156:
+ 225              		.section	.text.LCD_WriteData_16Bit,"ax",@progbits
+ 226              		.align	1
+ 227              		.globl	LCD_WriteData_16Bit
+ 229              	LCD_WriteData_16Bit:
+ 230              	.LVL13:
+ 231              	.LFB157:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 5
+
+
+ 232              	.LM60:
+ 233              		.cfi_startproc
+ 234              	.LM61:
+ 235              	.LM62:
+ 236 0000 4111     		addi	sp,sp,-16
+ 237              	.LCFI6:
+ 238              		.cfi_def_cfa_offset 16
+ 239 0002 06C6     		sw	ra,12(sp)
+ 240 0004 22C4     		sw	s0,8(sp)
+ 241 0006 26C2     		sw	s1,4(sp)
+ 242 0008 4AC0     		sw	s2,0(sp)
+ 243              		.cfi_offset 1, -4
+ 244              		.cfi_offset 8, -8
+ 245              		.cfi_offset 9, -12
+ 246              		.cfi_offset 18, -16
+ 247              	.LM63:
+ 248 000a B7170140 		li	a5,1073811456
+ 249 000e 93040002 		li	s1,32
+ 250 0012 23AA97C0 		sw	s1,-1004(a5)
+ 251              	.LM64:
+ 252 0016 138407C1 		addi	s0,a5,-1008
+ 253 001a C147     		li	a5,16
+ 254              	.LM65:
+ 255 001c 2A89     		mv	s2,a0
+ 256              	.LM66:
+ 257 001e 1CC0     		sw	a5,0(s0)
+ 258              	.LM67:
+ 259 0020 2181     		srli	a0,a0,8
+ 260              	.LVL14:
+ 261              	.LM68:
+ 262 0022 97000000 		call	SPI_WriteData
+ 262      E7800000 
+ 263              	.LVL15:
+ 264              	.LM69:
+ 265 002a 1375F90F 		andi	a0,s2,0xff
+ 266 002e 97000000 		call	SPI_WriteData
+ 266      E7800000 
+ 267              	.LVL16:
+ 268              	.LM70:
+ 269              	.LM71:
+ 270 0036 B240     		lw	ra,12(sp)
+ 271              		.cfi_restore 1
+ 272              	.LM72:
+ 273 0038 04C0     		sw	s1,0(s0)
+ 274              	.LM73:
+ 275 003a 2244     		lw	s0,8(sp)
+ 276              		.cfi_restore 8
+ 277 003c 9244     		lw	s1,4(sp)
+ 278              		.cfi_restore 9
+ 279 003e 0249     		lw	s2,0(sp)
+ 280              		.cfi_restore 18
+ 281              	.LVL17:
+ 282              	.LM74:
+ 283 0040 4101     		addi	sp,sp,16
+ 284              	.LCFI7:
+ 285              		.cfi_def_cfa_offset 0
+ 286 0042 8280     		jr	ra
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 6
+
+
+ 287              		.cfi_endproc
+ 288              	.LFE157:
+ 290              		.section	.text.Lcd_WriteReg,"ax",@progbits
+ 291              		.align	1
+ 292              		.globl	Lcd_WriteReg
+ 294              	Lcd_WriteReg:
+ 295              	.LVL18:
+ 296              	.LFB158:
+ 297              	.LM75:
+ 298              		.cfi_startproc
+ 299              	.LM76:
+ 300              	.LM77:
+ 301 0000 0111     		addi	sp,sp,-32
+ 302              	.LCFI8:
+ 303              		.cfi_def_cfa_offset 32
+ 304 0002 06CE     		sw	ra,28(sp)
+ 305              		.cfi_offset 1, -4
+ 306              	.LM78:
+ 307 0004 2EC6     		sw	a1,12(sp)
+ 308              	.LM79:
+ 309 0006 97000000 		call	Lcd_WriteIndex
+ 309      E7800000 
+ 310              	.LVL19:
+ 311              	.LM80:
+ 312 000e 3245     		lw	a0,12(sp)
+ 313              	.LM81:
+ 314 0010 F240     		lw	ra,28(sp)
+ 315              		.cfi_restore 1
+ 316 0012 0561     		addi	sp,sp,32
+ 317              	.LCFI9:
+ 318              		.cfi_def_cfa_offset 0
+ 319              	.LVL20:
+ 320              	.LM82:
+ 321 0014 17030000 		tail	Lcd_WriteData
+ 321      67000300 
+ 322              	.LVL21:
+ 323              		.cfi_endproc
+ 324              	.LFE158:
+ 326              		.section	.text.Lcd_Reset,"ax",@progbits
+ 327              		.align	1
+ 328              		.globl	Lcd_Reset
+ 330              	Lcd_Reset:
+ 331              	.LFB159:
+ 332              	.LM83:
+ 333              		.cfi_startproc
+ 334              	.LM84:
+ 335              	.LM85:
+ 336 0000 4111     		addi	sp,sp,-16
+ 337              	.LCFI10:
+ 338              		.cfi_def_cfa_offset 16
+ 339 0002 22C4     		sw	s0,8(sp)
+ 340 0004 06C6     		sw	ra,12(sp)
+ 341              		.cfi_offset 8, -8
+ 342              		.cfi_offset 1, -4
+ 343              	.LM86:
+ 344 0006 B7170140 		li	a5,1073811456
+ 345 000a 2164     		li	s0,32768
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 7
+
+
+ 346 000c 23AA8780 		sw	s0,-2028(a5)
+ 347              	.LM87:
+ 348 0010 13054006 		li	a0,100
+ 349 0014 97000000 		call	delay_ms
+ 349      E7800000 
+ 350              	.LVL22:
+ 351              	.LM88:
+ 352 001c B7170140 		li	a5,1073811456
+ 353 0020 23A88780 		sw	s0,-2032(a5)
+ 354              	.LM89:
+ 355              	.LM90:
+ 356 0024 2244     		lw	s0,8(sp)
+ 357              		.cfi_restore 8
+ 358 0026 B240     		lw	ra,12(sp)
+ 359              		.cfi_restore 1
+ 360              	.LM91:
+ 361 0028 13052003 		li	a0,50
+ 362              	.LM92:
+ 363 002c 4101     		addi	sp,sp,16
+ 364              	.LCFI11:
+ 365              		.cfi_def_cfa_offset 0
+ 366              	.LM93:
+ 367 002e 17030000 		tail	delay_ms
+ 367      67000300 
+ 368              	.LVL23:
+ 369              		.cfi_endproc
+ 370              	.LFE159:
+ 372              		.section	.text.Lcd_Init,"ax",@progbits
+ 373              		.align	1
+ 374              		.globl	Lcd_Init
+ 376              	Lcd_Init:
+ 377              	.LFB160:
+ 378              	.LM94:
+ 379              		.cfi_startproc
+ 380              	.LM95:
+ 381              	.LM96:
+ 382 0000 4111     		addi	sp,sp,-16
+ 383              	.LCFI12:
+ 384              		.cfi_def_cfa_offset 16
+ 385 0002 06C6     		sw	ra,12(sp)
+ 386              		.cfi_offset 1, -4
+ 387              	.LM97:
+ 388 0004 97000000 		call	LCD_GPIO_Init
+ 388      E7800000 
+ 389              	.LVL24:
+ 390              	.LM98:
+ 391 000c 97000000 		call	Lcd_Reset
+ 391      E7800000 
+ 392              	.LVL25:
+ 393              	.LM99:
+ 394 0014 4545     		li	a0,17
+ 395 0016 97000000 		call	Lcd_WriteIndex
+ 395      E7800000 
+ 396              	.LVL26:
+ 397              	.LM100:
+ 398 001e 13058007 		li	a0,120
+ 399 0022 97000000 		call	delay_ms
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 8
+
+
+ 399      E7800000 
+ 400              	.LVL27:
+ 401              	.LM101:
+ 402 002a 1305100B 		li	a0,177
+ 403 002e 97000000 		call	Lcd_WriteIndex
+ 403      E7800000 
+ 404              	.LVL28:
+ 405              	.LM102:
+ 406 0036 0545     		li	a0,1
+ 407 0038 97000000 		call	Lcd_WriteData
+ 407      E7800000 
+ 408              	.LVL29:
+ 409              	.LM103:
+ 410 0040 1305C002 		li	a0,44
+ 411 0044 97000000 		call	Lcd_WriteData
+ 411      E7800000 
+ 412              	.LVL30:
+ 413              	.LM104:
+ 414 004c 1305D002 		li	a0,45
+ 415 0050 97000000 		call	Lcd_WriteData
+ 415      E7800000 
+ 416              	.LVL31:
+ 417              	.LM105:
+ 418 0058 1305200B 		li	a0,178
+ 419 005c 97000000 		call	Lcd_WriteIndex
+ 419      E7800000 
+ 420              	.LVL32:
+ 421              	.LM106:
+ 422 0064 0545     		li	a0,1
+ 423 0066 97000000 		call	Lcd_WriteData
+ 423      E7800000 
+ 424              	.LVL33:
+ 425              	.LM107:
+ 426 006e 1305C002 		li	a0,44
+ 427 0072 97000000 		call	Lcd_WriteData
+ 427      E7800000 
+ 428              	.LVL34:
+ 429              	.LM108:
+ 430 007a 1305D002 		li	a0,45
+ 431 007e 97000000 		call	Lcd_WriteData
+ 431      E7800000 
+ 432              	.LVL35:
+ 433              	.LM109:
+ 434 0086 1305300B 		li	a0,179
+ 435 008a 97000000 		call	Lcd_WriteIndex
+ 435      E7800000 
+ 436              	.LVL36:
+ 437              	.LM110:
+ 438 0092 0545     		li	a0,1
+ 439 0094 97000000 		call	Lcd_WriteData
+ 439      E7800000 
+ 440              	.LVL37:
+ 441              	.LM111:
+ 442 009c 1305C002 		li	a0,44
+ 443 00a0 97000000 		call	Lcd_WriteData
+ 443      E7800000 
+ 444              	.LVL38:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 9
+
+
+ 445              	.LM112:
+ 446 00a8 1305D002 		li	a0,45
+ 447 00ac 97000000 		call	Lcd_WriteData
+ 447      E7800000 
+ 448              	.LVL39:
+ 449              	.LM113:
+ 450 00b4 0545     		li	a0,1
+ 451 00b6 97000000 		call	Lcd_WriteData
+ 451      E7800000 
+ 452              	.LVL40:
+ 453              	.LM114:
+ 454 00be 1305C002 		li	a0,44
+ 455 00c2 97000000 		call	Lcd_WriteData
+ 455      E7800000 
+ 456              	.LVL41:
+ 457              	.LM115:
+ 458 00ca 1305D002 		li	a0,45
+ 459 00ce 97000000 		call	Lcd_WriteData
+ 459      E7800000 
+ 460              	.LVL42:
+ 461              	.LM116:
+ 462 00d6 1305400B 		li	a0,180
+ 463 00da 97000000 		call	Lcd_WriteIndex
+ 463      E7800000 
+ 464              	.LVL43:
+ 465              	.LM117:
+ 466 00e2 1D45     		li	a0,7
+ 467 00e4 97000000 		call	Lcd_WriteData
+ 467      E7800000 
+ 468              	.LVL44:
+ 469              	.LM118:
+ 470 00ec 1305000C 		li	a0,192
+ 471 00f0 97000000 		call	Lcd_WriteIndex
+ 471      E7800000 
+ 472              	.LVL45:
+ 473              	.LM119:
+ 474 00f8 1305200A 		li	a0,162
+ 475 00fc 97000000 		call	Lcd_WriteData
+ 475      E7800000 
+ 476              	.LVL46:
+ 477              	.LM120:
+ 478 0104 0945     		li	a0,2
+ 479 0106 97000000 		call	Lcd_WriteData
+ 479      E7800000 
+ 480              	.LVL47:
+ 481              	.LM121:
+ 482 010e 13054008 		li	a0,132
+ 483 0112 97000000 		call	Lcd_WriteData
+ 483      E7800000 
+ 484              	.LVL48:
+ 485              	.LM122:
+ 486 011a 1305100C 		li	a0,193
+ 487 011e 97000000 		call	Lcd_WriteIndex
+ 487      E7800000 
+ 488              	.LVL49:
+ 489              	.LM123:
+ 490 0126 1305500C 		li	a0,197
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 10
+
+
+ 491 012a 97000000 		call	Lcd_WriteData
+ 491      E7800000 
+ 492              	.LVL50:
+ 493              	.LM124:
+ 494 0132 1305200C 		li	a0,194
+ 495 0136 97000000 		call	Lcd_WriteIndex
+ 495      E7800000 
+ 496              	.LVL51:
+ 497              	.LM125:
+ 498 013e 2945     		li	a0,10
+ 499 0140 97000000 		call	Lcd_WriteData
+ 499      E7800000 
+ 500              	.LVL52:
+ 501              	.LM126:
+ 502 0148 0145     		li	a0,0
+ 503 014a 97000000 		call	Lcd_WriteData
+ 503      E7800000 
+ 504              	.LVL53:
+ 505              	.LM127:
+ 506 0152 1305300C 		li	a0,195
+ 507 0156 97000000 		call	Lcd_WriteIndex
+ 507      E7800000 
+ 508              	.LVL54:
+ 509              	.LM128:
+ 510 015e 1305A008 		li	a0,138
+ 511 0162 97000000 		call	Lcd_WriteData
+ 511      E7800000 
+ 512              	.LVL55:
+ 513              	.LM129:
+ 514 016a 1305A002 		li	a0,42
+ 515 016e 97000000 		call	Lcd_WriteData
+ 515      E7800000 
+ 516              	.LVL56:
+ 517              	.LM130:
+ 518 0176 1305400C 		li	a0,196
+ 519 017a 97000000 		call	Lcd_WriteIndex
+ 519      E7800000 
+ 520              	.LVL57:
+ 521              	.LM131:
+ 522 0182 1305A008 		li	a0,138
+ 523 0186 97000000 		call	Lcd_WriteData
+ 523      E7800000 
+ 524              	.LVL58:
+ 525              	.LM132:
+ 526 018e 1305E00E 		li	a0,238
+ 527 0192 97000000 		call	Lcd_WriteData
+ 527      E7800000 
+ 528              	.LVL59:
+ 529              	.LM133:
+ 530 019a 1305500C 		li	a0,197
+ 531 019e 97000000 		call	Lcd_WriteIndex
+ 531      E7800000 
+ 532              	.LVL60:
+ 533              	.LM134:
+ 534 01a6 3945     		li	a0,14
+ 535 01a8 97000000 		call	Lcd_WriteData
+ 535      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 11
+
+
+ 536              	.LVL61:
+ 537              	.LM135:
+ 538 01b0 13056003 		li	a0,54
+ 539 01b4 97000000 		call	Lcd_WriteIndex
+ 539      E7800000 
+ 540              	.LVL62:
+ 541              	.LM136:
+ 542 01bc 1305000C 		li	a0,192
+ 543 01c0 97000000 		call	Lcd_WriteData
+ 543      E7800000 
+ 544              	.LVL63:
+ 545              	.LM137:
+ 546 01c8 1305000E 		li	a0,224
+ 547 01cc 97000000 		call	Lcd_WriteIndex
+ 547      E7800000 
+ 548              	.LVL64:
+ 549              	.LM138:
+ 550 01d4 3D45     		li	a0,15
+ 551 01d6 97000000 		call	Lcd_WriteData
+ 551      E7800000 
+ 552              	.LVL65:
+ 553              	.LM139:
+ 554 01de 6945     		li	a0,26
+ 555 01e0 97000000 		call	Lcd_WriteData
+ 555      E7800000 
+ 556              	.LVL66:
+ 557              	.LM140:
+ 558 01e8 3D45     		li	a0,15
+ 559 01ea 97000000 		call	Lcd_WriteData
+ 559      E7800000 
+ 560              	.LVL67:
+ 561              	.LM141:
+ 562 01f2 6145     		li	a0,24
+ 563 01f4 97000000 		call	Lcd_WriteData
+ 563      E7800000 
+ 564              	.LVL68:
+ 565              	.LM142:
+ 566 01fc 1305F002 		li	a0,47
+ 567 0200 97000000 		call	Lcd_WriteData
+ 567      E7800000 
+ 568              	.LVL69:
+ 569              	.LM143:
+ 570 0208 13058002 		li	a0,40
+ 571 020c 97000000 		call	Lcd_WriteData
+ 571      E7800000 
+ 572              	.LVL70:
+ 573              	.LM144:
+ 574 0214 13050002 		li	a0,32
+ 575 0218 97000000 		call	Lcd_WriteData
+ 575      E7800000 
+ 576              	.LVL71:
+ 577              	.LM145:
+ 578 0220 13052002 		li	a0,34
+ 579 0224 97000000 		call	Lcd_WriteData
+ 579      E7800000 
+ 580              	.LVL72:
+ 581              	.LM146:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 12
+
+
+ 582 022c 7D45     		li	a0,31
+ 583 022e 97000000 		call	Lcd_WriteData
+ 583      E7800000 
+ 584              	.LVL73:
+ 585              	.LM147:
+ 586 0236 6D45     		li	a0,27
+ 587 0238 97000000 		call	Lcd_WriteData
+ 587      E7800000 
+ 588              	.LVL74:
+ 589              	.LM148:
+ 590 0240 13053002 		li	a0,35
+ 591 0244 97000000 		call	Lcd_WriteData
+ 591      E7800000 
+ 592              	.LVL75:
+ 593              	.LM149:
+ 594 024c 13057003 		li	a0,55
+ 595 0250 97000000 		call	Lcd_WriteData
+ 595      E7800000 
+ 596              	.LVL76:
+ 597              	.LM150:
+ 598 0258 0145     		li	a0,0
+ 599 025a 97000000 		call	Lcd_WriteData
+ 599      E7800000 
+ 600              	.LVL77:
+ 601              	.LM151:
+ 602 0262 1D45     		li	a0,7
+ 603 0264 97000000 		call	Lcd_WriteData
+ 603      E7800000 
+ 604              	.LVL78:
+ 605              	.LM152:
+ 606 026c 0945     		li	a0,2
+ 607 026e 97000000 		call	Lcd_WriteData
+ 607      E7800000 
+ 608              	.LVL79:
+ 609              	.LM153:
+ 610 0276 4145     		li	a0,16
+ 611 0278 97000000 		call	Lcd_WriteData
+ 611      E7800000 
+ 612              	.LVL80:
+ 613              	.LM154:
+ 614 0280 1305100E 		li	a0,225
+ 615 0284 97000000 		call	Lcd_WriteIndex
+ 615      E7800000 
+ 616              	.LVL81:
+ 617              	.LM155:
+ 618 028c 3D45     		li	a0,15
+ 619 028e 97000000 		call	Lcd_WriteData
+ 619      E7800000 
+ 620              	.LVL82:
+ 621              	.LM156:
+ 622 0296 6D45     		li	a0,27
+ 623 0298 97000000 		call	Lcd_WriteData
+ 623      E7800000 
+ 624              	.LVL83:
+ 625              	.LM157:
+ 626 02a0 3D45     		li	a0,15
+ 627 02a2 97000000 		call	Lcd_WriteData
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 13
+
+
+ 627      E7800000 
+ 628              	.LVL84:
+ 629              	.LM158:
+ 630 02aa 5D45     		li	a0,23
+ 631 02ac 97000000 		call	Lcd_WriteData
+ 631      E7800000 
+ 632              	.LVL85:
+ 633              	.LM159:
+ 634 02b4 13053003 		li	a0,51
+ 635 02b8 97000000 		call	Lcd_WriteData
+ 635      E7800000 
+ 636              	.LVL86:
+ 637              	.LM160:
+ 638 02c0 1305C002 		li	a0,44
+ 639 02c4 97000000 		call	Lcd_WriteData
+ 639      E7800000 
+ 640              	.LVL87:
+ 641              	.LM161:
+ 642 02cc 13059002 		li	a0,41
+ 643 02d0 97000000 		call	Lcd_WriteData
+ 643      E7800000 
+ 644              	.LVL88:
+ 645              	.LM162:
+ 646 02d8 1305E002 		li	a0,46
+ 647 02dc 97000000 		call	Lcd_WriteData
+ 647      E7800000 
+ 648              	.LVL89:
+ 649              	.LM163:
+ 650 02e4 13050003 		li	a0,48
+ 651 02e8 97000000 		call	Lcd_WriteData
+ 651      E7800000 
+ 652              	.LVL90:
+ 653              	.LM164:
+ 654 02f0 13050003 		li	a0,48
+ 655 02f4 97000000 		call	Lcd_WriteData
+ 655      E7800000 
+ 656              	.LVL91:
+ 657              	.LM165:
+ 658 02fc 13059003 		li	a0,57
+ 659 0300 97000000 		call	Lcd_WriteData
+ 659      E7800000 
+ 660              	.LVL92:
+ 661              	.LM166:
+ 662 0308 1305F003 		li	a0,63
+ 663 030c 97000000 		call	Lcd_WriteData
+ 663      E7800000 
+ 664              	.LVL93:
+ 665              	.LM167:
+ 666 0314 0145     		li	a0,0
+ 667 0316 97000000 		call	Lcd_WriteData
+ 667      E7800000 
+ 668              	.LVL94:
+ 669              	.LM168:
+ 670 031e 1D45     		li	a0,7
+ 671 0320 97000000 		call	Lcd_WriteData
+ 671      E7800000 
+ 672              	.LVL95:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 14
+
+
+ 673              	.LM169:
+ 674 0328 0D45     		li	a0,3
+ 675 032a 97000000 		call	Lcd_WriteData
+ 675      E7800000 
+ 676              	.LVL96:
+ 677              	.LM170:
+ 678 0332 4145     		li	a0,16
+ 679 0334 97000000 		call	Lcd_WriteData
+ 679      E7800000 
+ 680              	.LVL97:
+ 681              	.LM171:
+ 682 033c 1305A002 		li	a0,42
+ 683 0340 97000000 		call	Lcd_WriteIndex
+ 683      E7800000 
+ 684              	.LVL98:
+ 685              	.LM172:
+ 686 0348 0145     		li	a0,0
+ 687 034a 97000000 		call	Lcd_WriteData
+ 687      E7800000 
+ 688              	.LVL99:
+ 689              	.LM173:
+ 690 0352 0145     		li	a0,0
+ 691 0354 97000000 		call	Lcd_WriteData
+ 691      E7800000 
+ 692              	.LVL100:
+ 693              	.LM174:
+ 694 035c 0145     		li	a0,0
+ 695 035e 97000000 		call	Lcd_WriteData
+ 695      E7800000 
+ 696              	.LVL101:
+ 697              	.LM175:
+ 698 0366 1305F007 		li	a0,127
+ 699 036a 97000000 		call	Lcd_WriteData
+ 699      E7800000 
+ 700              	.LVL102:
+ 701              	.LM176:
+ 702 0372 1305B002 		li	a0,43
+ 703 0376 97000000 		call	Lcd_WriteIndex
+ 703      E7800000 
+ 704              	.LVL103:
+ 705              	.LM177:
+ 706 037e 0145     		li	a0,0
+ 707 0380 97000000 		call	Lcd_WriteData
+ 707      E7800000 
+ 708              	.LVL104:
+ 709              	.LM178:
+ 710 0388 0145     		li	a0,0
+ 711 038a 97000000 		call	Lcd_WriteData
+ 711      E7800000 
+ 712              	.LVL105:
+ 713              	.LM179:
+ 714 0392 0145     		li	a0,0
+ 715 0394 97000000 		call	Lcd_WriteData
+ 715      E7800000 
+ 716              	.LVL106:
+ 717              	.LM180:
+ 718 039c 1305F009 		li	a0,159
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 15
+
+
+ 719 03a0 97000000 		call	Lcd_WriteData
+ 719      E7800000 
+ 720              	.LVL107:
+ 721              	.LM181:
+ 722 03a8 1305000F 		li	a0,240
+ 723 03ac 97000000 		call	Lcd_WriteIndex
+ 723      E7800000 
+ 724              	.LVL108:
+ 725              	.LM182:
+ 726 03b4 0545     		li	a0,1
+ 727 03b6 97000000 		call	Lcd_WriteData
+ 727      E7800000 
+ 728              	.LVL109:
+ 729              	.LM183:
+ 730 03be 1305600F 		li	a0,246
+ 731 03c2 97000000 		call	Lcd_WriteIndex
+ 731      E7800000 
+ 732              	.LVL110:
+ 733              	.LM184:
+ 734 03ca 0145     		li	a0,0
+ 735 03cc 97000000 		call	Lcd_WriteData
+ 735      E7800000 
+ 736              	.LVL111:
+ 737              	.LM185:
+ 738 03d4 1305A003 		li	a0,58
+ 739 03d8 97000000 		call	Lcd_WriteIndex
+ 739      E7800000 
+ 740              	.LVL112:
+ 741              	.LM186:
+ 742 03e0 1545     		li	a0,5
+ 743 03e2 97000000 		call	Lcd_WriteData
+ 743      E7800000 
+ 744              	.LVL113:
+ 745              	.LM187:
+ 746              	.LM188:
+ 747 03ea B240     		lw	ra,12(sp)
+ 748              		.cfi_restore 1
+ 749              	.LM189:
+ 750 03ec 13059002 		li	a0,41
+ 751              	.LM190:
+ 752 03f0 4101     		addi	sp,sp,16
+ 753              	.LCFI13:
+ 754              		.cfi_def_cfa_offset 0
+ 755              	.LM191:
+ 756 03f2 17030000 		tail	Lcd_WriteIndex
+ 756      67000300 
+ 757              	.LVL114:
+ 758              		.cfi_endproc
+ 759              	.LFE160:
+ 761              		.section	.text.Lcd_SetRegion,"ax",@progbits
+ 762              		.align	1
+ 763              		.globl	Lcd_SetRegion
+ 765              	Lcd_SetRegion:
+ 766              	.LVL115:
+ 767              	.LFB161:
+ 768              	.LM192:
+ 769              		.cfi_startproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 16
+
+
+ 770              	.LM193:
+ 771              	.LM194:
+ 772 0000 0111     		addi	sp,sp,-32
+ 773              	.LCFI14:
+ 774              		.cfi_def_cfa_offset 32
+ 775 0002 22CC     		sw	s0,24(sp)
+ 776              		.cfi_offset 8, -8
+ 777 0004 2A84     		mv	s0,a0
+ 778              	.LM195:
+ 779 0006 1305A002 		li	a0,42
+ 780              	.LVL116:
+ 781              	.LM196:
+ 782 000a 06CE     		sw	ra,28(sp)
+ 783              		.cfi_offset 1, -4
+ 784              	.LM197:
+ 785 000c 2EC6     		sw	a1,12(sp)
+ 786 000e 36C2     		sw	a3,4(sp)
+ 787 0010 32C4     		sw	a2,8(sp)
+ 788              	.LM198:
+ 789 0012 97000000 		call	Lcd_WriteIndex
+ 789      E7800000 
+ 790              	.LVL117:
+ 791              	.LM199:
+ 792 001a 0145     		li	a0,0
+ 793 001c 97000000 		call	Lcd_WriteData
+ 793      E7800000 
+ 794              	.LVL118:
+ 795              	.LM200:
+ 796 0024 1375F40F 		andi	a0,s0,0xff
+ 797 0028 97000000 		call	Lcd_WriteData
+ 797      E7800000 
+ 798              	.LVL119:
+ 799              	.LM201:
+ 800 0030 0145     		li	a0,0
+ 801 0032 97000000 		call	Lcd_WriteData
+ 801      E7800000 
+ 802              	.LVL120:
+ 803              	.LM202:
+ 804 003a 2246     		lw	a2,8(sp)
+ 805 003c 0906     		addi	a2,a2,2
+ 806 003e 1375F60F 		andi	a0,a2,0xff
+ 807 0042 97000000 		call	Lcd_WriteData
+ 807      E7800000 
+ 808              	.LVL121:
+ 809              	.LM203:
+ 810 004a 1305B002 		li	a0,43
+ 811 004e 97000000 		call	Lcd_WriteIndex
+ 811      E7800000 
+ 812              	.LVL122:
+ 813              	.LM204:
+ 814 0056 0145     		li	a0,0
+ 815 0058 97000000 		call	Lcd_WriteData
+ 815      E7800000 
+ 816              	.LVL123:
+ 817              	.LM205:
+ 818 0060 0345C100 		lbu	a0,12(sp)
+ 819 0064 97000000 		call	Lcd_WriteData
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 17
+
+
+ 819      E7800000 
+ 820              	.LVL124:
+ 821              	.LM206:
+ 822 006c 0145     		li	a0,0
+ 823 006e 97000000 		call	Lcd_WriteData
+ 823      E7800000 
+ 824              	.LVL125:
+ 825              	.LM207:
+ 826 0076 9246     		lw	a3,4(sp)
+ 827 0078 8506     		addi	a3,a3,1
+ 828 007a 13F5F60F 		andi	a0,a3,0xff
+ 829 007e 97000000 		call	Lcd_WriteData
+ 829      E7800000 
+ 830              	.LVL126:
+ 831              	.LM208:
+ 832              	.LM209:
+ 833 0086 6244     		lw	s0,24(sp)
+ 834              		.cfi_restore 8
+ 835              	.LVL127:
+ 836              	.LM210:
+ 837 0088 F240     		lw	ra,28(sp)
+ 838              		.cfi_restore 1
+ 839              	.LM211:
+ 840 008a 1305C002 		li	a0,44
+ 841              	.LM212:
+ 842 008e 0561     		addi	sp,sp,32
+ 843              	.LCFI15:
+ 844              		.cfi_def_cfa_offset 0
+ 845              	.LVL128:
+ 846              	.LM213:
+ 847 0090 17030000 		tail	Lcd_WriteIndex
+ 847      67000300 
+ 848              	.LVL129:
+ 849              		.cfi_endproc
+ 850              	.LFE161:
+ 852              		.section	.text.Lcd_SetXY,"ax",@progbits
+ 853              		.align	1
+ 854              		.globl	Lcd_SetXY
+ 856              	Lcd_SetXY:
+ 857              	.LVL130:
+ 858              	.LFB162:
+ 859              	.LM214:
+ 860              		.cfi_startproc
+ 861              	.LM215:
+ 862              	.LM216:
+ 863 0000 2A86     		mv	a2,a0
+ 864 0002 AE86     		mv	a3,a1
+ 865              	.LM217:
+ 866 0004 17030000 		tail	Lcd_SetRegion
+ 866      67000300 
+ 867              	.LVL131:
+ 868              	.LM218:
+ 869              		.cfi_endproc
+ 870              	.LFE162:
+ 872              		.section	.text.Gui_DrawPoint,"ax",@progbits
+ 873              		.align	1
+ 874              		.globl	Gui_DrawPoint
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 18
+
+
+ 876              	Gui_DrawPoint:
+ 877              	.LVL132:
+ 878              	.LFB163:
+ 879              	.LM219:
+ 880              		.cfi_startproc
+ 881              	.LM220:
+ 882              	.LM221:
+ 883 0000 4111     		addi	sp,sp,-16
+ 884              	.LCFI16:
+ 885              		.cfi_def_cfa_offset 16
+ 886 0002 22C4     		sw	s0,8(sp)
+ 887              	.LM222:
+ 888 0004 93861500 		addi	a3,a1,1
+ 889              		.cfi_offset 8, -8
+ 890              	.LM223:
+ 891 0008 3284     		mv	s0,a2
+ 892              	.LM224:
+ 893 000a 13061500 		addi	a2,a0,1
+ 894              	.LVL133:
+ 895              	.LM225:
+ 896 000e C206     		slli	a3,a3,16
+ 897 0010 4206     		slli	a2,a2,16
+ 898 0012 C182     		srli	a3,a3,16
+ 899 0014 4182     		srli	a2,a2,16
+ 900              	.LM226:
+ 901 0016 06C6     		sw	ra,12(sp)
+ 902              		.cfi_offset 1, -4
+ 903              	.LM227:
+ 904 0018 97000000 		call	Lcd_SetRegion
+ 904      E7800000 
+ 905              	.LVL134:
+ 906              	.LM228:
+ 907 0020 2285     		mv	a0,s0
+ 908              	.LM229:
+ 909 0022 2244     		lw	s0,8(sp)
+ 910              		.cfi_restore 8
+ 911              	.LVL135:
+ 912              	.LM230:
+ 913 0024 B240     		lw	ra,12(sp)
+ 914              		.cfi_restore 1
+ 915 0026 4101     		addi	sp,sp,16
+ 916              	.LCFI17:
+ 917              		.cfi_def_cfa_offset 0
+ 918              	.LM231:
+ 919 0028 17030000 		tail	LCD_WriteData_16Bit
+ 919      67000300 
+ 920              	.LVL136:
+ 921              	.LM232:
+ 922              		.cfi_endproc
+ 923              	.LFE163:
+ 925              		.section	.text.Lcd_Clear,"ax",@progbits
+ 926              		.align	1
+ 927              		.globl	Lcd_Clear
+ 929              	Lcd_Clear:
+ 930              	.LVL137:
+ 931              	.LFB164:
+ 932              	.LM233:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 19
+
+
+ 933              		.cfi_startproc
+ 934              	.LM234:
+ 935              	.LM235:
+ 936              	.LM236:
+ 937 0000 4111     		addi	sp,sp,-16
+ 938              	.LCFI18:
+ 939              		.cfi_def_cfa_offset 16
+ 940 0002 4AC0     		sw	s2,0(sp)
+ 941              	.LM237:
+ 942 0004 9306900A 		li	a3,169
+ 943 0008 1306B008 		li	a2,139
+ 944 000c 8145     		li	a1,0
+ 945              		.cfi_offset 18, -16
+ 946              	.LM238:
+ 947 000e 2A89     		mv	s2,a0
+ 948              	.LM239:
+ 949 0010 0145     		li	a0,0
+ 950              	.LVL138:
+ 951              	.LM240:
+ 952 0012 06C6     		sw	ra,12(sp)
+ 953 0014 26C2     		sw	s1,4(sp)
+ 954 0016 22C4     		sw	s0,8(sp)
+ 955              		.cfi_offset 1, -4
+ 956              		.cfi_offset 9, -12
+ 957              		.cfi_offset 8, -8
+ 958              	.LM241:
+ 959 0018 97000000 		call	Lcd_SetRegion
+ 959      E7800000 
+ 960              	.LVL139:
+ 961              	.LM242:
+ 962 0020 1305C002 		li	a0,44
+ 963 0024 97000000 		call	Lcd_WriteIndex
+ 963      E7800000 
+ 964              	.LVL140:
+ 965              	.LM243:
+ 966              	.LM244:
+ 967              	.LM245:
+ 968 002c 9304C008 		li	s1,140
+ 969              	.LVL141:
+ 970              	.L26:
+ 971              	.LM246:
+ 972              	.LM247:
+ 973 0030 1304A00A 		li	s0,170
+ 974              	.LVL142:
+ 975              	.L27:
+ 976              	.LM248:
+ 977 0034 4A85     		mv	a0,s2
+ 978              	.LM249:
+ 979 0036 7D14     		addi	s0,s0,-1
+ 980              	.LVL143:
+ 981              	.LM250:
+ 982 0038 97000000 		call	LCD_WriteData_16Bit
+ 982      E7800000 
+ 983              	.LVL144:
+ 984              	.LM251:
+ 985              	.LM252:
+ 986 0040 75F8     		bne	s0,zero,.L27
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 20
+
+
+ 987              	.LM253:
+ 988              	.LVL145:
+ 989              	.LM254:
+ 990 0042 FD14     		addi	s1,s1,-1
+ 991              	.LVL146:
+ 992              	.LM255:
+ 993 0044 F5F4     		bne	s1,zero,.L26
+ 994              	.LM256:
+ 995 0046 B240     		lw	ra,12(sp)
+ 996              		.cfi_restore 1
+ 997 0048 2244     		lw	s0,8(sp)
+ 998              		.cfi_restore 8
+ 999 004a 9244     		lw	s1,4(sp)
+ 1000              		.cfi_restore 9
+ 1001              	.LVL147:
+ 1002              	.LM257:
+ 1003 004c 0249     		lw	s2,0(sp)
+ 1004              		.cfi_restore 18
+ 1005              	.LVL148:
+ 1006              	.LM258:
+ 1007 004e 4101     		addi	sp,sp,16
+ 1008              	.LCFI19:
+ 1009              		.cfi_def_cfa_offset 0
+ 1010 0050 8280     		jr	ra
+ 1011              		.cfi_endproc
+ 1012              	.LFE164:
+ 1014              		.section	.text.Lcd_Clear_1,"ax",@progbits
+ 1015              		.align	1
+ 1016              		.globl	Lcd_Clear_1
+ 1018              	Lcd_Clear_1:
+ 1019              	.LVL149:
+ 1020              	.LFB165:
+ 1021              	.LM259:
+ 1022              		.cfi_startproc
+ 1023              	.LM260:
+ 1024              	.LM261:
+ 1025              	.LM262:
+ 1026 0000 4111     		addi	sp,sp,-16
+ 1027              	.LCFI20:
+ 1028              		.cfi_def_cfa_offset 16
+ 1029 0002 4AC0     		sw	s2,0(sp)
+ 1030              	.LM263:
+ 1031 0004 93067009 		li	a3,151
+ 1032 0008 13068007 		li	a2,120
+ 1033 000c 93059008 		li	a1,137
+ 1034              		.cfi_offset 18, -16
+ 1035              	.LM264:
+ 1036 0010 2A89     		mv	s2,a0
+ 1037              	.LM265:
+ 1038 0012 13059006 		li	a0,105
+ 1039              	.LVL150:
+ 1040              	.LM266:
+ 1041 0016 06C6     		sw	ra,12(sp)
+ 1042 0018 26C2     		sw	s1,4(sp)
+ 1043 001a 22C4     		sw	s0,8(sp)
+ 1044              		.cfi_offset 1, -4
+ 1045              		.cfi_offset 9, -12
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 21
+
+
+ 1046              		.cfi_offset 8, -8
+ 1047              	.LM267:
+ 1048 001c 97000000 		call	Lcd_SetRegion
+ 1048      E7800000 
+ 1049              	.LVL151:
+ 1050              	.LM268:
+ 1051 0024 1305C002 		li	a0,44
+ 1052 0028 97000000 		call	Lcd_WriteIndex
+ 1052      E7800000 
+ 1053              	.LVL152:
+ 1054              	.LM269:
+ 1055              	.LM270:
+ 1056              	.LM271:
+ 1057 0030 93048007 		li	s1,120
+ 1058              	.LVL153:
+ 1059              	.L32:
+ 1060              	.LM272:
+ 1061              	.LM273:
+ 1062 0034 13048009 		li	s0,152
+ 1063              	.LVL154:
+ 1064              	.L33:
+ 1065              	.LM274:
+ 1066 0038 4A85     		mv	a0,s2
+ 1067              	.LM275:
+ 1068 003a 7D14     		addi	s0,s0,-1
+ 1069              	.LVL155:
+ 1070              	.LM276:
+ 1071 003c 97000000 		call	LCD_WriteData_16Bit
+ 1071      E7800000 
+ 1072              	.LVL156:
+ 1073              	.LM277:
+ 1074              	.LM278:
+ 1075 0044 75F8     		bne	s0,zero,.L33
+ 1076              	.LM279:
+ 1077              	.LVL157:
+ 1078              	.LM280:
+ 1079 0046 FD14     		addi	s1,s1,-1
+ 1080              	.LVL158:
+ 1081              	.LM281:
+ 1082 0048 F5F4     		bne	s1,zero,.L32
+ 1083              	.LM282:
+ 1084 004a B240     		lw	ra,12(sp)
+ 1085              		.cfi_restore 1
+ 1086 004c 2244     		lw	s0,8(sp)
+ 1087              		.cfi_restore 8
+ 1088 004e 9244     		lw	s1,4(sp)
+ 1089              		.cfi_restore 9
+ 1090              	.LVL159:
+ 1091              	.LM283:
+ 1092 0050 0249     		lw	s2,0(sp)
+ 1093              		.cfi_restore 18
+ 1094              	.LVL160:
+ 1095              	.LM284:
+ 1096 0052 4101     		addi	sp,sp,16
+ 1097              	.LCFI21:
+ 1098              		.cfi_def_cfa_offset 0
+ 1099 0054 8280     		jr	ra
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 22
+
+
+ 1100              		.cfi_endproc
+ 1101              	.LFE165:
+ 1103              		.section	.rodata.Redraw_Mainmenu.str1.4,"aMS",@progbits,1
+ 1104              		.align	2
+ 1105              	.LC0:
+ 1106 0000 E699BAE8 		.base64	"5pm66IO9546v5aKD55uR5rWL5a6e6aqMAA=="
+ 1106      83BDE78E 
+ 1106      AFE5A283 
+ 1106      E79B91E6 
+ 1106      B58BE5AE 
+ 1107 0019 000000   		.align	2
+ 1108              	.LC1:
+ 1109 001c E6B8A9E5 		.base64	"5rip5bqmAA=="
+ 1109      BAA600
+ 1110 0023 00       		.align	2
+ 1111              	.LC2:
+ 1112 0024 E6B9BFE5 		.base64	"5rm/5bqmAA=="
+ 1112      BAA600
+ 1113 002b 00       		.align	2
+ 1114              	.LC3:
+ 1115 002c 41504900 		.string	"API"
+ 1116              		.align	2
+ 1117              	.LC4:
+ 1118 0030 48325300 		.string	"H2S"
+ 1119              		.align	2
+ 1120              	.LC5:
+ 1121 0034 4E483300 		.string	"NH3"
+ 1122              		.section	.text.Redraw_Mainmenu,"ax",@progbits
+ 1123              		.align	1
+ 1124              		.globl	Redraw_Mainmenu
+ 1126              	Redraw_Mainmenu:
+ 1127              	.LFB166:
+ 1128              	.LM285:
+ 1129              		.cfi_startproc
+ 1130              	.LM286:
+ 1131 0000 3D65     		li	a0,61440
+ 1132              	.LM287:
+ 1133 0002 4111     		addi	sp,sp,-16
+ 1134              	.LCFI22:
+ 1135              		.cfi_def_cfa_offset 16
+ 1136              	.LM288:
+ 1137 0004 1305D5F7 		addi	a0,a0,-131
+ 1138              	.LM289:
+ 1139 0008 06C6     		sw	ra,12(sp)
+ 1140              		.cfi_offset 1, -4
+ 1141              	.LM290:
+ 1142 000a 97000000 		call	Lcd_Clear
+ 1142      E7800000 
+ 1143              	.LVL161:
+ 1144              	.LM291:
+ 1145 0012 9545     		li	a1,5
+ 1146 0014 BD66     		li	a3,61440
+ 1147 0016 17070000 		lla	a4,.LC0
+ 1147      13070700 
+ 1148 001e 2E85     		mv	a0,a1
+ 1149 0020 9386D6F7 		addi	a3,a3,-131
+ 1150 0024 7D46     		li	a2,31
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 23
+
+
+ 1151 0026 97000000 		call	Gui_DrawFont_GBK16
+ 1151      E7800000 
+ 1152              	.LVL162:
+ 1153              	.LM292:
+ 1154 002e 9306D002 		li	a3,45
+ 1155 0032 3686     		mv	a2,a3
+ 1156 0034 E545     		li	a1,25
+ 1157 0036 1545     		li	a0,5
+ 1158 0038 97000000 		call	DisplayButtonUp
+ 1158      E7800000 
+ 1159              	.LVL163:
+ 1160              	.LM293:
+ 1161 0040 BD66     		li	a3,61440
+ 1162 0042 17070000 		lla	a4,.LC1
+ 1162      13070700 
+ 1163 004a 9386D6F7 		addi	a3,a3,-131
+ 1164 004e 0146     		li	a2,0
+ 1165 0050 E545     		li	a1,25
+ 1166 0052 2945     		li	a0,10
+ 1167 0054 97000000 		call	Gui_DrawFont_GBK16
+ 1167      E7800000 
+ 1168              	.LVL164:
+ 1169              	.LM294:
+ 1170 005c 93063004 		li	a3,67
+ 1171 0060 1306D002 		li	a2,45
+ 1172 0064 9305F002 		li	a1,47
+ 1173 0068 1545     		li	a0,5
+ 1174 006a 97000000 		call	DisplayButtonUp
+ 1174      E7800000 
+ 1175              	.LVL165:
+ 1176              	.LM295:
+ 1177 0072 BD66     		li	a3,61440
+ 1178 0074 4166     		li	a2,65536
+ 1179 0076 17070000 		lla	a4,.LC2
+ 1179      13070700 
+ 1180 007e 9386D6F7 		addi	a3,a3,-131
+ 1181 0082 13060680 		addi	a2,a2,-2048
+ 1182 0086 9305F002 		li	a1,47
+ 1183 008a 2945     		li	a0,10
+ 1184 008c 97000000 		call	Gui_DrawFont_GBK16
+ 1184      E7800000 
+ 1185              	.LVL166:
+ 1186              	.LM296:
+ 1187 0094 93069005 		li	a3,89
+ 1188 0098 1306D002 		li	a2,45
+ 1189 009c 93055004 		li	a1,69
+ 1190 00a0 1545     		li	a0,5
+ 1191 00a2 97000000 		call	DisplayButtonUp
+ 1191      E7800000 
+ 1192              	.LVL167:
+ 1193              	.LM297:
+ 1194 00aa BD66     		li	a3,61440
+ 1195 00ac 17070000 		lla	a4,.LC3
+ 1195      13070700 
+ 1196 00b4 9386D6F7 		addi	a3,a3,-131
+ 1197 00b8 1306007E 		li	a2,2016
+ 1198 00bc 93055004 		li	a1,69
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 24
+
+
+ 1199 00c0 2945     		li	a0,10
+ 1200 00c2 97000000 		call	Gui_DrawFont_GBK16
+ 1200      E7800000 
+ 1201              	.LVL168:
+ 1202              	.LM298:
+ 1203 00ca 9306F006 		li	a3,111
+ 1204 00ce 1306D002 		li	a2,45
+ 1205 00d2 9305B005 		li	a1,91
+ 1206 00d6 1545     		li	a0,5
+ 1207 00d8 97000000 		call	DisplayButtonUp
+ 1207      E7800000 
+ 1208              	.LVL169:
+ 1209              	.LM299:
+ 1210 00e0 BD66     		li	a3,61440
+ 1211 00e2 4166     		li	a2,65536
+ 1212 00e4 17070000 		lla	a4,.LC4
+ 1212      13070700 
+ 1213 00ec 9386D6F7 		addi	a3,a3,-131
+ 1214 00f0 0116     		addi	a2,a2,-32
+ 1215 00f2 9305B005 		li	a1,91
+ 1216 00f6 2945     		li	a0,10
+ 1217 00f8 97000000 		call	Gui_DrawFont_GBK16
+ 1217      E7800000 
+ 1218              	.LVL170:
+ 1219              	.LM300:
+ 1220 0100 93065008 		li	a3,133
+ 1221 0104 1306D002 		li	a2,45
+ 1222 0108 93051007 		li	a1,113
+ 1223 010c 1545     		li	a0,5
+ 1224 010e 97000000 		call	DisplayButtonUp
+ 1224      E7800000 
+ 1225              	.LVL171:
+ 1226              	.LM301:
+ 1227 0116 BD66     		li	a3,61440
+ 1228 0118 2166     		li	a2,32768
+ 1229 011a 17070000 		lla	a4,.LC5
+ 1229      13070700 
+ 1230 0122 9386D6F7 		addi	a3,a3,-131
+ 1231 0126 13060641 		addi	a2,a2,1040
+ 1232 012a 93051007 		li	a1,113
+ 1233 012e 2945     		li	a0,10
+ 1234 0130 97000000 		call	Gui_DrawFont_GBK16
+ 1234      E7800000 
+ 1235              	.LVL172:
+ 1236              	.LM302:
+ 1237 0138 9306D002 		li	a3,45
+ 1238 013c 1306D007 		li	a2,125
+ 1239 0140 E545     		li	a1,25
+ 1240 0142 13052003 		li	a0,50
+ 1241 0146 97000000 		call	DisplayButtonUp
+ 1241      E7800000 
+ 1242              	.LVL173:
+ 1243              	.LM303:
+ 1244 014e 93063004 		li	a3,67
+ 1245 0152 1306D007 		li	a2,125
+ 1246 0156 9305F002 		li	a1,47
+ 1247 015a 13052003 		li	a0,50
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 25
+
+
+ 1248 015e 97000000 		call	DisplayButtonUp
+ 1248      E7800000 
+ 1249              	.LVL174:
+ 1250              	.LM304:
+ 1251 0166 93069005 		li	a3,89
+ 1252 016a 1306D007 		li	a2,125
+ 1253 016e 93055004 		li	a1,69
+ 1254 0172 13052003 		li	a0,50
+ 1255 0176 97000000 		call	DisplayButtonUp
+ 1255      E7800000 
+ 1256              	.LVL175:
+ 1257              	.LM305:
+ 1258 017e 9306F006 		li	a3,111
+ 1259 0182 1306D007 		li	a2,125
+ 1260 0186 9305B005 		li	a1,91
+ 1261 018a 13052003 		li	a0,50
+ 1262 018e 97000000 		call	DisplayButtonUp
+ 1262      E7800000 
+ 1263              	.LVL176:
+ 1264              	.LM306:
+ 1265              	.LM307:
+ 1266 0196 B240     		lw	ra,12(sp)
+ 1267              		.cfi_restore 1
+ 1268              	.LM308:
+ 1269 0198 93065008 		li	a3,133
+ 1270              	.LM309:
+ 1271              	.LM310:
+ 1272 019c 1306D007 		li	a2,125
+ 1273 01a0 93051007 		li	a1,113
+ 1274 01a4 13052003 		li	a0,50
+ 1275              	.LM311:
+ 1276 01a8 4101     		addi	sp,sp,16
+ 1277              	.LCFI23:
+ 1278              		.cfi_def_cfa_offset 0
+ 1279              	.LM312:
+ 1280 01aa 17030000 		tail	DisplayButtonUp
+ 1280      67000300 
+ 1281              	.LVL177:
+ 1282              		.cfi_endproc
+ 1283              	.LFE166:
+ 1285              		.section	.rodata.ASCLL_Test.str1.4,"aMS",@progbits,1
+ 1286              		.align	2
+ 1287              	.LC6:
+ 1288 0000 74787431 		.string	"txt1"
+ 1288      00
+ 1289 0005 000000   		.align	2
+ 1290              	.LC7:
+ 1291 0008 74787432 		.string	"txt2"
+ 1291      00
+ 1292 000d 000000   		.align	2
+ 1293              	.LC8:
+ 1294 0010 74787433 		.string	"txt3"
+ 1294      00
+ 1295 0015 000000   		.align	2
+ 1296              	.LC9:
+ 1297 0018 74787434 		.string	"txt4"
+ 1297      00
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 26
+
+
+ 1298 001d 000000   		.align	2
+ 1299              	.LC10:
+ 1300 0020 74787435 		.string	"txt5"
+ 1300      00
+ 1301 0025 000000   		.align	2
+ 1302              	.LC11:
+ 1303 0028 74787436 		.string	"txt6"
+ 1303      00
+ 1304              		.section	.text.ASCLL_Test,"ax",@progbits
+ 1305              		.align	1
+ 1306              		.globl	ASCLL_Test
+ 1308              	ASCLL_Test:
+ 1309              	.LFB167:
+ 1310              	.LM313:
+ 1311              		.cfi_startproc
+ 1312              	.LM314:
+ 1313 0000 BD66     		li	a3,61440
+ 1314 0002 4166     		li	a2,65536
+ 1315              	.LM315:
+ 1316 0004 4111     		addi	sp,sp,-16
+ 1317              	.LCFI24:
+ 1318              		.cfi_def_cfa_offset 16
+ 1319              	.LM316:
+ 1320 0006 17070000 		lla	a4,.LC6
+ 1320      13070700 
+ 1321 000e 9386D6F7 		addi	a3,a3,-131
+ 1322 0012 13060680 		addi	a2,a2,-2048
+ 1323 0016 E545     		li	a1,25
+ 1324 0018 1305A005 		li	a0,90
+ 1325              	.LM317:
+ 1326 001c 06C6     		sw	ra,12(sp)
+ 1327              		.cfi_offset 1, -4
+ 1328              	.LM318:
+ 1329 001e 97000000 		call	Gui_DrawFont_GBK16
+ 1329      E7800000 
+ 1330              	.LVL178:
+ 1331              	.LM319:
+ 1332 0026 BD66     		li	a3,61440
+ 1333 0028 17070000 		lla	a4,.LC7
+ 1333      13070700 
+ 1334 0030 9386D6F7 		addi	a3,a3,-131
+ 1335 0034 1306007E 		li	a2,2016
+ 1336 0038 9305F002 		li	a1,47
+ 1337 003c 1305A005 		li	a0,90
+ 1338 0040 97000000 		call	Gui_DrawFont_GBK16
+ 1338      E7800000 
+ 1339              	.LVL179:
+ 1340              	.LM320:
+ 1341 0048 BD66     		li	a3,61440
+ 1342 004a 17070000 		lla	a4,.LC8
+ 1342      13070700 
+ 1343 0052 9386D6F7 		addi	a3,a3,-131
+ 1344 0056 7D46     		li	a2,31
+ 1345 0058 93055004 		li	a1,69
+ 1346 005c 1305A005 		li	a0,90
+ 1347 0060 97000000 		call	Gui_DrawFont_GBK16
+ 1347      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 27
+
+
+ 1348              	.LVL180:
+ 1349              	.LM321:
+ 1350 0068 BD66     		li	a3,61440
+ 1351 006a 4166     		li	a2,65536
+ 1352 006c 17070000 		lla	a4,.LC9
+ 1352      13070700 
+ 1353 0074 9386D6F7 		addi	a3,a3,-131
+ 1354 0078 13060680 		addi	a2,a2,-2048
+ 1355 007c 9305B005 		li	a1,91
+ 1356 0080 1305A005 		li	a0,90
+ 1357 0084 97000000 		call	Gui_DrawFont_GBK16
+ 1357      E7800000 
+ 1358              	.LVL181:
+ 1359              	.LM322:
+ 1360 008c BD66     		li	a3,61440
+ 1361 008e 17070000 		lla	a4,.LC10
+ 1361      13070700 
+ 1362 0096 9386D6F7 		addi	a3,a3,-131
+ 1363 009a 1306007E 		li	a2,2016
+ 1364 009e 93051007 		li	a1,113
+ 1365 00a2 1305A005 		li	a0,90
+ 1366 00a6 97000000 		call	Gui_DrawFont_GBK16
+ 1366      E7800000 
+ 1367              	.LVL182:
+ 1368              	.LM323:
+ 1369              	.LM324:
+ 1370 00ae B240     		lw	ra,12(sp)
+ 1371              		.cfi_restore 1
+ 1372              	.LM325:
+ 1373 00b0 BD66     		li	a3,61440
+ 1374              	.LM326:
+ 1375              	.LM327:
+ 1376 00b2 17070000 		lla	a4,.LC11
+ 1376      13070700 
+ 1377 00ba 9386D6F7 		addi	a3,a3,-131
+ 1378 00be 7D46     		li	a2,31
+ 1379 00c0 93057008 		li	a1,135
+ 1380 00c4 1305A005 		li	a0,90
+ 1381              	.LM328:
+ 1382 00c8 4101     		addi	sp,sp,16
+ 1383              	.LCFI25:
+ 1384              		.cfi_def_cfa_offset 0
+ 1385              	.LM329:
+ 1386 00ca 17030000 		tail	Gui_DrawFont_GBK16
+ 1386      67000300 
+ 1387              	.LVL183:
+ 1388              		.cfi_endproc
+ 1389              	.LFE167:
+ 1391              		.section	.rodata.Font_Test.str1.4,"aMS",@progbits,1
+ 1392              		.align	2
+ 1393              	.LC12:
+ 1394 0000 E7BD91E7 		.base64	"572R57uc6L+e5o6l5LitLi4uAA=="
+ 1394      BB9CE8BF 
+ 1394      9EE68EA5 
+ 1394      E4B8AD2E 
+ 1394      2E2E00
+ 1395              		.section	.text.Font_Test,"ax",@progbits
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 28
+
+
+ 1396              		.align	1
+ 1397              		.globl	Font_Test
+ 1399              	Font_Test:
+ 1400              	.LFB168:
+ 1401              	.LM330:
+ 1402              		.cfi_startproc
+ 1403              	.LM331:
+ 1404 0000 BD66     		li	a3,61440
+ 1405 0002 17070000 		lla	a4,.LC12
+ 1405      13070700 
+ 1406 000a 9386D6F7 		addi	a3,a3,-131
+ 1407 000e 7D46     		li	a2,31
+ 1408 0010 A945     		li	a1,10
+ 1409 0012 5145     		li	a0,20
+ 1410 0014 17030000 		tail	Gui_DrawFont_GBK16
+ 1410      67000300 
+ 1411              	.LVL184:
+ 1412              		.cfi_endproc
+ 1413              	.LFE168:
+ 1415              		.section	.rodata.Color_Test.str1.4,"aMS",@progbits,1
+ 1416              		.align	2
+ 1417              	.LC13:
+ 1418 0000 436F6C6F 		.string	"Color Test"
+ 1418      72205465 
+ 1418      737400
+ 1419              		.section	.text.Color_Test,"ax",@progbits
+ 1420              		.align	1
+ 1421              		.globl	Color_Test
+ 1423              	Color_Test:
+ 1424              	.LFB169:
+ 1425              	.LM332:
+ 1426              		.cfi_startproc
+ 1427              	.LM333:
+ 1428              	.LVL185:
+ 1429              	.LM334:
+ 1430 0000 3D65     		li	a0,61440
+ 1431              	.LM335:
+ 1432 0002 4111     		addi	sp,sp,-16
+ 1433              	.LCFI26:
+ 1434              		.cfi_def_cfa_offset 16
+ 1435              	.LM336:
+ 1436 0004 1305D5F7 		addi	a0,a0,-131
+ 1437              	.LM337:
+ 1438 0008 06C6     		sw	ra,12(sp)
+ 1439              		.cfi_offset 1, -4
+ 1440              	.LM338:
+ 1441 000a 97000000 		call	Lcd_Clear
+ 1441      E7800000 
+ 1442              	.LVL186:
+ 1443              	.LM339:
+ 1444 0012 BD66     		li	a3,61440
+ 1445 0014 17070000 		lla	a4,.LC13
+ 1445      13070700 
+ 1446 001c 9386D6F7 		addi	a3,a3,-131
+ 1447 0020 7D46     		li	a2,31
+ 1448 0022 A945     		li	a1,10
+ 1449 0024 5145     		li	a0,20
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 29
+
+
+ 1450 0026 97000000 		call	Gui_DrawFont_GBK16
+ 1450      E7800000 
+ 1451              	.LVL187:
+ 1452              	.LM340:
+ 1453 002e 1305800C 		li	a0,200
+ 1454 0032 97000000 		call	delay_ms
+ 1454      E7800000 
+ 1455              	.LVL188:
+ 1456              	.LM341:
+ 1457              	.LM342:
+ 1458              	.LM343:
+ 1459 003a 4165     		li	a0,65536
+ 1460 003c 7D15     		addi	a0,a0,-1
+ 1461 003e 97000000 		call	Lcd_Clear
+ 1461      E7800000 
+ 1462              	.LVL189:
+ 1463              	.LM344:
+ 1464 0046 0145     		li	a0,0
+ 1465 0048 97000000 		call	Lcd_Clear
+ 1465      E7800000 
+ 1466              	.LVL190:
+ 1467              	.LM345:
+ 1468 0050 4165     		li	a0,65536
+ 1469 0052 13050580 		addi	a0,a0,-2048
+ 1470 0056 97000000 		call	Lcd_Clear
+ 1470      E7800000 
+ 1471              	.LVL191:
+ 1472              	.LM346:
+ 1473 005e 1305007E 		li	a0,2016
+ 1474 0062 97000000 		call	Lcd_Clear
+ 1474      E7800000 
+ 1475              	.LVL192:
+ 1476              	.LM347:
+ 1477              	.LM348:
+ 1478 006a B240     		lw	ra,12(sp)
+ 1479              		.cfi_restore 1
+ 1480              	.LM349:
+ 1481 006c 7D45     		li	a0,31
+ 1482              	.LM350:
+ 1483 006e 4101     		addi	sp,sp,16
+ 1484              	.LCFI27:
+ 1485              		.cfi_def_cfa_offset 0
+ 1486              	.LM351:
+ 1487 0070 17030000 		tail	Lcd_Clear
+ 1487      67000300 
+ 1488              	.LVL193:
+ 1489              		.cfi_endproc
+ 1490              	.LFE169:
+ 1492              		.section	.text.showimage,"ax",@progbits
+ 1493              		.align	1
+ 1494              		.globl	showimage
+ 1496              	showimage:
+ 1497              	.LVL194:
+ 1498              	.LFB170:
+ 1499              	.LM352:
+ 1500              		.cfi_startproc
+ 1501              	.LM353:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 30
+
+
+ 1502              	.LM354:
+ 1503              	.LM355:
+ 1504              	.LM356:
+ 1505 0000 7971     		addi	sp,sp,-48
+ 1506              	.LCFI28:
+ 1507              		.cfi_def_cfa_offset 48
+ 1508 0002 4ECE     		sw	s3,28(sp)
+ 1509              		.cfi_offset 19, -20
+ 1510 0004 AA89     		mv	s3,a0
+ 1511              	.LM357:
+ 1512 0006 4165     		li	a0,65536
+ 1513              	.LVL195:
+ 1514              	.LM358:
+ 1515 0008 5AC8     		sw	s6,16(sp)
+ 1516              	.LM359:
+ 1517 000a 7D15     		addi	a0,a0,-1
+ 1518              		.cfi_offset 22, -32
+ 1519 000c 138BF97F 		addi	s6,s3,2047
+ 1520              	.LM360:
+ 1521 0010 26D2     		sw	s1,36(sp)
+ 1522 0012 52CC     		sw	s4,24(sp)
+ 1523 0014 56CA     		sw	s5,20(sp)
+ 1524 0016 06D6     		sw	ra,44(sp)
+ 1525 0018 22D4     		sw	s0,40(sp)
+ 1526 001a 4AD0     		sw	s2,32(sp)
+ 1527 001c 5EC6     		sw	s7,12(sp)
+ 1528              		.cfi_offset 9, -12
+ 1529              		.cfi_offset 20, -24
+ 1530              		.cfi_offset 21, -28
+ 1531              		.cfi_offset 1, -4
+ 1532              		.cfi_offset 8, -8
+ 1533              		.cfi_offset 18, -16
+ 1534              		.cfi_offset 23, -36
+ 1535              	.LM361:
+ 1536 001e 8144     		li	s1,0
+ 1537 0020 97000000 		call	Lcd_Clear
+ 1537      E7800000 
+ 1538              	.LVL196:
+ 1539              	.LM362:
+ 1540              	.LM363:
+ 1541 0028 130B1B48 		addi	s6,s6,1153
+ 1542              	.LM364:
+ 1543 002c 130AA007 		li	s4,122
+ 1544              	.LM365:
+ 1545 0030 930A000A 		li	s5,160
+ 1546              	.LVL197:
+ 1547              	.L45:
+ 1548              	.LM366:
+ 1549              	.LM367:
+ 1550 0034 93877402 		addi	a5,s1,39
+ 1551 0038 939B0701 		slli	s7,a5,16
+ 1552 003c 93DB0B01 		srli	s7,s7,16
+ 1553 0040 0944     		li	s0,2
+ 1554              	.LVL198:
+ 1555              	.L47:
+ 1556              	.LM368:
+ 1557 0042 13065402 		addi	a2,s0,37
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 31
+
+
+ 1558 0046 4206     		slli	a2,a2,16
+ 1559 0048 DE86     		mv	a3,s7
+ 1560 004a 4182     		srli	a2,a2,16
+ 1561 004c A685     		mv	a1,s1
+ 1562 004e 2285     		mv	a0,s0
+ 1563 0050 97000000 		call	Lcd_SetRegion
+ 1563      E7800000 
+ 1564              	.LVL199:
+ 1565              	.LM369:
+ 1566              	.LM370:
+ 1567 0058 4E89     		mv	s2,s3
+ 1568              	.LVL200:
+ 1569              	.L46:
+ 1570              	.LM371:
+ 1571              	.LM372:
+ 1572              	.LM373:
+ 1573              	.LM374:
+ 1574 005a 03451900 		lbu	a0,1(s2)
+ 1575 005e 83470900 		lbu	a5,0(s2)
+ 1576              	.LM375:
+ 1577 0062 0909     		addi	s2,s2,2
+ 1578              	.LVL201:
+ 1579              	.LM376:
+ 1580 0064 2205     		slli	a0,a0,8
+ 1581 0066 5D8D     		or	a0,a0,a5
+ 1582              	.LM377:
+ 1583 0068 4205     		slli	a0,a0,16
+ 1584 006a 4181     		srli	a0,a0,16
+ 1585 006c 97000000 		call	LCD_WriteData_16Bit
+ 1585      E7800000 
+ 1586              	.LVL202:
+ 1587              	.LM378:
+ 1588              	.LM379:
+ 1589 0074 E3132BFF 		bne	s6,s2,.L46
+ 1590              	.LM380:
+ 1591              	.LM381:
+ 1592 0078 13048402 		addi	s0,s0,40
+ 1593 007c 4204     		slli	s0,s0,16
+ 1594 007e 4180     		srli	s0,s0,16
+ 1595 0080 E31144FD 		bne	s0,s4,.L47
+ 1596              	.LM382:
+ 1597              	.LM383:
+ 1598 0084 93848402 		addi	s1,s1,40
+ 1599 0088 C204     		slli	s1,s1,16
+ 1600 008a C180     		srli	s1,s1,16
+ 1601 008c E39454FB 		bne	s1,s5,.L45
+ 1602              	.LM384:
+ 1603 0090 B250     		lw	ra,44(sp)
+ 1604              		.cfi_restore 1
+ 1605 0092 2254     		lw	s0,40(sp)
+ 1606              		.cfi_restore 8
+ 1607 0094 9254     		lw	s1,36(sp)
+ 1608              		.cfi_restore 9
+ 1609 0096 0259     		lw	s2,32(sp)
+ 1610              		.cfi_restore 18
+ 1611 0098 F249     		lw	s3,28(sp)
+ 1612              		.cfi_restore 19
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 32
+
+
+ 1613              	.LVL203:
+ 1614              	.LM385:
+ 1615 009a 624A     		lw	s4,24(sp)
+ 1616              		.cfi_restore 20
+ 1617 009c D24A     		lw	s5,20(sp)
+ 1618              		.cfi_restore 21
+ 1619 009e 424B     		lw	s6,16(sp)
+ 1620              		.cfi_restore 22
+ 1621              	.LVL204:
+ 1622              	.LM386:
+ 1623 00a0 B24B     		lw	s7,12(sp)
+ 1624              		.cfi_restore 23
+ 1625 00a2 4561     		addi	sp,sp,48
+ 1626              	.LCFI29:
+ 1627              		.cfi_def_cfa_offset 0
+ 1628 00a4 8280     		jr	ra
+ 1629              		.cfi_endproc
+ 1630              	.LFE170:
+ 1632              		.text
+ 1633              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 33
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 lcd_driver.c
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:10     .text.LCD_GPIO_Init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:13     .text.LCD_GPIO_Init:00000000 LCD_GPIO_Init
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:16     .text.LCD_GPIO_Init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:22     .text.LCD_GPIO_Init:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:30     .text.LCD_GPIO_Init:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:51     .text.LCD_GPIO_Init:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:61     .text.LCD_GPIO_Init:00000054 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:65     .text.LCD_GPIO_Init:0000005c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:69     .text.SPI_WriteData:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:72     .text.SPI_WriteData:00000000 SPI_WriteData
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:76     .text.SPI_WriteData:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:125    .text.SPI_WriteData:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:129    .text.Lcd_WriteIndex:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:132    .text.Lcd_WriteIndex:00000000 Lcd_WriteIndex
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:136    .text.Lcd_WriteIndex:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:141    .text.Lcd_WriteIndex:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:147    .text.Lcd_WriteIndex:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:148    .text.Lcd_WriteIndex:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:163    .text.Lcd_WriteIndex:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:168    .text.Lcd_WriteIndex:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:171    .text.Lcd_WriteIndex:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:173    .text.Lcd_WriteIndex:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:177    .text.Lcd_WriteData:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:180    .text.Lcd_WriteData:00000000 Lcd_WriteData
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:184    .text.Lcd_WriteData:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:189    .text.Lcd_WriteData:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:193    .text.Lcd_WriteData:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:194    .text.Lcd_WriteData:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:195    .text.Lcd_WriteData:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:210    .text.Lcd_WriteData:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:215    .text.Lcd_WriteData:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:217    .text.Lcd_WriteData:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:220    .text.Lcd_WriteData:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:222    .text.Lcd_WriteData:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:226    .text.LCD_WriteData_16Bit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:229    .text.LCD_WriteData_16Bit:00000000 LCD_WriteData_16Bit
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:233    .text.LCD_WriteData_16Bit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:238    .text.LCD_WriteData_16Bit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:243    .text.LCD_WriteData_16Bit:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:244    .text.LCD_WriteData_16Bit:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:245    .text.LCD_WriteData_16Bit:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:246    .text.LCD_WriteData_16Bit:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:271    .text.LCD_WriteData_16Bit:00000038 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:276    .text.LCD_WriteData_16Bit:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:278    .text.LCD_WriteData_16Bit:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:280    .text.LCD_WriteData_16Bit:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:285    .text.LCD_WriteData_16Bit:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:287    .text.LCD_WriteData_16Bit:00000044 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:291    .text.Lcd_WriteReg:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:294    .text.Lcd_WriteReg:00000000 Lcd_WriteReg
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:298    .text.Lcd_WriteReg:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:303    .text.Lcd_WriteReg:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:305    .text.Lcd_WriteReg:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:315    .text.Lcd_WriteReg:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:318    .text.Lcd_WriteReg:00000014 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:323    .text.Lcd_WriteReg:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:327    .text.Lcd_Reset:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:330    .text.Lcd_Reset:00000000 Lcd_Reset
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:333    .text.Lcd_Reset:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:338    .text.Lcd_Reset:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:341    .text.Lcd_Reset:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:342    .text.Lcd_Reset:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:357    .text.Lcd_Reset:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:359    .text.Lcd_Reset:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:365    .text.Lcd_Reset:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:369    .text.Lcd_Reset:00000036 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:373    .text.Lcd_Init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:376    .text.Lcd_Init:00000000 Lcd_Init
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:379    .text.Lcd_Init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:384    .text.Lcd_Init:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:386    .text.Lcd_Init:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:748    .text.Lcd_Init:000003ec .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:754    .text.Lcd_Init:000003f2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:758    .text.Lcd_Init:000003fa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:762    .text.Lcd_SetRegion:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:765    .text.Lcd_SetRegion:00000000 Lcd_SetRegion
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:769    .text.Lcd_SetRegion:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:774    .text.Lcd_SetRegion:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:776    .text.Lcd_SetRegion:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:783    .text.Lcd_SetRegion:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:834    .text.Lcd_SetRegion:00000088 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:838    .text.Lcd_SetRegion:0000008a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:844    .text.Lcd_SetRegion:00000090 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:849    .text.Lcd_SetRegion:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:853    .text.Lcd_SetXY:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:856    .text.Lcd_SetXY:00000000 Lcd_SetXY
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:860    .text.Lcd_SetXY:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:869    .text.Lcd_SetXY:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:873    .text.Gui_DrawPoint:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:876    .text.Gui_DrawPoint:00000000 Gui_DrawPoint
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:880    .text.Gui_DrawPoint:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:885    .text.Gui_DrawPoint:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:889    .text.Gui_DrawPoint:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:902    .text.Gui_DrawPoint:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:910    .text.Gui_DrawPoint:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:914    .text.Gui_DrawPoint:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:917    .text.Gui_DrawPoint:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:922    .text.Gui_DrawPoint:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:926    .text.Lcd_Clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:929    .text.Lcd_Clear:00000000 Lcd_Clear
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:933    .text.Lcd_Clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:939    .text.Lcd_Clear:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:945    .text.Lcd_Clear:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:955    .text.Lcd_Clear:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:956    .text.Lcd_Clear:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:957    .text.Lcd_Clear:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:996    .text.Lcd_Clear:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:998    .text.Lcd_Clear:0000004a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1000   .text.Lcd_Clear:0000004c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1004   .text.Lcd_Clear:0000004e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1009   .text.Lcd_Clear:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1011   .text.Lcd_Clear:00000052 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1015   .text.Lcd_Clear_1:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1018   .text.Lcd_Clear_1:00000000 Lcd_Clear_1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1022   .text.Lcd_Clear_1:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1028   .text.Lcd_Clear_1:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1034   .text.Lcd_Clear_1:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1044   .text.Lcd_Clear_1:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1045   .text.Lcd_Clear_1:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1046   .text.Lcd_Clear_1:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1085   .text.Lcd_Clear_1:0000004c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1087   .text.Lcd_Clear_1:0000004e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1089   .text.Lcd_Clear_1:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1093   .text.Lcd_Clear_1:00000052 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1098   .text.Lcd_Clear_1:00000054 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1100   .text.Lcd_Clear_1:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1123   .text.Redraw_Mainmenu:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1126   .text.Redraw_Mainmenu:00000000 Redraw_Mainmenu
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1129   .text.Redraw_Mainmenu:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1135   .text.Redraw_Mainmenu:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1140   .text.Redraw_Mainmenu:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1267   .text.Redraw_Mainmenu:00000198 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1278   .text.Redraw_Mainmenu:000001aa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1282   .text.Redraw_Mainmenu:000001b2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1305   .text.ASCLL_Test:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1308   .text.ASCLL_Test:00000000 ASCLL_Test
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1311   .text.ASCLL_Test:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1318   .text.ASCLL_Test:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1327   .text.ASCLL_Test:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1371   .text.ASCLL_Test:000000b0 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1384   .text.ASCLL_Test:000000ca .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1388   .text.ASCLL_Test:000000d2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1396   .text.Font_Test:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1399   .text.Font_Test:00000000 Font_Test
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1402   .text.Font_Test:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1412   .text.Font_Test:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1420   .text.Color_Test:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1423   .text.Color_Test:00000000 Color_Test
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1426   .text.Color_Test:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1434   .text.Color_Test:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1439   .text.Color_Test:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1479   .text.Color_Test:0000006c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1485   .text.Color_Test:00000070 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1489   .text.Color_Test:00000078 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1493   .text.showimage:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1496   .text.showimage:00000000 showimage
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1500   .text.showimage:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1507   .text.showimage:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1509   .text.showimage:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1518   .text.showimage:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1528   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1529   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1530   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1531   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1532   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1533   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1534   .text.showimage:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1604   .text.showimage:00000092 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1606   .text.showimage:00000094 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1608   .text.showimage:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1610   .text.showimage:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1612   .text.showimage:0000009a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1616   .text.showimage:0000009c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1618   .text.showimage:0000009e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1620   .text.showimage:000000a0 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1624   .text.showimage:000000a2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1627   .text.showimage:000000a4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1629   .text.showimage:000000a6 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:121    .text.SPI_WriteData:00000038 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:92     .text.SPI_WriteData:0000001a .L6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:100    .text.SPI_WriteData:00000028 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:975    .text.Lcd_Clear:00000034 .L27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:970    .text.Lcd_Clear:00000030 .L26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1064   .text.Lcd_Clear_1:00000038 .L33
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1059   .text.Lcd_Clear_1:00000034 .L32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1105   .rodata.Redraw_Mainmenu.str1.4:00000000 .LC0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1147   .text.Redraw_Mainmenu:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1108   .rodata.Redraw_Mainmenu.str1.4:0000001c .LC1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1162   .text.Redraw_Mainmenu:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1111   .rodata.Redraw_Mainmenu.str1.4:00000024 .LC2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1179   .text.Redraw_Mainmenu:00000076 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1114   .rodata.Redraw_Mainmenu.str1.4:0000002c .LC3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1195   .text.Redraw_Mainmenu:000000ac .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1117   .rodata.Redraw_Mainmenu.str1.4:00000030 .LC4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1212   .text.Redraw_Mainmenu:000000e4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1120   .rodata.Redraw_Mainmenu.str1.4:00000034 .LC5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1229   .text.Redraw_Mainmenu:0000011a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1287   .rodata.ASCLL_Test.str1.4:00000000 .LC6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1320   .text.ASCLL_Test:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1290   .rodata.ASCLL_Test.str1.4:00000008 .LC7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1333   .text.ASCLL_Test:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1293   .rodata.ASCLL_Test.str1.4:00000010 .LC8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1342   .text.ASCLL_Test:0000004a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1296   .rodata.ASCLL_Test.str1.4:00000018 .LC9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1352   .text.ASCLL_Test:0000006c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1299   .rodata.ASCLL_Test.str1.4:00000020 .LC10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1361   .text.ASCLL_Test:0000008e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1302   .rodata.ASCLL_Test.str1.4:00000028 .LC11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1376   .text.ASCLL_Test:000000b2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1393   .rodata.Font_Test.str1.4:00000000 .LC12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1405   .text.Font_Test:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1417   .rodata.Color_Test.str1.4:00000000 .LC13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1445   .text.Color_Test:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1569   .text.showimage:0000005a .L46
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1555   .text.showimage:00000042 .L47
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1547   .text.showimage:00000034 .L45
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:4708   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8729   .debug_str:00000083 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8761   .debug_str:000001e5 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8759   .debug_str:000001d5 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6233   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6273   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8807   .debug_str:00000314 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8717   .debug_str:00000035 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8735   .debug_str:00000158 .LASF2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8765   .debug_str:00000227 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8781   .debug_str:0000028a .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8801   .debug_str:000002f2 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8803   .debug_str:000002fe .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8707   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8789   .debug_str:000002b2 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8791   .debug_str:000002bc .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8799   .debug_str:000002e9 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8757   .debug_str:000001ca .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8741   .debug_str:0000017a .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8773   .debug_str:00000254 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8793   .debug_str:000002c7 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8797   .debug_str:000002e0 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8771   .debug_str:0000024f .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8809   .debug_str:0000032b .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8777   .debug_str:0000026a .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8737   .debug_str:00000166 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8769   .debug_str:00000242 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8785   .debug_str:0000029e .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8763   .debug_str:0000021d .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1498   .text.showimage:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1630   .text.showimage:000000a6 .LFE170
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5165   .debug_loc:00000000 .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5192   .debug_loc:00000034 .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5183   .debug_loc:0000002c .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5225   .debug_loc:00000076 .LLST39
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5222   .debug_loc:00000074 .LVUS39
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5236   .debug_loc:0000008c .LLST40
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5233   .debug_loc:0000008a .LVUS40
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5247   .debug_loc:000000a2 .LLST41
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5244   .debug_loc:000000a0 .LVUS41
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8749   .debug_str:000001ad .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5260   .debug_loc:000000ba .LLST42
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5255   .debug_loc:000000b6 .LVUS42
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8753   .debug_str:000001c0 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5278   .debug_loc:000000de .LLST43
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5273   .debug_loc:000000da .LVUS43
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1538   .text.showimage:00000028 .LVL196
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1564   .text.showimage:00000058 .LVL199
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1586   .text.showimage:00000074 .LVL202
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8711   .debug_str:00000010 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1424   .text.Color_Test:00000000 .LFB169
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1490   .text.Color_Test:00000078 .LFE169
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5291   .debug_loc:000000fe .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5314   .debug_loc:0000012e .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5309   .debug_loc:0000012a .LVUS36
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1442   .text.Color_Test:00000012 .LVL186
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1451   .text.Color_Test:0000002e .LVL187
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1455   .text.Color_Test:0000003a .LVL188
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1462   .text.Color_Test:00000046 .LVL189
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1466   .text.Color_Test:00000050 .LVL190
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1471   .text.Color_Test:0000005e .LVL191
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1475   .text.Color_Test:0000006a .LVL192
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1488   .text.Color_Test:00000078 .LVL193
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8727   .debug_str:00000079 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1400   .text.Font_Test:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1413   .text.Font_Test:0000001c .LFE168
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 38
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1411   .text.Font_Test:0000001c .LVL184
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8739   .debug_str:0000016f .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1309   .text.ASCLL_Test:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1389   .text.ASCLL_Test:000000d2 .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5327   .debug_loc:0000014e .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1330   .text.ASCLL_Test:00000026 .LVL178
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1339   .text.ASCLL_Test:00000048 .LVL179
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1348   .text.ASCLL_Test:00000068 .LVL180
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1358   .text.ASCLL_Test:0000008c .LVL181
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1367   .text.ASCLL_Test:000000ae .LVL182
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1387   .text.ASCLL_Test:000000d2 .LVL183
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8795   .debug_str:000002d0 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1127   .text.Redraw_Mainmenu:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1283   .text.Redraw_Mainmenu:000001b2 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5345   .debug_loc:0000017a .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1143   .text.Redraw_Mainmenu:00000012 .LVL161
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1152   .text.Redraw_Mainmenu:0000002e .LVL162
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1159   .text.Redraw_Mainmenu:00000040 .LVL163
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1168   .text.Redraw_Mainmenu:0000005c .LVL164
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1175   .text.Redraw_Mainmenu:00000072 .LVL165
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1185   .text.Redraw_Mainmenu:00000094 .LVL166
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1192   .text.Redraw_Mainmenu:000000aa .LVL167
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1201   .text.Redraw_Mainmenu:000000ca .LVL168
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1208   .text.Redraw_Mainmenu:000000e0 .LVL169
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1218   .text.Redraw_Mainmenu:00000100 .LVL170
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1225   .text.Redraw_Mainmenu:00000116 .LVL171
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1235   .text.Redraw_Mainmenu:00000138 .LVL172
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1242   .text.Redraw_Mainmenu:0000014e .LVL173
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1249   .text.Redraw_Mainmenu:00000166 .LVL174
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1256   .text.Redraw_Mainmenu:0000017e .LVL175
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1263   .text.Redraw_Mainmenu:00000196 .LVL176
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1281   .text.Redraw_Mainmenu:000001b2 .LVL177
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8715   .debug_str:00000029 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1020   .text.Lcd_Clear_1:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1101   .text.Lcd_Clear_1:00000056 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5363   .debug_loc:000001a6 .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8783   .debug_str:00000298 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5388   .debug_loc:000001d8 .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5381   .debug_loc:000001d2 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5421   .debug_loc:00000212 .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5412   .debug_loc:0000020a .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5463   .debug_loc:0000025c .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5456   .debug_loc:00000256 .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1049   .text.Lcd_Clear_1:00000024 .LVL151
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1053   .text.Lcd_Clear_1:00000030 .LVL152
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1072   .text.Lcd_Clear_1:00000044 .LVL156
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8787   .debug_str:000002a8 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:931    .text.Lcd_Clear:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1012   .text.Lcd_Clear:00000052 .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5489   .debug_loc:00000290 .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5514   .debug_loc:000002c2 .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5507   .debug_loc:000002bc .LVUS26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5547   .debug_loc:000002fc .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5538   .debug_loc:000002f4 .LVUS27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5589   .debug_loc:00000346 .LLST28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5582   .debug_loc:00000340 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:960    .text.Lcd_Clear:00000020 .LVL139
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 39
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:964    .text.Lcd_Clear:0000002c .LVL140
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:983    .text.Lcd_Clear:00000040 .LVL144
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8743   .debug_str:0000018c .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:878    .text.Gui_DrawPoint:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:923    .text.Gui_DrawPoint:00000030 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5615   .debug_loc:0000037a .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5638   .debug_loc:000003aa .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5633   .debug_loc:000003a6 .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5663   .debug_loc:000003d5 .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5658   .debug_loc:000003d1 .LVUS23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8755   .debug_str:000001c5 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5692   .debug_loc:00000404 .LLST24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5683   .debug_loc:000003fc .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:905    .text.Gui_DrawPoint:00000020 .LVL134
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:920    .text.Gui_DrawPoint:00000030 .LVL136
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8745   .debug_str:0000019a .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:858    .text.Lcd_SetXY:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:870    .text.Lcd_SetXY:0000000c .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5725   .debug_loc:00000445 .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5720   .debug_loc:00000441 .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5750   .debug_loc:00000470 .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5745   .debug_loc:0000046c .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:867    .text.Lcd_SetXY:0000000c .LVL131
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8751   .debug_str:000001b2 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:767    .text.Lcd_SetRegion:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:850    .text.Lcd_SetRegion:00000098 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5770   .debug_loc:00000497 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8721   .debug_str:0000004e .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5795   .debug_loc:000004c9 .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5788   .debug_loc:000004c3 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8731   .debug_str:0000014a .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5826   .debug_loc:00000501 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5819   .debug_loc:000004fb .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8709   .debug_str:0000000a .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5850   .debug_loc:00000532 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5843   .debug_loc:0000052c .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8733   .debug_str:00000152 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5874   .debug_loc:00000563 .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5867   .debug_loc:0000055d .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:790    .text.Lcd_SetRegion:0000001a .LVL117
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:794    .text.Lcd_SetRegion:00000024 .LVL118
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:798    .text.Lcd_SetRegion:00000030 .LVL119
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:802    .text.Lcd_SetRegion:0000003a .LVL120
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:808    .text.Lcd_SetRegion:0000004a .LVL121
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:812    .text.Lcd_SetRegion:00000056 .LVL122
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:816    .text.Lcd_SetRegion:00000060 .LVL123
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:820    .text.Lcd_SetRegion:0000006c .LVL124
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:824    .text.Lcd_SetRegion:00000076 .LVL125
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:830    .text.Lcd_SetRegion:00000086 .LVL126
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:848    .text.Lcd_SetRegion:00000098 .LVL129
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8747   .debug_str:000001a4 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:377    .text.Lcd_Init:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:759    .text.Lcd_Init:000003fa .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5891   .debug_loc:0000058e .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:389    .text.Lcd_Init:0000000c .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:392    .text.Lcd_Init:00000014 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:396    .text.Lcd_Init:0000001e .LVL26
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 40
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:400    .text.Lcd_Init:0000002a .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:404    .text.Lcd_Init:00000036 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:408    .text.Lcd_Init:00000040 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:412    .text.Lcd_Init:0000004c .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:416    .text.Lcd_Init:00000058 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:420    .text.Lcd_Init:00000064 .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:424    .text.Lcd_Init:0000006e .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:428    .text.Lcd_Init:0000007a .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:432    .text.Lcd_Init:00000086 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:436    .text.Lcd_Init:00000092 .LVL36
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:440    .text.Lcd_Init:0000009c .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:444    .text.Lcd_Init:000000a8 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:448    .text.Lcd_Init:000000b4 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:452    .text.Lcd_Init:000000be .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:456    .text.Lcd_Init:000000ca .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:460    .text.Lcd_Init:000000d6 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:464    .text.Lcd_Init:000000e2 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:468    .text.Lcd_Init:000000ec .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:472    .text.Lcd_Init:000000f8 .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:476    .text.Lcd_Init:00000104 .LVL46
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:480    .text.Lcd_Init:0000010e .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:484    .text.Lcd_Init:0000011a .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:488    .text.Lcd_Init:00000126 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:492    .text.Lcd_Init:00000132 .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:496    .text.Lcd_Init:0000013e .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:500    .text.Lcd_Init:00000148 .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:504    .text.Lcd_Init:00000152 .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:508    .text.Lcd_Init:0000015e .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:512    .text.Lcd_Init:0000016a .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:516    .text.Lcd_Init:00000176 .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:520    .text.Lcd_Init:00000182 .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:524    .text.Lcd_Init:0000018e .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:528    .text.Lcd_Init:0000019a .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:532    .text.Lcd_Init:000001a6 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:536    .text.Lcd_Init:000001b0 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:540    .text.Lcd_Init:000001bc .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:544    .text.Lcd_Init:000001c8 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:548    .text.Lcd_Init:000001d4 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:552    .text.Lcd_Init:000001de .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:556    .text.Lcd_Init:000001e8 .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:560    .text.Lcd_Init:000001f2 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:564    .text.Lcd_Init:000001fc .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:568    .text.Lcd_Init:00000208 .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:572    .text.Lcd_Init:00000214 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:576    .text.Lcd_Init:00000220 .LVL71
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:580    .text.Lcd_Init:0000022c .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:584    .text.Lcd_Init:00000236 .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:588    .text.Lcd_Init:00000240 .LVL74
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:592    .text.Lcd_Init:0000024c .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:596    .text.Lcd_Init:00000258 .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:600    .text.Lcd_Init:00000262 .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:604    .text.Lcd_Init:0000026c .LVL78
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:608    .text.Lcd_Init:00000276 .LVL79
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:612    .text.Lcd_Init:00000280 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:616    .text.Lcd_Init:0000028c .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:620    .text.Lcd_Init:00000296 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:624    .text.Lcd_Init:000002a0 .LVL83
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 41
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:628    .text.Lcd_Init:000002aa .LVL84
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:632    .text.Lcd_Init:000002b4 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:636    .text.Lcd_Init:000002c0 .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:640    .text.Lcd_Init:000002cc .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:644    .text.Lcd_Init:000002d8 .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:648    .text.Lcd_Init:000002e4 .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:652    .text.Lcd_Init:000002f0 .LVL90
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:656    .text.Lcd_Init:000002fc .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:660    .text.Lcd_Init:00000308 .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:664    .text.Lcd_Init:00000314 .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:668    .text.Lcd_Init:0000031e .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:672    .text.Lcd_Init:00000328 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:676    .text.Lcd_Init:00000332 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:680    .text.Lcd_Init:0000033c .LVL97
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:684    .text.Lcd_Init:00000348 .LVL98
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:688    .text.Lcd_Init:00000352 .LVL99
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:692    .text.Lcd_Init:0000035c .LVL100
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:696    .text.Lcd_Init:00000366 .LVL101
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:700    .text.Lcd_Init:00000372 .LVL102
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:704    .text.Lcd_Init:0000037e .LVL103
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:708    .text.Lcd_Init:00000388 .LVL104
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:712    .text.Lcd_Init:00000392 .LVL105
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:716    .text.Lcd_Init:0000039c .LVL106
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:720    .text.Lcd_Init:000003a8 .LVL107
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:724    .text.Lcd_Init:000003b4 .LVL108
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:728    .text.Lcd_Init:000003be .LVL109
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:732    .text.Lcd_Init:000003ca .LVL110
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:736    .text.Lcd_Init:000003d4 .LVL111
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:740    .text.Lcd_Init:000003e0 .LVL112
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:744    .text.Lcd_Init:000003ea .LVL113
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:757    .text.Lcd_Init:000003fa .LVL114
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8805   .debug_str:0000030a .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:331    .text.Lcd_Reset:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:370    .text.Lcd_Reset:00000036 .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5909   .debug_loc:000005ba .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:350    .text.Lcd_Reset:0000001c .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:368    .text.Lcd_Reset:00000036 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8779   .debug_str:0000027d .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:296    .text.Lcd_WriteReg:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:324    .text.Lcd_WriteReg:0000001c .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5927   .debug_loc:000005e6 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8719   .debug_str:00000048 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5950   .debug_loc:00000616 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5945   .debug_loc:00000612 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5977   .debug_loc:00000643 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5970   .debug_loc:0000063d .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:310    .text.Lcd_WriteReg:0000000e .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:322    .text.Lcd_WriteReg:0000001c .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8723   .debug_str:00000056 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:231    .text.LCD_WriteData_16Bit:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:288    .text.LCD_WriteData_16Bit:00000044 .LFE157
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:5994   .debug_loc:0000066e .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6019   .debug_loc:000006a0 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6012   .debug_loc:0000069a .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:263    .text.LCD_WriteData_16Bit:0000002a .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:267    .text.LCD_WriteData_16Bit:00000036 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8775   .debug_str:0000025c .LASF48
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 42
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:182    .text.Lcd_WriteData:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:223    .text.Lcd_WriteData:00000030 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6043   .debug_loc:000006d2 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6066   .debug_loc:00000702 .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6061   .debug_loc:000006fe .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:206    .text.Lcd_WriteData:00000024 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8725   .debug_str:0000006a .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:134    .text.Lcd_WriteIndex:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:174    .text.Lcd_WriteIndex:00000030 .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6086   .debug_loc:00000729 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6109   .debug_loc:00000759 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6104   .debug_loc:00000755 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:158    .text.Lcd_WriteIndex:00000020 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8713   .debug_str:0000001b .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:74     .text.SPI_WriteData:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:126    .text.SPI_WriteData:0000003c .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6134   .debug_loc:00000784 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6129   .debug_loc:00000780 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6152   .debug_loc:000007a8 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6145   .debug_loc:000007a2 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:8767   .debug_str:00000234 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:14     .text.LCD_GPIO_Init:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:66     .text.LCD_GPIO_Init:0000005c .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:6168   .debug_loc:000007d2 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:33     .text.LCD_GPIO_Init:0000001a .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:41     .text.LCD_GPIO_Init:00000032 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:47     .text.LCD_GPIO_Init:00000046 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:64     .text.LCD_GPIO_Init:0000005c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1506   .text.showimage:00000002 .LCFI28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1626   .text.showimage:000000a4 .LCFI29
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1497   .text.showimage:00000000 .LVL194
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1513   .text.showimage:00000008 .LVL195
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1613   .text.showimage:0000009a .LVL203
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1621   .text.showimage:000000a0 .LVL204
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1568   .text.showimage:0000005a .LVL200
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1546   .text.showimage:00000034 .LVL197
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1554   .text.showimage:00000042 .LVL198
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1578   .text.showimage:00000064 .LVL201
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1433   .text.Color_Test:00000004 .LCFI26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1484   .text.Color_Test:00000070 .LCFI27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1428   .text.Color_Test:00000000 .LVL185
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1317   .text.ASCLL_Test:00000006 .LCFI24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1383   .text.ASCLL_Test:000000ca .LCFI25
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1134   .text.Redraw_Mainmenu:00000004 .LCFI22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1277   .text.Redraw_Mainmenu:000001aa .LCFI23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1027   .text.Lcd_Clear_1:00000002 .LCFI20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1097   .text.Lcd_Clear_1:00000054 .LCFI21
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1019   .text.Lcd_Clear_1:00000000 .LVL149
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1039   .text.Lcd_Clear_1:00000016 .LVL150
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1094   .text.Lcd_Clear_1:00000052 .LVL160
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1058   .text.Lcd_Clear_1:00000034 .LVL153
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1077   .text.Lcd_Clear_1:00000046 .LVL157
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1080   .text.Lcd_Clear_1:00000048 .LVL158
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1090   .text.Lcd_Clear_1:00000050 .LVL159
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1063   .text.Lcd_Clear_1:00000038 .LVL154
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1069   .text.Lcd_Clear_1:0000003c .LVL155
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:938    .text.Lcd_Clear:00000002 .LCFI18
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 43
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1008   .text.Lcd_Clear:00000050 .LCFI19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:930    .text.Lcd_Clear:00000000 .LVL137
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:950    .text.Lcd_Clear:00000012 .LVL138
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1005   .text.Lcd_Clear:0000004e .LVL148
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:969    .text.Lcd_Clear:00000030 .LVL141
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:988    .text.Lcd_Clear:00000042 .LVL145
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:991    .text.Lcd_Clear:00000044 .LVL146
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1001   .text.Lcd_Clear:0000004c .LVL147
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:974    .text.Lcd_Clear:00000034 .LVL142
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:980    .text.Lcd_Clear:00000038 .LVL143
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:884    .text.Gui_DrawPoint:00000002 .LCFI16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:916    .text.Gui_DrawPoint:00000028 .LCFI17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:877    .text.Gui_DrawPoint:00000000 .LVL132
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:894    .text.Gui_DrawPoint:0000000e .LVL133
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:911    .text.Gui_DrawPoint:00000024 .LVL135
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:857    .text.Lcd_SetXY:00000000 .LVL130
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:773    .text.Lcd_SetRegion:00000002 .LCFI14
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:843    .text.Lcd_SetRegion:00000090 .LCFI15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:766    .text.Lcd_SetRegion:00000000 .LVL115
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:780    .text.Lcd_SetRegion:0000000a .LVL116
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:835    .text.Lcd_SetRegion:00000088 .LVL127
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:845    .text.Lcd_SetRegion:00000090 .LVL128
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:383    .text.Lcd_Init:00000002 .LCFI12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:753    .text.Lcd_Init:000003f2 .LCFI13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:337    .text.Lcd_Reset:00000002 .LCFI10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:364    .text.Lcd_Reset:0000002e .LCFI11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:302    .text.Lcd_WriteReg:00000002 .LCFI8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:317    .text.Lcd_WriteReg:00000014 .LCFI9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:295    .text.Lcd_WriteReg:00000000 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:319    .text.Lcd_WriteReg:00000014 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:237    .text.LCD_WriteData_16Bit:00000002 .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:284    .text.LCD_WriteData_16Bit:00000042 .LCFI7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:230    .text.LCD_WriteData_16Bit:00000000 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:260    .text.LCD_WriteData_16Bit:00000022 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:281    .text.LCD_WriteData_16Bit:00000040 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:188    .text.Lcd_WriteData:00000002 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:219    .text.Lcd_WriteData:0000002e .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:181    .text.Lcd_WriteData:00000000 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:140    .text.Lcd_WriteIndex:00000002 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:170    .text.Lcd_WriteIndex:0000002e .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:133    .text.Lcd_WriteIndex:00000000 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:73     .text.SPI_WriteData:00000000 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:114    .text.SPI_WriteData:00000034 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:91     .text.SPI_WriteData:0000001a .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:106    .text.SPI_WriteData:0000002c .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:120    .text.SPI_WriteData:00000038 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:21     .text.LCD_GPIO_Init:00000006 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:60     .text.LCD_GPIO_Init:00000054 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1635   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:15     .text.LCD_GPIO_Init:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:17     .text.LCD_GPIO_Init:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:19     .text.LCD_GPIO_Init:00000004 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:23     .text.LCD_GPIO_Init:00000006 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:28     .text.LCD_GPIO_Init:00000010 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:31     .text.LCD_GPIO_Init:00000012 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:34     .text.LCD_GPIO_Init:0000001a .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:42     .text.LCD_GPIO_Init:00000032 .LM8
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 44
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:48     .text.LCD_GPIO_Init:00000046 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:49     .text.LCD_GPIO_Init:00000046 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:52     .text.LCD_GPIO_Init:00000048 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:54     .text.LCD_GPIO_Init:0000004c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:55     .text.LCD_GPIO_Init:0000004c .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:58     .text.LCD_GPIO_Init:00000052 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:62     .text.LCD_GPIO_Init:00000054 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:75     .text.SPI_WriteData:00000000 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:77     .text.SPI_WriteData:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:78     .text.SPI_WriteData:00000000 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:79     .text.SPI_WriteData:00000000 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:81     .text.SPI_WriteData:00000004 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:83     .text.SPI_WriteData:00000008 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:87     .text.SPI_WriteData:00000012 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:89     .text.SPI_WriteData:00000016 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:93     .text.SPI_WriteData:0000001a .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:94     .text.SPI_WriteData:0000001a .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:98     .text.SPI_WriteData:00000026 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:101    .text.SPI_WriteData:00000028 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:103    .text.SPI_WriteData:0000002a .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:104    .text.SPI_WriteData:0000002a .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:107    .text.SPI_WriteData:0000002c .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:109    .text.SPI_WriteData:0000002e .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:110    .text.SPI_WriteData:0000002e .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:112    .text.SPI_WriteData:00000032 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:115    .text.SPI_WriteData:00000034 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:116    .text.SPI_WriteData:00000034 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:118    .text.SPI_WriteData:00000036 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:122    .text.SPI_WriteData:00000038 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:135    .text.Lcd_WriteIndex:00000000 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:137    .text.Lcd_WriteIndex:00000000 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:138    .text.Lcd_WriteIndex:00000000 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:142    .text.Lcd_WriteIndex:00000002 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:144    .text.Lcd_WriteIndex:00000006 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:149    .text.Lcd_WriteIndex:0000000a .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:153    .text.Lcd_WriteIndex:00000014 .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:156    .text.Lcd_WriteIndex:00000018 .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:159    .text.Lcd_WriteIndex:00000020 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:161    .text.Lcd_WriteIndex:00000024 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:164    .text.Lcd_WriteIndex:00000026 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:166    .text.Lcd_WriteIndex:0000002a .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:183    .text.Lcd_WriteData:00000000 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:185    .text.Lcd_WriteData:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:186    .text.Lcd_WriteData:00000000 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:196    .text.Lcd_WriteData:00000008 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:200    .text.Lcd_WriteData:00000014 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:204    .text.Lcd_WriteData:0000001c .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:207    .text.Lcd_WriteData:00000024 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:208    .text.Lcd_WriteData:00000024 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:211    .text.Lcd_WriteData:00000026 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:213    .text.Lcd_WriteData:00000028 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:232    .text.LCD_WriteData_16Bit:00000000 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:234    .text.LCD_WriteData_16Bit:00000000 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:235    .text.LCD_WriteData_16Bit:00000000 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:247    .text.LCD_WriteData_16Bit:0000000a .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:251    .text.LCD_WriteData_16Bit:00000016 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:254    .text.LCD_WriteData_16Bit:0000001c .LM65
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 45
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:256    .text.LCD_WriteData_16Bit:0000001e .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:258    .text.LCD_WriteData_16Bit:00000020 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:261    .text.LCD_WriteData_16Bit:00000022 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:264    .text.LCD_WriteData_16Bit:0000002a .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:268    .text.LCD_WriteData_16Bit:00000036 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:269    .text.LCD_WriteData_16Bit:00000036 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:272    .text.LCD_WriteData_16Bit:00000038 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:274    .text.LCD_WriteData_16Bit:0000003a .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:282    .text.LCD_WriteData_16Bit:00000040 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:297    .text.Lcd_WriteReg:00000000 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:299    .text.Lcd_WriteReg:00000000 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:300    .text.Lcd_WriteReg:00000000 .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:306    .text.Lcd_WriteReg:00000004 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:308    .text.Lcd_WriteReg:00000006 .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:311    .text.Lcd_WriteReg:0000000e .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:313    .text.Lcd_WriteReg:00000010 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:320    .text.Lcd_WriteReg:00000014 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:332    .text.Lcd_Reset:00000000 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:334    .text.Lcd_Reset:00000000 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:335    .text.Lcd_Reset:00000000 .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:343    .text.Lcd_Reset:00000006 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:347    .text.Lcd_Reset:00000010 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:351    .text.Lcd_Reset:0000001c .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:354    .text.Lcd_Reset:00000024 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:355    .text.Lcd_Reset:00000024 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:360    .text.Lcd_Reset:00000028 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:362    .text.Lcd_Reset:0000002c .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:366    .text.Lcd_Reset:0000002e .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:378    .text.Lcd_Init:00000000 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:380    .text.Lcd_Init:00000000 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:381    .text.Lcd_Init:00000000 .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:387    .text.Lcd_Init:00000004 .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:390    .text.Lcd_Init:0000000c .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:393    .text.Lcd_Init:00000014 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:397    .text.Lcd_Init:0000001e .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:401    .text.Lcd_Init:0000002a .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:405    .text.Lcd_Init:00000036 .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:409    .text.Lcd_Init:00000040 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:413    .text.Lcd_Init:0000004c .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:417    .text.Lcd_Init:00000058 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:421    .text.Lcd_Init:00000064 .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:425    .text.Lcd_Init:0000006e .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:429    .text.Lcd_Init:0000007a .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:433    .text.Lcd_Init:00000086 .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:437    .text.Lcd_Init:00000092 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:441    .text.Lcd_Init:0000009c .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:445    .text.Lcd_Init:000000a8 .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:449    .text.Lcd_Init:000000b4 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:453    .text.Lcd_Init:000000be .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:457    .text.Lcd_Init:000000ca .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:461    .text.Lcd_Init:000000d6 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:465    .text.Lcd_Init:000000e2 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:469    .text.Lcd_Init:000000ec .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:473    .text.Lcd_Init:000000f8 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:477    .text.Lcd_Init:00000104 .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:481    .text.Lcd_Init:0000010e .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:485    .text.Lcd_Init:0000011a .LM122
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 46
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:489    .text.Lcd_Init:00000126 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:493    .text.Lcd_Init:00000132 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:497    .text.Lcd_Init:0000013e .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:501    .text.Lcd_Init:00000148 .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:505    .text.Lcd_Init:00000152 .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:509    .text.Lcd_Init:0000015e .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:513    .text.Lcd_Init:0000016a .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:517    .text.Lcd_Init:00000176 .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:521    .text.Lcd_Init:00000182 .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:525    .text.Lcd_Init:0000018e .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:529    .text.Lcd_Init:0000019a .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:533    .text.Lcd_Init:000001a6 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:537    .text.Lcd_Init:000001b0 .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:541    .text.Lcd_Init:000001bc .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:545    .text.Lcd_Init:000001c8 .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:549    .text.Lcd_Init:000001d4 .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:553    .text.Lcd_Init:000001de .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:557    .text.Lcd_Init:000001e8 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:561    .text.Lcd_Init:000001f2 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:565    .text.Lcd_Init:000001fc .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:569    .text.Lcd_Init:00000208 .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:573    .text.Lcd_Init:00000214 .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:577    .text.Lcd_Init:00000220 .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:581    .text.Lcd_Init:0000022c .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:585    .text.Lcd_Init:00000236 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:589    .text.Lcd_Init:00000240 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:593    .text.Lcd_Init:0000024c .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:597    .text.Lcd_Init:00000258 .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:601    .text.Lcd_Init:00000262 .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:605    .text.Lcd_Init:0000026c .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:609    .text.Lcd_Init:00000276 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:613    .text.Lcd_Init:00000280 .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:617    .text.Lcd_Init:0000028c .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:621    .text.Lcd_Init:00000296 .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:625    .text.Lcd_Init:000002a0 .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:629    .text.Lcd_Init:000002aa .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:633    .text.Lcd_Init:000002b4 .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:637    .text.Lcd_Init:000002c0 .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:641    .text.Lcd_Init:000002cc .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:645    .text.Lcd_Init:000002d8 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:649    .text.Lcd_Init:000002e4 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:653    .text.Lcd_Init:000002f0 .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:657    .text.Lcd_Init:000002fc .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:661    .text.Lcd_Init:00000308 .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:665    .text.Lcd_Init:00000314 .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:669    .text.Lcd_Init:0000031e .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:673    .text.Lcd_Init:00000328 .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:677    .text.Lcd_Init:00000332 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:681    .text.Lcd_Init:0000033c .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:685    .text.Lcd_Init:00000348 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:689    .text.Lcd_Init:00000352 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:693    .text.Lcd_Init:0000035c .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:697    .text.Lcd_Init:00000366 .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:701    .text.Lcd_Init:00000372 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:705    .text.Lcd_Init:0000037e .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:709    .text.Lcd_Init:00000388 .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:713    .text.Lcd_Init:00000392 .LM179
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 47
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:717    .text.Lcd_Init:0000039c .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:721    .text.Lcd_Init:000003a8 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:725    .text.Lcd_Init:000003b4 .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:729    .text.Lcd_Init:000003be .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:733    .text.Lcd_Init:000003ca .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:737    .text.Lcd_Init:000003d4 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:741    .text.Lcd_Init:000003e0 .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:745    .text.Lcd_Init:000003ea .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:746    .text.Lcd_Init:000003ea .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:749    .text.Lcd_Init:000003ec .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:751    .text.Lcd_Init:000003f0 .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:755    .text.Lcd_Init:000003f2 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:768    .text.Lcd_SetRegion:00000000 .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:770    .text.Lcd_SetRegion:00000000 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:771    .text.Lcd_SetRegion:00000000 .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:778    .text.Lcd_SetRegion:00000006 .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:781    .text.Lcd_SetRegion:0000000a .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:784    .text.Lcd_SetRegion:0000000c .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:788    .text.Lcd_SetRegion:00000012 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:791    .text.Lcd_SetRegion:0000001a .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:795    .text.Lcd_SetRegion:00000024 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:799    .text.Lcd_SetRegion:00000030 .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:803    .text.Lcd_SetRegion:0000003a .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:809    .text.Lcd_SetRegion:0000004a .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:813    .text.Lcd_SetRegion:00000056 .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:817    .text.Lcd_SetRegion:00000060 .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:821    .text.Lcd_SetRegion:0000006c .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:825    .text.Lcd_SetRegion:00000076 .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:831    .text.Lcd_SetRegion:00000086 .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:832    .text.Lcd_SetRegion:00000086 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:836    .text.Lcd_SetRegion:00000088 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:839    .text.Lcd_SetRegion:0000008a .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:841    .text.Lcd_SetRegion:0000008e .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:846    .text.Lcd_SetRegion:00000090 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:859    .text.Lcd_SetXY:00000000 .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:861    .text.Lcd_SetXY:00000000 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:862    .text.Lcd_SetXY:00000000 .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:865    .text.Lcd_SetXY:00000004 .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:868    .text.Lcd_SetXY:0000000c .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:879    .text.Gui_DrawPoint:00000000 .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:881    .text.Gui_DrawPoint:00000000 .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:882    .text.Gui_DrawPoint:00000000 .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:887    .text.Gui_DrawPoint:00000004 .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:890    .text.Gui_DrawPoint:00000008 .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:892    .text.Gui_DrawPoint:0000000a .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:895    .text.Gui_DrawPoint:0000000e .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:900    .text.Gui_DrawPoint:00000016 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:903    .text.Gui_DrawPoint:00000018 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:906    .text.Gui_DrawPoint:00000020 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:908    .text.Gui_DrawPoint:00000022 .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:912    .text.Gui_DrawPoint:00000024 .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:918    .text.Gui_DrawPoint:00000028 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:921    .text.Gui_DrawPoint:00000030 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:932    .text.Lcd_Clear:00000000 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:934    .text.Lcd_Clear:00000000 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:935    .text.Lcd_Clear:00000000 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:936    .text.Lcd_Clear:00000000 .LM236
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 48
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:941    .text.Lcd_Clear:00000004 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:946    .text.Lcd_Clear:0000000e .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:948    .text.Lcd_Clear:00000010 .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:951    .text.Lcd_Clear:00000012 .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:958    .text.Lcd_Clear:00000018 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:961    .text.Lcd_Clear:00000020 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:965    .text.Lcd_Clear:0000002c .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:966    .text.Lcd_Clear:0000002c .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:967    .text.Lcd_Clear:0000002c .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:971    .text.Lcd_Clear:00000030 .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:972    .text.Lcd_Clear:00000030 .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:976    .text.Lcd_Clear:00000034 .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:978    .text.Lcd_Clear:00000036 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:981    .text.Lcd_Clear:00000038 .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:984    .text.Lcd_Clear:00000040 .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:985    .text.Lcd_Clear:00000040 .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:987    .text.Lcd_Clear:00000042 .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:989    .text.Lcd_Clear:00000042 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:992    .text.Lcd_Clear:00000044 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:994    .text.Lcd_Clear:00000046 .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1002   .text.Lcd_Clear:0000004c .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1006   .text.Lcd_Clear:0000004e .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1021   .text.Lcd_Clear_1:00000000 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1023   .text.Lcd_Clear_1:00000000 .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1024   .text.Lcd_Clear_1:00000000 .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1025   .text.Lcd_Clear_1:00000000 .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1030   .text.Lcd_Clear_1:00000004 .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1035   .text.Lcd_Clear_1:00000010 .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1037   .text.Lcd_Clear_1:00000012 .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1040   .text.Lcd_Clear_1:00000016 .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1047   .text.Lcd_Clear_1:0000001c .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1050   .text.Lcd_Clear_1:00000024 .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1054   .text.Lcd_Clear_1:00000030 .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1055   .text.Lcd_Clear_1:00000030 .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1056   .text.Lcd_Clear_1:00000030 .LM271
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1060   .text.Lcd_Clear_1:00000034 .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1061   .text.Lcd_Clear_1:00000034 .LM273
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1065   .text.Lcd_Clear_1:00000038 .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1067   .text.Lcd_Clear_1:0000003a .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1070   .text.Lcd_Clear_1:0000003c .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1073   .text.Lcd_Clear_1:00000044 .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1074   .text.Lcd_Clear_1:00000044 .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1076   .text.Lcd_Clear_1:00000046 .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1078   .text.Lcd_Clear_1:00000046 .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1081   .text.Lcd_Clear_1:00000048 .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1083   .text.Lcd_Clear_1:0000004a .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1091   .text.Lcd_Clear_1:00000050 .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1095   .text.Lcd_Clear_1:00000052 .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1128   .text.Redraw_Mainmenu:00000000 .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1130   .text.Redraw_Mainmenu:00000000 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1132   .text.Redraw_Mainmenu:00000002 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1136   .text.Redraw_Mainmenu:00000004 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1138   .text.Redraw_Mainmenu:00000008 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1141   .text.Redraw_Mainmenu:0000000a .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1144   .text.Redraw_Mainmenu:00000012 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1153   .text.Redraw_Mainmenu:0000002e .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1160   .text.Redraw_Mainmenu:00000040 .LM293
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 49
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1169   .text.Redraw_Mainmenu:0000005c .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1176   .text.Redraw_Mainmenu:00000072 .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1186   .text.Redraw_Mainmenu:00000094 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1193   .text.Redraw_Mainmenu:000000aa .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1202   .text.Redraw_Mainmenu:000000ca .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1209   .text.Redraw_Mainmenu:000000e0 .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1219   .text.Redraw_Mainmenu:00000100 .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1226   .text.Redraw_Mainmenu:00000116 .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1236   .text.Redraw_Mainmenu:00000138 .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1243   .text.Redraw_Mainmenu:0000014e .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1250   .text.Redraw_Mainmenu:00000166 .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1257   .text.Redraw_Mainmenu:0000017e .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1264   .text.Redraw_Mainmenu:00000196 .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1265   .text.Redraw_Mainmenu:00000196 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1268   .text.Redraw_Mainmenu:00000198 .LM308
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1270   .text.Redraw_Mainmenu:0000019c .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1271   .text.Redraw_Mainmenu:0000019c .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1275   .text.Redraw_Mainmenu:000001a8 .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1279   .text.Redraw_Mainmenu:000001aa .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1310   .text.ASCLL_Test:00000000 .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1312   .text.ASCLL_Test:00000000 .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1315   .text.ASCLL_Test:00000004 .LM315
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1319   .text.ASCLL_Test:00000006 .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1325   .text.ASCLL_Test:0000001c .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1328   .text.ASCLL_Test:0000001e .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1331   .text.ASCLL_Test:00000026 .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1340   .text.ASCLL_Test:00000048 .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1349   .text.ASCLL_Test:00000068 .LM321
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1359   .text.ASCLL_Test:0000008c .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1368   .text.ASCLL_Test:000000ae .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1369   .text.ASCLL_Test:000000ae .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1372   .text.ASCLL_Test:000000b0 .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1374   .text.ASCLL_Test:000000b2 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1375   .text.ASCLL_Test:000000b2 .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1381   .text.ASCLL_Test:000000c8 .LM328
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1385   .text.ASCLL_Test:000000ca .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1401   .text.Font_Test:00000000 .LM330
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1403   .text.Font_Test:00000000 .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1425   .text.Color_Test:00000000 .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1427   .text.Color_Test:00000000 .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1429   .text.Color_Test:00000000 .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1431   .text.Color_Test:00000002 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1435   .text.Color_Test:00000004 .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1437   .text.Color_Test:00000008 .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1440   .text.Color_Test:0000000a .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1443   .text.Color_Test:00000012 .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1452   .text.Color_Test:0000002e .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1456   .text.Color_Test:0000003a .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1457   .text.Color_Test:0000003a .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1458   .text.Color_Test:0000003a .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1463   .text.Color_Test:00000046 .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1467   .text.Color_Test:00000050 .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1472   .text.Color_Test:0000005e .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1476   .text.Color_Test:0000006a .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1477   .text.Color_Test:0000006a .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1480   .text.Color_Test:0000006c .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1482   .text.Color_Test:0000006e .LM350
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s 			page 50
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1486   .text.Color_Test:00000070 .LM351
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1499   .text.showimage:00000000 .LM352
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1501   .text.showimage:00000000 .LM353
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1502   .text.showimage:00000000 .LM354
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1503   .text.showimage:00000000 .LM355
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1504   .text.showimage:00000000 .LM356
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1511   .text.showimage:00000006 .LM357
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1514   .text.showimage:00000008 .LM358
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1516   .text.showimage:0000000a .LM359
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1520   .text.showimage:00000010 .LM360
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1535   .text.showimage:0000001e .LM361
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1539   .text.showimage:00000028 .LM362
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1540   .text.showimage:00000028 .LM363
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1542   .text.showimage:0000002c .LM364
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1544   .text.showimage:00000030 .LM365
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1548   .text.showimage:00000034 .LM366
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1549   .text.showimage:00000034 .LM367
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1556   .text.showimage:00000042 .LM368
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1565   .text.showimage:00000058 .LM369
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1566   .text.showimage:00000058 .LM370
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1570   .text.showimage:0000005a .LM371
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1571   .text.showimage:0000005a .LM372
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1572   .text.showimage:0000005a .LM373
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1573   .text.showimage:0000005a .LM374
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1576   .text.showimage:00000062 .LM375
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1579   .text.showimage:00000064 .LM376
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1582   .text.showimage:00000068 .LM377
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1587   .text.showimage:00000074 .LM378
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1588   .text.showimage:00000074 .LM379
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1590   .text.showimage:00000078 .LM380
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1591   .text.showimage:00000078 .LM381
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1596   .text.showimage:00000084 .LM382
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1597   .text.showimage:00000084 .LM383
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1602   .text.showimage:00000090 .LM384
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1614   .text.showimage:0000009a .LM385
+C:\Users\Administrator\AppData\Local\Temp\ccaRHGZe.s:1622   .text.showimage:000000a0 .LM386
+
+UNDEFINED SYMBOLS
+gpio_init
+gpio_bit_set
+delay_ms
+Gui_DrawFont_GBK16
+DisplayButtonUp

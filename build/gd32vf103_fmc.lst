@@ -1,0 +1,2466 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 1
+
+
+   1              		.file	"gd32vf103_fmc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.fmc_wscnt_set,"ax",@progbits
+  10              		.align	1
+  11              		.globl	fmc_wscnt_set
+  13              	fmc_wscnt_set:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21 0000 37270240 		li	a4,1073881088
+  22 0004 1C43     		lw	a5,0(a4)
+  23              	.LVL1:
+  24              	.LM5:
+  25              	.LM6:
+  26              	.LM7:
+  27 0006 E19B     		andi	a5,a5,-8
+  28              	.LVL2:
+  29              	.LM8:
+  30 0008 C98F     		or	a5,a5,a0
+  31              	.LVL3:
+  32              	.LM9:
+  33 000a 1CC3     		sw	a5,0(a4)
+  34              	.LM10:
+  35 000c 8280     		ret
+  36              		.cfi_endproc
+  37              	.LFE150:
+  39              		.section	.text.fmc_unlock,"ax",@progbits
+  40              		.align	1
+  41              		.globl	fmc_unlock
+  43              	fmc_unlock:
+  44              	.LFB151:
+  45              	.LM11:
+  46              		.cfi_startproc
+  47              	.LM12:
+  48              	.LM13:
+  49 0000 B7270240 		li	a5,1073881088
+  50 0004 9C4B     		lw	a5,16(a5)
+  51              	.LM14:
+  52 0006 93F70708 		andi	a5,a5,128
+  53              	.LM15:
+  54 000a 89CF     		beq	a5,zero,.L2
+  55              	.LM16:
+  56              	.LM17:
+  57 000c 37076745 		li	a4,1164378112
+  58 0010 B7270240 		li	a5,1073881088
+  59 0014 13073712 		addi	a4,a4,291
+  60 0018 D8C3     		sw	a4,4(a5)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 2
+
+
+  61              	.LM18:
+  62              	.LM19:
+  63 001a 3797EFCD 		li	a4,-839938048
+  64 001e 1307B79A 		addi	a4,a4,-1621
+  65 0022 D8C3     		sw	a4,4(a5)
+  66              	.L2:
+  67              	.LM20:
+  68 0024 8280     		ret
+  69              		.cfi_endproc
+  70              	.LFE151:
+  72              		.section	.text.fmc_lock,"ax",@progbits
+  73              		.align	1
+  74              		.globl	fmc_lock
+  76              	fmc_lock:
+  77              	.LFB152:
+  78              	.LM21:
+  79              		.cfi_startproc
+  80              	.LM22:
+  81 0000 B7270240 		li	a5,1073881088
+  82 0004 984B     		lw	a4,16(a5)
+  83              	.LM23:
+  84 0006 13670708 		ori	a4,a4,128
+  85 000a 98CB     		sw	a4,16(a5)
+  86              	.LM24:
+  87 000c 8280     		ret
+  88              		.cfi_endproc
+  89              	.LFE152:
+  91              		.section	.text.ob_unlock,"ax",@progbits
+  92              		.align	1
+  93              		.globl	ob_unlock
+  95              	ob_unlock:
+  96              	.LFB157:
+  97              	.LM25:
+  98              		.cfi_startproc
+  99              	.LM26:
+ 100              	.LM27:
+ 101 0000 B7270240 		li	a5,1073881088
+ 102 0004 9C4B     		lw	a5,16(a5)
+ 103              	.LM28:
+ 104 0006 93F70720 		andi	a5,a5,512
+ 105              	.LM29:
+ 106 000a 89EF     		bne	a5,zero,.L9
+ 107              	.LM30:
+ 108              	.LM31:
+ 109 000c 37076745 		li	a4,1164378112
+ 110 0010 B7270240 		li	a5,1073881088
+ 111 0014 13073712 		addi	a4,a4,291
+ 112 0018 98C7     		sw	a4,8(a5)
+ 113              	.LM32:
+ 114              	.LM33:
+ 115 001a 3797EFCD 		li	a4,-839938048
+ 116 001e 1307B79A 		addi	a4,a4,-1621
+ 117 0022 98C7     		sw	a4,8(a5)
+ 118              	.L9:
+ 119              	.LM34:
+ 120 0024 37270240 		li	a4,1073881088
+ 121 0028 4107     		addi	a4,a4,16
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 3
+
+
+ 122              	.L10:
+ 123              	.LM35:
+ 124              	.LM36:
+ 125              	.LM37:
+ 126 002a 1C43     		lw	a5,0(a4)
+ 127              	.LM38:
+ 128 002c 93F70720 		andi	a5,a5,512
+ 129              	.LM39:
+ 130 0030 EDDF     		beq	a5,zero,.L10
+ 131              	.LM40:
+ 132 0032 8280     		ret
+ 133              		.cfi_endproc
+ 134              	.LFE157:
+ 136              		.section	.text.ob_lock,"ax",@progbits
+ 137              		.align	1
+ 138              		.globl	ob_lock
+ 140              	ob_lock:
+ 141              	.LFB158:
+ 142              	.LM41:
+ 143              		.cfi_startproc
+ 144              	.LM42:
+ 145              	.LM43:
+ 146 0000 B7270240 		li	a5,1073881088
+ 147 0004 984B     		lw	a4,16(a5)
+ 148 0006 1377F7DF 		andi	a4,a4,-513
+ 149 000a 98CB     		sw	a4,16(a5)
+ 150              	.LM44:
+ 151 000c 8280     		ret
+ 152              		.cfi_endproc
+ 153              	.LFE158:
+ 155              		.section	.text.ob_user_get,"ax",@progbits
+ 156              		.align	1
+ 157              		.globl	ob_user_get
+ 159              	ob_user_get:
+ 160              	.LFB164:
+ 161              	.LM45:
+ 162              		.cfi_startproc
+ 163              	.LM46:
+ 164              	.LM47:
+ 165 0000 B7270240 		li	a5,1073881088
+ 166 0004 C84F     		lw	a0,28(a5)
+ 167              	.LM48:
+ 168 0006 0981     		srli	a0,a0,2
+ 169              	.LM49:
+ 170 0008 1375F50F 		andi	a0,a0,0xff
+ 171 000c 8280     		ret
+ 172              		.cfi_endproc
+ 173              	.LFE164:
+ 175              		.section	.text.ob_data_get,"ax",@progbits
+ 176              		.align	1
+ 177              		.globl	ob_data_get
+ 179              	ob_data_get:
+ 180              	.LFB165:
+ 181              	.LM50:
+ 182              		.cfi_startproc
+ 183              	.LM51:
+ 184              	.LM52:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 4
+
+
+ 185 0000 B7270240 		li	a5,1073881088
+ 186 0004 C84F     		lw	a0,28(a5)
+ 187              	.LM53:
+ 188 0006 93176500 		slli	a5,a0,6
+ 189 000a 13D50701 		srli	a0,a5,16
+ 190 000e 8280     		ret
+ 191              		.cfi_endproc
+ 192              	.LFE165:
+ 194              		.section	.text.ob_write_protection_get,"ax",@progbits
+ 195              		.align	1
+ 196              		.globl	ob_write_protection_get
+ 198              	ob_write_protection_get:
+ 199              	.LFB166:
+ 200              	.LM54:
+ 201              		.cfi_startproc
+ 202              	.LM55:
+ 203              	.LM56:
+ 204 0000 B7270240 		li	a5,1073881088
+ 205 0004 8853     		lw	a0,32(a5)
+ 206              	.LM57:
+ 207 0006 8280     		ret
+ 208              		.cfi_endproc
+ 209              	.LFE166:
+ 211              		.section	.text.ob_spc_get,"ax",@progbits
+ 212              		.align	1
+ 213              		.globl	ob_spc_get
+ 215              	ob_spc_get:
+ 216              	.LFB167:
+ 217              	.LM58:
+ 218              		.cfi_startproc
+ 219              	.LM59:
+ 220              	.LVL4:
+ 221              	.LM60:
+ 222              	.LM61:
+ 223 0000 B7270240 		li	a5,1073881088
+ 224 0004 C84F     		lw	a0,28(a5)
+ 225              	.LVL5:
+ 226              	.LM62:
+ 227              	.LM63:
+ 228 0006 0581     		srli	a0,a0,1
+ 229              	.LVL6:
+ 230              	.LM64:
+ 231 0008 0589     		andi	a0,a0,1
+ 232 000a 8280     		ret
+ 233              		.cfi_endproc
+ 234              	.LFE167:
+ 236              		.section	.text.fmc_interrupt_enable,"ax",@progbits
+ 237              		.align	1
+ 238              		.globl	fmc_interrupt_enable
+ 240              	fmc_interrupt_enable:
+ 241              	.LVL7:
+ 242              	.LFB168:
+ 243              	.LM65:
+ 244              		.cfi_startproc
+ 245              	.LM66:
+ 246 0000 B7270240 		li	a5,1073881088
+ 247 0004 13576500 		srli	a4,a0,6
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 5
+
+
+ 248 0008 3E97     		add	a4,a4,a5
+ 249 000a 1443     		lw	a3,0(a4)
+ 250              	.LM67:
+ 251 000c 8547     		li	a5,1
+ 252 000e B397A700 		sll	a5,a5,a0
+ 253              	.LM68:
+ 254 0012 D58F     		or	a5,a5,a3
+ 255 0014 1CC3     		sw	a5,0(a4)
+ 256              	.LM69:
+ 257 0016 8280     		ret
+ 258              		.cfi_endproc
+ 259              	.LFE168:
+ 261              		.section	.text.fmc_interrupt_disable,"ax",@progbits
+ 262              		.align	1
+ 263              		.globl	fmc_interrupt_disable
+ 265              	fmc_interrupt_disable:
+ 266              	.LVL8:
+ 267              	.LFB169:
+ 268              	.LM70:
+ 269              		.cfi_startproc
+ 270              	.LM71:
+ 271 0000 B7270240 		li	a5,1073881088
+ 272 0004 13576500 		srli	a4,a0,6
+ 273 0008 3E97     		add	a4,a4,a5
+ 274 000a 1443     		lw	a3,0(a4)
+ 275              	.LM72:
+ 276 000c 8547     		li	a5,1
+ 277 000e B397A700 		sll	a5,a5,a0
+ 278              	.LM73:
+ 279 0012 93C7F7FF 		not	a5,a5
+ 280              	.LM74:
+ 281 0016 F58F     		and	a5,a5,a3
+ 282 0018 1CC3     		sw	a5,0(a4)
+ 283              	.LM75:
+ 284 001a 8280     		ret
+ 285              		.cfi_endproc
+ 286              	.LFE169:
+ 288              		.section	.text.fmc_flag_get,"ax",@progbits
+ 289              		.align	1
+ 290              		.globl	fmc_flag_get
+ 292              	fmc_flag_get:
+ 293              	.LVL9:
+ 294              	.LFB170:
+ 295              	.LM76:
+ 296              		.cfi_startproc
+ 297              	.LM77:
+ 298              	.LM78:
+ 299 0000 93576500 		srli	a5,a0,6
+ 300 0004 37270240 		li	a4,1073881088
+ 301 0008 BA97     		add	a5,a5,a4
+ 302 000a 9C43     		lw	a5,0(a5)
+ 303              	.LM79:
+ 304 000c 33D5A700 		srl	a0,a5,a0
+ 305              	.LVL10:
+ 306              	.LM80:
+ 307 0010 0589     		andi	a0,a0,1
+ 308 0012 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 6
+
+
+ 309              		.cfi_endproc
+ 310              	.LFE170:
+ 312              		.section	.text.fmc_flag_clear,"ax",@progbits
+ 313              		.align	1
+ 314              		.globl	fmc_flag_clear
+ 316              	fmc_flag_clear:
+ 317              	.LVL11:
+ 318              	.LFB171:
+ 319              	.LM81:
+ 320              		.cfi_startproc
+ 321              	.LM82:
+ 322              	.LM83:
+ 323 0000 B7270240 		li	a5,1073881088
+ 324 0004 13576500 		srli	a4,a0,6
+ 325 0008 3E97     		add	a4,a4,a5
+ 326 000a 1443     		lw	a3,0(a4)
+ 327              	.LM84:
+ 328 000c 8547     		li	a5,1
+ 329 000e B397A700 		sll	a5,a5,a0
+ 330              	.LM85:
+ 331 0012 93B61600 		seqz	a3,a3
+ 332              	.LM86:
+ 333 0016 D58F     		or	a5,a5,a3
+ 334              	.LM87:
+ 335 0018 1CC3     		sw	a5,0(a4)
+ 336              	.LM88:
+ 337 001a 8280     		ret
+ 338              		.cfi_endproc
+ 339              	.LFE171:
+ 341              		.section	.text.fmc_interrupt_flag_get,"ax",@progbits
+ 342              		.align	1
+ 343              		.globl	fmc_interrupt_flag_get
+ 345              	fmc_interrupt_flag_get:
+ 346              	.LVL12:
+ 347              	.LFB172:
+ 348              	.LM89:
+ 349              		.cfi_startproc
+ 350              	.LM90:
+ 351              	.LM91:
+ 352              	.LM92:
+ 353              	.LM93:
+ 354 0000 1357C500 		srli	a4,a0,12
+ 355              	.LM94:
+ 356 0004 B147     		li	a5,12
+ 357 0006 6316F702 		bne	a4,a5,.L24
+ 358              	.LM95:
+ 359              	.LM96:
+ 360 000a B7270240 		li	a5,1073881088
+ 361 000e D047     		lw	a2,12(a5)
+ 362              	.LVL13:
+ 363              	.LM97:
+ 364              	.LM98:
+ 365 0010 944B     		lw	a3,16(a5)
+ 366              	.LVL14:
+ 367              	.LM99:
+ 368              	.LM100:
+ 369 0012 0547     		li	a4,1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 7
+
+
+ 370 0014 93576500 		srli	a5,a0,6
+ 371 0018 B317F700 		sll	a5,a4,a5
+ 372              	.LM101:
+ 373 001c 3317A700 		sll	a4,a4,a0
+ 374              	.LM102:
+ 375 0020 F18F     		and	a5,a5,a2
+ 376              	.LM103:
+ 377 0022 758F     		and	a4,a4,a3
+ 378              	.LM104:
+ 379 0024 B337F000 		snez	a5,a5
+ 380              	.LM105:
+ 381 0028 3337E000 		snez	a4,a4
+ 382 002c 33F5E700 		and	a0,a5,a4
+ 383              	.LVL15:
+ 384              	.LM106:
+ 385 0030 8280     		ret
+ 386              	.LVL16:
+ 387              	.L24:
+ 388              	.LM107:
+ 389 0032 0145     		li	a0,0
+ 390              	.LVL17:
+ 391              	.LM108:
+ 392 0034 8280     		ret
+ 393              		.cfi_endproc
+ 394              	.LFE172:
+ 396              		.section	.text.fmc_interrupt_flag_clear,"ax",@progbits
+ 397              		.align	1
+ 398              		.globl	fmc_interrupt_flag_clear
+ 400              	fmc_interrupt_flag_clear:
+ 401              	.LVL18:
+ 402              	.LFB173:
+ 403              	.LM109:
+ 404              		.cfi_startproc
+ 405              	.LM110:
+ 406 0000 1357C500 		srli	a4,a0,12
+ 407 0004 B7270240 		li	a5,1073881088
+ 408 0008 3E97     		add	a4,a4,a5
+ 409 000a 1443     		lw	a3,0(a4)
+ 410              	.LM111:
+ 411 000c 1981     		srli	a0,a0,6
+ 412              	.LVL19:
+ 413              	.LM112:
+ 414 000e 8547     		li	a5,1
+ 415 0010 B397A700 		sll	a5,a5,a0
+ 416              	.LM113:
+ 417 0014 D58F     		or	a5,a5,a3
+ 418 0016 1CC3     		sw	a5,0(a4)
+ 419              	.LM114:
+ 420 0018 8280     		ret
+ 421              		.cfi_endproc
+ 422              	.LFE173:
+ 424              		.section	.text.fmc_state_get,"ax",@progbits
+ 425              		.align	1
+ 426              		.globl	fmc_state_get
+ 428              	fmc_state_get:
+ 429              	.LFB174:
+ 430              	.LM115:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 8
+
+
+ 431              		.cfi_startproc
+ 432              	.LM116:
+ 433              	.LVL20:
+ 434              	.LM117:
+ 435              	.LM118:
+ 436 0000 B7270240 		li	a5,1073881088
+ 437 0004 C847     		lw	a0,12(a5)
+ 438 0006 B107     		addi	a5,a5,12
+ 439              	.LM119:
+ 440 0008 0589     		andi	a0,a0,1
+ 441              	.LM120:
+ 442 000a 01E9     		bne	a0,zero,.L26
+ 443              	.LM121:
+ 444              	.LM122:
+ 445 000c 9843     		lw	a4,0(a5)
+ 446              	.LM123:
+ 447 000e 0D45     		li	a0,3
+ 448              	.LM124:
+ 449 0010 418B     		andi	a4,a4,16
+ 450              	.LM125:
+ 451 0012 01E7     		bne	a4,zero,.L26
+ 452              	.LBB4:
+ 453              	.LBI4:
+ 454              	.LM126:
+ 455              	.LBB5:
+ 456              	.LM127:
+ 457              	.LM128:
+ 458 0014 8843     		lw	a0,0(a5)
+ 459              	.LM129:
+ 460 0016 0581     		srli	a0,a0,1
+ 461 0018 0989     		andi	a0,a0,2
+ 462              	.L26:
+ 463              	.LBE5:
+ 464              	.LBE4:
+ 465              	.LM130:
+ 466 001a 8280     		ret
+ 467              		.cfi_endproc
+ 468              	.LFE174:
+ 470              		.section	.text.fmc_ready_wait,"ax",@progbits
+ 471              		.align	1
+ 472              		.globl	fmc_ready_wait
+ 474              	fmc_ready_wait:
+ 475              	.LVL21:
+ 476              	.LFB175:
+ 477              	.LM131:
+ 478              		.cfi_startproc
+ 479              	.LM132:
+ 480              	.LM133:
+ 481 0000 4111     		addi	sp,sp,-16
+ 482              	.LCFI0:
+ 483              		.cfi_def_cfa_offset 16
+ 484 0002 22C4     		sw	s0,8(sp)
+ 485 0004 26C2     		sw	s1,4(sp)
+ 486 0006 06C6     		sw	ra,12(sp)
+ 487              		.cfi_offset 8, -8
+ 488              		.cfi_offset 9, -12
+ 489              		.cfi_offset 1, -4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 9
+
+
+ 490              	.LM134:
+ 491 0008 2A84     		mv	s0,a0
+ 492              	.LM135:
+ 493 000a 8544     		li	s1,1
+ 494              	.LVL22:
+ 495              	.L31:
+ 496              	.LM136:
+ 497              	.LM137:
+ 498              	.LM138:
+ 499 000c 97000000 		call	fmc_state_get
+ 499      E7800000 
+ 500              	.LVL23:
+ 501              	.LM139:
+ 502              	.LM140:
+ 503 0014 63159500 		bne	a0,s1,.L29
+ 504              	.LM141:
+ 505 0018 7D14     		addi	s0,s0,-1
+ 506              	.LVL24:
+ 507              	.LM142:
+ 508 001a 6DF8     		bne	s0,zero,.L31
+ 509              	.LM143:
+ 510 001c 1145     		li	a0,4
+ 511              	.LVL25:
+ 512              	.LM144:
+ 513              	.L29:
+ 514              	.LM145:
+ 515 001e B240     		lw	ra,12(sp)
+ 516              		.cfi_restore 1
+ 517 0020 2244     		lw	s0,8(sp)
+ 518              		.cfi_restore 8
+ 519 0022 9244     		lw	s1,4(sp)
+ 520              		.cfi_restore 9
+ 521 0024 4101     		addi	sp,sp,16
+ 522              	.LCFI1:
+ 523              		.cfi_def_cfa_offset 0
+ 524 0026 8280     		jr	ra
+ 525              		.cfi_endproc
+ 526              	.LFE175:
+ 528              		.section	.text.fmc_page_erase,"ax",@progbits
+ 529              		.align	1
+ 530              		.globl	fmc_page_erase
+ 532              	fmc_page_erase:
+ 533              	.LVL26:
+ 534              	.LFB153:
+ 535              	.LM146:
+ 536              		.cfi_startproc
+ 537              	.LM147:
+ 538              	.LM148:
+ 539              	.LM149:
+ 540 0000 4111     		addi	sp,sp,-16
+ 541              	.LCFI2:
+ 542              		.cfi_def_cfa_offset 16
+ 543 0002 26C2     		sw	s1,4(sp)
+ 544              		.cfi_offset 9, -12
+ 545 0004 AA84     		mv	s1,a0
+ 546              	.LM150:
+ 547 0006 37050F00 		li	a0,983040
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 10
+
+
+ 548              	.LVL27:
+ 549              	.LM151:
+ 550 000a 06C6     		sw	ra,12(sp)
+ 551 000c 22C4     		sw	s0,8(sp)
+ 552              		.cfi_offset 1, -4
+ 553              		.cfi_offset 8, -8
+ 554              	.LM152:
+ 555 000e 97000000 		call	fmc_ready_wait
+ 555      E7800000 
+ 556              	.LVL28:
+ 557              	.LM153:
+ 558              	.LM154:
+ 559 0016 0DE5     		bne	a0,zero,.L34
+ 560              	.LM155:
+ 561 0018 37240240 		li	s0,1073881088
+ 562 001c 1C48     		lw	a5,16(s0)
+ 563              	.LM156:
+ 564 001e 37050F00 		li	a0,983040
+ 565              	.LVL29:
+ 566              	.LM157:
+ 567 0022 93E72700 		ori	a5,a5,2
+ 568 0026 1CC8     		sw	a5,16(s0)
+ 569              	.LM158:
+ 570              	.LM159:
+ 571 0028 44C8     		sw	s1,20(s0)
+ 572              	.LM160:
+ 573 002a 1C48     		lw	a5,16(s0)
+ 574              	.LM161:
+ 575 002c 93E70704 		ori	a5,a5,64
+ 576 0030 1CC8     		sw	a5,16(s0)
+ 577              	.LM162:
+ 578              	.LM163:
+ 579 0032 97000000 		call	fmc_ready_wait
+ 579      E7800000 
+ 580              	.LVL30:
+ 581              	.LM164:
+ 582              	.LM165:
+ 583 003a 1C48     		lw	a5,16(s0)
+ 584 003c F59B     		andi	a5,a5,-3
+ 585 003e 1CC8     		sw	a5,16(s0)
+ 586              	.LM166:
+ 587              	.L34:
+ 588              	.LM167:
+ 589 0040 B240     		lw	ra,12(sp)
+ 590              		.cfi_restore 1
+ 591 0042 2244     		lw	s0,8(sp)
+ 592              		.cfi_restore 8
+ 593 0044 9244     		lw	s1,4(sp)
+ 594              		.cfi_restore 9
+ 595              	.LVL31:
+ 596              	.LM168:
+ 597 0046 4101     		addi	sp,sp,16
+ 598              	.LCFI3:
+ 599              		.cfi_def_cfa_offset 0
+ 600 0048 8280     		jr	ra
+ 601              		.cfi_endproc
+ 602              	.LFE153:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 11
+
+
+ 604              		.section	.text.fmc_mass_erase,"ax",@progbits
+ 605              		.align	1
+ 606              		.globl	fmc_mass_erase
+ 608              	fmc_mass_erase:
+ 609              	.LFB154:
+ 610              	.LM169:
+ 611              		.cfi_startproc
+ 612              	.LM170:
+ 613              	.LM171:
+ 614              	.LM172:
+ 615 0000 4111     		addi	sp,sp,-16
+ 616              	.LCFI4:
+ 617              		.cfi_def_cfa_offset 16
+ 618              	.LM173:
+ 619 0002 37050F00 		li	a0,983040
+ 620              	.LM174:
+ 621 0006 06C6     		sw	ra,12(sp)
+ 622 0008 22C4     		sw	s0,8(sp)
+ 623              		.cfi_offset 1, -4
+ 624              		.cfi_offset 8, -8
+ 625              	.LM175:
+ 626 000a 97000000 		call	fmc_ready_wait
+ 626      E7800000 
+ 627              	.LVL32:
+ 628              	.LM176:
+ 629              	.LM177:
+ 630 0012 05E5     		bne	a0,zero,.L37
+ 631              	.LM178:
+ 632 0014 37240240 		li	s0,1073881088
+ 633 0018 1C48     		lw	a5,16(s0)
+ 634              	.LM179:
+ 635 001a 37050F00 		li	a0,983040
+ 636              	.LVL33:
+ 637              	.LM180:
+ 638 001e 93E74700 		ori	a5,a5,4
+ 639 0022 1CC8     		sw	a5,16(s0)
+ 640              	.LM181:
+ 641 0024 1C48     		lw	a5,16(s0)
+ 642              	.LM182:
+ 643 0026 93E70704 		ori	a5,a5,64
+ 644 002a 1CC8     		sw	a5,16(s0)
+ 645              	.LM183:
+ 646              	.LM184:
+ 647 002c 97000000 		call	fmc_ready_wait
+ 647      E7800000 
+ 648              	.LVL34:
+ 649              	.LM185:
+ 650              	.LM186:
+ 651 0034 1C48     		lw	a5,16(s0)
+ 652 0036 ED9B     		andi	a5,a5,-5
+ 653 0038 1CC8     		sw	a5,16(s0)
+ 654              	.LM187:
+ 655              	.L37:
+ 656              	.LM188:
+ 657 003a B240     		lw	ra,12(sp)
+ 658              		.cfi_restore 1
+ 659 003c 2244     		lw	s0,8(sp)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 12
+
+
+ 660              		.cfi_restore 8
+ 661 003e 4101     		addi	sp,sp,16
+ 662              	.LCFI5:
+ 663              		.cfi_def_cfa_offset 0
+ 664 0040 8280     		jr	ra
+ 665              		.cfi_endproc
+ 666              	.LFE154:
+ 668              		.section	.text.fmc_word_program,"ax",@progbits
+ 669              		.align	1
+ 670              		.globl	fmc_word_program
+ 672              	fmc_word_program:
+ 673              	.LVL35:
+ 674              	.LFB155:
+ 675              	.LM189:
+ 676              		.cfi_startproc
+ 677              	.LM190:
+ 678              	.LM191:
+ 679              	.LM192:
+ 680 0000 0111     		addi	sp,sp,-32
+ 681              	.LCFI6:
+ 682              		.cfi_def_cfa_offset 32
+ 683 0002 26CA     		sw	s1,20(sp)
+ 684              		.cfi_offset 9, -12
+ 685 0004 AA84     		mv	s1,a0
+ 686              	.LM193:
+ 687 0006 37050F00 		li	a0,983040
+ 688              	.LVL36:
+ 689              	.LM194:
+ 690 000a 2EC6     		sw	a1,12(sp)
+ 691 000c 06CE     		sw	ra,28(sp)
+ 692 000e 22CC     		sw	s0,24(sp)
+ 693              		.cfi_offset 1, -4
+ 694              		.cfi_offset 8, -8
+ 695              	.LM195:
+ 696 0010 97000000 		call	fmc_ready_wait
+ 696      E7800000 
+ 697              	.LVL37:
+ 698              	.LM196:
+ 699              	.LM197:
+ 700 0018 B245     		lw	a1,12(sp)
+ 701 001a 0DE1     		bne	a0,zero,.L40
+ 702              	.LM198:
+ 703 001c 37240240 		li	s0,1073881088
+ 704 0020 1C48     		lw	a5,16(s0)
+ 705              	.LM199:
+ 706 0022 37050F00 		li	a0,983040
+ 707              	.LVL38:
+ 708              	.LM200:
+ 709 0026 93E71700 		ori	a5,a5,1
+ 710 002a 1CC8     		sw	a5,16(s0)
+ 711              	.LM201:
+ 712              	.LM202:
+ 713 002c 8CC0     		sw	a1,0(s1)
+ 714              	.LM203:
+ 715              	.LM204:
+ 716 002e 97000000 		call	fmc_ready_wait
+ 716      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 13
+
+
+ 717              	.LVL39:
+ 718              	.LM205:
+ 719              	.LM206:
+ 720 0036 1C48     		lw	a5,16(s0)
+ 721 0038 F99B     		andi	a5,a5,-2
+ 722 003a 1CC8     		sw	a5,16(s0)
+ 723              	.LM207:
+ 724              	.L40:
+ 725              	.LM208:
+ 726 003c F240     		lw	ra,28(sp)
+ 727              		.cfi_restore 1
+ 728 003e 6244     		lw	s0,24(sp)
+ 729              		.cfi_restore 8
+ 730 0040 D244     		lw	s1,20(sp)
+ 731              		.cfi_restore 9
+ 732              	.LVL40:
+ 733              	.LM209:
+ 734 0042 0561     		addi	sp,sp,32
+ 735              	.LCFI7:
+ 736              		.cfi_def_cfa_offset 0
+ 737              	.LVL41:
+ 738              	.LM210:
+ 739 0044 8280     		jr	ra
+ 740              		.cfi_endproc
+ 741              	.LFE155:
+ 743              		.section	.text.fmc_halfword_program,"ax",@progbits
+ 744              		.align	1
+ 745              		.globl	fmc_halfword_program
+ 747              	fmc_halfword_program:
+ 748              	.LVL42:
+ 749              	.LFB156:
+ 750              	.LM211:
+ 751              		.cfi_startproc
+ 752              	.LM212:
+ 753              	.LM213:
+ 754              	.LM214:
+ 755 0000 0111     		addi	sp,sp,-32
+ 756              	.LCFI8:
+ 757              		.cfi_def_cfa_offset 32
+ 758 0002 26CA     		sw	s1,20(sp)
+ 759              		.cfi_offset 9, -12
+ 760 0004 AA84     		mv	s1,a0
+ 761              	.LM215:
+ 762 0006 37050F00 		li	a0,983040
+ 763              	.LVL43:
+ 764              	.LM216:
+ 765 000a 2EC6     		sw	a1,12(sp)
+ 766 000c 06CE     		sw	ra,28(sp)
+ 767 000e 22CC     		sw	s0,24(sp)
+ 768              		.cfi_offset 1, -4
+ 769              		.cfi_offset 8, -8
+ 770              	.LM217:
+ 771 0010 97000000 		call	fmc_ready_wait
+ 771      E7800000 
+ 772              	.LVL44:
+ 773              	.LM218:
+ 774              	.LM219:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 14
+
+
+ 775 0018 B245     		lw	a1,12(sp)
+ 776 001a 15E1     		bne	a0,zero,.L43
+ 777              	.LM220:
+ 778 001c 37240240 		li	s0,1073881088
+ 779 0020 1C48     		lw	a5,16(s0)
+ 780              	.LM221:
+ 781 0022 37050F00 		li	a0,983040
+ 782              	.LVL45:
+ 783              	.LM222:
+ 784 0026 93E71700 		ori	a5,a5,1
+ 785 002a 1CC8     		sw	a5,16(s0)
+ 786              	.LM223:
+ 787              	.LM224:
+ 788 002c 2390B400 		sh	a1,0(s1)
+ 789              	.LM225:
+ 790              	.LM226:
+ 791 0030 97000000 		call	fmc_ready_wait
+ 791      E7800000 
+ 792              	.LVL46:
+ 793              	.LM227:
+ 794              	.LM228:
+ 795 0038 1C48     		lw	a5,16(s0)
+ 796 003a F99B     		andi	a5,a5,-2
+ 797 003c 1CC8     		sw	a5,16(s0)
+ 798              	.LM229:
+ 799              	.L43:
+ 800              	.LM230:
+ 801 003e F240     		lw	ra,28(sp)
+ 802              		.cfi_restore 1
+ 803 0040 6244     		lw	s0,24(sp)
+ 804              		.cfi_restore 8
+ 805 0042 D244     		lw	s1,20(sp)
+ 806              		.cfi_restore 9
+ 807              	.LVL47:
+ 808              	.LM231:
+ 809 0044 0561     		addi	sp,sp,32
+ 810              	.LCFI9:
+ 811              		.cfi_def_cfa_offset 0
+ 812              	.LVL48:
+ 813              	.LM232:
+ 814 0046 8280     		jr	ra
+ 815              		.cfi_endproc
+ 816              	.LFE156:
+ 818              		.section	.text.ob_erase,"ax",@progbits
+ 819              		.align	1
+ 820              		.globl	ob_erase
+ 822              	ob_erase:
+ 823              	.LFB159:
+ 824              	.LM233:
+ 825              		.cfi_startproc
+ 826              	.LM234:
+ 827              	.LVL49:
+ 828              	.LM235:
+ 829              	.LM236:
+ 830 0000 4111     		addi	sp,sp,-16
+ 831              	.LCFI10:
+ 832              		.cfi_def_cfa_offset 16
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 15
+
+
+ 833              	.LM237:
+ 834 0002 37050F00 		li	a0,983040
+ 835              	.LM238:
+ 836 0006 26C2     		sw	s1,4(sp)
+ 837 0008 06C6     		sw	ra,12(sp)
+ 838 000a 22C4     		sw	s0,8(sp)
+ 839 000c 4AC0     		sw	s2,0(sp)
+ 840              		.cfi_offset 9, -12
+ 841              		.cfi_offset 1, -4
+ 842              		.cfi_offset 8, -8
+ 843              		.cfi_offset 18, -16
+ 844              	.LM239:
+ 845 000e 97000000 		call	fmc_ready_wait
+ 845      E7800000 
+ 846              	.LVL50:
+ 847 0016 AA84     		mv	s1,a0
+ 848              	.LVL51:
+ 849              	.LM240:
+ 850              	.LM241:
+ 851 0018 97000000 		call	ob_spc_get
+ 851      E7800000 
+ 852              	.LVL52:
+ 853              	.LM242:
+ 854              	.LM243:
+ 855 0020 ADE4     		bne	s1,zero,.L46
+ 856              	.LM244:
+ 857 0022 37240240 		li	s0,1073881088
+ 858 0026 1C48     		lw	a5,16(s0)
+ 859 0028 3339A000 		snez	s2,a0
+ 860              	.LVL53:
+ 861              	.LM245:
+ 862              	.LM246:
+ 863 002c 37050F00 		li	a0,983040
+ 864              	.LM247:
+ 865 0030 93E70702 		ori	a5,a5,32
+ 866 0034 1CC8     		sw	a5,16(s0)
+ 867              	.LM248:
+ 868 0036 1C48     		lw	a5,16(s0)
+ 869              	.LM249:
+ 870 0038 4104     		addi	s0,s0,16
+ 871              	.LM250:
+ 872 003a 93E70704 		ori	a5,a5,64
+ 873 003e 1CC0     		sw	a5,0(s0)
+ 874              	.LM251:
+ 875              	.LM252:
+ 876 0040 97000000 		call	fmc_ready_wait
+ 876      E7800000 
+ 877              	.LVL54:
+ 878 0048 AA84     		mv	s1,a0
+ 879              	.LVL55:
+ 880              	.LM253:
+ 881              	.LM254:
+ 882 004a 15E9     		bne	a0,zero,.L49
+ 883              	.LM255:
+ 884 004c 1C40     		lw	a5,0(s0)
+ 885 004e 33092041 		neg	s2,s2
+ 886              	.LVL56:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 16
+
+
+ 887              	.LM256:
+ 888 0052 13796901 		andi	s2,s2,22
+ 889              	.LVL57:
+ 890              	.LM257:
+ 891 0056 93F7F7FD 		andi	a5,a5,-33
+ 892 005a 1CC0     		sw	a5,0(s0)
+ 893              	.LM258:
+ 894 005c 1C40     		lw	a5,0(s0)
+ 895 005e 1309590A 		addi	s2,s2,165
+ 896              	.LM259:
+ 897              	.LM260:
+ 898              	.LM261:
+ 899 0062 37050F00 		li	a0,983040
+ 900              	.LM262:
+ 901 0066 93E70701 		ori	a5,a5,16
+ 902 006a 1CC0     		sw	a5,0(s0)
+ 903              	.LM263:
+ 904              	.LM264:
+ 905 006c B7070020 		li	a5,536870912
+ 906 0070 23902781 		sh	s2,-2048(a5)
+ 907              	.LM265:
+ 908              	.LM266:
+ 909 0074 97000000 		call	fmc_ready_wait
+ 909      E7800000 
+ 910              	.LVL58:
+ 911 007c AA84     		mv	s1,a0
+ 912              	.LVL59:
+ 913              	.LM267:
+ 914              	.L49:
+ 915              	.LM268:
+ 916              	.LM269:
+ 917 007e 9147     		li	a5,4
+ 918 0080 6385F400 		beq	s1,a5,.L46
+ 919              	.LM270:
+ 920              	.LM271:
+ 921 0084 1C40     		lw	a5,0(s0)
+ 922 0086 BD9B     		andi	a5,a5,-17
+ 923 0088 1CC0     		sw	a5,0(s0)
+ 924              	.LM272:
+ 925              	.L46:
+ 926              	.LM273:
+ 927 008a B240     		lw	ra,12(sp)
+ 928              		.cfi_restore 1
+ 929 008c 2244     		lw	s0,8(sp)
+ 930              		.cfi_restore 8
+ 931 008e 0249     		lw	s2,0(sp)
+ 932              		.cfi_restore 18
+ 933 0090 2685     		mv	a0,s1
+ 934 0092 9244     		lw	s1,4(sp)
+ 935              		.cfi_restore 9
+ 936              	.LVL60:
+ 937              	.LM274:
+ 938 0094 4101     		addi	sp,sp,16
+ 939              	.LCFI11:
+ 940              		.cfi_def_cfa_offset 0
+ 941 0096 8280     		jr	ra
+ 942              		.cfi_endproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 17
+
+
+ 943              	.LFE159:
+ 945              		.section	.text.ob_write_protection_enable,"ax",@progbits
+ 946              		.align	1
+ 947              		.globl	ob_write_protection_enable
+ 949              	ob_write_protection_enable:
+ 950              	.LVL61:
+ 951              	.LFB160:
+ 952              	.LM275:
+ 953              		.cfi_startproc
+ 954              	.LM276:
+ 955              	.LM277:
+ 956              	.LM278:
+ 957 0000 4111     		addi	sp,sp,-16
+ 958              	.LCFI12:
+ 959              		.cfi_def_cfa_offset 16
+ 960 0002 22C4     		sw	s0,8(sp)
+ 961              		.cfi_offset 8, -8
+ 962 0004 2A84     		mv	s0,a0
+ 963              	.LM279:
+ 964 0006 37050F00 		li	a0,983040
+ 965              	.LVL62:
+ 966              	.LM280:
+ 967 000a 06C6     		sw	ra,12(sp)
+ 968              		.cfi_offset 1, -4
+ 969              	.LM281:
+ 970 000c 97000000 		call	fmc_ready_wait
+ 970      E7800000 
+ 971              	.LVL63:
+ 972              	.LM282:
+ 973              	.LM283:
+ 974              	.LM284:
+ 975              	.LM285:
+ 976              	.LM286:
+ 977              	.LM287:
+ 978              	.LM288:
+ 979 0014 4DE9     		bne	a0,zero,.L56
+ 980              	.LM289:
+ 981 0016 B7270240 		li	a5,1073881088
+ 982 001a 984B     		lw	a4,16(a5)
+ 983              	.LM290:
+ 984 001c 1344F4FF 		not	s0,s0
+ 985              	.LVL64:
+ 986              	.LM291:
+ 987 0020 9376F40F 		andi	a3,s0,255
+ 988              	.LM292:
+ 989              	.LM293:
+ 990 0024 13670701 		ori	a4,a4,16
+ 991 0028 98CB     		sw	a4,16(a5)
+ 992              	.LM294:
+ 993              	.LM295:
+ 994 002a 9307F00F 		li	a5,255
+ 995 002e 6399F606 		bne	a3,a5,.L58
+ 996              	.LVL65:
+ 997              	.L61:
+ 998              	.LM296:
+ 999 0032 93578400 		srli	a5,s0,8
+ 1000              	.LM297:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 18
+
+
+ 1001 0036 93F7F70F 		andi	a5,a5,255
+ 1002              	.LM298:
+ 1003 003a 1307F00F 		li	a4,255
+ 1004 003e 638DE700 		beq	a5,a4,.L60
+ 1005              	.LM299:
+ 1006              	.LM300:
+ 1007 0042 37070020 		li	a4,536870912
+ 1008 0046 2315F780 		sh	a5,-2038(a4)
+ 1009              	.LM301:
+ 1010              	.LM302:
+ 1011 004a 37050F00 		li	a0,983040
+ 1012 004e 97000000 		call	fmc_ready_wait
+ 1012      E7800000 
+ 1013              	.LVL66:
+ 1014              	.LM303:
+ 1015              	.LM304:
+ 1016 0056 25E1     		bne	a0,zero,.L62
+ 1017              	.LVL67:
+ 1018              	.L60:
+ 1019              	.LM305:
+ 1020 0058 93570401 		srli	a5,s0,16
+ 1021              	.LM306:
+ 1022 005c 93F7F70F 		andi	a5,a5,255
+ 1023              	.LM307:
+ 1024 0060 1307F00F 		li	a4,255
+ 1025 0064 638DE700 		beq	a5,a4,.L64
+ 1026              	.LM308:
+ 1027              	.LM309:
+ 1028 0068 37070020 		li	a4,536870912
+ 1029 006c 2316F780 		sh	a5,-2036(a4)
+ 1030              	.LM310:
+ 1031              	.LM311:
+ 1032 0070 37050F00 		li	a0,983040
+ 1033 0074 97000000 		call	fmc_ready_wait
+ 1033      E7800000 
+ 1034              	.LVL68:
+ 1035              	.LM312:
+ 1036              	.LM313:
+ 1037 007c 0DED     		bne	a0,zero,.L62
+ 1038              	.LVL69:
+ 1039              	.L64:
+ 1040              	.LM314:
+ 1041 007e 6180     		srli	s0,s0,24
+ 1042              	.LVL70:
+ 1043              	.LM315:
+ 1044 0080 9307F00F 		li	a5,255
+ 1045 0084 0145     		li	a0,0
+ 1046 0086 630BF402 		beq	s0,a5,.L66
+ 1047              	.LM316:
+ 1048              	.LM317:
+ 1049 008a B7070020 		li	a5,536870912
+ 1050 008e 23978780 		sh	s0,-2034(a5)
+ 1051              	.LM318:
+ 1052              	.LM319:
+ 1053 0092 37050F00 		li	a0,983040
+ 1054 0096 97000000 		call	fmc_ready_wait
+ 1054      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 19
+
+
+ 1055              	.LVL71:
+ 1056 009e 21A8     		j	.L62
+ 1057              	.LVL72:
+ 1058              	.L58:
+ 1059              	.LM320:
+ 1060              	.LM321:
+ 1061 00a0 B7070020 		li	a5,536870912
+ 1062 00a4 2394D780 		sh	a3,-2040(a5)
+ 1063              	.LM322:
+ 1064              	.LM323:
+ 1065 00a8 37050F00 		li	a0,983040
+ 1066              	.LVL73:
+ 1067              	.LM324:
+ 1068 00ac 97000000 		call	fmc_ready_wait
+ 1068      E7800000 
+ 1069              	.LVL74:
+ 1070              	.LM325:
+ 1071              	.LM326:
+ 1072 00b4 3DDD     		beq	a0,zero,.L61
+ 1073              	.LVL75:
+ 1074              	.L62:
+ 1075              	.LM327:
+ 1076              	.LM328:
+ 1077 00b6 9147     		li	a5,4
+ 1078 00b8 6307F500 		beq	a0,a5,.L56
+ 1079              	.LVL76:
+ 1080              	.L66:
+ 1081              	.LM329:
+ 1082              	.LM330:
+ 1083 00bc B7270240 		li	a5,1073881088
+ 1084 00c0 984B     		lw	a4,16(a5)
+ 1085 00c2 3D9B     		andi	a4,a4,-17
+ 1086 00c4 98CB     		sw	a4,16(a5)
+ 1087              	.L56:
+ 1088              	.LM331:
+ 1089 00c6 B240     		lw	ra,12(sp)
+ 1090              		.cfi_restore 1
+ 1091 00c8 2244     		lw	s0,8(sp)
+ 1092              		.cfi_restore 8
+ 1093 00ca 4101     		addi	sp,sp,16
+ 1094              	.LCFI13:
+ 1095              		.cfi_def_cfa_offset 0
+ 1096 00cc 8280     		jr	ra
+ 1097              		.cfi_endproc
+ 1098              	.LFE160:
+ 1100              		.section	.text.ob_security_protection_config,"ax",@progbits
+ 1101              		.align	1
+ 1102              		.globl	ob_security_protection_config
+ 1104              	ob_security_protection_config:
+ 1105              	.LVL77:
+ 1106              	.LFB161:
+ 1107              	.LM332:
+ 1108              		.cfi_startproc
+ 1109              	.LM333:
+ 1110              	.LM334:
+ 1111 0000 4111     		addi	sp,sp,-16
+ 1112              	.LCFI14:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 20
+
+
+ 1113              		.cfi_def_cfa_offset 16
+ 1114 0002 26C2     		sw	s1,4(sp)
+ 1115              		.cfi_offset 9, -12
+ 1116 0004 AA84     		mv	s1,a0
+ 1117              	.LM335:
+ 1118 0006 37050F00 		li	a0,983040
+ 1119              	.LVL78:
+ 1120              	.LM336:
+ 1121 000a 06C6     		sw	ra,12(sp)
+ 1122 000c 22C4     		sw	s0,8(sp)
+ 1123              		.cfi_offset 1, -4
+ 1124              		.cfi_offset 8, -8
+ 1125              	.LM337:
+ 1126 000e 97000000 		call	fmc_ready_wait
+ 1126      E7800000 
+ 1127              	.LVL79:
+ 1128              	.LM338:
+ 1129              	.LM339:
+ 1130 0016 39E9     		bne	a0,zero,.L78
+ 1131              	.LM340:
+ 1132 0018 37240240 		li	s0,1073881088
+ 1133 001c 1C48     		lw	a5,16(s0)
+ 1134              	.LM341:
+ 1135 001e 37050F00 		li	a0,983040
+ 1136              	.LVL80:
+ 1137              	.LM342:
+ 1138 0022 4104     		addi	s0,s0,16
+ 1139              	.LM343:
+ 1140 0024 93E70702 		ori	a5,a5,32
+ 1141 0028 1CC0     		sw	a5,0(s0)
+ 1142              	.LM344:
+ 1143 002a 1C40     		lw	a5,0(s0)
+ 1144              	.LM345:
+ 1145 002c 93E70704 		ori	a5,a5,64
+ 1146 0030 1CC0     		sw	a5,0(s0)
+ 1147              	.LM346:
+ 1148              	.LM347:
+ 1149 0032 97000000 		call	fmc_ready_wait
+ 1149      E7800000 
+ 1150              	.LVL81:
+ 1151              	.LM348:
+ 1152              	.LM349:
+ 1153 003a 15ED     		bne	a0,zero,.L80
+ 1154              	.LM350:
+ 1155              	.LM351:
+ 1156 003c 1C40     		lw	a5,0(s0)
+ 1157              	.LM352:
+ 1158 003e 37050F00 		li	a0,983040
+ 1159              	.LVL82:
+ 1160              	.LM353:
+ 1161 0042 93F7F7FD 		andi	a5,a5,-33
+ 1162 0046 1CC0     		sw	a5,0(s0)
+ 1163              	.LM354:
+ 1164 0048 1C40     		lw	a5,0(s0)
+ 1165              	.LM355:
+ 1166 004a 93E70701 		ori	a5,a5,16
+ 1167 004e 1CC0     		sw	a5,0(s0)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 21
+
+
+ 1168              	.LM356:
+ 1169              	.LM357:
+ 1170 0050 B7070020 		li	a5,536870912
+ 1171 0054 23909780 		sh	s1,-2048(a5)
+ 1172              	.LM358:
+ 1173              	.LM359:
+ 1174 0058 97000000 		call	fmc_ready_wait
+ 1174      E7800000 
+ 1175              	.LVL83:
+ 1176              	.LM360:
+ 1177              	.LM361:
+ 1178 0060 9147     		li	a5,4
+ 1179 0062 6305F500 		beq	a0,a5,.L78
+ 1180              	.LM362:
+ 1181              	.LM363:
+ 1182 0066 1C40     		lw	a5,0(s0)
+ 1183 0068 BD9B     		andi	a5,a5,-17
+ 1184              	.L84:
+ 1185              	.LM364:
+ 1186 006a 1CC0     		sw	a5,0(s0)
+ 1187              	.LM365:
+ 1188              	.L78:
+ 1189              	.LM366:
+ 1190 006c B240     		lw	ra,12(sp)
+ 1191              		.cfi_remember_state
+ 1192              		.cfi_restore 1
+ 1193 006e 2244     		lw	s0,8(sp)
+ 1194              		.cfi_restore 8
+ 1195 0070 9244     		lw	s1,4(sp)
+ 1196              		.cfi_restore 9
+ 1197              	.LVL84:
+ 1198              	.LM367:
+ 1199 0072 4101     		addi	sp,sp,16
+ 1200              	.LCFI15:
+ 1201              		.cfi_def_cfa_offset 0
+ 1202 0074 8280     		jr	ra
+ 1203              	.L80:
+ 1204              	.LCFI16:
+ 1205              		.cfi_restore_state
+ 1206              	.LM368:
+ 1207              	.LM369:
+ 1208 0076 9147     		li	a5,4
+ 1209 0078 E30AF5FE 		beq	a0,a5,.L78
+ 1210              	.LM370:
+ 1211              	.LM371:
+ 1212 007c 1C40     		lw	a5,0(s0)
+ 1213 007e 93F7F7FD 		andi	a5,a5,-33
+ 1214 0082 E5B7     		j	.L84
+ 1215              		.cfi_endproc
+ 1216              	.LFE161:
+ 1218              		.section	.text.ob_user_write,"ax",@progbits
+ 1219              		.align	1
+ 1220              		.globl	ob_user_write
+ 1222              	ob_user_write:
+ 1223              	.LVL85:
+ 1224              	.LFB162:
+ 1225              	.LM372:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 22
+
+
+ 1226              		.cfi_startproc
+ 1227              	.LM373:
+ 1228              	.LM374:
+ 1229              	.LM375:
+ 1230              	.LM376:
+ 1231 0000 0111     		addi	sp,sp,-32
+ 1232              	.LCFI17:
+ 1233              		.cfi_def_cfa_offset 32
+ 1234 0002 26CA     		sw	s1,20(sp)
+ 1235              		.cfi_offset 9, -12
+ 1236 0004 AA84     		mv	s1,a0
+ 1237              	.LM377:
+ 1238 0006 37050F00 		li	a0,983040
+ 1239              	.LVL86:
+ 1240              	.LM378:
+ 1241 000a 2EC6     		sw	a1,12(sp)
+ 1242 000c 32C4     		sw	a2,8(sp)
+ 1243 000e 36C2     		sw	a3,4(sp)
+ 1244 0010 06CE     		sw	ra,28(sp)
+ 1245 0012 22CC     		sw	s0,24(sp)
+ 1246              		.cfi_offset 1, -4
+ 1247              		.cfi_offset 8, -8
+ 1248              	.LM379:
+ 1249 0014 97000000 		call	fmc_ready_wait
+ 1249      E7800000 
+ 1250              	.LVL87:
+ 1251              	.LM380:
+ 1252              	.LM381:
+ 1253 001c 9246     		lw	a3,4(sp)
+ 1254 001e 2246     		lw	a2,8(sp)
+ 1255 0020 B245     		lw	a1,12(sp)
+ 1256 0022 15ED     		bne	a0,zero,.L85
+ 1257              	.LM382:
+ 1258 0024 37240240 		li	s0,1073881088
+ 1259 0028 1C48     		lw	a5,16(s0)
+ 1260              	.LM383:
+ 1261 002a D18E     		or	a3,a3,a2
+ 1262 002c D58D     		or	a1,a1,a3
+ 1263              	.LM384:
+ 1264 002e 93E70701 		ori	a5,a5,16
+ 1265 0032 1CC8     		sw	a5,16(s0)
+ 1266              	.LM385:
+ 1267 0034 B3E7B400 		or	a5,s1,a1
+ 1268              	.LM386:
+ 1269 0038 93E7070F 		ori	a5,a5,240
+ 1270              	.LM387:
+ 1271 003c 37070020 		li	a4,536870912
+ 1272 0040 2311F780 		sh	a5,-2046(a4)
+ 1273              	.LM388:
+ 1274 0044 37050F00 		li	a0,983040
+ 1275              	.LVL88:
+ 1276              	.LM389:
+ 1277 0048 97000000 		call	fmc_ready_wait
+ 1277      E7800000 
+ 1278              	.LVL89:
+ 1279              	.LM390:
+ 1280 0050 9147     		li	a5,4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 23
+
+
+ 1281              	.LM391:
+ 1282 0052 4104     		addi	s0,s0,16
+ 1283              	.LM392:
+ 1284              	.LM393:
+ 1285              	.LM394:
+ 1286              	.LVL90:
+ 1287              	.LM395:
+ 1288              	.LM396:
+ 1289 0054 6305F500 		beq	a0,a5,.L85
+ 1290              	.LM397:
+ 1291              	.LM398:
+ 1292 0058 1C40     		lw	a5,0(s0)
+ 1293 005a BD9B     		andi	a5,a5,-17
+ 1294 005c 1CC0     		sw	a5,0(s0)
+ 1295              	.L85:
+ 1296              	.LM399:
+ 1297 005e F240     		lw	ra,28(sp)
+ 1298              		.cfi_restore 1
+ 1299 0060 6244     		lw	s0,24(sp)
+ 1300              		.cfi_restore 8
+ 1301 0062 D244     		lw	s1,20(sp)
+ 1302              		.cfi_restore 9
+ 1303              	.LVL91:
+ 1304              	.LM400:
+ 1305 0064 0561     		addi	sp,sp,32
+ 1306              	.LCFI18:
+ 1307              		.cfi_def_cfa_offset 0
+ 1308              	.LVL92:
+ 1309              	.LM401:
+ 1310 0066 8280     		jr	ra
+ 1311              		.cfi_endproc
+ 1312              	.LFE162:
+ 1314              		.section	.text.ob_data_program,"ax",@progbits
+ 1315              		.align	1
+ 1316              		.globl	ob_data_program
+ 1318              	ob_data_program:
+ 1319              	.LVL93:
+ 1320              	.LFB163:
+ 1321              	.LM402:
+ 1322              		.cfi_startproc
+ 1323              	.LM403:
+ 1324              	.LM404:
+ 1325 0000 0111     		addi	sp,sp,-32
+ 1326              	.LCFI19:
+ 1327              		.cfi_def_cfa_offset 32
+ 1328 0002 26CA     		sw	s1,20(sp)
+ 1329              		.cfi_offset 9, -12
+ 1330 0004 AA84     		mv	s1,a0
+ 1331              	.LM405:
+ 1332 0006 37050F00 		li	a0,983040
+ 1333              	.LVL94:
+ 1334              	.LM406:
+ 1335 000a 2EC6     		sw	a1,12(sp)
+ 1336 000c 06CE     		sw	ra,28(sp)
+ 1337 000e 22CC     		sw	s0,24(sp)
+ 1338              		.cfi_offset 1, -4
+ 1339              		.cfi_offset 8, -8
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 24
+
+
+ 1340              	.LM407:
+ 1341 0010 97000000 		call	fmc_ready_wait
+ 1341      E7800000 
+ 1342              	.LVL95:
+ 1343              	.LM408:
+ 1344              	.LM409:
+ 1345 0018 B245     		lw	a1,12(sp)
+ 1346 001a 15E5     		bne	a0,zero,.L90
+ 1347              	.LM410:
+ 1348 001c 37240240 		li	s0,1073881088
+ 1349 0020 1C48     		lw	a5,16(s0)
+ 1350              	.LM411:
+ 1351 0022 37050F00 		li	a0,983040
+ 1352              	.LVL96:
+ 1353              	.LM412:
+ 1354 0026 4104     		addi	s0,s0,16
+ 1355              	.LM413:
+ 1356 0028 93E70701 		ori	a5,a5,16
+ 1357 002c 1CC0     		sw	a5,0(s0)
+ 1358              	.LM414:
+ 1359              	.LM415:
+ 1360 002e 2390B400 		sh	a1,0(s1)
+ 1361              	.LM416:
+ 1362              	.LM417:
+ 1363 0032 97000000 		call	fmc_ready_wait
+ 1363      E7800000 
+ 1364              	.LVL97:
+ 1365              	.LM418:
+ 1366              	.LM419:
+ 1367 003a 9147     		li	a5,4
+ 1368 003c 6305F500 		beq	a0,a5,.L90
+ 1369              	.LM420:
+ 1370              	.LM421:
+ 1371 0040 1C40     		lw	a5,0(s0)
+ 1372 0042 BD9B     		andi	a5,a5,-17
+ 1373 0044 1CC0     		sw	a5,0(s0)
+ 1374              	.L90:
+ 1375              	.LM422:
+ 1376 0046 F240     		lw	ra,28(sp)
+ 1377              		.cfi_restore 1
+ 1378 0048 6244     		lw	s0,24(sp)
+ 1379              		.cfi_restore 8
+ 1380 004a D244     		lw	s1,20(sp)
+ 1381              		.cfi_restore 9
+ 1382              	.LVL98:
+ 1383              	.LM423:
+ 1384 004c 0561     		addi	sp,sp,32
+ 1385              	.LCFI20:
+ 1386              		.cfi_def_cfa_offset 0
+ 1387              	.LVL99:
+ 1388              	.LM424:
+ 1389 004e 8280     		jr	ra
+ 1390              		.cfi_endproc
+ 1391              	.LFE163:
+ 1393              		.text
+ 1394              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_fmc.c
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:10     .text.fmc_wscnt_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:13     .text.fmc_wscnt_set:00000000 fmc_wscnt_set
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:17     .text.fmc_wscnt_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:36     .text.fmc_wscnt_set:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:40     .text.fmc_unlock:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:43     .text.fmc_unlock:00000000 fmc_unlock
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:46     .text.fmc_unlock:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:69     .text.fmc_unlock:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:73     .text.fmc_lock:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:76     .text.fmc_lock:00000000 fmc_lock
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:79     .text.fmc_lock:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:88     .text.fmc_lock:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:92     .text.ob_unlock:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:95     .text.ob_unlock:00000000 ob_unlock
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:98     .text.ob_unlock:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:133    .text.ob_unlock:00000034 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:137    .text.ob_lock:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:140    .text.ob_lock:00000000 ob_lock
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:143    .text.ob_lock:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:152    .text.ob_lock:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:156    .text.ob_user_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:159    .text.ob_user_get:00000000 ob_user_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:162    .text.ob_user_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:172    .text.ob_user_get:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:176    .text.ob_data_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:179    .text.ob_data_get:00000000 ob_data_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:182    .text.ob_data_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:191    .text.ob_data_get:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:195    .text.ob_write_protection_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:198    .text.ob_write_protection_get:00000000 ob_write_protection_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:201    .text.ob_write_protection_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:208    .text.ob_write_protection_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:212    .text.ob_spc_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:215    .text.ob_spc_get:00000000 ob_spc_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:218    .text.ob_spc_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:233    .text.ob_spc_get:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:237    .text.fmc_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:240    .text.fmc_interrupt_enable:00000000 fmc_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:244    .text.fmc_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:258    .text.fmc_interrupt_enable:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:262    .text.fmc_interrupt_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:265    .text.fmc_interrupt_disable:00000000 fmc_interrupt_disable
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:269    .text.fmc_interrupt_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:285    .text.fmc_interrupt_disable:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:289    .text.fmc_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:292    .text.fmc_flag_get:00000000 fmc_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:296    .text.fmc_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:309    .text.fmc_flag_get:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:313    .text.fmc_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:316    .text.fmc_flag_clear:00000000 fmc_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:320    .text.fmc_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:338    .text.fmc_flag_clear:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:342    .text.fmc_interrupt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:345    .text.fmc_interrupt_flag_get:00000000 fmc_interrupt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:349    .text.fmc_interrupt_flag_get:00000000 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 26
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:393    .text.fmc_interrupt_flag_get:00000036 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:397    .text.fmc_interrupt_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:400    .text.fmc_interrupt_flag_clear:00000000 fmc_interrupt_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:404    .text.fmc_interrupt_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:421    .text.fmc_interrupt_flag_clear:0000001a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:425    .text.fmc_state_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:428    .text.fmc_state_get:00000000 fmc_state_get
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:431    .text.fmc_state_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:467    .text.fmc_state_get:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:471    .text.fmc_ready_wait:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:474    .text.fmc_ready_wait:00000000 fmc_ready_wait
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:478    .text.fmc_ready_wait:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:483    .text.fmc_ready_wait:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:487    .text.fmc_ready_wait:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:488    .text.fmc_ready_wait:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:489    .text.fmc_ready_wait:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:516    .text.fmc_ready_wait:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:518    .text.fmc_ready_wait:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:520    .text.fmc_ready_wait:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:523    .text.fmc_ready_wait:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:525    .text.fmc_ready_wait:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:529    .text.fmc_page_erase:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:532    .text.fmc_page_erase:00000000 fmc_page_erase
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:536    .text.fmc_page_erase:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:542    .text.fmc_page_erase:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:544    .text.fmc_page_erase:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:552    .text.fmc_page_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:553    .text.fmc_page_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:590    .text.fmc_page_erase:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:592    .text.fmc_page_erase:00000044 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:594    .text.fmc_page_erase:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:599    .text.fmc_page_erase:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:601    .text.fmc_page_erase:0000004a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:605    .text.fmc_mass_erase:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:608    .text.fmc_mass_erase:00000000 fmc_mass_erase
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:611    .text.fmc_mass_erase:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:617    .text.fmc_mass_erase:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:623    .text.fmc_mass_erase:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:624    .text.fmc_mass_erase:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:658    .text.fmc_mass_erase:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:660    .text.fmc_mass_erase:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:663    .text.fmc_mass_erase:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:665    .text.fmc_mass_erase:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:669    .text.fmc_word_program:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:672    .text.fmc_word_program:00000000 fmc_word_program
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:676    .text.fmc_word_program:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:682    .text.fmc_word_program:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:684    .text.fmc_word_program:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:693    .text.fmc_word_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:694    .text.fmc_word_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:727    .text.fmc_word_program:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:729    .text.fmc_word_program:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:731    .text.fmc_word_program:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:736    .text.fmc_word_program:00000044 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:740    .text.fmc_word_program:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:744    .text.fmc_halfword_program:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:747    .text.fmc_halfword_program:00000000 fmc_halfword_program
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 27
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:751    .text.fmc_halfword_program:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:757    .text.fmc_halfword_program:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:759    .text.fmc_halfword_program:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:768    .text.fmc_halfword_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:769    .text.fmc_halfword_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:802    .text.fmc_halfword_program:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:804    .text.fmc_halfword_program:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:806    .text.fmc_halfword_program:00000044 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:811    .text.fmc_halfword_program:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:815    .text.fmc_halfword_program:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:819    .text.ob_erase:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:822    .text.ob_erase:00000000 ob_erase
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:825    .text.ob_erase:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:832    .text.ob_erase:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:840    .text.ob_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:841    .text.ob_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:842    .text.ob_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:843    .text.ob_erase:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:928    .text.ob_erase:0000008c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:930    .text.ob_erase:0000008e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:932    .text.ob_erase:00000090 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:935    .text.ob_erase:00000094 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:940    .text.ob_erase:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:942    .text.ob_erase:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:946    .text.ob_write_protection_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:949    .text.ob_write_protection_enable:00000000 ob_write_protection_enable
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:953    .text.ob_write_protection_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:959    .text.ob_write_protection_enable:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:961    .text.ob_write_protection_enable:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:968    .text.ob_write_protection_enable:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1090   .text.ob_write_protection_enable:000000c8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1092   .text.ob_write_protection_enable:000000ca .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1095   .text.ob_write_protection_enable:000000cc .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1097   .text.ob_write_protection_enable:000000ce .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1101   .text.ob_security_protection_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1104   .text.ob_security_protection_config:00000000 ob_security_protection_config
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1108   .text.ob_security_protection_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1113   .text.ob_security_protection_config:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1115   .text.ob_security_protection_config:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1123   .text.ob_security_protection_config:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1124   .text.ob_security_protection_config:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1191   .text.ob_security_protection_config:0000006e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1192   .text.ob_security_protection_config:0000006e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1194   .text.ob_security_protection_config:00000070 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1196   .text.ob_security_protection_config:00000072 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1201   .text.ob_security_protection_config:00000074 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1205   .text.ob_security_protection_config:00000076 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1215   .text.ob_security_protection_config:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1219   .text.ob_user_write:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1222   .text.ob_user_write:00000000 ob_user_write
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1226   .text.ob_user_write:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1233   .text.ob_user_write:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1235   .text.ob_user_write:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1246   .text.ob_user_write:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1247   .text.ob_user_write:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1298   .text.ob_user_write:00000060 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1300   .text.ob_user_write:00000062 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 28
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1302   .text.ob_user_write:00000064 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1307   .text.ob_user_write:00000066 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1311   .text.ob_user_write:00000068 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1315   .text.ob_data_program:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1318   .text.ob_data_program:00000000 ob_data_program
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1322   .text.ob_data_program:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1327   .text.ob_data_program:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1329   .text.ob_data_program:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1338   .text.ob_data_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1339   .text.ob_data_program:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1377   .text.ob_data_program:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1379   .text.ob_data_program:0000004a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1381   .text.ob_data_program:0000004c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1386   .text.ob_data_program:0000004e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1390   .text.ob_data_program:00000050 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:66     .text.fmc_unlock:00000024 .L2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:118    .text.ob_unlock:00000024 .L9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:122    .text.ob_unlock:0000002a .L10
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:387    .text.fmc_interrupt_flag_get:00000032 .L24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:462    .text.fmc_state_get:0000001a .L26
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:513    .text.fmc_ready_wait:0000001e .L29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:495    .text.fmc_ready_wait:0000000c .L31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:587    .text.fmc_page_erase:00000040 .L34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:655    .text.fmc_mass_erase:0000003a .L37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:724    .text.fmc_word_program:0000003c .L40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:799    .text.fmc_halfword_program:0000003e .L43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:925    .text.ob_erase:0000008a .L46
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:914    .text.ob_erase:0000007e .L49
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1087   .text.ob_write_protection_enable:000000c6 .L56
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1058   .text.ob_write_protection_enable:000000a0 .L58
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1018   .text.ob_write_protection_enable:00000058 .L60
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1074   .text.ob_write_protection_enable:000000b6 .L62
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1039   .text.ob_write_protection_enable:0000007e .L64
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1080   .text.ob_write_protection_enable:000000bc .L66
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:997    .text.ob_write_protection_enable:00000032 .L61
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1188   .text.ob_security_protection_config:0000006c .L78
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1203   .text.ob_security_protection_config:00000076 .L80
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1184   .text.ob_security_protection_config:0000006a .L84
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1295   .text.ob_user_write:0000005e .L85
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1374   .text.ob_data_program:00000046 .L90
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:2567   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7582   .debug_str:000003a3 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7566   .debug_str:00000320 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7540   .debug_str:0000025f .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4658   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4714   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7536   .debug_str:0000023f .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7542   .debug_str:0000026f .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7530   .debug_str:0000021c .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7500   .debug_str:00000150 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7528   .debug_str:00000210 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7534   .debug_str:00000233 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7514   .debug_str:000001be .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7474   .debug_str:000000c1 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7468   .debug_str:0000009c .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7552   .debug_str:000002b3 .LASF9
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 29
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7560   .debug_str:00000301 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7576   .debug_str:00000385 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7572   .debug_str:00000369 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7482   .debug_str:000000f6 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7544   .debug_str:0000027c .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7538   .debug_str:00000256 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7568   .debug_str:0000035e .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7600   .debug_str:000004bb .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7596   .debug_str:000004a6 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7562   .debug_str:0000030a .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7606   .debug_str:000004d7 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7574   .debug_str:0000037b .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7526   .debug_str:00000206 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7592   .debug_str:00000492 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7546   .debug_str:00000285 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7504   .debug_str:00000167 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7464   .debug_str:00000073 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7450   .debug_str:00000007 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7556   .debug_str:000002d7 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:476    .text.fmc_ready_wait:00000000 .LFB175
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:526    .text.fmc_ready_wait:00000028 .LFE175
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3134   .debug_loc:00000000 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7602   .debug_str:000004c6 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3161   .debug_loc:00000034 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3152   .debug_loc:0000002c .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7578   .debug_str:00000390 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3189   .debug_loc:00000070 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3182   .debug_loc:0000006a .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:500    .text.fmc_ready_wait:00000014 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7454   .debug_str:0000002b .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7480   .debug_str:000000dd .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:402    .text.fmc_interrupt_flag_clear:00000000 .LFB173
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:422    .text.fmc_interrupt_flag_clear:0000001a .LFE173
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7594   .debug_str:000004a1 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3211   .debug_loc:0000009f .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3206   .debug_loc:0000009b .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7508   .debug_str:00000190 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:347    .text.fmc_interrupt_flag_get:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:394    .text.fmc_interrupt_flag_get:00000036 .LFE172
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3240   .debug_loc:000000ce .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3231   .debug_loc:000000c6 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7472   .debug_str:000000bc .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3286   .debug_loc:0000011c .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3277   .debug_loc:00000114 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7488   .debug_str:00000118 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3345   .debug_loc:00000177 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3336   .debug_loc:0000016f .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7490   .debug_str:0000011d .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:318    .text.fmc_flag_clear:00000000 .LFB171
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:339    .text.fmc_flag_clear:0000001c .LFE171
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7564   .debug_str:00000313 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:294    .text.fmc_flag_get:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:310    .text.fmc_flag_get:00000014 .LFE170
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3396   .debug_loc:000001ca .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3391   .debug_loc:000001c6 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7506   .debug_str:0000017a .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:267    .text.fmc_interrupt_disable:00000000 .LFB169
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 30
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:286    .text.fmc_interrupt_disable:0000001c .LFE169
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7486   .debug_str:0000010e .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7470   .debug_str:000000a7 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:242    .text.fmc_interrupt_enable:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:259    .text.fmc_interrupt_enable:00000018 .LFE168
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7598   .debug_str:000004b0 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:216    .text.ob_spc_get:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:234    .text.ob_spc_get:0000000c .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7586   .debug_str:00000472 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3421   .debug_loc:000001f5 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3416   .debug_loc:000001f1 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7466   .debug_str:00000084 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:199    .text.ob_write_protection_get:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:209    .text.ob_write_protection_get:00000008 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7452   .debug_str:0000001f .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:180    .text.ob_data_get:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:192    .text.ob_data_get:00000010 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7478   .debug_str:000000d1 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:160    .text.ob_user_get:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:173    .text.ob_user_get:0000000e .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7484   .debug_str:000000fe .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1320   .text.ob_data_program:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1391   .text.ob_data_program:00000050 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3442   .debug_loc:0000021d .LLST42
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7510   .debug_str:000001a7 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3467   .debug_loc:0000024f .LLST43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3460   .debug_loc:00000249 .LVUS43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7570   .debug_str:00000364 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3498   .debug_loc:00000287 .LLST44
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3491   .debug_loc:00000281 .LVUS44
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3520   .debug_loc:000002b6 .LLST45
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3515   .debug_loc:000002b2 .LVUS45
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1342   .text.ob_data_program:00000018 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1364   .text.ob_data_program:0000003a .LVL97
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7522   .debug_str:000001ed .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1224   .text.ob_user_write:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1312   .text.ob_user_write:00000068 .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3531   .debug_loc:000002d4 .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7502   .debug_str:0000015e .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3556   .debug_loc:00000306 .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3549   .debug_loc:00000300 .LVUS37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7462   .debug_str:00000066 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3587   .debug_loc:0000033e .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3580   .debug_loc:00000338 .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7580   .debug_str:0000039a .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3611   .debug_loc:0000036f .LLST39
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3604   .debug_loc:00000369 .LVUS39
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7584   .debug_str:0000046a .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3635   .debug_loc:000003a0 .LLST40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3628   .debug_loc:0000039a .LVUS40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3659   .debug_loc:000003d1 .LLST41
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3652   .debug_loc:000003cb .LVUS41
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7458   .debug_str:00000057 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1250   .text.ob_user_write:0000001c .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1278   .text.ob_user_write:00000050 .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7456   .debug_str:00000039 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1106   .text.ob_security_protection_config:00000000 .LFB161
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 31
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1216   .text.ob_security_protection_config:00000084 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3675   .debug_loc:000003fb .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7448   .debug_str:00000000 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3705   .debug_loc:00000439 .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3698   .debug_loc:00000433 .LVUS34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3736   .debug_loc:00000471 .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3729   .debug_loc:0000046b .LVUS35
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1127   .text.ob_security_protection_config:00000016 .LVL79
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1150   .text.ob_security_protection_config:0000003a .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1175   .text.ob_security_protection_config:00000060 .LVL83
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7558   .debug_str:000002e6 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:951    .text.ob_write_protection_enable:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1098   .text.ob_write_protection_enable:000000ce .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3751   .debug_loc:0000049a .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7548   .debug_str:00000298 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3784   .debug_loc:000004d4 .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3769   .debug_loc:000004c6 .LVUS27
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7492   .debug_str:0000012c .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3849   .debug_loc:0000054a .LLST28
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3838   .debug_loc:00000540 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7494   .debug_str:00000135 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3925   .debug_loc:000005bd .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:3914   .debug_loc:000005b3 .LVUS29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7496   .debug_str:0000013e .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4011   .debug_loc:0000063a .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4000   .debug_loc:00000630 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7498   .debug_str:00000147 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4097   .debug_loc:000006b7 .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4086   .debug_loc:000006ad .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4168   .debug_loc:00000725 .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4157   .debug_loc:0000071b .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:971    .text.ob_write_protection_enable:00000014 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1013   .text.ob_write_protection_enable:00000056 .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1034   .text.ob_write_protection_enable:0000007c .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1055   .text.ob_write_protection_enable:0000009e .LVL71
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1069   .text.ob_write_protection_enable:000000b4 .LVL74
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7518   .debug_str:000001d5 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:823    .text.ob_erase:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:943    .text.ob_erase:00000098 .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4191   .debug_loc:00000764 .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7604   .debug_str:000004ce .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4218   .debug_loc:00000798 .LLST24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4209   .debug_loc:00000790 .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4266   .debug_loc:000007eb .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4261   .debug_loc:000007e7 .LVUS25
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:846    .text.ob_erase:00000016 .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:852    .text.ob_erase:00000020 .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:877    .text.ob_erase:00000048 .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:910    .text.ob_erase:0000007c .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7590   .debug_str:0000048a .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:141    .text.ob_lock:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:153    .text.ob_lock:0000000e .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7460   .debug_str:0000005c .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:96     .text.ob_unlock:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:134    .text.ob_unlock:00000034 .LFE157
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7550   .debug_str:0000029e .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:749    .text.fmc_halfword_program:00000000 .LFB156
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 32
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:816    .text.fmc_halfword_program:00000048 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4277   .debug_loc:00000809 .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4302   .debug_loc:0000083b .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4295   .debug_loc:00000835 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4333   .debug_loc:00000873 .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4326   .debug_loc:0000086d .LVUS21
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4357   .debug_loc:000008a4 .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4350   .debug_loc:0000089e .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:772    .text.fmc_halfword_program:00000018 .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:792    .text.fmc_halfword_program:00000038 .LVL46
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7554   .debug_str:000002c6 .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:674    .text.fmc_word_program:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:741    .text.fmc_word_program:00000046 .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4373   .debug_loc:000008ce .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4398   .debug_loc:00000900 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4391   .debug_loc:000008fa .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4429   .debug_loc:00000938 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4422   .debug_loc:00000932 .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4453   .debug_loc:00000969 .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4446   .debug_loc:00000963 .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:697    .text.fmc_word_program:00000018 .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:717    .text.fmc_word_program:00000036 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7512   .debug_str:000001af .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:609    .text.fmc_mass_erase:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:666    .text.fmc_mass_erase:00000042 .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4469   .debug_loc:00000993 .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4492   .debug_loc:000009c3 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4487   .debug_loc:000009bf .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:627    .text.fmc_mass_erase:00000012 .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:648    .text.fmc_mass_erase:00000034 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7520   .debug_str:000001de .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:534    .text.fmc_page_erase:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:602    .text.fmc_page_erase:0000004a .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4503   .debug_loc:000009e1 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7516   .debug_str:000001c8 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4528   .debug_loc:00000a13 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4521   .debug_loc:00000a0d .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4557   .debug_loc:00000a49 .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4552   .debug_loc:00000a45 .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:556    .text.fmc_page_erase:00000016 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:580    .text.fmc_page_erase:0000003a .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7532   .debug_str:0000022a .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:77     .text.fmc_lock:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:89     .text.fmc_lock:0000000e .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7524   .debug_str:000001fb .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:44     .text.fmc_unlock:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:70     .text.fmc_unlock:00000026 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7588   .debug_str:0000047c .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:15     .text.fmc_wscnt_set:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:37     .text.fmc_wscnt_set:0000000e .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:7476   .debug_str:000000cb .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4575   .debug_loc:00000a6d .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:4568   .debug_loc:00000a67 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:429    .text.fmc_state_get:00000000 .LFB174
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:468    .text.fmc_state_get:0000001c .LFE174
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:453    .text.fmc_state_get:00000014 .LBI4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:452    .text.fmc_state_get:00000014 .LBB4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 33
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:464    .text.fmc_state_get:0000001a .LBE4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:482    .text.fmc_ready_wait:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:522    .text.fmc_ready_wait:00000026 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:475    .text.fmc_ready_wait:00000000 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:494    .text.fmc_ready_wait:0000000c .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:506    .text.fmc_ready_wait:0000001a .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:511    .text.fmc_ready_wait:0000001e .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:401    .text.fmc_interrupt_flag_clear:00000000 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:412    .text.fmc_interrupt_flag_clear:0000000e .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:346    .text.fmc_interrupt_flag_get:00000000 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:383    .text.fmc_interrupt_flag_get:00000030 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:386    .text.fmc_interrupt_flag_get:00000032 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:390    .text.fmc_interrupt_flag_get:00000034 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:362    .text.fmc_interrupt_flag_get:00000010 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:366    .text.fmc_interrupt_flag_get:00000012 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:293    .text.fmc_flag_get:00000000 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:305    .text.fmc_flag_get:00000010 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:220    .text.ob_spc_get:00000000 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:225    .text.ob_spc_get:00000006 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:229    .text.ob_spc_get:00000008 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1326   .text.ob_data_program:00000002 .LCFI19
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1385   .text.ob_data_program:0000004e .LCFI20
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1319   .text.ob_data_program:00000000 .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1333   .text.ob_data_program:0000000a .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1382   .text.ob_data_program:0000004c .LVL98
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1387   .text.ob_data_program:0000004e .LVL99
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1352   .text.ob_data_program:00000026 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1232   .text.ob_user_write:00000002 .LCFI17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1306   .text.ob_user_write:00000066 .LCFI18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1223   .text.ob_user_write:00000000 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1239   .text.ob_user_write:0000000a .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1303   .text.ob_user_write:00000064 .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1308   .text.ob_user_write:00000066 .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1275   .text.ob_user_write:00000048 .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1286   .text.ob_user_write:00000054 .LVL90
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1112   .text.ob_security_protection_config:00000002 .LCFI14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1200   .text.ob_security_protection_config:00000074 .LCFI15
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1204   .text.ob_security_protection_config:00000076 .LCFI16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1105   .text.ob_security_protection_config:00000000 .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1119   .text.ob_security_protection_config:0000000a .LVL78
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1197   .text.ob_security_protection_config:00000072 .LVL84
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1136   .text.ob_security_protection_config:00000022 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1159   .text.ob_security_protection_config:00000042 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:958    .text.ob_write_protection_enable:00000002 .LCFI12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1094   .text.ob_write_protection_enable:000000cc .LCFI13
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:950    .text.ob_write_protection_enable:00000000 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:965    .text.ob_write_protection_enable:0000000a .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:985    .text.ob_write_protection_enable:00000020 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1042   .text.ob_write_protection_enable:00000080 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1057   .text.ob_write_protection_enable:000000a0 .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1073   .text.ob_write_protection_enable:000000b6 .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:996    .text.ob_write_protection_enable:00000032 .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1017   .text.ob_write_protection_enable:00000058 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1038   .text.ob_write_protection_enable:0000007e .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1066   .text.ob_write_protection_enable:000000ac .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1079   .text.ob_write_protection_enable:000000bc .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:831    .text.ob_erase:00000002 .LCFI10
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:939    .text.ob_erase:00000096 .LCFI11
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:827    .text.ob_erase:00000000 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:860    .text.ob_erase:0000002c .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:886    .text.ob_erase:00000052 .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:889    .text.ob_erase:00000056 .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:848    .text.ob_erase:00000018 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:936    .text.ob_erase:00000094 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:756    .text.fmc_halfword_program:00000002 .LCFI8
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:810    .text.fmc_halfword_program:00000046 .LCFI9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:748    .text.fmc_halfword_program:00000000 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:763    .text.fmc_halfword_program:0000000a .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:807    .text.fmc_halfword_program:00000044 .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:812    .text.fmc_halfword_program:00000046 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:782    .text.fmc_halfword_program:00000026 .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:681    .text.fmc_word_program:00000002 .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:735    .text.fmc_word_program:00000044 .LCFI7
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:673    .text.fmc_word_program:00000000 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:688    .text.fmc_word_program:0000000a .LVL36
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:732    .text.fmc_word_program:00000042 .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:737    .text.fmc_word_program:00000044 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:707    .text.fmc_word_program:00000026 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:616    .text.fmc_mass_erase:00000002 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:662    .text.fmc_mass_erase:00000040 .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:636    .text.fmc_mass_erase:0000001e .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:541    .text.fmc_page_erase:00000002 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:598    .text.fmc_page_erase:00000048 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:533    .text.fmc_page_erase:00000000 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:548    .text.fmc_page_erase:0000000a .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:595    .text.fmc_page_erase:00000046 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:565    .text.fmc_page_erase:00000022 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:23     .text.fmc_wscnt_set:00000006 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:28     .text.fmc_wscnt_set:00000008 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:31     .text.fmc_wscnt_set:0000000a .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1396   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:16     .text.fmc_wscnt_set:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:18     .text.fmc_wscnt_set:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:19     .text.fmc_wscnt_set:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:20     .text.fmc_wscnt_set:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:24     .text.fmc_wscnt_set:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:25     .text.fmc_wscnt_set:00000006 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:26     .text.fmc_wscnt_set:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:29     .text.fmc_wscnt_set:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:32     .text.fmc_wscnt_set:0000000a .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:34     .text.fmc_wscnt_set:0000000c .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:45     .text.fmc_unlock:00000000 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:47     .text.fmc_unlock:00000000 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:48     .text.fmc_unlock:00000000 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:51     .text.fmc_unlock:00000006 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:53     .text.fmc_unlock:0000000a .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:55     .text.fmc_unlock:0000000c .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:56     .text.fmc_unlock:0000000c .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:61     .text.fmc_unlock:0000001a .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:62     .text.fmc_unlock:0000001a .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:67     .text.fmc_unlock:00000024 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:78     .text.fmc_lock:00000000 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:80     .text.fmc_lock:00000000 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:83     .text.fmc_lock:00000006 .LM23
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:86     .text.fmc_lock:0000000c .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:97     .text.ob_unlock:00000000 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:99     .text.ob_unlock:00000000 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:100    .text.ob_unlock:00000000 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:103    .text.ob_unlock:00000006 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:105    .text.ob_unlock:0000000a .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:107    .text.ob_unlock:0000000c .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:108    .text.ob_unlock:0000000c .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:113    .text.ob_unlock:0000001a .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:114    .text.ob_unlock:0000001a .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:119    .text.ob_unlock:00000024 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:123    .text.ob_unlock:0000002a .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:124    .text.ob_unlock:0000002a .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:125    .text.ob_unlock:0000002a .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:127    .text.ob_unlock:0000002c .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:129    .text.ob_unlock:00000030 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:131    .text.ob_unlock:00000032 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:142    .text.ob_lock:00000000 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:144    .text.ob_lock:00000000 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:145    .text.ob_lock:00000000 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:150    .text.ob_lock:0000000c .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:161    .text.ob_user_get:00000000 .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:163    .text.ob_user_get:00000000 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:164    .text.ob_user_get:00000000 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:167    .text.ob_user_get:00000006 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:169    .text.ob_user_get:00000008 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:181    .text.ob_data_get:00000000 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:183    .text.ob_data_get:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:184    .text.ob_data_get:00000000 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:187    .text.ob_data_get:00000006 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:200    .text.ob_write_protection_get:00000000 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:202    .text.ob_write_protection_get:00000000 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:203    .text.ob_write_protection_get:00000000 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:206    .text.ob_write_protection_get:00000006 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:217    .text.ob_spc_get:00000000 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:219    .text.ob_spc_get:00000000 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:221    .text.ob_spc_get:00000000 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:222    .text.ob_spc_get:00000000 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:226    .text.ob_spc_get:00000006 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:227    .text.ob_spc_get:00000006 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:230    .text.ob_spc_get:00000008 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:243    .text.fmc_interrupt_enable:00000000 .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:245    .text.fmc_interrupt_enable:00000000 .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:250    .text.fmc_interrupt_enable:0000000c .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:253    .text.fmc_interrupt_enable:00000012 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:256    .text.fmc_interrupt_enable:00000016 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:268    .text.fmc_interrupt_disable:00000000 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:270    .text.fmc_interrupt_disable:00000000 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:275    .text.fmc_interrupt_disable:0000000c .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:278    .text.fmc_interrupt_disable:00000012 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:280    .text.fmc_interrupt_disable:00000016 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:283    .text.fmc_interrupt_disable:0000001a .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:295    .text.fmc_flag_get:00000000 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:297    .text.fmc_flag_get:00000000 .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:298    .text.fmc_flag_get:00000000 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:303    .text.fmc_flag_get:0000000c .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:306    .text.fmc_flag_get:00000010 .LM80
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:319    .text.fmc_flag_clear:00000000 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:321    .text.fmc_flag_clear:00000000 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:322    .text.fmc_flag_clear:00000000 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:327    .text.fmc_flag_clear:0000000c .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:330    .text.fmc_flag_clear:00000012 .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:332    .text.fmc_flag_clear:00000016 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:334    .text.fmc_flag_clear:00000018 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:336    .text.fmc_flag_clear:0000001a .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:348    .text.fmc_interrupt_flag_get:00000000 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:350    .text.fmc_interrupt_flag_get:00000000 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:351    .text.fmc_interrupt_flag_get:00000000 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:352    .text.fmc_interrupt_flag_get:00000000 .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:353    .text.fmc_interrupt_flag_get:00000000 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:355    .text.fmc_interrupt_flag_get:00000004 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:358    .text.fmc_interrupt_flag_get:0000000a .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:359    .text.fmc_interrupt_flag_get:0000000a .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:363    .text.fmc_interrupt_flag_get:00000010 .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:364    .text.fmc_interrupt_flag_get:00000010 .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:367    .text.fmc_interrupt_flag_get:00000012 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:368    .text.fmc_interrupt_flag_get:00000012 .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:372    .text.fmc_interrupt_flag_get:0000001c .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:374    .text.fmc_interrupt_flag_get:00000020 .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:376    .text.fmc_interrupt_flag_get:00000022 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:378    .text.fmc_interrupt_flag_get:00000024 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:380    .text.fmc_interrupt_flag_get:00000028 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:384    .text.fmc_interrupt_flag_get:00000030 .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:388    .text.fmc_interrupt_flag_get:00000032 .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:391    .text.fmc_interrupt_flag_get:00000034 .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:403    .text.fmc_interrupt_flag_clear:00000000 .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:405    .text.fmc_interrupt_flag_clear:00000000 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:410    .text.fmc_interrupt_flag_clear:0000000c .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:413    .text.fmc_interrupt_flag_clear:0000000e .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:416    .text.fmc_interrupt_flag_clear:00000014 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:419    .text.fmc_interrupt_flag_clear:00000018 .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:430    .text.fmc_state_get:00000000 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:432    .text.fmc_state_get:00000000 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:434    .text.fmc_state_get:00000000 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:435    .text.fmc_state_get:00000000 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:439    .text.fmc_state_get:00000008 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:441    .text.fmc_state_get:0000000a .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:443    .text.fmc_state_get:0000000c .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:444    .text.fmc_state_get:0000000c .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:446    .text.fmc_state_get:0000000e .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:448    .text.fmc_state_get:00000010 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:450    .text.fmc_state_get:00000012 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:454    .text.fmc_state_get:00000014 .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:456    .text.fmc_state_get:00000014 .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:457    .text.fmc_state_get:00000014 .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:459    .text.fmc_state_get:00000016 .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:465    .text.fmc_state_get:0000001a .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:477    .text.fmc_ready_wait:00000000 .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:479    .text.fmc_ready_wait:00000000 .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:480    .text.fmc_ready_wait:00000000 .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:490    .text.fmc_ready_wait:00000008 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:492    .text.fmc_ready_wait:0000000a .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:496    .text.fmc_ready_wait:0000000c .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:497    .text.fmc_ready_wait:0000000c .LM137
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:498    .text.fmc_ready_wait:0000000c .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:501    .text.fmc_ready_wait:00000014 .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:502    .text.fmc_ready_wait:00000014 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:504    .text.fmc_ready_wait:00000018 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:507    .text.fmc_ready_wait:0000001a .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:509    .text.fmc_ready_wait:0000001c .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:512    .text.fmc_ready_wait:0000001e .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:514    .text.fmc_ready_wait:0000001e .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:535    .text.fmc_page_erase:00000000 .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:537    .text.fmc_page_erase:00000000 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:538    .text.fmc_page_erase:00000000 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:539    .text.fmc_page_erase:00000000 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:546    .text.fmc_page_erase:00000006 .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:549    .text.fmc_page_erase:0000000a .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:554    .text.fmc_page_erase:0000000e .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:557    .text.fmc_page_erase:00000016 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:558    .text.fmc_page_erase:00000016 .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:560    .text.fmc_page_erase:00000018 .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:563    .text.fmc_page_erase:0000001e .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:566    .text.fmc_page_erase:00000022 .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:569    .text.fmc_page_erase:00000028 .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:570    .text.fmc_page_erase:00000028 .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:572    .text.fmc_page_erase:0000002a .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:574    .text.fmc_page_erase:0000002c .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:577    .text.fmc_page_erase:00000032 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:578    .text.fmc_page_erase:00000032 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:581    .text.fmc_page_erase:0000003a .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:582    .text.fmc_page_erase:0000003a .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:586    .text.fmc_page_erase:00000040 .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:588    .text.fmc_page_erase:00000040 .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:596    .text.fmc_page_erase:00000046 .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:610    .text.fmc_mass_erase:00000000 .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:612    .text.fmc_mass_erase:00000000 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:613    .text.fmc_mass_erase:00000000 .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:614    .text.fmc_mass_erase:00000000 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:618    .text.fmc_mass_erase:00000002 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:620    .text.fmc_mass_erase:00000006 .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:625    .text.fmc_mass_erase:0000000a .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:628    .text.fmc_mass_erase:00000012 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:629    .text.fmc_mass_erase:00000012 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:631    .text.fmc_mass_erase:00000014 .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:634    .text.fmc_mass_erase:0000001a .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:637    .text.fmc_mass_erase:0000001e .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:640    .text.fmc_mass_erase:00000024 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:642    .text.fmc_mass_erase:00000026 .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:645    .text.fmc_mass_erase:0000002c .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:646    .text.fmc_mass_erase:0000002c .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:649    .text.fmc_mass_erase:00000034 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:650    .text.fmc_mass_erase:00000034 .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:654    .text.fmc_mass_erase:0000003a .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:656    .text.fmc_mass_erase:0000003a .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:675    .text.fmc_word_program:00000000 .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:677    .text.fmc_word_program:00000000 .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:678    .text.fmc_word_program:00000000 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:679    .text.fmc_word_program:00000000 .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:686    .text.fmc_word_program:00000006 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:689    .text.fmc_word_program:0000000a .LM194
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 38
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:695    .text.fmc_word_program:00000010 .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:698    .text.fmc_word_program:00000018 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:699    .text.fmc_word_program:00000018 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:702    .text.fmc_word_program:0000001c .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:705    .text.fmc_word_program:00000022 .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:708    .text.fmc_word_program:00000026 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:711    .text.fmc_word_program:0000002c .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:712    .text.fmc_word_program:0000002c .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:714    .text.fmc_word_program:0000002e .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:715    .text.fmc_word_program:0000002e .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:718    .text.fmc_word_program:00000036 .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:719    .text.fmc_word_program:00000036 .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:723    .text.fmc_word_program:0000003c .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:725    .text.fmc_word_program:0000003c .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:733    .text.fmc_word_program:00000042 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:738    .text.fmc_word_program:00000044 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:750    .text.fmc_halfword_program:00000000 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:752    .text.fmc_halfword_program:00000000 .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:753    .text.fmc_halfword_program:00000000 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:754    .text.fmc_halfword_program:00000000 .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:761    .text.fmc_halfword_program:00000006 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:764    .text.fmc_halfword_program:0000000a .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:770    .text.fmc_halfword_program:00000010 .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:773    .text.fmc_halfword_program:00000018 .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:774    .text.fmc_halfword_program:00000018 .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:777    .text.fmc_halfword_program:0000001c .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:780    .text.fmc_halfword_program:00000022 .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:783    .text.fmc_halfword_program:00000026 .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:786    .text.fmc_halfword_program:0000002c .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:787    .text.fmc_halfword_program:0000002c .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:789    .text.fmc_halfword_program:00000030 .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:790    .text.fmc_halfword_program:00000030 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:793    .text.fmc_halfword_program:00000038 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:794    .text.fmc_halfword_program:00000038 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:798    .text.fmc_halfword_program:0000003e .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:800    .text.fmc_halfword_program:0000003e .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:808    .text.fmc_halfword_program:00000044 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:813    .text.fmc_halfword_program:00000046 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:824    .text.ob_erase:00000000 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:826    .text.ob_erase:00000000 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:828    .text.ob_erase:00000000 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:829    .text.ob_erase:00000000 .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:833    .text.ob_erase:00000002 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:835    .text.ob_erase:00000006 .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:844    .text.ob_erase:0000000e .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:849    .text.ob_erase:00000018 .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:850    .text.ob_erase:00000018 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:853    .text.ob_erase:00000020 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:854    .text.ob_erase:00000020 .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:856    .text.ob_erase:00000022 .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:861    .text.ob_erase:0000002c .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:862    .text.ob_erase:0000002c .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:864    .text.ob_erase:00000030 .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:867    .text.ob_erase:00000036 .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:869    .text.ob_erase:00000038 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:871    .text.ob_erase:0000003a .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:874    .text.ob_erase:00000040 .LM251
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 39
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:875    .text.ob_erase:00000040 .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:880    .text.ob_erase:0000004a .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:881    .text.ob_erase:0000004a .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:883    .text.ob_erase:0000004c .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:887    .text.ob_erase:00000052 .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:890    .text.ob_erase:00000056 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:893    .text.ob_erase:0000005c .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:896    .text.ob_erase:00000062 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:897    .text.ob_erase:00000062 .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:898    .text.ob_erase:00000062 .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:900    .text.ob_erase:00000066 .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:903    .text.ob_erase:0000006c .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:904    .text.ob_erase:0000006c .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:907    .text.ob_erase:00000074 .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:908    .text.ob_erase:00000074 .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:913    .text.ob_erase:0000007e .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:915    .text.ob_erase:0000007e .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:916    .text.ob_erase:0000007e .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:919    .text.ob_erase:00000084 .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:920    .text.ob_erase:00000084 .LM271
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:924    .text.ob_erase:0000008a .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:926    .text.ob_erase:0000008a .LM273
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:937    .text.ob_erase:00000094 .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:952    .text.ob_write_protection_enable:00000000 .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:954    .text.ob_write_protection_enable:00000000 .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:955    .text.ob_write_protection_enable:00000000 .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:956    .text.ob_write_protection_enable:00000000 .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:963    .text.ob_write_protection_enable:00000006 .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:966    .text.ob_write_protection_enable:0000000a .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:969    .text.ob_write_protection_enable:0000000c .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:972    .text.ob_write_protection_enable:00000014 .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:973    .text.ob_write_protection_enable:00000014 .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:974    .text.ob_write_protection_enable:00000014 .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:975    .text.ob_write_protection_enable:00000014 .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:976    .text.ob_write_protection_enable:00000014 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:977    .text.ob_write_protection_enable:00000014 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:978    .text.ob_write_protection_enable:00000014 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:980    .text.ob_write_protection_enable:00000016 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:983    .text.ob_write_protection_enable:0000001c .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:986    .text.ob_write_protection_enable:00000020 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:988    .text.ob_write_protection_enable:00000024 .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:989    .text.ob_write_protection_enable:00000024 .LM293
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:992    .text.ob_write_protection_enable:0000002a .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:993    .text.ob_write_protection_enable:0000002a .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:998    .text.ob_write_protection_enable:00000032 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1000   .text.ob_write_protection_enable:00000036 .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1002   .text.ob_write_protection_enable:0000003a .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1005   .text.ob_write_protection_enable:00000042 .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1006   .text.ob_write_protection_enable:00000042 .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1009   .text.ob_write_protection_enable:0000004a .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1010   .text.ob_write_protection_enable:0000004a .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1014   .text.ob_write_protection_enable:00000056 .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1015   .text.ob_write_protection_enable:00000056 .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1019   .text.ob_write_protection_enable:00000058 .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1021   .text.ob_write_protection_enable:0000005c .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1023   .text.ob_write_protection_enable:00000060 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1026   .text.ob_write_protection_enable:00000068 .LM308
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 40
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1027   .text.ob_write_protection_enable:00000068 .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1030   .text.ob_write_protection_enable:00000070 .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1031   .text.ob_write_protection_enable:00000070 .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1035   .text.ob_write_protection_enable:0000007c .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1036   .text.ob_write_protection_enable:0000007c .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1040   .text.ob_write_protection_enable:0000007e .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1043   .text.ob_write_protection_enable:00000080 .LM315
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1047   .text.ob_write_protection_enable:0000008a .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1048   .text.ob_write_protection_enable:0000008a .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1051   .text.ob_write_protection_enable:00000092 .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1052   .text.ob_write_protection_enable:00000092 .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1059   .text.ob_write_protection_enable:000000a0 .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1060   .text.ob_write_protection_enable:000000a0 .LM321
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1063   .text.ob_write_protection_enable:000000a8 .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1064   .text.ob_write_protection_enable:000000a8 .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1067   .text.ob_write_protection_enable:000000ac .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1070   .text.ob_write_protection_enable:000000b4 .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1071   .text.ob_write_protection_enable:000000b4 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1075   .text.ob_write_protection_enable:000000b6 .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1076   .text.ob_write_protection_enable:000000b6 .LM328
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1081   .text.ob_write_protection_enable:000000bc .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1082   .text.ob_write_protection_enable:000000bc .LM330
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1088   .text.ob_write_protection_enable:000000c6 .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1107   .text.ob_security_protection_config:00000000 .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1109   .text.ob_security_protection_config:00000000 .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1110   .text.ob_security_protection_config:00000000 .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1117   .text.ob_security_protection_config:00000006 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1120   .text.ob_security_protection_config:0000000a .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1125   .text.ob_security_protection_config:0000000e .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1128   .text.ob_security_protection_config:00000016 .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1129   .text.ob_security_protection_config:00000016 .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1131   .text.ob_security_protection_config:00000018 .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1134   .text.ob_security_protection_config:0000001e .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1137   .text.ob_security_protection_config:00000022 .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1139   .text.ob_security_protection_config:00000024 .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1142   .text.ob_security_protection_config:0000002a .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1144   .text.ob_security_protection_config:0000002c .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1147   .text.ob_security_protection_config:00000032 .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1148   .text.ob_security_protection_config:00000032 .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1151   .text.ob_security_protection_config:0000003a .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1152   .text.ob_security_protection_config:0000003a .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1154   .text.ob_security_protection_config:0000003c .LM350
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1155   .text.ob_security_protection_config:0000003c .LM351
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1157   .text.ob_security_protection_config:0000003e .LM352
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1160   .text.ob_security_protection_config:00000042 .LM353
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1163   .text.ob_security_protection_config:00000048 .LM354
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1165   .text.ob_security_protection_config:0000004a .LM355
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1168   .text.ob_security_protection_config:00000050 .LM356
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1169   .text.ob_security_protection_config:00000050 .LM357
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1172   .text.ob_security_protection_config:00000058 .LM358
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1173   .text.ob_security_protection_config:00000058 .LM359
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1176   .text.ob_security_protection_config:00000060 .LM360
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1177   .text.ob_security_protection_config:00000060 .LM361
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1180   .text.ob_security_protection_config:00000066 .LM362
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1181   .text.ob_security_protection_config:00000066 .LM363
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1185   .text.ob_security_protection_config:0000006a .LM364
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1187   .text.ob_security_protection_config:0000006c .LM365
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 41
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1189   .text.ob_security_protection_config:0000006c .LM366
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1198   .text.ob_security_protection_config:00000072 .LM367
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1206   .text.ob_security_protection_config:00000076 .LM368
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1207   .text.ob_security_protection_config:00000076 .LM369
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1210   .text.ob_security_protection_config:0000007c .LM370
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1211   .text.ob_security_protection_config:0000007c .LM371
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1225   .text.ob_user_write:00000000 .LM372
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1227   .text.ob_user_write:00000000 .LM373
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1228   .text.ob_user_write:00000000 .LM374
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1229   .text.ob_user_write:00000000 .LM375
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1230   .text.ob_user_write:00000000 .LM376
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1237   .text.ob_user_write:00000006 .LM377
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1240   .text.ob_user_write:0000000a .LM378
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1248   .text.ob_user_write:00000014 .LM379
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1251   .text.ob_user_write:0000001c .LM380
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1252   .text.ob_user_write:0000001c .LM381
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1257   .text.ob_user_write:00000024 .LM382
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1260   .text.ob_user_write:0000002a .LM383
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1263   .text.ob_user_write:0000002e .LM384
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1266   .text.ob_user_write:00000034 .LM385
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1268   .text.ob_user_write:00000038 .LM386
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1270   .text.ob_user_write:0000003c .LM387
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1273   .text.ob_user_write:00000044 .LM388
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1276   .text.ob_user_write:00000048 .LM389
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1279   .text.ob_user_write:00000050 .LM390
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1281   .text.ob_user_write:00000052 .LM391
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1283   .text.ob_user_write:00000054 .LM392
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1284   .text.ob_user_write:00000054 .LM393
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1285   .text.ob_user_write:00000054 .LM394
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1287   .text.ob_user_write:00000054 .LM395
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1288   .text.ob_user_write:00000054 .LM396
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1290   .text.ob_user_write:00000058 .LM397
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1291   .text.ob_user_write:00000058 .LM398
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1296   .text.ob_user_write:0000005e .LM399
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1304   .text.ob_user_write:00000064 .LM400
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1309   .text.ob_user_write:00000066 .LM401
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1321   .text.ob_data_program:00000000 .LM402
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1323   .text.ob_data_program:00000000 .LM403
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1324   .text.ob_data_program:00000000 .LM404
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1331   .text.ob_data_program:00000006 .LM405
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1334   .text.ob_data_program:0000000a .LM406
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1340   .text.ob_data_program:00000010 .LM407
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1343   .text.ob_data_program:00000018 .LM408
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1344   .text.ob_data_program:00000018 .LM409
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1347   .text.ob_data_program:0000001c .LM410
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1350   .text.ob_data_program:00000022 .LM411
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1353   .text.ob_data_program:00000026 .LM412
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1355   .text.ob_data_program:00000028 .LM413
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1358   .text.ob_data_program:0000002e .LM414
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1359   .text.ob_data_program:0000002e .LM415
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1361   .text.ob_data_program:00000032 .LM416
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1362   .text.ob_data_program:00000032 .LM417
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1365   .text.ob_data_program:0000003a .LM418
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1366   .text.ob_data_program:0000003a .LM419
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1369   .text.ob_data_program:00000040 .LM420
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1370   .text.ob_data_program:00000040 .LM421
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1375   .text.ob_data_program:00000046 .LM422
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s 			page 42
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1383   .text.ob_data_program:0000004c .LM423
+C:\Users\Administrator\AppData\Local\Temp\ccffDoMo.s:1388   .text.ob_data_program:0000004e .LM424
+
+NO UNDEFINED SYMBOLS

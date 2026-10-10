@@ -1,0 +1,110 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s 			page 1
+
+
+   1              		.file	"clock_getres.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.clock_getres,"ax",@progbits
+  10              		.align	1
+  11              		.weak	clock_getres
+  13              	clock_getres:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 17070000 		lw	a4,SystemCoreClock
+  20      03270700 
+  21              	.LM4:
+  22 0008 8147     		li	a5,0
+  23 000a 9CC1     		sw	a5,0(a1)
+  24              	.LM5:
+  25 000c B7D79A3B 		li	a5,1000001536
+  26 0010 938707A0 		addi	a5,a5,-1536
+  27 0014 B3D7E702 		divu	a5,a5,a4
+  28              	.LM6:
+  29 0018 0148     		li	a6,0
+  30 001a 23A20501 		sw	a6,4(a1)
+  31              	.LM7:
+  32              	.LM8:
+  33 001e 0145     		li	a0,0
+  34              	.LVL1:
+  35              	.LM9:
+  36 0020 9CC5     		sw	a5,8(a1)
+  37              	.LM10:
+  38              	.LM11:
+  39 0022 8280     		ret
+  40              		.cfi_endproc
+  41              	.LFE150:
+  43              		.text
+  44              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 clock_getres.c
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:10     .text.clock_getres:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:13     .text.clock_getres:00000000 clock_getres
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:17     .text.clock_getres:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:40     .text.clock_getres:00000024 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:20     .text.clock_getres:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:215    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:593    .debug_str:0000001b .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:615    .debug_str:00000163 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:625    .debug_str:000001cd .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:442    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:448    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:603    .debug_str:0000011b .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:591    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:589    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:629    .debug_str:000001e6 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:621    .debug_str:000001b8 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:605    .debug_str:00000132 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:633    .debug_str:000001fa .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:619    .debug_str:000001a5 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:613    .debug_str:0000015a .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:595    .debug_str:000000e2 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:601    .debug_str:00000109 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:637    .debug_str:00000211 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:611    .debug_str:00000151 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:597    .debug_str:000000ed .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:599    .debug_str:000000fd .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:639    .debug_str:00000221 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:609    .debug_str:0000014a .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:623    .debug_str:000001c4 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:617    .debug_str:0000019e .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:631    .debug_str:000001f2 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:607    .debug_str:00000140 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:635    .debug_str:00000204 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:15     .text.clock_getres:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:41     .text.clock_getres:00000024 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:627    .debug_str:000001dd .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:409    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:404    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:14     .text.clock_getres:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:34     .text.clock_getres:00000020 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:46     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:16     .text.clock_getres:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:18     .text.clock_getres:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:19     .text.clock_getres:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:21     .text.clock_getres:00000008 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:24     .text.clock_getres:0000000c .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:28     .text.clock_getres:00000018 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:31     .text.clock_getres:0000001e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:32     .text.clock_getres:0000001e .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:35     .text.clock_getres:00000020 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:37     .text.clock_getres:00000022 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s:38     .text.clock_getres:00000022 .LM11
+
+UNDEFINED SYMBOLS
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccFaVllc.s 			page 3
+
+
+SystemCoreClock

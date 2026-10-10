@@ -1,0 +1,9 @@
+liteos_m//kernel/src/los_sortlink.c:87:22:OsGetSortLinkNextExpireTime	0	static
+liteos_m//kernel/src/los_sortlink.c:45:8:OsSortLinkInit	0	static
+liteos_m//kernel/src/los_sortlink.c:81:6:OsDeleteNodeSortLink	0	static
+liteos_m//kernel/src/los_sortlink.c:104:6:OsAdd2SortLink	32	static
+liteos_m//kernel/src/los_sortlink.c:123:6:OsDeleteSortLink	16	static
+liteos_m//kernel/src/los_sortlink.c:144:20:OsGetSortLinkAttribute	16	static
+liteos_m//kernel/src/los_sortlink.c:156:8:OsGetNextExpireTime	32	static
+liteos_m//kernel/src/los_sortlink.c:170:8:OsSortLinkGetTargetExpireTime	16	static
+liteos_m//kernel/src/los_sortlink.c:179:8:OsSortLinkGetNextExpireTime	32	static

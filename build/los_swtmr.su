@@ -1,0 +1,17 @@
+liteos_m//kernel/src/los_swtmr.c:71:23:OsSwtmrTask	48	static
+liteos_m//kernel/src/los_swtmr.c:233:20:OsSwtmrDelete	0	static
+liteos_m//kernel/include/los_sched.h:96:22:OsGetCurrSchedTimeCycle	16	static
+liteos_m//kernel/src/los_swtmr.c:123:15:OsSwtmrCalcStartTime.isra	16	static
+liteos_m//kernel/src/los_swtmr.c:106:30:OsSwtmrTaskCreate	48	static
+liteos_m//kernel/src/los_swtmr.c:139:8:OsSwtmrFindAlignPos	16	static
+liteos_m//kernel/src/los_swtmr.c:211:23:OsSwtmrStart	16	static
+liteos_m//kernel/src/los_swtmr.c:280:13:OsSwtmrScan	64	static
+liteos_m//kernel/src/los_swtmr.c:247:23:OsSwtmrStop	16	static
+liteos_m//kernel/src/los_swtmr.c:317:25:OsSwtmrGetNextTimeout	16	static
+liteos_m//kernel/src/los_swtmr.c:325:25:OsSwtmrTimeGet	16	static
+liteos_m//kernel/src/los_swtmr.c:337:30:OsSwtmrInit	16	static
+liteos_m//kernel/src/los_swtmr.c:412:30:LOS_SwtmrCreate	48	static
+liteos_m//kernel/src/los_swtmr.c:490:25:LOS_SwtmrStart	16	static
+liteos_m//kernel/src/los_swtmr.c:545:25:LOS_SwtmrStop	16	static
+liteos_m//kernel/src/los_swtmr.c:583:25:LOS_SwtmrTimeGet	16	static
+liteos_m//kernel/src/los_swtmr.c:631:25:LOS_SwtmrDelete	16	static

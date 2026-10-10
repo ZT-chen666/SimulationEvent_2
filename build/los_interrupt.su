@@ -1,0 +1,7 @@
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:128:28:HalHwiDefaultHandler	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:49:28:HalHwiInit	0	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:68:9:HalHwiCreate	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:112:25:HalHwiDelete	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:142:6:HalDisplayTaskInfo	144	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:169:13:HalUnalignedAccessFix	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_interrupt.c:186:46:HalIsIntActive	0	static

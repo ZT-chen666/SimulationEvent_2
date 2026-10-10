@@ -1,0 +1,443 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 1
+
+
+   1              		.file	"gd32vf103_wwdgt.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.wwdgt_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	wwdgt_deinit
+  13              	wwdgt_deinit:
+  14              	.LFB150:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18              	.LM3:
+  19 0000 4111     		addi	sp,sp,-16
+  20              	.LCFI0:
+  21              		.cfi_def_cfa_offset 16
+  22              	.LM4:
+  23 0002 1305B040 		li	a0,1035
+  24              	.LM5:
+  25 0006 06C6     		sw	ra,12(sp)
+  26              		.cfi_offset 1, -4
+  27              	.LM6:
+  28 0008 97000000 		call	rcu_periph_reset_enable
+  28      E7800000 
+  29              	.LVL0:
+  30              	.LM7:
+  31              	.LM8:
+  32 0010 B240     		lw	ra,12(sp)
+  33              		.cfi_restore 1
+  34              	.LM9:
+  35 0012 1305B040 		li	a0,1035
+  36              	.LM10:
+  37 0016 4101     		addi	sp,sp,16
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 0
+  40              	.LM11:
+  41 0018 17030000 		tail	rcu_periph_reset_disable
+  41      67000300 
+  42              	.LVL1:
+  43              		.cfi_endproc
+  44              	.LFE150:
+  46              		.section	.text.wwdgt_enable,"ax",@progbits
+  47              		.align	1
+  48              		.globl	wwdgt_enable
+  50              	wwdgt_enable:
+  51              	.LFB151:
+  52              	.LM12:
+  53              		.cfi_startproc
+  54              	.LM13:
+  55 0000 B7370040 		li	a5,1073754112
+  56 0004 938707C0 		addi	a5,a5,-1024
+  57 0008 9843     		lw	a4,0(a5)
+  58              	.LM14:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 2
+
+
+  59 000a 13670708 		ori	a4,a4,128
+  60 000e 98C3     		sw	a4,0(a5)
+  61              	.LM15:
+  62 0010 8280     		ret
+  63              		.cfi_endproc
+  64              	.LFE151:
+  66              		.section	.text.wwdgt_counter_update,"ax",@progbits
+  67              		.align	1
+  68              		.globl	wwdgt_counter_update
+  70              	wwdgt_counter_update:
+  71              	.LVL2:
+  72              	.LFB152:
+  73              	.LM16:
+  74              		.cfi_startproc
+  75              	.LM17:
+  76              	.LM18:
+  77              	.LM19:
+  78 0000 B7370040 		li	a5,1073754112
+  79 0004 938707C0 		addi	a5,a5,-1024
+  80 0008 9843     		lw	a4,0(a5)
+  81              	.LM20:
+  82 000a 1375F507 		andi	a0,a0,127
+  83              	.LVL3:
+  84              	.LM21:
+  85 000e 137707F8 		andi	a4,a4,-128
+  86              	.LVL4:
+  87              	.LM22:
+  88              	.LM23:
+  89 0012 598D     		or	a0,a0,a4
+  90              	.LVL5:
+  91              	.LM24:
+  92              	.LM25:
+  93 0014 88C3     		sw	a0,0(a5)
+  94              	.LM26:
+  95 0016 8280     		ret
+  96              		.cfi_endproc
+  97              	.LFE152:
+  99              		.section	.text.wwdgt_config,"ax",@progbits
+ 100              		.align	1
+ 101              		.globl	wwdgt_config
+ 103              	wwdgt_config:
+ 104              	.LVL6:
+ 105              	.LFB153:
+ 106              	.LM27:
+ 107              		.cfi_startproc
+ 108              	.LM28:
+ 109              	.LM29:
+ 110              	.LM30:
+ 111 0000 37370040 		li	a4,1073754112
+ 112              	.LM31:
+ 113 0004 B7360040 		li	a3,1073754112
+ 114              	.LM32:
+ 115 0008 130747C0 		addi	a4,a4,-1020
+ 116              	.LM33:
+ 117 000c 938606C0 		addi	a3,a3,-1024
+ 118              	.LM34:
+ 119 0010 1C43     		lw	a5,0(a4)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 3
+
+
+ 120              	.LVL7:
+ 121              	.LM35:
+ 122              	.LM36:
+ 123 0012 03A80600 		lw	a6,0(a3)
+ 124              	.LM37:
+ 125 0016 1375F507 		andi	a0,a0,127
+ 126              	.LVL8:
+ 127              	.LM38:
+ 128 001a 93F707E0 		andi	a5,a5,-512
+ 129              	.LVL9:
+ 130              	.LM39:
+ 131 001e 137808F8 		andi	a6,a6,-128
+ 132              	.LVL10:
+ 133              	.LM40:
+ 134 0022 D18F     		or	a5,a5,a2
+ 135              	.LVL11:
+ 136              	.LM41:
+ 137              	.LM42:
+ 138 0024 93F5F507 		andi	a1,a1,127
+ 139              	.LVL12:
+ 140              	.LM43:
+ 141 0028 33650501 		or	a0,a0,a6
+ 142              	.LM44:
+ 143 002c DD8D     		or	a1,a1,a5
+ 144              	.LVL13:
+ 145              	.LM45:
+ 146              	.LM46:
+ 147              	.LM47:
+ 148 002e 88C2     		sw	a0,0(a3)
+ 149              	.LM48:
+ 150              	.LM49:
+ 151 0030 0CC3     		sw	a1,0(a4)
+ 152              	.LM50:
+ 153 0032 8280     		ret
+ 154              		.cfi_endproc
+ 155              	.LFE153:
+ 157              		.section	.text.wwdgt_interrupt_enable,"ax",@progbits
+ 158              		.align	1
+ 159              		.globl	wwdgt_interrupt_enable
+ 161              	wwdgt_interrupt_enable:
+ 162              	.LFB154:
+ 163              	.LM51:
+ 164              		.cfi_startproc
+ 165              	.LM52:
+ 166 0000 B7370040 		li	a5,1073754112
+ 167 0004 938747C0 		addi	a5,a5,-1020
+ 168 0008 9843     		lw	a4,0(a5)
+ 169              	.LM53:
+ 170 000a 13670720 		ori	a4,a4,512
+ 171 000e 98C3     		sw	a4,0(a5)
+ 172              	.LM54:
+ 173 0010 8280     		ret
+ 174              		.cfi_endproc
+ 175              	.LFE154:
+ 177              		.section	.text.wwdgt_flag_get,"ax",@progbits
+ 178              		.align	1
+ 179              		.globl	wwdgt_flag_get
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 4
+
+
+ 181              	wwdgt_flag_get:
+ 182              	.LFB155:
+ 183              	.LM55:
+ 184              		.cfi_startproc
+ 185              	.LM56:
+ 186              	.LM57:
+ 187 0000 B7370040 		li	a5,1073754112
+ 188 0004 03A587C0 		lw	a0,-1016(a5)
+ 189              	.LM58:
+ 190 0008 0589     		andi	a0,a0,1
+ 191 000a 8280     		ret
+ 192              		.cfi_endproc
+ 193              	.LFE155:
+ 195              		.section	.text.wwdgt_flag_clear,"ax",@progbits
+ 196              		.align	1
+ 197              		.globl	wwdgt_flag_clear
+ 199              	wwdgt_flag_clear:
+ 200              	.LFB156:
+ 201              	.LM59:
+ 202              		.cfi_startproc
+ 203              	.LM60:
+ 204              	.LM61:
+ 205 0000 B7370040 		li	a5,1073754112
+ 206 0004 938787C0 		addi	a5,a5,-1016
+ 207 0008 9843     		lw	a4,0(a5)
+ 208 000a 799B     		andi	a4,a4,-2
+ 209 000c 98C3     		sw	a4,0(a5)
+ 210              	.LM62:
+ 211 000e 8280     		ret
+ 212              		.cfi_endproc
+ 213              	.LFE156:
+ 215              		.text
+ 216              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_wwdgt.c
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:10     .text.wwdgt_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:13     .text.wwdgt_deinit:00000000 wwdgt_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:16     .text.wwdgt_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:21     .text.wwdgt_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:26     .text.wwdgt_deinit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:33     .text.wwdgt_deinit:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:39     .text.wwdgt_deinit:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:43     .text.wwdgt_deinit:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:47     .text.wwdgt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:50     .text.wwdgt_enable:00000000 wwdgt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:53     .text.wwdgt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:63     .text.wwdgt_enable:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:67     .text.wwdgt_counter_update:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:70     .text.wwdgt_counter_update:00000000 wwdgt_counter_update
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:74     .text.wwdgt_counter_update:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:96     .text.wwdgt_counter_update:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:100    .text.wwdgt_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:103    .text.wwdgt_config:00000000 wwdgt_config
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:107    .text.wwdgt_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:154    .text.wwdgt_config:00000034 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:158    .text.wwdgt_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:161    .text.wwdgt_interrupt_enable:00000000 wwdgt_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:164    .text.wwdgt_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:174    .text.wwdgt_interrupt_enable:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:178    .text.wwdgt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:181    .text.wwdgt_flag_get:00000000 wwdgt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:184    .text.wwdgt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:192    .text.wwdgt_flag_get:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:196    .text.wwdgt_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:199    .text.wwdgt_flag_clear:00000000 wwdgt_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:202    .text.wwdgt_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:212    .text.wwdgt_flag_clear:00000010 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:634    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1794   .debug_str:000002df .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1706   .debug_str:0000005b .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1760   .debug_str:000001f6 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1220   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1238   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1754   .debug_str:000001c9 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1772   .debug_str:0000023f .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1762   .debug_str:00000206 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1732   .debug_str:00000147 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1742   .debug_str:00000186 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1750   .debug_str:000001b2 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1744   .debug_str:00000192 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1724   .debug_str:0000010f .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1720   .debug_str:000000ed .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1734   .debug_str:00000155 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1716   .debug_str:000000d4 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1784   .debug_str:0000029c .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1764   .debug_str:00000213 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1758   .debug_str:000001ed .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1796   .debug_str:000003a6 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1818   .debug_str:00000438 .LASF15
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 6
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1696   .debug_str:0000001b .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1776   .debug_str:00000263 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1808   .debug_str:000003e0 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1718   .debug_str:000000df .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1738   .debug_str:0000016a .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1778   .debug_str:00000271 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1814   .debug_str:0000041c .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1824   .debug_str:0000045d .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1712   .debug_str:000000af .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1736   .debug_str:0000015e .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1782   .debug_str:0000028e .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1822   .debug_str:0000044f .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1786   .debug_str:000002ae .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1698   .debug_str:00000028 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1820   .debug_str:00000443 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1790   .debug_str:000002c8 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1704   .debug_str:0000004f .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1730   .debug_str:0000013b .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1710   .debug_str:000000a3 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1792   .debug_str:000002d4 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1752   .debug_str:000001be .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1746   .debug_str:000001a0 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1756   .debug_str:000001e0 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1788   .debug_str:000002bb .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1702   .debug_str:00000042 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1728   .debug_str:0000012e .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1766   .debug_str:0000021c .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1768   .debug_str:00000229 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1800   .debug_str:000003b9 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1692   .debug_str:00000000 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1806   .debug_str:000003d4 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1740   .debug_str:00000178 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1810   .debug_str:000003ee .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1714   .debug_str:000000bb .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1812   .debug_str:00000404 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1774   .debug_str:00000252 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:200    .text.wwdgt_flag_clear:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:213    .text.wwdgt_flag_clear:00000010 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1780   .debug_str:0000027f .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:182    .text.wwdgt_flag_get:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:193    .text.wwdgt_flag_get:0000000c .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1722   .debug_str:000000f8 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:162    .text.wwdgt_interrupt_enable:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:175    .text.wwdgt_interrupt_enable:00000012 .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1694   .debug_str:0000000e .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:105    .text.wwdgt_config:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:155    .text.wwdgt_config:00000034 .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1748   .debug_str:000001aa .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1027   .debug_loc:00000004 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1022   .debug_loc:00000000 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1804   .debug_str:000003cd .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1052   .debug_loc:0000002f .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1047   .debug_loc:0000002b .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1770   .debug_str:00000235 .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1708   .debug_str:0000009b .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1081   .debug_loc:0000005e .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1072   .debug_loc:00000056 .LVUS5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 7
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1802   .debug_str:000003c5 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1113   .debug_loc:0000009f .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1106   .debug_loc:00000099 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1726   .debug_str:00000119 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:72     .text.wwdgt_counter_update:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:97     .text.wwdgt_counter_update:00000018 .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1816   .debug_str:0000042a .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1134   .debug_loc:000000cd .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1129   .debug_loc:000000c9 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1161   .debug_loc:000000fa .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1154   .debug_loc:000000f4 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1700   .debug_str:00000035 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:51     .text.wwdgt_enable:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:64     .text.wwdgt_enable:00000012 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1798   .debug_str:000003ac .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:14     .text.wwdgt_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:44     .text.wwdgt_deinit:00000020 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:1177   .debug_loc:00000124 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:29     .text.wwdgt_deinit:00000010 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:42     .text.wwdgt_deinit:00000020 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:104    .text.wwdgt_config:00000000 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:126    .text.wwdgt_config:0000001a .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:139    .text.wwdgt_config:00000028 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:120    .text.wwdgt_config:00000012 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:129    .text.wwdgt_config:0000001e .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:135    .text.wwdgt_config:00000024 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:144    .text.wwdgt_config:0000002e .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:132    .text.wwdgt_config:00000022 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:71     .text.wwdgt_counter_update:00000000 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:83     .text.wwdgt_counter_update:0000000e .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:86     .text.wwdgt_counter_update:00000012 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:90     .text.wwdgt_counter_update:00000014 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:20     .text.wwdgt_deinit:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:38     .text.wwdgt_deinit:00000018 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:218    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:15     .text.wwdgt_deinit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:17     .text.wwdgt_deinit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:18     .text.wwdgt_deinit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:22     .text.wwdgt_deinit:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:24     .text.wwdgt_deinit:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:27     .text.wwdgt_deinit:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:30     .text.wwdgt_deinit:00000010 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:31     .text.wwdgt_deinit:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:34     .text.wwdgt_deinit:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:36     .text.wwdgt_deinit:00000016 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:40     .text.wwdgt_deinit:00000018 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:52     .text.wwdgt_enable:00000000 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:54     .text.wwdgt_enable:00000000 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:58     .text.wwdgt_enable:0000000a .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:61     .text.wwdgt_enable:00000010 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:73     .text.wwdgt_counter_update:00000000 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:75     .text.wwdgt_counter_update:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:76     .text.wwdgt_counter_update:00000000 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:77     .text.wwdgt_counter_update:00000000 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:81     .text.wwdgt_counter_update:0000000a .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:84     .text.wwdgt_counter_update:0000000e .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:87     .text.wwdgt_counter_update:00000012 .LM22
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s 			page 8
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:88     .text.wwdgt_counter_update:00000012 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:91     .text.wwdgt_counter_update:00000014 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:92     .text.wwdgt_counter_update:00000014 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:94     .text.wwdgt_counter_update:00000016 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:106    .text.wwdgt_config:00000000 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:108    .text.wwdgt_config:00000000 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:109    .text.wwdgt_config:00000000 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:110    .text.wwdgt_config:00000000 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:112    .text.wwdgt_config:00000004 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:114    .text.wwdgt_config:00000008 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:116    .text.wwdgt_config:0000000c .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:118    .text.wwdgt_config:00000010 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:121    .text.wwdgt_config:00000012 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:122    .text.wwdgt_config:00000012 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:124    .text.wwdgt_config:00000016 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:127    .text.wwdgt_config:0000001a .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:130    .text.wwdgt_config:0000001e .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:133    .text.wwdgt_config:00000022 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:136    .text.wwdgt_config:00000024 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:137    .text.wwdgt_config:00000024 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:140    .text.wwdgt_config:00000028 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:142    .text.wwdgt_config:0000002c .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:145    .text.wwdgt_config:0000002e .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:146    .text.wwdgt_config:0000002e .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:147    .text.wwdgt_config:0000002e .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:149    .text.wwdgt_config:00000030 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:150    .text.wwdgt_config:00000030 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:152    .text.wwdgt_config:00000032 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:163    .text.wwdgt_interrupt_enable:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:165    .text.wwdgt_interrupt_enable:00000000 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:169    .text.wwdgt_interrupt_enable:0000000a .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:172    .text.wwdgt_interrupt_enable:00000010 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:183    .text.wwdgt_flag_get:00000000 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:185    .text.wwdgt_flag_get:00000000 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:186    .text.wwdgt_flag_get:00000000 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:189    .text.wwdgt_flag_get:00000008 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:201    .text.wwdgt_flag_clear:00000000 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:203    .text.wwdgt_flag_clear:00000000 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:204    .text.wwdgt_flag_clear:00000000 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccvrSUl6.s:210    .text.wwdgt_flag_clear:0000000e .LM62
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

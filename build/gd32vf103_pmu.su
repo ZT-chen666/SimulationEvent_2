@@ -1,0 +1,12 @@
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:43:6:pmu_deinit	16	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:65:6:pmu_lvd_select	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:83:6:pmu_lvd_disable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:98:6:pmu_to_sleepmode	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:126:6:pmu_to_deepsleepmode	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:155:6:pmu_to_standbymode	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:183:6:pmu_wakeup_pin_enable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:194:6:pmu_wakeup_pin_disable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:205:6:pmu_backup_write_enable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:216:6:pmu_backup_write_disable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:231:12:pmu_flag_get	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_pmu.c:249:6:pmu_flag_clear	0	static

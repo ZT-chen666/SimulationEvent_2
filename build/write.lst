@@ -1,0 +1,233 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s 			page 1
+
+
+   1              		.file	"write.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._write,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_write
+  13              	_write:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 0111     		addi	sp,sp,-32
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 32
+  23 0002 22CC     		sw	s0,24(sp)
+  24 0004 26CA     		sw	s1,20(sp)
+  25 0006 06CE     		sw	ra,28(sp)
+  26 0008 4AC8     		sw	s2,16(sp)
+  27 000a 4EC6     		sw	s3,12(sp)
+  28              		.cfi_offset 8, -8
+  29              		.cfi_offset 9, -12
+  30              		.cfi_offset 1, -4
+  31              		.cfi_offset 18, -16
+  32              		.cfi_offset 19, -20
+  33              	.LM4:
+  34 000c 2E84     		mv	s0,a1
+  35 000e B284     		mv	s1,a2
+  36              	.LM5:
+  37 0010 97000000 		call	isatty
+  37      E7800000 
+  38              	.LVL1:
+  39              	.LM6:
+  40 0018 39C5     		beq	a0,zero,.L6
+  41 001a 33099400 		add	s2,s0,s1
+  42              	.LBB2:
+  43              	.LM7:
+  44 001e A949     		li	s3,10
+  45              	.LVL2:
+  46              	.L3:
+  47              	.LM8:
+  48 0020 631A2401 		bne	s0,s2,.L5
+  49              	.LBE2:
+  50              	.LM9:
+  51              	.LM10:
+  52 0024 2685     		mv	a0,s1
+  53              	.LVL3:
+  54              	.L1:
+  55              	.LM11:
+  56 0026 F240     		lw	ra,28(sp)
+  57              		.cfi_remember_state
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s 			page 2
+
+
+  58              		.cfi_restore 1
+  59 0028 6244     		lw	s0,24(sp)
+  60              		.cfi_restore 8
+  61 002a D244     		lw	s1,20(sp)
+  62              		.cfi_restore 9
+  63              	.LVL4:
+  64              	.LM12:
+  65 002c 4249     		lw	s2,16(sp)
+  66              		.cfi_restore 18
+  67 002e B249     		lw	s3,12(sp)
+  68              		.cfi_restore 19
+  69 0030 0561     		addi	sp,sp,32
+  70              	.LCFI1:
+  71              		.cfi_def_cfa_offset 0
+  72 0032 8280     		jr	ra
+  73              	.LVL5:
+  74              	.L5:
+  75              	.LCFI2:
+  76              		.cfi_restore_state
+  77              	.LBB3:
+  78              	.LM13:
+  79              	.LM14:
+  80 0034 83470400 		lbu	a5,0(s0)
+  81 0038 639B3701 		bne	a5,s3,.L4
+  82              	.LM15:
+  83 003c 37450140 		li	a0,1073823744
+  84 0040 B545     		li	a1,13
+  85 0042 13050580 		addi	a0,a0,-2048
+  86 0046 97000000 		call	usart_write
+  86      E7800000 
+  87              	.LVL6:
+  88              	.L4:
+  89              	.LM16:
+  90 004e 83450400 		lbu	a1,0(s0)
+  91 0052 37450140 		li	a0,1073823744
+  92 0056 13050580 		addi	a0,a0,-2048
+  93 005a 97000000 		call	usart_write
+  93      E7800000 
+  94              	.LVL7:
+  95              	.LM17:
+  96              	.LM18:
+  97 0062 0504     		addi	s0,s0,1
+  98              	.LVL8:
+  99              	.LM19:
+ 100 0064 75BF     		j	.L3
+ 101              	.LVL9:
+ 102              	.L6:
+ 103              	.LM20:
+ 104              	.LBE3:
+ 105              	.LM21:
+ 106 0066 7D55     		li	a0,-1
+ 107 0068 7DBF     		j	.L1
+ 108              		.cfi_endproc
+ 109              	.LFE150:
+ 111              		.text
+ 112              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 write.c
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:10     .text._write:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:13     .text._write:00000000 _write
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:17     .text._write:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:22     .text._write:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:28     .text._write:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:29     .text._write:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:30     .text._write:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:31     .text._write:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:32     .text._write:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:57     .text._write:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:58     .text._write:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:60     .text._write:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:62     .text._write:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:66     .text._write:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:68     .text._write:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:71     .text._write:00000032 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:76     .text._write:00000034 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:108    .text._write:0000006a .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:102    .text._write:00000066 .L6
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:74     .text._write:00000034 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:88     .text._write:0000004e .L4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:46     .text._write:00000020 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:54     .text._write:00000026 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:356    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1064   .debug_str:0000001c .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1086   .debug_str:0000014b .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1100   .debug_str:000001cf .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:825    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:837    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1070   .debug_str:000000f6 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1106   .debug_str:000001f4 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1094   .debug_str:000001ae .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1072   .debug_str:0000010d .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1076   .debug_str:0000011e .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1088   .debug_str:0000017f .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1092   .debug_str:0000019b .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1084   .debug_str:00000142 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1066   .debug_str:000000e3 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1090   .debug_str:00000189 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1058   .debug_str:00000000 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1068   .debug_str:000000ee .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1082   .debug_str:00000139 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1062   .debug_str:00000015 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1102   .debug_str:000001df .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1104   .debug_str:000001eb .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1078   .debug_str:0000012c .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1080   .debug_str:00000131 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1098   .debug_str:000001c3 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1060   .debug_str:0000000e .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1074   .debug_str:00000117 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:15     .text._write:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:109    .text._write:0000006a .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:612    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:640    .debug_loc:0000003c .LLST1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:635    .debug_loc:00000038 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:669    .debug_loc:0000006b .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:660    .debug_loc:00000063 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:706    .debug_loc:000000b0 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:697    .debug_loc:000000a8 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:1096   .debug_str:000001ba .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:743    .debug_loc:000000f5 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:734    .debug_loc:000000ed .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:87     .text._write:0000004e .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:94     .text._write:00000062 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:38     .text._write:00000018 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:21     .text._write:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:70     .text._write:00000032 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:75     .text._write:00000034 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:14     .text._write:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:45     .text._write:00000020 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:101    .text._write:00000066 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:63     .text._write:0000002c .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:73     .text._write:00000034 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:53     .text._write:00000026 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:98     .text._write:00000064 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:114    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:42     .text._write:0000001e .LBB2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:49     .text._write:00000024 .LBE2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:77     .text._write:00000034 .LBB3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:104    .text._write:00000066 .LBE3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:16     .text._write:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:18     .text._write:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:19     .text._write:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:33     .text._write:0000000c .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:36     .text._write:00000010 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:39     .text._write:00000018 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:43     .text._write:0000001e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:47     .text._write:00000020 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:50     .text._write:00000024 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:51     .text._write:00000024 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:55     .text._write:00000026 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:64     .text._write:0000002c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:78     .text._write:00000034 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:79     .text._write:00000034 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:82     .text._write:0000003c .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:89     .text._write:0000004e .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:95     .text._write:00000062 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:96     .text._write:00000062 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:99     .text._write:00000064 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:103    .text._write:00000066 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccfusQfi.s:105    .text._write:00000066 .LM21
+
+UNDEFINED SYMBOLS
+isatty
+usart_write

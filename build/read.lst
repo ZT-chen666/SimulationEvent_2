@@ -1,0 +1,159 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s 			page 1
+
+
+   1              		.file	"read.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._read,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_read
+  13              	_read:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 1DE1     		bne	a0,zero,.L3
+  21              	.LM4:
+  22 0002 37450140 		li	a0,1073823744
+  23              	.LVL1:
+  24              	.LM5:
+  25 0006 0111     		addi	sp,sp,-32
+  26              	.LCFI0:
+  27              		.cfi_def_cfa_offset 32
+  28              	.LM6:
+  29 0008 13050580 		addi	a0,a0,-2048
+  30              	.LM7:
+  31 000c 06CE     		sw	ra,28(sp)
+  32              		.cfi_offset 1, -4
+  33 000e 2EC6     		sw	a1,12(sp)
+  34              	.LM8:
+  35              	.LVL2:
+  36              	.LM9:
+  37              	.LM10:
+  38 0010 97000000 		call	usart_read
+  38      E7800000 
+  39              	.LVL3:
+  40              	.LM11:
+  41 0018 B245     		lw	a1,12(sp)
+  42 001a 2380A500 		sb	a0,0(a1)
+  43              	.LM12:
+  44              	.LM13:
+  45 001e F240     		lw	ra,28(sp)
+  46              		.cfi_restore 1
+  47              	.LM14:
+  48 0020 0545     		li	a0,1
+  49              	.LM15:
+  50 0022 0561     		addi	sp,sp,32
+  51              	.LCFI1:
+  52              		.cfi_def_cfa_offset 0
+  53              	.LVL4:
+  54              	.LM16:
+  55 0024 8280     		jr	ra
+  56              	.LVL5:
+  57              	.L3:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s 			page 2
+
+
+  58              	.LM17:
+  59 0026 7D55     		li	a0,-1
+  60              	.LVL6:
+  61              	.LM18:
+  62 0028 8280     		ret
+  63              		.cfi_endproc
+  64              	.LFE150:
+  66              		.text
+  67              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 read.c
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:10     .text._read:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:13     .text._read:00000000 _read
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:17     .text._read:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:27     .text._read:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:32     .text._read:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:46     .text._read:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:52     .text._read:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:63     .text._read:0000002a .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:57     .text._read:00000026 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:249    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:798    .debug_str:00000015 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:826    .debug_str:00000167 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:832    .debug_str:000001b9 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:604    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:610    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:806    .debug_str:000000ff .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:838    .debug_str:000001de .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:830    .debug_str:000001ad .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:808    .debug_str:00000116 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:812    .debug_str:00000128 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:822    .debug_str:00000155 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:828    .debug_str:0000019a .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:820    .debug_str:0000014c .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:800    .debug_str:000000dc .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:804    .debug_str:000000ed .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:794    .debug_str:00000000 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:810    .debug_str:00000120 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:818    .debug_str:00000143 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:796    .debug_str:0000000e .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:834    .debug_str:000001c9 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:836    .debug_str:000001d5 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:814    .debug_str:00000136 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:816    .debug_str:0000013b .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:840    .debug_str:000001eb .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:802    .debug_str:000000e7 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:15     .text._read:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:64     .text._read:0000002a .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:442    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:469    .debug_loc:00000034 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:460    .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:515    .debug_loc:00000082 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:506    .debug_loc:0000007a .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:543    .debug_loc:000000be .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:536    .debug_loc:000000b8 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:824    .debug_str:0000015f .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:574    .debug_loc:000000f6 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:567    .debug_loc:000000f0 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:39     .text._read:00000018 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:26     .text._read:00000008 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:51     .text._read:00000024 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:14     .text._read:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:23     .text._read:00000006 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:56     .text._read:00000026 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:60     .text._read:00000028 .LVL6
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:53     .text._read:00000024 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:35     .text._read:00000010 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:69     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:16     .text._read:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:18     .text._read:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:19     .text._read:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:21     .text._read:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:24     .text._read:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:28     .text._read:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:30     .text._read:0000000c .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:34     .text._read:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:36     .text._read:00000010 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:37     .text._read:00000010 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:40     .text._read:00000018 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:43     .text._read:0000001e .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:44     .text._read:0000001e .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:47     .text._read:00000020 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:49     .text._read:00000022 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:54     .text._read:00000024 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:58     .text._read:00000026 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccWYclcF.s:61     .text._read:00000028 .LM18
+
+UNDEFINED SYMBOLS
+usart_read

@@ -1,0 +1,13 @@
+liteos_m//kernel/src/los_queue.c:56:30:OsQueueInit	16	static
+liteos_m//kernel/src/los_queue.c:93:30:LOS_QueueCreate	32	static
+liteos_m//kernel/src/los_queue.c:277:8:OsQueueOperate	48	static
+liteos_m//kernel/src/los_queue.c:337:25:LOS_QueueReadCopy	32	static
+liteos_m//kernel/src/los_queue.c:354:25:LOS_QueueWriteHeadCopy	32	static
+liteos_m//kernel/src/los_queue.c:371:25:LOS_QueueWriteCopy	32	static
+liteos_m//kernel/src/los_queue.c:388:25:LOS_QueueRead	32	static
+liteos_m//kernel/src/los_queue.c:405:25:LOS_QueueWrite	48	static
+liteos_m//kernel/src/los_queue.c:424:25:LOS_QueueWriteHead	32	static
+liteos_m//kernel/src/los_queue.c:448:24:OsQueueMailAlloc	32	static
+liteos_m//kernel/src/los_queue.c:513:25:OsQueueMailFree	32	static
+liteos_m//kernel/src/los_queue.c:565:30:LOS_QueueDelete	32	static
+liteos_m//kernel/src/los_queue.c:620:31:LOS_QueueInfoGet	16	static

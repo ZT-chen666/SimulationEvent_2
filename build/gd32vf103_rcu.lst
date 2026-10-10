@@ -1,0 +1,3170 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 1
+
+
+   1              		.file	"gd32vf103_rcu.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.rcu_periph_clock_enable,"ax",@progbits
+  10              		.align	1
+  11              		.globl	rcu_periph_clock_enable
+  13              	rcu_periph_clock_enable:
+  14              	.LVL0:
+  15              	.LFB151:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19 0000 B7170240 		li	a5,1073876992
+  20 0004 13576500 		srli	a4,a0,6
+  21 0008 3E97     		add	a4,a4,a5
+  22 000a 1443     		lw	a3,0(a4)
+  23              	.LM3:
+  24 000c 8547     		li	a5,1
+  25 000e B397A700 		sll	a5,a5,a0
+  26              	.LM4:
+  27 0012 D58F     		or	a5,a5,a3
+  28 0014 1CC3     		sw	a5,0(a4)
+  29              	.LM5:
+  30 0016 8280     		ret
+  31              		.cfi_endproc
+  32              	.LFE151:
+  34              		.section	.text.rcu_periph_clock_disable,"ax",@progbits
+  35              		.align	1
+  36              		.globl	rcu_periph_clock_disable
+  38              	rcu_periph_clock_disable:
+  39              	.LVL1:
+  40              	.LFB152:
+  41              	.LM6:
+  42              		.cfi_startproc
+  43              	.LM7:
+  44 0000 B7170240 		li	a5,1073876992
+  45 0004 13576500 		srli	a4,a0,6
+  46 0008 3E97     		add	a4,a4,a5
+  47 000a 1443     		lw	a3,0(a4)
+  48              	.LM8:
+  49 000c 8547     		li	a5,1
+  50 000e B397A700 		sll	a5,a5,a0
+  51              	.LM9:
+  52 0012 93C7F7FF 		not	a5,a5
+  53              	.LM10:
+  54 0016 F58F     		and	a5,a5,a3
+  55 0018 1CC3     		sw	a5,0(a4)
+  56              	.LM11:
+  57 001a 8280     		ret
+  58              		.cfi_endproc
+  59              	.LFE152:
+  61              		.section	.text.rcu_periph_clock_sleep_enable,"ax",@progbits
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 2
+
+
+  62              		.align	1
+  63              		.globl	rcu_periph_clock_sleep_enable
+  65              	rcu_periph_clock_sleep_enable:
+  66              	.LFB192:
+  67              		.cfi_startproc
+  68              	.LM12:
+  69 0000 17030000 		tail	rcu_periph_clock_enable
+  69      67000300 
+  70              		.cfi_endproc
+  71              	.LFE192:
+  73              		.section	.text.rcu_periph_clock_sleep_disable,"ax",@progbits
+  74              		.align	1
+  75              		.globl	rcu_periph_clock_sleep_disable
+  77              	rcu_periph_clock_sleep_disable:
+  78              	.LFB202:
+  79              		.cfi_startproc
+  80              	.LM13:
+  81 0000 17030000 		tail	rcu_periph_clock_disable
+  81      67000300 
+  82              		.cfi_endproc
+  83              	.LFE202:
+  85              		.section	.text.rcu_periph_reset_enable,"ax",@progbits
+  86              		.align	1
+  87              		.globl	rcu_periph_reset_enable
+  89              	rcu_periph_reset_enable:
+  90              	.LFB194:
+  91              		.cfi_startproc
+  92              	.LM14:
+  93 0000 17030000 		tail	rcu_periph_clock_enable
+  93      67000300 
+  94              		.cfi_endproc
+  95              	.LFE194:
+  97              		.section	.text.rcu_periph_reset_disable,"ax",@progbits
+  98              		.align	1
+  99              		.globl	rcu_periph_reset_disable
+ 101              	rcu_periph_reset_disable:
+ 102              	.LFB204:
+ 103              		.cfi_startproc
+ 104              	.LM15:
+ 105 0000 17030000 		tail	rcu_periph_clock_disable
+ 105      67000300 
+ 106              		.cfi_endproc
+ 107              	.LFE204:
+ 109              		.section	.text.rcu_bkp_reset_enable,"ax",@progbits
+ 110              		.align	1
+ 111              		.globl	rcu_bkp_reset_enable
+ 113              	rcu_bkp_reset_enable:
+ 114              	.LFB157:
+ 115              	.LM16:
+ 116              		.cfi_startproc
+ 117              	.LM17:
+ 118 0000 B7170240 		li	a5,1073876992
+ 119 0004 9853     		lw	a4,32(a5)
+ 120              	.LM18:
+ 121 0006 C166     		li	a3,65536
+ 122 0008 558F     		or	a4,a4,a3
+ 123 000a 98D3     		sw	a4,32(a5)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 3
+
+
+ 124              	.LM19:
+ 125 000c 8280     		ret
+ 126              		.cfi_endproc
+ 127              	.LFE157:
+ 129              		.section	.text.rcu_bkp_reset_disable,"ax",@progbits
+ 130              		.align	1
+ 131              		.globl	rcu_bkp_reset_disable
+ 133              	rcu_bkp_reset_disable:
+ 134              	.LFB158:
+ 135              	.LM20:
+ 136              		.cfi_startproc
+ 137              	.LM21:
+ 138              	.LM22:
+ 139 0000 B7170240 		li	a5,1073876992
+ 140 0004 9853     		lw	a4,32(a5)
+ 141 0006 C176     		li	a3,-65536
+ 142 0008 FD16     		addi	a3,a3,-1
+ 143 000a 758F     		and	a4,a4,a3
+ 144 000c 98D3     		sw	a4,32(a5)
+ 145              	.LM23:
+ 146 000e 8280     		ret
+ 147              		.cfi_endproc
+ 148              	.LFE158:
+ 150              		.section	.text.rcu_system_clock_source_config,"ax",@progbits
+ 151              		.align	1
+ 152              		.globl	rcu_system_clock_source_config
+ 154              	rcu_system_clock_source_config:
+ 155              	.LVL2:
+ 156              	.LFB159:
+ 157              	.LM24:
+ 158              		.cfi_startproc
+ 159              	.LM25:
+ 160              	.LM26:
+ 161              	.LM27:
+ 162 0000 37170240 		li	a4,1073876992
+ 163 0004 5C43     		lw	a5,4(a4)
+ 164              	.LVL3:
+ 165              	.LM28:
+ 166              	.LM29:
+ 167              	.LM30:
+ 168 0006 F19B     		andi	a5,a5,-4
+ 169              	.LVL4:
+ 170              	.LM31:
+ 171 0008 C98F     		or	a5,a5,a0
+ 172              	.LVL5:
+ 173              	.LM32:
+ 174 000a 5CC3     		sw	a5,4(a4)
+ 175              	.LM33:
+ 176 000c 8280     		ret
+ 177              		.cfi_endproc
+ 178              	.LFE159:
+ 180              		.section	.text.rcu_system_clock_source_get,"ax",@progbits
+ 181              		.align	1
+ 182              		.globl	rcu_system_clock_source_get
+ 184              	rcu_system_clock_source_get:
+ 185              	.LFB160:
+ 186              	.LM34:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 4
+
+
+ 187              		.cfi_startproc
+ 188              	.LM35:
+ 189              	.LM36:
+ 190 0000 B7170240 		li	a5,1073876992
+ 191 0004 C843     		lw	a0,4(a5)
+ 192              	.LM37:
+ 193 0006 3189     		andi	a0,a0,12
+ 194 0008 8280     		ret
+ 195              		.cfi_endproc
+ 196              	.LFE160:
+ 198              		.section	.text.rcu_ahb_clock_config,"ax",@progbits
+ 199              		.align	1
+ 200              		.globl	rcu_ahb_clock_config
+ 202              	rcu_ahb_clock_config:
+ 203              	.LVL6:
+ 204              	.LFB161:
+ 205              	.LM38:
+ 206              		.cfi_startproc
+ 207              	.LM39:
+ 208              	.LM40:
+ 209              	.LM41:
+ 210 0000 37170240 		li	a4,1073876992
+ 211 0004 5C43     		lw	a5,4(a4)
+ 212              	.LVL7:
+ 213              	.LM42:
+ 214              	.LM43:
+ 215              	.LM44:
+ 216 0006 93F7F7F0 		andi	a5,a5,-241
+ 217              	.LVL8:
+ 218              	.LM45:
+ 219 000a C98F     		or	a5,a5,a0
+ 220              	.LVL9:
+ 221              	.LM46:
+ 222 000c 5CC3     		sw	a5,4(a4)
+ 223              	.LM47:
+ 224 000e 8280     		ret
+ 225              		.cfi_endproc
+ 226              	.LFE161:
+ 228              		.section	.text.rcu_apb1_clock_config,"ax",@progbits
+ 229              		.align	1
+ 230              		.globl	rcu_apb1_clock_config
+ 232              	rcu_apb1_clock_config:
+ 233              	.LVL10:
+ 234              	.LFB162:
+ 235              	.LM48:
+ 236              		.cfi_startproc
+ 237              	.LM49:
+ 238              	.LM50:
+ 239              	.LM51:
+ 240 0000 37170240 		li	a4,1073876992
+ 241 0004 5C43     		lw	a5,4(a4)
+ 242              	.LVL11:
+ 243              	.LM52:
+ 244              	.LM53:
+ 245              	.LM54:
+ 246 0006 93F7F78F 		andi	a5,a5,-1793
+ 247              	.LVL12:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 5
+
+
+ 248              	.LM55:
+ 249 000a C98F     		or	a5,a5,a0
+ 250              	.LVL13:
+ 251              	.LM56:
+ 252 000c 5CC3     		sw	a5,4(a4)
+ 253              	.LM57:
+ 254 000e 8280     		ret
+ 255              		.cfi_endproc
+ 256              	.LFE162:
+ 258              		.section	.text.rcu_apb2_clock_config,"ax",@progbits
+ 259              		.align	1
+ 260              		.globl	rcu_apb2_clock_config
+ 262              	rcu_apb2_clock_config:
+ 263              	.LVL14:
+ 264              	.LFB163:
+ 265              	.LM58:
+ 266              		.cfi_startproc
+ 267              	.LM59:
+ 268              	.LM60:
+ 269              	.LM61:
+ 270 0000 37170240 		li	a4,1073876992
+ 271 0004 5C43     		lw	a5,4(a4)
+ 272              	.LVL15:
+ 273              	.LM62:
+ 274              	.LM63:
+ 275              	.LM64:
+ 276 0006 F176     		li	a3,-16384
+ 277 0008 9386F67F 		addi	a3,a3,2047
+ 278 000c F58F     		and	a5,a5,a3
+ 279              	.LVL16:
+ 280              	.LM65:
+ 281 000e C98F     		or	a5,a5,a0
+ 282              	.LM66:
+ 283 0010 5CC3     		sw	a5,4(a4)
+ 284              	.LM67:
+ 285 0012 8280     		ret
+ 286              		.cfi_endproc
+ 287              	.LFE163:
+ 289              		.section	.text.rcu_ckout0_config,"ax",@progbits
+ 290              		.align	1
+ 291              		.globl	rcu_ckout0_config
+ 293              	rcu_ckout0_config:
+ 294              	.LVL17:
+ 295              	.LFB164:
+ 296              	.LM68:
+ 297              		.cfi_startproc
+ 298              	.LM69:
+ 299              	.LM70:
+ 300              	.LM71:
+ 301 0000 37170240 		li	a4,1073876992
+ 302 0004 5C43     		lw	a5,4(a4)
+ 303              	.LVL18:
+ 304              	.LM72:
+ 305              	.LM73:
+ 306              	.LM74:
+ 307 0006 B70600F1 		li	a3,-251658240
+ 308 000a FD16     		addi	a3,a3,-1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 6
+
+
+ 309 000c F58F     		and	a5,a5,a3
+ 310              	.LVL19:
+ 311              	.LM75:
+ 312 000e C98F     		or	a5,a5,a0
+ 313              	.LM76:
+ 314 0010 5CC3     		sw	a5,4(a4)
+ 315              	.LM77:
+ 316 0012 8280     		ret
+ 317              		.cfi_endproc
+ 318              	.LFE164:
+ 320              		.section	.text.rcu_pll_config,"ax",@progbits
+ 321              		.align	1
+ 322              		.globl	rcu_pll_config
+ 324              	rcu_pll_config:
+ 325              	.LVL20:
+ 326              	.LFB165:
+ 327              	.LM78:
+ 328              		.cfi_startproc
+ 329              	.LM79:
+ 330              	.LM80:
+ 331              	.LM81:
+ 332 0000 37170240 		li	a4,1073876992
+ 333 0004 5C43     		lw	a5,4(a4)
+ 334              	.LVL21:
+ 335              	.LM82:
+ 336              	.LM83:
+ 337              	.LM84:
+ 338 0006 B706C3DF 		li	a3,-540868608
+ 339 000a FD16     		addi	a3,a3,-1
+ 340 000c F58F     		and	a5,a5,a3
+ 341              	.LVL22:
+ 342              	.LM85:
+ 343 000e CD8F     		or	a5,a5,a1
+ 344              	.LM86:
+ 345 0010 5D8D     		or	a0,a0,a5
+ 346              	.LVL23:
+ 347              	.LM87:
+ 348              	.LM88:
+ 349 0012 48C3     		sw	a0,4(a4)
+ 350              	.LM89:
+ 351 0014 8280     		ret
+ 352              		.cfi_endproc
+ 353              	.LFE165:
+ 355              		.section	.text.rcu_predv0_config,"ax",@progbits
+ 356              		.align	1
+ 357              		.globl	rcu_predv0_config
+ 359              	rcu_predv0_config:
+ 360              	.LVL24:
+ 361              	.LFB166:
+ 362              	.LM90:
+ 363              		.cfi_startproc
+ 364              	.LM91:
+ 365              	.LM92:
+ 366              	.LM93:
+ 367 0000 37170240 		li	a4,1073876992
+ 368 0004 5C57     		lw	a5,44(a4)
+ 369              	.LVL25:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 7
+
+
+ 370              	.LM94:
+ 371              	.LM95:
+ 372              	.LM96:
+ 373 0006 C176     		li	a3,-65536
+ 374 0008 C116     		addi	a3,a3,-16
+ 375 000a F58F     		and	a5,a5,a3
+ 376              	.LVL26:
+ 377              	.LM97:
+ 378 000c CD8F     		or	a5,a5,a1
+ 379              	.LM98:
+ 380 000e 5D8D     		or	a0,a0,a5
+ 381              	.LVL27:
+ 382              	.LM99:
+ 383              	.LM100:
+ 384 0010 48D7     		sw	a0,44(a4)
+ 385              	.LM101:
+ 386 0012 8280     		ret
+ 387              		.cfi_endproc
+ 388              	.LFE166:
+ 390              		.section	.text.rcu_predv1_config,"ax",@progbits
+ 391              		.align	1
+ 392              		.globl	rcu_predv1_config
+ 394              	rcu_predv1_config:
+ 395              	.LVL28:
+ 396              	.LFB167:
+ 397              	.LM102:
+ 398              		.cfi_startproc
+ 399              	.LM103:
+ 400              	.LM104:
+ 401              	.LM105:
+ 402 0000 37170240 		li	a4,1073876992
+ 403 0004 5C57     		lw	a5,44(a4)
+ 404              	.LVL29:
+ 405              	.LM106:
+ 406              	.LM107:
+ 407 0006 93F7F7F0 		andi	a5,a5,-241
+ 408              	.LVL30:
+ 409              	.LM108:
+ 410              	.LM109:
+ 411 000a C98F     		or	a5,a5,a0
+ 412              	.LVL31:
+ 413              	.LM110:
+ 414              	.LM111:
+ 415 000c 5CD7     		sw	a5,44(a4)
+ 416              	.LM112:
+ 417 000e 8280     		ret
+ 418              		.cfi_endproc
+ 419              	.LFE167:
+ 421              		.section	.text.rcu_pll1_config,"ax",@progbits
+ 422              		.align	1
+ 423              		.globl	rcu_pll1_config
+ 425              	rcu_pll1_config:
+ 426              	.LVL32:
+ 427              	.LFB168:
+ 428              	.LM113:
+ 429              		.cfi_startproc
+ 430              	.LM114:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 8
+
+
+ 431              	.LM115:
+ 432 0000 B7170240 		li	a5,1073876992
+ 433 0004 D857     		lw	a4,44(a5)
+ 434 0006 FD76     		li	a3,-4096
+ 435 0008 9386F60F 		addi	a3,a3,255
+ 436 000c 758F     		and	a4,a4,a3
+ 437 000e D8D7     		sw	a4,44(a5)
+ 438              	.LM116:
+ 439 0010 D857     		lw	a4,44(a5)
+ 440              	.LM117:
+ 441 0012 498F     		or	a4,a4,a0
+ 442 0014 D8D7     		sw	a4,44(a5)
+ 443              	.LM118:
+ 444 0016 8280     		ret
+ 445              		.cfi_endproc
+ 446              	.LFE168:
+ 448              		.section	.text.rcu_pll2_config,"ax",@progbits
+ 449              		.align	1
+ 450              		.globl	rcu_pll2_config
+ 452              	rcu_pll2_config:
+ 453              	.LVL33:
+ 454              	.LFB169:
+ 455              	.LM119:
+ 456              		.cfi_startproc
+ 457              	.LM120:
+ 458              	.LM121:
+ 459 0000 B7170240 		li	a5,1073876992
+ 460 0004 D857     		lw	a4,44(a5)
+ 461 0006 C576     		li	a3,-61440
+ 462 0008 FD16     		addi	a3,a3,-1
+ 463 000a 758F     		and	a4,a4,a3
+ 464 000c D8D7     		sw	a4,44(a5)
+ 465              	.LM122:
+ 466 000e D857     		lw	a4,44(a5)
+ 467              	.LM123:
+ 468 0010 498F     		or	a4,a4,a0
+ 469 0012 D8D7     		sw	a4,44(a5)
+ 470              	.LM124:
+ 471 0014 8280     		ret
+ 472              		.cfi_endproc
+ 473              	.LFE169:
+ 475              		.section	.text.rcu_adc_clock_config,"ax",@progbits
+ 476              		.align	1
+ 477              		.globl	rcu_adc_clock_config
+ 479              	rcu_adc_clock_config:
+ 480              	.LVL34:
+ 481              	.LFB170:
+ 482              	.LM125:
+ 483              		.cfi_startproc
+ 484              	.LM126:
+ 485              	.LM127:
+ 486              	.LM128:
+ 487 0000 B7170240 		li	a5,1073876992
+ 488 0004 DC43     		lw	a5,4(a5)
+ 489              	.LVL35:
+ 490              	.LM129:
+ 491              	.LM130:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 9
+
+
+ 492 0006 3747FFEF 		li	a4,-268484608
+ 493 000a 7D17     		addi	a4,a4,-1
+ 494 000c F98F     		and	a5,a5,a4
+ 495              	.LVL36:
+ 496              	.LM131:
+ 497 000e 1547     		li	a4,5
+ 498 0010 630EE500 		beq	a0,a4,.L21
+ 499 0014 6369A700 		bgtu	a0,a4,.L22
+ 500 0018 1147     		li	a4,4
+ 501 001a 6310E502 		bne	a0,a4,.L25
+ 502              	.LVL37:
+ 503              	.L23:
+ 504              	.LM132:
+ 505              	.LM133:
+ 506 001e 37170240 		li	a4,1073876992
+ 507 0022 5CC3     		sw	a5,4(a4)
+ 508              	.LM134:
+ 509 0024 8280     		ret
+ 510              	.LVL38:
+ 511              	.L22:
+ 512              	.LM135:
+ 513 0026 1D47     		li	a4,7
+ 514 0028 E31BE5FE 		bne	a0,a4,.L23
+ 515              	.L21:
+ 516              	.LM136:
+ 517              	.LVL39:
+ 518              	.LM137:
+ 519              	.LM138:
+ 520 002c 6D99     		andi	a0,a0,-5
+ 521              	.LVL40:
+ 522              	.LM139:
+ 523 002e 3A05     		slli	a0,a0,14
+ 524              	.LVL41:
+ 525              	.LM140:
+ 526 0030 C98F     		or	a5,a0,a5
+ 527              	.LVL42:
+ 528              	.LM141:
+ 529 0032 37070010 		li	a4,268435456
+ 530 0036 D98F     		or	a5,a5,a4
+ 531              	.LVL43:
+ 532              	.LM142:
+ 533 0038 DDB7     		j	.L23
+ 534              	.LVL44:
+ 535              	.L25:
+ 536              	.LM143:
+ 537              	.LM144:
+ 538 003a 3A05     		slli	a0,a0,14
+ 539              	.LVL45:
+ 540              	.LM145:
+ 541 003c C98F     		or	a5,a5,a0
+ 542              	.LVL46:
+ 543              	.LM146:
+ 544 003e C5B7     		j	.L23
+ 545              		.cfi_endproc
+ 546              	.LFE170:
+ 548              		.section	.text.rcu_usb_clock_config,"ax",@progbits
+ 549              		.align	1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 10
+
+
+ 550              		.globl	rcu_usb_clock_config
+ 552              	rcu_usb_clock_config:
+ 553              	.LVL47:
+ 554              	.LFB171:
+ 555              	.LM147:
+ 556              		.cfi_startproc
+ 557              	.LM148:
+ 558              	.LM149:
+ 559              	.LM150:
+ 560 0000 37170240 		li	a4,1073876992
+ 561 0004 5C43     		lw	a5,4(a4)
+ 562              	.LVL48:
+ 563              	.LM151:
+ 564              	.LM152:
+ 565              	.LM153:
+ 566 0006 B70640FF 		li	a3,-12582912
+ 567 000a FD16     		addi	a3,a3,-1
+ 568 000c F58F     		and	a5,a5,a3
+ 569              	.LVL49:
+ 570              	.LM154:
+ 571 000e C98F     		or	a5,a5,a0
+ 572              	.LM155:
+ 573 0010 5CC3     		sw	a5,4(a4)
+ 574              	.LM156:
+ 575 0012 8280     		ret
+ 576              		.cfi_endproc
+ 577              	.LFE171:
+ 579              		.section	.text.rcu_rtc_clock_config,"ax",@progbits
+ 580              		.align	1
+ 581              		.globl	rcu_rtc_clock_config
+ 583              	rcu_rtc_clock_config:
+ 584              	.LVL50:
+ 585              	.LFB172:
+ 586              	.LM157:
+ 587              		.cfi_startproc
+ 588              	.LM158:
+ 589              	.LM159:
+ 590              	.LM160:
+ 591 0000 37170240 		li	a4,1073876992
+ 592 0004 1C53     		lw	a5,32(a4)
+ 593              	.LVL51:
+ 594              	.LM161:
+ 595              	.LM162:
+ 596              	.LM163:
+ 597 0006 93F7F7CF 		andi	a5,a5,-769
+ 598              	.LVL52:
+ 599              	.LM164:
+ 600 000a C98F     		or	a5,a5,a0
+ 601              	.LVL53:
+ 602              	.LM165:
+ 603 000c 1CD3     		sw	a5,32(a4)
+ 604              	.LM166:
+ 605 000e 8280     		ret
+ 606              		.cfi_endproc
+ 607              	.LFE172:
+ 609              		.section	.text.rcu_i2s1_clock_config,"ax",@progbits
+ 610              		.align	1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 11
+
+
+ 611              		.globl	rcu_i2s1_clock_config
+ 613              	rcu_i2s1_clock_config:
+ 614              	.LVL54:
+ 615              	.LFB173:
+ 616              	.LM167:
+ 617              		.cfi_startproc
+ 618              	.LM168:
+ 619              	.LM169:
+ 620              	.LM170:
+ 621 0000 37170240 		li	a4,1073876992
+ 622 0004 5C57     		lw	a5,44(a4)
+ 623              	.LVL55:
+ 624              	.LM171:
+ 625              	.LM172:
+ 626              	.LM173:
+ 627 0006 8176     		li	a3,-131072
+ 628 0008 FD16     		addi	a3,a3,-1
+ 629 000a F58F     		and	a5,a5,a3
+ 630              	.LVL56:
+ 631              	.LM174:
+ 632 000c C98F     		or	a5,a5,a0
+ 633              	.LM175:
+ 634 000e 5CD7     		sw	a5,44(a4)
+ 635              	.LM176:
+ 636 0010 8280     		ret
+ 637              		.cfi_endproc
+ 638              	.LFE173:
+ 640              		.section	.text.rcu_i2s2_clock_config,"ax",@progbits
+ 641              		.align	1
+ 642              		.globl	rcu_i2s2_clock_config
+ 644              	rcu_i2s2_clock_config:
+ 645              	.LVL57:
+ 646              	.LFB174:
+ 647              	.LM177:
+ 648              		.cfi_startproc
+ 649              	.LM178:
+ 650              	.LM179:
+ 651              	.LM180:
+ 652 0000 37170240 		li	a4,1073876992
+ 653 0004 5C57     		lw	a5,44(a4)
+ 654              	.LVL58:
+ 655              	.LM181:
+ 656              	.LM182:
+ 657              	.LM183:
+ 658 0006 B706FCFF 		li	a3,-262144
+ 659 000a FD16     		addi	a3,a3,-1
+ 660 000c F58F     		and	a5,a5,a3
+ 661              	.LVL59:
+ 662              	.LM184:
+ 663 000e C98F     		or	a5,a5,a0
+ 664              	.LM185:
+ 665 0010 5CD7     		sw	a5,44(a4)
+ 666              	.LM186:
+ 667 0012 8280     		ret
+ 668              		.cfi_endproc
+ 669              	.LFE174:
+ 671              		.section	.text.rcu_flag_get,"ax",@progbits
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 12
+
+
+ 672              		.align	1
+ 673              		.globl	rcu_flag_get
+ 675              	rcu_flag_get:
+ 676              	.LVL60:
+ 677              	.LFB175:
+ 678              	.LM187:
+ 679              		.cfi_startproc
+ 680              	.LM188:
+ 681              	.LM189:
+ 682 0000 93576500 		srli	a5,a0,6
+ 683 0004 37170240 		li	a4,1073876992
+ 684 0008 BA97     		add	a5,a5,a4
+ 685 000a 9C43     		lw	a5,0(a5)
+ 686              	.LM190:
+ 687 000c 33D5A700 		srl	a0,a5,a0
+ 688              	.LVL61:
+ 689              	.LM191:
+ 690 0010 0589     		andi	a0,a0,1
+ 691 0012 8280     		ret
+ 692              		.cfi_endproc
+ 693              	.LFE175:
+ 695              		.section	.text.rcu_all_reset_flag_clear,"ax",@progbits
+ 696              		.align	1
+ 697              		.globl	rcu_all_reset_flag_clear
+ 699              	rcu_all_reset_flag_clear:
+ 700              	.LFB176:
+ 701              	.LM192:
+ 702              		.cfi_startproc
+ 703              	.LM193:
+ 704 0000 B7170240 		li	a5,1073876992
+ 705 0004 D853     		lw	a4,36(a5)
+ 706              	.LM194:
+ 707 0006 B7060001 		li	a3,16777216
+ 708 000a 558F     		or	a4,a4,a3
+ 709 000c D8D3     		sw	a4,36(a5)
+ 710              	.LM195:
+ 711 000e 8280     		ret
+ 712              		.cfi_endproc
+ 713              	.LFE176:
+ 715              		.section	.text.rcu_interrupt_flag_get,"ax",@progbits
+ 716              		.align	1
+ 717              		.globl	rcu_interrupt_flag_get
+ 719              	rcu_interrupt_flag_get:
+ 720              	.LFB210:
+ 721              		.cfi_startproc
+ 722              	.LM196:
+ 723 0000 17030000 		tail	rcu_flag_get
+ 723      67000300 
+ 724              		.cfi_endproc
+ 725              	.LFE210:
+ 727              		.section	.text.rcu_interrupt_flag_clear,"ax",@progbits
+ 728              		.align	1
+ 729              		.globl	rcu_interrupt_flag_clear
+ 731              	rcu_interrupt_flag_clear:
+ 732              	.LFB196:
+ 733              		.cfi_startproc
+ 734              	.LM197:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 13
+
+
+ 735 0000 17030000 		tail	rcu_periph_clock_enable
+ 735      67000300 
+ 736              		.cfi_endproc
+ 737              	.LFE196:
+ 739              		.section	.text.rcu_interrupt_enable,"ax",@progbits
+ 740              		.align	1
+ 741              		.globl	rcu_interrupt_enable
+ 743              	rcu_interrupt_enable:
+ 744              	.LFB198:
+ 745              		.cfi_startproc
+ 746              	.LM198:
+ 747 0000 17030000 		tail	rcu_periph_clock_enable
+ 747      67000300 
+ 748              		.cfi_endproc
+ 749              	.LFE198:
+ 751              		.section	.text.rcu_interrupt_disable,"ax",@progbits
+ 752              		.align	1
+ 753              		.globl	rcu_interrupt_disable
+ 755              	rcu_interrupt_disable:
+ 756              	.LFB206:
+ 757              		.cfi_startproc
+ 758              	.LM199:
+ 759 0000 17030000 		tail	rcu_periph_clock_disable
+ 759      67000300 
+ 760              		.cfi_endproc
+ 761              	.LFE206:
+ 763              		.section	.text.rcu_osci_stab_wait,"ax",@progbits
+ 764              		.align	1
+ 765              		.globl	rcu_osci_stab_wait
+ 767              	rcu_osci_stab_wait:
+ 768              	.LVL62:
+ 769              	.LFB181:
+ 770              	.LM200:
+ 771              		.cfi_startproc
+ 772              	.LM201:
+ 773              	.LM202:
+ 774              	.LM203:
+ 775              	.LM204:
+ 776              	.LM205:
+ 777 0000 4111     		addi	sp,sp,-16
+ 778              	.LCFI0:
+ 779              		.cfi_def_cfa_offset 16
+ 780 0002 06C6     		sw	ra,12(sp)
+ 781 0004 22C4     		sw	s0,8(sp)
+ 782 0006 26C2     		sw	s1,4(sp)
+ 783 0008 4AC0     		sw	s2,0(sp)
+ 784              		.cfi_offset 1, -4
+ 785              		.cfi_offset 8, -8
+ 786              		.cfi_offset 9, -12
+ 787              		.cfi_offset 18, -16
+ 788              	.LM206:
+ 789 000a E947     		li	a5,26
+ 790 000c 6301F514 		beq	a0,a5,.L53
+ 791 0010 2A84     		mv	s0,a0
+ 792 0012 63E0A702 		bgtu	a0,a5,.L38
+ 793 0016 C147     		li	a5,16
+ 794 0018 630CF504 		beq	a0,a5,.L54
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 14
+
+
+ 795 001c E147     		li	a5,24
+ 796 001e 6304F510 		beq	a0,a5,.L55
+ 797 0022 55C9     		beq	a0,zero,.L41
+ 798              	.L36:
+ 799              	.LM207:
+ 800 0024 B240     		lw	ra,12(sp)
+ 801              		.cfi_remember_state
+ 802              		.cfi_restore 1
+ 803 0026 2244     		lw	s0,8(sp)
+ 804              		.cfi_restore 8
+ 805 0028 9244     		lw	s1,4(sp)
+ 806              		.cfi_restore 9
+ 807 002a 0249     		lw	s2,0(sp)
+ 808              		.cfi_restore 18
+ 809 002c 0145     		li	a0,0
+ 810              	.LVL63:
+ 811              	.LM208:
+ 812 002e 4101     		addi	sp,sp,16
+ 813              	.LCFI1:
+ 814              		.cfi_def_cfa_offset 0
+ 815 0030 8280     		jr	ra
+ 816              	.LVL64:
+ 817              	.L38:
+ 818              	.LCFI2:
+ 819              		.cfi_restore_state
+ 820              	.LM209:
+ 821 0032 93070580 		addi	a5,a0,-2048
+ 822 0036 A5CB     		beq	a5,zero,.L56
+ 823 0038 8567     		li	a5,4096
+ 824 003a 93870790 		addi	a5,a5,-1792
+ 825 003e 630CF50A 		beq	a0,a5,.L57
+ 826              	.LM210:
+ 827 0042 3709F0FF 		li	s2,-1048576
+ 828              	.LM211:
+ 829 0046 F147     		li	a5,28
+ 830 0048 8144     		li	s1,0
+ 831              	.LM212:
+ 832 004a 0509     		addi	s2,s2,1
+ 833              	.LM213:
+ 834 004c E31CF5FC 		bne	a0,a5,.L36
+ 835              	.LVL65:
+ 836              	.L45:
+ 837              	.LM214:
+ 838              	.LM215:
+ 839 0050 7545     		li	a0,29
+ 840 0052 97000000 		call	rcu_flag_get
+ 840      E7800000 
+ 841              	.LVL66:
+ 842              	.LM216:
+ 843              	.LM217:
+ 844 005a 8504     		addi	s1,s1,1
+ 845              	.LVL67:
+ 846              	.LM218:
+ 847              	.LM219:
+ 848 005c B3872401 		add	a5,s1,s2
+ 849 0060 91C7     		beq	a5,zero,.L65
+ 850 0062 9317F501 		slli	a5,a0,31
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 15
+
+
+ 851 0066 13D5F701 		srli	a0,a5,31
+ 852              	.LVL68:
+ 853              	.LM220:
+ 854 006a 7DD1     		beq	a0,zero,.L45
+ 855              	.L65:
+ 856              	.LM221:
+ 857              	.LM222:
+ 858 006c 7545     		li	a0,29
+ 859 006e 1DA0     		j	.L98
+ 860              	.LVL69:
+ 861              	.L54:
+ 862              	.LM223:
+ 863 0070 4174     		li	s0,-65536
+ 864              	.LVL70:
+ 865              	.LM224:
+ 866 0072 8144     		li	s1,0
+ 867              	.LM225:
+ 868 0074 0504     		addi	s0,s0,1
+ 869              	.LVL71:
+ 870              	.L39:
+ 871              	.LM226:
+ 872              	.LM227:
+ 873 0076 4545     		li	a0,17
+ 874 0078 97000000 		call	rcu_flag_get
+ 874      E7800000 
+ 875              	.LVL72:
+ 876              	.LM228:
+ 877              	.LM229:
+ 878 0080 9317F501 		slli	a5,a0,31
+ 879 0084 13D5F701 		srli	a0,a5,31
+ 880              	.LVL73:
+ 881              	.LM230:
+ 882 0088 8504     		addi	s1,s1,1
+ 883              	.LVL74:
+ 884              	.LM231:
+ 885              	.LM232:
+ 886 008a 01E5     		bne	a0,zero,.L59
+ 887 008c B3878400 		add	a5,s1,s0
+ 888 0090 FDF3     		bne	a5,zero,.L39
+ 889              	.L59:
+ 890              	.LM233:
+ 891              	.LM234:
+ 892 0092 4545     		li	a0,17
+ 893              	.LVL75:
+ 894              	.L98:
+ 895              	.LM235:
+ 896 0094 2244     		lw	s0,8(sp)
+ 897              		.cfi_remember_state
+ 898              		.cfi_restore 8
+ 899 0096 B240     		lw	ra,12(sp)
+ 900              		.cfi_restore 1
+ 901 0098 9244     		lw	s1,4(sp)
+ 902              		.cfi_restore 9
+ 903 009a 0249     		lw	s2,0(sp)
+ 904              		.cfi_restore 18
+ 905 009c 4101     		addi	sp,sp,16
+ 906              	.LCFI3:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 16
+
+
+ 907              		.cfi_def_cfa_offset 0
+ 908              	.LM236:
+ 909 009e 17030000 		tail	rcu_flag_get
+ 909      67000300 
+ 910              	.LVL76:
+ 911              	.L56:
+ 912              	.LCFI4:
+ 913              		.cfi_restore_state
+ 914              	.LM237:
+ 915 00a6 B70400FC 		li	s1,-67108864
+ 916              	.LM238:
+ 917 00aa 0144     		li	s0,0
+ 918              	.LVL77:
+ 919              	.LM239:
+ 920 00ac 8504     		addi	s1,s1,1
+ 921              	.LVL78:
+ 922              	.L43:
+ 923              	.LM240:
+ 924              	.LM241:
+ 925 00ae 0565     		li	a0,4096
+ 926 00b0 13051580 		addi	a0,a0,-2047
+ 927 00b4 97000000 		call	rcu_flag_get
+ 927      E7800000 
+ 928              	.LVL79:
+ 929              	.LM242:
+ 930              	.LM243:
+ 931 00bc 0504     		addi	s0,s0,1
+ 932              	.LVL80:
+ 933              	.LM244:
+ 934              	.LM245:
+ 935 00be B3079400 		add	a5,s0,s1
+ 936 00c2 91C7     		beq	a5,zero,.L60
+ 937 00c4 9317F501 		slli	a5,a0,31
+ 938 00c8 13D5F701 		srli	a0,a5,31
+ 939              	.LVL81:
+ 940              	.LM246:
+ 941 00cc 6DD1     		beq	a0,zero,.L43
+ 942              	.L60:
+ 943              	.LM247:
+ 944              	.LM248:
+ 945 00ce 0565     		li	a0,4096
+ 946 00d0 13051580 		addi	a0,a0,-2047
+ 947 00d4 C1B7     		j	.L98
+ 948              	.LVL82:
+ 949              	.L41:
+ 950              	.LM249:
+ 951              	.LM250:
+ 952 00d6 0545     		li	a0,1
+ 953 00d8 97000000 		call	rcu_flag_get
+ 953      E7800000 
+ 954              	.LVL83:
+ 955              	.LM251:
+ 956              	.LM252:
+ 957 00e0 0504     		addi	s0,s0,1
+ 958              	.LVL84:
+ 959              	.LM253:
+ 960              	.LM254:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 17
+
+
+ 961 00e2 930704B0 		addi	a5,s0,-1280
+ 962 00e6 91C7     		beq	a5,zero,.L61
+ 963 00e8 9317F501 		slli	a5,a0,31
+ 964 00ec 13D5F701 		srli	a0,a5,31
+ 965              	.LVL85:
+ 966              	.LM255:
+ 967 00f0 7DD1     		beq	a0,zero,.L41
+ 968              	.L61:
+ 969              	.LM256:
+ 970              	.LM257:
+ 971 00f2 0545     		li	a0,1
+ 972 00f4 45B7     		j	.L98
+ 973              	.LVL86:
+ 974              	.L57:
+ 975              	.LM258:
+ 976 00f6 B704F0FF 		li	s1,-1048576
+ 977              	.LM259:
+ 978 00fa 0144     		li	s0,0
+ 979              	.LVL87:
+ 980              	.LM260:
+ 981 00fc 8504     		addi	s1,s1,1
+ 982              	.LVL88:
+ 983              	.L44:
+ 984              	.LM261:
+ 985              	.LM262:
+ 986 00fe 0565     		li	a0,4096
+ 987 0100 13051590 		addi	a0,a0,-1791
+ 988 0104 97000000 		call	rcu_flag_get
+ 988      E7800000 
+ 989              	.LVL89:
+ 990              	.LM263:
+ 991              	.LM264:
+ 992 010c 0504     		addi	s0,s0,1
+ 993              	.LVL90:
+ 994              	.LM265:
+ 995              	.LM266:
+ 996 010e B3079400 		add	a5,s0,s1
+ 997 0112 91C7     		beq	a5,zero,.L62
+ 998 0114 9317F501 		slli	a5,a0,31
+ 999 0118 13D5F701 		srli	a0,a5,31
+ 1000              	.LVL91:
+ 1001              	.LM267:
+ 1002 011c 6DD1     		beq	a0,zero,.L44
+ 1003              	.L62:
+ 1004              	.LM268:
+ 1005              	.LM269:
+ 1006 011e 0565     		li	a0,4096
+ 1007 0120 13051590 		addi	a0,a0,-1791
+ 1008 0124 85BF     		j	.L98
+ 1009              	.LVL92:
+ 1010              	.L55:
+ 1011              	.LM270:
+ 1012 0126 B704F0FF 		li	s1,-1048576
+ 1013              	.LM271:
+ 1014 012a 0144     		li	s0,0
+ 1015              	.LVL93:
+ 1016              	.LM272:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 18
+
+
+ 1017 012c 8504     		addi	s1,s1,1
+ 1018              	.LVL94:
+ 1019              	.L40:
+ 1020              	.LM273:
+ 1021              	.LM274:
+ 1022 012e 6545     		li	a0,25
+ 1023 0130 97000000 		call	rcu_flag_get
+ 1023      E7800000 
+ 1024              	.LVL95:
+ 1025              	.LM275:
+ 1026              	.LM276:
+ 1027 0138 0504     		addi	s0,s0,1
+ 1028              	.LVL96:
+ 1029              	.LM277:
+ 1030              	.LM278:
+ 1031 013a B3079400 		add	a5,s0,s1
+ 1032 013e 91C7     		beq	a5,zero,.L63
+ 1033 0140 9317F501 		slli	a5,a0,31
+ 1034 0144 13D5F701 		srli	a0,a5,31
+ 1035              	.LVL97:
+ 1036              	.LM279:
+ 1037 0148 7DD1     		beq	a0,zero,.L40
+ 1038              	.L63:
+ 1039              	.LM280:
+ 1040              	.LM281:
+ 1041 014a 6545     		li	a0,25
+ 1042 014c A1B7     		j	.L98
+ 1043              	.LVL98:
+ 1044              	.L53:
+ 1045              	.LM282:
+ 1046 014e B704F0FF 		li	s1,-1048576
+ 1047              	.LM283:
+ 1048 0152 0144     		li	s0,0
+ 1049              	.LM284:
+ 1050 0154 8504     		addi	s1,s1,1
+ 1051              	.LVL99:
+ 1052              	.L37:
+ 1053              	.LM285:
+ 1054              	.LM286:
+ 1055 0156 6D45     		li	a0,27
+ 1056 0158 97000000 		call	rcu_flag_get
+ 1056      E7800000 
+ 1057              	.LVL100:
+ 1058              	.LM287:
+ 1059              	.LM288:
+ 1060 0160 0504     		addi	s0,s0,1
+ 1061              	.LVL101:
+ 1062              	.LM289:
+ 1063              	.LM290:
+ 1064 0162 B3079400 		add	a5,s0,s1
+ 1065 0166 91C7     		beq	a5,zero,.L64
+ 1066 0168 9317F501 		slli	a5,a0,31
+ 1067 016c 13D5F701 		srli	a0,a5,31
+ 1068              	.LVL102:
+ 1069              	.LM291:
+ 1070 0170 7DD1     		beq	a0,zero,.L37
+ 1071              	.L64:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 19
+
+
+ 1072              	.LM292:
+ 1073              	.LM293:
+ 1074 0172 6D45     		li	a0,27
+ 1075 0174 05B7     		j	.L98
+ 1076              		.cfi_endproc
+ 1077              	.LFE181:
+ 1079              		.section	.text.rcu_deinit,"ax",@progbits
+ 1080              		.align	1
+ 1081              		.globl	rcu_deinit
+ 1083              	rcu_deinit:
+ 1084              	.LFB150:
+ 1085              	.LM294:
+ 1086              		.cfi_startproc
+ 1087              	.LM295:
+ 1088              	.LM296:
+ 1089 0000 4111     		addi	sp,sp,-16
+ 1090              	.LCFI5:
+ 1091              		.cfi_def_cfa_offset 16
+ 1092 0002 22C4     		sw	s0,8(sp)
+ 1093              		.cfi_offset 8, -8
+ 1094              	.LM297:
+ 1095 0004 37140240 		li	s0,1073876992
+ 1096 0008 1C40     		lw	a5,0(s0)
+ 1097              	.LM298:
+ 1098 000a 06C6     		sw	ra,12(sp)
+ 1099              		.cfi_offset 1, -4
+ 1100              	.LM299:
+ 1101 000c 0145     		li	a0,0
+ 1102              	.LM300:
+ 1103 000e 93E71700 		ori	a5,a5,1
+ 1104 0012 1CC0     		sw	a5,0(s0)
+ 1105              	.LM301:
+ 1106 0014 97000000 		call	rcu_osci_stab_wait
+ 1106      E7800000 
+ 1107              	.LVL103:
+ 1108              	.LM302:
+ 1109              	.LM303:
+ 1110 001c 5840     		lw	a4,4(s0)
+ 1111 001e B70600C0 		li	a3,-1073741824
+ 1112 0022 B106     		addi	a3,a3,12
+ 1113 0024 758F     		and	a4,a4,a3
+ 1114 0026 58C0     		sw	a4,4(s0)
+ 1115              	.LM304:
+ 1116              	.LM305:
+ 1117 0028 1C40     		lw	a5,0(s0)
+ 1118 002a 3707F7FE 		li	a4,-17367040
+ 1119 002e 7D17     		addi	a4,a4,-1
+ 1120 0030 F98F     		and	a5,a5,a4
+ 1121 0032 1CC0     		sw	a5,0(s0)
+ 1122              	.LM306:
+ 1123              	.LM307:
+ 1124 0034 1C40     		lw	a5,0(s0)
+ 1125 0036 3707FCFF 		li	a4,-262144
+ 1126 003a 7D17     		addi	a4,a4,-1
+ 1127 003c F98F     		and	a5,a5,a4
+ 1128 003e 1CC0     		sw	a5,0(s0)
+ 1129              	.LM308:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 20
+
+
+ 1130              	.LM309:
+ 1131 0040 1C40     		lw	a5,0(s0)
+ 1132 0042 370700EC 		li	a4,-335544320
+ 1133 0046 7D17     		addi	a4,a4,-1
+ 1134 0048 F98F     		and	a5,a5,a4
+ 1135 004a 1CC0     		sw	a5,0(s0)
+ 1136              	.LM310:
+ 1137              	.LM311:
+ 1138 004c 3707FF00 		li	a4,16711680
+ 1139 0050 18C4     		sw	a4,8(s0)
+ 1140              	.LM312:
+ 1141              	.LM313:
+ 1142 0052 5854     		lw	a4,44(s0)
+ 1143 0054 B706F8FF 		li	a3,-524288
+ 1144              	.LM314:
+ 1145 0058 B240     		lw	ra,12(sp)
+ 1146              		.cfi_restore 1
+ 1147              	.LM315:
+ 1148 005a 758F     		and	a4,a4,a3
+ 1149 005c 58D4     		sw	a4,44(s0)
+ 1150              	.LM316:
+ 1151 005e 2244     		lw	s0,8(sp)
+ 1152              		.cfi_restore 8
+ 1153 0060 4101     		addi	sp,sp,16
+ 1154              	.LCFI6:
+ 1155              		.cfi_def_cfa_offset 0
+ 1156 0062 8280     		jr	ra
+ 1157              		.cfi_endproc
+ 1158              	.LFE150:
+ 1160              		.section	.text.rcu_osci_on,"ax",@progbits
+ 1161              		.align	1
+ 1162              		.globl	rcu_osci_on
+ 1164              	rcu_osci_on:
+ 1165              	.LFB200:
+ 1166              		.cfi_startproc
+ 1167              	.LM317:
+ 1168 0000 17030000 		tail	rcu_periph_clock_enable
+ 1168      67000300 
+ 1169              		.cfi_endproc
+ 1170              	.LFE200:
+ 1172              		.section	.text.rcu_osci_off,"ax",@progbits
+ 1173              		.align	1
+ 1174              		.globl	rcu_osci_off
+ 1176              	rcu_osci_off:
+ 1177              	.LFB208:
+ 1178              		.cfi_startproc
+ 1179              	.LM318:
+ 1180 0000 17030000 		tail	rcu_periph_clock_disable
+ 1180      67000300 
+ 1181              		.cfi_endproc
+ 1182              	.LFE208:
+ 1184              		.section	.text.rcu_osci_bypass_mode_enable,"ax",@progbits
+ 1185              		.align	1
+ 1186              		.globl	rcu_osci_bypass_mode_enable
+ 1188              	rcu_osci_bypass_mode_enable:
+ 1189              	.LVL104:
+ 1190              	.LFB184:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 21
+
+
+ 1191              	.LM319:
+ 1192              		.cfi_startproc
+ 1193              	.LM320:
+ 1194              	.LM321:
+ 1195 0000 C147     		li	a5,16
+ 1196 0002 6306F500 		beq	a0,a5,.L104
+ 1197 0006 13050580 		addi	a0,a0,-2048
+ 1198              	.LVL105:
+ 1199              	.LM322:
+ 1200 000a 19CD     		beq	a0,zero,.L105
+ 1201 000c 8280     		ret
+ 1202              	.LVL106:
+ 1203              	.L104:
+ 1204              	.LM323:
+ 1205              	.LM324:
+ 1206 000e B7170240 		li	a5,1073876992
+ 1207 0012 9843     		lw	a4,0(a5)
+ 1208              	.LVL107:
+ 1209              	.LM325:
+ 1210              	.LM326:
+ 1211 0014 9443     		lw	a3,0(a5)
+ 1212 0016 4176     		li	a2,-65536
+ 1213 0018 7D16     		addi	a2,a2,-1
+ 1214 001a F18E     		and	a3,a3,a2
+ 1215 001c 94C3     		sw	a3,0(a5)
+ 1216              	.LM327:
+ 1217              	.LM328:
+ 1218 001e B7060400 		li	a3,262144
+ 1219 0022 558F     		or	a4,a4,a3
+ 1220              	.LVL108:
+ 1221              	.LM329:
+ 1222 0024 98C3     		sw	a4,0(a5)
+ 1223              	.LM330:
+ 1224 0026 8280     		ret
+ 1225              	.LVL109:
+ 1226              	.L105:
+ 1227              	.LM331:
+ 1228              	.LM332:
+ 1229 0028 B7170240 		li	a5,1073876992
+ 1230 002c 9853     		lw	a4,32(a5)
+ 1231              	.LVL110:
+ 1232              	.LM333:
+ 1233              	.LM334:
+ 1234 002e 9453     		lw	a3,32(a5)
+ 1235              	.LM335:
+ 1236 0030 13674700 		ori	a4,a4,4
+ 1237              	.LVL111:
+ 1238              	.LM336:
+ 1239 0034 F99A     		andi	a3,a3,-2
+ 1240 0036 94D3     		sw	a3,32(a5)
+ 1241              	.LM337:
+ 1242              	.LM338:
+ 1243 0038 98D3     		sw	a4,32(a5)
+ 1244              	.LM339:
+ 1245              	.LM340:
+ 1246 003a 8280     		ret
+ 1247              		.cfi_endproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 22
+
+
+ 1248              	.LFE184:
+ 1250              		.section	.text.rcu_osci_bypass_mode_disable,"ax",@progbits
+ 1251              		.align	1
+ 1252              		.globl	rcu_osci_bypass_mode_disable
+ 1254              	rcu_osci_bypass_mode_disable:
+ 1255              	.LVL112:
+ 1256              	.LFB185:
+ 1257              	.LM341:
+ 1258              		.cfi_startproc
+ 1259              	.LM342:
+ 1260              	.LM343:
+ 1261 0000 C147     		li	a5,16
+ 1262 0002 6306F500 		beq	a0,a5,.L108
+ 1263 0006 13050580 		addi	a0,a0,-2048
+ 1264              	.LVL113:
+ 1265              	.LM344:
+ 1266 000a 05C1     		beq	a0,zero,.L109
+ 1267 000c 8280     		ret
+ 1268              	.LVL114:
+ 1269              	.L108:
+ 1270              	.LM345:
+ 1271              	.LM346:
+ 1272 000e B7170240 		li	a5,1073876992
+ 1273 0012 9843     		lw	a4,0(a5)
+ 1274              	.LVL115:
+ 1275              	.LM347:
+ 1276              	.LM348:
+ 1277 0014 9443     		lw	a3,0(a5)
+ 1278 0016 4176     		li	a2,-65536
+ 1279 0018 7D16     		addi	a2,a2,-1
+ 1280 001a F18E     		and	a3,a3,a2
+ 1281 001c 94C3     		sw	a3,0(a5)
+ 1282              	.LM349:
+ 1283              	.LM350:
+ 1284 001e B706FCFF 		li	a3,-262144
+ 1285 0022 FD16     		addi	a3,a3,-1
+ 1286 0024 758F     		and	a4,a4,a3
+ 1287              	.LVL116:
+ 1288              	.LM351:
+ 1289 0026 98C3     		sw	a4,0(a5)
+ 1290              	.LM352:
+ 1291 0028 8280     		ret
+ 1292              	.LVL117:
+ 1293              	.L109:
+ 1294              	.LM353:
+ 1295              	.LM354:
+ 1296 002a B7170240 		li	a5,1073876992
+ 1297 002e 9853     		lw	a4,32(a5)
+ 1298              	.LVL118:
+ 1299              	.LM355:
+ 1300              	.LM356:
+ 1301 0030 9453     		lw	a3,32(a5)
+ 1302              	.LM357:
+ 1303 0032 6D9B     		andi	a4,a4,-5
+ 1304              	.LVL119:
+ 1305              	.LM358:
+ 1306 0034 F99A     		andi	a3,a3,-2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 23
+
+
+ 1307 0036 94D3     		sw	a3,32(a5)
+ 1308              	.LM359:
+ 1309              	.LM360:
+ 1310 0038 98D3     		sw	a4,32(a5)
+ 1311              	.LM361:
+ 1312              	.LM362:
+ 1313 003a 8280     		ret
+ 1314              		.cfi_endproc
+ 1315              	.LFE185:
+ 1317              		.section	.text.rcu_hxtal_clock_monitor_enable,"ax",@progbits
+ 1318              		.align	1
+ 1319              		.globl	rcu_hxtal_clock_monitor_enable
+ 1321              	rcu_hxtal_clock_monitor_enable:
+ 1322              	.LFB186:
+ 1323              	.LM363:
+ 1324              		.cfi_startproc
+ 1325              	.LM364:
+ 1326 0000 37170240 		li	a4,1073876992
+ 1327 0004 1C43     		lw	a5,0(a4)
+ 1328              	.LM365:
+ 1329 0006 B7060800 		li	a3,524288
+ 1330 000a D58F     		or	a5,a5,a3
+ 1331 000c 1CC3     		sw	a5,0(a4)
+ 1332              	.LM366:
+ 1333 000e 8280     		ret
+ 1334              		.cfi_endproc
+ 1335              	.LFE186:
+ 1337              		.section	.text.rcu_hxtal_clock_monitor_disable,"ax",@progbits
+ 1338              		.align	1
+ 1339              		.globl	rcu_hxtal_clock_monitor_disable
+ 1341              	rcu_hxtal_clock_monitor_disable:
+ 1342              	.LFB187:
+ 1343              	.LM367:
+ 1344              		.cfi_startproc
+ 1345              	.LM368:
+ 1346              	.LM369:
+ 1347 0000 B7160240 		li	a3,1073876992
+ 1348 0004 9C42     		lw	a5,0(a3)
+ 1349 0006 3707F8FF 		li	a4,-524288
+ 1350 000a 7D17     		addi	a4,a4,-1
+ 1351 000c F98F     		and	a5,a5,a4
+ 1352 000e 9CC2     		sw	a5,0(a3)
+ 1353              	.LM370:
+ 1354 0010 8280     		ret
+ 1355              		.cfi_endproc
+ 1356              	.LFE187:
+ 1358              		.section	.text.rcu_irc8m_adjust_value_set,"ax",@progbits
+ 1359              		.align	1
+ 1360              		.globl	rcu_irc8m_adjust_value_set
+ 1362              	rcu_irc8m_adjust_value_set:
+ 1363              	.LVL120:
+ 1364              	.LFB188:
+ 1365              	.LM371:
+ 1366              		.cfi_startproc
+ 1367              	.LM372:
+ 1368              	.LM373:
+ 1369              	.LM374:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 24
+
+
+ 1370 0000 37170240 		li	a4,1073876992
+ 1371 0004 1C43     		lw	a5,0(a4)
+ 1372              	.LVL121:
+ 1373              	.LM375:
+ 1374              	.LM376:
+ 1375              	.LM377:
+ 1376 0006 0E05     		slli	a0,a0,3
+ 1377              	.LVL122:
+ 1378              	.LM378:
+ 1379 0008 1375F50F 		andi	a0,a0,255
+ 1380              	.LM379:
+ 1381 000c 93F777F0 		andi	a5,a5,-249
+ 1382              	.LVL123:
+ 1383              	.LM380:
+ 1384 0010 5D8D     		or	a0,a0,a5
+ 1385              	.LM381:
+ 1386 0012 08C3     		sw	a0,0(a4)
+ 1387              	.LM382:
+ 1388 0014 8280     		ret
+ 1389              		.cfi_endproc
+ 1390              	.LFE188:
+ 1392              		.section	.text.rcu_deepsleep_voltage_set,"ax",@progbits
+ 1393              		.align	1
+ 1394              		.globl	rcu_deepsleep_voltage_set
+ 1396              	rcu_deepsleep_voltage_set:
+ 1397              	.LVL124:
+ 1398              	.LFB189:
+ 1399              	.LM383:
+ 1400              		.cfi_startproc
+ 1401              	.LM384:
+ 1402              	.LM385:
+ 1403 0000 0D89     		andi	a0,a0,3
+ 1404              	.LVL125:
+ 1405              	.LM386:
+ 1406              	.LM387:
+ 1407 0002 B7170240 		li	a5,1073876992
+ 1408 0006 C8DB     		sw	a0,52(a5)
+ 1409              	.LM388:
+ 1410 0008 8280     		ret
+ 1411              		.cfi_endproc
+ 1412              	.LFE189:
+ 1414              		.section	.text.rcu_clock_freq_get,"ax",@progbits
+ 1415              		.align	1
+ 1416              		.globl	rcu_clock_freq_get
+ 1418              	rcu_clock_freq_get:
+ 1419              	.LVL126:
+ 1420              	.LFB190:
+ 1421              	.LM389:
+ 1422              		.cfi_startproc
+ 1423              	.LM390:
+ 1424              	.LM391:
+ 1425              	.LM392:
+ 1426              	.LM393:
+ 1427              	.LM394:
+ 1428              	.LM395:
+ 1429 0000 7971     		addi	sp,sp,-48
+ 1430              	.LCFI7:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 25
+
+
+ 1431              		.cfi_def_cfa_offset 48
+ 1432              	.LM396:
+ 1433 0002 4146     		li	a2,16
+ 1434              	.LM397:
+ 1435 0004 22D4     		sw	s0,40(sp)
+ 1436              	.LM398:
+ 1437 0006 97050000 		lla	a1,.LANCHOR0
+ 1437      93850500 
+ 1438              		.cfi_offset 8, -8
+ 1439              	.LM399:
+ 1440 000e 2A84     		mv	s0,a0
+ 1441              	.LM400:
+ 1442 0010 3305C100 		add	a0,sp,a2
+ 1443              	.LVL127:
+ 1444              	.LM401:
+ 1445 0014 06D6     		sw	ra,44(sp)
+ 1446              		.cfi_offset 1, -4
+ 1447              	.LM402:
+ 1448 0016 97000000 		call	memcpy
+ 1448      E7800000 
+ 1449              	.LVL128:
+ 1450              	.LM403:
+ 1451              	.LM404:
+ 1452 001e B7070304 		li	a5,67305472
+ 1453 0022 93871720 		addi	a5,a5,513
+ 1454 0026 3EC2     		sw	a5,4(sp)
+ 1455              	.LM405:
+ 1456              	.LM406:
+ 1457 0028 3EC6     		sw	a5,12(sp)
+ 1458              	.LM407:
+ 1459              	.LM408:
+ 1460 002a 02C0     		sw	zero,0(sp)
+ 1461              	.LM409:
+ 1462 002c 02C4     		sw	zero,8(sp)
+ 1463              	.LM410:
+ 1464 002e B7170240 		li	a5,1073876992
+ 1465 0032 D843     		lw	a4,4(a5)
+ 1466              	.LVL129:
+ 1467              	.LM411:
+ 1468              	.LM412:
+ 1469 0034 37157A00 		li	a0,7999488
+ 1470              	.LM413:
+ 1471 0038 A146     		li	a3,8
+ 1472 003a 318B     		andi	a4,a4,12
+ 1473              	.LVL130:
+ 1474              	.LM414:
+ 1475 003c 13050520 		addi	a0,a0,512
+ 1476              	.LM415:
+ 1477 0040 6317D708 		bne	a4,a3,.L116
+ 1478              	.LM416:
+ 1479 0044 D843     		lw	a4,4(a5)
+ 1480 0046 9107     		addi	a5,a5,4
+ 1481              	.LM417:
+ 1482              	.LVL131:
+ 1483              	.LM418:
+ 1484              	.LM419:
+ 1485 0048 B7173D00 		li	a5,4001792
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 26
+
+
+ 1486              	.LM420:
+ 1487 004c 9316F700 		slli	a3,a4,15
+ 1488              	.LM421:
+ 1489 0050 93870790 		addi	a5,a5,-1792
+ 1490              	.LM422:
+ 1491 0054 63D60604 		bge	a3,zero,.L117
+ 1492              	.LM423:
+ 1493              	.LVL132:
+ 1494              	.LM424:
+ 1495              	.LM425:
+ 1496 0058 B7170240 		li	a5,1073876992
+ 1497 005c D857     		lw	a4,44(a5)
+ 1498              	.LVL133:
+ 1499              	.LM426:
+ 1500 005e 9387C702 		addi	a5,a5,44
+ 1501              	.LVL134:
+ 1502              	.LM427:
+ 1503              	.LM428:
+ 1504 0062 9316F700 		slli	a3,a4,15
+ 1505 0066 63D60602 		bge	a3,zero,.L118
+ 1506              	.LM429:
+ 1507              	.LM430:
+ 1508 006a 9843     		lw	a4,0(a5)
+ 1509              	.LVL135:
+ 1510              	.LM431:
+ 1511 006c 9C43     		lw	a5,0(a5)
+ 1512              	.LM432:
+ 1513 006e C546     		li	a3,17
+ 1514              	.LM433:
+ 1515 0070 1183     		srli	a4,a4,4
+ 1516              	.LM434:
+ 1517 0072 A183     		srli	a5,a5,8
+ 1518 0074 BD8B     		andi	a5,a5,15
+ 1519              	.LM435:
+ 1520 0076 3D8B     		andi	a4,a4,15
+ 1521              	.LM436:
+ 1522 0078 8907     		addi	a5,a5,2
+ 1523              	.LM437:
+ 1524 007a 0507     		addi	a4,a4,1
+ 1525              	.LVL136:
+ 1526              	.LM438:
+ 1527              	.LM439:
+ 1528              	.LM440:
+ 1529 007c 6393D700 		bne	a5,a3,.L119
+ 1530              	.LM441:
+ 1531 0080 D147     		li	a5,20
+ 1532              	.LVL137:
+ 1533              	.L119:
+ 1534              	.LM442:
+ 1535              	.LM443:
+ 1536 0082 37157A00 		li	a0,7999488
+ 1537 0086 13050520 		addi	a0,a0,512
+ 1538 008a 3355E502 		divu	a0,a0,a4
+ 1539              	.LM444:
+ 1540 008e 3305F502 		mul	a0,a0,a5
+ 1541              	.LVL138:
+ 1542              	.L118:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 27
+
+
+ 1543              	.LM445:
+ 1544              	.LM446:
+ 1545 0092 B7170240 		li	a5,1073876992
+ 1546 0096 DC57     		lw	a5,44(a5)
+ 1547              	.LVL139:
+ 1548              	.LM447:
+ 1549              	.LM448:
+ 1550 0098 BD8B     		andi	a5,a5,15
+ 1551              	.LVL140:
+ 1552              	.LM449:
+ 1553 009a 8507     		addi	a5,a5,1
+ 1554              	.LM450:
+ 1555 009c B357F502 		divu	a5,a0,a5
+ 1556              	.LVL141:
+ 1557              	.L117:
+ 1558              	.LM451:
+ 1559              	.LM452:
+ 1560 00a0 37170240 		li	a4,1073876992
+ 1561 00a4 4843     		lw	a0,4(a4)
+ 1562 00a6 1107     		addi	a4,a4,4
+ 1563              	.LM453:
+ 1564 00a8 1843     		lw	a4,0(a4)
+ 1565              	.LM454:
+ 1566 00aa 4981     		srli	a0,a0,18
+ 1567              	.LM455:
+ 1568 00ac 3D89     		andi	a0,a0,15
+ 1569              	.LVL142:
+ 1570              	.LM456:
+ 1571              	.LM457:
+ 1572 00ae 93162700 		slli	a3,a4,2
+ 1573 00b2 63D60600 		bge	a3,zero,.L120
+ 1574              	.LM458:
+ 1575              	.LM459:
+ 1576 00b6 13650501 		ori	a0,a0,16
+ 1577              	.LVL143:
+ 1578              	.LM460:
+ 1579              	.L121:
+ 1580              	.LM461:
+ 1581              	.LM462:
+ 1582              	.LM463:
+ 1583 00ba 0505     		addi	a0,a0,1
+ 1584              	.LVL144:
+ 1585              	.LM464:
+ 1586 00bc 39A0     		j	.L139
+ 1587              	.L120:
+ 1588              	.LM465:
+ 1589              	.LM466:
+ 1590 00be 3D47     		li	a4,15
+ 1591 00c0 E30DE5FE 		beq	a0,a4,.L121
+ 1592              	.LM467:
+ 1593              	.LM468:
+ 1594 00c4 0905     		addi	a0,a0,2
+ 1595              	.LVL145:
+ 1596              	.LM469:
+ 1597              	.LM470:
+ 1598              	.LM471:
+ 1599 00c6 630DE502 		beq	a0,a4,.L122
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 28
+
+
+ 1600              	.LVL146:
+ 1601              	.L139:
+ 1602              	.LM472:
+ 1603 00ca 3305F502 		mul	a0,a0,a5
+ 1604              	.LVL147:
+ 1605              	.LM473:
+ 1606              	.L116:
+ 1607              	.LM474:
+ 1608              	.LM475:
+ 1609 00ce 37160240 		li	a2,1073876992
+ 1610 00d2 5C42     		lw	a5,4(a2)
+ 1611              	.LVL148:
+ 1612              	.LM476:
+ 1613              	.LM477:
+ 1614              	.LM478:
+ 1615 00d4 5842     		lw	a4,4(a2)
+ 1616              	.LM479:
+ 1617 00d6 9183     		srli	a5,a5,4
+ 1618              	.LVL149:
+ 1619              	.LM480:
+ 1620 00d8 BD8B     		andi	a5,a5,15
+ 1621              	.LVL150:
+ 1622              	.LM481:
+ 1623 00da 93870702 		addi	a5,a5,32
+ 1624              	.LVL151:
+ 1625              	.LM482:
+ 1626 00de 8A97     		add	a5,a5,sp
+ 1627              	.LVL152:
+ 1628              	.LM483:
+ 1629 00e0 83C607FF 		lbu	a3,-16(a5)
+ 1630              	.LM484:
+ 1631 00e4 5C42     		lw	a5,4(a2)
+ 1632              	.LM485:
+ 1633 00e6 0946     		li	a2,2
+ 1634              	.LM486:
+ 1635 00e8 B356D500 		srl	a3,a0,a3
+ 1636              	.LVL153:
+ 1637              	.LM487:
+ 1638              	.LM488:
+ 1639              	.LM489:
+ 1640              	.LM490:
+ 1641              	.LM491:
+ 1642              	.LM492:
+ 1643              	.LM493:
+ 1644 00ec 630CC402 		beq	s0,a2,.L123
+ 1645 00f0 636E8600 		bgtu	s0,a2,.L124
+ 1646 00f4 11C0     		beq	s0,zero,.L115
+ 1647              	.LM494:
+ 1648 00f6 3685     		mv	a0,a3
+ 1649              	.LVL154:
+ 1650              	.L115:
+ 1651              	.LM495:
+ 1652 00f8 B250     		lw	ra,44(sp)
+ 1653              		.cfi_remember_state
+ 1654              		.cfi_restore 1
+ 1655 00fa 2254     		lw	s0,40(sp)
+ 1656              		.cfi_restore 8
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 29
+
+
+ 1657              	.LVL155:
+ 1658              	.LM496:
+ 1659 00fc 4561     		addi	sp,sp,48
+ 1660              	.LCFI8:
+ 1661              		.cfi_def_cfa_offset 0
+ 1662              	.LM497:
+ 1663 00fe 8280     		jr	ra
+ 1664              	.LVL156:
+ 1665              	.L122:
+ 1666              	.LCFI9:
+ 1667              		.cfi_restore_state
+ 1668              	.LM498:
+ 1669              	.LM499:
+ 1670 0100 1945     		li	a0,6
+ 1671              	.LVL157:
+ 1672              	.LM500:
+ 1673 0102 3385A702 		mul	a0,a5,a0
+ 1674              	.LM501:
+ 1675 0106 8583     		srli	a5,a5,1
+ 1676              	.LVL158:
+ 1677              	.LM502:
+ 1678 0108 3E95     		add	a0,a0,a5
+ 1679 010a D1B7     		j	.L116
+ 1680              	.LVL159:
+ 1681              	.L124:
+ 1682              	.LM503:
+ 1683 010c 0D47     		li	a4,3
+ 1684              	.LVL160:
+ 1685              	.LM504:
+ 1686 010e 0145     		li	a0,0
+ 1687              	.LVL161:
+ 1688              	.LM505:
+ 1689 0110 E314E4FE 		bne	s0,a4,.L115
+ 1690              	.LM506:
+ 1691 0114 AD83     		srli	a5,a5,11
+ 1692              	.LVL162:
+ 1693              	.LM507:
+ 1694 0116 9D8B     		andi	a5,a5,7
+ 1695              	.LM508:
+ 1696 0118 93870702 		addi	a5,a5,32
+ 1697 011c 8A97     		add	a5,a5,sp
+ 1698              	.LM509:
+ 1699 011e 03C587FE 		lbu	a0,-24(a5)
+ 1700 0122 09A8     		j	.L140
+ 1701              	.LVL163:
+ 1702              	.L123:
+ 1703              	.LM510:
+ 1704 0124 2183     		srli	a4,a4,8
+ 1705              	.LVL164:
+ 1706              	.LM511:
+ 1707 0126 1D8B     		andi	a4,a4,7
+ 1708              	.LM512:
+ 1709 0128 93070702 		addi	a5,a4,32
+ 1710              	.LVL165:
+ 1711              	.LM513:
+ 1712 012c 33872700 		add	a4,a5,sp
+ 1713              	.LM514:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 30
+
+
+ 1714 0130 034507FE 		lbu	a0,-32(a4)
+ 1715              	.LVL166:
+ 1716              	.L140:
+ 1717              	.LM515:
+ 1718 0134 33D5A600 		srl	a0,a3,a0
+ 1719              	.LM516:
+ 1720              	.LVL167:
+ 1721              	.LM517:
+ 1722              	.LM518:
+ 1723              	.LM519:
+ 1724 0138 C1B7     		j	.L115
+ 1725              		.cfi_endproc
+ 1726              	.LFE190:
+ 1728              		.section	.rodata
+ 1729              		.align	2
+ 1730              		.set	.LANCHOR0,. + 0
+ 1731              	.LC0:
+ 1732 0000 00000000 		.base64	"AAAAAAAAAAABAgMEBgcICQ=="
+ 1732      00000000 
+ 1732      01020304 
+ 1732      06070809 
+ 1733              		.text
+ 1734              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 31
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_rcu.c
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10     .text.rcu_periph_clock_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:13     .text.rcu_periph_clock_enable:00000000 rcu_periph_clock_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:17     .text.rcu_periph_clock_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:31     .text.rcu_periph_clock_enable:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:35     .text.rcu_periph_clock_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:38     .text.rcu_periph_clock_disable:00000000 rcu_periph_clock_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:42     .text.rcu_periph_clock_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:58     .text.rcu_periph_clock_disable:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:62     .text.rcu_periph_clock_sleep_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:65     .text.rcu_periph_clock_sleep_enable:00000000 rcu_periph_clock_sleep_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:67     .text.rcu_periph_clock_sleep_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:70     .text.rcu_periph_clock_sleep_enable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:74     .text.rcu_periph_clock_sleep_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:77     .text.rcu_periph_clock_sleep_disable:00000000 rcu_periph_clock_sleep_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:79     .text.rcu_periph_clock_sleep_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:82     .text.rcu_periph_clock_sleep_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:86     .text.rcu_periph_reset_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:89     .text.rcu_periph_reset_enable:00000000 rcu_periph_reset_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:91     .text.rcu_periph_reset_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:94     .text.rcu_periph_reset_enable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:98     .text.rcu_periph_reset_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:101    .text.rcu_periph_reset_disable:00000000 rcu_periph_reset_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:103    .text.rcu_periph_reset_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:106    .text.rcu_periph_reset_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:110    .text.rcu_bkp_reset_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:113    .text.rcu_bkp_reset_enable:00000000 rcu_bkp_reset_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:116    .text.rcu_bkp_reset_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:126    .text.rcu_bkp_reset_enable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:130    .text.rcu_bkp_reset_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:133    .text.rcu_bkp_reset_disable:00000000 rcu_bkp_reset_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:136    .text.rcu_bkp_reset_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:147    .text.rcu_bkp_reset_disable:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:151    .text.rcu_system_clock_source_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:154    .text.rcu_system_clock_source_config:00000000 rcu_system_clock_source_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:158    .text.rcu_system_clock_source_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:177    .text.rcu_system_clock_source_config:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:181    .text.rcu_system_clock_source_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:184    .text.rcu_system_clock_source_get:00000000 rcu_system_clock_source_get
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:187    .text.rcu_system_clock_source_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:195    .text.rcu_system_clock_source_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:199    .text.rcu_ahb_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:202    .text.rcu_ahb_clock_config:00000000 rcu_ahb_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:206    .text.rcu_ahb_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:225    .text.rcu_ahb_clock_config:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:229    .text.rcu_apb1_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:232    .text.rcu_apb1_clock_config:00000000 rcu_apb1_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:236    .text.rcu_apb1_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:255    .text.rcu_apb1_clock_config:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:259    .text.rcu_apb2_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:262    .text.rcu_apb2_clock_config:00000000 rcu_apb2_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:266    .text.rcu_apb2_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:286    .text.rcu_apb2_clock_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:290    .text.rcu_ckout0_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:293    .text.rcu_ckout0_config:00000000 rcu_ckout0_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:297    .text.rcu_ckout0_config:00000000 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 32
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:317    .text.rcu_ckout0_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:321    .text.rcu_pll_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:324    .text.rcu_pll_config:00000000 rcu_pll_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:328    .text.rcu_pll_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:352    .text.rcu_pll_config:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:356    .text.rcu_predv0_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:359    .text.rcu_predv0_config:00000000 rcu_predv0_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:363    .text.rcu_predv0_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:387    .text.rcu_predv0_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:391    .text.rcu_predv1_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:394    .text.rcu_predv1_config:00000000 rcu_predv1_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:398    .text.rcu_predv1_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:418    .text.rcu_predv1_config:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:422    .text.rcu_pll1_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:425    .text.rcu_pll1_config:00000000 rcu_pll1_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:429    .text.rcu_pll1_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:445    .text.rcu_pll1_config:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:449    .text.rcu_pll2_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:452    .text.rcu_pll2_config:00000000 rcu_pll2_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:456    .text.rcu_pll2_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:472    .text.rcu_pll2_config:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:476    .text.rcu_adc_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:479    .text.rcu_adc_clock_config:00000000 rcu_adc_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:483    .text.rcu_adc_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:545    .text.rcu_adc_clock_config:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:549    .text.rcu_usb_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:552    .text.rcu_usb_clock_config:00000000 rcu_usb_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:556    .text.rcu_usb_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:576    .text.rcu_usb_clock_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:580    .text.rcu_rtc_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:583    .text.rcu_rtc_clock_config:00000000 rcu_rtc_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:587    .text.rcu_rtc_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:606    .text.rcu_rtc_clock_config:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:610    .text.rcu_i2s1_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:613    .text.rcu_i2s1_clock_config:00000000 rcu_i2s1_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:617    .text.rcu_i2s1_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:637    .text.rcu_i2s1_clock_config:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:641    .text.rcu_i2s2_clock_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:644    .text.rcu_i2s2_clock_config:00000000 rcu_i2s2_clock_config
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:648    .text.rcu_i2s2_clock_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:668    .text.rcu_i2s2_clock_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:672    .text.rcu_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:675    .text.rcu_flag_get:00000000 rcu_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:679    .text.rcu_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:692    .text.rcu_flag_get:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:696    .text.rcu_all_reset_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:699    .text.rcu_all_reset_flag_clear:00000000 rcu_all_reset_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:702    .text.rcu_all_reset_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:712    .text.rcu_all_reset_flag_clear:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:716    .text.rcu_interrupt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:719    .text.rcu_interrupt_flag_get:00000000 rcu_interrupt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:721    .text.rcu_interrupt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:724    .text.rcu_interrupt_flag_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:728    .text.rcu_interrupt_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:731    .text.rcu_interrupt_flag_clear:00000000 rcu_interrupt_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:733    .text.rcu_interrupt_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:736    .text.rcu_interrupt_flag_clear:00000008 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 33
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:740    .text.rcu_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:743    .text.rcu_interrupt_enable:00000000 rcu_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:745    .text.rcu_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:748    .text.rcu_interrupt_enable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:752    .text.rcu_interrupt_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:755    .text.rcu_interrupt_disable:00000000 rcu_interrupt_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:757    .text.rcu_interrupt_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:760    .text.rcu_interrupt_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:764    .text.rcu_osci_stab_wait:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:767    .text.rcu_osci_stab_wait:00000000 rcu_osci_stab_wait
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:771    .text.rcu_osci_stab_wait:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:779    .text.rcu_osci_stab_wait:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:784    .text.rcu_osci_stab_wait:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:785    .text.rcu_osci_stab_wait:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:786    .text.rcu_osci_stab_wait:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:787    .text.rcu_osci_stab_wait:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:801    .text.rcu_osci_stab_wait:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:802    .text.rcu_osci_stab_wait:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:804    .text.rcu_osci_stab_wait:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:806    .text.rcu_osci_stab_wait:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:808    .text.rcu_osci_stab_wait:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:814    .text.rcu_osci_stab_wait:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:819    .text.rcu_osci_stab_wait:00000032 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:897    .text.rcu_osci_stab_wait:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:898    .text.rcu_osci_stab_wait:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:900    .text.rcu_osci_stab_wait:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:902    .text.rcu_osci_stab_wait:0000009a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:904    .text.rcu_osci_stab_wait:0000009c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:907    .text.rcu_osci_stab_wait:0000009e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:913    .text.rcu_osci_stab_wait:000000a6 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1076   .text.rcu_osci_stab_wait:00000176 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1080   .text.rcu_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1083   .text.rcu_deinit:00000000 rcu_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1086   .text.rcu_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1091   .text.rcu_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1093   .text.rcu_deinit:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1099   .text.rcu_deinit:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1146   .text.rcu_deinit:0000005a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1152   .text.rcu_deinit:00000060 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1155   .text.rcu_deinit:00000062 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1157   .text.rcu_deinit:00000064 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1161   .text.rcu_osci_on:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1164   .text.rcu_osci_on:00000000 rcu_osci_on
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1166   .text.rcu_osci_on:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1169   .text.rcu_osci_on:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1173   .text.rcu_osci_off:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1176   .text.rcu_osci_off:00000000 rcu_osci_off
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1178   .text.rcu_osci_off:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1181   .text.rcu_osci_off:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1185   .text.rcu_osci_bypass_mode_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1188   .text.rcu_osci_bypass_mode_enable:00000000 rcu_osci_bypass_mode_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1192   .text.rcu_osci_bypass_mode_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1247   .text.rcu_osci_bypass_mode_enable:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1251   .text.rcu_osci_bypass_mode_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1254   .text.rcu_osci_bypass_mode_disable:00000000 rcu_osci_bypass_mode_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1258   .text.rcu_osci_bypass_mode_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1314   .text.rcu_osci_bypass_mode_disable:0000003c .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1318   .text.rcu_hxtal_clock_monitor_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1321   .text.rcu_hxtal_clock_monitor_enable:00000000 rcu_hxtal_clock_monitor_enable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1324   .text.rcu_hxtal_clock_monitor_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1334   .text.rcu_hxtal_clock_monitor_enable:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1338   .text.rcu_hxtal_clock_monitor_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1341   .text.rcu_hxtal_clock_monitor_disable:00000000 rcu_hxtal_clock_monitor_disable
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1344   .text.rcu_hxtal_clock_monitor_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1355   .text.rcu_hxtal_clock_monitor_disable:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1359   .text.rcu_irc8m_adjust_value_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1362   .text.rcu_irc8m_adjust_value_set:00000000 rcu_irc8m_adjust_value_set
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1366   .text.rcu_irc8m_adjust_value_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1389   .text.rcu_irc8m_adjust_value_set:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1393   .text.rcu_deepsleep_voltage_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1396   .text.rcu_deepsleep_voltage_set:00000000 rcu_deepsleep_voltage_set
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1400   .text.rcu_deepsleep_voltage_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1411   .text.rcu_deepsleep_voltage_set:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1415   .text.rcu_clock_freq_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1418   .text.rcu_clock_freq_get:00000000 rcu_clock_freq_get
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1422   .text.rcu_clock_freq_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1431   .text.rcu_clock_freq_get:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1438   .text.rcu_clock_freq_get:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1446   .text.rcu_clock_freq_get:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1653   .text.rcu_clock_freq_get:000000fa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1654   .text.rcu_clock_freq_get:000000fa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1656   .text.rcu_clock_freq_get:000000fc .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1661   .text.rcu_clock_freq_get:000000fe .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1667   .text.rcu_clock_freq_get:00000100 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1725   .text.rcu_clock_freq_get:0000013a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1730   .rodata:00000000 .LANCHOR0
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:515    .text.rcu_adc_clock_config:0000002c .L21
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:511    .text.rcu_adc_clock_config:00000026 .L22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:535    .text.rcu_adc_clock_config:0000003a .L25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:503    .text.rcu_adc_clock_config:0000001e .L23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1044   .text.rcu_osci_stab_wait:0000014e .L53
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:817    .text.rcu_osci_stab_wait:00000032 .L38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:861    .text.rcu_osci_stab_wait:00000070 .L54
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1010   .text.rcu_osci_stab_wait:00000126 .L55
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:949    .text.rcu_osci_stab_wait:000000d6 .L41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:911    .text.rcu_osci_stab_wait:000000a6 .L56
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:974    .text.rcu_osci_stab_wait:000000f6 .L57
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:798    .text.rcu_osci_stab_wait:00000024 .L36
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:855    .text.rcu_osci_stab_wait:0000006c .L65
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:836    .text.rcu_osci_stab_wait:00000050 .L45
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:894    .text.rcu_osci_stab_wait:00000094 .L98
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:889    .text.rcu_osci_stab_wait:00000092 .L59
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:870    .text.rcu_osci_stab_wait:00000076 .L39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:942    .text.rcu_osci_stab_wait:000000ce .L60
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:922    .text.rcu_osci_stab_wait:000000ae .L43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:968    .text.rcu_osci_stab_wait:000000f2 .L61
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1003   .text.rcu_osci_stab_wait:0000011e .L62
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:983    .text.rcu_osci_stab_wait:000000fe .L44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1038   .text.rcu_osci_stab_wait:0000014a .L63
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1019   .text.rcu_osci_stab_wait:0000012e .L40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1071   .text.rcu_osci_stab_wait:00000172 .L64
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1052   .text.rcu_osci_stab_wait:00000156 .L37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1203   .text.rcu_osci_bypass_mode_enable:0000000e .L104
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1226   .text.rcu_osci_bypass_mode_enable:00000028 .L105
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1269   .text.rcu_osci_bypass_mode_disable:0000000e .L108
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1293   .text.rcu_osci_bypass_mode_disable:0000002a .L109
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1437   .text.rcu_clock_freq_get:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1606   .text.rcu_clock_freq_get:000000ce .L116
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1557   .text.rcu_clock_freq_get:000000a0 .L117
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1542   .text.rcu_clock_freq_get:00000092 .L118
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1533   .text.rcu_clock_freq_get:00000082 .L119
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1587   .text.rcu_clock_freq_get:000000be .L120
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1601   .text.rcu_clock_freq_get:000000ca .L139
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1579   .text.rcu_clock_freq_get:000000ba .L121
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1665   .text.rcu_clock_freq_get:00000100 .L122
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1702   .text.rcu_clock_freq_get:00000124 .L123
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1681   .text.rcu_clock_freq_get:0000010c .L124
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1650   .text.rcu_clock_freq_get:000000f8 .L115
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1716   .text.rcu_clock_freq_get:00000134 .L140
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:3600   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9778   .debug_str:000003ef .LASF231
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9658   .debug_str:00000006 .LASF232
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9982   .debug_str:00000a03 .LASF233
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:6062   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:6148   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9768   .debug_str:00000394 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9686   .debug_str:00000115 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9900   .debug_str:000007ff .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9958   .debug_str:00000989 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10090  .debug_str:00000cab .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10016  .debug_str:00000ac2 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10052  .debug_str:00000bb1 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9984   .debug_str:00000a13 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9774   .debug_str:000003dc .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10096  .debug_str:00000cdb .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9988   .debug_str:00000a27 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10056  .debug_str:00000bc7 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10036  .debug_str:00000b45 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9872   .debug_str:00000759 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9960   .debug_str:00000995 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9744   .debug_str:000002cf .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9994   .debug_str:00000a44 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9710   .debug_str:000001de .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9656   .debug_str:00000000 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9840   .debug_str:0000065f .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9832   .debug_str:00000612 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9674   .debug_str:000000d1 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9676   .debug_str:000000da .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10126  .debug_str:00000df5 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10042  .debug_str:00000b77 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10080  .debug_str:00000c5c .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9882   .debug_str:0000079b .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9884   .debug_str:000007a6 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9886   .debug_str:000007b1 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9888   .debug_str:000007bc .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9890   .debug_str:000007c7 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9892   .debug_str:000007d2 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9824   .debug_str:000005d5 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9858   .debug_str:000006ea .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9860   .debug_str:000006f3 .LASF34
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10074  .debug_str:00000c3a .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10076  .debug_str:00000c45 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10012  .debug_str:00000aae .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10014  .debug_str:00000ab8 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9820   .debug_str:000005c3 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9822   .debug_str:000005cc .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9936   .debug_str:000008f3 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9938   .debug_str:000008fc .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9704   .debug_str:000001b1 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10054  .debug_str:00000bbf .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9776   .debug_str:000003e7 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9682   .debug_str:000000fc .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10044  .debug_str:00000b80 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9904   .debug_str:0000081e .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9906   .debug_str:00000828 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9908   .debug_str:00000832 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9910   .debug_str:0000083c .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9912   .debug_str:00000846 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10070  .debug_str:00000c28 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10072  .debug_str:00000c31 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9880   .debug_str:00000790 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9856   .debug_str:000006e1 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9966   .debug_str:000009b4 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10124  .debug_str:00000de5 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9666   .debug_str:00000093 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9954   .debug_str:00000970 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10110  .debug_str:00000d61 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9874   .debug_str:00000761 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9806   .debug_str:0000055a .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10086  .debug_str:00000c8e .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9894   .debug_str:000007dd .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9678   .debug_str:000000e3 .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9964   .debug_str:000009a6 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9754   .debug_str:0000032e .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10064  .debug_str:00000c02 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9694   .debug_str:00000158 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9978   .debug_str:000009f0 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10034  .debug_str:00000b37 .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9818   .debug_str:000005b5 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10022  .debug_str:00000ae9 .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9808   .debug_str:00000568 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10062  .debug_str:00000bf6 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9864   .debug_str:00000712 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9992   .debug_str:00000a38 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9896   .debug_str:000007eb .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10100  .debug_str:00000cff .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10038  .debug_str:00000b57 .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9680   .debug_str:000000f1 .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9986   .debug_str:00000a1d .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9876   .debug_str:0000076e .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9668   .debug_str:000000a0 .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9956   .debug_str:0000097c .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9742   .debug_str:000002c2 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10032  .debug_str:00000b2a .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9796   .debug_str:00000518 .LASF89
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10078  .debug_str:00000c50 .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10018  .debug_str:00000acc .LASF91
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9914   .debug_str:00000850 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9750   .debug_str:00000305 .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9748   .debug_str:000002ef .LASF94
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10010  .debug_str:00000a9c .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9770   .debug_str:000003ab .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10066  .debug_str:00000c0f .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9902   .debug_str:0000080d .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9684   .debug_str:00000104 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10024  .debug_str:00000af6 .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9688   .debug_str:00000122 .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10020  .debug_str:00000ada .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10058  .debug_str:00000bd2 .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10088  .debug_str:00000c9c .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9706   .debug_str:000001ba .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9950   .debug_str:00000957 .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9792   .debug_str:00000503 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9720   .debug_str:00000222 .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9948   .debug_str:00000940 .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9862   .debug_str:000006fc .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9842   .debug_str:00000667 .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10106  .debug_str:00000d36 .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10060  .debug_str:00000be2 .LASF113
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9826   .debug_str:000005df .LASF114
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10108  .debug_str:00000d4c .LASF115
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10112  .debug_str:00000d77 .LASF116
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10006  .debug_str:00000a7b .LASF117
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10046  .debug_str:00000b87 .LASF118
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9866   .debug_str:0000071e .LASF119
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9766   .debug_str:0000037a .LASF120
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9662   .debug_str:00000059 .LASF121
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9828   .debug_str:000005f4 .LASF122
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9922   .debug_str:00000893 .LASF123
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10084  .debug_str:00000c75 .LASF124
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9878   .debug_str:0000077b .LASF125
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10102  .debug_str:00000d0b .LASF126
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9852   .debug_str:000006c2 .LASF127
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9850   .debug_str:000006b1 .LASF128
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9838   .debug_str:0000064e .LASF129
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10098  .debug_str:00000cee .LASF130
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10082  .debug_str:00000c66 .LASF131
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9970   .debug_str:000009c5 .LASF132
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9764   .debug_str:0000036a .LASF133
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9802   .debug_str:00000546 .LASF134
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9758   .debug_str:00000345 .LASF135
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10050  .debug_str:00000ba7 .LASF136
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9690   .debug_str:00000135 .LASF137
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10092  .debug_str:00000cb7 .LASF138
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10026  .debug_str:00000b08 .LASF139
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10130  .debug_str:00000e13 .LASF140
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9944   .debug_str:00000922 .LASF141
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10104  .debug_str:00000d23 .LASF142
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9940   .debug_str:00000905 .LASF143
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9784   .debug_str:000004e4 .LASF144
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9998   .debug_str:00000a53 .LASF145
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10000  .debug_str:00000a5b .LASF146
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10120  .debug_str:00000dc4 .LASF147
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9868   .debug_str:00000738 .LASF176
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 38
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1420   .text.rcu_clock_freq_get:00000000 .LFB190
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1726   .text.rcu_clock_freq_get:0000013a .LFE190
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4275   .debug_loc:00000000 .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9830   .debug_str:0000060c .LASF164
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4307   .debug_loc:00000040 .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4298   .debug_loc:00000038 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4338   .debug_loc:0000007f .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4335   .debug_loc:0000007d .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9714   .debug_str:000001f4 .LASF148
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4358   .debug_loc:000000a0 .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4351   .debug_loc:00000098 .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10114  .debug_str:00000d88 .LASF149
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4386   .debug_loc:000000d5 .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4375   .debug_loc:000000cb .LVUS33
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10004  .debug_str:00000a72 .LASF150
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4424   .debug_loc:00000122 .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4419   .debug_loc:0000011e .LVUS34
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9934   .debug_str:000008e9 .LASF151
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4442   .debug_loc:00000146 .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4435   .debug_loc:00000140 .LVUS35
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9700   .debug_str:00000188 .LASF152
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4524   .debug_loc:000001b1 .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4517   .debug_loc:000001ab .LVUS36
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9804   .debug_str:00000553 .LASF153
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4602   .debug_loc:00000218 .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4599   .debug_loc:00000216 .LVUS37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9790   .debug_str:000004f9 .LASF154
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4618   .debug_loc:00000233 .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4615   .debug_loc:00000231 .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9794   .debug_str:00000512 .LASF155
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4640   .debug_loc:00000254 .LLST39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4631   .debug_loc:0000024c .LVUS39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9722   .debug_str:00000230 .LASF156
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4670   .debug_loc:00000292 .LLST40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4661   .debug_loc:0000028a .LVUS40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4706   .debug_loc:000002d9 .LLST41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4691   .debug_loc:000002cb .LVUS41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9962   .debug_str:0000099e .LASF157
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4784   .debug_loc:0000035c .LLST42
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4769   .debug_loc:0000034e .LVUS42
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9786   .debug_str:000004eb .LASF158
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4929   .debug_loc:00000422 .LLST43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4926   .debug_loc:00000420 .LVUS43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9788   .debug_str:000004f2 .LASF159
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4945   .debug_loc:0000043d .LLST44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4942   .debug_loc:0000043b .LVUS44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9980   .debug_str:000009fc .LASF160
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4955   .debug_loc:00000452 .LLST45
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4952   .debug_loc:00000450 .LVUS45
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9990   .debug_str:00000a30 .LASF161
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9762   .debug_str:00000361 .LASF162
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10068  .debug_str:00000c1f .LASF163
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1449   .text.rcu_clock_freq_get:0000001e .LVL128
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9918   .debug_str:00000871 .LASF166
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1398   .text.rcu_deepsleep_voltage_set:00000000 .LFB189
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1412   .text.rcu_deepsleep_voltage_set:0000000a .LFE189
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9968   .debug_str:000009bf .LASF165
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 39
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4967   .debug_loc:00000469 .LLST28
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4962   .debug_loc:00000465 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9752   .debug_str:00000313 .LASF167
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1364   .text.rcu_irc8m_adjust_value_set:00000000 .LFB188
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1390   .text.rcu_irc8m_adjust_value_set:00000016 .LFE188
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9976   .debug_str:000009e3 .LASF168
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4983   .debug_loc:0000048b .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:4978   .debug_loc:00000487 .LVUS26
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5010   .debug_loc:000004b8 .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5003   .debug_loc:000004b2 .LVUS27
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9664   .debug_str:00000073 .LASF169
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1342   .text.rcu_hxtal_clock_monitor_disable:00000000 .LFB187
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1356   .text.rcu_hxtal_clock_monitor_disable:00000012 .LFE187
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9696   .debug_str:00000164 .LASF170
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1322   .text.rcu_hxtal_clock_monitor_enable:00000000 .LFB186
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1335   .text.rcu_hxtal_clock_monitor_enable:00000010 .LFE186
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9836   .debug_str:00000631 .LASF171
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1256   .text.rcu_osci_bypass_mode_disable:00000000 .LFB185
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1315   .text.rcu_osci_bypass_mode_disable:0000003c .LFE185
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10048  .debug_str:00000ba2 .LASF172
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5039   .debug_loc:000004ef .LLST24
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5030   .debug_loc:000004e7 .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5067   .debug_loc:0000052d .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5062   .debug_loc:00000529 .LVUS25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9672   .debug_str:000000b5 .LASF173
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1190   .text.rcu_osci_bypass_mode_enable:00000000 .LFB184
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1248   .text.rcu_osci_bypass_mode_enable:0000003c .LFE184
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5087   .debug_loc:00000553 .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5078   .debug_loc:0000054b .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5115   .debug_loc:00000591 .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5110   .debug_loc:0000058d .LVUS23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9854   .debug_str:000006d4 .LASF174
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9798   .debug_str:00000524 .LASF175
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9730   .debug_str:00000260 .LASF177
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:769    .text.rcu_osci_stab_wait:00000000 .LFB181
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1077   .text.rcu_osci_stab_wait:00000176 .LFE181
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5126   .debug_loc:000005af .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5192   .debug_loc:0000061f .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5159   .debug_loc:000005ff .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9724   .debug_str:00000237 .LASF178
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5338   .debug_loc:00000725 .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5313   .debug_loc:0000070d .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9972   .debug_str:000009d5 .LASF179
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9732   .debug_str:00000273 .LASF180
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5424   .debug_loc:000007d3 .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5395   .debug_loc:000007b7 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:841    .text.rcu_osci_stab_wait:0000005a .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:875    .text.rcu_osci_stab_wait:00000080 .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:910    .text.rcu_osci_stab_wait:000000a6 .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:928    .text.rcu_osci_stab_wait:000000bc .LVL79
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:954    .text.rcu_osci_stab_wait:000000e0 .LVL83
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:989    .text.rcu_osci_stab_wait:0000010c .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1024   .text.rcu_osci_stab_wait:00000138 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1057   .text.rcu_osci_stab_wait:00000160 .LVL100
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9942   .debug_str:0000090c .LASF181
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9996   .debug_str:00000a4a .LASF182
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9928   .debug_str:000008c2 .LASF183
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 40
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9692   .debug_str:0000013f .LASF184
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10002  .debug_str:00000a63 .LASF185
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9746   .debug_str:000002d8 .LASF234
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9756   .debug_str:0000033c .LASF186
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10116  .debug_str:00000d93 .LASF187
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:700    .text.rcu_all_reset_flag_clear:00000000 .LFB176
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:713    .text.rcu_all_reset_flag_clear:00000010 .LFE176
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10122  .debug_str:00000dd8 .LASF188
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:677    .text.rcu_flag_get:00000000 .LFB175
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:693    .text.rcu_flag_get:00000014 .LFE175
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9846   .debug_str:0000069b .LASF189
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5495   .debug_loc:00000880 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5490   .debug_loc:0000087c .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9780   .debug_str:000004b6 .LASF190
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:646    .text.rcu_i2s2_clock_config:00000000 .LFB174
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:669    .text.rcu_i2s2_clock_config:00000014 .LFE174
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9716   .debug_str:000001fc .LASF192
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5520   .debug_loc:000008ab .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5515   .debug_loc:000008a7 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9800   .debug_str:00000530 .LASF191
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:615    .text.rcu_i2s1_clock_config:00000000 .LFB173
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:638    .text.rcu_i2s1_clock_config:00000012 .LFE173
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5541   .debug_loc:000008d4 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5536   .debug_loc:000008d0 .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9834   .debug_str:0000061c .LASF193
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:585    .text.rcu_rtc_clock_config:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:607    .text.rcu_rtc_clock_config:00000010 .LFE172
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9848   .debug_str:000006a0 .LASF194
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5564   .debug_loc:000008ff .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5557   .debug_loc:000008f9 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9916   .debug_str:0000085c .LASF195
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:554    .text.rcu_usb_clock_config:00000000 .LFB171
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:577    .text.rcu_usb_clock_config:00000014 .LFE171
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9670   .debug_str:000000ad .LASF196
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5589   .debug_loc:00000932 .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5584   .debug_loc:0000092e .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9718   .debug_str:0000020d .LASF197
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:481    .text.rcu_adc_clock_config:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:546    .text.rcu_adc_clock_config:00000040 .LFE170
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9920   .debug_str:0000088b .LASF198
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5620   .debug_loc:00000966 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5605   .debug_loc:00000958 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9698   .debug_str:00000183 .LASF199
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5682   .debug_loc:000009d9 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5677   .debug_loc:000009d5 .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9726   .debug_str:0000023f .LASF200
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:454    .text.rcu_pll2_config:00000000 .LFB169
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:473    .text.rcu_pll2_config:00000016 .LFE169
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9898   .debug_str:000007f7 .LASF201
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10030  .debug_str:00000b1a .LASF202
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:427    .text.rcu_pll1_config:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:446    .text.rcu_pll1_config:00000018 .LFE168
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9946   .debug_str:0000092e .LASF203
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:396    .text.rcu_predv1_config:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:419    .text.rcu_predv1_config:00000010 .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9924   .debug_str:000008ac .LASF204
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5698   .debug_loc:000009fb .LLST9
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 41
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5693   .debug_loc:000009f7 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9760   .debug_str:0000034f .LASF205
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:361    .text.rcu_predv0_config:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:388    .text.rcu_predv0_config:00000014 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9870   .debug_str:0000074b .LASF206
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5715   .debug_loc:00000a1e .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5710   .debug_loc:00000a1a .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9712   .debug_str:000001e9 .LASF207
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5744   .debug_loc:00000a4d .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5735   .debug_loc:00000a45 .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10008  .debug_str:00000a8d .LASF208
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:326    .text.rcu_pll_config:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:353    .text.rcu_pll_config:00000016 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9974   .debug_str:000009db .LASF209
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5774   .debug_loc:00000a8d .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5769   .debug_loc:00000a89 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5803   .debug_loc:00000abc .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5794   .debug_loc:00000ab4 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9708   .debug_str:000001cc .LASF210
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:295    .text.rcu_ckout0_config:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:318    .text.rcu_ckout0_config:00000014 .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9926   .debug_str:000008b7 .LASF211
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5833   .debug_loc:00000afe .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5828   .debug_loc:00000afa .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9810   .debug_str:00000575 .LASF212
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:264    .text.rcu_apb2_clock_config:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:287    .text.rcu_apb2_clock_config:00000014 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9740   .debug_str:000002ba .LASF213
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5854   .debug_loc:00000b29 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5849   .debug_loc:00000b25 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9812   .debug_str:0000058b .LASF214
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:234    .text.rcu_apb1_clock_config:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:256    .text.rcu_apb1_clock_config:00000010 .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9738   .debug_str:000002b2 .LASF215
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5877   .debug_loc:00000b53 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5870   .debug_loc:00000b4d .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9660   .debug_str:00000044 .LASF216
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:204    .text.rcu_ahb_clock_config:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:226    .text.rcu_ahb_clock_config:00000010 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9814   .debug_str:000005a1 .LASF217
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5904   .debug_loc:00000b88 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5897   .debug_loc:00000b82 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9736   .debug_str:00000296 .LASF235
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:185    .text.rcu_system_clock_source_get:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:196    .text.rcu_system_clock_source_get:0000000a .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9772   .debug_str:000003bd .LASF218
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:156    .text.rcu_system_clock_source_config:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:178    .text.rcu_system_clock_source_config:0000000e .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10028  .debug_str:00000b13 .LASF219
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5931   .debug_loc:00000bbd .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5924   .debug_loc:00000bb7 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10128  .debug_str:00000dfd .LASF220
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:134    .text.rcu_bkp_reset_disable:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:148    .text.rcu_bkp_reset_disable:00000010 .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10040  .debug_str:00000b62 .LASF221
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:114    .text.rcu_bkp_reset_enable:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:127    .text.rcu_bkp_reset_enable:0000000e .LFE157
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 42
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9734   .debug_str:0000027d .LASF222
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9816   .debug_str:000005a8 .LASF223
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9782   .debug_str:000004cc .LASF224
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9702   .debug_str:00000192 .LASF225
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9952   .debug_str:00000969 .LASF226
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9844   .debug_str:0000067d .LASF227
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10094  .debug_str:00000cc2 .LASF228
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:40     .text.rcu_periph_clock_disable:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:59     .text.rcu_periph_clock_disable:0000001c .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:10118  .debug_str:00000dac .LASF229
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:15     .text.rcu_periph_clock_enable:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:32     .text.rcu_periph_clock_enable:00000018 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9930   .debug_str:000008d7 .LASF230
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1084   .text.rcu_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1158   .text.rcu_deinit:00000064 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:5951   .debug_loc:00000beb .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1107   .text.rcu_deinit:0000001c .LVL103
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9932   .debug_str:000008e2 .LASF236
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:9728   .debug_str:0000024f .LASF237
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1430   .text.rcu_clock_freq_get:00000002 .LCFI7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1660   .text.rcu_clock_freq_get:000000fe .LCFI8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1666   .text.rcu_clock_freq_get:00000100 .LCFI9
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1419   .text.rcu_clock_freq_get:00000000 .LVL126
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1443   .text.rcu_clock_freq_get:00000014 .LVL127
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1657   .text.rcu_clock_freq_get:000000fc .LVL155
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1664   .text.rcu_clock_freq_get:00000100 .LVL156
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1466   .text.rcu_clock_freq_get:00000034 .LVL129
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1473   .text.rcu_clock_freq_get:0000003c .LVL130
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1649   .text.rcu_clock_freq_get:000000f8 .LVL154
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1720   .text.rcu_clock_freq_get:00000138 .LVL167
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1595   .text.rcu_clock_freq_get:000000c6 .LVL145
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1600   .text.rcu_clock_freq_get:000000ca .LVL146
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1604   .text.rcu_clock_freq_get:000000ce .LVL147
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1671   .text.rcu_clock_freq_get:00000102 .LVL157
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1680   .text.rcu_clock_freq_get:0000010c .LVL159
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1687   .text.rcu_clock_freq_get:00000110 .LVL161
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1701   .text.rcu_clock_freq_get:00000124 .LVL163
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1715   .text.rcu_clock_freq_get:00000134 .LVL166
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1636   .text.rcu_clock_freq_get:000000ec .LVL153
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1684   .text.rcu_clock_freq_get:0000010e .LVL160
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1705   .text.rcu_clock_freq_get:00000126 .LVL164
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1692   .text.rcu_clock_freq_get:00000116 .LVL162
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1710   .text.rcu_clock_freq_get:0000012c .LVL165
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1482   .text.rcu_clock_freq_get:00000048 .LVL131
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1498   .text.rcu_clock_freq_get:0000005e .LVL133
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1501   .text.rcu_clock_freq_get:00000062 .LVL134
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1509   .text.rcu_clock_freq_get:0000006c .LVL135
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1569   .text.rcu_clock_freq_get:000000ae .LVL142
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1577   .text.rcu_clock_freq_get:000000ba .LVL143
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1584   .text.rcu_clock_freq_get:000000bc .LVL144
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1493   .text.rcu_clock_freq_get:00000058 .LVL132
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1541   .text.rcu_clock_freq_get:00000092 .LVL138
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1556   .text.rcu_clock_freq_get:000000a0 .LVL141
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1676   .text.rcu_clock_freq_get:00000108 .LVL158
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1611   .text.rcu_clock_freq_get:000000d4 .LVL148
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1618   .text.rcu_clock_freq_get:000000d8 .LVL149
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1621   .text.rcu_clock_freq_get:000000da .LVL150
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 43
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1624   .text.rcu_clock_freq_get:000000de .LVL151
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1627   .text.rcu_clock_freq_get:000000e0 .LVL152
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1547   .text.rcu_clock_freq_get:00000098 .LVL139
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1551   .text.rcu_clock_freq_get:0000009a .LVL140
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1525   .text.rcu_clock_freq_get:0000007c .LVL136
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1397   .text.rcu_deepsleep_voltage_set:00000000 .LVL124
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1404   .text.rcu_deepsleep_voltage_set:00000002 .LVL125
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1363   .text.rcu_irc8m_adjust_value_set:00000000 .LVL120
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1377   .text.rcu_irc8m_adjust_value_set:00000008 .LVL122
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1372   .text.rcu_irc8m_adjust_value_set:00000006 .LVL121
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1382   .text.rcu_irc8m_adjust_value_set:00000010 .LVL123
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1255   .text.rcu_osci_bypass_mode_disable:00000000 .LVL112
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1264   .text.rcu_osci_bypass_mode_disable:0000000a .LVL113
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1268   .text.rcu_osci_bypass_mode_disable:0000000e .LVL114
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1292   .text.rcu_osci_bypass_mode_disable:0000002a .LVL117
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1274   .text.rcu_osci_bypass_mode_disable:00000014 .LVL115
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1287   .text.rcu_osci_bypass_mode_disable:00000026 .LVL116
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1298   .text.rcu_osci_bypass_mode_disable:00000030 .LVL118
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1304   .text.rcu_osci_bypass_mode_disable:00000034 .LVL119
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1189   .text.rcu_osci_bypass_mode_enable:00000000 .LVL104
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1198   .text.rcu_osci_bypass_mode_enable:0000000a .LVL105
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1202   .text.rcu_osci_bypass_mode_enable:0000000e .LVL106
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1225   .text.rcu_osci_bypass_mode_enable:00000028 .LVL109
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1208   .text.rcu_osci_bypass_mode_enable:00000014 .LVL107
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1220   .text.rcu_osci_bypass_mode_enable:00000024 .LVL108
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1231   .text.rcu_osci_bypass_mode_enable:0000002e .LVL110
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1237   .text.rcu_osci_bypass_mode_enable:00000034 .LVL111
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:778    .text.rcu_osci_stab_wait:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:813    .text.rcu_osci_stab_wait:00000030 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:818    .text.rcu_osci_stab_wait:00000032 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:906    .text.rcu_osci_stab_wait:0000009e .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:912    .text.rcu_osci_stab_wait:000000a6 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:768    .text.rcu_osci_stab_wait:00000000 .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:810    .text.rcu_osci_stab_wait:0000002e .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:816    .text.rcu_osci_stab_wait:00000032 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:864    .text.rcu_osci_stab_wait:00000072 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:869    .text.rcu_osci_stab_wait:00000076 .LVL71
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:918    .text.rcu_osci_stab_wait:000000ac .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:921    .text.rcu_osci_stab_wait:000000ae .LVL78
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:973    .text.rcu_osci_stab_wait:000000f6 .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:979    .text.rcu_osci_stab_wait:000000fc .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:982    .text.rcu_osci_stab_wait:000000fe .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1009   .text.rcu_osci_stab_wait:00000126 .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1015   .text.rcu_osci_stab_wait:0000012c .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1018   .text.rcu_osci_stab_wait:0000012e .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1043   .text.rcu_osci_stab_wait:0000014e .LVL98
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1051   .text.rcu_osci_stab_wait:00000156 .LVL99
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:835    .text.rcu_osci_stab_wait:00000050 .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:860    .text.rcu_osci_stab_wait:00000070 .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:893    .text.rcu_osci_stab_wait:00000094 .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:852    .text.rcu_osci_stab_wait:0000006a .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:880    .text.rcu_osci_stab_wait:00000088 .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:939    .text.rcu_osci_stab_wait:000000cc .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:948    .text.rcu_osci_stab_wait:000000d6 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:965    .text.rcu_osci_stab_wait:000000f0 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1000   .text.rcu_osci_stab_wait:0000011c .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1035   .text.rcu_osci_stab_wait:00000148 .LVL97
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 44
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1068   .text.rcu_osci_stab_wait:00000170 .LVL102
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:676    .text.rcu_flag_get:00000000 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:688    .text.rcu_flag_get:00000010 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:654    .text.rcu_i2s2_clock_config:00000006 .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:661    .text.rcu_i2s2_clock_config:0000000e .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:623    .text.rcu_i2s1_clock_config:00000006 .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:630    .text.rcu_i2s1_clock_config:0000000c .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:593    .text.rcu_rtc_clock_config:00000006 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:598    .text.rcu_rtc_clock_config:0000000a .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:601    .text.rcu_rtc_clock_config:0000000c .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:562    .text.rcu_usb_clock_config:00000006 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:569    .text.rcu_usb_clock_config:0000000e .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:480    .text.rcu_adc_clock_config:00000000 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:502    .text.rcu_adc_clock_config:0000001e .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:510    .text.rcu_adc_clock_config:00000026 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:517    .text.rcu_adc_clock_config:0000002c .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:521    .text.rcu_adc_clock_config:0000002e .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:524    .text.rcu_adc_clock_config:00000030 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:534    .text.rcu_adc_clock_config:0000003a .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:539    .text.rcu_adc_clock_config:0000003c .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:489    .text.rcu_adc_clock_config:00000006 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:527    .text.rcu_adc_clock_config:00000032 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:531    .text.rcu_adc_clock_config:00000038 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:395    .text.rcu_predv1_config:00000000 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:404    .text.rcu_predv1_config:00000006 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:360    .text.rcu_predv0_config:00000000 .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:381    .text.rcu_predv0_config:00000010 .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:369    .text.rcu_predv0_config:00000006 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:376    .text.rcu_predv0_config:0000000c .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:325    .text.rcu_pll_config:00000000 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:346    .text.rcu_pll_config:00000012 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:334    .text.rcu_pll_config:00000006 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:341    .text.rcu_pll_config:0000000e .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:303    .text.rcu_ckout0_config:00000006 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:310    .text.rcu_ckout0_config:0000000e .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:272    .text.rcu_apb2_clock_config:00000006 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:279    .text.rcu_apb2_clock_config:0000000e .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:242    .text.rcu_apb1_clock_config:00000006 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:247    .text.rcu_apb1_clock_config:0000000a .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:250    .text.rcu_apb1_clock_config:0000000c .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:212    .text.rcu_ahb_clock_config:00000006 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:217    .text.rcu_ahb_clock_config:0000000a .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:220    .text.rcu_ahb_clock_config:0000000c .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:164    .text.rcu_system_clock_source_config:00000006 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:169    .text.rcu_system_clock_source_config:00000008 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:172    .text.rcu_system_clock_source_config:0000000a .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1090   .text.rcu_deinit:00000002 .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1154   .text.rcu_deinit:00000062 .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1736   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:66     .text.rcu_periph_clock_sleep_enable:00000000 .LFB192
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:71     .text.rcu_periph_clock_sleep_enable:00000008 .LFE192
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:78     .text.rcu_periph_clock_sleep_disable:00000000 .LFB202
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:83     .text.rcu_periph_clock_sleep_disable:00000008 .LFE202
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:90     .text.rcu_periph_reset_enable:00000000 .LFB194
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:95     .text.rcu_periph_reset_enable:00000008 .LFE194
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:102    .text.rcu_periph_reset_disable:00000000 .LFB204
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:107    .text.rcu_periph_reset_disable:00000008 .LFE204
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 45
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:720    .text.rcu_interrupt_flag_get:00000000 .LFB210
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:725    .text.rcu_interrupt_flag_get:00000008 .LFE210
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:732    .text.rcu_interrupt_flag_clear:00000000 .LFB196
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:737    .text.rcu_interrupt_flag_clear:00000008 .LFE196
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:744    .text.rcu_interrupt_enable:00000000 .LFB198
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:749    .text.rcu_interrupt_enable:00000008 .LFE198
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:756    .text.rcu_interrupt_disable:00000000 .LFB206
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:761    .text.rcu_interrupt_disable:00000008 .LFE206
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1165   .text.rcu_osci_on:00000000 .LFB200
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1170   .text.rcu_osci_on:00000008 .LFE200
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1177   .text.rcu_osci_off:00000000 .LFB208
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1182   .text.rcu_osci_off:00000008 .LFE208
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:16     .text.rcu_periph_clock_enable:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:18     .text.rcu_periph_clock_enable:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:23     .text.rcu_periph_clock_enable:0000000c .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:26     .text.rcu_periph_clock_enable:00000012 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:29     .text.rcu_periph_clock_enable:00000016 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:41     .text.rcu_periph_clock_disable:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:43     .text.rcu_periph_clock_disable:00000000 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:48     .text.rcu_periph_clock_disable:0000000c .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:51     .text.rcu_periph_clock_disable:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:53     .text.rcu_periph_clock_disable:00000016 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:56     .text.rcu_periph_clock_disable:0000001a .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:68     .text.rcu_periph_clock_sleep_enable:00000000 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:80     .text.rcu_periph_clock_sleep_disable:00000000 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:92     .text.rcu_periph_reset_enable:00000000 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:104    .text.rcu_periph_reset_disable:00000000 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:115    .text.rcu_bkp_reset_enable:00000000 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:117    .text.rcu_bkp_reset_enable:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:120    .text.rcu_bkp_reset_enable:00000006 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:124    .text.rcu_bkp_reset_enable:0000000c .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:135    .text.rcu_bkp_reset_disable:00000000 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:137    .text.rcu_bkp_reset_disable:00000000 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:138    .text.rcu_bkp_reset_disable:00000000 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:145    .text.rcu_bkp_reset_disable:0000000e .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:157    .text.rcu_system_clock_source_config:00000000 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:159    .text.rcu_system_clock_source_config:00000000 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:160    .text.rcu_system_clock_source_config:00000000 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:161    .text.rcu_system_clock_source_config:00000000 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:165    .text.rcu_system_clock_source_config:00000006 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:166    .text.rcu_system_clock_source_config:00000006 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:167    .text.rcu_system_clock_source_config:00000006 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:170    .text.rcu_system_clock_source_config:00000008 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:173    .text.rcu_system_clock_source_config:0000000a .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:175    .text.rcu_system_clock_source_config:0000000c .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:186    .text.rcu_system_clock_source_get:00000000 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:188    .text.rcu_system_clock_source_get:00000000 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:189    .text.rcu_system_clock_source_get:00000000 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:192    .text.rcu_system_clock_source_get:00000006 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:205    .text.rcu_ahb_clock_config:00000000 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:207    .text.rcu_ahb_clock_config:00000000 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:208    .text.rcu_ahb_clock_config:00000000 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:209    .text.rcu_ahb_clock_config:00000000 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:213    .text.rcu_ahb_clock_config:00000006 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:214    .text.rcu_ahb_clock_config:00000006 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:215    .text.rcu_ahb_clock_config:00000006 .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:218    .text.rcu_ahb_clock_config:0000000a .LM45
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 46
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:221    .text.rcu_ahb_clock_config:0000000c .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:223    .text.rcu_ahb_clock_config:0000000e .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:235    .text.rcu_apb1_clock_config:00000000 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:237    .text.rcu_apb1_clock_config:00000000 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:238    .text.rcu_apb1_clock_config:00000000 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:239    .text.rcu_apb1_clock_config:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:243    .text.rcu_apb1_clock_config:00000006 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:244    .text.rcu_apb1_clock_config:00000006 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:245    .text.rcu_apb1_clock_config:00000006 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:248    .text.rcu_apb1_clock_config:0000000a .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:251    .text.rcu_apb1_clock_config:0000000c .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:253    .text.rcu_apb1_clock_config:0000000e .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:265    .text.rcu_apb2_clock_config:00000000 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:267    .text.rcu_apb2_clock_config:00000000 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:268    .text.rcu_apb2_clock_config:00000000 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:269    .text.rcu_apb2_clock_config:00000000 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:273    .text.rcu_apb2_clock_config:00000006 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:274    .text.rcu_apb2_clock_config:00000006 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:275    .text.rcu_apb2_clock_config:00000006 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:280    .text.rcu_apb2_clock_config:0000000e .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:282    .text.rcu_apb2_clock_config:00000010 .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:284    .text.rcu_apb2_clock_config:00000012 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:296    .text.rcu_ckout0_config:00000000 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:298    .text.rcu_ckout0_config:00000000 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:299    .text.rcu_ckout0_config:00000000 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:300    .text.rcu_ckout0_config:00000000 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:304    .text.rcu_ckout0_config:00000006 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:305    .text.rcu_ckout0_config:00000006 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:306    .text.rcu_ckout0_config:00000006 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:311    .text.rcu_ckout0_config:0000000e .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:313    .text.rcu_ckout0_config:00000010 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:315    .text.rcu_ckout0_config:00000012 .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:327    .text.rcu_pll_config:00000000 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:329    .text.rcu_pll_config:00000000 .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:330    .text.rcu_pll_config:00000000 .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:331    .text.rcu_pll_config:00000000 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:335    .text.rcu_pll_config:00000006 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:336    .text.rcu_pll_config:00000006 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:337    .text.rcu_pll_config:00000006 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:342    .text.rcu_pll_config:0000000e .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:344    .text.rcu_pll_config:00000010 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:347    .text.rcu_pll_config:00000012 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:348    .text.rcu_pll_config:00000012 .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:350    .text.rcu_pll_config:00000014 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:362    .text.rcu_predv0_config:00000000 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:364    .text.rcu_predv0_config:00000000 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:365    .text.rcu_predv0_config:00000000 .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:366    .text.rcu_predv0_config:00000000 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:370    .text.rcu_predv0_config:00000006 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:371    .text.rcu_predv0_config:00000006 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:372    .text.rcu_predv0_config:00000006 .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:377    .text.rcu_predv0_config:0000000c .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:379    .text.rcu_predv0_config:0000000e .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:382    .text.rcu_predv0_config:00000010 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:383    .text.rcu_predv0_config:00000010 .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:385    .text.rcu_predv0_config:00000012 .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:397    .text.rcu_predv1_config:00000000 .LM102
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 47
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:399    .text.rcu_predv1_config:00000000 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:400    .text.rcu_predv1_config:00000000 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:401    .text.rcu_predv1_config:00000000 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:405    .text.rcu_predv1_config:00000006 .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:406    .text.rcu_predv1_config:00000006 .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:409    .text.rcu_predv1_config:0000000a .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:410    .text.rcu_predv1_config:0000000a .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:413    .text.rcu_predv1_config:0000000c .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:414    .text.rcu_predv1_config:0000000c .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:416    .text.rcu_predv1_config:0000000e .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:428    .text.rcu_pll1_config:00000000 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:430    .text.rcu_pll1_config:00000000 .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:431    .text.rcu_pll1_config:00000000 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:438    .text.rcu_pll1_config:00000010 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:440    .text.rcu_pll1_config:00000012 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:443    .text.rcu_pll1_config:00000016 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:455    .text.rcu_pll2_config:00000000 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:457    .text.rcu_pll2_config:00000000 .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:458    .text.rcu_pll2_config:00000000 .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:465    .text.rcu_pll2_config:0000000e .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:467    .text.rcu_pll2_config:00000010 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:470    .text.rcu_pll2_config:00000014 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:482    .text.rcu_adc_clock_config:00000000 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:484    .text.rcu_adc_clock_config:00000000 .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:485    .text.rcu_adc_clock_config:00000000 .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:486    .text.rcu_adc_clock_config:00000000 .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:490    .text.rcu_adc_clock_config:00000006 .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:491    .text.rcu_adc_clock_config:00000006 .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:496    .text.rcu_adc_clock_config:0000000e .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:504    .text.rcu_adc_clock_config:0000001e .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:505    .text.rcu_adc_clock_config:0000001e .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:508    .text.rcu_adc_clock_config:00000024 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:512    .text.rcu_adc_clock_config:00000026 .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:516    .text.rcu_adc_clock_config:0000002c .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:518    .text.rcu_adc_clock_config:0000002c .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:519    .text.rcu_adc_clock_config:0000002c .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:522    .text.rcu_adc_clock_config:0000002e .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:525    .text.rcu_adc_clock_config:00000030 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:528    .text.rcu_adc_clock_config:00000032 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:532    .text.rcu_adc_clock_config:00000038 .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:536    .text.rcu_adc_clock_config:0000003a .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:537    .text.rcu_adc_clock_config:0000003a .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:540    .text.rcu_adc_clock_config:0000003c .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:543    .text.rcu_adc_clock_config:0000003e .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:555    .text.rcu_usb_clock_config:00000000 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:557    .text.rcu_usb_clock_config:00000000 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:558    .text.rcu_usb_clock_config:00000000 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:559    .text.rcu_usb_clock_config:00000000 .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:563    .text.rcu_usb_clock_config:00000006 .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:564    .text.rcu_usb_clock_config:00000006 .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:565    .text.rcu_usb_clock_config:00000006 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:570    .text.rcu_usb_clock_config:0000000e .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:572    .text.rcu_usb_clock_config:00000010 .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:574    .text.rcu_usb_clock_config:00000012 .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:586    .text.rcu_rtc_clock_config:00000000 .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:588    .text.rcu_rtc_clock_config:00000000 .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:589    .text.rcu_rtc_clock_config:00000000 .LM159
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 48
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:590    .text.rcu_rtc_clock_config:00000000 .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:594    .text.rcu_rtc_clock_config:00000006 .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:595    .text.rcu_rtc_clock_config:00000006 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:596    .text.rcu_rtc_clock_config:00000006 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:599    .text.rcu_rtc_clock_config:0000000a .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:602    .text.rcu_rtc_clock_config:0000000c .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:604    .text.rcu_rtc_clock_config:0000000e .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:616    .text.rcu_i2s1_clock_config:00000000 .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:618    .text.rcu_i2s1_clock_config:00000000 .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:619    .text.rcu_i2s1_clock_config:00000000 .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:620    .text.rcu_i2s1_clock_config:00000000 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:624    .text.rcu_i2s1_clock_config:00000006 .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:625    .text.rcu_i2s1_clock_config:00000006 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:626    .text.rcu_i2s1_clock_config:00000006 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:631    .text.rcu_i2s1_clock_config:0000000c .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:633    .text.rcu_i2s1_clock_config:0000000e .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:635    .text.rcu_i2s1_clock_config:00000010 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:647    .text.rcu_i2s2_clock_config:00000000 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:649    .text.rcu_i2s2_clock_config:00000000 .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:650    .text.rcu_i2s2_clock_config:00000000 .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:651    .text.rcu_i2s2_clock_config:00000000 .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:655    .text.rcu_i2s2_clock_config:00000006 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:656    .text.rcu_i2s2_clock_config:00000006 .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:657    .text.rcu_i2s2_clock_config:00000006 .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:662    .text.rcu_i2s2_clock_config:0000000e .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:664    .text.rcu_i2s2_clock_config:00000010 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:666    .text.rcu_i2s2_clock_config:00000012 .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:678    .text.rcu_flag_get:00000000 .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:680    .text.rcu_flag_get:00000000 .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:681    .text.rcu_flag_get:00000000 .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:686    .text.rcu_flag_get:0000000c .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:689    .text.rcu_flag_get:00000010 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:701    .text.rcu_all_reset_flag_clear:00000000 .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:703    .text.rcu_all_reset_flag_clear:00000000 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:706    .text.rcu_all_reset_flag_clear:00000006 .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:710    .text.rcu_all_reset_flag_clear:0000000e .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:722    .text.rcu_interrupt_flag_get:00000000 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:734    .text.rcu_interrupt_flag_clear:00000000 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:746    .text.rcu_interrupt_enable:00000000 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:758    .text.rcu_interrupt_disable:00000000 .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:770    .text.rcu_osci_stab_wait:00000000 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:772    .text.rcu_osci_stab_wait:00000000 .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:773    .text.rcu_osci_stab_wait:00000000 .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:774    .text.rcu_osci_stab_wait:00000000 .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:775    .text.rcu_osci_stab_wait:00000000 .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:776    .text.rcu_osci_stab_wait:00000000 .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:788    .text.rcu_osci_stab_wait:0000000a .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:799    .text.rcu_osci_stab_wait:00000024 .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:811    .text.rcu_osci_stab_wait:0000002e .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:820    .text.rcu_osci_stab_wait:00000032 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:826    .text.rcu_osci_stab_wait:00000042 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:828    .text.rcu_osci_stab_wait:00000046 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:831    .text.rcu_osci_stab_wait:0000004a .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:833    .text.rcu_osci_stab_wait:0000004c .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:837    .text.rcu_osci_stab_wait:00000050 .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:838    .text.rcu_osci_stab_wait:00000050 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:842    .text.rcu_osci_stab_wait:0000005a .LM216
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 49
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:843    .text.rcu_osci_stab_wait:0000005a .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:846    .text.rcu_osci_stab_wait:0000005c .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:847    .text.rcu_osci_stab_wait:0000005c .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:853    .text.rcu_osci_stab_wait:0000006a .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:856    .text.rcu_osci_stab_wait:0000006c .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:857    .text.rcu_osci_stab_wait:0000006c .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:862    .text.rcu_osci_stab_wait:00000070 .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:865    .text.rcu_osci_stab_wait:00000072 .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:867    .text.rcu_osci_stab_wait:00000074 .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:871    .text.rcu_osci_stab_wait:00000076 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:872    .text.rcu_osci_stab_wait:00000076 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:876    .text.rcu_osci_stab_wait:00000080 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:877    .text.rcu_osci_stab_wait:00000080 .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:881    .text.rcu_osci_stab_wait:00000088 .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:884    .text.rcu_osci_stab_wait:0000008a .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:885    .text.rcu_osci_stab_wait:0000008a .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:890    .text.rcu_osci_stab_wait:00000092 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:891    .text.rcu_osci_stab_wait:00000092 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:895    .text.rcu_osci_stab_wait:00000094 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:908    .text.rcu_osci_stab_wait:0000009e .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:914    .text.rcu_osci_stab_wait:000000a6 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:916    .text.rcu_osci_stab_wait:000000aa .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:919    .text.rcu_osci_stab_wait:000000ac .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:923    .text.rcu_osci_stab_wait:000000ae .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:924    .text.rcu_osci_stab_wait:000000ae .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:929    .text.rcu_osci_stab_wait:000000bc .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:930    .text.rcu_osci_stab_wait:000000bc .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:933    .text.rcu_osci_stab_wait:000000be .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:934    .text.rcu_osci_stab_wait:000000be .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:940    .text.rcu_osci_stab_wait:000000cc .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:943    .text.rcu_osci_stab_wait:000000ce .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:944    .text.rcu_osci_stab_wait:000000ce .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:950    .text.rcu_osci_stab_wait:000000d6 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:951    .text.rcu_osci_stab_wait:000000d6 .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:955    .text.rcu_osci_stab_wait:000000e0 .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:956    .text.rcu_osci_stab_wait:000000e0 .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:959    .text.rcu_osci_stab_wait:000000e2 .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:960    .text.rcu_osci_stab_wait:000000e2 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:966    .text.rcu_osci_stab_wait:000000f0 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:969    .text.rcu_osci_stab_wait:000000f2 .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:970    .text.rcu_osci_stab_wait:000000f2 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:975    .text.rcu_osci_stab_wait:000000f6 .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:977    .text.rcu_osci_stab_wait:000000fa .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:980    .text.rcu_osci_stab_wait:000000fc .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:984    .text.rcu_osci_stab_wait:000000fe .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:985    .text.rcu_osci_stab_wait:000000fe .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:990    .text.rcu_osci_stab_wait:0000010c .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:991    .text.rcu_osci_stab_wait:0000010c .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:994    .text.rcu_osci_stab_wait:0000010e .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:995    .text.rcu_osci_stab_wait:0000010e .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1001   .text.rcu_osci_stab_wait:0000011c .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1004   .text.rcu_osci_stab_wait:0000011e .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1005   .text.rcu_osci_stab_wait:0000011e .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1011   .text.rcu_osci_stab_wait:00000126 .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1013   .text.rcu_osci_stab_wait:0000012a .LM271
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1016   .text.rcu_osci_stab_wait:0000012c .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1020   .text.rcu_osci_stab_wait:0000012e .LM273
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 50
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1021   .text.rcu_osci_stab_wait:0000012e .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1025   .text.rcu_osci_stab_wait:00000138 .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1026   .text.rcu_osci_stab_wait:00000138 .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1029   .text.rcu_osci_stab_wait:0000013a .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1030   .text.rcu_osci_stab_wait:0000013a .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1036   .text.rcu_osci_stab_wait:00000148 .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1039   .text.rcu_osci_stab_wait:0000014a .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1040   .text.rcu_osci_stab_wait:0000014a .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1045   .text.rcu_osci_stab_wait:0000014e .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1047   .text.rcu_osci_stab_wait:00000152 .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1049   .text.rcu_osci_stab_wait:00000154 .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1053   .text.rcu_osci_stab_wait:00000156 .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1054   .text.rcu_osci_stab_wait:00000156 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1058   .text.rcu_osci_stab_wait:00000160 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1059   .text.rcu_osci_stab_wait:00000160 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1062   .text.rcu_osci_stab_wait:00000162 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1063   .text.rcu_osci_stab_wait:00000162 .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1069   .text.rcu_osci_stab_wait:00000170 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1072   .text.rcu_osci_stab_wait:00000172 .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1073   .text.rcu_osci_stab_wait:00000172 .LM293
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1085   .text.rcu_deinit:00000000 .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1087   .text.rcu_deinit:00000000 .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1088   .text.rcu_deinit:00000000 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1094   .text.rcu_deinit:00000004 .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1097   .text.rcu_deinit:0000000a .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1100   .text.rcu_deinit:0000000c .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1102   .text.rcu_deinit:0000000e .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1105   .text.rcu_deinit:00000014 .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1108   .text.rcu_deinit:0000001c .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1109   .text.rcu_deinit:0000001c .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1115   .text.rcu_deinit:00000028 .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1116   .text.rcu_deinit:00000028 .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1122   .text.rcu_deinit:00000034 .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1123   .text.rcu_deinit:00000034 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1129   .text.rcu_deinit:00000040 .LM308
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1130   .text.rcu_deinit:00000040 .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1136   .text.rcu_deinit:0000004c .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1137   .text.rcu_deinit:0000004c .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1140   .text.rcu_deinit:00000052 .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1141   .text.rcu_deinit:00000052 .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1144   .text.rcu_deinit:00000058 .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1147   .text.rcu_deinit:0000005a .LM315
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1150   .text.rcu_deinit:0000005e .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1167   .text.rcu_osci_on:00000000 .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1179   .text.rcu_osci_off:00000000 .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1191   .text.rcu_osci_bypass_mode_enable:00000000 .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1193   .text.rcu_osci_bypass_mode_enable:00000000 .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1194   .text.rcu_osci_bypass_mode_enable:00000000 .LM321
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1199   .text.rcu_osci_bypass_mode_enable:0000000a .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1204   .text.rcu_osci_bypass_mode_enable:0000000e .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1205   .text.rcu_osci_bypass_mode_enable:0000000e .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1209   .text.rcu_osci_bypass_mode_enable:00000014 .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1210   .text.rcu_osci_bypass_mode_enable:00000014 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1216   .text.rcu_osci_bypass_mode_enable:0000001e .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1217   .text.rcu_osci_bypass_mode_enable:0000001e .LM328
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1221   .text.rcu_osci_bypass_mode_enable:00000024 .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1223   .text.rcu_osci_bypass_mode_enable:00000026 .LM330
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 51
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1227   .text.rcu_osci_bypass_mode_enable:00000028 .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1228   .text.rcu_osci_bypass_mode_enable:00000028 .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1232   .text.rcu_osci_bypass_mode_enable:0000002e .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1233   .text.rcu_osci_bypass_mode_enable:0000002e .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1235   .text.rcu_osci_bypass_mode_enable:00000030 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1238   .text.rcu_osci_bypass_mode_enable:00000034 .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1241   .text.rcu_osci_bypass_mode_enable:00000038 .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1242   .text.rcu_osci_bypass_mode_enable:00000038 .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1244   .text.rcu_osci_bypass_mode_enable:0000003a .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1245   .text.rcu_osci_bypass_mode_enable:0000003a .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1257   .text.rcu_osci_bypass_mode_disable:00000000 .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1259   .text.rcu_osci_bypass_mode_disable:00000000 .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1260   .text.rcu_osci_bypass_mode_disable:00000000 .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1265   .text.rcu_osci_bypass_mode_disable:0000000a .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1270   .text.rcu_osci_bypass_mode_disable:0000000e .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1271   .text.rcu_osci_bypass_mode_disable:0000000e .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1275   .text.rcu_osci_bypass_mode_disable:00000014 .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1276   .text.rcu_osci_bypass_mode_disable:00000014 .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1282   .text.rcu_osci_bypass_mode_disable:0000001e .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1283   .text.rcu_osci_bypass_mode_disable:0000001e .LM350
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1288   .text.rcu_osci_bypass_mode_disable:00000026 .LM351
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1290   .text.rcu_osci_bypass_mode_disable:00000028 .LM352
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1294   .text.rcu_osci_bypass_mode_disable:0000002a .LM353
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1295   .text.rcu_osci_bypass_mode_disable:0000002a .LM354
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1299   .text.rcu_osci_bypass_mode_disable:00000030 .LM355
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1300   .text.rcu_osci_bypass_mode_disable:00000030 .LM356
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1302   .text.rcu_osci_bypass_mode_disable:00000032 .LM357
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1305   .text.rcu_osci_bypass_mode_disable:00000034 .LM358
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1308   .text.rcu_osci_bypass_mode_disable:00000038 .LM359
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1309   .text.rcu_osci_bypass_mode_disable:00000038 .LM360
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1311   .text.rcu_osci_bypass_mode_disable:0000003a .LM361
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1312   .text.rcu_osci_bypass_mode_disable:0000003a .LM362
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1323   .text.rcu_hxtal_clock_monitor_enable:00000000 .LM363
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1325   .text.rcu_hxtal_clock_monitor_enable:00000000 .LM364
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1328   .text.rcu_hxtal_clock_monitor_enable:00000006 .LM365
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1332   .text.rcu_hxtal_clock_monitor_enable:0000000e .LM366
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1343   .text.rcu_hxtal_clock_monitor_disable:00000000 .LM367
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1345   .text.rcu_hxtal_clock_monitor_disable:00000000 .LM368
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1346   .text.rcu_hxtal_clock_monitor_disable:00000000 .LM369
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1353   .text.rcu_hxtal_clock_monitor_disable:00000010 .LM370
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1365   .text.rcu_irc8m_adjust_value_set:00000000 .LM371
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1367   .text.rcu_irc8m_adjust_value_set:00000000 .LM372
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1368   .text.rcu_irc8m_adjust_value_set:00000000 .LM373
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1369   .text.rcu_irc8m_adjust_value_set:00000000 .LM374
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1373   .text.rcu_irc8m_adjust_value_set:00000006 .LM375
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1374   .text.rcu_irc8m_adjust_value_set:00000006 .LM376
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1375   .text.rcu_irc8m_adjust_value_set:00000006 .LM377
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1378   .text.rcu_irc8m_adjust_value_set:00000008 .LM378
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1380   .text.rcu_irc8m_adjust_value_set:0000000c .LM379
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1383   .text.rcu_irc8m_adjust_value_set:00000010 .LM380
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1385   .text.rcu_irc8m_adjust_value_set:00000012 .LM381
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1387   .text.rcu_irc8m_adjust_value_set:00000014 .LM382
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1399   .text.rcu_deepsleep_voltage_set:00000000 .LM383
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1401   .text.rcu_deepsleep_voltage_set:00000000 .LM384
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1402   .text.rcu_deepsleep_voltage_set:00000000 .LM385
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1405   .text.rcu_deepsleep_voltage_set:00000002 .LM386
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1406   .text.rcu_deepsleep_voltage_set:00000002 .LM387
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 52
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1409   .text.rcu_deepsleep_voltage_set:00000008 .LM388
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1421   .text.rcu_clock_freq_get:00000000 .LM389
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1423   .text.rcu_clock_freq_get:00000000 .LM390
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1424   .text.rcu_clock_freq_get:00000000 .LM391
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1425   .text.rcu_clock_freq_get:00000000 .LM392
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1426   .text.rcu_clock_freq_get:00000000 .LM393
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1427   .text.rcu_clock_freq_get:00000000 .LM394
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1428   .text.rcu_clock_freq_get:00000000 .LM395
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1432   .text.rcu_clock_freq_get:00000002 .LM396
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1434   .text.rcu_clock_freq_get:00000004 .LM397
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1436   .text.rcu_clock_freq_get:00000006 .LM398
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1439   .text.rcu_clock_freq_get:0000000e .LM399
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1441   .text.rcu_clock_freq_get:00000010 .LM400
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1444   .text.rcu_clock_freq_get:00000014 .LM401
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1447   .text.rcu_clock_freq_get:00000016 .LM402
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1450   .text.rcu_clock_freq_get:0000001e .LM403
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1451   .text.rcu_clock_freq_get:0000001e .LM404
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1455   .text.rcu_clock_freq_get:00000028 .LM405
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1456   .text.rcu_clock_freq_get:00000028 .LM406
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1458   .text.rcu_clock_freq_get:0000002a .LM407
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1459   .text.rcu_clock_freq_get:0000002a .LM408
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1461   .text.rcu_clock_freq_get:0000002c .LM409
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1463   .text.rcu_clock_freq_get:0000002e .LM410
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1467   .text.rcu_clock_freq_get:00000034 .LM411
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1468   .text.rcu_clock_freq_get:00000034 .LM412
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1470   .text.rcu_clock_freq_get:00000038 .LM413
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1474   .text.rcu_clock_freq_get:0000003c .LM414
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1476   .text.rcu_clock_freq_get:00000040 .LM415
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1478   .text.rcu_clock_freq_get:00000044 .LM416
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1481   .text.rcu_clock_freq_get:00000048 .LM417
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1483   .text.rcu_clock_freq_get:00000048 .LM418
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1484   .text.rcu_clock_freq_get:00000048 .LM419
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1486   .text.rcu_clock_freq_get:0000004c .LM420
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1488   .text.rcu_clock_freq_get:00000050 .LM421
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1490   .text.rcu_clock_freq_get:00000054 .LM422
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1492   .text.rcu_clock_freq_get:00000058 .LM423
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1494   .text.rcu_clock_freq_get:00000058 .LM424
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1495   .text.rcu_clock_freq_get:00000058 .LM425
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1499   .text.rcu_clock_freq_get:0000005e .LM426
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1502   .text.rcu_clock_freq_get:00000062 .LM427
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1503   .text.rcu_clock_freq_get:00000062 .LM428
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1506   .text.rcu_clock_freq_get:0000006a .LM429
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1507   .text.rcu_clock_freq_get:0000006a .LM430
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1510   .text.rcu_clock_freq_get:0000006c .LM431
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1512   .text.rcu_clock_freq_get:0000006e .LM432
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1514   .text.rcu_clock_freq_get:00000070 .LM433
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1516   .text.rcu_clock_freq_get:00000072 .LM434
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1519   .text.rcu_clock_freq_get:00000076 .LM435
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1521   .text.rcu_clock_freq_get:00000078 .LM436
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1523   .text.rcu_clock_freq_get:0000007a .LM437
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1526   .text.rcu_clock_freq_get:0000007c .LM438
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1527   .text.rcu_clock_freq_get:0000007c .LM439
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1528   .text.rcu_clock_freq_get:0000007c .LM440
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1530   .text.rcu_clock_freq_get:00000080 .LM441
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1534   .text.rcu_clock_freq_get:00000082 .LM442
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1535   .text.rcu_clock_freq_get:00000082 .LM443
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1539   .text.rcu_clock_freq_get:0000008e .LM444
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 53
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1543   .text.rcu_clock_freq_get:00000092 .LM445
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1544   .text.rcu_clock_freq_get:00000092 .LM446
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1548   .text.rcu_clock_freq_get:00000098 .LM447
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1549   .text.rcu_clock_freq_get:00000098 .LM448
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1552   .text.rcu_clock_freq_get:0000009a .LM449
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1554   .text.rcu_clock_freq_get:0000009c .LM450
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1558   .text.rcu_clock_freq_get:000000a0 .LM451
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1559   .text.rcu_clock_freq_get:000000a0 .LM452
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1563   .text.rcu_clock_freq_get:000000a8 .LM453
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1565   .text.rcu_clock_freq_get:000000aa .LM454
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1567   .text.rcu_clock_freq_get:000000ac .LM455
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1570   .text.rcu_clock_freq_get:000000ae .LM456
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1571   .text.rcu_clock_freq_get:000000ae .LM457
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1574   .text.rcu_clock_freq_get:000000b6 .LM458
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1575   .text.rcu_clock_freq_get:000000b6 .LM459
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1578   .text.rcu_clock_freq_get:000000ba .LM460
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1580   .text.rcu_clock_freq_get:000000ba .LM461
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1581   .text.rcu_clock_freq_get:000000ba .LM462
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1582   .text.rcu_clock_freq_get:000000ba .LM463
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1585   .text.rcu_clock_freq_get:000000bc .LM464
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1588   .text.rcu_clock_freq_get:000000be .LM465
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1589   .text.rcu_clock_freq_get:000000be .LM466
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1592   .text.rcu_clock_freq_get:000000c4 .LM467
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1593   .text.rcu_clock_freq_get:000000c4 .LM468
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1596   .text.rcu_clock_freq_get:000000c6 .LM469
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1597   .text.rcu_clock_freq_get:000000c6 .LM470
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1598   .text.rcu_clock_freq_get:000000c6 .LM471
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1602   .text.rcu_clock_freq_get:000000ca .LM472
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1605   .text.rcu_clock_freq_get:000000ce .LM473
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1607   .text.rcu_clock_freq_get:000000ce .LM474
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1608   .text.rcu_clock_freq_get:000000ce .LM475
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1612   .text.rcu_clock_freq_get:000000d4 .LM476
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1613   .text.rcu_clock_freq_get:000000d4 .LM477
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1614   .text.rcu_clock_freq_get:000000d4 .LM478
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1616   .text.rcu_clock_freq_get:000000d6 .LM479
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1619   .text.rcu_clock_freq_get:000000d8 .LM480
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1622   .text.rcu_clock_freq_get:000000da .LM481
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1625   .text.rcu_clock_freq_get:000000de .LM482
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1628   .text.rcu_clock_freq_get:000000e0 .LM483
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1630   .text.rcu_clock_freq_get:000000e4 .LM484
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1632   .text.rcu_clock_freq_get:000000e6 .LM485
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1634   .text.rcu_clock_freq_get:000000e8 .LM486
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1637   .text.rcu_clock_freq_get:000000ec .LM487
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1638   .text.rcu_clock_freq_get:000000ec .LM488
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1639   .text.rcu_clock_freq_get:000000ec .LM489
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1640   .text.rcu_clock_freq_get:000000ec .LM490
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1641   .text.rcu_clock_freq_get:000000ec .LM491
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1642   .text.rcu_clock_freq_get:000000ec .LM492
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1643   .text.rcu_clock_freq_get:000000ec .LM493
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1647   .text.rcu_clock_freq_get:000000f6 .LM494
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1651   .text.rcu_clock_freq_get:000000f8 .LM495
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1658   .text.rcu_clock_freq_get:000000fc .LM496
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1662   .text.rcu_clock_freq_get:000000fe .LM497
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1668   .text.rcu_clock_freq_get:00000100 .LM498
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1669   .text.rcu_clock_freq_get:00000100 .LM499
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1672   .text.rcu_clock_freq_get:00000102 .LM500
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1674   .text.rcu_clock_freq_get:00000106 .LM501
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s 			page 54
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1677   .text.rcu_clock_freq_get:00000108 .LM502
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1682   .text.rcu_clock_freq_get:0000010c .LM503
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1685   .text.rcu_clock_freq_get:0000010e .LM504
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1688   .text.rcu_clock_freq_get:00000110 .LM505
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1690   .text.rcu_clock_freq_get:00000114 .LM506
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1693   .text.rcu_clock_freq_get:00000116 .LM507
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1695   .text.rcu_clock_freq_get:00000118 .LM508
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1698   .text.rcu_clock_freq_get:0000011e .LM509
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1703   .text.rcu_clock_freq_get:00000124 .LM510
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1706   .text.rcu_clock_freq_get:00000126 .LM511
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1708   .text.rcu_clock_freq_get:00000128 .LM512
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1711   .text.rcu_clock_freq_get:0000012c .LM513
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1713   .text.rcu_clock_freq_get:00000130 .LM514
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1717   .text.rcu_clock_freq_get:00000134 .LM515
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1719   .text.rcu_clock_freq_get:00000138 .LM516
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1721   .text.rcu_clock_freq_get:00000138 .LM517
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1722   .text.rcu_clock_freq_get:00000138 .LM518
+C:\Users\Administrator\AppData\Local\Temp\ccbZUfzL.s:1723   .text.rcu_clock_freq_get:00000138 .LM519
+
+UNDEFINED SYMBOLS
+memcpy

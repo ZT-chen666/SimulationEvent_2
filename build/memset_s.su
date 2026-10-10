@@ -1,0 +1,3 @@
+liteos_m//components/bounds_checking_function/src/memset_s.c:468:9:memset_s	32	static
+liteos_m//components/bounds_checking_function/src/memset_s.c:486:9:memset_sOptAsm	32	static
+liteos_m//components/bounds_checking_function/src/memset_s.c:499:9:memset_sOptTc	32	static

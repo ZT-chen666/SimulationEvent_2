@@ -1,0 +1,6 @@
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:53:29:HalSysExit	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:41:28:HalArchInit	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:60:29:HalTskStackInit	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:93:30:HalStartSchedule	16	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:101:6:HalTaskSchedule	0	static
+liteos_m//kernel/arch/risc-v/nuclei/gcc/los_context.c:106:6:HalTaskSwitch	16	static

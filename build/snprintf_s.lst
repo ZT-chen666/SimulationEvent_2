@@ -1,0 +1,230 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s 			page 1
+
+
+   1              		.file	"snprintf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.snprintf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	snprintf_s
+  13              	snprintf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22 0000 7971     		addi	sp,sp,-48
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 48
+  25 0002 3AD0     		sw	a4,32(sp)
+  26              	.LM6:
+  27 0004 1810     		addi	a4,sp,32
+  28              	.LM7:
+  29 0006 06CE     		sw	ra,28(sp)
+  30              		.cfi_offset 1, -20
+  31              	.LM8:
+  32 0008 3ED2     		sw	a5,36(sp)
+  33 000a 42D4     		sw	a6,40(sp)
+  34 000c 46D6     		sw	a7,44(sp)
+  35              	.LM9:
+  36 000e 3AC6     		sw	a4,12(sp)
+  37              	.LM10:
+  38              	.LM11:
+  39 0010 97000000 		call	vsnprintf_s
+  39      E7800000 
+  40              	.LVL1:
+  41              	.LM12:
+  42              	.LM13:
+  43              	.LM14:
+  44              	.LM15:
+  45 0018 F240     		lw	ra,28(sp)
+  46              		.cfi_restore 1
+  47 001a 4561     		addi	sp,sp,48
+  48              	.LCFI1:
+  49              		.cfi_def_cfa_offset 0
+  50 001c 8280     		jr	ra
+  51              		.cfi_endproc
+  52              	.LFE4:
+  54              		.section	.text.snprintf_truncated_s,"ax",@progbits
+  55              		.align	1
+  56              		.globl	snprintf_truncated_s
+  58              	snprintf_truncated_s:
+  59              	.LVL2:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s 			page 2
+
+
+  60              	.LFB5:
+  61              	.LM16:
+  62              		.cfi_startproc
+  63              	.LM17:
+  64              	.LM18:
+  65              	.LM19:
+  66              	.LM20:
+  67 0000 3971     		addi	sp,sp,-64
+  68              	.LCFI2:
+  69              		.cfi_def_cfa_offset 64
+  70 0002 36D6     		sw	a3,44(sp)
+  71              	.LM21:
+  72 0004 7410     		addi	a3,sp,44
+  73              	.LM22:
+  74 0006 06CE     		sw	ra,28(sp)
+  75              		.cfi_offset 1, -36
+  76              	.LM23:
+  77 0008 3AD8     		sw	a4,48(sp)
+  78 000a 3EDA     		sw	a5,52(sp)
+  79 000c 42DC     		sw	a6,56(sp)
+  80 000e 46DE     		sw	a7,60(sp)
+  81              	.LM24:
+  82 0010 36C6     		sw	a3,12(sp)
+  83              	.LM25:
+  84              	.LM26:
+  85 0012 97000000 		call	vsnprintf_truncated_s
+  85      E7800000 
+  86              	.LVL3:
+  87              	.LM27:
+  88              	.LM28:
+  89              	.LM29:
+  90              	.LM30:
+  91 001a F240     		lw	ra,28(sp)
+  92              		.cfi_restore 1
+  93 001c 2161     		addi	sp,sp,64
+  94              	.LCFI3:
+  95              		.cfi_def_cfa_offset 0
+  96 001e 8280     		jr	ra
+  97              		.cfi_endproc
+  98              	.LFE5:
+ 100              		.text
+ 101              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 snprintf_s.c
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:10     .text.snprintf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:13     .text.snprintf_s:00000000 snprintf_s
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:17     .text.snprintf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:24     .text.snprintf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:30     .text.snprintf_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:46     .text.snprintf_s:0000001a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:49     .text.snprintf_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:51     .text.snprintf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:55     .text.snprintf_truncated_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:58     .text.snprintf_truncated_s:00000000 snprintf_truncated_s
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:62     .text.snprintf_truncated_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:69     .text.snprintf_truncated_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:75     .text.snprintf_truncated_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:92     .text.snprintf_truncated_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:95     .text.snprintf_truncated_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:97     .text.snprintf_truncated_s:00000020 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:466    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1242   .debug_str:00000040 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1266   .debug_str:00000193 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1274   .debug_str:000001f8 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:986    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:994    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1248   .debug_str:0000012b .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1284   .debug_str:00000235 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1272   .debug_str:000001ec .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1240   .debug_str:00000032 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1282   .debug_str:0000022b .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1270   .debug_str:000001d9 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1260   .debug_str:0000016c .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1246   .debug_str:00000119 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1232   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1238   .debug_str:0000002b .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1280   .debug_str:0000021f .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1278   .debug_str:00000210 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1244   .debug_str:00000107 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1262   .debug_str:00000175 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1254   .debug_str:00000155 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1264   .debug_str:0000017d .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1256   .debug_str:0000015a .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1236   .debug_str:00000016 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:60     .text.snprintf_truncated_s:00000000 .LFB5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:98     .text.snprintf_truncated_s:00000020 .LFE5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:740    .debug_loc:00000000 .LLST6
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1234   .debug_str:0000000e .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:763    .debug_loc:00000031 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:758    .debug_loc:0000002d .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1252   .debug_str:0000014d .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:788    .debug_loc:0000005c .LLST8
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:783    .debug_loc:00000058 .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1268   .debug_str:000001d2 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:813    .debug_loc:00000087 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:808    .debug_loc:00000083 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:836    .debug_loc:000000b0 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:833    .debug_loc:000000ae .LVUS10
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1276   .debug_str:00000208 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:86     .text.snprintf_truncated_s:0000001a .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1250   .debug_str:00000142 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:15     .text.snprintf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:52     .text.snprintf_s:0000001e .LFE4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:843    .debug_loc:000000c3 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:866    .debug_loc:000000f3 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:861    .debug_loc:000000ef .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:891    .debug_loc:0000011e .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:886    .debug_loc:0000011a .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:1258   .debug_str:00000166 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:916    .debug_loc:00000149 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:911    .debug_loc:00000145 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:941    .debug_loc:00000174 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:936    .debug_loc:00000170 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:964    .debug_loc:0000019d .LLST5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:961    .debug_loc:0000019b .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:40     .text.snprintf_s:00000018 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:68     .text.snprintf_truncated_s:00000002 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:94     .text.snprintf_truncated_s:0000001e .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:59     .text.snprintf_truncated_s:00000000 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:23     .text.snprintf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:48     .text.snprintf_s:0000001c .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:14     .text.snprintf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:103    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:16     .text.snprintf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:18     .text.snprintf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:19     .text.snprintf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:20     .text.snprintf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:21     .text.snprintf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:26     .text.snprintf_s:00000004 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:28     .text.snprintf_s:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:31     .text.snprintf_s:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:35     .text.snprintf_s:0000000e .LM9
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:37     .text.snprintf_s:00000010 .LM10
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:38     .text.snprintf_s:00000010 .LM11
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:41     .text.snprintf_s:00000018 .LM12
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:42     .text.snprintf_s:00000018 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:43     .text.snprintf_s:00000018 .LM14
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:44     .text.snprintf_s:00000018 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:61     .text.snprintf_truncated_s:00000000 .LM16
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:63     .text.snprintf_truncated_s:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:64     .text.snprintf_truncated_s:00000000 .LM18
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:65     .text.snprintf_truncated_s:00000000 .LM19
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:66     .text.snprintf_truncated_s:00000000 .LM20
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:71     .text.snprintf_truncated_s:00000004 .LM21
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:73     .text.snprintf_truncated_s:00000006 .LM22
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:76     .text.snprintf_truncated_s:00000008 .LM23
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:81     .text.snprintf_truncated_s:00000010 .LM24
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:83     .text.snprintf_truncated_s:00000012 .LM25
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:84     .text.snprintf_truncated_s:00000012 .LM26
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:87     .text.snprintf_truncated_s:0000001a .LM27
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:88     .text.snprintf_truncated_s:0000001a .LM28
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:89     .text.snprintf_truncated_s:0000001a .LM29
+C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s:90     .text.snprintf_truncated_s:0000001a .LM30
+
+UNDEFINED SYMBOLS
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cctEniCy.s 			page 5
+
+
+vsnprintf_s
+vsnprintf_truncated_s

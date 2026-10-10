@@ -1,0 +1,336 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 1
+
+
+   1              		.file	"main.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.rodata.main.str1.4,"aMS",@progbits,1
+  10              		.align	2
+  11              	.LC0:
+  12 0000 424F4F54 		.string	"BOOT_FAIL,%lx\n"
+  12      5F464149 
+  12      4C2C256C 
+  12      780A00
+  13 000f 00       		.align	2
+  14              	.LC1:
+  15 0010 53434845 		.string	"SCHED_EXIT,%lx\n"
+  15      445F4558 
+  15      49542C25 
+  15      6C780A00 
+  16              		.section	.text.startup.main,"ax",@progbits
+  17              		.align	1
+  18              		.globl	main
+  20              	main:
+  21              	.LFB164:
+  22              	.LM1:
+  23              		.cfi_startproc
+  24              	.LM2:
+  25              	.LM3:
+  26              	.LM4:
+  27 0000 4111     		addi	sp,sp,-16
+  28              	.LCFI0:
+  29              		.cfi_def_cfa_offset 16
+  30 0002 06C6     		sw	ra,12(sp)
+  31              		.cfi_offset 1, -4
+  32              	.LM5:
+  33 0004 97000000 		call	board_safe_init
+  33      E7800000 
+  34              	.LVL0:
+  35              	.LM6:
+  36              	.LM7:
+  37 000c 97070000 		lw	a5,_impure_ptr
+  37      83A70700 
+  38              	.LM8:
+  39 0014 8146     		li	a3,0
+  40 0016 0946     		li	a2,2
+  41 0018 8847     		lw	a0,8(a5)
+  42 001a 8145     		li	a1,0
+  43 001c 97000000 		call	setvbuf
+  43      E7800000 
+  44              	.LVL1:
+  45              	.LM9:
+  46              	.LM10:
+  47 0024 97000000 		call	LOS_KernelInit
+  47      E7800000 
+  48              	.LVL2:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 2
+
+
+  49              	.LM11:
+  50              	.LM12:
+  51 002c 19C9     		beq	a0,zero,.L2
+  52 002e AA85     		mv	a1,a0
+  53              	.LM13:
+  54 0030 17050000 		lla	a0,.LC0
+  54      13050500 
+  55              	.LVL3:
+  56              	.LM14:
+  57 0038 97000000 		call	printf
+  57      E7800000 
+  58              	.LVL4:
+  59              	.L3:
+  60              	.LM15:
+  61              	.LM16:
+  62              	.LM17:
+  63 0040 01A0     		j	.L3
+  64              	.LVL5:
+  65              	.L2:
+  66              	.LM18:
+  67 0042 97000000 		call	app_start
+  67      E7800000 
+  68              	.LVL6:
+  69              	.LM19:
+  70              	.LM20:
+  71 004a 97000000 		call	LOS_Start
+  71      E7800000 
+  72              	.LVL7:
+  73 0052 AA85     		mv	a1,a0
+  74              	.LVL8:
+  75              	.LM21:
+  76 0054 17050000 		lla	a0,.LC1
+  76      13050500 
+  77              	.LVL9:
+  78              	.LM22:
+  79 005c 97000000 		call	printf
+  79      E7800000 
+  80              	.LVL10:
+  81              	.LM23:
+  82 0064 37150140 		li	a0,1073811456
+  83 0068 9305000C 		li	a1,192
+  84 006c 13050580 		addi	a0,a0,-2048
+  85 0070 97000000 		call	gpio_bit_reset
+  85      E7800000 
+  86              	.LVL11:
+  87              	.LM24:
+  88 0078 37150140 		li	a0,1073811456
+  89 007c 8545     		li	a1,1
+  90 007e 130505C0 		addi	a0,a0,-1024
+  91 0082 97000000 		call	gpio_bit_reset
+  91      E7800000 
+  92              	.LVL12:
+  93              	.L4:
+  94              	.LM25:
+  95              	.LM26:
+  96              	.LM27:
+  97 008a 01A0     		j	.L4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 3
+
+
+  98              		.cfi_endproc
+  99              	.LFE164:
+ 101              		.text
+ 102              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:17     .text.startup.main:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:20     .text.startup.main:00000000 main
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:23     .text.startup.main:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:29     .text.startup.main:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:31     .text.startup.main:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:98     .text.startup.main:0000008c .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:37     .text.startup.main:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:11     .rodata.main.str1.4:00000000 .LC0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:54     .text.startup.main:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:14     .rodata.main.str1.4:00000010 .LC1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:76     .text.startup.main:00000054 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:65     .text.startup.main:00000042 .L2
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:59     .text.startup.main:00000040 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:93     .text.startup.main:0000008a .L4
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:1470   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2434   .debug_str:0000014b .LASF115
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2482   .debug_str:000002e6 .LASF116
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2438   .debug_str:0000021d .LASF117
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2068   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2074   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2404   .debug_str:000000b7 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2510   .debug_str:00000373 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2374   .debug_str:00000007 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2574   .debug_str:00000481 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2414   .debug_str:000000e1 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2436   .debug_str:00000212 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2464   .debug_str:0000028f .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2422   .debug_str:00000107 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2390   .debug_str:00000066 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2568   .debug_str:00000461 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2582   .debug_str:000004ae .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2378   .debug_str:0000001f .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2558   .debug_str:0000043a .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2494   .debug_str:00000311 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2502   .debug_str:00000340 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2424   .debug_str:00000115 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2562   .debug_str:0000044d .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2484   .debug_str:000002ed .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2400   .debug_str:000000a9 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2556   .debug_str:00000432 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2588   .debug_str:000004c6 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2478   .debug_str:000002d8 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2454   .debug_str:00000264 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2548   .debug_str:00000415 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2552   .debug_str:00000424 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2526   .debug_str:000003b8 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2578   .debug_str:00000499 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2480   .debug_str:000002de .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2550   .debug_str:0000041d .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2516   .debug_str:0000038f .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2446   .debug_str:00000247 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2570   .debug_str:0000046e .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2540   .debug_str:000003f8 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2440   .debug_str:0000022d .LASF31
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 5
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2584   .debug_str:000004b7 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2452   .debug_str:0000025f .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2398   .debug_str:000000a0 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2600   .debug_str:00000503 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2410   .debug_str:000000cf .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2610   .debug_str:00000523 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2496   .debug_str:00000318 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2492   .debug_str:00000307 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2586   .debug_str:000004bc .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2518   .debug_str:00000398 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2596   .debug_str:000004e9 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2520   .debug_str:000003a2 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2408   .debug_str:000000c9 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2566   .debug_str:0000045b .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2528   .debug_str:000003c3 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2416   .debug_str:000000ea .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2466   .debug_str:000002a1 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2392   .debug_str:0000007d .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2412   .debug_str:000000d9 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2448   .debug_str:0000024f .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2490   .debug_str:00000300 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2554   .debug_str:0000042c .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2402   .debug_str:000000b0 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2406   .debug_str:000000c3 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2594   .debug_str:000004e3 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2564   .debug_str:00000452 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2428   .debug_str:00000124 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2384   .debug_str:00000040 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2486   .debug_str:000002f4 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2530   .debug_str:000003cb .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2522   .debug_str:000003a9 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2542   .debug_str:00000400 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2560   .debug_str:00000446 .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2418   .debug_str:000000f1 .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2458   .debug_str:00000275 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2444   .debug_str:0000023f .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2468   .debug_str:000002a7 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2382   .debug_str:00000035 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2536   .debug_str:000003e6 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2538   .debug_str:000003ee .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2476   .debug_str:000002d0 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2450   .debug_str:00000255 .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2606   .debug_str:00000519 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2504   .debug_str:00000346 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2460   .debug_str:0000027d .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2426   .debug_str:0000011c .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2512   .debug_str:00000381 .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2592   .debug_str:000004d9 .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2524   .debug_str:000003b1 .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2544   .debug_str:00000407 .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2546   .debug_str:0000040f .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2488   .debug_str:000002fa .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2576   .debug_str:00000494 .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2572   .debug_str:00000474 .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2474   .debug_str:000002c3 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2598   .debug_str:000004f4 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2498   .debug_str:00000321 .LASF89
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 6
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2470   .debug_str:000002ac .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2602   .debug_str:0000050c .LASF91
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2532   .debug_str:000003d4 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2376   .debug_str:00000011 .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2508   .debug_str:00000365 .LASF94
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2590   .debug_str:000004cf .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2472   .debug_str:000002b7 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2580   .debug_str:000004a1 .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2432   .debug_str:0000013d .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2396   .debug_str:00000091 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2430   .debug_str:0000012c .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2386   .debug_str:00000046 .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2388   .debug_str:00000055 .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2514   .debug_str:00000386 .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2506   .debug_str:00000350 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2394   .debug_str:00000086 .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2442   .debug_str:00000233 .LASF114
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2534   .debug_str:000003e1 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2380   .debug_str:00000026 .LASF118
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2456   .debug_str:0000026b .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2462   .debug_str:00000285 .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2372   .debug_str:00000000 .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2420   .debug_str:000000f8 .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2604   .debug_str:00000511 .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2500   .debug_str:00000330 .LASF113
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2608   .debug_str:0000051e .LASF119
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:21     .text.startup.main:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:99     .text.startup.main:0000008c .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2008   .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2032   .debug_loc:0000002a .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:2021   .debug_loc:00000020 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:34     .text.startup.main:0000000c .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:44     .text.startup.main:00000024 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:48     .text.startup.main:0000002c .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:58     .text.startup.main:00000040 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:68     .text.startup.main:0000004a .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:72     .text.startup.main:00000052 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:80     .text.startup.main:00000064 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:86     .text.startup.main:00000078 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:92     .text.startup.main:0000008a .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:28     .text.startup.main:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:55     .text.startup.main:00000038 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:64     .text.startup.main:00000042 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:74     .text.startup.main:00000054 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:77     .text.startup.main:0000005c .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:104    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:22     .text.startup.main:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:24     .text.startup.main:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:25     .text.startup.main:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:26     .text.startup.main:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:32     .text.startup.main:00000004 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:35     .text.startup.main:0000000c .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:36     .text.startup.main:0000000c .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:38     .text.startup.main:00000014 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:45     .text.startup.main:00000024 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:46     .text.startup.main:00000024 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:49     .text.startup.main:0000002c .LM11
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s 			page 7
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:50     .text.startup.main:0000002c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:53     .text.startup.main:00000030 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:56     .text.startup.main:00000038 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:60     .text.startup.main:00000040 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:61     .text.startup.main:00000040 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:62     .text.startup.main:00000040 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:66     .text.startup.main:00000042 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:69     .text.startup.main:0000004a .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:70     .text.startup.main:0000004a .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:75     .text.startup.main:00000054 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:78     .text.startup.main:0000005c .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:81     .text.startup.main:00000064 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:87     .text.startup.main:00000078 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:94     .text.startup.main:0000008a .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:95     .text.startup.main:0000008a .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccuVdNNC.s:96     .text.startup.main:0000008a .LM27
+
+UNDEFINED SYMBOLS
+board_safe_init
+_impure_ptr
+setvbuf
+LOS_KernelInit
+printf
+app_start
+LOS_Start
+gpio_bit_reset

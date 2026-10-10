@@ -1,0 +1,8 @@
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:10:12:wait_level	16	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:25:12:read_bit	16	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:17:6:DHT11_Rst	16	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:23:4:DHT11_Check	16	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:31:4:DHT11_Read_Bit	32	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:32:4:DHT11_Read_Byte	32	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:34:4:DHT11_Init	16	static
+gd32vf103/SoC/gd32vf103/Board/Hardware/DHT11/dht11.c:39:4:DHT11_Read_Data	48	static

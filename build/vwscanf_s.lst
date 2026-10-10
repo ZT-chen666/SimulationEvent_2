@@ -1,0 +1,293 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 1
+
+
+   1              		.file	"vwscanf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.vwscanf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	vwscanf_s
+  13              	vwscanf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22              	.LM6:
+  23 0000 7971     		addi	sp,sp,-48
+  24              	.LCFI0:
+  25              		.cfi_def_cfa_offset 48
+  26              	.LM7:
+  27 0002 9147     		li	a5,4
+  28 0004 3EC2     		sw	a5,4(sp)
+  29              	.LM8:
+  30 0006 97070000 		lw	a5,_impure_ptr
+  30      83A70700 
+  31              	.LM9:
+  32 000e 06D6     		sw	ra,44(sp)
+  33              		.cfi_offset 1, -4
+  34              	.LM10:
+  35 0010 02C4     		sw	zero,8(sp)
+  36              	.LM11:
+  37 0012 DC43     		lw	a5,4(a5)
+  38 0014 02C6     		sw	zero,12(sp)
+  39              	.LM12:
+  40 0016 02C8     		sw	zero,16(sp)
+  41              	.LM13:
+  42              	.LM14:
+  43 0018 3ECA     		sw	a5,20(sp)
+  44              	.LM15:
+  45 001a 02CC     		sw	zero,24(sp)
+  46              	.LM16:
+  47 001c 02CE     		sw	zero,28(sp)
+  48              	.LM17:
+  49              	.LM18:
+  50              	.LM19:
+  51              	.LM20:
+  52 001e 99CB     		beq	a5,zero,.L4
+  53 0020 11C9     		beq	a0,zero,.L4
+  54 0022 2E86     		mv	a2,a1
+  55 0024 AA85     		mv	a1,a0
+  56              	.LVL1:
+  57              	.LM21:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 2
+
+
+  58              	.LM22:
+  59              	.LM23:
+  60 0026 4800     		addi	a0,sp,4
+  61              	.LVL2:
+  62              	.LM24:
+  63 0028 97000000 		call	SecInputSW
+  63      E7800000 
+  64              	.LVL3:
+  65              	.LM25:
+  66              	.LM26:
+  67              	.LM27:
+  68 0030 63530500 		bge	a0,zero,.L1
+  69              	.LVL4:
+  70              	.L4:
+  71              	.LM28:
+  72 0034 7D55     		li	a0,-1
+  73              	.L1:
+  74              	.LM29:
+  75 0036 B250     		lw	ra,44(sp)
+  76              		.cfi_restore 1
+  77 0038 4561     		addi	sp,sp,48
+  78              	.LCFI1:
+  79              		.cfi_def_cfa_offset 0
+  80 003a 8280     		jr	ra
+  81              		.cfi_endproc
+  82              	.LFE4:
+  84              		.text
+  85              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vwscanf_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:10     .text.vwscanf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:13     .text.vwscanf_s:00000000 vwscanf_s
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:17     .text.vwscanf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:25     .text.vwscanf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:33     .text.vwscanf_s:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:76     .text.vwscanf_s:00000038 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:79     .text.vwscanf_s:0000003a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:81     .text.vwscanf_s:0000003c .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:30     .text.vwscanf_s:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:70     .text.vwscanf_s:00000034 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:73     .text.vwscanf_s:00000036 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1443   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2360   .debug_str:0000018e .LASF116
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2332   .debug_str:000000d3 .LASF117
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2364   .debug_str:0000025f .LASF118
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2043   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2049   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2316   .debug_str:00000069 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2382   .debug_str:000002b2 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2330   .debug_str:000000c7 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2438   .debug_str:000003ce .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2444   .debug_str:000003ea .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2394   .debug_str:000002ee .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2342   .debug_str:0000012f .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2390   .debug_str:000002d6 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2328   .debug_str:000000b9 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2302   .debug_str:00000021 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2406   .debug_str:00000330 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2416   .debug_str:00000357 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2420   .debug_str:0000036e .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2348   .debug_str:00000144 .LASF119
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2308   .debug_str:0000003b .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2428   .debug_str:00000395 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2426   .debug_str:0000038e .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2490   .debug_str:000004a6 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2518   .debug_str:00000517 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2402   .debug_str:00000322 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2384   .debug_str:000002bf .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2478   .debug_str:00000478 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2482   .debug_str:00000487 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2452   .debug_str:0000040c .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2506   .debug_str:000004e1 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2404   .debug_str:00000328 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2480   .debug_str:00000480 .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2368   .debug_str:00000275 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2372   .debug_str:00000286 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2500   .debug_str:000004c9 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2470   .debug_str:0000045e .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2366   .debug_str:0000026f .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2512   .debug_str:00000501 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2380   .debug_str:000002ad .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2326   .debug_str:000000b0 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2496   .debug_str:000004ba .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2338   .debug_str:0000011d .LASF34
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2538   .debug_str:00000573 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2424   .debug_str:00000385 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2414   .debug_str:0000034d .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2514   .debug_str:00000506 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2446   .debug_str:000003f4 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2526   .debug_str:0000053a .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2448   .debug_str:000003fe .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2336   .debug_str:00000117 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2300   .debug_str:0000001b .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2454   .debug_str:00000417 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2344   .debug_str:00000138 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2392   .debug_str:000002e8 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2318   .debug_str:00000080 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2340   .debug_str:00000127 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2376   .debug_str:0000029d .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2412   .debug_str:00000346 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2484   .debug_str:0000048f .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2530   .debug_str:00000554 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2334   .debug_str:00000111 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2524   .debug_str:00000534 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2350   .debug_str:00000156 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2354   .debug_str:00000167 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2310   .debug_str:00000043 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2408   .debug_str:00000338 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2456   .debug_str:0000041f .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2410   .debug_str:0000033e .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2472   .debug_str:00000466 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2492   .debug_str:000004ae .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2516   .debug_str:00000510 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2386   .debug_str:000002c6 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2370   .debug_str:0000027e .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2462   .debug_str:00000440 .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2306   .debug_str:00000030 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2466   .debug_str:0000044c .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2468   .debug_str:00000454 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2400   .debug_str:0000031a .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2378   .debug_str:000002a3 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2536   .debug_str:0000056e .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2430   .debug_str:0000039c .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2388   .debug_str:000002ce .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2352   .debug_str:0000015f .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2440   .debug_str:000003dc .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2522   .debug_str:0000052a .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2494   .debug_str:000004b5 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2450   .debug_str:00000405 .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2304   .debug_str:00000028 .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2474   .debug_str:0000046d .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2498   .debug_str:000004c3 .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2504   .debug_str:000004dc .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2502   .debug_str:000004cf .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2398   .debug_str:0000030d .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2528   .debug_str:00000545 .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2374   .debug_str:0000028e .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2458   .debug_str:00000428 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2532   .debug_str:0000055b .LASF89
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2460   .debug_str:00000433 .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2534   .debug_str:00000560 .LASF91
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 5
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2434   .debug_str:000003bb .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2520   .debug_str:00000520 .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2396   .debug_str:00000301 .LASF94
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2508   .debug_str:000004e9 .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2358   .debug_str:00000180 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2324   .debug_str:000000a1 .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2356   .debug_str:0000016f .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2312   .debug_str:00000049 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2314   .debug_str:00000058 .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2442   .debug_str:000003e1 .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2432   .debug_str:000003a6 .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2320   .debug_str:00000089 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2488   .debug_str:0000049a .LASF114
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2346   .debug_str:0000013f .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2486   .debug_str:00000495 .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2436   .debug_str:000003c9 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2294   .debug_str:00000000 .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2322   .debug_str:00000094 .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2418   .debug_str:00000363 .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2298   .debug_str:0000000d .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2510   .debug_str:000004f6 .LASF120
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2362   .debug_str:00000255 .LASF121
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:15     .text.vwscanf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:82     .text.vwscanf_s:0000003c .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1940   .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2464   .debug_str:00000445 .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1965   .debug_loc:00000032 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1958   .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2422   .debug_str:0000037d .LASF113
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1996   .debug_loc:0000006a .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:1989   .debug_loc:00000064 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2296   .debug_str:00000006 .LASF115
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2023   .debug_loc:0000009e .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2020   .debug_loc:0000009c .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:2476   .debug_str:00000473 .LASF122
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:64     .text.vwscanf_s:00000030 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:24     .text.vwscanf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:78     .text.vwscanf_s:0000003a .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:14     .text.vwscanf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:61     .text.vwscanf_s:00000028 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:56     .text.vwscanf_s:00000026 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:69     .text.vwscanf_s:00000034 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:87     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:16     .text.vwscanf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:18     .text.vwscanf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:19     .text.vwscanf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:20     .text.vwscanf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:21     .text.vwscanf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:22     .text.vwscanf_s:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:26     .text.vwscanf_s:00000002 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:29     .text.vwscanf_s:00000006 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:31     .text.vwscanf_s:0000000e .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:34     .text.vwscanf_s:00000010 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:36     .text.vwscanf_s:00000012 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:39     .text.vwscanf_s:00000016 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:41     .text.vwscanf_s:00000018 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:42     .text.vwscanf_s:00000018 .LM14
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s 			page 6
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:44     .text.vwscanf_s:0000001a .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:46     .text.vwscanf_s:0000001c .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:48     .text.vwscanf_s:0000001e .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:49     .text.vwscanf_s:0000001e .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:50     .text.vwscanf_s:0000001e .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:51     .text.vwscanf_s:0000001e .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:57     .text.vwscanf_s:00000026 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:58     .text.vwscanf_s:00000026 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:59     .text.vwscanf_s:00000026 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:62     .text.vwscanf_s:00000028 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:65     .text.vwscanf_s:00000030 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:66     .text.vwscanf_s:00000030 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:67     .text.vwscanf_s:00000030 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:71     .text.vwscanf_s:00000034 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccQxDVbv.s:74     .text.vwscanf_s:00000036 .LM29
+
+UNDEFINED SYMBOLS
+_impure_ptr
+SecInputSW

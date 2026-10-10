@@ -1,0 +1,466 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 1
+
+
+   1              		.file	"wcscat_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.wcscat_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	wcscat_s
+  13              	wcscat_s:
+  14              	.LVL0:
+  15              	.LFB5:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 B7070020 		li	a5,536870912
+  21              	.LM4:
+  22 0004 1387F5FF 		addi	a4,a1,-1
+  23              	.LM5:
+  24 0008 F917     		addi	a5,a5,-2
+  25 000a 63E8E70A 		bgtu	a4,a5,.L20
+  26              	.LM6:
+  27              	.LM7:
+  28 000e D947     		li	a5,22
+  29              	.LM8:
+  30 0010 19C5     		beq	a0,zero,.L34
+  31              	.LBB6:
+  32              	.LBB7:
+  33              	.LBB8:
+  34              	.LM9:
+  35 0012 8147     		li	a5,0
+  36              	.LBE8:
+  37              	.LBE7:
+  38              	.LBE6:
+  39              	.LM10:
+  40 0014 11EA     		bne	a2,zero,.L3
+  41              	.LM11:
+  42              	.LM12:
+  43              	.LM13:
+  44              	.LM14:
+  45 0016 23200500 		sw	zero,0(a0)
+  46              	.LM15:
+  47              	.LVL1:
+  48              	.L14:
+  49              	.LM16:
+  50 001a 93076009 		li	a5,150
+  51              	.L34:
+  52              	.LM17:
+  53 001e 3E85     		mv	a0,a5
+  54 0020 8280     		ret
+  55              	.LVL2:
+  56              	.L5:
+  57              	.LBB16:
+  58              	.LBB12:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 2
+
+
+  59              	.LBB9:
+  60              	.LM18:
+  61 0022 8507     		addi	a5,a5,1
+  62              	.LVL3:
+  63              	.LM19:
+  64              	.LM20:
+  65 0024 6387F500 		beq	a1,a5,.L4
+  66              	.LVL4:
+  67              	.L3:
+  68              	.LM21:
+  69 0028 13972700 		slli	a4,a5,2
+  70 002c 2A97     		add	a4,a0,a4
+  71              	.LVL5:
+  72              	.LM22:
+  73 002e 1843     		lw	a4,0(a4)
+  74              	.LVL6:
+  75              	.LM23:
+  76 0030 6DFB     		bne	a4,zero,.L5
+  77              	.LVL7:
+  78              	.L4:
+  79              	.LM24:
+  80              	.LM25:
+  81              	.LBE9:
+  82              	.LM26:
+  83              	.LM27:
+  84              	.LM28:
+  85 0032 3388F540 		sub	a6,a1,a5
+  86              	.LVL8:
+  87              	.LM29:
+  88              	.LBB10:
+  89              	.LM30:
+  90              	.LM31:
+  91              	.LM32:
+  92 0036 0147     		li	a4,0
+  93              	.LVL9:
+  94              	.L6:
+  95              	.LM33:
+  96 0038 6316E802 		bne	a6,a4,.L7
+  97              	.L11:
+  98              	.LM34:
+  99              	.LVL10:
+ 100              	.LM35:
+ 101              	.LBE10:
+ 102              	.LM36:
+ 103              	.LM37:
+ 104              	.LM38:
+ 105 003c 636BC502 		bltu	a0,a2,.L8
+ 106              	.LM39:
+ 107 0040 6375A604 		bleu	a0,a2,.L19
+ 108              	.LM40:
+ 109 0044 93162700 		slli	a3,a4,2
+ 110 0048 B296     		add	a3,a2,a3
+ 111 004a 63EAA602 		bgtu	a0,a3,.L13
+ 112              	.L12:
+ 113              	.LM41:
+ 114              	.LM42:
+ 115 004e 8A07     		slli	a5,a5,2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 3
+
+
+ 116              	.LVL11:
+ 117              	.LM43:
+ 118 0050 23200500 		sw	zero,0(a0)
+ 119              	.LM44:
+ 120              	.LM45:
+ 121 0054 3E95     		add	a0,a0,a5
+ 122              	.LVL12:
+ 123              	.LM46:
+ 124 0056 6364A600 		bltu	a2,a0,.L24
+ 125 005a E30008FC 		beq	a6,zero,.L14
+ 126              	.L24:
+ 127              	.LM47:
+ 128 005e 9307600B 		li	a5,182
+ 129              	.LVL13:
+ 130              	.LM48:
+ 131 0062 75BF     		j	.L34
+ 132              	.LVL14:
+ 133              	.L7:
+ 134              	.LBB11:
+ 135              	.LM49:
+ 136 0064 93162700 		slli	a3,a4,2
+ 137 0068 B296     		add	a3,a2,a3
+ 138 006a 9442     		lw	a3,0(a3)
+ 139 006c E1DA     		beq	a3,zero,.L11
+ 140              	.LM50:
+ 141 006e 0507     		addi	a4,a4,1
+ 142              	.LVL15:
+ 143              	.LM51:
+ 144 0070 E1B7     		j	.L6
+ 145              	.LVL16:
+ 146              	.L8:
+ 147              	.LM52:
+ 148              	.LBE11:
+ 149              	.LM53:
+ 150 0072 B306F700 		add	a3,a4,a5
+ 151 0076 8A06     		slli	a3,a3,2
+ 152 0078 AA96     		add	a3,a0,a3
+ 153 007a E3FAC6FC 		bleu	a2,a3,.L12
+ 154              	.L13:
+ 155              	.LM54:
+ 156              	.LM55:
+ 157 007e B306F700 		add	a3,a4,a5
+ 158              	.LM56:
+ 159 0082 63F4B600 		bleu	a1,a3,.L19
+ 160 0086 6319C500 		bne	a0,a2,.L15
+ 161              	.L19:
+ 162              	.LM57:
+ 163              	.LM58:
+ 164 008a 23200500 		sw	zero,0(a0)
+ 165              	.LM59:
+ 166              	.LM60:
+ 167 008e E386F5F8 		beq	a1,a5,.L14
+ 168              	.LM61:
+ 169 0092 9307200A 		li	a5,162
+ 170              	.LVL17:
+ 171              	.LM62:
+ 172 0096 61B7     		j	.L34
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 4
+
+
+ 173              	.LVL18:
+ 174              	.L15:
+ 175              	.LM63:
+ 176 0098 8A07     		slli	a5,a5,2
+ 177              	.LVL19:
+ 178              	.LM64:
+ 179 009a B285     		mv	a1,a2
+ 180              	.LVL20:
+ 181              	.LM65:
+ 182 009c 13061700 		addi	a2,a4,1
+ 183              	.LVL21:
+ 184              	.LM66:
+ 185              	.LBE12:
+ 186              	.LBE16:
+ 187              	.LM67:
+ 188 00a0 4111     		addi	sp,sp,-16
+ 189              	.LCFI0:
+ 190              		.cfi_def_cfa_offset 16
+ 191              	.LBB17:
+ 192              	.LBB13:
+ 193              	.LM68:
+ 194 00a2 3E95     		add	a0,a0,a5
+ 195              	.LVL22:
+ 196              	.LM69:
+ 197 00a4 0A06     		slli	a2,a2,2
+ 198              	.LBE13:
+ 199              	.LBE17:
+ 200              	.LM70:
+ 201 00a6 06C6     		sw	ra,12(sp)
+ 202              		.cfi_offset 1, -4
+ 203              	.LBB18:
+ 204              	.LBB14:
+ 205              	.LM71:
+ 206 00a8 97000000 		call	memcpy
+ 206      E7800000 
+ 207              	.LVL23:
+ 208              	.LM72:
+ 209              	.LBE14:
+ 210              	.LBE18:
+ 211              	.LM73:
+ 212 00b0 B240     		lw	ra,12(sp)
+ 213              		.cfi_restore 1
+ 214              	.LBB19:
+ 215              	.LBB15:
+ 216              	.LM74:
+ 217 00b2 8147     		li	a5,0
+ 218              	.LBE15:
+ 219              	.LBE19:
+ 220              	.LM75:
+ 221 00b4 3E85     		mv	a0,a5
+ 222 00b6 4101     		addi	sp,sp,16
+ 223              	.LCFI1:
+ 224              		.cfi_def_cfa_offset 0
+ 225 00b8 8280     		jr	ra
+ 226              	.LVL24:
+ 227              	.L20:
+ 228              	.LM76:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 5
+
+
+ 229 00ba 93072002 		li	a5,34
+ 230 00be 85B7     		j	.L34
+ 231              		.cfi_endproc
+ 232              	.LFE5:
+ 234              		.text
+ 235              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 wcscat_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:10     .text.wcscat_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:13     .text.wcscat_s:00000000 wcscat_s
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:17     .text.wcscat_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:190    .text.wcscat_s:000000a2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:202    .text.wcscat_s:000000a8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:213    .text.wcscat_s:000000b2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:224    .text.wcscat_s:000000b8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:231    .text.wcscat_s:000000c0 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:227    .text.wcscat_s:000000ba .L20
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:51     .text.wcscat_s:0000001e .L34
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:67     .text.wcscat_s:00000028 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:78     .text.wcscat_s:00000032 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:56     .text.wcscat_s:00000022 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:133    .text.wcscat_s:00000064 .L7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:146    .text.wcscat_s:00000072 .L8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:161    .text.wcscat_s:0000008a .L19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:154    .text.wcscat_s:0000007e .L13
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:126    .text.wcscat_s:0000005e .L24
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:48     .text.wcscat_s:0000001a .L14
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:97     .text.wcscat_s:0000003c .L11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:94     .text.wcscat_s:00000038 .L6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:112    .text.wcscat_s:0000004e .L12
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:174    .text.wcscat_s:00000098 .L15
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:538    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1903   .debug_str:0000002d .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1917   .debug_str:00000146 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1937   .debug_str:000001e3 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1285   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1315   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1909   .debug_str:0000010e .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1945   .debug_str:00000210 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1933   .debug_str:000001cb .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1919   .debug_str:00000183 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1943   .debug_str:00000206 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1931   .debug_str:000001b8 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1925   .debug_str:000001a1 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1907   .debug_str:000000fc .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1893   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1899   .debug_str:0000001e .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1915   .debug_str:0000013e .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1935   .debug_str:000001d7 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1947   .debug_str:0000021d .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1913   .debug_str:00000136 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1929   .debug_str:000001b1 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1923   .debug_str:00000198 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:15     .text.wcscat_s:00000000 .LFB5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:232    .text.wcscat_s:000000c0 .LFE5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:863    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1895   .debug_str:0000000e .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:896    .debug_loc:0000003a .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:881    .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1905   .debug_str:000000f4 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:961    .debug_loc:000000b0 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:954    .debug_loc:000000aa .LVUS2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 7
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1921   .debug_str:00000191 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:994    .debug_loc:000000ea .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:985    .debug_loc:000000e2 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1029   .debug_loc:0000012d .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1022   .debug_loc:00000127 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1049   .debug_loc:0000015a .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1044   .debug_loc:00000156 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1065   .debug_loc:0000017c .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1060   .debug_loc:00000178 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1087   .debug_loc:000001a4 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1076   .debug_loc:0000019a .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1149   .debug_loc:00000209 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1138   .debug_loc:000001ff .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1187   .debug_loc:00000256 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1174   .debug_loc:0000024a .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1256   .debug_loc:000002c9 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1249   .debug_loc:000002c3 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:207    .text.wcscat_s:000000b0 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1941   .debug_str:000001fc .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1897   .debug_str:00000016 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1927   .debug_str:000001aa .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1939   .debug_str:000001f3 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1901   .debug_str:00000025 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1949   .debug_str:00000222 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:1911   .debug_str:00000125 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:189    .text.wcscat_s:000000a2 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:223    .text.wcscat_s:000000b8 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:14     .text.wcscat_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:47     .text.wcscat_s:0000001a .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:55     .text.wcscat_s:00000022 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:122    .text.wcscat_s:00000056 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:132    .text.wcscat_s:00000064 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:195    .text.wcscat_s:000000a4 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:226    .text.wcscat_s:000000ba .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:180    .text.wcscat_s:0000009c .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:183    .text.wcscat_s:000000a0 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:77     .text.wcscat_s:00000032 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:116    .text.wcscat_s:00000050 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:170    .text.wcscat_s:00000096 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:173    .text.wcscat_s:00000098 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:177    .text.wcscat_s:0000009a .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:99     .text.wcscat_s:0000003c .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:145    .text.wcscat_s:00000072 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:86     .text.wcscat_s:00000036 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:129    .text.wcscat_s:00000062 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:62     .text.wcscat_s:00000024 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:71     .text.wcscat_s:0000002e .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:74     .text.wcscat_s:00000030 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:93     .text.wcscat_s:00000038 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:142    .text.wcscat_s:00000070 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:237    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:31     .text.wcscat_s:00000012 .LBB6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:38     .text.wcscat_s:00000014 .LBE6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:57     .text.wcscat_s:00000022 .LBB16
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:186    .text.wcscat_s:000000a0 .LBE16
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:191    .text.wcscat_s:000000a2 .LBB17
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:199    .text.wcscat_s:000000a6 .LBE17
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 8
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:203    .text.wcscat_s:000000a8 .LBB18
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:210    .text.wcscat_s:000000b0 .LBE18
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:214    .text.wcscat_s:000000b2 .LBB19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:219    .text.wcscat_s:000000b4 .LBE19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:33     .text.wcscat_s:00000012 .LBB8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:36     .text.wcscat_s:00000014 .LBE8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:59     .text.wcscat_s:00000022 .LBB9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:81     .text.wcscat_s:00000032 .LBE9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:88     .text.wcscat_s:00000036 .LBB10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:101    .text.wcscat_s:0000003c .LBE10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:134    .text.wcscat_s:00000064 .LBB11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:148    .text.wcscat_s:00000072 .LBE11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:16     .text.wcscat_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:18     .text.wcscat_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:19     .text.wcscat_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:21     .text.wcscat_s:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:23     .text.wcscat_s:00000008 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:26     .text.wcscat_s:0000000e .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:27     .text.wcscat_s:0000000e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:29     .text.wcscat_s:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:34     .text.wcscat_s:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:39     .text.wcscat_s:00000014 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:41     .text.wcscat_s:00000016 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:42     .text.wcscat_s:00000016 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:43     .text.wcscat_s:00000016 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:44     .text.wcscat_s:00000016 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:46     .text.wcscat_s:0000001a .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:49     .text.wcscat_s:0000001a .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:52     .text.wcscat_s:0000001e .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:60     .text.wcscat_s:00000022 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:63     .text.wcscat_s:00000024 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:64     .text.wcscat_s:00000024 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:68     .text.wcscat_s:00000028 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:72     .text.wcscat_s:0000002e .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:75     .text.wcscat_s:00000030 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:79     .text.wcscat_s:00000032 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:80     .text.wcscat_s:00000032 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:82     .text.wcscat_s:00000032 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:83     .text.wcscat_s:00000032 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:84     .text.wcscat_s:00000032 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:87     .text.wcscat_s:00000036 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:89     .text.wcscat_s:00000036 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:90     .text.wcscat_s:00000036 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:91     .text.wcscat_s:00000036 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:95     .text.wcscat_s:00000038 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:98     .text.wcscat_s:0000003c .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:100    .text.wcscat_s:0000003c .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:102    .text.wcscat_s:0000003c .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:103    .text.wcscat_s:0000003c .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:104    .text.wcscat_s:0000003c .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:106    .text.wcscat_s:00000040 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:108    .text.wcscat_s:00000044 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:113    .text.wcscat_s:0000004e .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:114    .text.wcscat_s:0000004e .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:117    .text.wcscat_s:00000050 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:119    .text.wcscat_s:00000054 .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:120    .text.wcscat_s:00000054 .LM45
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s 			page 9
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:123    .text.wcscat_s:00000056 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:127    .text.wcscat_s:0000005e .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:130    .text.wcscat_s:00000062 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:135    .text.wcscat_s:00000064 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:140    .text.wcscat_s:0000006e .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:143    .text.wcscat_s:00000070 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:147    .text.wcscat_s:00000072 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:149    .text.wcscat_s:00000072 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:155    .text.wcscat_s:0000007e .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:156    .text.wcscat_s:0000007e .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:158    .text.wcscat_s:00000082 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:162    .text.wcscat_s:0000008a .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:163    .text.wcscat_s:0000008a .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:165    .text.wcscat_s:0000008e .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:166    .text.wcscat_s:0000008e .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:168    .text.wcscat_s:00000092 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:171    .text.wcscat_s:00000096 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:175    .text.wcscat_s:00000098 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:178    .text.wcscat_s:0000009a .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:181    .text.wcscat_s:0000009c .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:184    .text.wcscat_s:000000a0 .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:187    .text.wcscat_s:000000a0 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:193    .text.wcscat_s:000000a2 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:196    .text.wcscat_s:000000a4 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:200    .text.wcscat_s:000000a6 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:205    .text.wcscat_s:000000a8 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:208    .text.wcscat_s:000000b0 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:211    .text.wcscat_s:000000b0 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:216    .text.wcscat_s:000000b2 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:220    .text.wcscat_s:000000b4 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccwDQI6u.s:228    .text.wcscat_s:000000ba .LM76
+
+UNDEFINED SYMBOLS
+memcpy

@@ -1,0 +1,609 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 1
+
+
+   1              		.file	"strncpy_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.strncpy_error,"ax",@progbits
+  10              		.align	1
+  11              		.globl	strncpy_error
+  13              	strncpy_error:
+  14              	.LVL0:
+  15              	.LFB5:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 93072002 		li	a5,34
+  21              	.LM4:
+  22 0004 6359B000 		ble	a1,zero,.L1
+  23              	.LM5:
+  24              	.LM6:
+  25 0008 D947     		li	a5,22
+  26              	.LM7:
+  27 000a 11C5     		beq	a0,zero,.L1
+  28              	.LM8:
+  29 000c 19E6     		bne	a2,zero,.L3
+  30              	.LM9:
+  31              	.LM10:
+  32              	.LM11:
+  33              	.LM12:
+  34 000e 23000500 		sb	zero,0(a0)
+  35              	.LM13:
+  36              	.LM14:
+  37 0012 93076009 		li	a5,150
+  38              	.L1:
+  39              	.LM15:
+  40 0016 3E85     		mv	a0,a5
+  41              	.LVL1:
+  42              	.LM16:
+  43 0018 8280     		ret
+  44              	.LVL2:
+  45              	.L3:
+  46              	.LM17:
+  47              	.LM18:
+  48 001a 63D70600 		bge	a3,zero,.L4
+  49              	.L9:
+  50              	.LM19:
+  51              	.LM20:
+  52 001e 23000500 		sb	zero,0(a0)
+  53              	.LM21:
+  54              	.LM22:
+  55              	.LM23:
+  56 0022 9307200A 		li	a5,162
+  57 0026 C5BF     		j	.L1
+  58              	.L4:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 2
+
+
+  59              	.LVL3:
+  60              	.LBB6:
+  61              	.LBI6:
+  62              	.LM24:
+  63              	.LBB7:
+  64              	.LM25:
+  65              	.LM26:
+  66 0028 95E2     		bne	a3,zero,.L12
+  67              	.LM27:
+  68              	.LM28:
+  69 002a 23000500 		sb	zero,0(a0)
+  70              	.LM29:
+  71              	.L6:
+  72              	.LBB8:
+  73              	.LBB9:
+  74              	.LM30:
+  75 002e 8147     		li	a5,0
+  76 0030 DDB7     		j	.L1
+  77              	.LVL4:
+  78              	.L8:
+  79              	.LM31:
+  80              	.LM32:
+  81              	.LM33:
+  82              	.LM34:
+  83 0032 8507     		addi	a5,a5,1
+  84              	.LVL5:
+  85              	.L5:
+  86              	.LM35:
+  87              	.LM36:
+  88 0034 3307F600 		add	a4,a2,a5
+  89              	.LVL6:
+  90              	.LM37:
+  91 0038 03470700 		lbu	a4,0(a4)
+  92              	.LVL7:
+  93              	.LM38:
+  94 003c 09C7     		beq	a4,zero,.L7
+  95              	.LM39:
+  96 003e E380F5FE 		beq	a1,a5,.L9
+  97              	.LM40:
+  98 0042 E398F6FE 		bne	a3,a5,.L8
+  99              	.L7:
+ 100              	.LM41:
+ 101              	.LM42:
+ 102 0046 E394F5FE 		bne	a1,a5,.L6
+ 103 004a D1BF     		j	.L9
+ 104              	.LVL8:
+ 105              	.L12:
+ 106              	.LM43:
+ 107              	.LBE9:
+ 108              	.LBE8:
+ 109 004c 8147     		li	a5,0
+ 110 004e DDB7     		j	.L5
+ 111              	.LBE7:
+ 112              	.LBE6:
+ 113              		.cfi_endproc
+ 114              	.LFE5:
+ 116              		.section	.text.strncpy_s,"ax",@progbits
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 3
+
+
+ 117              		.align	1
+ 118              		.globl	strncpy_s
+ 120              	strncpy_s:
+ 121              	.LVL9:
+ 122              	.LFB6:
+ 123              	.LM44:
+ 124              		.cfi_startproc
+ 125              	.LM45:
+ 126              	.LM46:
+ 127 0000 B337C000 		snez	a5,a2
+ 128              	.LM47:
+ 129 0004 3327D000 		sgt	a4,a3,zero
+ 130 0008 7D8F     		and	a4,a4,a5
+ 131              	.LM48:
+ 132 000a B337A000 		snez	a5,a0
+ 133              	.LM49:
+ 134 000e F98F     		and	a5,a5,a4
+ 135 0010 B5C7     		beq	a5,zero,.L20
+ 136 0012 6355B006 		ble	a1,zero,.L20
+ 137              	.LBB10:
+ 138              	.LM50:
+ 139              	.LM51:
+ 140              	.LBE10:
+ 141              	.LM52:
+ 142 0016 4111     		addi	sp,sp,-16
+ 143              	.LCFI0:
+ 144              		.cfi_def_cfa_offset 16
+ 145 0018 06C6     		sw	ra,12(sp)
+ 146 001a 22C4     		sw	s0,8(sp)
+ 147              		.cfi_offset 1, -4
+ 148              		.cfi_offset 8, -8
+ 149              	.LBB14:
+ 150              	.LM53:
+ 151 001c 63E6B602 		bgtu	a1,a3,.L21
+ 152 0020 3307B600 		add	a4,a2,a1
+ 153              	.LBB11:
+ 154              	.LBB12:
+ 155              	.LM54:
+ 156 0024 3284     		mv	s0,a2
+ 157              	.L22:
+ 158              	.LVL10:
+ 159              	.LM55:
+ 160 0026 83470400 		lbu	a5,0(s0)
+ 161 002a 81C7     		beq	a5,zero,.L27
+ 162              	.LM56:
+ 163              	.LVL11:
+ 164              	.LM57:
+ 165 002c 0504     		addi	s0,s0,1
+ 166              	.LVL12:
+ 167              	.LM58:
+ 168 002e E31C87FE 		bne	a4,s0,.L22
+ 169              	.LVL13:
+ 170              	.L27:
+ 171              	.LM59:
+ 172 0032 118C     		sub	s0,s0,a2
+ 173              	.LVL14:
+ 174              	.LM60:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 4
+
+
+ 175              	.LBE12:
+ 176              	.LM61:
+ 177              	.LM62:
+ 178              	.LM63:
+ 179 0034 6313B402 		bne	s0,a1,.L26
+ 180              	.LM64:
+ 181              	.LM65:
+ 182 0038 23000500 		sb	zero,0(a0)
+ 183              	.LM66:
+ 184              	.LM67:
+ 185              	.LM68:
+ 186 003c 1305200A 		li	a0,162
+ 187              	.LVL15:
+ 188              	.L19:
+ 189              	.LM69:
+ 190              	.LBE11:
+ 191              	.LBE14:
+ 192              	.LM70:
+ 193 0040 B240     		lw	ra,12(sp)
+ 194              		.cfi_remember_state
+ 195              		.cfi_restore 1
+ 196 0042 2244     		lw	s0,8(sp)
+ 197              		.cfi_restore 8
+ 198              	.LVL16:
+ 199              	.LM71:
+ 200 0044 4101     		addi	sp,sp,16
+ 201              	.LCFI1:
+ 202              		.cfi_def_cfa_offset 0
+ 203 0046 8280     		jr	ra
+ 204              	.LVL17:
+ 205              	.L21:
+ 206              	.LCFI2:
+ 207              		.cfi_restore_state
+ 208              	.LM72:
+ 209 0048 B296     		add	a3,a2,a3
+ 210              	.LVL18:
+ 211              	.LBB15:
+ 212              	.LBB13:
+ 213              	.LM73:
+ 214 004a 3284     		mv	s0,a2
+ 215              	.L23:
+ 216              	.LVL19:
+ 217              	.LM74:
+ 218 004c 83470400 		lbu	a5,0(s0)
+ 219 0050 81C7     		beq	a5,zero,.L24
+ 220              	.LM75:
+ 221              	.LVL20:
+ 222              	.LM76:
+ 223 0052 0504     		addi	s0,s0,1
+ 224              	.LVL21:
+ 225              	.LM77:
+ 226 0054 E39C86FE 		bne	a3,s0,.L23
+ 227              	.LVL22:
+ 228              	.L24:
+ 229              	.LM78:
+ 230 0058 118C     		sub	s0,s0,a2
+ 231              	.LVL23:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 5
+
+
+ 232              	.LM79:
+ 233              	.LBE13:
+ 234              	.LM80:
+ 235              	.L26:
+ 236              	.LM81:
+ 237              	.LM82:
+ 238 005a 6375A602 		bleu	a0,a2,.L30
+ 239              	.LM83:
+ 240 005e B3078600 		add	a5,a2,s0
+ 241 0062 63F7A702 		bleu	a0,a5,.L32
+ 242              	.L31:
+ 243              	.LM84:
+ 244 0066 B285     		mv	a1,a2
+ 245              	.LVL24:
+ 246              	.LM85:
+ 247 0068 2286     		mv	a2,s0
+ 248              	.LVL25:
+ 249              	.LM86:
+ 250 006a 97000000 		call	memcpy
+ 250      E7800000 
+ 251              	.LVL26:
+ 252              	.LM87:
+ 253              	.LM88:
+ 254 0072 2295     		add	a0,a0,s0
+ 255 0074 23000500 		sb	zero,0(a0)
+ 256              	.LM89:
+ 257              	.LM90:
+ 258 0078 0145     		li	a0,0
+ 259 007a D9B7     		j	.L19
+ 260              	.LVL27:
+ 261              	.L20:
+ 262              	.LCFI3:
+ 263              		.cfi_def_cfa_offset 0
+ 264              		.cfi_restore 1
+ 265              		.cfi_restore 8
+ 266              	.LM91:
+ 267              	.LBE15:
+ 268              	.LM92:
+ 269              	.LM93:
+ 270 007c 17030000 		tail	strncpy_error
+ 270      67000300 
+ 271              	.LVL28:
+ 272              	.L30:
+ 273              	.LCFI4:
+ 274              		.cfi_def_cfa_offset 16
+ 275              		.cfi_offset 1, -4
+ 276              		.cfi_offset 8, -8
+ 277              	.LBB16:
+ 278              	.LM94:
+ 279 0084 E371C5FE 		bgeu	a0,a2,.L31
+ 280              	.LM95:
+ 281 0088 B3078500 		add	a5,a0,s0
+ 282              	.LM96:
+ 283 008c E3EDC7FC 		bgtu	a2,a5,.L31
+ 284              	.L32:
+ 285              	.LM97:
+ 286              	.LM98:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 6
+
+
+ 287 0090 23000500 		sb	zero,0(a0)
+ 288              	.LM99:
+ 289              	.LM100:
+ 290              	.LM101:
+ 291 0094 1305600B 		li	a0,182
+ 292              	.LVL29:
+ 293              	.LM102:
+ 294 0098 65B7     		j	.L19
+ 295              	.LBE16:
+ 296              		.cfi_endproc
+ 297              	.LFE6:
+ 299              		.text
+ 300              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 strncpy_s.c
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:10     .text.strncpy_error:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:13     .text.strncpy_error:00000000 strncpy_error
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:17     .text.strncpy_error:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:113    .text.strncpy_error:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:117    .text.strncpy_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:120    .text.strncpy_s:00000000 strncpy_s
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:124    .text.strncpy_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:144    .text.strncpy_s:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:147    .text.strncpy_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:148    .text.strncpy_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:194    .text.strncpy_s:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:195    .text.strncpy_s:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:197    .text.strncpy_s:00000044 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:202    .text.strncpy_s:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:207    .text.strncpy_s:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:263    .text.strncpy_s:0000007c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:264    .text.strncpy_s:0000007c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:265    .text.strncpy_s:0000007c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:274    .text.strncpy_s:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:275    .text.strncpy_s:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:276    .text.strncpy_s:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:296    .text.strncpy_s:0000009a .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:38     .text.strncpy_error:00000016 .L1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:45     .text.strncpy_error:0000001a .L3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:58     .text.strncpy_error:00000028 .L4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:105    .text.strncpy_error:0000004c .L12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:99     .text.strncpy_error:00000046 .L7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:49     .text.strncpy_error:0000001e .L9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:78     .text.strncpy_error:00000032 .L8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:71     .text.strncpy_error:0000002e .L6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:85     .text.strncpy_error:00000034 .L5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:261    .text.strncpy_s:0000007c .L20
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:205    .text.strncpy_s:00000048 .L21
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:170    .text.strncpy_s:00000032 .L27
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:157    .text.strncpy_s:00000026 .L22
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:235    .text.strncpy_s:0000005a .L26
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:228    .text.strncpy_s:00000058 .L24
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:215    .text.strncpy_s:0000004c .L23
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:272    .text.strncpy_s:00000084 .L30
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:284    .text.strncpy_s:00000090 .L32
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:188    .text.strncpy_s:00000040 .L19
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:242    .text.strncpy_s:00000066 .L31
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:720    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2642   .debug_str:00000020 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2656   .debug_str:00000137 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2658   .debug_str:00000175 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1864   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1882   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2662   .debug_str:00000192 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2660   .debug_str:00000185 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2688   .debug_str:0000021e .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2648   .debug_str:000000fc .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2678   .debug_str:000001ef .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2652   .debug_str:0000011c .LASF5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 8
+
+
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2682   .debug_str:00000204 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2650   .debug_str:0000010a .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2670   .debug_str:000001ca .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2634   .debug_str:00000000 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2686   .debug_str:00000212 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2684   .debug_str:0000020d .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2676   .debug_str:000001e7 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2674   .debug_str:000001e0 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2638   .debug_str:00000010 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:122    .text.strncpy_s:00000000 .LFB6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:297    .text.strncpy_s:0000009a .LFE6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1149   .debug_loc:00000000 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2672   .debug_str:000001d8 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1199   .debug_loc:00000060 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1182   .debug_loc:00000050 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2654   .debug_str:0000012f .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1285   .debug_loc:000000f2 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1270   .debug_loc:000000e4 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2668   .debug_str:000001c3 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1360   .debug_loc:00000172 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1343   .debug_loc:00000162 .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2640   .debug_str:0000001a .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1435   .debug_loc:000001f9 .LLST12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1422   .debug_loc:000001ed .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2664   .debug_str:000001a9 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1496   .debug_loc:00000264 .LLST13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1489   .debug_loc:0000025e .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:212    .text.strncpy_s:0000004a .LBB13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:233    .text.strncpy_s:0000005a .LBE13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2692   .debug_str:00000239 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1514   .debug_loc:0000028f .LLST16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1511   .debug_loc:0000028d .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2690   .debug_str:0000022a .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1528   .debug_loc:000002a8 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1521   .debug_loc:000002a2 .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:153    .text.strncpy_s:00000024 .LBB11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:190    .text.strncpy_s:00000040 .LBE11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2636   .debug_str:00000007 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:154    .text.strncpy_s:00000024 .LBB12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:175    .text.strncpy_s:00000034 .LBE12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1592   .debug_loc:00000301 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1589   .debug_loc:000002ff .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1606   .debug_loc:0000031a .LLST15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1599   .debug_loc:00000314 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:251    .text.strncpy_s:00000072 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:271    .text.strncpy_s:00000084 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2644   .debug_str:000000e7 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2694   .debug_str:00000241 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2680   .debug_str:000001f9 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2646   .debug_str:000000f5 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:15     .text.strncpy_error:00000000 .LFB5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:114    .text.strncpy_error:00000050 .LFE5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1653   .debug_loc:00000362 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1646   .debug_loc:0000035c .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:61     .text.strncpy_error:00000028 .LBI6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:60     .text.strncpy_error:00000028 .LBB6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:112    .text.strncpy_error:00000050 .LBE6
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 9
+
+
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1680   .debug_loc:00000396 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1677   .debug_loc:00000394 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1690   .debug_loc:000003ab .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1687   .debug_loc:000003a9 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1700   .debug_loc:000003c0 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1697   .debug_loc:000003be .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1710   .debug_loc:000003d5 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1707   .debug_loc:000003d3 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:72     .text.strncpy_error:0000002e .LBB8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:108    .text.strncpy_error:0000004c .LBE8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1724   .debug_loc:000003ee .LLST5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1717   .debug_loc:000003e8 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1762   .debug_loc:0000042d .LLST6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1755   .debug_loc:00000427 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1804   .debug_loc:00000470 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:1793   .debug_loc:00000466 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:2666   .debug_str:000001b2 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:143    .text.strncpy_s:00000018 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:201    .text.strncpy_s:00000046 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:206    .text.strncpy_s:00000048 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:262    .text.strncpy_s:0000007c .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:273    .text.strncpy_s:00000084 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:121    .text.strncpy_s:00000000 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:187    .text.strncpy_s:00000040 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:204    .text.strncpy_s:00000048 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:260    .text.strncpy_s:0000007c .LVL27
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:292    .text.strncpy_s:00000098 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:245    .text.strncpy_s:00000068 .LVL24
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:248    .text.strncpy_s:0000006a .LVL25
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:210    .text.strncpy_s:0000004a .LVL18
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:173    .text.strncpy_s:00000034 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:198    .text.strncpy_s:00000044 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:231    .text.strncpy_s:0000005a .LVL23
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:216    .text.strncpy_s:0000004c .LVL19
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:221    .text.strncpy_s:00000052 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:224    .text.strncpy_s:00000054 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:227    .text.strncpy_s:00000058 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:158    .text.strncpy_s:00000026 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:163    .text.strncpy_s:0000002c .LVL11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:166    .text.strncpy_s:0000002e .LVL12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:169    .text.strncpy_s:00000032 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:14     .text.strncpy_error:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:41     .text.strncpy_error:00000018 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:44     .text.strncpy_error:0000001a .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:59     .text.strncpy_error:00000028 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:77     .text.strncpy_error:00000032 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:84     .text.strncpy_error:00000034 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:104    .text.strncpy_error:0000004c .LVL8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:89     .text.strncpy_error:00000038 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:92     .text.strncpy_error:0000003c .LVL7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:302    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:137    .text.strncpy_s:00000016 .LBB10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:140    .text.strncpy_s:00000016 .LBE10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:149    .text.strncpy_s:0000001c .LBB14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:191    .text.strncpy_s:00000040 .LBE14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:211    .text.strncpy_s:0000004a .LBB15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:267    .text.strncpy_s:0000007c .LBE15
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 10
+
+
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:277    .text.strncpy_s:00000084 .LBB16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:295    .text.strncpy_s:0000009a .LBE16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:16     .text.strncpy_error:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:18     .text.strncpy_error:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:19     .text.strncpy_error:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:21     .text.strncpy_error:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:23     .text.strncpy_error:00000008 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:24     .text.strncpy_error:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:26     .text.strncpy_error:0000000a .LM7
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:28     .text.strncpy_error:0000000c .LM8
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:30     .text.strncpy_error:0000000e .LM9
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:31     .text.strncpy_error:0000000e .LM10
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:32     .text.strncpy_error:0000000e .LM11
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:33     .text.strncpy_error:0000000e .LM12
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:35     .text.strncpy_error:00000012 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:36     .text.strncpy_error:00000012 .LM14
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:39     .text.strncpy_error:00000016 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:42     .text.strncpy_error:00000018 .LM16
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:46     .text.strncpy_error:0000001a .LM17
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:47     .text.strncpy_error:0000001a .LM18
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:50     .text.strncpy_error:0000001e .LM19
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:51     .text.strncpy_error:0000001e .LM20
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:53     .text.strncpy_error:00000022 .LM21
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:54     .text.strncpy_error:00000022 .LM22
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:55     .text.strncpy_error:00000022 .LM23
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:62     .text.strncpy_error:00000028 .LM24
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:64     .text.strncpy_error:00000028 .LM25
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:65     .text.strncpy_error:00000028 .LM26
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:67     .text.strncpy_error:0000002a .LM27
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:68     .text.strncpy_error:0000002a .LM28
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:70     .text.strncpy_error:0000002e .LM29
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:74     .text.strncpy_error:0000002e .LM30
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:79     .text.strncpy_error:00000032 .LM31
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:80     .text.strncpy_error:00000032 .LM32
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:81     .text.strncpy_error:00000032 .LM33
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:82     .text.strncpy_error:00000032 .LM34
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:86     .text.strncpy_error:00000034 .LM35
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:87     .text.strncpy_error:00000034 .LM36
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:90     .text.strncpy_error:00000038 .LM37
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:93     .text.strncpy_error:0000003c .LM38
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:95     .text.strncpy_error:0000003e .LM39
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:97     .text.strncpy_error:00000042 .LM40
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:100    .text.strncpy_error:00000046 .LM41
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:101    .text.strncpy_error:00000046 .LM42
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:106    .text.strncpy_error:0000004c .LM43
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:123    .text.strncpy_s:00000000 .LM44
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:125    .text.strncpy_s:00000000 .LM45
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:126    .text.strncpy_s:00000000 .LM46
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:128    .text.strncpy_s:00000004 .LM47
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:131    .text.strncpy_s:0000000a .LM48
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:133    .text.strncpy_s:0000000e .LM49
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:138    .text.strncpy_s:00000016 .LM50
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:139    .text.strncpy_s:00000016 .LM51
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:141    .text.strncpy_s:00000016 .LM52
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:150    .text.strncpy_s:0000001c .LM53
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:155    .text.strncpy_s:00000024 .LM54
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:159    .text.strncpy_s:00000026 .LM55
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s 			page 11
+
+
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:162    .text.strncpy_s:0000002c .LM56
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:164    .text.strncpy_s:0000002c .LM57
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:167    .text.strncpy_s:0000002e .LM58
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:171    .text.strncpy_s:00000032 .LM59
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:174    .text.strncpy_s:00000034 .LM60
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:176    .text.strncpy_s:00000034 .LM61
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:177    .text.strncpy_s:00000034 .LM62
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:178    .text.strncpy_s:00000034 .LM63
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:180    .text.strncpy_s:00000038 .LM64
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:181    .text.strncpy_s:00000038 .LM65
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:183    .text.strncpy_s:0000003c .LM66
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:184    .text.strncpy_s:0000003c .LM67
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:185    .text.strncpy_s:0000003c .LM68
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:189    .text.strncpy_s:00000040 .LM69
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:192    .text.strncpy_s:00000040 .LM70
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:199    .text.strncpy_s:00000044 .LM71
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:208    .text.strncpy_s:00000048 .LM72
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:213    .text.strncpy_s:0000004a .LM73
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:217    .text.strncpy_s:0000004c .LM74
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:220    .text.strncpy_s:00000052 .LM75
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:222    .text.strncpy_s:00000052 .LM76
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:225    .text.strncpy_s:00000054 .LM77
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:229    .text.strncpy_s:00000058 .LM78
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:232    .text.strncpy_s:0000005a .LM79
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:234    .text.strncpy_s:0000005a .LM80
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:236    .text.strncpy_s:0000005a .LM81
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:237    .text.strncpy_s:0000005a .LM82
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:239    .text.strncpy_s:0000005e .LM83
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:243    .text.strncpy_s:00000066 .LM84
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:246    .text.strncpy_s:00000068 .LM85
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:249    .text.strncpy_s:0000006a .LM86
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:252    .text.strncpy_s:00000072 .LM87
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:253    .text.strncpy_s:00000072 .LM88
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:256    .text.strncpy_s:00000078 .LM89
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:257    .text.strncpy_s:00000078 .LM90
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:266    .text.strncpy_s:0000007c .LM91
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:268    .text.strncpy_s:0000007c .LM92
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:269    .text.strncpy_s:0000007c .LM93
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:278    .text.strncpy_s:00000084 .LM94
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:280    .text.strncpy_s:00000088 .LM95
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:282    .text.strncpy_s:0000008c .LM96
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:285    .text.strncpy_s:00000090 .LM97
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:286    .text.strncpy_s:00000090 .LM98
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:288    .text.strncpy_s:00000094 .LM99
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:289    .text.strncpy_s:00000094 .LM100
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:290    .text.strncpy_s:00000094 .LM101
+C:\Users\Administrator\AppData\Local\Temp\cchCdmHP.s:293    .text.strncpy_s:00000098 .LM102
+
+UNDEFINED SYMBOLS
+memcpy

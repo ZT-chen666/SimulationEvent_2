@@ -1,0 +1,78 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s 			page 1
+
+
+   1              		.file	"clock_settime.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.clock_settime,"ax",@progbits
+  10              		.align	1
+  11              		.weak	clock_settime
+  13              	clock_settime:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 7D55     		li	a0,-1
+  21              	.LVL1:
+  22              	.LM4:
+  23 0002 8280     		ret
+  24              		.cfi_endproc
+  25              	.LFE150:
+  27              		.text
+  28              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 clock_settime.c
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:10     .text.clock_settime:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:13     .text.clock_settime:00000000 clock_settime
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:17     .text.clock_settime:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:24     .text.clock_settime:00000004 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:181    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:498    .debug_str:0000001b .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:536    .debug_str:000001c3 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:526    .debug_str:00000185 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:396    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:402    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:508    .debug_str:00000117 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:496    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:494    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:528    .debug_str:00000195 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:524    .debug_str:00000179 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:512    .debug_str:00000137 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:532    .debug_str:000001a9 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:522    .debug_str:00000166 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:518    .debug_str:00000156 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:506    .debug_str:00000105 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:534    .debug_str:000001b3 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:504    .debug_str:000000f9 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:538    .debug_str:000001ff .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:516    .debug_str:0000014f .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:502    .debug_str:000000f0 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:520    .debug_str:0000015f .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:530    .debug_str:000001a1 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:514    .debug_str:00000145 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:500    .debug_str:000000e2 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:15     .text.clock_settime:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:25     .text.clock_settime:00000004 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:510    .debug_str:0000012e .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:363    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:358    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:14     .text.clock_settime:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:21     .text.clock_settime:00000002 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:30     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:16     .text.clock_settime:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:18     .text.clock_settime:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:19     .text.clock_settime:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cc6TYsDk.s:22     .text.clock_settime:00000002 .LM4
+
+NO UNDEFINED SYMBOLS

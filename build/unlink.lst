@@ -1,0 +1,71 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s 			page 1
+
+
+   1              		.file	"unlink.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._unlink,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_unlink
+  13              	_unlink:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 7D55     		li	a0,-1
+  21              	.LVL1:
+  22              	.LM4:
+  23 0002 8280     		ret
+  24              		.cfi_endproc
+  25              	.LFE150:
+  27              		.text
+  28              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 unlink.c
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:10     .text._unlink:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:13     .text._unlink:00000000 _unlink
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:17     .text._unlink:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:24     .text._unlink:00000004 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:122    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:343    .debug_str:0000001b .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:353    .debug_str:00000118 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:365    .debug_str:00000188 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:269    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:275    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:351    .debug_str:00000101 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:341    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:339    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:367    .debug_str:00000198 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:363    .debug_str:0000017c .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:355    .debug_str:0000014d .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:369    .debug_str:000001a4 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:361    .debug_str:00000169 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:359    .debug_str:00000160 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:347    .debug_str:000000ea .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:357    .debug_str:0000015b .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:345    .debug_str:000000e2 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:15     .text._unlink:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:25     .text._unlink:00000004 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:349    .debug_str:000000fc .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:236    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:231    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:14     .text._unlink:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:21     .text._unlink:00000002 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:30     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:16     .text._unlink:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:18     .text._unlink:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:19     .text._unlink:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccKgD2qc.s:22     .text._unlink:00000002 .LM4
+
+NO UNDEFINED SYMBOLS

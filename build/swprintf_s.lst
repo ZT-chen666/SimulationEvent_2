@@ -1,0 +1,137 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s 			page 1
+
+
+   1              		.file	"swprintf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.swprintf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	swprintf_s
+  13              	swprintf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22 0000 3971     		addi	sp,sp,-64
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 64
+  25 0002 36D6     		sw	a3,44(sp)
+  26              	.LM6:
+  27 0004 7410     		addi	a3,sp,44
+  28              	.LM7:
+  29 0006 06CE     		sw	ra,28(sp)
+  30              		.cfi_offset 1, -36
+  31              	.LM8:
+  32 0008 3AD8     		sw	a4,48(sp)
+  33 000a 3EDA     		sw	a5,52(sp)
+  34 000c 42DC     		sw	a6,56(sp)
+  35 000e 46DE     		sw	a7,60(sp)
+  36              	.LM9:
+  37 0010 36C6     		sw	a3,12(sp)
+  38              	.LM10:
+  39              	.LM11:
+  40 0012 97000000 		call	vswprintf_s
+  40      E7800000 
+  41              	.LVL1:
+  42              	.LM12:
+  43              	.LM13:
+  44              	.LM14:
+  45              	.LM15:
+  46 001a F240     		lw	ra,28(sp)
+  47              		.cfi_restore 1
+  48 001c 2161     		addi	sp,sp,64
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 0
+  51 001e 8280     		jr	ra
+  52              		.cfi_endproc
+  53              	.LFE4:
+  55              		.text
+  56              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 swprintf_s.c
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:10     .text.swprintf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:13     .text.swprintf_s:00000000 swprintf_s
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:17     .text.swprintf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:24     .text.swprintf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:30     .text.swprintf_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:47     .text.swprintf_s:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:50     .text.swprintf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:52     .text.swprintf_s:00000020 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:280    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:796    .debug_str:0000002b .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:798    .debug_str:000000f2 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:826    .debug_str:000001cf .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:633    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:639    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:806    .debug_str:0000015d .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:836    .debug_str:0000020c .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:820    .debug_str:000001ac .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:794    .debug_str:0000001d .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:834    .debug_str:00000202 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:818    .debug_str:00000199 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:812    .debug_str:00000181 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:804    .debug_str:0000014b .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:788    .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:792    .debug_str:00000016 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:808    .debug_str:00000174 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:832    .debug_str:000001f6 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:830    .debug_str:000001e7 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:800    .debug_str:00000131 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:814    .debug_str:0000018a .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:810    .debug_str:0000017c .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:824    .debug_str:000001c3 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:822    .debug_str:000001b8 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:15     .text.swprintf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:53     .text.swprintf_s:00000020 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:517    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:790    .debug_str:0000000e .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:540    .debug_loc:00000031 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:535    .debug_loc:0000002d .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:802    .debug_str:00000143 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:565    .debug_loc:0000005c .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:560    .debug_loc:00000058 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:816    .debug_str:00000192 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:590    .debug_loc:00000087 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:585    .debug_loc:00000083 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:613    .debug_loc:000000b0 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:610    .debug_loc:000000ae .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:828    .debug_str:000001df .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:41     .text.swprintf_s:0000001a .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:23     .text.swprintf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:49     .text.swprintf_s:0000001e .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:14     .text.swprintf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:58     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:16     .text.swprintf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:18     .text.swprintf_s:00000000 .LM2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s 			page 3
+
+
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:19     .text.swprintf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:20     .text.swprintf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:21     .text.swprintf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:26     .text.swprintf_s:00000004 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:28     .text.swprintf_s:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:31     .text.swprintf_s:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:36     .text.swprintf_s:00000010 .LM9
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:38     .text.swprintf_s:00000012 .LM10
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:39     .text.swprintf_s:00000012 .LM11
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:42     .text.swprintf_s:0000001a .LM12
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:43     .text.swprintf_s:0000001a .LM13
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:44     .text.swprintf_s:0000001a .LM14
+C:\Users\Administrator\AppData\Local\Temp\cct8c5S5.s:45     .text.swprintf_s:0000001a .LM15
+
+UNDEFINED SYMBOLS
+vswprintf_s

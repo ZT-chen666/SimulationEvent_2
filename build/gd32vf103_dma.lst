@@ -1,0 +1,3147 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 1
+
+
+   1              		.file	"gd32vf103_dma.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.dma_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	dma_deinit
+  13              	dma_deinit:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LBB46:
+  20              	.LBI46:
+  21              	.LM3:
+  22              	.LBB47:
+  23              	.LM4:
+  24              	.LM5:
+  25              	.LM6:
+  26              	.LM7:
+  27 0000 93B75500 		sltiu	a5,a1,5
+  28 0004 81EB     		bne	a5,zero,.L2
+  29              	.LM8:
+  30 0006 B707FEBF 		li	a5,-1073872896
+  31 000a 938707C0 		addi	a5,a5,-1024
+  32 000e AA97     		add	a5,a0,a5
+  33              	.LM9:
+  34 0010 91E3     		bne	a5,zero,.L2
+  35              	.LVL1:
+  36              	.L3:
+  37              	.LM10:
+  38              	.LBE47:
+  39              	.LBE46:
+  40              	.LM11:
+  41              	.LM12:
+  42              	.LM13:
+  43 0012 01A0     		j	.L3
+  44              	.LVL2:
+  45              	.L2:
+  46              	.LBB49:
+  47              	.LBB48:
+  48              	.LM14:
+  49              	.LM15:
+  50              	.LBE48:
+  51              	.LBE49:
+  52              	.LM16:
+  53              	.LM17:
+  54 0014 D147     		li	a5,20
+  55 0016 B387F502 		mul	a5,a1,a5
+  56              	.LM18:
+  57 001a 8A05     		slli	a1,a1,2
+  58              	.LVL3:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 2
+
+
+  59              	.LM19:
+  60 001c AA97     		add	a5,a5,a0
+  61 001e 9847     		lw	a4,8(a5)
+  62 0020 799B     		andi	a4,a4,-2
+  63 0022 98C7     		sw	a4,8(a5)
+  64              	.LM20:
+  65              	.LM21:
+  66 0024 23A40700 		sw	zero,8(a5)
+  67              	.LM22:
+  68              	.LM23:
+  69 0028 23A60700 		sw	zero,12(a5)
+  70              	.LM24:
+  71              	.LM25:
+  72 002c 23A80700 		sw	zero,16(a5)
+  73              	.LM26:
+  74              	.LM27:
+  75 0030 23AA0700 		sw	zero,20(a5)
+  76              	.LM28:
+  77 0034 5841     		lw	a4,4(a0)
+  78              	.LM29:
+  79 0036 BD47     		li	a5,15
+  80 0038 B397B700 		sll	a5,a5,a1
+  81              	.LM30:
+  82 003c D98F     		or	a5,a5,a4
+  83 003e 5CC1     		sw	a5,4(a0)
+  84              	.LM31:
+  85 0040 8280     		ret
+  86              		.cfi_endproc
+  87              	.LFE150:
+  89              		.section	.text.dma_struct_para_init,"ax",@progbits
+  90              		.align	1
+  91              		.globl	dma_struct_para_init
+  93              	dma_struct_para_init:
+  94              	.LVL4:
+  95              	.LFB151:
+  96              	.LM32:
+  97              		.cfi_startproc
+  98              	.LM33:
+  99              	.LM34:
+ 100              	.LM35:
+ 101              	.LM36:
+ 102              	.LM37:
+ 103              	.LM38:
+ 104              	.LM39:
+ 105              	.LM40:
+ 106              	.LM41:
+ 107              	.LM42:
+ 108 0000 23200500 		sw	zero,0(a0)
+ 109              	.LM43:
+ 110 0004 23220500 		sw	zero,4(a0)
+ 111              	.LM44:
+ 112 0008 23240500 		sw	zero,8(a0)
+ 113              	.LM45:
+ 114 000c 23260500 		sw	zero,12(a0)
+ 115              	.LM46:
+ 116 0010 23280500 		sw	zero,16(a0)
+ 117              	.LM47:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 3
+
+
+ 118 0014 232A0500 		sw	zero,20(a0)
+ 119              	.LM48:
+ 120 0018 231C0500 		sh	zero,24(a0)
+ 121              	.LM49:
+ 122 001c 230D0500 		sb	zero,26(a0)
+ 123              	.LM50:
+ 124 0020 8280     		ret
+ 125              		.cfi_endproc
+ 126              	.LFE151:
+ 128              		.section	.text.dma_init,"ax",@progbits
+ 129              		.align	1
+ 130              		.globl	dma_init
+ 132              	dma_init:
+ 133              	.LVL5:
+ 134              	.LFB152:
+ 135              	.LM51:
+ 136              		.cfi_startproc
+ 137              	.LM52:
+ 138              	.LM53:
+ 139              	.LBB50:
+ 140              	.LBI50:
+ 141              	.LM54:
+ 142              	.LBB51:
+ 143              	.LM55:
+ 144              	.LM56:
+ 145              	.LM57:
+ 146              	.LM58:
+ 147 0000 93B75500 		sltiu	a5,a1,5
+ 148 0004 81EB     		bne	a5,zero,.L12
+ 149              	.LM59:
+ 150 0006 B707FEBF 		li	a5,-1073872896
+ 151 000a 938707C0 		addi	a5,a5,-1024
+ 152 000e AA97     		add	a5,a0,a5
+ 153              	.LM60:
+ 154 0010 91E3     		bne	a5,zero,.L12
+ 155              	.LVL6:
+ 156              	.L13:
+ 157              	.LM61:
+ 158              	.LBE51:
+ 159              	.LBE50:
+ 160              	.LM62:
+ 161              	.LM63:
+ 162              	.LM64:
+ 163 0012 01A0     		j	.L13
+ 164              	.LVL7:
+ 165              	.L12:
+ 166              	.LBB53:
+ 167              	.LBB52:
+ 168              	.LM65:
+ 169              	.LM66:
+ 170              	.LBE52:
+ 171              	.LBE53:
+ 172              	.LM67:
+ 173 0014 D147     		li	a5,20
+ 174 0016 B385F502 		mul	a1,a1,a5
+ 175              	.LVL8:
+ 176              	.LM68:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 4
+
+
+ 177 001a 1C42     		lw	a5,0(a2)
+ 178              	.LM69:
+ 179 001c 2E95     		add	a0,a1,a0
+ 180              	.LVL9:
+ 181              	.LM70:
+ 182 001e 1CC9     		sw	a5,16(a0)
+ 183              	.LM71:
+ 184              	.LM72:
+ 185 0020 1C46     		lw	a5,8(a2)
+ 186              	.LM73:
+ 187 0022 5CC9     		sw	a5,20(a0)
+ 188              	.LM74:
+ 189              	.LM75:
+ 190 0024 83570601 		lhu	a5,16(a2)
+ 191              	.LM76:
+ 192 0028 5CC5     		sw	a5,12(a0)
+ 193              	.LM77:
+ 194              	.LM78:
+ 195 002a 1845     		lw	a4,8(a0)
+ 196              	.LVL10:
+ 197              	.LM79:
+ 198              	.LM80:
+ 199 002c F177     		li	a5,-16384
+ 200 002e 9387F70F 		addi	a5,a5,255
+ 201              	.LM81:
+ 202 0032 5446     		lw	a3,12(a2)
+ 203              	.LM82:
+ 204 0034 7D8F     		and	a4,a4,a5
+ 205              	.LVL11:
+ 206              	.LM83:
+ 207              	.LM84:
+ 208 0036 5C42     		lw	a5,4(a2)
+ 209 0038 D58F     		or	a5,a5,a3
+ 210              	.LM85:
+ 211 003a 544A     		lw	a3,20(a2)
+ 212 003c D58F     		or	a5,a5,a3
+ 213              	.LM86:
+ 214 003e D98F     		or	a5,a5,a4
+ 215              	.LVL12:
+ 216              	.LM87:
+ 217              	.LM88:
+ 218 0040 1CC5     		sw	a5,8(a0)
+ 219              	.LM89:
+ 220              	.LM90:
+ 221 0042 03478601 		lbu	a4,24(a2)
+ 222 0046 8547     		li	a5,1
+ 223              	.LVL13:
+ 224              	.LM91:
+ 225 0048 6316F702 		bne	a4,a5,.L14
+ 226              	.LM92:
+ 227 004c 1C45     		lw	a5,8(a0)
+ 228              	.LM93:
+ 229 004e 93E70704 		ori	a5,a5,64
+ 230              	.L26:
+ 231              	.LM94:
+ 232 0052 1CC5     		sw	a5,8(a0)
+ 233              	.LVL14:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 5
+
+
+ 234              	.LM95:
+ 235              	.LM96:
+ 236 0054 03479601 		lbu	a4,25(a2)
+ 237 0058 8547     		li	a5,1
+ 238 005a 6311F702 		bne	a4,a5,.L16
+ 239              	.LM97:
+ 240 005e 1C45     		lw	a5,8(a0)
+ 241              	.LM98:
+ 242 0060 93E70708 		ori	a5,a5,128
+ 243              	.L27:
+ 244              	.LM99:
+ 245 0064 1CC5     		sw	a5,8(a0)
+ 246              	.LM100:
+ 247              	.LM101:
+ 248 0066 8347A601 		lbu	a5,26(a2)
+ 249 006a 89EF     		bne	a5,zero,.L18
+ 250              	.LM102:
+ 251              	.LM103:
+ 252 006c 1C45     		lw	a5,8(a0)
+ 253 006e BD9B     		andi	a5,a5,-17
+ 254              	.L28:
+ 255              	.LM104:
+ 256 0070 1CC5     		sw	a5,8(a0)
+ 257              	.LM105:
+ 258 0072 8280     		ret
+ 259              	.LVL15:
+ 260              	.L14:
+ 261              	.LM106:
+ 262              	.LM107:
+ 263 0074 1C45     		lw	a5,8(a0)
+ 264 0076 93F7F7FB 		andi	a5,a5,-65
+ 265 007a E1BF     		j	.L26
+ 266              	.LVL16:
+ 267              	.L16:
+ 268              	.LM108:
+ 269              	.LM109:
+ 270 007c 1C45     		lw	a5,8(a0)
+ 271 007e 93F7F7F7 		andi	a5,a5,-129
+ 272 0082 CDB7     		j	.L27
+ 273              	.L18:
+ 274              	.LM110:
+ 275 0084 1C45     		lw	a5,8(a0)
+ 276              	.LM111:
+ 277 0086 93E70701 		ori	a5,a5,16
+ 278 008a DDB7     		j	.L28
+ 279              		.cfi_endproc
+ 280              	.LFE152:
+ 282              		.section	.text.dma_circulation_enable,"ax",@progbits
+ 283              		.align	1
+ 284              		.globl	dma_circulation_enable
+ 286              	dma_circulation_enable:
+ 287              	.LVL17:
+ 288              	.LFB153:
+ 289              	.LM112:
+ 290              		.cfi_startproc
+ 291              	.LM113:
+ 292              	.LBB54:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 6
+
+
+ 293              	.LBI54:
+ 294              	.LM114:
+ 295              	.LBB55:
+ 296              	.LM115:
+ 297              	.LM116:
+ 298              	.LM117:
+ 299              	.LM118:
+ 300 0000 93B75500 		sltiu	a5,a1,5
+ 301 0004 81EB     		bne	a5,zero,.L30
+ 302              	.LM119:
+ 303 0006 B707FEBF 		li	a5,-1073872896
+ 304 000a 938707C0 		addi	a5,a5,-1024
+ 305 000e AA97     		add	a5,a0,a5
+ 306              	.LM120:
+ 307 0010 91E3     		bne	a5,zero,.L30
+ 308              	.LVL18:
+ 309              	.L31:
+ 310              	.LM121:
+ 311              	.LBE55:
+ 312              	.LBE54:
+ 313              	.LM122:
+ 314              	.LM123:
+ 315              	.LM124:
+ 316 0012 01A0     		j	.L31
+ 317              	.LVL19:
+ 318              	.L30:
+ 319              	.LBB57:
+ 320              	.LBB56:
+ 321              	.LM125:
+ 322              	.LM126:
+ 323              	.LBE56:
+ 324              	.LBE57:
+ 325              	.LM127:
+ 326 0014 D147     		li	a5,20
+ 327 0016 B385F502 		mul	a1,a1,a5
+ 328              	.LVL20:
+ 329              	.LM128:
+ 330 001a AA95     		add	a1,a1,a0
+ 331 001c 9C45     		lw	a5,8(a1)
+ 332              	.LM129:
+ 333 001e 93E70702 		ori	a5,a5,32
+ 334 0022 9CC5     		sw	a5,8(a1)
+ 335              	.LM130:
+ 336 0024 8280     		ret
+ 337              		.cfi_endproc
+ 338              	.LFE153:
+ 340              		.section	.text.dma_circulation_disable,"ax",@progbits
+ 341              		.align	1
+ 342              		.globl	dma_circulation_disable
+ 344              	dma_circulation_disable:
+ 345              	.LVL21:
+ 346              	.LFB154:
+ 347              	.LM131:
+ 348              		.cfi_startproc
+ 349              	.LM132:
+ 350              	.LBB58:
+ 351              	.LBI58:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 7
+
+
+ 352              	.LM133:
+ 353              	.LBB59:
+ 354              	.LM134:
+ 355              	.LM135:
+ 356              	.LM136:
+ 357              	.LM137:
+ 358 0000 93B75500 		sltiu	a5,a1,5
+ 359 0004 81EB     		bne	a5,zero,.L39
+ 360              	.LM138:
+ 361 0006 B707FEBF 		li	a5,-1073872896
+ 362 000a 938707C0 		addi	a5,a5,-1024
+ 363 000e AA97     		add	a5,a0,a5
+ 364              	.LM139:
+ 365 0010 91E3     		bne	a5,zero,.L39
+ 366              	.LVL22:
+ 367              	.L40:
+ 368              	.LM140:
+ 369              	.LBE59:
+ 370              	.LBE58:
+ 371              	.LM141:
+ 372              	.LM142:
+ 373              	.LM143:
+ 374 0012 01A0     		j	.L40
+ 375              	.LVL23:
+ 376              	.L39:
+ 377              	.LBB61:
+ 378              	.LBB60:
+ 379              	.LM144:
+ 380              	.LM145:
+ 381              	.LBE60:
+ 382              	.LBE61:
+ 383              	.LM146:
+ 384              	.LM147:
+ 385 0014 D147     		li	a5,20
+ 386 0016 B385F502 		mul	a1,a1,a5
+ 387              	.LVL24:
+ 388              	.LM148:
+ 389 001a AA95     		add	a1,a1,a0
+ 390 001c 9C45     		lw	a5,8(a1)
+ 391 001e 93F7F7FD 		andi	a5,a5,-33
+ 392 0022 9CC5     		sw	a5,8(a1)
+ 393              	.LM149:
+ 394 0024 8280     		ret
+ 395              		.cfi_endproc
+ 396              	.LFE154:
+ 398              		.section	.text.dma_memory_to_memory_enable,"ax",@progbits
+ 399              		.align	1
+ 400              		.globl	dma_memory_to_memory_enable
+ 402              	dma_memory_to_memory_enable:
+ 403              	.LVL25:
+ 404              	.LFB155:
+ 405              	.LM150:
+ 406              		.cfi_startproc
+ 407              	.LM151:
+ 408              	.LBB62:
+ 409              	.LBI62:
+ 410              	.LM152:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 8
+
+
+ 411              	.LBB63:
+ 412              	.LM153:
+ 413              	.LM154:
+ 414              	.LM155:
+ 415              	.LM156:
+ 416 0000 93B75500 		sltiu	a5,a1,5
+ 417 0004 81EB     		bne	a5,zero,.L48
+ 418              	.LM157:
+ 419 0006 B707FEBF 		li	a5,-1073872896
+ 420 000a 938707C0 		addi	a5,a5,-1024
+ 421 000e AA97     		add	a5,a0,a5
+ 422              	.LM158:
+ 423 0010 91E3     		bne	a5,zero,.L48
+ 424              	.LVL26:
+ 425              	.L49:
+ 426              	.LM159:
+ 427              	.LBE63:
+ 428              	.LBE62:
+ 429              	.LM160:
+ 430              	.LM161:
+ 431              	.LM162:
+ 432 0012 01A0     		j	.L49
+ 433              	.LVL27:
+ 434              	.L48:
+ 435              	.LBB65:
+ 436              	.LBB64:
+ 437              	.LM163:
+ 438              	.LM164:
+ 439              	.LBE64:
+ 440              	.LBE65:
+ 441              	.LM165:
+ 442 0014 D147     		li	a5,20
+ 443 0016 B385F502 		mul	a1,a1,a5
+ 444              	.LVL28:
+ 445              	.LM166:
+ 446 001a 1167     		li	a4,16384
+ 447              	.LM167:
+ 448 001c AA95     		add	a1,a1,a0
+ 449 001e 9C45     		lw	a5,8(a1)
+ 450              	.LM168:
+ 451 0020 D98F     		or	a5,a5,a4
+ 452 0022 9CC5     		sw	a5,8(a1)
+ 453              	.LM169:
+ 454 0024 8280     		ret
+ 455              		.cfi_endproc
+ 456              	.LFE155:
+ 458              		.section	.text.dma_memory_to_memory_disable,"ax",@progbits
+ 459              		.align	1
+ 460              		.globl	dma_memory_to_memory_disable
+ 462              	dma_memory_to_memory_disable:
+ 463              	.LVL29:
+ 464              	.LFB156:
+ 465              	.LM170:
+ 466              		.cfi_startproc
+ 467              	.LM171:
+ 468              	.LBB66:
+ 469              	.LBI66:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 9
+
+
+ 470              	.LM172:
+ 471              	.LBB67:
+ 472              	.LM173:
+ 473              	.LM174:
+ 474              	.LM175:
+ 475              	.LM176:
+ 476 0000 93B75500 		sltiu	a5,a1,5
+ 477 0004 81EB     		bne	a5,zero,.L57
+ 478              	.LM177:
+ 479 0006 B707FEBF 		li	a5,-1073872896
+ 480 000a 938707C0 		addi	a5,a5,-1024
+ 481 000e AA97     		add	a5,a0,a5
+ 482              	.LM178:
+ 483 0010 91E3     		bne	a5,zero,.L57
+ 484              	.LVL30:
+ 485              	.L58:
+ 486              	.LM179:
+ 487              	.LBE67:
+ 488              	.LBE66:
+ 489              	.LM180:
+ 490              	.LM181:
+ 491              	.LM182:
+ 492 0012 01A0     		j	.L58
+ 493              	.LVL31:
+ 494              	.L57:
+ 495              	.LBB69:
+ 496              	.LBB68:
+ 497              	.LM183:
+ 498              	.LM184:
+ 499              	.LBE68:
+ 500              	.LBE69:
+ 501              	.LM185:
+ 502              	.LM186:
+ 503 0014 D147     		li	a5,20
+ 504 0016 B385F502 		mul	a1,a1,a5
+ 505              	.LVL32:
+ 506              	.LM187:
+ 507 001a 7177     		li	a4,-16384
+ 508 001c 7D17     		addi	a4,a4,-1
+ 509 001e AA95     		add	a1,a1,a0
+ 510 0020 9C45     		lw	a5,8(a1)
+ 511 0022 F98F     		and	a5,a5,a4
+ 512 0024 9CC5     		sw	a5,8(a1)
+ 513              	.LM188:
+ 514 0026 8280     		ret
+ 515              		.cfi_endproc
+ 516              	.LFE156:
+ 518              		.section	.text.dma_channel_enable,"ax",@progbits
+ 519              		.align	1
+ 520              		.globl	dma_channel_enable
+ 522              	dma_channel_enable:
+ 523              	.LVL33:
+ 524              	.LFB157:
+ 525              	.LM189:
+ 526              		.cfi_startproc
+ 527              	.LM190:
+ 528              	.LBB70:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 10
+
+
+ 529              	.LBI70:
+ 530              	.LM191:
+ 531              	.LBB71:
+ 532              	.LM192:
+ 533              	.LM193:
+ 534              	.LM194:
+ 535              	.LM195:
+ 536 0000 93B75500 		sltiu	a5,a1,5
+ 537 0004 81EB     		bne	a5,zero,.L66
+ 538              	.LM196:
+ 539 0006 B707FEBF 		li	a5,-1073872896
+ 540 000a 938707C0 		addi	a5,a5,-1024
+ 541 000e AA97     		add	a5,a0,a5
+ 542              	.LM197:
+ 543 0010 91E3     		bne	a5,zero,.L66
+ 544              	.LVL34:
+ 545              	.L67:
+ 546              	.LM198:
+ 547              	.LBE71:
+ 548              	.LBE70:
+ 549              	.LM199:
+ 550              	.LM200:
+ 551              	.LM201:
+ 552 0012 01A0     		j	.L67
+ 553              	.LVL35:
+ 554              	.L66:
+ 555              	.LBB73:
+ 556              	.LBB72:
+ 557              	.LM202:
+ 558              	.LM203:
+ 559              	.LBE72:
+ 560              	.LBE73:
+ 561              	.LM204:
+ 562 0014 D147     		li	a5,20
+ 563 0016 B385F502 		mul	a1,a1,a5
+ 564              	.LVL36:
+ 565              	.LM205:
+ 566 001a AA95     		add	a1,a1,a0
+ 567 001c 9C45     		lw	a5,8(a1)
+ 568              	.LM206:
+ 569 001e 93E71700 		ori	a5,a5,1
+ 570 0022 9CC5     		sw	a5,8(a1)
+ 571              	.LM207:
+ 572 0024 8280     		ret
+ 573              		.cfi_endproc
+ 574              	.LFE157:
+ 576              		.section	.text.dma_channel_disable,"ax",@progbits
+ 577              		.align	1
+ 578              		.globl	dma_channel_disable
+ 580              	dma_channel_disable:
+ 581              	.LVL37:
+ 582              	.LFB158:
+ 583              	.LM208:
+ 584              		.cfi_startproc
+ 585              	.LM209:
+ 586              	.LBB74:
+ 587              	.LBI74:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 11
+
+
+ 588              	.LM210:
+ 589              	.LBB75:
+ 590              	.LM211:
+ 591              	.LM212:
+ 592              	.LM213:
+ 593              	.LM214:
+ 594 0000 93B75500 		sltiu	a5,a1,5
+ 595 0004 81EB     		bne	a5,zero,.L75
+ 596              	.LM215:
+ 597 0006 B707FEBF 		li	a5,-1073872896
+ 598 000a 938707C0 		addi	a5,a5,-1024
+ 599 000e AA97     		add	a5,a0,a5
+ 600              	.LM216:
+ 601 0010 91E3     		bne	a5,zero,.L75
+ 602              	.LVL38:
+ 603              	.L76:
+ 604              	.LM217:
+ 605              	.LBE75:
+ 606              	.LBE74:
+ 607              	.LM218:
+ 608              	.LM219:
+ 609              	.LM220:
+ 610 0012 01A0     		j	.L76
+ 611              	.LVL39:
+ 612              	.L75:
+ 613              	.LBB77:
+ 614              	.LBB76:
+ 615              	.LM221:
+ 616              	.LM222:
+ 617              	.LBE76:
+ 618              	.LBE77:
+ 619              	.LM223:
+ 620              	.LM224:
+ 621 0014 D147     		li	a5,20
+ 622 0016 B385F502 		mul	a1,a1,a5
+ 623              	.LVL40:
+ 624              	.LM225:
+ 625 001a AA95     		add	a1,a1,a0
+ 626 001c 9C45     		lw	a5,8(a1)
+ 627 001e F99B     		andi	a5,a5,-2
+ 628 0020 9CC5     		sw	a5,8(a1)
+ 629              	.LM226:
+ 630 0022 8280     		ret
+ 631              		.cfi_endproc
+ 632              	.LFE158:
+ 634              		.section	.text.dma_periph_address_config,"ax",@progbits
+ 635              		.align	1
+ 636              		.globl	dma_periph_address_config
+ 638              	dma_periph_address_config:
+ 639              	.LVL41:
+ 640              	.LFB159:
+ 641              	.LM227:
+ 642              		.cfi_startproc
+ 643              	.LM228:
+ 644              	.LBB78:
+ 645              	.LBI78:
+ 646              	.LM229:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 12
+
+
+ 647              	.LBB79:
+ 648              	.LM230:
+ 649              	.LM231:
+ 650              	.LM232:
+ 651              	.LM233:
+ 652 0000 93B75500 		sltiu	a5,a1,5
+ 653 0004 81EB     		bne	a5,zero,.L84
+ 654              	.LM234:
+ 655 0006 B707FEBF 		li	a5,-1073872896
+ 656 000a 938707C0 		addi	a5,a5,-1024
+ 657 000e AA97     		add	a5,a0,a5
+ 658              	.LM235:
+ 659 0010 91E3     		bne	a5,zero,.L84
+ 660              	.LVL42:
+ 661              	.L85:
+ 662              	.LM236:
+ 663              	.LBE79:
+ 664              	.LBE78:
+ 665              	.LM237:
+ 666              	.LM238:
+ 667              	.LM239:
+ 668 0012 01A0     		j	.L85
+ 669              	.LVL43:
+ 670              	.L84:
+ 671              	.LBB81:
+ 672              	.LBB80:
+ 673              	.LM240:
+ 674              	.LM241:
+ 675              	.LBE80:
+ 676              	.LBE81:
+ 677              	.LM242:
+ 678 0014 D147     		li	a5,20
+ 679 0016 B385F502 		mul	a1,a1,a5
+ 680              	.LVL44:
+ 681              	.LM243:
+ 682 001a AA95     		add	a1,a1,a0
+ 683              	.LM244:
+ 684 001c 90C9     		sw	a2,16(a1)
+ 685              	.LM245:
+ 686 001e 8280     		ret
+ 687              		.cfi_endproc
+ 688              	.LFE159:
+ 690              		.section	.text.dma_memory_address_config,"ax",@progbits
+ 691              		.align	1
+ 692              		.globl	dma_memory_address_config
+ 694              	dma_memory_address_config:
+ 695              	.LVL45:
+ 696              	.LFB160:
+ 697              	.LM246:
+ 698              		.cfi_startproc
+ 699              	.LM247:
+ 700              	.LBB82:
+ 701              	.LBI82:
+ 702              	.LM248:
+ 703              	.LBB83:
+ 704              	.LM249:
+ 705              	.LM250:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 13
+
+
+ 706              	.LM251:
+ 707              	.LM252:
+ 708 0000 93B75500 		sltiu	a5,a1,5
+ 709 0004 81EB     		bne	a5,zero,.L93
+ 710              	.LM253:
+ 711 0006 B707FEBF 		li	a5,-1073872896
+ 712 000a 938707C0 		addi	a5,a5,-1024
+ 713 000e AA97     		add	a5,a0,a5
+ 714              	.LM254:
+ 715 0010 91E3     		bne	a5,zero,.L93
+ 716              	.LVL46:
+ 717              	.L94:
+ 718              	.LM255:
+ 719              	.LBE83:
+ 720              	.LBE82:
+ 721              	.LM256:
+ 722              	.LM257:
+ 723              	.LM258:
+ 724 0012 01A0     		j	.L94
+ 725              	.LVL47:
+ 726              	.L93:
+ 727              	.LBB85:
+ 728              	.LBB84:
+ 729              	.LM259:
+ 730              	.LM260:
+ 731              	.LBE84:
+ 732              	.LBE85:
+ 733              	.LM261:
+ 734 0014 D147     		li	a5,20
+ 735 0016 B385F502 		mul	a1,a1,a5
+ 736              	.LVL48:
+ 737              	.LM262:
+ 738 001a AA95     		add	a1,a1,a0
+ 739              	.LM263:
+ 740 001c D0C9     		sw	a2,20(a1)
+ 741              	.LM264:
+ 742 001e 8280     		ret
+ 743              		.cfi_endproc
+ 744              	.LFE160:
+ 746              		.section	.text.dma_transfer_number_config,"ax",@progbits
+ 747              		.align	1
+ 748              		.globl	dma_transfer_number_config
+ 750              	dma_transfer_number_config:
+ 751              	.LVL49:
+ 752              	.LFB161:
+ 753              	.LM265:
+ 754              		.cfi_startproc
+ 755              	.LM266:
+ 756              	.LBB86:
+ 757              	.LBI86:
+ 758              	.LM267:
+ 759              	.LBB87:
+ 760              	.LM268:
+ 761              	.LM269:
+ 762              	.LM270:
+ 763              	.LM271:
+ 764 0000 93B75500 		sltiu	a5,a1,5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 14
+
+
+ 765 0004 81EB     		bne	a5,zero,.L102
+ 766              	.LM272:
+ 767 0006 B707FEBF 		li	a5,-1073872896
+ 768 000a 938707C0 		addi	a5,a5,-1024
+ 769 000e AA97     		add	a5,a0,a5
+ 770              	.LM273:
+ 771 0010 91E3     		bne	a5,zero,.L102
+ 772              	.LVL50:
+ 773              	.L103:
+ 774              	.LM274:
+ 775              	.LBE87:
+ 776              	.LBE86:
+ 777              	.LM275:
+ 778              	.LM276:
+ 779              	.LM277:
+ 780 0012 01A0     		j	.L103
+ 781              	.LVL51:
+ 782              	.L102:
+ 783              	.LBB89:
+ 784              	.LBB88:
+ 785              	.LM278:
+ 786              	.LM279:
+ 787              	.LBE88:
+ 788              	.LBE89:
+ 789              	.LM280:
+ 790 0014 D147     		li	a5,20
+ 791 0016 B385F502 		mul	a1,a1,a5
+ 792              	.LVL52:
+ 793              	.LM281:
+ 794 001a 4206     		slli	a2,a2,16
+ 795              	.LVL53:
+ 796              	.LM282:
+ 797 001c 4182     		srli	a2,a2,16
+ 798              	.LM283:
+ 799 001e AA95     		add	a1,a1,a0
+ 800              	.LM284:
+ 801 0020 D0C5     		sw	a2,12(a1)
+ 802              	.LM285:
+ 803 0022 8280     		ret
+ 804              		.cfi_endproc
+ 805              	.LFE161:
+ 807              		.section	.text.dma_transfer_number_get,"ax",@progbits
+ 808              		.align	1
+ 809              		.globl	dma_transfer_number_get
+ 811              	dma_transfer_number_get:
+ 812              	.LVL54:
+ 813              	.LFB162:
+ 814              	.LM286:
+ 815              		.cfi_startproc
+ 816              	.LM287:
+ 817              	.LBB90:
+ 818              	.LBI90:
+ 819              	.LM288:
+ 820              	.LBB91:
+ 821              	.LM289:
+ 822              	.LM290:
+ 823              	.LM291:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 15
+
+
+ 824              	.LM292:
+ 825 0000 93B75500 		sltiu	a5,a1,5
+ 826 0004 81EB     		bne	a5,zero,.L111
+ 827              	.LM293:
+ 828 0006 B707FEBF 		li	a5,-1073872896
+ 829 000a 938707C0 		addi	a5,a5,-1024
+ 830 000e AA97     		add	a5,a0,a5
+ 831              	.LM294:
+ 832 0010 91E3     		bne	a5,zero,.L111
+ 833              	.LVL55:
+ 834              	.L112:
+ 835              	.LM295:
+ 836              	.LBE91:
+ 837              	.LBE90:
+ 838              	.LM296:
+ 839              	.LM297:
+ 840              	.LM298:
+ 841 0012 01A0     		j	.L112
+ 842              	.LVL56:
+ 843              	.L111:
+ 844              	.LBB93:
+ 845              	.LBB92:
+ 846              	.LM299:
+ 847              	.LM300:
+ 848              	.LBE92:
+ 849              	.LBE93:
+ 850              	.LM301:
+ 851              	.LM302:
+ 852 0014 D147     		li	a5,20
+ 853 0016 B385F502 		mul	a1,a1,a5
+ 854              	.LVL57:
+ 855              	.LM303:
+ 856 001a AA95     		add	a1,a1,a0
+ 857              	.LM304:
+ 858 001c C845     		lw	a0,12(a1)
+ 859              	.LVL58:
+ 860              	.LM305:
+ 861 001e 8280     		ret
+ 862              		.cfi_endproc
+ 863              	.LFE162:
+ 865              		.section	.text.dma_priority_config,"ax",@progbits
+ 866              		.align	1
+ 867              		.globl	dma_priority_config
+ 869              	dma_priority_config:
+ 870              	.LVL59:
+ 871              	.LFB163:
+ 872              	.LM306:
+ 873              		.cfi_startproc
+ 874              	.LM307:
+ 875              	.LM308:
+ 876              	.LBB94:
+ 877              	.LBI94:
+ 878              	.LM309:
+ 879              	.LBB95:
+ 880              	.LM310:
+ 881              	.LM311:
+ 882              	.LM312:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 16
+
+
+ 883              	.LM313:
+ 884 0000 93B75500 		sltiu	a5,a1,5
+ 885 0004 81EB     		bne	a5,zero,.L120
+ 886              	.LM314:
+ 887 0006 B707FEBF 		li	a5,-1073872896
+ 888 000a 938707C0 		addi	a5,a5,-1024
+ 889 000e AA97     		add	a5,a0,a5
+ 890              	.LM315:
+ 891 0010 91E3     		bne	a5,zero,.L120
+ 892              	.LVL60:
+ 893              	.L121:
+ 894              	.LM316:
+ 895              	.LBE95:
+ 896              	.LBE94:
+ 897              	.LM317:
+ 898              	.LM318:
+ 899              	.LM319:
+ 900 0012 01A0     		j	.L121
+ 901              	.LVL61:
+ 902              	.L120:
+ 903              	.LBB97:
+ 904              	.LBB96:
+ 905              	.LM320:
+ 906              	.LM321:
+ 907              	.LBE96:
+ 908              	.LBE97:
+ 909              	.LM322:
+ 910              	.LM323:
+ 911 0014 D147     		li	a5,20
+ 912 0016 B385F502 		mul	a1,a1,a5
+ 913              	.LVL62:
+ 914              	.LM324:
+ 915 001a 7577     		li	a4,-12288
+ 916 001c 7D17     		addi	a4,a4,-1
+ 917              	.LM325:
+ 918 001e AA95     		add	a1,a1,a0
+ 919              	.LM326:
+ 920 0020 9C45     		lw	a5,8(a1)
+ 921              	.LVL63:
+ 922              	.LM327:
+ 923              	.LM328:
+ 924 0022 F98F     		and	a5,a5,a4
+ 925              	.LVL64:
+ 926              	.LM329:
+ 927              	.LM330:
+ 928 0024 D18F     		or	a5,a5,a2
+ 929              	.LVL65:
+ 930              	.LM331:
+ 931              	.LM332:
+ 932 0026 9CC5     		sw	a5,8(a1)
+ 933              	.LM333:
+ 934 0028 8280     		ret
+ 935              		.cfi_endproc
+ 936              	.LFE163:
+ 938              		.section	.text.dma_memory_width_config,"ax",@progbits
+ 939              		.align	1
+ 940              		.globl	dma_memory_width_config
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 17
+
+
+ 942              	dma_memory_width_config:
+ 943              	.LVL66:
+ 944              	.LFB164:
+ 945              	.LM334:
+ 946              		.cfi_startproc
+ 947              	.LM335:
+ 948              	.LM336:
+ 949              	.LBB98:
+ 950              	.LBI98:
+ 951              	.LM337:
+ 952              	.LBB99:
+ 953              	.LM338:
+ 954              	.LM339:
+ 955              	.LM340:
+ 956              	.LM341:
+ 957 0000 93B75500 		sltiu	a5,a1,5
+ 958 0004 81EB     		bne	a5,zero,.L129
+ 959              	.LM342:
+ 960 0006 B707FEBF 		li	a5,-1073872896
+ 961 000a 938707C0 		addi	a5,a5,-1024
+ 962 000e AA97     		add	a5,a0,a5
+ 963              	.LM343:
+ 964 0010 91E3     		bne	a5,zero,.L129
+ 965              	.LVL67:
+ 966              	.L130:
+ 967              	.LM344:
+ 968              	.LBE99:
+ 969              	.LBE98:
+ 970              	.LM345:
+ 971              	.LM346:
+ 972              	.LM347:
+ 973 0012 01A0     		j	.L130
+ 974              	.LVL68:
+ 975              	.L129:
+ 976              	.LBB101:
+ 977              	.LBB100:
+ 978              	.LM348:
+ 979              	.LM349:
+ 980              	.LBE100:
+ 981              	.LBE101:
+ 982              	.LM350:
+ 983              	.LM351:
+ 984 0014 D147     		li	a5,20
+ 985 0016 B385F502 		mul	a1,a1,a5
+ 986              	.LVL69:
+ 987              	.LM352:
+ 988 001a 7D77     		li	a4,-4096
+ 989 001c 1307F73F 		addi	a4,a4,1023
+ 990              	.LM353:
+ 991 0020 AA95     		add	a1,a1,a0
+ 992              	.LM354:
+ 993 0022 9C45     		lw	a5,8(a1)
+ 994              	.LVL70:
+ 995              	.LM355:
+ 996              	.LM356:
+ 997 0024 F98F     		and	a5,a5,a4
+ 998              	.LVL71:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 18
+
+
+ 999              	.LM357:
+ 1000              	.LM358:
+ 1001 0026 D18F     		or	a5,a5,a2
+ 1002              	.LVL72:
+ 1003              	.LM359:
+ 1004              	.LM360:
+ 1005 0028 9CC5     		sw	a5,8(a1)
+ 1006              	.LM361:
+ 1007 002a 8280     		ret
+ 1008              		.cfi_endproc
+ 1009              	.LFE164:
+ 1011              		.section	.text.dma_periph_width_config,"ax",@progbits
+ 1012              		.align	1
+ 1013              		.globl	dma_periph_width_config
+ 1015              	dma_periph_width_config:
+ 1016              	.LVL73:
+ 1017              	.LFB165:
+ 1018              	.LM362:
+ 1019              		.cfi_startproc
+ 1020              	.LM363:
+ 1021              	.LM364:
+ 1022              	.LBB102:
+ 1023              	.LBI102:
+ 1024              	.LM365:
+ 1025              	.LBB103:
+ 1026              	.LM366:
+ 1027              	.LM367:
+ 1028              	.LM368:
+ 1029              	.LM369:
+ 1030 0000 93B75500 		sltiu	a5,a1,5
+ 1031 0004 81EB     		bne	a5,zero,.L138
+ 1032              	.LM370:
+ 1033 0006 B707FEBF 		li	a5,-1073872896
+ 1034 000a 938707C0 		addi	a5,a5,-1024
+ 1035 000e AA97     		add	a5,a0,a5
+ 1036              	.LM371:
+ 1037 0010 91E3     		bne	a5,zero,.L138
+ 1038              	.LVL74:
+ 1039              	.L139:
+ 1040              	.LM372:
+ 1041              	.LBE103:
+ 1042              	.LBE102:
+ 1043              	.LM373:
+ 1044              	.LM374:
+ 1045              	.LM375:
+ 1046 0012 01A0     		j	.L139
+ 1047              	.LVL75:
+ 1048              	.L138:
+ 1049              	.LBB105:
+ 1050              	.LBB104:
+ 1051              	.LM376:
+ 1052              	.LM377:
+ 1053              	.LBE104:
+ 1054              	.LBE105:
+ 1055              	.LM378:
+ 1056              	.LM379:
+ 1057 0014 D147     		li	a5,20
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 19
+
+
+ 1058 0016 B385F502 		mul	a1,a1,a5
+ 1059              	.LVL76:
+ 1060              	.LM380:
+ 1061 001a AA95     		add	a1,a1,a0
+ 1062              	.LM381:
+ 1063 001c 9C45     		lw	a5,8(a1)
+ 1064              	.LVL77:
+ 1065              	.LM382:
+ 1066              	.LM383:
+ 1067 001e 93F7F7CF 		andi	a5,a5,-769
+ 1068              	.LVL78:
+ 1069              	.LM384:
+ 1070              	.LM385:
+ 1071 0022 D18F     		or	a5,a5,a2
+ 1072              	.LVL79:
+ 1073              	.LM386:
+ 1074              	.LM387:
+ 1075 0024 9CC5     		sw	a5,8(a1)
+ 1076              	.LM388:
+ 1077 0026 8280     		ret
+ 1078              		.cfi_endproc
+ 1079              	.LFE165:
+ 1081              		.section	.text.dma_memory_increase_enable,"ax",@progbits
+ 1082              		.align	1
+ 1083              		.globl	dma_memory_increase_enable
+ 1085              	dma_memory_increase_enable:
+ 1086              	.LVL80:
+ 1087              	.LFB166:
+ 1088              	.LM389:
+ 1089              		.cfi_startproc
+ 1090              	.LM390:
+ 1091              	.LBB106:
+ 1092              	.LBI106:
+ 1093              	.LM391:
+ 1094              	.LBB107:
+ 1095              	.LM392:
+ 1096              	.LM393:
+ 1097              	.LM394:
+ 1098              	.LM395:
+ 1099 0000 93B75500 		sltiu	a5,a1,5
+ 1100 0004 81EB     		bne	a5,zero,.L147
+ 1101              	.LM396:
+ 1102 0006 B707FEBF 		li	a5,-1073872896
+ 1103 000a 938707C0 		addi	a5,a5,-1024
+ 1104 000e AA97     		add	a5,a0,a5
+ 1105              	.LM397:
+ 1106 0010 91E3     		bne	a5,zero,.L147
+ 1107              	.LVL81:
+ 1108              	.L148:
+ 1109              	.LM398:
+ 1110              	.LBE107:
+ 1111              	.LBE106:
+ 1112              	.LM399:
+ 1113              	.LM400:
+ 1114              	.LM401:
+ 1115 0012 01A0     		j	.L148
+ 1116              	.LVL82:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 20
+
+
+ 1117              	.L147:
+ 1118              	.LBB109:
+ 1119              	.LBB108:
+ 1120              	.LM402:
+ 1121              	.LM403:
+ 1122              	.LBE108:
+ 1123              	.LBE109:
+ 1124              	.LM404:
+ 1125 0014 D147     		li	a5,20
+ 1126 0016 B385F502 		mul	a1,a1,a5
+ 1127              	.LVL83:
+ 1128              	.LM405:
+ 1129 001a AA95     		add	a1,a1,a0
+ 1130 001c 9C45     		lw	a5,8(a1)
+ 1131              	.LM406:
+ 1132 001e 93E70708 		ori	a5,a5,128
+ 1133 0022 9CC5     		sw	a5,8(a1)
+ 1134              	.LM407:
+ 1135 0024 8280     		ret
+ 1136              		.cfi_endproc
+ 1137              	.LFE166:
+ 1139              		.section	.text.dma_memory_increase_disable,"ax",@progbits
+ 1140              		.align	1
+ 1141              		.globl	dma_memory_increase_disable
+ 1143              	dma_memory_increase_disable:
+ 1144              	.LVL84:
+ 1145              	.LFB167:
+ 1146              	.LM408:
+ 1147              		.cfi_startproc
+ 1148              	.LM409:
+ 1149              	.LBB110:
+ 1150              	.LBI110:
+ 1151              	.LM410:
+ 1152              	.LBB111:
+ 1153              	.LM411:
+ 1154              	.LM412:
+ 1155              	.LM413:
+ 1156              	.LM414:
+ 1157 0000 93B75500 		sltiu	a5,a1,5
+ 1158 0004 81EB     		bne	a5,zero,.L156
+ 1159              	.LM415:
+ 1160 0006 B707FEBF 		li	a5,-1073872896
+ 1161 000a 938707C0 		addi	a5,a5,-1024
+ 1162 000e AA97     		add	a5,a0,a5
+ 1163              	.LM416:
+ 1164 0010 91E3     		bne	a5,zero,.L156
+ 1165              	.LVL85:
+ 1166              	.L157:
+ 1167              	.LM417:
+ 1168              	.LBE111:
+ 1169              	.LBE110:
+ 1170              	.LM418:
+ 1171              	.LM419:
+ 1172              	.LM420:
+ 1173 0012 01A0     		j	.L157
+ 1174              	.LVL86:
+ 1175              	.L156:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 21
+
+
+ 1176              	.LBB113:
+ 1177              	.LBB112:
+ 1178              	.LM421:
+ 1179              	.LM422:
+ 1180              	.LBE112:
+ 1181              	.LBE113:
+ 1182              	.LM423:
+ 1183              	.LM424:
+ 1184 0014 D147     		li	a5,20
+ 1185 0016 B385F502 		mul	a1,a1,a5
+ 1186              	.LVL87:
+ 1187              	.LM425:
+ 1188 001a AA95     		add	a1,a1,a0
+ 1189 001c 9C45     		lw	a5,8(a1)
+ 1190 001e 93F7F7F7 		andi	a5,a5,-129
+ 1191 0022 9CC5     		sw	a5,8(a1)
+ 1192              	.LM426:
+ 1193 0024 8280     		ret
+ 1194              		.cfi_endproc
+ 1195              	.LFE167:
+ 1197              		.section	.text.dma_periph_increase_enable,"ax",@progbits
+ 1198              		.align	1
+ 1199              		.globl	dma_periph_increase_enable
+ 1201              	dma_periph_increase_enable:
+ 1202              	.LVL88:
+ 1203              	.LFB168:
+ 1204              	.LM427:
+ 1205              		.cfi_startproc
+ 1206              	.LM428:
+ 1207              	.LBB114:
+ 1208              	.LBI114:
+ 1209              	.LM429:
+ 1210              	.LBB115:
+ 1211              	.LM430:
+ 1212              	.LM431:
+ 1213              	.LM432:
+ 1214              	.LM433:
+ 1215 0000 93B75500 		sltiu	a5,a1,5
+ 1216 0004 81EB     		bne	a5,zero,.L165
+ 1217              	.LM434:
+ 1218 0006 B707FEBF 		li	a5,-1073872896
+ 1219 000a 938707C0 		addi	a5,a5,-1024
+ 1220 000e AA97     		add	a5,a0,a5
+ 1221              	.LM435:
+ 1222 0010 91E3     		bne	a5,zero,.L165
+ 1223              	.LVL89:
+ 1224              	.L166:
+ 1225              	.LM436:
+ 1226              	.LBE115:
+ 1227              	.LBE114:
+ 1228              	.LM437:
+ 1229              	.LM438:
+ 1230              	.LM439:
+ 1231 0012 01A0     		j	.L166
+ 1232              	.LVL90:
+ 1233              	.L165:
+ 1234              	.LBB117:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 22
+
+
+ 1235              	.LBB116:
+ 1236              	.LM440:
+ 1237              	.LM441:
+ 1238              	.LBE116:
+ 1239              	.LBE117:
+ 1240              	.LM442:
+ 1241 0014 D147     		li	a5,20
+ 1242 0016 B385F502 		mul	a1,a1,a5
+ 1243              	.LVL91:
+ 1244              	.LM443:
+ 1245 001a AA95     		add	a1,a1,a0
+ 1246 001c 9C45     		lw	a5,8(a1)
+ 1247              	.LM444:
+ 1248 001e 93E70704 		ori	a5,a5,64
+ 1249 0022 9CC5     		sw	a5,8(a1)
+ 1250              	.LM445:
+ 1251 0024 8280     		ret
+ 1252              		.cfi_endproc
+ 1253              	.LFE168:
+ 1255              		.section	.text.dma_periph_increase_disable,"ax",@progbits
+ 1256              		.align	1
+ 1257              		.globl	dma_periph_increase_disable
+ 1259              	dma_periph_increase_disable:
+ 1260              	.LVL92:
+ 1261              	.LFB169:
+ 1262              	.LM446:
+ 1263              		.cfi_startproc
+ 1264              	.LM447:
+ 1265              	.LBB118:
+ 1266              	.LBI118:
+ 1267              	.LM448:
+ 1268              	.LBB119:
+ 1269              	.LM449:
+ 1270              	.LM450:
+ 1271              	.LM451:
+ 1272              	.LM452:
+ 1273 0000 93B75500 		sltiu	a5,a1,5
+ 1274 0004 81EB     		bne	a5,zero,.L174
+ 1275              	.LM453:
+ 1276 0006 B707FEBF 		li	a5,-1073872896
+ 1277 000a 938707C0 		addi	a5,a5,-1024
+ 1278 000e AA97     		add	a5,a0,a5
+ 1279              	.LM454:
+ 1280 0010 91E3     		bne	a5,zero,.L174
+ 1281              	.LVL93:
+ 1282              	.L175:
+ 1283              	.LM455:
+ 1284              	.LBE119:
+ 1285              	.LBE118:
+ 1286              	.LM456:
+ 1287              	.LM457:
+ 1288              	.LM458:
+ 1289 0012 01A0     		j	.L175
+ 1290              	.LVL94:
+ 1291              	.L174:
+ 1292              	.LBB121:
+ 1293              	.LBB120:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 23
+
+
+ 1294              	.LM459:
+ 1295              	.LM460:
+ 1296              	.LBE120:
+ 1297              	.LBE121:
+ 1298              	.LM461:
+ 1299              	.LM462:
+ 1300 0014 D147     		li	a5,20
+ 1301 0016 B385F502 		mul	a1,a1,a5
+ 1302              	.LVL95:
+ 1303              	.LM463:
+ 1304 001a AA95     		add	a1,a1,a0
+ 1305 001c 9C45     		lw	a5,8(a1)
+ 1306 001e 93F7F7FB 		andi	a5,a5,-65
+ 1307 0022 9CC5     		sw	a5,8(a1)
+ 1308              	.LM464:
+ 1309 0024 8280     		ret
+ 1310              		.cfi_endproc
+ 1311              	.LFE169:
+ 1313              		.section	.text.dma_transfer_direction_config,"ax",@progbits
+ 1314              		.align	1
+ 1315              		.globl	dma_transfer_direction_config
+ 1317              	dma_transfer_direction_config:
+ 1318              	.LVL96:
+ 1319              	.LFB170:
+ 1320              	.LM465:
+ 1321              		.cfi_startproc
+ 1322              	.LM466:
+ 1323              	.LBB122:
+ 1324              	.LBI122:
+ 1325              	.LM467:
+ 1326              	.LBB123:
+ 1327              	.LM468:
+ 1328              	.LM469:
+ 1329              	.LM470:
+ 1330              	.LM471:
+ 1331 0000 93B75500 		sltiu	a5,a1,5
+ 1332 0004 81EB     		bne	a5,zero,.L183
+ 1333              	.LM472:
+ 1334 0006 B707FEBF 		li	a5,-1073872896
+ 1335 000a 938707C0 		addi	a5,a5,-1024
+ 1336 000e AA97     		add	a5,a0,a5
+ 1337              	.LM473:
+ 1338 0010 91E3     		bne	a5,zero,.L183
+ 1339              	.LVL97:
+ 1340              	.L184:
+ 1341              	.LM474:
+ 1342              	.LBE123:
+ 1343              	.LBE122:
+ 1344              	.LM475:
+ 1345              	.LM476:
+ 1346              	.LM477:
+ 1347 0012 01A0     		j	.L184
+ 1348              	.LVL98:
+ 1349              	.L183:
+ 1350              	.LBB125:
+ 1351              	.LBB124:
+ 1352              	.LM478:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 24
+
+
+ 1353              	.LM479:
+ 1354              	.LBE124:
+ 1355              	.LBE125:
+ 1356              	.LM480:
+ 1357              	.LM481:
+ 1358 0014 D147     		li	a5,20
+ 1359 0016 B385F502 		mul	a1,a1,a5
+ 1360              	.LVL99:
+ 1361              	.LM482:
+ 1362 001a 2E95     		add	a0,a1,a0
+ 1363              	.LVL100:
+ 1364              	.LM483:
+ 1365 001c 1C45     		lw	a5,8(a0)
+ 1366              	.LM484:
+ 1367 001e 01E6     		bne	a2,zero,.L185
+ 1368              	.LM485:
+ 1369              	.LM486:
+ 1370 0020 BD9B     		andi	a5,a5,-17
+ 1371              	.L193:
+ 1372              	.LM487:
+ 1373 0022 1CC5     		sw	a5,8(a0)
+ 1374              	.LM488:
+ 1375 0024 8280     		ret
+ 1376              	.L185:
+ 1377              	.LM489:
+ 1378              	.LM490:
+ 1379 0026 93E70701 		ori	a5,a5,16
+ 1380 002a E5BF     		j	.L193
+ 1381              		.cfi_endproc
+ 1382              	.LFE170:
+ 1384              		.section	.text.dma_flag_get,"ax",@progbits
+ 1385              		.align	1
+ 1386              		.globl	dma_flag_get
+ 1388              	dma_flag_get:
+ 1389              	.LVL101:
+ 1390              	.LFB171:
+ 1391              	.LM491:
+ 1392              		.cfi_startproc
+ 1393              	.LM492:
+ 1394              	.LM493:
+ 1395              	.LM494:
+ 1396 0000 1C41     		lw	a5,0(a0)
+ 1397              	.LVL102:
+ 1398              	.LM495:
+ 1399              	.LM496:
+ 1400 0002 8A05     		slli	a1,a1,2
+ 1401              	.LVL103:
+ 1402              	.LM497:
+ 1403 0004 3316B600 		sll	a2,a2,a1
+ 1404              	.LVL104:
+ 1405              	.LM498:
+ 1406 0008 3375F600 		and	a0,a2,a5
+ 1407              	.LVL105:
+ 1408              	.LM499:
+ 1409 000c 3335A000 		snez	a0,a0
+ 1410 0010 8280     		ret
+ 1411              		.cfi_endproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 25
+
+
+ 1412              	.LFE171:
+ 1414              		.section	.text.dma_flag_clear,"ax",@progbits
+ 1415              		.align	1
+ 1416              		.globl	dma_flag_clear
+ 1418              	dma_flag_clear:
+ 1419              	.LVL106:
+ 1420              	.LFB172:
+ 1421              	.LM500:
+ 1422              		.cfi_startproc
+ 1423              	.LM501:
+ 1424 0000 5C41     		lw	a5,4(a0)
+ 1425              	.LM502:
+ 1426 0002 8A05     		slli	a1,a1,2
+ 1427              	.LVL107:
+ 1428              	.LM503:
+ 1429 0004 3316B600 		sll	a2,a2,a1
+ 1430              	.LVL108:
+ 1431              	.LM504:
+ 1432 0008 5D8E     		or	a2,a2,a5
+ 1433 000a 50C1     		sw	a2,4(a0)
+ 1434              	.LM505:
+ 1435 000c 8280     		ret
+ 1436              		.cfi_endproc
+ 1437              	.LFE172:
+ 1439              		.section	.text.dma_interrupt_flag_get,"ax",@progbits
+ 1440              		.align	1
+ 1441              		.globl	dma_interrupt_flag_get
+ 1443              	dma_interrupt_flag_get:
+ 1444              	.LVL109:
+ 1445              	.LFB173:
+ 1446              	.LM506:
+ 1447              		.cfi_startproc
+ 1448              	.LM507:
+ 1449              	.LM508:
+ 1450 0000 9147     		li	a5,4
+ 1451 0002 630BF602 		beq	a2,a5,.L197
+ 1452 0006 A147     		li	a5,8
+ 1453 0008 6306F604 		beq	a2,a5,.L198
+ 1454 000c 8947     		li	a5,2
+ 1455 000e 6311F606 		bne	a2,a5,.L199
+ 1456              	.LM509:
+ 1457              	.LM510:
+ 1458 0012 1C41     		lw	a5,0(a0)
+ 1459              	.LM511:
+ 1460 0014 13972500 		slli	a4,a1,2
+ 1461 0018 3316E600 		sll	a2,a2,a4
+ 1462              	.LVL110:
+ 1463              	.LM512:
+ 1464 001c 7D8E     		and	a2,a2,a5
+ 1465              	.LVL111:
+ 1466              	.LM513:
+ 1467              	.LM514:
+ 1468 001e D147     		li	a5,20
+ 1469 0020 B385F502 		mul	a1,a1,a5
+ 1470              	.LVL112:
+ 1471              	.LM515:
+ 1472 0024 A105     		addi	a1,a1,8
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 26
+
+
+ 1473 0026 2E95     		add	a0,a1,a0
+ 1474              	.LVL113:
+ 1475              	.LM516:
+ 1476 0028 0841     		lw	a0,0(a0)
+ 1477              	.LM517:
+ 1478 002a 0989     		andi	a0,a0,2
+ 1479              	.LVL114:
+ 1480              	.LM518:
+ 1481              	.L200:
+ 1482              	.LM519:
+ 1483              	.LM520:
+ 1484 002c 3336C000 		snez	a2,a2
+ 1485              	.LVL115:
+ 1486              	.LM521:
+ 1487 0030 3335A000 		snez	a0,a0
+ 1488              	.LVL116:
+ 1489              	.LM522:
+ 1490 0034 718D     		and	a0,a0,a2
+ 1491 0036 8280     		ret
+ 1492              	.LVL117:
+ 1493              	.L197:
+ 1494              	.LM523:
+ 1495              	.LM524:
+ 1496 0038 1C41     		lw	a5,0(a0)
+ 1497              	.LM525:
+ 1498 003a 13972500 		slli	a4,a1,2
+ 1499 003e 3316E600 		sll	a2,a2,a4
+ 1500              	.LVL118:
+ 1501              	.LM526:
+ 1502 0042 7D8E     		and	a2,a2,a5
+ 1503              	.LVL119:
+ 1504              	.LM527:
+ 1505              	.LM528:
+ 1506 0044 D147     		li	a5,20
+ 1507 0046 B385F502 		mul	a1,a1,a5
+ 1508              	.LVL120:
+ 1509              	.LM529:
+ 1510 004a A105     		addi	a1,a1,8
+ 1511 004c 2E95     		add	a0,a1,a0
+ 1512              	.LVL121:
+ 1513              	.LM530:
+ 1514 004e 0841     		lw	a0,0(a0)
+ 1515              	.LM531:
+ 1516 0050 1189     		andi	a0,a0,4
+ 1517              	.LVL122:
+ 1518              	.LM532:
+ 1519 0052 E9BF     		j	.L200
+ 1520              	.LVL123:
+ 1521              	.L198:
+ 1522              	.LM533:
+ 1523              	.LM534:
+ 1524 0054 1C41     		lw	a5,0(a0)
+ 1525              	.LM535:
+ 1526 0056 13972500 		slli	a4,a1,2
+ 1527 005a 3316E600 		sll	a2,a2,a4
+ 1528              	.LVL124:
+ 1529              	.LM536:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 27
+
+
+ 1530 005e 7D8E     		and	a2,a2,a5
+ 1531              	.LVL125:
+ 1532              	.LM537:
+ 1533              	.LM538:
+ 1534 0060 D147     		li	a5,20
+ 1535 0062 B385F502 		mul	a1,a1,a5
+ 1536              	.LVL126:
+ 1537              	.LM539:
+ 1538 0066 A105     		addi	a1,a1,8
+ 1539 0068 2E95     		add	a0,a1,a0
+ 1540              	.LVL127:
+ 1541              	.LM540:
+ 1542 006a 0841     		lw	a0,0(a0)
+ 1543              	.LM541:
+ 1544 006c 2189     		andi	a0,a0,8
+ 1545              	.LVL128:
+ 1546              	.LM542:
+ 1547 006e 7DBF     		j	.L200
+ 1548              	.LVL129:
+ 1549              	.L199:
+ 1550              	.LM543:
+ 1551              	.LM544:
+ 1552              	.LM545:
+ 1553 0070 01A0     		j	.L199
+ 1554              		.cfi_endproc
+ 1555              	.LFE173:
+ 1557              		.section	.text.dma_interrupt_flag_clear,"ax",@progbits
+ 1558              		.align	1
+ 1559              		.globl	dma_interrupt_flag_clear
+ 1561              	dma_interrupt_flag_clear:
+ 1562              	.LFB179:
+ 1563              		.cfi_startproc
+ 1564              	.LM546:
+ 1565 0000 17030000 		tail	dma_flag_clear
+ 1565      67000300 
+ 1566              		.cfi_endproc
+ 1567              	.LFE179:
+ 1569              		.section	.text.dma_interrupt_enable,"ax",@progbits
+ 1570              		.align	1
+ 1571              		.globl	dma_interrupt_enable
+ 1573              	dma_interrupt_enable:
+ 1574              	.LVL130:
+ 1575              	.LFB175:
+ 1576              	.LM547:
+ 1577              		.cfi_startproc
+ 1578              	.LM548:
+ 1579              	.LBB126:
+ 1580              	.LBI126:
+ 1581              	.LM549:
+ 1582              	.LBB127:
+ 1583              	.LM550:
+ 1584              	.LM551:
+ 1585              	.LM552:
+ 1586              	.LM553:
+ 1587 0000 93B75500 		sltiu	a5,a1,5
+ 1588 0004 81EB     		bne	a5,zero,.L205
+ 1589              	.LM554:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 28
+
+
+ 1590 0006 B707FEBF 		li	a5,-1073872896
+ 1591 000a 938707C0 		addi	a5,a5,-1024
+ 1592 000e AA97     		add	a5,a0,a5
+ 1593              	.LM555:
+ 1594 0010 91E3     		bne	a5,zero,.L205
+ 1595              	.LVL131:
+ 1596              	.L206:
+ 1597              	.LM556:
+ 1598              	.LBE127:
+ 1599              	.LBE126:
+ 1600              	.LM557:
+ 1601              	.LM558:
+ 1602              	.LM559:
+ 1603 0012 01A0     		j	.L206
+ 1604              	.LVL132:
+ 1605              	.L205:
+ 1606              	.LBB129:
+ 1607              	.LBB128:
+ 1608              	.LM560:
+ 1609              	.LM561:
+ 1610              	.LBE128:
+ 1611              	.LBE129:
+ 1612              	.LM562:
+ 1613 0014 D147     		li	a5,20
+ 1614 0016 B385F502 		mul	a1,a1,a5
+ 1615              	.LVL133:
+ 1616              	.LM563:
+ 1617 001a AA95     		add	a1,a1,a0
+ 1618 001c 9C45     		lw	a5,8(a1)
+ 1619              	.LM564:
+ 1620 001e D18F     		or	a5,a5,a2
+ 1621 0020 9CC5     		sw	a5,8(a1)
+ 1622              	.LM565:
+ 1623 0022 8280     		ret
+ 1624              		.cfi_endproc
+ 1625              	.LFE175:
+ 1627              		.section	.text.dma_interrupt_disable,"ax",@progbits
+ 1628              		.align	1
+ 1629              		.globl	dma_interrupt_disable
+ 1631              	dma_interrupt_disable:
+ 1632              	.LVL134:
+ 1633              	.LFB176:
+ 1634              	.LM566:
+ 1635              		.cfi_startproc
+ 1636              	.LM567:
+ 1637              	.LBB130:
+ 1638              	.LBI130:
+ 1639              	.LM568:
+ 1640              	.LBB131:
+ 1641              	.LM569:
+ 1642              	.LM570:
+ 1643              	.LM571:
+ 1644              	.LM572:
+ 1645 0000 93B75500 		sltiu	a5,a1,5
+ 1646 0004 81EB     		bne	a5,zero,.L214
+ 1647              	.LM573:
+ 1648 0006 B707FEBF 		li	a5,-1073872896
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 29
+
+
+ 1649 000a 938707C0 		addi	a5,a5,-1024
+ 1650 000e AA97     		add	a5,a0,a5
+ 1651              	.LM574:
+ 1652 0010 91E3     		bne	a5,zero,.L214
+ 1653              	.LVL135:
+ 1654              	.L215:
+ 1655              	.LM575:
+ 1656              	.LBE131:
+ 1657              	.LBE130:
+ 1658              	.LM576:
+ 1659              	.LM577:
+ 1660              	.LM578:
+ 1661 0012 01A0     		j	.L215
+ 1662              	.LVL136:
+ 1663              	.L214:
+ 1664              	.LBB133:
+ 1665              	.LBB132:
+ 1666              	.LM579:
+ 1667              	.LM580:
+ 1668              	.LBE132:
+ 1669              	.LBE133:
+ 1670              	.LM581:
+ 1671 0014 D147     		li	a5,20
+ 1672 0016 B385F502 		mul	a1,a1,a5
+ 1673              	.LVL137:
+ 1674              	.LM582:
+ 1675 001a 1346F6FF 		not	a2,a2
+ 1676              	.LVL138:
+ 1677              	.LM583:
+ 1678 001e AA95     		add	a1,a1,a0
+ 1679 0020 9C45     		lw	a5,8(a1)
+ 1680              	.LM584:
+ 1681 0022 7D8E     		and	a2,a2,a5
+ 1682              	.LVL139:
+ 1683              	.LM585:
+ 1684 0024 90C5     		sw	a2,8(a1)
+ 1685              	.LM586:
+ 1686 0026 8280     		ret
+ 1687              		.cfi_endproc
+ 1688              	.LFE176:
+ 1690              		.text
+ 1691              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 30
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_dma.c
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10     .text.dma_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:13     .text.dma_deinit:00000000 dma_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:17     .text.dma_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:86     .text.dma_deinit:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:90     .text.dma_struct_para_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:93     .text.dma_struct_para_init:00000000 dma_struct_para_init
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:97     .text.dma_struct_para_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:125    .text.dma_struct_para_init:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:129    .text.dma_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:132    .text.dma_init:00000000 dma_init
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:136    .text.dma_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:279    .text.dma_init:0000008c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:283    .text.dma_circulation_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:286    .text.dma_circulation_enable:00000000 dma_circulation_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:290    .text.dma_circulation_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:337    .text.dma_circulation_enable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:341    .text.dma_circulation_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:344    .text.dma_circulation_disable:00000000 dma_circulation_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:348    .text.dma_circulation_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:395    .text.dma_circulation_disable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:399    .text.dma_memory_to_memory_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:402    .text.dma_memory_to_memory_enable:00000000 dma_memory_to_memory_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:406    .text.dma_memory_to_memory_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:455    .text.dma_memory_to_memory_enable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:459    .text.dma_memory_to_memory_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:462    .text.dma_memory_to_memory_disable:00000000 dma_memory_to_memory_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:466    .text.dma_memory_to_memory_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:515    .text.dma_memory_to_memory_disable:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:519    .text.dma_channel_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:522    .text.dma_channel_enable:00000000 dma_channel_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:526    .text.dma_channel_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:573    .text.dma_channel_enable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:577    .text.dma_channel_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:580    .text.dma_channel_disable:00000000 dma_channel_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:584    .text.dma_channel_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:631    .text.dma_channel_disable:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:635    .text.dma_periph_address_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:638    .text.dma_periph_address_config:00000000 dma_periph_address_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:642    .text.dma_periph_address_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:687    .text.dma_periph_address_config:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:691    .text.dma_memory_address_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:694    .text.dma_memory_address_config:00000000 dma_memory_address_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:698    .text.dma_memory_address_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:743    .text.dma_memory_address_config:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:747    .text.dma_transfer_number_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:750    .text.dma_transfer_number_config:00000000 dma_transfer_number_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:754    .text.dma_transfer_number_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:804    .text.dma_transfer_number_config:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:808    .text.dma_transfer_number_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:811    .text.dma_transfer_number_get:00000000 dma_transfer_number_get
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:815    .text.dma_transfer_number_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:862    .text.dma_transfer_number_get:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:866    .text.dma_priority_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:869    .text.dma_priority_config:00000000 dma_priority_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:873    .text.dma_priority_config:00000000 .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 31
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:935    .text.dma_priority_config:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:939    .text.dma_memory_width_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:942    .text.dma_memory_width_config:00000000 dma_memory_width_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:946    .text.dma_memory_width_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1008   .text.dma_memory_width_config:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1012   .text.dma_periph_width_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1015   .text.dma_periph_width_config:00000000 dma_periph_width_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1019   .text.dma_periph_width_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1078   .text.dma_periph_width_config:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1082   .text.dma_memory_increase_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1085   .text.dma_memory_increase_enable:00000000 dma_memory_increase_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1089   .text.dma_memory_increase_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1136   .text.dma_memory_increase_enable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1140   .text.dma_memory_increase_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1143   .text.dma_memory_increase_disable:00000000 dma_memory_increase_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1147   .text.dma_memory_increase_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1194   .text.dma_memory_increase_disable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1198   .text.dma_periph_increase_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1201   .text.dma_periph_increase_enable:00000000 dma_periph_increase_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1205   .text.dma_periph_increase_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1252   .text.dma_periph_increase_enable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1256   .text.dma_periph_increase_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1259   .text.dma_periph_increase_disable:00000000 dma_periph_increase_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1263   .text.dma_periph_increase_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1310   .text.dma_periph_increase_disable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1314   .text.dma_transfer_direction_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1317   .text.dma_transfer_direction_config:00000000 dma_transfer_direction_config
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1321   .text.dma_transfer_direction_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1381   .text.dma_transfer_direction_config:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1385   .text.dma_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1388   .text.dma_flag_get:00000000 dma_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1392   .text.dma_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1411   .text.dma_flag_get:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1415   .text.dma_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1418   .text.dma_flag_clear:00000000 dma_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1422   .text.dma_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1436   .text.dma_flag_clear:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1440   .text.dma_interrupt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1443   .text.dma_interrupt_flag_get:00000000 dma_interrupt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1447   .text.dma_interrupt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1554   .text.dma_interrupt_flag_get:00000072 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1558   .text.dma_interrupt_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1561   .text.dma_interrupt_flag_clear:00000000 dma_interrupt_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1563   .text.dma_interrupt_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1566   .text.dma_interrupt_flag_clear:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1570   .text.dma_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1573   .text.dma_interrupt_enable:00000000 dma_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1577   .text.dma_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1624   .text.dma_interrupt_enable:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1628   .text.dma_interrupt_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1631   .text.dma_interrupt_disable:00000000 dma_interrupt_disable
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1635   .text.dma_interrupt_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1687   .text.dma_interrupt_disable:00000028 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:45     .text.dma_deinit:00000014 .L2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:36     .text.dma_deinit:00000012 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:165    .text.dma_init:00000014 .L12
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 32
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:156    .text.dma_init:00000012 .L13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:260    .text.dma_init:00000074 .L14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:267    .text.dma_init:0000007c .L16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:273    .text.dma_init:00000084 .L18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:230    .text.dma_init:00000052 .L26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:243    .text.dma_init:00000064 .L27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:254    .text.dma_init:00000070 .L28
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:318    .text.dma_circulation_enable:00000014 .L30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:309    .text.dma_circulation_enable:00000012 .L31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:376    .text.dma_circulation_disable:00000014 .L39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:367    .text.dma_circulation_disable:00000012 .L40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:434    .text.dma_memory_to_memory_enable:00000014 .L48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:425    .text.dma_memory_to_memory_enable:00000012 .L49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:494    .text.dma_memory_to_memory_disable:00000014 .L57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:485    .text.dma_memory_to_memory_disable:00000012 .L58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:554    .text.dma_channel_enable:00000014 .L66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:545    .text.dma_channel_enable:00000012 .L67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:612    .text.dma_channel_disable:00000014 .L75
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:603    .text.dma_channel_disable:00000012 .L76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:670    .text.dma_periph_address_config:00000014 .L84
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:661    .text.dma_periph_address_config:00000012 .L85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:726    .text.dma_memory_address_config:00000014 .L93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:717    .text.dma_memory_address_config:00000012 .L94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:782    .text.dma_transfer_number_config:00000014 .L102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:773    .text.dma_transfer_number_config:00000012 .L103
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:843    .text.dma_transfer_number_get:00000014 .L111
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:834    .text.dma_transfer_number_get:00000012 .L112
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:902    .text.dma_priority_config:00000014 .L120
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:893    .text.dma_priority_config:00000012 .L121
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:975    .text.dma_memory_width_config:00000014 .L129
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:966    .text.dma_memory_width_config:00000012 .L130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1048   .text.dma_periph_width_config:00000014 .L138
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1039   .text.dma_periph_width_config:00000012 .L139
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1117   .text.dma_memory_increase_enable:00000014 .L147
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1108   .text.dma_memory_increase_enable:00000012 .L148
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1175   .text.dma_memory_increase_disable:00000014 .L156
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1166   .text.dma_memory_increase_disable:00000012 .L157
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1233   .text.dma_periph_increase_enable:00000014 .L165
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1224   .text.dma_periph_increase_enable:00000012 .L166
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1291   .text.dma_periph_increase_disable:00000014 .L174
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1282   .text.dma_periph_increase_disable:00000012 .L175
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1349   .text.dma_transfer_direction_config:00000014 .L183
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1340   .text.dma_transfer_direction_config:00000012 .L184
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1376   .text.dma_transfer_direction_config:00000026 .L185
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1371   .text.dma_transfer_direction_config:00000022 .L193
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1493   .text.dma_interrupt_flag_get:00000038 .L197
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1521   .text.dma_interrupt_flag_get:00000054 .L198
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1549   .text.dma_interrupt_flag_get:00000070 .L199
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1481   .text.dma_interrupt_flag_get:0000002c .L200
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1605   .text.dma_interrupt_enable:00000014 .L205
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1596   .text.dma_interrupt_enable:00000012 .L206
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1663   .text.dma_interrupt_disable:00000014 .L214
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1654   .text.dma_interrupt_disable:00000012 .L215
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:3432   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10343  .debug_str:000003ae .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10251  .debug_str:000000ba .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10317  .debug_str:000002c7 .LASF75
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 33
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6405   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6595   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10313  .debug_str:000002a7 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10319  .debug_str:000002d7 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10245  .debug_str:00000080 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10303  .debug_str:0000024f .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10311  .debug_str:0000029b .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10385  .debug_str:00000595 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10305  .debug_str:0000025b .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10253  .debug_str:000000f8 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10323  .debug_str:00000300 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10279  .debug_str:000001b9 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10337  .debug_str:0000038e .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10333  .debug_str:00000365 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10259  .debug_str:00000123 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10315  .debug_str:000002be .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10347  .debug_str:00000481 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10375  .debug_str:0000054e .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10293  .debug_str:0000020f .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10277  .debug_str:000001b1 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10241  .debug_str:0000006c .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10367  .debug_str:0000052e .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10369  .debug_str:00000536 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10371  .debug_str:0000053e .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10373  .debug_str:00000546 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10265  .debug_str:0000015c .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10377  .debug_str:00000559 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10379  .debug_str:00000561 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10249  .debug_str:000000a9 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10239  .debug_str:00000060 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10297  .debug_str:00000220 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10339  .debug_str:00000399 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10299  .debug_str:0000022d .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10359  .debug_str:000004f4 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10233  .debug_str:00000027 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10295  .debug_str:00000215 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10255  .debug_str:00000102 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10243  .debug_str:00000076 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10301  .debug_str:0000023a .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10263  .debug_str:0000013f .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10361  .debug_str:000004fb .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10327  .debug_str:0000032c .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10257  .debug_str:0000010d .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1633   .text.dma_interrupt_disable:00000000 .LFB176
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1688   .text.dma_interrupt_disable:00000028 .LFE176
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:3987   .debug_loc:00000004 .LLST103
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:3982   .debug_loc:00000000 .LVUS103
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10291  .debug_str:00000208 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4014   .debug_loc:00000031 .LLST104
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4007   .debug_loc:0000002b .LVUS104
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1638   .text.dma_interrupt_disable:00000000 .LBI130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4046   .debug_loc:0000006a .LLST105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4041   .debug_loc:00000066 .LVUS105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4062   .debug_loc:0000008c .LLST106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4057   .debug_loc:00000088 .LVUS106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4078   .debug_loc:000000ae .LLST107
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4073   .debug_loc:000000aa .LVUS107
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10363  .debug_str:00000506 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1575   .text.dma_interrupt_enable:00000000 .LFB175
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1625   .text.dma_interrupt_enable:00000024 .LFE175
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4096   .debug_loc:000000d2 .LLST99
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4091   .debug_loc:000000ce .LVUS99
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1580   .text.dma_interrupt_enable:00000000 .LBI126
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4121   .debug_loc:000000fd .LLST100
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4116   .debug_loc:000000f9 .LVUS100
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4137   .debug_loc:0000011f .LLST101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4132   .debug_loc:0000011b .LVUS101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4153   .debug_loc:00000141 .LLST102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4148   .debug_loc:0000013d .LVUS102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10325  .debug_str:00000313 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10357  .debug_str:000004ef .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10273  .debug_str:00000193 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1445   .text.dma_interrupt_flag_get:00000000 .LFB173
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1555   .text.dma_interrupt_flag_get:00000072 .LFE173
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4181   .debug_loc:0000016f .LLST94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4166   .debug_loc:00000161 .LVUS94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4254   .debug_loc:000001ed .LLST95
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4239   .debug_loc:000001df .LVUS95
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4327   .debug_loc:0000026b .LLST96
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4312   .debug_loc:0000025d .LVUS96
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10285  .debug_str:000001d0 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4400   .debug_loc:000002e9 .LLST97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4385   .debug_loc:000002db .LVUS97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10381  .debug_str:00000569 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4450   .debug_loc:00000350 .LLST98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4435   .debug_loc:00000342 .LVUS98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10229  .debug_str:00000000 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1420   .text.dma_flag_clear:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1437   .text.dma_flag_clear:0000000e .LFE172
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4490   .debug_loc:000003ad .LLST92
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4485   .debug_loc:000003a9 .LVUS92
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4515   .debug_loc:000003d8 .LLST93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4510   .debug_loc:000003d4 .LVUS93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10269  .debug_str:0000017f .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1390   .text.dma_flag_get:00000000 .LFB171
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1412   .text.dma_flag_get:00000012 .LFE171
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4540   .debug_loc:00000403 .LLST88
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4535   .debug_loc:000003ff .LVUS88
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4565   .debug_loc:0000042e .LLST89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4560   .debug_loc:0000042a .LVUS89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4590   .debug_loc:00000459 .LLST90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4585   .debug_loc:00000455 .LVUS90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10281  .debug_str:000001c2 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4617   .debug_loc:00000486 .LLST91
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4610   .debug_loc:00000480 .LVUS91
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10353  .debug_str:000004b7 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1319   .text.dma_transfer_direction_config:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1382   .text.dma_transfer_direction_config:0000002c .LFE170
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4685   .debug_loc:000004e3 .LLST83
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4680   .debug_loc:000004df .LVUS83
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4710   .debug_loc:0000050e .LLST84
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4705   .debug_loc:0000050a .LVUS84
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1324   .text.dma_transfer_direction_config:00000000 .LBI122
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4735   .debug_loc:00000539 .LLST85
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4730   .debug_loc:00000535 .LVUS85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4751   .debug_loc:0000055b .LLST86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4746   .debug_loc:00000557 .LVUS86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4767   .debug_loc:0000057d .LLST87
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4762   .debug_loc:00000579 .LVUS87
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10331  .debug_str:00000349 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1261   .text.dma_periph_increase_disable:00000000 .LFB169
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1311   .text.dma_periph_increase_disable:00000026 .LFE169
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4785   .debug_loc:000005a1 .LLST79
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4780   .debug_loc:0000059d .LVUS79
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1266   .text.dma_periph_increase_disable:00000000 .LBI118
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4810   .debug_loc:000005cc .LLST80
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4805   .debug_loc:000005c8 .LVUS80
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4826   .debug_loc:000005ee .LLST81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4821   .debug_loc:000005ea .LVUS81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4842   .debug_loc:00000610 .LLST82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4837   .debug_loc:0000060c .LVUS82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10267  .debug_str:00000164 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1203   .text.dma_periph_increase_enable:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1253   .text.dma_periph_increase_enable:00000026 .LFE168
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4860   .debug_loc:00000634 .LLST75
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4855   .debug_loc:00000630 .LVUS75
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1208   .text.dma_periph_increase_enable:00000000 .LBI114
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4885   .debug_loc:0000065f .LLST76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4880   .debug_loc:0000065b .LVUS76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4901   .debug_loc:00000681 .LLST77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4896   .debug_loc:0000067d .LVUS77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4917   .debug_loc:000006a3 .LLST78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4912   .debug_loc:0000069f .LVUS78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10289  .debug_str:000001ec .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1145   .text.dma_memory_increase_disable:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1195   .text.dma_memory_increase_disable:00000026 .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4935   .debug_loc:000006c7 .LLST71
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4930   .debug_loc:000006c3 .LVUS71
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1150   .text.dma_memory_increase_disable:00000000 .LBI110
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4960   .debug_loc:000006f2 .LLST72
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4955   .debug_loc:000006ee .LVUS72
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4976   .debug_loc:00000714 .LLST73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4971   .debug_loc:00000710 .LVUS73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4992   .debug_loc:00000736 .LLST74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:4987   .debug_loc:00000732 .LVUS74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10247  .debug_str:0000008e .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1087   .text.dma_memory_increase_enable:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1137   .text.dma_memory_increase_enable:00000026 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5010   .debug_loc:0000075a .LLST67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5005   .debug_loc:00000756 .LVUS67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1092   .text.dma_memory_increase_enable:00000000 .LBI106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5035   .debug_loc:00000785 .LLST68
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5030   .debug_loc:00000781 .LVUS68
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5051   .debug_loc:000007a7 .LLST69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5046   .debug_loc:000007a3 .LVUS69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5067   .debug_loc:000007c9 .LLST70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5062   .debug_loc:000007c5 .LVUS70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10309  .debug_str:00000283 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1017   .text.dma_periph_width_config:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1079   .text.dma_periph_width_config:00000028 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5085   .debug_loc:000007ed .LLST62
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5080   .debug_loc:000007e9 .LVUS62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10271  .debug_str:0000018c .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5108   .debug_loc:00000816 .LLST63
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5105   .debug_loc:00000814 .LVUS63
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1023   .text.dma_periph_width_config:00000000 .LBI102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5120   .debug_loc:0000082d .LLST64
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5115   .debug_loc:00000829 .LVUS64
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5136   .debug_loc:0000084f .LLST65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5131   .debug_loc:0000084b .LVUS65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5152   .debug_loc:00000871 .LLST66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5147   .debug_loc:0000086d .LVUS66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10231  .debug_str:0000000f .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:944    .text.dma_memory_width_config:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1009   .text.dma_memory_width_config:0000002c .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5170   .debug_loc:00000895 .LLST57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5165   .debug_loc:00000891 .LVUS57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10275  .debug_str:000001aa .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5193   .debug_loc:000008be .LLST58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5190   .debug_loc:000008bc .LVUS58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:950    .text.dma_memory_width_config:00000000 .LBI98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5205   .debug_loc:000008d5 .LLST59
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5200   .debug_loc:000008d1 .LVUS59
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5221   .debug_loc:000008f7 .LLST60
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5216   .debug_loc:000008f3 .LVUS60
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5237   .debug_loc:00000919 .LLST61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5232   .debug_loc:00000915 .LVUS61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10261  .debug_str:0000012b .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:871    .text.dma_priority_config:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:936    .text.dma_priority_config:0000002a .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5255   .debug_loc:0000093d .LLST52
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5250   .debug_loc:00000939 .LVUS52
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5278   .debug_loc:00000966 .LLST53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5275   .debug_loc:00000964 .LVUS53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:877    .text.dma_priority_config:00000000 .LBI94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5290   .debug_loc:0000097d .LLST54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5285   .debug_loc:00000979 .LVUS54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5306   .debug_loc:0000099f .LLST55
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5301   .debug_loc:0000099b .LVUS55
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5322   .debug_loc:000009c1 .LLST56
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5317   .debug_loc:000009bd .LVUS56
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10237  .debug_str:00000048 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:813    .text.dma_transfer_number_get:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:863    .text.dma_transfer_number_get:00000020 .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5340   .debug_loc:000009e5 .LLST47
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5335   .debug_loc:000009e1 .LVUS47
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5365   .debug_loc:00000a10 .LLST48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5360   .debug_loc:00000a0c .LVUS48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:818    .text.dma_transfer_number_get:00000000 .LBI90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5390   .debug_loc:00000a3b .LLST49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5385   .debug_loc:00000a37 .LVUS49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5406   .debug_loc:00000a5d .LLST50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5401   .debug_loc:00000a59 .LVUS50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5422   .debug_loc:00000a7f .LLST51
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5417   .debug_loc:00000a7b .LVUS51
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10349  .debug_str:00000487 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:752    .text.dma_transfer_number_config:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:805    .text.dma_transfer_number_config:00000024 .LFE161
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5440   .debug_loc:00000aa3 .LLST42
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5435   .debug_loc:00000a9f .LVUS42
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5465   .debug_loc:00000ace .LLST43
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5460   .debug_loc:00000aca .LVUS43
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:757    .text.dma_transfer_number_config:00000000 .LBI86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5490   .debug_loc:00000af9 .LLST44
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5485   .debug_loc:00000af5 .LVUS44
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5506   .debug_loc:00000b1b .LLST45
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5501   .debug_loc:00000b17 .LVUS45
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5522   .debug_loc:00000b3d .LLST46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5517   .debug_loc:00000b39 .LVUS46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10355  .debug_str:000004d5 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:696    .text.dma_memory_address_config:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:744    .text.dma_memory_address_config:00000020 .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5540   .debug_loc:00000b61 .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5535   .debug_loc:00000b5d .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10283  .debug_str:000001c8 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:701    .text.dma_memory_address_config:00000000 .LBI82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5565   .debug_loc:00000b8c .LLST39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5560   .debug_loc:00000b88 .LVUS39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5581   .debug_loc:00000bae .LLST40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5576   .debug_loc:00000baa .LVUS40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5597   .debug_loc:00000bd0 .LLST41
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5592   .debug_loc:00000bcc .LVUS41
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10307  .debug_str:00000269 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:640    .text.dma_periph_address_config:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:688    .text.dma_periph_address_config:00000020 .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5615   .debug_loc:00000bf4 .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5610   .debug_loc:00000bf0 .LVUS34
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:645    .text.dma_periph_address_config:00000000 .LBI78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5640   .debug_loc:00000c1f .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5635   .debug_loc:00000c1b .LVUS35
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5656   .debug_loc:00000c41 .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5651   .debug_loc:00000c3d .LVUS36
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5672   .debug_loc:00000c63 .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5667   .debug_loc:00000c5f .LVUS37
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10329  .debug_str:00000335 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:582    .text.dma_channel_disable:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:632    .text.dma_channel_disable:00000024 .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5690   .debug_loc:00000c87 .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5685   .debug_loc:00000c83 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:587    .text.dma_channel_disable:00000000 .LBI74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5715   .debug_loc:00000cb2 .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5710   .debug_loc:00000cae .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5731   .debug_loc:00000cd4 .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5726   .debug_loc:00000cd0 .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5747   .debug_loc:00000cf6 .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5742   .debug_loc:00000cf2 .LVUS33
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10365  .debug_str:0000051b .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:524    .text.dma_channel_enable:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:574    .text.dma_channel_enable:00000026 .LFE157
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5765   .debug_loc:00000d1a .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5760   .debug_loc:00000d16 .LVUS26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:529    .text.dma_channel_enable:00000000 .LBI70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5790   .debug_loc:00000d45 .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5785   .debug_loc:00000d41 .LVUS27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5806   .debug_loc:00000d67 .LLST28
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 38
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5801   .debug_loc:00000d63 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5822   .debug_loc:00000d89 .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5817   .debug_loc:00000d85 .LVUS29
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10383  .debug_str:00000578 .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:464    .text.dma_memory_to_memory_disable:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:516    .text.dma_memory_to_memory_disable:00000028 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5840   .debug_loc:00000dad .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5835   .debug_loc:00000da9 .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:469    .text.dma_memory_to_memory_disable:00000000 .LBI66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5865   .debug_loc:00000dd8 .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5860   .debug_loc:00000dd4 .LVUS23
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5881   .debug_loc:00000dfa .LLST24
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5876   .debug_loc:00000df6 .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5897   .debug_loc:00000e1c .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5892   .debug_loc:00000e18 .LVUS25
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10321  .debug_str:000002e4 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:404    .text.dma_memory_to_memory_enable:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:456    .text.dma_memory_to_memory_enable:00000026 .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5915   .debug_loc:00000e40 .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5910   .debug_loc:00000e3c .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:409    .text.dma_memory_to_memory_enable:00000000 .LBI62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5940   .debug_loc:00000e6b .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5935   .debug_loc:00000e67 .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5956   .debug_loc:00000e8d .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5951   .debug_loc:00000e89 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5972   .debug_loc:00000eaf .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5967   .debug_loc:00000eab .LVUS21
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10235  .debug_str:00000030 .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:346    .text.dma_circulation_disable:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:396    .text.dma_circulation_disable:00000026 .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5990   .debug_loc:00000ed3 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:5985   .debug_loc:00000ecf .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:351    .text.dma_circulation_disable:00000000 .LBI58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6015   .debug_loc:00000efe .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6010   .debug_loc:00000efa .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6031   .debug_loc:00000f20 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6026   .debug_loc:00000f1c .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6047   .debug_loc:00000f42 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6042   .debug_loc:00000f3e .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10335  .debug_str:00000377 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:288    .text.dma_circulation_enable:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:338    .text.dma_circulation_enable:00000026 .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6065   .debug_loc:00000f66 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6060   .debug_loc:00000f62 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:293    .text.dma_circulation_enable:00000000 .LBI54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6090   .debug_loc:00000f91 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6085   .debug_loc:00000f8d .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6106   .debug_loc:00000fb3 .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6101   .debug_loc:00000faf .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6122   .debug_loc:00000fd5 .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6117   .debug_loc:00000fd1 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10341  .debug_str:000003a5 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:134    .text.dma_init:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:280    .text.dma_init:0000008c .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6140   .debug_loc:00000ff9 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6135   .debug_loc:00000ff5 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6165   .debug_loc:00001024 .LLST5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 39
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6160   .debug_loc:00001020 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10345  .debug_str:00000475 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6194   .debug_loc:00001053 .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6185   .debug_loc:0000104b .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:140    .text.dma_init:00000000 .LBI50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6220   .debug_loc:0000108d .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6215   .debug_loc:00001089 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6236   .debug_loc:000010af .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6231   .debug_loc:000010ab .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6252   .debug_loc:000010d1 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6247   .debug_loc:000010cd .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10351  .debug_str:000004a2 .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:95     .text.dma_struct_para_init:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:126    .text.dma_struct_para_init:00000022 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:10287  .debug_str:000001e1 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:15     .text.dma_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:87     .text.dma_deinit:00000042 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6270   .debug_loc:000010f5 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6265   .debug_loc:000010f1 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:20     .text.dma_deinit:00000000 .LBI46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6295   .debug_loc:00001120 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6290   .debug_loc:0000111c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6311   .debug_loc:00001142 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6306   .debug_loc:0000113e .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6327   .debug_loc:00001164 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:6322   .debug_loc:00001160 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1632   .text.dma_interrupt_disable:00000000 .LVL134
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1673   .text.dma_interrupt_disable:0000001a .LVL137
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1676   .text.dma_interrupt_disable:0000001e .LVL138
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1682   .text.dma_interrupt_disable:00000024 .LVL139
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1653   .text.dma_interrupt_disable:00000012 .LVL135
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1662   .text.dma_interrupt_disable:00000014 .LVL136
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1574   .text.dma_interrupt_enable:00000000 .LVL130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1615   .text.dma_interrupt_enable:0000001a .LVL133
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1595   .text.dma_interrupt_enable:00000012 .LVL131
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1604   .text.dma_interrupt_enable:00000014 .LVL132
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1444   .text.dma_interrupt_flag_get:00000000 .LVL109
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1474   .text.dma_interrupt_flag_get:00000028 .LVL113
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1492   .text.dma_interrupt_flag_get:00000038 .LVL117
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1512   .text.dma_interrupt_flag_get:0000004e .LVL121
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1520   .text.dma_interrupt_flag_get:00000054 .LVL123
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1540   .text.dma_interrupt_flag_get:0000006a .LVL127
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1548   .text.dma_interrupt_flag_get:00000070 .LVL129
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1470   .text.dma_interrupt_flag_get:00000024 .LVL112
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1508   .text.dma_interrupt_flag_get:0000004a .LVL120
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1536   .text.dma_interrupt_flag_get:00000066 .LVL126
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1462   .text.dma_interrupt_flag_get:0000001c .LVL110
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1500   .text.dma_interrupt_flag_get:00000042 .LVL118
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1528   .text.dma_interrupt_flag_get:0000005e .LVL124
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1479   .text.dma_interrupt_flag_get:0000002c .LVL114
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1488   .text.dma_interrupt_flag_get:00000034 .LVL116
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1517   .text.dma_interrupt_flag_get:00000052 .LVL122
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1545   .text.dma_interrupt_flag_get:0000006e .LVL128
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1465   .text.dma_interrupt_flag_get:0000001e .LVL111
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1485   .text.dma_interrupt_flag_get:00000030 .LVL115
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1503   .text.dma_interrupt_flag_get:00000044 .LVL119
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1531   .text.dma_interrupt_flag_get:00000060 .LVL125
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 40
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1419   .text.dma_flag_clear:00000000 .LVL106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1427   .text.dma_flag_clear:00000004 .LVL107
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1430   .text.dma_flag_clear:00000008 .LVL108
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1389   .text.dma_flag_get:00000000 .LVL101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1407   .text.dma_flag_get:0000000c .LVL105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1401   .text.dma_flag_get:00000004 .LVL103
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1404   .text.dma_flag_get:00000008 .LVL104
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1397   .text.dma_flag_get:00000002 .LVL102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1318   .text.dma_transfer_direction_config:00000000 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1363   .text.dma_transfer_direction_config:0000001c .LVL100
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1360   .text.dma_transfer_direction_config:0000001a .LVL99
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1339   .text.dma_transfer_direction_config:00000012 .LVL97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1348   .text.dma_transfer_direction_config:00000014 .LVL98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1260   .text.dma_periph_increase_disable:00000000 .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1302   .text.dma_periph_increase_disable:0000001a .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1281   .text.dma_periph_increase_disable:00000012 .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1290   .text.dma_periph_increase_disable:00000014 .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1202   .text.dma_periph_increase_enable:00000000 .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1243   .text.dma_periph_increase_enable:0000001a .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1223   .text.dma_periph_increase_enable:00000012 .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1232   .text.dma_periph_increase_enable:00000014 .LVL90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1144   .text.dma_memory_increase_disable:00000000 .LVL84
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1186   .text.dma_memory_increase_disable:0000001a .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1165   .text.dma_memory_increase_disable:00000012 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1174   .text.dma_memory_increase_disable:00000014 .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1086   .text.dma_memory_increase_enable:00000000 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1127   .text.dma_memory_increase_enable:0000001a .LVL83
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1107   .text.dma_memory_increase_enable:00000012 .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1116   .text.dma_memory_increase_enable:00000014 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1016   .text.dma_periph_width_config:00000000 .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1059   .text.dma_periph_width_config:0000001a .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1064   .text.dma_periph_width_config:0000001e .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1038   .text.dma_periph_width_config:00000012 .LVL74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1047   .text.dma_periph_width_config:00000014 .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:943    .text.dma_memory_width_config:00000000 .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:986    .text.dma_memory_width_config:0000001a .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:994    .text.dma_memory_width_config:00000024 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:965    .text.dma_memory_width_config:00000012 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:974    .text.dma_memory_width_config:00000014 .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:870    .text.dma_priority_config:00000000 .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:913    .text.dma_priority_config:0000001a .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:921    .text.dma_priority_config:00000022 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:892    .text.dma_priority_config:00000012 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:901    .text.dma_priority_config:00000014 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:812    .text.dma_transfer_number_get:00000000 .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:859    .text.dma_transfer_number_get:0000001e .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:854    .text.dma_transfer_number_get:0000001a .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:833    .text.dma_transfer_number_get:00000012 .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:842    .text.dma_transfer_number_get:00000014 .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:751    .text.dma_transfer_number_config:00000000 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:792    .text.dma_transfer_number_config:0000001a .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:795    .text.dma_transfer_number_config:0000001c .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:772    .text.dma_transfer_number_config:00000012 .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:781    .text.dma_transfer_number_config:00000014 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:695    .text.dma_memory_address_config:00000000 .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:736    .text.dma_memory_address_config:0000001a .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:716    .text.dma_memory_address_config:00000012 .LVL46
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 41
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:725    .text.dma_memory_address_config:00000014 .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:639    .text.dma_periph_address_config:00000000 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:680    .text.dma_periph_address_config:0000001a .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:660    .text.dma_periph_address_config:00000012 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:669    .text.dma_periph_address_config:00000014 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:581    .text.dma_channel_disable:00000000 .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:623    .text.dma_channel_disable:0000001a .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:602    .text.dma_channel_disable:00000012 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:611    .text.dma_channel_disable:00000014 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:523    .text.dma_channel_enable:00000000 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:564    .text.dma_channel_enable:0000001a .LVL36
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:544    .text.dma_channel_enable:00000012 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:553    .text.dma_channel_enable:00000014 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:463    .text.dma_memory_to_memory_disable:00000000 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:505    .text.dma_memory_to_memory_disable:0000001a .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:484    .text.dma_memory_to_memory_disable:00000012 .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:493    .text.dma_memory_to_memory_disable:00000014 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:403    .text.dma_memory_to_memory_enable:00000000 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:444    .text.dma_memory_to_memory_enable:0000001a .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:424    .text.dma_memory_to_memory_enable:00000012 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:433    .text.dma_memory_to_memory_enable:00000014 .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:345    .text.dma_circulation_disable:00000000 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:387    .text.dma_circulation_disable:0000001a .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:366    .text.dma_circulation_disable:00000012 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:375    .text.dma_circulation_disable:00000014 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:287    .text.dma_circulation_enable:00000000 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:328    .text.dma_circulation_enable:0000001a .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:308    .text.dma_circulation_enable:00000012 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:317    .text.dma_circulation_enable:00000014 .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:133    .text.dma_init:00000000 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:180    .text.dma_init:0000001e .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:175    .text.dma_init:0000001a .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:196    .text.dma_init:0000002c .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:215    .text.dma_init:00000040 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:223    .text.dma_init:00000048 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:233    .text.dma_init:00000054 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:259    .text.dma_init:00000074 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:266    .text.dma_init:0000007c .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:155    .text.dma_init:00000012 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:164    .text.dma_init:00000014 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:14     .text.dma_deinit:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:58     .text.dma_deinit:0000001c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:35     .text.dma_deinit:00000012 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:44     .text.dma_deinit:00000014 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1693   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1562   .text.dma_interrupt_flag_clear:00000000 .LFB179
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1567   .text.dma_interrupt_flag_clear:00000008 .LFE179
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:19     .text.dma_deinit:00000000 .LBB46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:39     .text.dma_deinit:00000012 .LBE46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:46     .text.dma_deinit:00000014 .LBB49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:51     .text.dma_deinit:00000014 .LBE49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:139    .text.dma_init:00000000 .LBB50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:159    .text.dma_init:00000012 .LBE50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:166    .text.dma_init:00000014 .LBB53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:171    .text.dma_init:00000014 .LBE53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:292    .text.dma_circulation_enable:00000000 .LBB54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:312    .text.dma_circulation_enable:00000012 .LBE54
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 42
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:319    .text.dma_circulation_enable:00000014 .LBB57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:324    .text.dma_circulation_enable:00000014 .LBE57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:350    .text.dma_circulation_disable:00000000 .LBB58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:370    .text.dma_circulation_disable:00000012 .LBE58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:377    .text.dma_circulation_disable:00000014 .LBB61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:382    .text.dma_circulation_disable:00000014 .LBE61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:408    .text.dma_memory_to_memory_enable:00000000 .LBB62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:428    .text.dma_memory_to_memory_enable:00000012 .LBE62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:435    .text.dma_memory_to_memory_enable:00000014 .LBB65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:440    .text.dma_memory_to_memory_enable:00000014 .LBE65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:468    .text.dma_memory_to_memory_disable:00000000 .LBB66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:488    .text.dma_memory_to_memory_disable:00000012 .LBE66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:495    .text.dma_memory_to_memory_disable:00000014 .LBB69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:500    .text.dma_memory_to_memory_disable:00000014 .LBE69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:528    .text.dma_channel_enable:00000000 .LBB70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:548    .text.dma_channel_enable:00000012 .LBE70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:555    .text.dma_channel_enable:00000014 .LBB73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:560    .text.dma_channel_enable:00000014 .LBE73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:586    .text.dma_channel_disable:00000000 .LBB74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:606    .text.dma_channel_disable:00000012 .LBE74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:613    .text.dma_channel_disable:00000014 .LBB77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:618    .text.dma_channel_disable:00000014 .LBE77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:644    .text.dma_periph_address_config:00000000 .LBB78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:664    .text.dma_periph_address_config:00000012 .LBE78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:671    .text.dma_periph_address_config:00000014 .LBB81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:676    .text.dma_periph_address_config:00000014 .LBE81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:700    .text.dma_memory_address_config:00000000 .LBB82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:720    .text.dma_memory_address_config:00000012 .LBE82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:727    .text.dma_memory_address_config:00000014 .LBB85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:732    .text.dma_memory_address_config:00000014 .LBE85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:756    .text.dma_transfer_number_config:00000000 .LBB86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:776    .text.dma_transfer_number_config:00000012 .LBE86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:783    .text.dma_transfer_number_config:00000014 .LBB89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:788    .text.dma_transfer_number_config:00000014 .LBE89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:817    .text.dma_transfer_number_get:00000000 .LBB90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:837    .text.dma_transfer_number_get:00000012 .LBE90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:844    .text.dma_transfer_number_get:00000014 .LBB93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:849    .text.dma_transfer_number_get:00000014 .LBE93
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:876    .text.dma_priority_config:00000000 .LBB94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:896    .text.dma_priority_config:00000012 .LBE94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:903    .text.dma_priority_config:00000014 .LBB97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:908    .text.dma_priority_config:00000014 .LBE97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:949    .text.dma_memory_width_config:00000000 .LBB98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:969    .text.dma_memory_width_config:00000012 .LBE98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:976    .text.dma_memory_width_config:00000014 .LBB101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:981    .text.dma_memory_width_config:00000014 .LBE101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1022   .text.dma_periph_width_config:00000000 .LBB102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1042   .text.dma_periph_width_config:00000012 .LBE102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1049   .text.dma_periph_width_config:00000014 .LBB105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1054   .text.dma_periph_width_config:00000014 .LBE105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1091   .text.dma_memory_increase_enable:00000000 .LBB106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1111   .text.dma_memory_increase_enable:00000012 .LBE106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1118   .text.dma_memory_increase_enable:00000014 .LBB109
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1123   .text.dma_memory_increase_enable:00000014 .LBE109
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1149   .text.dma_memory_increase_disable:00000000 .LBB110
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1169   .text.dma_memory_increase_disable:00000012 .LBE110
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1176   .text.dma_memory_increase_disable:00000014 .LBB113
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 43
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1181   .text.dma_memory_increase_disable:00000014 .LBE113
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1207   .text.dma_periph_increase_enable:00000000 .LBB114
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1227   .text.dma_periph_increase_enable:00000012 .LBE114
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1234   .text.dma_periph_increase_enable:00000014 .LBB117
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1239   .text.dma_periph_increase_enable:00000014 .LBE117
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1265   .text.dma_periph_increase_disable:00000000 .LBB118
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1285   .text.dma_periph_increase_disable:00000012 .LBE118
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1292   .text.dma_periph_increase_disable:00000014 .LBB121
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1297   .text.dma_periph_increase_disable:00000014 .LBE121
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1323   .text.dma_transfer_direction_config:00000000 .LBB122
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1343   .text.dma_transfer_direction_config:00000012 .LBE122
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1350   .text.dma_transfer_direction_config:00000014 .LBB125
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1355   .text.dma_transfer_direction_config:00000014 .LBE125
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1579   .text.dma_interrupt_enable:00000000 .LBB126
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1599   .text.dma_interrupt_enable:00000012 .LBE126
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1606   .text.dma_interrupt_enable:00000014 .LBB129
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1611   .text.dma_interrupt_enable:00000014 .LBE129
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1637   .text.dma_interrupt_disable:00000000 .LBB130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1657   .text.dma_interrupt_disable:00000012 .LBE130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1664   .text.dma_interrupt_disable:00000014 .LBB133
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1669   .text.dma_interrupt_disable:00000014 .LBE133
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:16     .text.dma_deinit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:18     .text.dma_deinit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:21     .text.dma_deinit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:23     .text.dma_deinit:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:24     .text.dma_deinit:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:25     .text.dma_deinit:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:26     .text.dma_deinit:00000000 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:29     .text.dma_deinit:00000006 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:33     .text.dma_deinit:00000010 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:37     .text.dma_deinit:00000012 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:40     .text.dma_deinit:00000012 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:41     .text.dma_deinit:00000012 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:42     .text.dma_deinit:00000012 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:48     .text.dma_deinit:00000014 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:49     .text.dma_deinit:00000014 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:52     .text.dma_deinit:00000014 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:53     .text.dma_deinit:00000014 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:56     .text.dma_deinit:0000001a .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:59     .text.dma_deinit:0000001c .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:64     .text.dma_deinit:00000024 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:65     .text.dma_deinit:00000024 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:67     .text.dma_deinit:00000028 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:68     .text.dma_deinit:00000028 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:70     .text.dma_deinit:0000002c .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:71     .text.dma_deinit:0000002c .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:73     .text.dma_deinit:00000030 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:74     .text.dma_deinit:00000030 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:76     .text.dma_deinit:00000034 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:78     .text.dma_deinit:00000036 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:81     .text.dma_deinit:0000003c .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:84     .text.dma_deinit:00000040 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:96     .text.dma_struct_para_init:00000000 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:98     .text.dma_struct_para_init:00000000 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:99     .text.dma_struct_para_init:00000000 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:100    .text.dma_struct_para_init:00000000 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:101    .text.dma_struct_para_init:00000000 .LM36
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 44
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:102    .text.dma_struct_para_init:00000000 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:103    .text.dma_struct_para_init:00000000 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:104    .text.dma_struct_para_init:00000000 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:105    .text.dma_struct_para_init:00000000 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:106    .text.dma_struct_para_init:00000000 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:107    .text.dma_struct_para_init:00000000 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:109    .text.dma_struct_para_init:00000004 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:111    .text.dma_struct_para_init:00000008 .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:113    .text.dma_struct_para_init:0000000c .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:115    .text.dma_struct_para_init:00000010 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:117    .text.dma_struct_para_init:00000014 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:119    .text.dma_struct_para_init:00000018 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:121    .text.dma_struct_para_init:0000001c .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:123    .text.dma_struct_para_init:00000020 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:135    .text.dma_init:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:137    .text.dma_init:00000000 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:138    .text.dma_init:00000000 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:141    .text.dma_init:00000000 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:143    .text.dma_init:00000000 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:144    .text.dma_init:00000000 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:145    .text.dma_init:00000000 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:146    .text.dma_init:00000000 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:149    .text.dma_init:00000006 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:153    .text.dma_init:00000010 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:157    .text.dma_init:00000012 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:160    .text.dma_init:00000012 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:161    .text.dma_init:00000012 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:162    .text.dma_init:00000012 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:168    .text.dma_init:00000014 .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:169    .text.dma_init:00000014 .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:172    .text.dma_init:00000014 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:176    .text.dma_init:0000001a .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:178    .text.dma_init:0000001c .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:181    .text.dma_init:0000001e .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:183    .text.dma_init:00000020 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:184    .text.dma_init:00000020 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:186    .text.dma_init:00000022 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:188    .text.dma_init:00000024 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:189    .text.dma_init:00000024 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:191    .text.dma_init:00000028 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:193    .text.dma_init:0000002a .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:194    .text.dma_init:0000002a .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:197    .text.dma_init:0000002c .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:198    .text.dma_init:0000002c .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:201    .text.dma_init:00000032 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:203    .text.dma_init:00000034 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:206    .text.dma_init:00000036 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:207    .text.dma_init:00000036 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:210    .text.dma_init:0000003a .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:213    .text.dma_init:0000003e .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:216    .text.dma_init:00000040 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:217    .text.dma_init:00000040 .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:219    .text.dma_init:00000042 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:220    .text.dma_init:00000042 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:224    .text.dma_init:00000048 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:226    .text.dma_init:0000004c .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:228    .text.dma_init:0000004e .LM93
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 45
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:231    .text.dma_init:00000052 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:234    .text.dma_init:00000054 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:235    .text.dma_init:00000054 .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:239    .text.dma_init:0000005e .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:241    .text.dma_init:00000060 .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:244    .text.dma_init:00000064 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:246    .text.dma_init:00000066 .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:247    .text.dma_init:00000066 .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:250    .text.dma_init:0000006c .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:251    .text.dma_init:0000006c .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:255    .text.dma_init:00000070 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:257    .text.dma_init:00000072 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:261    .text.dma_init:00000074 .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:262    .text.dma_init:00000074 .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:268    .text.dma_init:0000007c .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:269    .text.dma_init:0000007c .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:274    .text.dma_init:00000084 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:276    .text.dma_init:00000086 .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:289    .text.dma_circulation_enable:00000000 .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:291    .text.dma_circulation_enable:00000000 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:294    .text.dma_circulation_enable:00000000 .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:296    .text.dma_circulation_enable:00000000 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:297    .text.dma_circulation_enable:00000000 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:298    .text.dma_circulation_enable:00000000 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:299    .text.dma_circulation_enable:00000000 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:302    .text.dma_circulation_enable:00000006 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:306    .text.dma_circulation_enable:00000010 .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:310    .text.dma_circulation_enable:00000012 .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:313    .text.dma_circulation_enable:00000012 .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:314    .text.dma_circulation_enable:00000012 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:315    .text.dma_circulation_enable:00000012 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:321    .text.dma_circulation_enable:00000014 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:322    .text.dma_circulation_enable:00000014 .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:325    .text.dma_circulation_enable:00000014 .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:329    .text.dma_circulation_enable:0000001a .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:332    .text.dma_circulation_enable:0000001e .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:335    .text.dma_circulation_enable:00000024 .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:347    .text.dma_circulation_disable:00000000 .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:349    .text.dma_circulation_disable:00000000 .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:352    .text.dma_circulation_disable:00000000 .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:354    .text.dma_circulation_disable:00000000 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:355    .text.dma_circulation_disable:00000000 .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:356    .text.dma_circulation_disable:00000000 .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:357    .text.dma_circulation_disable:00000000 .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:360    .text.dma_circulation_disable:00000006 .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:364    .text.dma_circulation_disable:00000010 .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:368    .text.dma_circulation_disable:00000012 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:371    .text.dma_circulation_disable:00000012 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:372    .text.dma_circulation_disable:00000012 .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:373    .text.dma_circulation_disable:00000012 .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:379    .text.dma_circulation_disable:00000014 .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:380    .text.dma_circulation_disable:00000014 .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:383    .text.dma_circulation_disable:00000014 .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:384    .text.dma_circulation_disable:00000014 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:388    .text.dma_circulation_disable:0000001a .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:393    .text.dma_circulation_disable:00000024 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:405    .text.dma_memory_to_memory_enable:00000000 .LM150
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 46
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:407    .text.dma_memory_to_memory_enable:00000000 .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:410    .text.dma_memory_to_memory_enable:00000000 .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:412    .text.dma_memory_to_memory_enable:00000000 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:413    .text.dma_memory_to_memory_enable:00000000 .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:414    .text.dma_memory_to_memory_enable:00000000 .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:415    .text.dma_memory_to_memory_enable:00000000 .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:418    .text.dma_memory_to_memory_enable:00000006 .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:422    .text.dma_memory_to_memory_enable:00000010 .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:426    .text.dma_memory_to_memory_enable:00000012 .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:429    .text.dma_memory_to_memory_enable:00000012 .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:430    .text.dma_memory_to_memory_enable:00000012 .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:431    .text.dma_memory_to_memory_enable:00000012 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:437    .text.dma_memory_to_memory_enable:00000014 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:438    .text.dma_memory_to_memory_enable:00000014 .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:441    .text.dma_memory_to_memory_enable:00000014 .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:445    .text.dma_memory_to_memory_enable:0000001a .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:447    .text.dma_memory_to_memory_enable:0000001c .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:450    .text.dma_memory_to_memory_enable:00000020 .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:453    .text.dma_memory_to_memory_enable:00000024 .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:465    .text.dma_memory_to_memory_disable:00000000 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:467    .text.dma_memory_to_memory_disable:00000000 .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:470    .text.dma_memory_to_memory_disable:00000000 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:472    .text.dma_memory_to_memory_disable:00000000 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:473    .text.dma_memory_to_memory_disable:00000000 .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:474    .text.dma_memory_to_memory_disable:00000000 .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:475    .text.dma_memory_to_memory_disable:00000000 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:478    .text.dma_memory_to_memory_disable:00000006 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:482    .text.dma_memory_to_memory_disable:00000010 .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:486    .text.dma_memory_to_memory_disable:00000012 .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:489    .text.dma_memory_to_memory_disable:00000012 .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:490    .text.dma_memory_to_memory_disable:00000012 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:491    .text.dma_memory_to_memory_disable:00000012 .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:497    .text.dma_memory_to_memory_disable:00000014 .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:498    .text.dma_memory_to_memory_disable:00000014 .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:501    .text.dma_memory_to_memory_disable:00000014 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:502    .text.dma_memory_to_memory_disable:00000014 .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:506    .text.dma_memory_to_memory_disable:0000001a .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:513    .text.dma_memory_to_memory_disable:00000026 .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:525    .text.dma_channel_enable:00000000 .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:527    .text.dma_channel_enable:00000000 .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:530    .text.dma_channel_enable:00000000 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:532    .text.dma_channel_enable:00000000 .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:533    .text.dma_channel_enable:00000000 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:534    .text.dma_channel_enable:00000000 .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:535    .text.dma_channel_enable:00000000 .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:538    .text.dma_channel_enable:00000006 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:542    .text.dma_channel_enable:00000010 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:546    .text.dma_channel_enable:00000012 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:549    .text.dma_channel_enable:00000012 .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:550    .text.dma_channel_enable:00000012 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:551    .text.dma_channel_enable:00000012 .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:557    .text.dma_channel_enable:00000014 .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:558    .text.dma_channel_enable:00000014 .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:561    .text.dma_channel_enable:00000014 .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:565    .text.dma_channel_enable:0000001a .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:568    .text.dma_channel_enable:0000001e .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:571    .text.dma_channel_enable:00000024 .LM207
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 47
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:583    .text.dma_channel_disable:00000000 .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:585    .text.dma_channel_disable:00000000 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:588    .text.dma_channel_disable:00000000 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:590    .text.dma_channel_disable:00000000 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:591    .text.dma_channel_disable:00000000 .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:592    .text.dma_channel_disable:00000000 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:593    .text.dma_channel_disable:00000000 .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:596    .text.dma_channel_disable:00000006 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:600    .text.dma_channel_disable:00000010 .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:604    .text.dma_channel_disable:00000012 .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:607    .text.dma_channel_disable:00000012 .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:608    .text.dma_channel_disable:00000012 .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:609    .text.dma_channel_disable:00000012 .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:615    .text.dma_channel_disable:00000014 .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:616    .text.dma_channel_disable:00000014 .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:619    .text.dma_channel_disable:00000014 .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:620    .text.dma_channel_disable:00000014 .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:624    .text.dma_channel_disable:0000001a .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:629    .text.dma_channel_disable:00000022 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:641    .text.dma_periph_address_config:00000000 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:643    .text.dma_periph_address_config:00000000 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:646    .text.dma_periph_address_config:00000000 .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:648    .text.dma_periph_address_config:00000000 .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:649    .text.dma_periph_address_config:00000000 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:650    .text.dma_periph_address_config:00000000 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:651    .text.dma_periph_address_config:00000000 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:654    .text.dma_periph_address_config:00000006 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:658    .text.dma_periph_address_config:00000010 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:662    .text.dma_periph_address_config:00000012 .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:665    .text.dma_periph_address_config:00000012 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:666    .text.dma_periph_address_config:00000012 .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:667    .text.dma_periph_address_config:00000012 .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:673    .text.dma_periph_address_config:00000014 .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:674    .text.dma_periph_address_config:00000014 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:677    .text.dma_periph_address_config:00000014 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:681    .text.dma_periph_address_config:0000001a .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:683    .text.dma_periph_address_config:0000001c .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:685    .text.dma_periph_address_config:0000001e .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:697    .text.dma_memory_address_config:00000000 .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:699    .text.dma_memory_address_config:00000000 .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:702    .text.dma_memory_address_config:00000000 .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:704    .text.dma_memory_address_config:00000000 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:705    .text.dma_memory_address_config:00000000 .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:706    .text.dma_memory_address_config:00000000 .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:707    .text.dma_memory_address_config:00000000 .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:710    .text.dma_memory_address_config:00000006 .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:714    .text.dma_memory_address_config:00000010 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:718    .text.dma_memory_address_config:00000012 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:721    .text.dma_memory_address_config:00000012 .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:722    .text.dma_memory_address_config:00000012 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:723    .text.dma_memory_address_config:00000012 .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:729    .text.dma_memory_address_config:00000014 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:730    .text.dma_memory_address_config:00000014 .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:733    .text.dma_memory_address_config:00000014 .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:737    .text.dma_memory_address_config:0000001a .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:739    .text.dma_memory_address_config:0000001c .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:741    .text.dma_memory_address_config:0000001e .LM264
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 48
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:753    .text.dma_transfer_number_config:00000000 .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:755    .text.dma_transfer_number_config:00000000 .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:758    .text.dma_transfer_number_config:00000000 .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:760    .text.dma_transfer_number_config:00000000 .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:761    .text.dma_transfer_number_config:00000000 .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:762    .text.dma_transfer_number_config:00000000 .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:763    .text.dma_transfer_number_config:00000000 .LM271
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:766    .text.dma_transfer_number_config:00000006 .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:770    .text.dma_transfer_number_config:00000010 .LM273
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:774    .text.dma_transfer_number_config:00000012 .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:777    .text.dma_transfer_number_config:00000012 .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:778    .text.dma_transfer_number_config:00000012 .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:779    .text.dma_transfer_number_config:00000012 .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:785    .text.dma_transfer_number_config:00000014 .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:786    .text.dma_transfer_number_config:00000014 .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:789    .text.dma_transfer_number_config:00000014 .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:793    .text.dma_transfer_number_config:0000001a .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:796    .text.dma_transfer_number_config:0000001c .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:798    .text.dma_transfer_number_config:0000001e .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:800    .text.dma_transfer_number_config:00000020 .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:802    .text.dma_transfer_number_config:00000022 .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:814    .text.dma_transfer_number_get:00000000 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:816    .text.dma_transfer_number_get:00000000 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:819    .text.dma_transfer_number_get:00000000 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:821    .text.dma_transfer_number_get:00000000 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:822    .text.dma_transfer_number_get:00000000 .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:823    .text.dma_transfer_number_get:00000000 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:824    .text.dma_transfer_number_get:00000000 .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:827    .text.dma_transfer_number_get:00000006 .LM293
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:831    .text.dma_transfer_number_get:00000010 .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:835    .text.dma_transfer_number_get:00000012 .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:838    .text.dma_transfer_number_get:00000012 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:839    .text.dma_transfer_number_get:00000012 .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:840    .text.dma_transfer_number_get:00000012 .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:846    .text.dma_transfer_number_get:00000014 .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:847    .text.dma_transfer_number_get:00000014 .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:850    .text.dma_transfer_number_get:00000014 .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:851    .text.dma_transfer_number_get:00000014 .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:855    .text.dma_transfer_number_get:0000001a .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:857    .text.dma_transfer_number_get:0000001c .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:860    .text.dma_transfer_number_get:0000001e .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:872    .text.dma_priority_config:00000000 .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:874    .text.dma_priority_config:00000000 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:875    .text.dma_priority_config:00000000 .LM308
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:878    .text.dma_priority_config:00000000 .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:880    .text.dma_priority_config:00000000 .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:881    .text.dma_priority_config:00000000 .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:882    .text.dma_priority_config:00000000 .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:883    .text.dma_priority_config:00000000 .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:886    .text.dma_priority_config:00000006 .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:890    .text.dma_priority_config:00000010 .LM315
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:894    .text.dma_priority_config:00000012 .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:897    .text.dma_priority_config:00000012 .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:898    .text.dma_priority_config:00000012 .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:899    .text.dma_priority_config:00000012 .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:905    .text.dma_priority_config:00000014 .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:906    .text.dma_priority_config:00000014 .LM321
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 49
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:909    .text.dma_priority_config:00000014 .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:910    .text.dma_priority_config:00000014 .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:914    .text.dma_priority_config:0000001a .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:917    .text.dma_priority_config:0000001e .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:919    .text.dma_priority_config:00000020 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:922    .text.dma_priority_config:00000022 .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:923    .text.dma_priority_config:00000022 .LM328
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:926    .text.dma_priority_config:00000024 .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:927    .text.dma_priority_config:00000024 .LM330
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:930    .text.dma_priority_config:00000026 .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:931    .text.dma_priority_config:00000026 .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:933    .text.dma_priority_config:00000028 .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:945    .text.dma_memory_width_config:00000000 .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:947    .text.dma_memory_width_config:00000000 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:948    .text.dma_memory_width_config:00000000 .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:951    .text.dma_memory_width_config:00000000 .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:953    .text.dma_memory_width_config:00000000 .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:954    .text.dma_memory_width_config:00000000 .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:955    .text.dma_memory_width_config:00000000 .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:956    .text.dma_memory_width_config:00000000 .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:959    .text.dma_memory_width_config:00000006 .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:963    .text.dma_memory_width_config:00000010 .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:967    .text.dma_memory_width_config:00000012 .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:970    .text.dma_memory_width_config:00000012 .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:971    .text.dma_memory_width_config:00000012 .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:972    .text.dma_memory_width_config:00000012 .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:978    .text.dma_memory_width_config:00000014 .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:979    .text.dma_memory_width_config:00000014 .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:982    .text.dma_memory_width_config:00000014 .LM350
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:983    .text.dma_memory_width_config:00000014 .LM351
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:987    .text.dma_memory_width_config:0000001a .LM352
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:990    .text.dma_memory_width_config:00000020 .LM353
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:992    .text.dma_memory_width_config:00000022 .LM354
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:995    .text.dma_memory_width_config:00000024 .LM355
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:996    .text.dma_memory_width_config:00000024 .LM356
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:999    .text.dma_memory_width_config:00000026 .LM357
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1000   .text.dma_memory_width_config:00000026 .LM358
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1003   .text.dma_memory_width_config:00000028 .LM359
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1004   .text.dma_memory_width_config:00000028 .LM360
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1006   .text.dma_memory_width_config:0000002a .LM361
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1018   .text.dma_periph_width_config:00000000 .LM362
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1020   .text.dma_periph_width_config:00000000 .LM363
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1021   .text.dma_periph_width_config:00000000 .LM364
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1024   .text.dma_periph_width_config:00000000 .LM365
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1026   .text.dma_periph_width_config:00000000 .LM366
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1027   .text.dma_periph_width_config:00000000 .LM367
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1028   .text.dma_periph_width_config:00000000 .LM368
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1029   .text.dma_periph_width_config:00000000 .LM369
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1032   .text.dma_periph_width_config:00000006 .LM370
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1036   .text.dma_periph_width_config:00000010 .LM371
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1040   .text.dma_periph_width_config:00000012 .LM372
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1043   .text.dma_periph_width_config:00000012 .LM373
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1044   .text.dma_periph_width_config:00000012 .LM374
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1045   .text.dma_periph_width_config:00000012 .LM375
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1051   .text.dma_periph_width_config:00000014 .LM376
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1052   .text.dma_periph_width_config:00000014 .LM377
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1055   .text.dma_periph_width_config:00000014 .LM378
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 50
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1056   .text.dma_periph_width_config:00000014 .LM379
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1060   .text.dma_periph_width_config:0000001a .LM380
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1062   .text.dma_periph_width_config:0000001c .LM381
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1065   .text.dma_periph_width_config:0000001e .LM382
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1066   .text.dma_periph_width_config:0000001e .LM383
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1069   .text.dma_periph_width_config:00000022 .LM384
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1070   .text.dma_periph_width_config:00000022 .LM385
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1073   .text.dma_periph_width_config:00000024 .LM386
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1074   .text.dma_periph_width_config:00000024 .LM387
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1076   .text.dma_periph_width_config:00000026 .LM388
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1088   .text.dma_memory_increase_enable:00000000 .LM389
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1090   .text.dma_memory_increase_enable:00000000 .LM390
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1093   .text.dma_memory_increase_enable:00000000 .LM391
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1095   .text.dma_memory_increase_enable:00000000 .LM392
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1096   .text.dma_memory_increase_enable:00000000 .LM393
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1097   .text.dma_memory_increase_enable:00000000 .LM394
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1098   .text.dma_memory_increase_enable:00000000 .LM395
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1101   .text.dma_memory_increase_enable:00000006 .LM396
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1105   .text.dma_memory_increase_enable:00000010 .LM397
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1109   .text.dma_memory_increase_enable:00000012 .LM398
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1112   .text.dma_memory_increase_enable:00000012 .LM399
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1113   .text.dma_memory_increase_enable:00000012 .LM400
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1114   .text.dma_memory_increase_enable:00000012 .LM401
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1120   .text.dma_memory_increase_enable:00000014 .LM402
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1121   .text.dma_memory_increase_enable:00000014 .LM403
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1124   .text.dma_memory_increase_enable:00000014 .LM404
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1128   .text.dma_memory_increase_enable:0000001a .LM405
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1131   .text.dma_memory_increase_enable:0000001e .LM406
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1134   .text.dma_memory_increase_enable:00000024 .LM407
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1146   .text.dma_memory_increase_disable:00000000 .LM408
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1148   .text.dma_memory_increase_disable:00000000 .LM409
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1151   .text.dma_memory_increase_disable:00000000 .LM410
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1153   .text.dma_memory_increase_disable:00000000 .LM411
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1154   .text.dma_memory_increase_disable:00000000 .LM412
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1155   .text.dma_memory_increase_disable:00000000 .LM413
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1156   .text.dma_memory_increase_disable:00000000 .LM414
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1159   .text.dma_memory_increase_disable:00000006 .LM415
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1163   .text.dma_memory_increase_disable:00000010 .LM416
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1167   .text.dma_memory_increase_disable:00000012 .LM417
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1170   .text.dma_memory_increase_disable:00000012 .LM418
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1171   .text.dma_memory_increase_disable:00000012 .LM419
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1172   .text.dma_memory_increase_disable:00000012 .LM420
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1178   .text.dma_memory_increase_disable:00000014 .LM421
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1179   .text.dma_memory_increase_disable:00000014 .LM422
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1182   .text.dma_memory_increase_disable:00000014 .LM423
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1183   .text.dma_memory_increase_disable:00000014 .LM424
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1187   .text.dma_memory_increase_disable:0000001a .LM425
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1192   .text.dma_memory_increase_disable:00000024 .LM426
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1204   .text.dma_periph_increase_enable:00000000 .LM427
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1206   .text.dma_periph_increase_enable:00000000 .LM428
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1209   .text.dma_periph_increase_enable:00000000 .LM429
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1211   .text.dma_periph_increase_enable:00000000 .LM430
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1212   .text.dma_periph_increase_enable:00000000 .LM431
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1213   .text.dma_periph_increase_enable:00000000 .LM432
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1214   .text.dma_periph_increase_enable:00000000 .LM433
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1217   .text.dma_periph_increase_enable:00000006 .LM434
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1221   .text.dma_periph_increase_enable:00000010 .LM435
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 51
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1225   .text.dma_periph_increase_enable:00000012 .LM436
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1228   .text.dma_periph_increase_enable:00000012 .LM437
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1229   .text.dma_periph_increase_enable:00000012 .LM438
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1230   .text.dma_periph_increase_enable:00000012 .LM439
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1236   .text.dma_periph_increase_enable:00000014 .LM440
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1237   .text.dma_periph_increase_enable:00000014 .LM441
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1240   .text.dma_periph_increase_enable:00000014 .LM442
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1244   .text.dma_periph_increase_enable:0000001a .LM443
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1247   .text.dma_periph_increase_enable:0000001e .LM444
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1250   .text.dma_periph_increase_enable:00000024 .LM445
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1262   .text.dma_periph_increase_disable:00000000 .LM446
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1264   .text.dma_periph_increase_disable:00000000 .LM447
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1267   .text.dma_periph_increase_disable:00000000 .LM448
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1269   .text.dma_periph_increase_disable:00000000 .LM449
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1270   .text.dma_periph_increase_disable:00000000 .LM450
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1271   .text.dma_periph_increase_disable:00000000 .LM451
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1272   .text.dma_periph_increase_disable:00000000 .LM452
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1275   .text.dma_periph_increase_disable:00000006 .LM453
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1279   .text.dma_periph_increase_disable:00000010 .LM454
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1283   .text.dma_periph_increase_disable:00000012 .LM455
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1286   .text.dma_periph_increase_disable:00000012 .LM456
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1287   .text.dma_periph_increase_disable:00000012 .LM457
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1288   .text.dma_periph_increase_disable:00000012 .LM458
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1294   .text.dma_periph_increase_disable:00000014 .LM459
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1295   .text.dma_periph_increase_disable:00000014 .LM460
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1298   .text.dma_periph_increase_disable:00000014 .LM461
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1299   .text.dma_periph_increase_disable:00000014 .LM462
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1303   .text.dma_periph_increase_disable:0000001a .LM463
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1308   .text.dma_periph_increase_disable:00000024 .LM464
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1320   .text.dma_transfer_direction_config:00000000 .LM465
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1322   .text.dma_transfer_direction_config:00000000 .LM466
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1325   .text.dma_transfer_direction_config:00000000 .LM467
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1327   .text.dma_transfer_direction_config:00000000 .LM468
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1328   .text.dma_transfer_direction_config:00000000 .LM469
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1329   .text.dma_transfer_direction_config:00000000 .LM470
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1330   .text.dma_transfer_direction_config:00000000 .LM471
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1333   .text.dma_transfer_direction_config:00000006 .LM472
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1337   .text.dma_transfer_direction_config:00000010 .LM473
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1341   .text.dma_transfer_direction_config:00000012 .LM474
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1344   .text.dma_transfer_direction_config:00000012 .LM475
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1345   .text.dma_transfer_direction_config:00000012 .LM476
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1346   .text.dma_transfer_direction_config:00000012 .LM477
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1352   .text.dma_transfer_direction_config:00000014 .LM478
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1353   .text.dma_transfer_direction_config:00000014 .LM479
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1356   .text.dma_transfer_direction_config:00000014 .LM480
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1357   .text.dma_transfer_direction_config:00000014 .LM481
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1361   .text.dma_transfer_direction_config:0000001a .LM482
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1364   .text.dma_transfer_direction_config:0000001c .LM483
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1366   .text.dma_transfer_direction_config:0000001e .LM484
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1368   .text.dma_transfer_direction_config:00000020 .LM485
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1369   .text.dma_transfer_direction_config:00000020 .LM486
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1372   .text.dma_transfer_direction_config:00000022 .LM487
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1374   .text.dma_transfer_direction_config:00000024 .LM488
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1377   .text.dma_transfer_direction_config:00000026 .LM489
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1378   .text.dma_transfer_direction_config:00000026 .LM490
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1391   .text.dma_flag_get:00000000 .LM491
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1393   .text.dma_flag_get:00000000 .LM492
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 52
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1394   .text.dma_flag_get:00000000 .LM493
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1395   .text.dma_flag_get:00000000 .LM494
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1398   .text.dma_flag_get:00000002 .LM495
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1399   .text.dma_flag_get:00000002 .LM496
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1402   .text.dma_flag_get:00000004 .LM497
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1405   .text.dma_flag_get:00000008 .LM498
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1408   .text.dma_flag_get:0000000c .LM499
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1421   .text.dma_flag_clear:00000000 .LM500
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1423   .text.dma_flag_clear:00000000 .LM501
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1425   .text.dma_flag_clear:00000002 .LM502
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1428   .text.dma_flag_clear:00000004 .LM503
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1431   .text.dma_flag_clear:00000008 .LM504
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1434   .text.dma_flag_clear:0000000c .LM505
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1446   .text.dma_interrupt_flag_get:00000000 .LM506
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1448   .text.dma_interrupt_flag_get:00000000 .LM507
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1449   .text.dma_interrupt_flag_get:00000000 .LM508
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1456   .text.dma_interrupt_flag_get:00000012 .LM509
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1457   .text.dma_interrupt_flag_get:00000012 .LM510
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1459   .text.dma_interrupt_flag_get:00000014 .LM511
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1463   .text.dma_interrupt_flag_get:0000001c .LM512
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1466   .text.dma_interrupt_flag_get:0000001e .LM513
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1467   .text.dma_interrupt_flag_get:0000001e .LM514
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1471   .text.dma_interrupt_flag_get:00000024 .LM515
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1475   .text.dma_interrupt_flag_get:00000028 .LM516
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1477   .text.dma_interrupt_flag_get:0000002a .LM517
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1480   .text.dma_interrupt_flag_get:0000002c .LM518
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1482   .text.dma_interrupt_flag_get:0000002c .LM519
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1483   .text.dma_interrupt_flag_get:0000002c .LM520
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1486   .text.dma_interrupt_flag_get:00000030 .LM521
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1489   .text.dma_interrupt_flag_get:00000034 .LM522
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1494   .text.dma_interrupt_flag_get:00000038 .LM523
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1495   .text.dma_interrupt_flag_get:00000038 .LM524
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1497   .text.dma_interrupt_flag_get:0000003a .LM525
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1501   .text.dma_interrupt_flag_get:00000042 .LM526
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1504   .text.dma_interrupt_flag_get:00000044 .LM527
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1505   .text.dma_interrupt_flag_get:00000044 .LM528
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1509   .text.dma_interrupt_flag_get:0000004a .LM529
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1513   .text.dma_interrupt_flag_get:0000004e .LM530
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1515   .text.dma_interrupt_flag_get:00000050 .LM531
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1518   .text.dma_interrupt_flag_get:00000052 .LM532
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1522   .text.dma_interrupt_flag_get:00000054 .LM533
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1523   .text.dma_interrupt_flag_get:00000054 .LM534
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1525   .text.dma_interrupt_flag_get:00000056 .LM535
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1529   .text.dma_interrupt_flag_get:0000005e .LM536
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1532   .text.dma_interrupt_flag_get:00000060 .LM537
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1533   .text.dma_interrupt_flag_get:00000060 .LM538
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1537   .text.dma_interrupt_flag_get:00000066 .LM539
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1541   .text.dma_interrupt_flag_get:0000006a .LM540
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1543   .text.dma_interrupt_flag_get:0000006c .LM541
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1546   .text.dma_interrupt_flag_get:0000006e .LM542
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1550   .text.dma_interrupt_flag_get:00000070 .LM543
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1551   .text.dma_interrupt_flag_get:00000070 .LM544
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1552   .text.dma_interrupt_flag_get:00000070 .LM545
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1564   .text.dma_interrupt_flag_clear:00000000 .LM546
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1576   .text.dma_interrupt_enable:00000000 .LM547
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1578   .text.dma_interrupt_enable:00000000 .LM548
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1581   .text.dma_interrupt_enable:00000000 .LM549
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s 			page 53
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1583   .text.dma_interrupt_enable:00000000 .LM550
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1584   .text.dma_interrupt_enable:00000000 .LM551
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1585   .text.dma_interrupt_enable:00000000 .LM552
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1586   .text.dma_interrupt_enable:00000000 .LM553
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1589   .text.dma_interrupt_enable:00000006 .LM554
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1593   .text.dma_interrupt_enable:00000010 .LM555
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1597   .text.dma_interrupt_enable:00000012 .LM556
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1600   .text.dma_interrupt_enable:00000012 .LM557
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1601   .text.dma_interrupt_enable:00000012 .LM558
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1602   .text.dma_interrupt_enable:00000012 .LM559
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1608   .text.dma_interrupt_enable:00000014 .LM560
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1609   .text.dma_interrupt_enable:00000014 .LM561
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1612   .text.dma_interrupt_enable:00000014 .LM562
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1616   .text.dma_interrupt_enable:0000001a .LM563
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1619   .text.dma_interrupt_enable:0000001e .LM564
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1622   .text.dma_interrupt_enable:00000022 .LM565
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1634   .text.dma_interrupt_disable:00000000 .LM566
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1636   .text.dma_interrupt_disable:00000000 .LM567
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1639   .text.dma_interrupt_disable:00000000 .LM568
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1641   .text.dma_interrupt_disable:00000000 .LM569
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1642   .text.dma_interrupt_disable:00000000 .LM570
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1643   .text.dma_interrupt_disable:00000000 .LM571
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1644   .text.dma_interrupt_disable:00000000 .LM572
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1647   .text.dma_interrupt_disable:00000006 .LM573
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1651   .text.dma_interrupt_disable:00000010 .LM574
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1655   .text.dma_interrupt_disable:00000012 .LM575
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1658   .text.dma_interrupt_disable:00000012 .LM576
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1659   .text.dma_interrupt_disable:00000012 .LM577
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1660   .text.dma_interrupt_disable:00000012 .LM578
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1666   .text.dma_interrupt_disable:00000014 .LM579
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1667   .text.dma_interrupt_disable:00000014 .LM580
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1670   .text.dma_interrupt_disable:00000014 .LM581
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1674   .text.dma_interrupt_disable:0000001a .LM582
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1677   .text.dma_interrupt_disable:0000001e .LM583
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1680   .text.dma_interrupt_disable:00000022 .LM584
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1683   .text.dma_interrupt_disable:00000024 .LM585
+C:\Users\Administrator\AppData\Local\Temp\ccL3W7hl.s:1685   .text.dma_interrupt_disable:00000026 .LM586
+
+NO UNDEFINED SYMBOLS

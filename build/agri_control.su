@@ -1,0 +1,10 @@
+app/agri_control.c:13:5:ag_decode_dht	0	static
+app/agri_control.c:24:5:ag_normalize	0	static
+app/agri_control.c:34:10:ag_vpd100	0	static
+app/agri_control.c:49:10:ag_demand100	0	static
+app/agri_control.c:62:6:ag_init	16	static
+app/agri_control.c:70:6:ag_accept	0	static
+app/agri_control.c:99:6:ag_command	0	static
+app/agri_control.c:118:6:ag_step	48	static
+app/agri_control.c:195:13:ag_state_name	0	static
+app/agri_control.c:197:13:ag_reason_name	0	static

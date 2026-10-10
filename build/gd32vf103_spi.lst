@@ -1,0 +1,2124 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 1
+
+
+   1              		.file	"gd32vf103_spi.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.spi_i2s_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	spi_i2s_deinit
+  13              	spi_i2s_deinit:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              	.LM4:
+  24 0002 B7470040 		li	a5,1073758208
+  25              	.LM5:
+  26 0006 06C6     		sw	ra,12(sp)
+  27              		.cfi_offset 1, -4
+  28              	.LM6:
+  29 0008 938707C0 		addi	a5,a5,-1024
+  30 000c 6306F504 		beq	a0,a5,.L2
+  31 0010 B7370140 		li	a5,1073819648
+  32 0014 630BF500 		beq	a0,a5,.L3
+  33 0018 B7470040 		li	a5,1073758208
+  34 001c 93870780 		addi	a5,a5,-2048
+  35 0020 6303F502 		beq	a0,a5,.L4
+  36              	.LM7:
+  37 0024 B240     		lw	ra,12(sp)
+  38              		.cfi_remember_state
+  39              		.cfi_restore 1
+  40 0026 4101     		addi	sp,sp,16
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 0
+  43 0028 8280     		jr	ra
+  44              	.L3:
+  45              	.LCFI2:
+  46              		.cfi_restore_state
+  47              	.LM8:
+  48 002a 1305C030 		li	a0,780
+  49              	.LVL1:
+  50              	.LM9:
+  51 002e 97000000 		call	rcu_periph_reset_enable
+  51      E7800000 
+  52              	.LVL2:
+  53              	.LM10:
+  54 0036 1305C030 		li	a0,780
+  55              	.L8:
+  56              	.LM11:
+  57 003a B240     		lw	ra,12(sp)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 2
+
+
+  58              		.cfi_remember_state
+  59              		.cfi_restore 1
+  60 003c 4101     		addi	sp,sp,16
+  61              	.LCFI3:
+  62              		.cfi_def_cfa_offset 0
+  63              	.LM12:
+  64 003e 17030000 		tail	rcu_periph_reset_disable
+  64      67000300 
+  65              	.LVL3:
+  66              	.L4:
+  67              	.LCFI4:
+  68              		.cfi_restore_state
+  69              	.LM13:
+  70 0046 1305E040 		li	a0,1038
+  71              	.LVL4:
+  72              	.LM14:
+  73 004a 97000000 		call	rcu_periph_reset_enable
+  73      E7800000 
+  74              	.LVL5:
+  75              	.LM15:
+  76 0052 1305E040 		li	a0,1038
+  77 0056 D5B7     		j	.L8
+  78              	.LVL6:
+  79              	.L2:
+  80              	.LM16:
+  81 0058 1305F040 		li	a0,1039
+  82              	.LVL7:
+  83              	.LM17:
+  84 005c 97000000 		call	rcu_periph_reset_enable
+  84      E7800000 
+  85              	.LVL8:
+  86              	.LM18:
+  87 0064 1305F040 		li	a0,1039
+  88 0068 C9BF     		j	.L8
+  89              		.cfi_endproc
+  90              	.LFE150:
+  92              		.section	.text.spi_struct_para_init,"ax",@progbits
+  93              		.align	1
+  94              		.globl	spi_struct_para_init
+  96              	spi_struct_para_init:
+  97              	.LVL9:
+  98              	.LFB151:
+  99              	.LM19:
+ 100              		.cfi_startproc
+ 101              	.LM20:
+ 102              	.LM21:
+ 103 0000 23200500 		sw	zero,0(a0)
+ 104              	.LM22:
+ 105              	.LM23:
+ 106 0004 23220500 		sw	zero,4(a0)
+ 107              	.LM24:
+ 108              	.LM25:
+ 109 0008 23240500 		sw	zero,8(a0)
+ 110              	.LM26:
+ 111              	.LM27:
+ 112 000c 23260500 		sw	zero,12(a0)
+ 113              	.LM28:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 3
+
+
+ 114              	.LM29:
+ 115 0010 232A0500 		sw	zero,20(a0)
+ 116              	.LM30:
+ 117              	.LM31:
+ 118 0014 232C0500 		sw	zero,24(a0)
+ 119              	.LM32:
+ 120 0018 8280     		ret
+ 121              		.cfi_endproc
+ 122              	.LFE151:
+ 124              		.section	.text.spi_init,"ax",@progbits
+ 125              		.align	1
+ 126              		.globl	spi_init
+ 128              	spi_init:
+ 129              	.LVL10:
+ 130              	.LFB152:
+ 131              	.LM33:
+ 132              		.cfi_startproc
+ 133              	.LM34:
+ 134              	.LM35:
+ 135              	.LM36:
+ 136 0000 1841     		lw	a4,0(a0)
+ 137              	.LVL11:
+ 138              	.LM37:
+ 139              	.LM38:
+ 140 0002 8D67     		li	a5,12288
+ 141 0004 93870704 		addi	a5,a5,64
+ 142              	.LM39:
+ 143 0008 D441     		lw	a3,4(a1)
+ 144              	.LM40:
+ 145 000a 7D8F     		and	a4,a4,a5
+ 146              	.LVL12:
+ 147              	.LM41:
+ 148              	.LM42:
+ 149              	.LM43:
+ 150              	.LM44:
+ 151              	.LM45:
+ 152              	.LM46:
+ 153              	.LM47:
+ 154              	.LM48:
+ 155 000c 9C41     		lw	a5,0(a1)
+ 156 000e D58F     		or	a5,a5,a3
+ 157 0010 9445     		lw	a3,8(a1)
+ 158              	.LVL13:
+ 159              	.LM49:
+ 160 0012 D58F     		or	a5,a5,a3
+ 161 0014 D445     		lw	a3,12(a1)
+ 162 0016 D58F     		or	a5,a5,a3
+ 163 0018 9449     		lw	a3,16(a1)
+ 164 001a D58F     		or	a5,a5,a3
+ 165 001c D449     		lw	a3,20(a1)
+ 166 001e D58F     		or	a5,a5,a3
+ 167 0020 944D     		lw	a3,24(a1)
+ 168 0022 D58F     		or	a5,a5,a3
+ 169 0024 D98F     		or	a5,a5,a4
+ 170              	.LVL14:
+ 171              	.LM50:
+ 172              	.LM51:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 4
+
+
+ 173 0026 1CC1     		sw	a5,0(a0)
+ 174              	.LM52:
+ 175              	.LM53:
+ 176 0028 5C4D     		lw	a5,28(a0)
+ 177              	.LVL15:
+ 178              	.LM54:
+ 179 002a 7D77     		li	a4,-4096
+ 180 002c 1307F77F 		addi	a4,a4,2047
+ 181 0030 F98F     		and	a5,a5,a4
+ 182 0032 5CCD     		sw	a5,28(a0)
+ 183              	.LVL16:
+ 184              	.LM55:
+ 185 0034 8280     		ret
+ 186              		.cfi_endproc
+ 187              	.LFE152:
+ 189              		.section	.text.spi_enable,"ax",@progbits
+ 190              		.align	1
+ 191              		.globl	spi_enable
+ 193              	spi_enable:
+ 194              	.LVL17:
+ 195              	.LFB153:
+ 196              	.LM56:
+ 197              		.cfi_startproc
+ 198              	.LM57:
+ 199 0000 1C41     		lw	a5,0(a0)
+ 200              	.LM58:
+ 201 0002 93E70704 		ori	a5,a5,64
+ 202 0006 1CC1     		sw	a5,0(a0)
+ 203              	.LM59:
+ 204 0008 8280     		ret
+ 205              		.cfi_endproc
+ 206              	.LFE153:
+ 208              		.section	.text.spi_disable,"ax",@progbits
+ 209              		.align	1
+ 210              		.globl	spi_disable
+ 212              	spi_disable:
+ 213              	.LVL18:
+ 214              	.LFB154:
+ 215              	.LM60:
+ 216              		.cfi_startproc
+ 217              	.LM61:
+ 218              	.LM62:
+ 219 0000 1C41     		lw	a5,0(a0)
+ 220 0002 93F7F7FB 		andi	a5,a5,-65
+ 221 0006 1CC1     		sw	a5,0(a0)
+ 222              	.LM63:
+ 223 0008 8280     		ret
+ 224              		.cfi_endproc
+ 225              	.LFE154:
+ 227              		.section	.text.i2s_init,"ax",@progbits
+ 228              		.align	1
+ 229              		.globl	i2s_init
+ 231              	i2s_init:
+ 232              	.LVL19:
+ 233              	.LFB155:
+ 234              	.LM64:
+ 235              		.cfi_startproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 5
+
+
+ 236              	.LM65:
+ 237              	.LM66:
+ 238              	.LM67:
+ 239 0000 5C4D     		lw	a5,28(a0)
+ 240              	.LVL20:
+ 241              	.LM68:
+ 242              	.LM69:
+ 243              	.LM70:
+ 244              	.LM71:
+ 245              	.LM72:
+ 246 0002 3D67     		li	a4,61440
+ 247 0004 13077704 		addi	a4,a4,71
+ 248 0008 F98F     		and	a5,a5,a4
+ 249              	.LVL21:
+ 250              	.LM73:
+ 251 000a D58F     		or	a5,a5,a3
+ 252 000c D18F     		or	a5,a5,a2
+ 253              	.LM74:
+ 254 000e 0567     		li	a4,4096
+ 255 0010 CD8F     		or	a5,a5,a1
+ 256              	.LM75:
+ 257              	.LM76:
+ 258 0012 13070780 		addi	a4,a4,-2048
+ 259 0016 D98F     		or	a5,a5,a4
+ 260              	.LVL22:
+ 261              	.LM77:
+ 262              	.LM78:
+ 263 0018 5CCD     		sw	a5,28(a0)
+ 264              	.LM79:
+ 265 001a 8280     		ret
+ 266              		.cfi_endproc
+ 267              	.LFE155:
+ 269              		.section	.text.i2s_psc_config,"ax",@progbits
+ 270              		.align	1
+ 271              		.globl	i2s_psc_config
+ 273              	i2s_psc_config:
+ 274              	.LVL23:
+ 275              	.LFB156:
+ 276              	.LM80:
+ 277              		.cfi_startproc
+ 278              	.LM81:
+ 279              	.LM82:
+ 280              	.LM83:
+ 281              	.LM84:
+ 282              	.LM85:
+ 283 0000 0111     		addi	sp,sp,-32
+ 284              	.LCFI5:
+ 285              		.cfi_def_cfa_offset 32
+ 286 0002 22CC     		sw	s0,24(sp)
+ 287              	.LM86:
+ 288 0004 8947     		li	a5,2
+ 289              	.LM87:
+ 290 0006 06CE     		sw	ra,28(sp)
+ 291              		.cfi_offset 8, -8
+ 292              		.cfi_offset 1, -4
+ 293              	.LM88:
+ 294 0008 1CD1     		sw	a5,32(a0)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 6
+
+
+ 295              	.LM89:
+ 296              	.LM90:
+ 297 000a B7470040 		li	a5,1073758208
+ 298              	.LM91:
+ 299 000e 2A84     		mv	s0,a0
+ 300              	.LM92:
+ 301 0010 93870780 		addi	a5,a5,-2048
+ 302              	.LM93:
+ 303 0014 37050200 		li	a0,131072
+ 304              	.LVL24:
+ 305              	.LM94:
+ 306 0018 6304F400 		beq	s0,a5,.L15
+ 307 001c 37050400 		li	a0,262144
+ 308              	.L15:
+ 309              	.LVL25:
+ 310              	.LM95:
+ 311              	.LM96:
+ 312 0020 B7170240 		li	a5,1073876992
+ 313 0024 D857     		lw	a4,44(a5)
+ 314 0026 9387C702 		addi	a5,a5,44
+ 315              	.LM97:
+ 316 002a 698F     		and	a4,a4,a0
+ 317              	.LM98:
+ 318 002c 59C7     		beq	a4,zero,.L16
+ 319              	.LM99:
+ 320              	.LM100:
+ 321 002e 9843     		lw	a4,0(a5)
+ 322              	.LM101:
+ 323 0030 A147     		li	a5,8
+ 324              	.LM102:
+ 325 0032 3183     		srli	a4,a4,12
+ 326              	.LM103:
+ 327 0034 3D8B     		andi	a4,a4,15
+ 328              	.LVL26:
+ 329              	.LM104:
+ 330              	.LM105:
+ 331 0036 1305A7FF 		addi	a0,a4,-6
+ 332              	.LM106:
+ 333 003a 63EBA706 		bgtu	a0,a5,.L17
+ 334              	.LM107:
+ 335              	.LM108:
+ 336 003e 0907     		addi	a4,a4,2
+ 337              	.LVL27:
+ 338              	.L18:
+ 339              	.LM109:
+ 340              	.LM110:
+ 341 0040 B7170240 		li	a5,1073876992
+ 342 0044 C857     		lw	a0,44(a5)
+ 343              	.LVL28:
+ 344              	.LM111:
+ 345              	.LM112:
+ 346 0046 B7177A00 		li	a5,7999488
+ 347 004a 93870720 		addi	a5,a5,512
+ 348              	.LM113:
+ 349 004e 1181     		srli	a0,a0,4
+ 350              	.LVL29:
+ 351              	.LM114:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 7
+
+
+ 352 0050 3D89     		andi	a0,a0,15
+ 353              	.LM115:
+ 354 0052 0505     		addi	a0,a0,1
+ 355              	.LM116:
+ 356 0054 B3D7A702 		divu	a5,a5,a0
+ 357 0058 B387E702 		mul	a5,a5,a4
+ 358              	.LM117:
+ 359 005c 13951700 		slli	a0,a5,1
+ 360              	.LVL30:
+ 361              	.L19:
+ 362              	.LM118:
+ 363              	.LM119:
+ 364 0060 93070020 		li	a5,512
+ 365 0064 2947     		li	a4,10
+ 366 0066 6396F606 		bne	a3,a5,.L20
+ 367              	.LM120:
+ 368              	.LM121:
+ 369 006a 93578500 		srli	a5,a0,8
+ 370              	.L29:
+ 371              	.LM122:
+ 372 006e B387E702 		mul	a5,a5,a4
+ 373              	.LM123:
+ 374 0072 1307D00F 		li	a4,253
+ 375              	.LM124:
+ 376 0076 B3D5B702 		divu	a1,a5,a1
+ 377              	.LVL31:
+ 378              	.LM125:
+ 379              	.LM126:
+ 380 007a A947     		li	a5,10
+ 381              	.LM127:
+ 382 007c 9505     		addi	a1,a1,5
+ 383              	.LVL32:
+ 384              	.LM128:
+ 385 007e B3D5F502 		divu	a1,a1,a5
+ 386              	.LVL33:
+ 387              	.LM129:
+ 388              	.LM130:
+ 389 0082 93F71500 		andi	a5,a1,1
+ 390              	.LVL34:
+ 391              	.LM131:
+ 392              	.LM132:
+ 393 0086 8581     		srli	a1,a1,1
+ 394              	.LVL35:
+ 395              	.LM133:
+ 396              	.LM134:
+ 397              	.LM135:
+ 398 0088 1385E5FF 		addi	a0,a1,-2
+ 399              	.LVL36:
+ 400              	.LM136:
+ 401 008c A207     		slli	a5,a5,8
+ 402              	.LVL37:
+ 403              	.LM137:
+ 404 008e 6374A700 		bleu	a0,a4,.L23
+ 405              	.LM138:
+ 406 0092 8147     		li	a5,0
+ 407              	.LVL38:
+ 408              	.LM139:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 8
+
+
+ 409 0094 8945     		li	a1,2
+ 410              	.LVL39:
+ 411              	.L23:
+ 412              	.LM140:
+ 413              	.LM141:
+ 414 0096 DD8D     		or	a1,a1,a5
+ 415              	.LVL40:
+ 416              	.LM142:
+ 417 0098 D58D     		or	a1,a1,a3
+ 418              	.LM143:
+ 419 009a 0CD0     		sw	a1,32(s0)
+ 420              	.LM144:
+ 421              	.LM145:
+ 422 009c 5C4C     		lw	a5,28(s0)
+ 423              	.LVL41:
+ 424              	.LM146:
+ 425 009e F240     		lw	ra,28(sp)
+ 426              		.cfi_remember_state
+ 427              		.cfi_restore 1
+ 428              	.LM147:
+ 429 00a0 E19B     		andi	a5,a5,-8
+ 430 00a2 5CCC     		sw	a5,28(s0)
+ 431              	.LM148:
+ 432 00a4 5C4C     		lw	a5,28(s0)
+ 433              	.LM149:
+ 434 00a6 D18F     		or	a5,a5,a2
+ 435 00a8 5CCC     		sw	a5,28(s0)
+ 436              	.LM150:
+ 437 00aa 6244     		lw	s0,24(sp)
+ 438              		.cfi_restore 8
+ 439              	.LVL42:
+ 440              	.LM151:
+ 441 00ac 0561     		addi	sp,sp,32
+ 442              	.LCFI6:
+ 443              		.cfi_def_cfa_offset 0
+ 444 00ae 8280     		jr	ra
+ 445              	.LVL43:
+ 446              	.L17:
+ 447              	.LCFI7:
+ 448              		.cfi_restore_state
+ 449              	.LM152:
+ 450              	.LM153:
+ 451 00b0 BD47     		li	a5,15
+ 452 00b2 E317F7F8 		bne	a4,a5,.L18
+ 453              	.LM154:
+ 454 00b6 5147     		li	a4,20
+ 455              	.LVL44:
+ 456              	.LM155:
+ 457 00b8 61B7     		j	.L18
+ 458              	.LVL45:
+ 459              	.L16:
+ 460              	.LM156:
+ 461 00ba 0145     		li	a0,0
+ 462              	.LVL46:
+ 463              	.LM157:
+ 464 00bc 36C6     		sw	a3,12(sp)
+ 465 00be 32C4     		sw	a2,8(sp)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 9
+
+
+ 466 00c0 2EC2     		sw	a1,4(sp)
+ 467              	.LM158:
+ 468              	.LM159:
+ 469 00c2 97000000 		call	rcu_clock_freq_get
+ 469      E7800000 
+ 470              	.LVL47:
+ 471              	.LM160:
+ 472 00ca B246     		lw	a3,12(sp)
+ 473 00cc 2246     		lw	a2,8(sp)
+ 474 00ce 9245     		lw	a1,4(sp)
+ 475 00d0 41BF     		j	.L19
+ 476              	.LVL48:
+ 477              	.L20:
+ 478              	.LM161:
+ 479              	.LM162:
+ 480 00d2 93575500 		srli	a5,a0,5
+ 481              	.LM163:
+ 482 00d6 41DE     		beq	a2,zero,.L29
+ 483              	.LM164:
+ 484              	.LM165:
+ 485 00d8 93576500 		srli	a5,a0,6
+ 486 00dc 49BF     		j	.L29
+ 487              		.cfi_endproc
+ 488              	.LFE156:
+ 490              		.section	.text.i2s_enable,"ax",@progbits
+ 491              		.align	1
+ 492              		.globl	i2s_enable
+ 494              	i2s_enable:
+ 495              	.LVL49:
+ 496              	.LFB157:
+ 497              	.LM166:
+ 498              		.cfi_startproc
+ 499              	.LM167:
+ 500 0000 5C4D     		lw	a5,28(a0)
+ 501              	.LM168:
+ 502 0002 93E70740 		ori	a5,a5,1024
+ 503 0006 5CCD     		sw	a5,28(a0)
+ 504              	.LM169:
+ 505 0008 8280     		ret
+ 506              		.cfi_endproc
+ 507              	.LFE157:
+ 509              		.section	.text.i2s_disable,"ax",@progbits
+ 510              		.align	1
+ 511              		.globl	i2s_disable
+ 513              	i2s_disable:
+ 514              	.LVL50:
+ 515              	.LFB158:
+ 516              	.LM170:
+ 517              		.cfi_startproc
+ 518              	.LM171:
+ 519              	.LM172:
+ 520 0000 5C4D     		lw	a5,28(a0)
+ 521 0002 93F7F7BF 		andi	a5,a5,-1025
+ 522 0006 5CCD     		sw	a5,28(a0)
+ 523              	.LM173:
+ 524 0008 8280     		ret
+ 525              		.cfi_endproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 10
+
+
+ 526              	.LFE158:
+ 528              		.section	.text.spi_nss_output_enable,"ax",@progbits
+ 529              		.align	1
+ 530              		.globl	spi_nss_output_enable
+ 532              	spi_nss_output_enable:
+ 533              	.LVL51:
+ 534              	.LFB159:
+ 535              	.LM174:
+ 536              		.cfi_startproc
+ 537              	.LM175:
+ 538 0000 5C41     		lw	a5,4(a0)
+ 539              	.LM176:
+ 540 0002 93E74700 		ori	a5,a5,4
+ 541 0006 5CC1     		sw	a5,4(a0)
+ 542              	.LM177:
+ 543 0008 8280     		ret
+ 544              		.cfi_endproc
+ 545              	.LFE159:
+ 547              		.section	.text.spi_nss_output_disable,"ax",@progbits
+ 548              		.align	1
+ 549              		.globl	spi_nss_output_disable
+ 551              	spi_nss_output_disable:
+ 552              	.LVL52:
+ 553              	.LFB160:
+ 554              	.LM178:
+ 555              		.cfi_startproc
+ 556              	.LM179:
+ 557              	.LM180:
+ 558 0000 5C41     		lw	a5,4(a0)
+ 559 0002 ED9B     		andi	a5,a5,-5
+ 560 0004 5CC1     		sw	a5,4(a0)
+ 561              	.LM181:
+ 562 0006 8280     		ret
+ 563              		.cfi_endproc
+ 564              	.LFE160:
+ 566              		.section	.text.spi_nss_internal_high,"ax",@progbits
+ 567              		.align	1
+ 568              		.globl	spi_nss_internal_high
+ 570              	spi_nss_internal_high:
+ 571              	.LVL53:
+ 572              	.LFB161:
+ 573              	.LM182:
+ 574              		.cfi_startproc
+ 575              	.LM183:
+ 576 0000 1C41     		lw	a5,0(a0)
+ 577              	.LM184:
+ 578 0002 93E70710 		ori	a5,a5,256
+ 579 0006 1CC1     		sw	a5,0(a0)
+ 580              	.LM185:
+ 581 0008 8280     		ret
+ 582              		.cfi_endproc
+ 583              	.LFE161:
+ 585              		.section	.text.spi_nss_internal_low,"ax",@progbits
+ 586              		.align	1
+ 587              		.globl	spi_nss_internal_low
+ 589              	spi_nss_internal_low:
+ 590              	.LVL54:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 11
+
+
+ 591              	.LFB162:
+ 592              	.LM186:
+ 593              		.cfi_startproc
+ 594              	.LM187:
+ 595              	.LM188:
+ 596 0000 1C41     		lw	a5,0(a0)
+ 597 0002 93F7F7EF 		andi	a5,a5,-257
+ 598 0006 1CC1     		sw	a5,0(a0)
+ 599              	.LM189:
+ 600 0008 8280     		ret
+ 601              		.cfi_endproc
+ 602              	.LFE162:
+ 604              		.section	.text.spi_dma_enable,"ax",@progbits
+ 605              		.align	1
+ 606              		.globl	spi_dma_enable
+ 608              	spi_dma_enable:
+ 609              	.LVL55:
+ 610              	.LFB163:
+ 611              	.LM190:
+ 612              		.cfi_startproc
+ 613              	.LM191:
+ 614              	.LM192:
+ 615 0000 5C41     		lw	a5,4(a0)
+ 616              	.LM193:
+ 617 0002 89E5     		bne	a1,zero,.L37
+ 618              	.LM194:
+ 619              	.LM195:
+ 620 0004 93E72700 		ori	a5,a5,2
+ 621              	.L39:
+ 622              	.LM196:
+ 623 0008 5CC1     		sw	a5,4(a0)
+ 624              	.LM197:
+ 625 000a 8280     		ret
+ 626              	.L37:
+ 627              	.LM198:
+ 628              	.LM199:
+ 629 000c 93E71700 		ori	a5,a5,1
+ 630 0010 E5BF     		j	.L39
+ 631              		.cfi_endproc
+ 632              	.LFE163:
+ 634              		.section	.text.spi_dma_disable,"ax",@progbits
+ 635              		.align	1
+ 636              		.globl	spi_dma_disable
+ 638              	spi_dma_disable:
+ 639              	.LVL56:
+ 640              	.LFB164:
+ 641              	.LM200:
+ 642              		.cfi_startproc
+ 643              	.LM201:
+ 644              	.LM202:
+ 645 0000 5C41     		lw	a5,4(a0)
+ 646              	.LM203:
+ 647 0002 81E5     		bne	a1,zero,.L41
+ 648              	.LM204:
+ 649              	.LM205:
+ 650 0004 F59B     		andi	a5,a5,-3
+ 651              	.L43:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 12
+
+
+ 652              	.LM206:
+ 653 0006 5CC1     		sw	a5,4(a0)
+ 654              	.LM207:
+ 655 0008 8280     		ret
+ 656              	.L41:
+ 657              	.LM208:
+ 658              	.LM209:
+ 659 000a F99B     		andi	a5,a5,-2
+ 660 000c EDBF     		j	.L43
+ 661              		.cfi_endproc
+ 662              	.LFE164:
+ 664              		.section	.text.spi_i2s_data_frame_format_config,"ax",@progbits
+ 665              		.align	1
+ 666              		.globl	spi_i2s_data_frame_format_config
+ 668              	spi_i2s_data_frame_format_config:
+ 669              	.LVL57:
+ 670              	.LFB165:
+ 671              	.LM210:
+ 672              		.cfi_startproc
+ 673              	.LM211:
+ 674              	.LM212:
+ 675 0000 1C41     		lw	a5,0(a0)
+ 676 0002 7D77     		li	a4,-4096
+ 677 0004 1307F77F 		addi	a4,a4,2047
+ 678 0008 F98F     		and	a5,a5,a4
+ 679 000a 1CC1     		sw	a5,0(a0)
+ 680              	.LM213:
+ 681 000c 1C41     		lw	a5,0(a0)
+ 682              	.LM214:
+ 683 000e DD8D     		or	a1,a1,a5
+ 684              	.LVL58:
+ 685              	.LM215:
+ 686 0010 0CC1     		sw	a1,0(a0)
+ 687              	.LM216:
+ 688 0012 8280     		ret
+ 689              		.cfi_endproc
+ 690              	.LFE165:
+ 692              		.section	.text.spi_i2s_data_transmit,"ax",@progbits
+ 693              		.align	1
+ 694              		.globl	spi_i2s_data_transmit
+ 696              	spi_i2s_data_transmit:
+ 697              	.LVL59:
+ 698              	.LFB166:
+ 699              	.LM217:
+ 700              		.cfi_startproc
+ 701              	.LM218:
+ 702              	.LM219:
+ 703 0000 4CC5     		sw	a1,12(a0)
+ 704              	.LM220:
+ 705 0002 8280     		ret
+ 706              		.cfi_endproc
+ 707              	.LFE166:
+ 709              		.section	.text.spi_i2s_data_receive,"ax",@progbits
+ 710              		.align	1
+ 711              		.globl	spi_i2s_data_receive
+ 713              	spi_i2s_data_receive:
+ 714              	.LVL60:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 13
+
+
+ 715              	.LFB167:
+ 716              	.LM221:
+ 717              		.cfi_startproc
+ 718              	.LM222:
+ 719              	.LM223:
+ 720 0000 4845     		lw	a0,12(a0)
+ 721              	.LVL61:
+ 722              	.LM224:
+ 723 0002 4205     		slli	a0,a0,16
+ 724 0004 4181     		srli	a0,a0,16
+ 725 0006 8280     		ret
+ 726              		.cfi_endproc
+ 727              	.LFE167:
+ 729              		.section	.text.spi_bidirectional_transfer_config,"ax",@progbits
+ 730              		.align	1
+ 731              		.globl	spi_bidirectional_transfer_config
+ 733              	spi_bidirectional_transfer_config:
+ 734              	.LVL62:
+ 735              	.LFB168:
+ 736              	.LM225:
+ 737              		.cfi_startproc
+ 738              	.LM226:
+ 739              	.LM227:
+ 740 0000 9167     		li	a5,16384
+ 741 0002 6396F500 		bne	a1,a5,.L48
+ 742              	.LM228:
+ 743 0006 1C41     		lw	a5,0(a0)
+ 744              	.LM229:
+ 745 0008 CD8F     		or	a5,a5,a1
+ 746              	.L50:
+ 747              	.LM230:
+ 748 000a 1CC1     		sw	a5,0(a0)
+ 749              	.LM231:
+ 750 000c 8280     		ret
+ 751              	.L48:
+ 752              	.LM232:
+ 753              	.LM233:
+ 754 000e 1C41     		lw	a5,0(a0)
+ 755 0010 7177     		li	a4,-16384
+ 756 0012 7D17     		addi	a4,a4,-1
+ 757 0014 F98F     		and	a5,a5,a4
+ 758 0016 D5BF     		j	.L50
+ 759              		.cfi_endproc
+ 760              	.LFE168:
+ 762              		.section	.text.spi_crc_polynomial_set,"ax",@progbits
+ 763              		.align	1
+ 764              		.globl	spi_crc_polynomial_set
+ 766              	spi_crc_polynomial_set:
+ 767              	.LVL63:
+ 768              	.LFB169:
+ 769              	.LM234:
+ 770              		.cfi_startproc
+ 771              	.LM235:
+ 772 0000 1C41     		lw	a5,0(a0)
+ 773              	.LM236:
+ 774 0002 0967     		li	a4,8192
+ 775 0004 D98F     		or	a5,a5,a4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 14
+
+
+ 776 0006 1CC1     		sw	a5,0(a0)
+ 777              	.LM237:
+ 778              	.LM238:
+ 779 0008 0CC9     		sw	a1,16(a0)
+ 780              	.LM239:
+ 781 000a 8280     		ret
+ 782              		.cfi_endproc
+ 783              	.LFE169:
+ 785              		.section	.text.spi_crc_polynomial_get,"ax",@progbits
+ 786              		.align	1
+ 787              		.globl	spi_crc_polynomial_get
+ 789              	spi_crc_polynomial_get:
+ 790              	.LVL64:
+ 791              	.LFB170:
+ 792              	.LM240:
+ 793              		.cfi_startproc
+ 794              	.LM241:
+ 795              	.LM242:
+ 796 0000 0849     		lw	a0,16(a0)
+ 797              	.LVL65:
+ 798              	.LM243:
+ 799 0002 4205     		slli	a0,a0,16
+ 800 0004 4181     		srli	a0,a0,16
+ 801 0006 8280     		ret
+ 802              		.cfi_endproc
+ 803              	.LFE170:
+ 805              		.section	.text.spi_crc_on,"ax",@progbits
+ 806              		.align	1
+ 807              		.globl	spi_crc_on
+ 809              	spi_crc_on:
+ 810              	.LVL66:
+ 811              	.LFB171:
+ 812              	.LM244:
+ 813              		.cfi_startproc
+ 814              	.LM245:
+ 815 0000 1C41     		lw	a5,0(a0)
+ 816              	.LM246:
+ 817 0002 0967     		li	a4,8192
+ 818 0004 D98F     		or	a5,a5,a4
+ 819 0006 1CC1     		sw	a5,0(a0)
+ 820              	.LM247:
+ 821 0008 8280     		ret
+ 822              		.cfi_endproc
+ 823              	.LFE171:
+ 825              		.section	.text.spi_crc_off,"ax",@progbits
+ 826              		.align	1
+ 827              		.globl	spi_crc_off
+ 829              	spi_crc_off:
+ 830              	.LVL67:
+ 831              	.LFB172:
+ 832              	.LM248:
+ 833              		.cfi_startproc
+ 834              	.LM249:
+ 835              	.LM250:
+ 836 0000 1C41     		lw	a5,0(a0)
+ 837 0002 7977     		li	a4,-8192
+ 838 0004 7D17     		addi	a4,a4,-1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 15
+
+
+ 839 0006 F98F     		and	a5,a5,a4
+ 840 0008 1CC1     		sw	a5,0(a0)
+ 841              	.LM251:
+ 842 000a 8280     		ret
+ 843              		.cfi_endproc
+ 844              	.LFE172:
+ 846              		.section	.text.spi_crc_next,"ax",@progbits
+ 847              		.align	1
+ 848              		.globl	spi_crc_next
+ 850              	spi_crc_next:
+ 851              	.LVL68:
+ 852              	.LFB173:
+ 853              	.LM252:
+ 854              		.cfi_startproc
+ 855              	.LM253:
+ 856 0000 1C41     		lw	a5,0(a0)
+ 857              	.LM254:
+ 858 0002 0567     		li	a4,4096
+ 859 0004 D98F     		or	a5,a5,a4
+ 860 0006 1CC1     		sw	a5,0(a0)
+ 861              	.LM255:
+ 862 0008 8280     		ret
+ 863              		.cfi_endproc
+ 864              	.LFE173:
+ 866              		.section	.text.spi_crc_get,"ax",@progbits
+ 867              		.align	1
+ 868              		.globl	spi_crc_get
+ 870              	spi_crc_get:
+ 871              	.LVL69:
+ 872              	.LFB174:
+ 873              	.LM256:
+ 874              		.cfi_startproc
+ 875              	.LM257:
+ 876              	.LM258:
+ 877 0000 89E5     		bne	a1,zero,.L57
+ 878              	.LM259:
+ 879              	.LM260:
+ 880 0002 084D     		lw	a0,24(a0)
+ 881              	.LVL70:
+ 882              	.L58:
+ 883              	.LM261:
+ 884 0004 4205     		slli	a0,a0,16
+ 885 0006 4181     		srli	a0,a0,16
+ 886 0008 8280     		ret
+ 887              	.LVL71:
+ 888              	.L57:
+ 889              	.LM262:
+ 890              	.LM263:
+ 891 000a 4849     		lw	a0,20(a0)
+ 892              	.LVL72:
+ 893              	.LM264:
+ 894 000c E5BF     		j	.L58
+ 895              		.cfi_endproc
+ 896              	.LFE174:
+ 898              		.section	.text.spi_ti_mode_enable,"ax",@progbits
+ 899              		.align	1
+ 900              		.globl	spi_ti_mode_enable
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 16
+
+
+ 902              	spi_ti_mode_enable:
+ 903              	.LVL73:
+ 904              	.LFB175:
+ 905              	.LM265:
+ 906              		.cfi_startproc
+ 907              	.LM266:
+ 908 0000 5C41     		lw	a5,4(a0)
+ 909              	.LM267:
+ 910 0002 93E70701 		ori	a5,a5,16
+ 911 0006 5CC1     		sw	a5,4(a0)
+ 912              	.LM268:
+ 913 0008 8280     		ret
+ 914              		.cfi_endproc
+ 915              	.LFE175:
+ 917              		.section	.text.spi_ti_mode_disable,"ax",@progbits
+ 918              		.align	1
+ 919              		.globl	spi_ti_mode_disable
+ 921              	spi_ti_mode_disable:
+ 922              	.LVL74:
+ 923              	.LFB176:
+ 924              	.LM269:
+ 925              		.cfi_startproc
+ 926              	.LM270:
+ 927              	.LM271:
+ 928 0000 5C41     		lw	a5,4(a0)
+ 929 0002 BD9B     		andi	a5,a5,-17
+ 930 0004 5CC1     		sw	a5,4(a0)
+ 931              	.LM272:
+ 932 0006 8280     		ret
+ 933              		.cfi_endproc
+ 934              	.LFE176:
+ 936              		.section	.text.spi_nssp_mode_enable,"ax",@progbits
+ 937              		.align	1
+ 938              		.globl	spi_nssp_mode_enable
+ 940              	spi_nssp_mode_enable:
+ 941              	.LVL75:
+ 942              	.LFB177:
+ 943              	.LM273:
+ 944              		.cfi_startproc
+ 945              	.LM274:
+ 946 0000 5C41     		lw	a5,4(a0)
+ 947              	.LM275:
+ 948 0002 93E78700 		ori	a5,a5,8
+ 949 0006 5CC1     		sw	a5,4(a0)
+ 950              	.LM276:
+ 951 0008 8280     		ret
+ 952              		.cfi_endproc
+ 953              	.LFE177:
+ 955              		.section	.text.spi_nssp_mode_disable,"ax",@progbits
+ 956              		.align	1
+ 957              		.globl	spi_nssp_mode_disable
+ 959              	spi_nssp_mode_disable:
+ 960              	.LVL76:
+ 961              	.LFB178:
+ 962              	.LM277:
+ 963              		.cfi_startproc
+ 964              	.LM278:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 17
+
+
+ 965              	.LM279:
+ 966 0000 5C41     		lw	a5,4(a0)
+ 967 0002 DD9B     		andi	a5,a5,-9
+ 968 0004 5CC1     		sw	a5,4(a0)
+ 969              	.LM280:
+ 970 0006 8280     		ret
+ 971              		.cfi_endproc
+ 972              	.LFE178:
+ 974              		.section	.text.spi_i2s_interrupt_enable,"ax",@progbits
+ 975              		.align	1
+ 976              		.globl	spi_i2s_interrupt_enable
+ 978              	spi_i2s_interrupt_enable:
+ 979              	.LVL77:
+ 980              	.LFB179:
+ 981              	.LM281:
+ 982              		.cfi_startproc
+ 983              	.LM282:
+ 984 0000 8547     		li	a5,1
+ 985 0002 638BF500 		beq	a1,a5,.L64
+ 986 0006 8947     		li	a5,2
+ 987 0008 638CF500 		beq	a1,a5,.L65
+ 988 000c 89E5     		bne	a1,zero,.L63
+ 989              	.LM283:
+ 990 000e 5C41     		lw	a5,4(a0)
+ 991              	.LM284:
+ 992 0010 93E70708 		ori	a5,a5,128
+ 993              	.L67:
+ 994              	.LM285:
+ 995 0014 5CC1     		sw	a5,4(a0)
+ 996              	.LM286:
+ 997              	.L63:
+ 998              	.LM287:
+ 999 0016 8280     		ret
+ 1000              	.L64:
+ 1001              	.LM288:
+ 1002 0018 5C41     		lw	a5,4(a0)
+ 1003              	.LM289:
+ 1004 001a 93E70704 		ori	a5,a5,64
+ 1005 001e DDBF     		j	.L67
+ 1006              	.L65:
+ 1007              	.LM290:
+ 1008 0020 5C41     		lw	a5,4(a0)
+ 1009              	.LM291:
+ 1010 0022 93E70702 		ori	a5,a5,32
+ 1011 0026 FDB7     		j	.L67
+ 1012              		.cfi_endproc
+ 1013              	.LFE179:
+ 1015              		.section	.text.spi_i2s_interrupt_disable,"ax",@progbits
+ 1016              		.align	1
+ 1017              		.globl	spi_i2s_interrupt_disable
+ 1019              	spi_i2s_interrupt_disable:
+ 1020              	.LVL78:
+ 1021              	.LFB180:
+ 1022              	.LM292:
+ 1023              		.cfi_startproc
+ 1024              	.LM293:
+ 1025 0000 8547     		li	a5,1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 18
+
+
+ 1026 0002 638BF500 		beq	a1,a5,.L69
+ 1027 0006 8947     		li	a5,2
+ 1028 0008 638CF500 		beq	a1,a5,.L70
+ 1029 000c 89E5     		bne	a1,zero,.L68
+ 1030              	.LM294:
+ 1031              	.LM295:
+ 1032 000e 5C41     		lw	a5,4(a0)
+ 1033 0010 93F7F7F7 		andi	a5,a5,-129
+ 1034              	.L72:
+ 1035              	.LM296:
+ 1036 0014 5CC1     		sw	a5,4(a0)
+ 1037              	.LM297:
+ 1038              	.L68:
+ 1039              	.LM298:
+ 1040 0016 8280     		ret
+ 1041              	.L69:
+ 1042              	.LM299:
+ 1043              	.LM300:
+ 1044 0018 5C41     		lw	a5,4(a0)
+ 1045 001a 93F7F7FB 		andi	a5,a5,-65
+ 1046 001e DDBF     		j	.L72
+ 1047              	.L70:
+ 1048              	.LM301:
+ 1049              	.LM302:
+ 1050 0020 5C41     		lw	a5,4(a0)
+ 1051 0022 93F7F7FD 		andi	a5,a5,-33
+ 1052 0026 FDB7     		j	.L72
+ 1053              		.cfi_endproc
+ 1054              	.LFE180:
+ 1056              		.section	.text.spi_i2s_interrupt_flag_get,"ax",@progbits
+ 1057              		.align	1
+ 1058              		.globl	spi_i2s_interrupt_flag_get
+ 1060              	spi_i2s_interrupt_flag_get:
+ 1061              	.LVL79:
+ 1062              	.LFB181:
+ 1063              	.LM303:
+ 1064              		.cfi_startproc
+ 1065              	.LM304:
+ 1066              	.LM305:
+ 1067 0000 1C45     		lw	a5,8(a0)
+ 1068              	.LVL80:
+ 1069              	.LM306:
+ 1070              	.LM307:
+ 1071 0002 4841     		lw	a0,4(a0)
+ 1072              	.LVL81:
+ 1073              	.LM308:
+ 1074 0004 1947     		li	a4,6
+ 1075 0006 636EB700 		bgtu	a1,a4,.L74
+ 1076 000a 97060000 		lla	a3,.L76
+ 1076      93860600 
+ 1077 0012 8A05     		slli	a1,a1,2
+ 1078              	.LVL82:
+ 1079              	.LM309:
+ 1080 0014 B695     		add	a1,a1,a3
+ 1081 0016 9841     		lw	a4,0(a1)
+ 1082 0018 3697     		add	a4,a4,a3
+ 1083 001a 0287     		jr	a4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 19
+
+
+ 1084              		.section	.rodata.spi_i2s_interrupt_flag_get,"a",@progbits
+ 1085              		.align	2
+ 1086              		.align	2
+ 1087              	.L76:
+ 1088 0000 00000000 		.word	.L82-.L76
+ 1089 0004 00000000 		.word	.L81-.L76
+ 1090 0008 00000000 		.word	.L80-.L76
+ 1091 000c 00000000 		.word	.L79-.L76
+ 1092 0010 00000000 		.word	.L78-.L76
+ 1093 0014 00000000 		.word	.L77-.L76
+ 1094 0018 00000000 		.word	.L75-.L76
+ 1095              		.section	.text.spi_i2s_interrupt_flag_get
+ 1096              	.L82:
+ 1097              	.LM310:
+ 1098              	.LM311:
+ 1099 001c 898B     		andi	a5,a5,2
+ 1100              	.LVL83:
+ 1101              	.LM312:
+ 1102              	.LM313:
+ 1103 001e 13750508 		andi	a0,a0,128
+ 1104              	.LVL84:
+ 1105              	.LM314:
+ 1106              	.L74:
+ 1107              	.LM315:
+ 1108              	.LM316:
+ 1109 0022 B337F000 		snez	a5,a5
+ 1110              	.LVL85:
+ 1111              	.LM317:
+ 1112 0026 3335A000 		snez	a0,a0
+ 1113              	.LVL86:
+ 1114              	.LM318:
+ 1115 002a 7D8D     		and	a0,a0,a5
+ 1116 002c 8280     		ret
+ 1117              	.LVL87:
+ 1118              	.L81:
+ 1119              	.LM319:
+ 1120              	.LM320:
+ 1121 002e 858B     		andi	a5,a5,1
+ 1122              	.LVL88:
+ 1123              	.LM321:
+ 1124              	.LM322:
+ 1125 0030 13750504 		andi	a0,a0,64
+ 1126              	.LVL89:
+ 1127              	.LM323:
+ 1128 0034 FDB7     		j	.L74
+ 1129              	.L80:
+ 1130              	.LM324:
+ 1131              	.LM325:
+ 1132 0036 93F70704 		andi	a5,a5,64
+ 1133              	.LVL90:
+ 1134              	.LM326:
+ 1135              	.L83:
+ 1136              	.LM327:
+ 1137              	.LM328:
+ 1138 003a 13750502 		andi	a0,a0,32
+ 1139              	.LVL91:
+ 1140              	.LM329:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 20
+
+
+ 1141 003e D5B7     		j	.L74
+ 1142              	.L79:
+ 1143              	.LM330:
+ 1144              	.LM331:
+ 1145 0040 93F70702 		andi	a5,a5,32
+ 1146              	.LVL92:
+ 1147              	.LM332:
+ 1148 0044 DDBF     		j	.L83
+ 1149              	.L78:
+ 1150              	.LM333:
+ 1151              	.LM334:
+ 1152 0046 C18B     		andi	a5,a5,16
+ 1153              	.LVL93:
+ 1154              	.LM335:
+ 1155 0048 CDBF     		j	.L83
+ 1156              	.L77:
+ 1157              	.LM336:
+ 1158              	.LM337:
+ 1159 004a A18B     		andi	a5,a5,8
+ 1160              	.LVL94:
+ 1161              	.LM338:
+ 1162 004c FDB7     		j	.L83
+ 1163              	.L75:
+ 1164              	.LM339:
+ 1165              	.LM340:
+ 1166 004e 93F70710 		andi	a5,a5,256
+ 1167              	.LVL95:
+ 1168              	.LM341:
+ 1169 0052 E5B7     		j	.L83
+ 1170              		.cfi_endproc
+ 1171              	.LFE181:
+ 1173              		.section	.text.spi_i2s_flag_get,"ax",@progbits
+ 1174              		.align	1
+ 1175              		.globl	spi_i2s_flag_get
+ 1177              	spi_i2s_flag_get:
+ 1178              	.LVL96:
+ 1179              	.LFB182:
+ 1180              	.LM342:
+ 1181              		.cfi_startproc
+ 1182              	.LM343:
+ 1183              	.LM344:
+ 1184 0000 0845     		lw	a0,8(a0)
+ 1185              	.LVL97:
+ 1186              	.LM345:
+ 1187 0002 6D8D     		and	a0,a0,a1
+ 1188              	.LM346:
+ 1189 0004 3335A000 		snez	a0,a0
+ 1190 0008 8280     		ret
+ 1191              		.cfi_endproc
+ 1192              	.LFE182:
+ 1194              		.section	.text.spi_crc_error_clear,"ax",@progbits
+ 1195              		.align	1
+ 1196              		.globl	spi_crc_error_clear
+ 1198              	spi_crc_error_clear:
+ 1199              	.LVL98:
+ 1200              	.LFB183:
+ 1201              	.LM347:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 21
+
+
+ 1202              		.cfi_startproc
+ 1203              	.LM348:
+ 1204              	.LM349:
+ 1205 0000 1C45     		lw	a5,8(a0)
+ 1206 0002 BD9B     		andi	a5,a5,-17
+ 1207 0004 1CC5     		sw	a5,8(a0)
+ 1208              	.LM350:
+ 1209 0006 8280     		ret
+ 1210              		.cfi_endproc
+ 1211              	.LFE183:
+ 1213              		.text
+ 1214              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_spi.c
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:10     .text.spi_i2s_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:13     .text.spi_i2s_deinit:00000000 spi_i2s_deinit
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:17     .text.spi_i2s_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:22     .text.spi_i2s_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:27     .text.spi_i2s_deinit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:38     .text.spi_i2s_deinit:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:39     .text.spi_i2s_deinit:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:42     .text.spi_i2s_deinit:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:46     .text.spi_i2s_deinit:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:58     .text.spi_i2s_deinit:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:59     .text.spi_i2s_deinit:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:62     .text.spi_i2s_deinit:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:68     .text.spi_i2s_deinit:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:89     .text.spi_i2s_deinit:0000006a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:93     .text.spi_struct_para_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:96     .text.spi_struct_para_init:00000000 spi_struct_para_init
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:100    .text.spi_struct_para_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:121    .text.spi_struct_para_init:0000001a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:125    .text.spi_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:128    .text.spi_init:00000000 spi_init
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:132    .text.spi_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:186    .text.spi_init:00000036 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:190    .text.spi_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:193    .text.spi_enable:00000000 spi_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:197    .text.spi_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:205    .text.spi_enable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:209    .text.spi_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:212    .text.spi_disable:00000000 spi_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:216    .text.spi_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:224    .text.spi_disable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:228    .text.i2s_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:231    .text.i2s_init:00000000 i2s_init
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:235    .text.i2s_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:266    .text.i2s_init:0000001c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:270    .text.i2s_psc_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:273    .text.i2s_psc_config:00000000 i2s_psc_config
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:277    .text.i2s_psc_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:285    .text.i2s_psc_config:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:291    .text.i2s_psc_config:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:292    .text.i2s_psc_config:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:426    .text.i2s_psc_config:000000a0 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:427    .text.i2s_psc_config:000000a0 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:438    .text.i2s_psc_config:000000ac .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:443    .text.i2s_psc_config:000000ae .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:448    .text.i2s_psc_config:000000b0 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:487    .text.i2s_psc_config:000000de .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:491    .text.i2s_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:494    .text.i2s_enable:00000000 i2s_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:498    .text.i2s_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:506    .text.i2s_enable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:510    .text.i2s_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:513    .text.i2s_disable:00000000 i2s_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:517    .text.i2s_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:525    .text.i2s_disable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:529    .text.spi_nss_output_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 23
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:532    .text.spi_nss_output_enable:00000000 spi_nss_output_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:536    .text.spi_nss_output_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:544    .text.spi_nss_output_enable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:548    .text.spi_nss_output_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:551    .text.spi_nss_output_disable:00000000 spi_nss_output_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:555    .text.spi_nss_output_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:563    .text.spi_nss_output_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:567    .text.spi_nss_internal_high:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:570    .text.spi_nss_internal_high:00000000 spi_nss_internal_high
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:574    .text.spi_nss_internal_high:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:582    .text.spi_nss_internal_high:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:586    .text.spi_nss_internal_low:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:589    .text.spi_nss_internal_low:00000000 spi_nss_internal_low
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:593    .text.spi_nss_internal_low:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:601    .text.spi_nss_internal_low:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:605    .text.spi_dma_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:608    .text.spi_dma_enable:00000000 spi_dma_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:612    .text.spi_dma_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:631    .text.spi_dma_enable:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:635    .text.spi_dma_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:638    .text.spi_dma_disable:00000000 spi_dma_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:642    .text.spi_dma_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:661    .text.spi_dma_disable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:665    .text.spi_i2s_data_frame_format_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:668    .text.spi_i2s_data_frame_format_config:00000000 spi_i2s_data_frame_format_config
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:672    .text.spi_i2s_data_frame_format_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:689    .text.spi_i2s_data_frame_format_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:693    .text.spi_i2s_data_transmit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:696    .text.spi_i2s_data_transmit:00000000 spi_i2s_data_transmit
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:700    .text.spi_i2s_data_transmit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:706    .text.spi_i2s_data_transmit:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:710    .text.spi_i2s_data_receive:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:713    .text.spi_i2s_data_receive:00000000 spi_i2s_data_receive
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:717    .text.spi_i2s_data_receive:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:726    .text.spi_i2s_data_receive:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:730    .text.spi_bidirectional_transfer_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:733    .text.spi_bidirectional_transfer_config:00000000 spi_bidirectional_transfer_config
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:737    .text.spi_bidirectional_transfer_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:759    .text.spi_bidirectional_transfer_config:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:763    .text.spi_crc_polynomial_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:766    .text.spi_crc_polynomial_set:00000000 spi_crc_polynomial_set
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:770    .text.spi_crc_polynomial_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:782    .text.spi_crc_polynomial_set:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:786    .text.spi_crc_polynomial_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:789    .text.spi_crc_polynomial_get:00000000 spi_crc_polynomial_get
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:793    .text.spi_crc_polynomial_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:802    .text.spi_crc_polynomial_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:806    .text.spi_crc_on:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:809    .text.spi_crc_on:00000000 spi_crc_on
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:813    .text.spi_crc_on:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:822    .text.spi_crc_on:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:826    .text.spi_crc_off:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:829    .text.spi_crc_off:00000000 spi_crc_off
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:833    .text.spi_crc_off:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:843    .text.spi_crc_off:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:847    .text.spi_crc_next:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:850    .text.spi_crc_next:00000000 spi_crc_next
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 24
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:854    .text.spi_crc_next:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:863    .text.spi_crc_next:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:867    .text.spi_crc_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:870    .text.spi_crc_get:00000000 spi_crc_get
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:874    .text.spi_crc_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:895    .text.spi_crc_get:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:899    .text.spi_ti_mode_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:902    .text.spi_ti_mode_enable:00000000 spi_ti_mode_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:906    .text.spi_ti_mode_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:914    .text.spi_ti_mode_enable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:918    .text.spi_ti_mode_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:921    .text.spi_ti_mode_disable:00000000 spi_ti_mode_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:925    .text.spi_ti_mode_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:933    .text.spi_ti_mode_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:937    .text.spi_nssp_mode_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:940    .text.spi_nssp_mode_enable:00000000 spi_nssp_mode_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:944    .text.spi_nssp_mode_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:952    .text.spi_nssp_mode_enable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:956    .text.spi_nssp_mode_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:959    .text.spi_nssp_mode_disable:00000000 spi_nssp_mode_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:963    .text.spi_nssp_mode_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:971    .text.spi_nssp_mode_disable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:975    .text.spi_i2s_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:978    .text.spi_i2s_interrupt_enable:00000000 spi_i2s_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:982    .text.spi_i2s_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1012   .text.spi_i2s_interrupt_enable:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1016   .text.spi_i2s_interrupt_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1019   .text.spi_i2s_interrupt_disable:00000000 spi_i2s_interrupt_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1023   .text.spi_i2s_interrupt_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1053   .text.spi_i2s_interrupt_disable:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1057   .text.spi_i2s_interrupt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1060   .text.spi_i2s_interrupt_flag_get:00000000 spi_i2s_interrupt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1064   .text.spi_i2s_interrupt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1170   .text.spi_i2s_interrupt_flag_get:00000054 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1174   .text.spi_i2s_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1177   .text.spi_i2s_flag_get:00000000 spi_i2s_flag_get
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1181   .text.spi_i2s_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1191   .text.spi_i2s_flag_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1195   .text.spi_crc_error_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1198   .text.spi_crc_error_clear:00000000 spi_crc_error_clear
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1202   .text.spi_crc_error_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1210   .text.spi_crc_error_clear:00000008 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:79     .text.spi_i2s_deinit:00000058 .L2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:44     .text.spi_i2s_deinit:0000002a .L3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:66     .text.spi_i2s_deinit:00000046 .L4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:55     .text.spi_i2s_deinit:0000003a .L8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:308    .text.i2s_psc_config:00000020 .L15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:459    .text.i2s_psc_config:000000ba .L16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:446    .text.i2s_psc_config:000000b0 .L17
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:477    .text.i2s_psc_config:000000d2 .L20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:411    .text.i2s_psc_config:00000096 .L23
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:338    .text.i2s_psc_config:00000040 .L18
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:361    .text.i2s_psc_config:00000060 .L19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:370    .text.i2s_psc_config:0000006e .L29
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:626    .text.spi_dma_enable:0000000c .L37
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:621    .text.spi_dma_enable:00000008 .L39
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 25
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:656    .text.spi_dma_disable:0000000a .L41
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:651    .text.spi_dma_disable:00000006 .L43
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:751    .text.spi_bidirectional_transfer_config:0000000e .L48
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:746    .text.spi_bidirectional_transfer_config:0000000a .L50
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:888    .text.spi_crc_get:0000000a .L57
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:882    .text.spi_crc_get:00000004 .L58
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1000   .text.spi_i2s_interrupt_enable:00000018 .L64
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1006   .text.spi_i2s_interrupt_enable:00000020 .L65
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:997    .text.spi_i2s_interrupt_enable:00000016 .L63
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:993    .text.spi_i2s_interrupt_enable:00000014 .L67
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1041   .text.spi_i2s_interrupt_disable:00000018 .L69
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1047   .text.spi_i2s_interrupt_disable:00000020 .L70
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1038   .text.spi_i2s_interrupt_disable:00000016 .L68
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1034   .text.spi_i2s_interrupt_disable:00000014 .L72
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1087   .rodata.spi_i2s_interrupt_flag_get:00000000 .L76
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1076   .text.spi_i2s_interrupt_flag_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1106   .text.spi_i2s_interrupt_flag_get:00000022 .L74
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1135   .text.spi_i2s_interrupt_flag_get:0000003a .L83
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1096   .text.spi_i2s_interrupt_flag_get:0000001c .L82
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1118   .text.spi_i2s_interrupt_flag_get:0000002e .L81
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1129   .text.spi_i2s_interrupt_flag_get:00000036 .L80
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1142   .text.spi_i2s_interrupt_flag_get:00000040 .L79
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1149   .text.spi_i2s_interrupt_flag_get:00000046 .L78
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1156   .text.spi_i2s_interrupt_flag_get:0000004a .L77
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1163   .text.spi_i2s_interrupt_flag_get:0000004e .L75
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:2625   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6766   .debug_str:000001ef .LASF118
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6800   .debug_str:000003b6 .LASF119
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6864   .debug_str:0000057a .LASF120
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:4263   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:4335   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6756   .debug_str:000001a4 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6710   .debug_str:0000005f .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6932   .debug_str:00000745 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6912   .debug_str:000006ad .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6822   .debug_str:00000469 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6852   .debug_str:0000053f .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6930   .debug_str:00000739 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6894   .debug_str:00000630 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6866   .debug_str:0000058a .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6762   .debug_str:000001d8 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6872   .debug_str:000005b3 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6914   .debug_str:000006bb .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6908   .debug_str:00000686 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6808   .debug_str:00000418 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6854   .debug_str:0000054b .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6738   .debug_str:00000112 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6884   .debug_str:00000608 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6726   .debug_str:000000b8 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6810   .debug_str:00000420 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6782   .debug_str:00000324 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6928   .debug_str:0000072b .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6816   .debug_str:00000446 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6702   .debug_str:0000002c .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6856   .debug_str:00000554 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6750   .debug_str:00000171 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6922   .debug_str:000006fb .LASF25
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 26
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6716   .debug_str:0000007c .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6862   .debug_str:0000056e .LASF27
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6904   .debug_str:0000066e .LASF28
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6790   .debug_str:00000353 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6900   .debug_str:00000654 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6784   .debug_str:00000332 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6918   .debug_str:000006db .LASF32
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6802   .debug_str:000003f4 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6874   .debug_str:000005bc .LASF34
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6764   .debug_str:000001e3 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6934   .debug_str:00000758 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6826   .debug_str:0000048c .LASF37
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6704   .debug_str:0000003a .LASF38
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6868   .debug_str:00000594 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6812   .debug_str:0000042d .LASF40
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6698   .debug_str:00000009 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6850   .debug_str:00000532 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6736   .debug_str:00000105 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6902   .debug_str:00000661 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6780   .debug_str:00000318 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6924   .debug_str:00000708 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6896   .debug_str:0000063a .LASF47
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6830   .debug_str:000004a6 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6742   .debug_str:00000131 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6740   .debug_str:0000011b .LASF50
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6842   .debug_str:0000050b .LASF51
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6776   .debug_str:00000305 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6888   .debug_str:00000613 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6890   .debug_str:0000061b .LASF54
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6938   .debug_str:00000777 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6754   .debug_str:00000198 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6708   .debug_str:00000054 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6786   .debug_str:0000033f .LASF58
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6714   .debug_str:00000075 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6916   .debug_str:000006c6 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6820   .debug_str:00000460 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6798   .debug_str:000003a1 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6806   .debug_str:00000405 .LASF121
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6734   .debug_str:000000ec .LASF63
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6768   .debug_str:000002b6 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6920   .debug_str:000006e7 .LASF72
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1200   .text.spi_crc_error_clear:00000000 .LFB183
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1211   .text.spi_crc_error_clear:00000008 .LFE183
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6746   .debug_str:00000145 .LASF65
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6760   .debug_str:000001c7 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1179   .text.spi_i2s_flag_get:00000000 .LFB182
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1192   .text.spi_i2s_flag_get:0000000a .LFE182
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3211   .debug_loc:00000004 .LLST21
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3206   .debug_loc:00000000 .LVUS21
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6886   .debug_str:0000060e .LASF66
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6718   .debug_str:00000088 .LASF68
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1062   .text.spi_i2s_interrupt_flag_get:00000000 .LFB181
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1171   .text.spi_i2s_interrupt_flag_get:00000054 .LFE181
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3236   .debug_loc:0000002f .LLST17
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3231   .debug_loc:0000002b .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6906   .debug_str:0000067c .LASF69
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3261   .debug_loc:0000005a .LLST18
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 27
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3256   .debug_loc:00000056 .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6720   .debug_str:000000a3 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3286   .debug_loc:00000085 .LLST19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3281   .debug_loc:00000081 .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6722   .debug_str:000000a8 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3302   .debug_loc:000000a7 .LLST20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3297   .debug_loc:000000a3 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6792   .debug_str:00000361 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1021   .text.spi_i2s_interrupt_disable:00000000 .LFB180
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1054   .text.spi_i2s_interrupt_disable:00000028 .LFE180
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6752   .debug_str:0000017f .LASF74
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:980    .text.spi_i2s_interrupt_enable:00000000 .LFB179
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1013   .text.spi_i2s_interrupt_enable:00000028 .LFE179
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6700   .debug_str:00000016 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:961    .text.spi_nssp_mode_disable:00000000 .LFB178
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:972    .text.spi_nssp_mode_disable:00000008 .LFE178
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6870   .debug_str:0000059e .LASF76
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:942    .text.spi_nssp_mode_enable:00000000 .LFB177
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:953    .text.spi_nssp_mode_enable:0000000a .LFE177
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6834   .debug_str:000004c5 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:923    .text.spi_ti_mode_disable:00000000 .LFB176
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:934    .text.spi_ti_mode_disable:00000008 .LFE176
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6832   .debug_str:000004b2 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:904    .text.spi_ti_mode_enable:00000000 .LFB175
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:915    .text.spi_ti_mode_enable:0000000a .LFE175
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6758   .debug_str:000001bb .LASF79
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:872    .text.spi_crc_get:00000000 .LFB174
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:896    .text.spi_crc_get:0000000e .LFE174
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3322   .debug_loc:000000cd .LLST16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3313   .debug_loc:000000c5 .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6732   .debug_str:000000df .LASF80
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:852    .text.spi_crc_next:00000000 .LFB173
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:864    .text.spi_crc_next:0000000a .LFE173
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6814   .debug_str:0000043a .LASF81
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:831    .text.spi_crc_off:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:844    .text.spi_crc_off:0000000c .LFE172
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6724   .debug_str:000000ad .LASF82
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:811    .text.spi_crc_on:00000000 .LFB171
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:823    .text.spi_crc_on:0000000a .LFE171
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6796   .debug_str:0000038a .LASF83
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:791    .text.spi_crc_polynomial_get:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:803    .text.spi_crc_polynomial_get:00000008 .LFE170
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3364   .debug_loc:00000117 .LLST15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3359   .debug_loc:00000113 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6730   .debug_str:000000c8 .LASF84
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:768    .text.spi_crc_polynomial_set:00000000 .LFB169
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:783    .text.spi_crc_polynomial_set:0000000c .LFE169
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6878   .debug_str:000005de .LASF85
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6840   .debug_str:000004e9 .LASF86
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:735    .text.spi_bidirectional_transfer_config:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:760    .text.spi_bidirectional_transfer_config:00000018 .LFE168
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6936   .debug_str:00000764 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6910   .debug_str:00000698 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:715    .text.spi_i2s_data_receive:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:727    .text.spi_i2s_data_receive:00000008 .LFE167
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3389   .debug_loc:00000142 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3384   .debug_loc:0000013e .LVUS14
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 28
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6770   .debug_str:000002ce .LASF89
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:698    .text.spi_i2s_data_transmit:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:707    .text.spi_i2s_data_transmit:00000004 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6804   .debug_str:00000400 .LASF90
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6748   .debug_str:00000150 .LASF91
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:670    .text.spi_i2s_data_frame_format_config:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:690    .text.spi_i2s_data_frame_format_config:00000014 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6892   .debug_str:00000623 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3414   .debug_loc:0000016d .LLST13
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3409   .debug_loc:00000169 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6848   .debug_str:00000522 .LASF93
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:640    .text.spi_dma_disable:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:662    .text.spi_dma_disable:0000000e .LFE164
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6706   .debug_str:00000045 .LASF94
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:610    .text.spi_dma_enable:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:632    .text.spi_dma_enable:00000012 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6824   .debug_str:00000477 .LASF95
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:591    .text.spi_nss_internal_low:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:602    .text.spi_nss_internal_low:0000000a .LFE162
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6882   .debug_str:000005f2 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:572    .text.spi_nss_internal_high:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:583    .text.spi_nss_internal_high:0000000a .LFE161
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6926   .debug_str:00000714 .LASF97
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:553    .text.spi_nss_output_disable:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:564    .text.spi_nss_output_disable:00000008 .LFE160
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6876   .debug_str:000005c8 .LASF98
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:534    .text.spi_nss_output_enable:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:545    .text.spi_nss_output_enable:0000000a .LFE159
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6772   .debug_str:000002e4 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:515    .text.i2s_disable:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:526    .text.i2s_disable:0000000a .LFE158
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6940   .debug_str:0000078b .LASF100
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:496    .text.i2s_enable:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:507    .text.i2s_enable:0000000a .LFE157
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6794   .debug_str:0000037b .LASF101
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:275    .text.i2s_psc_config:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:488    .text.i2s_psc_config:000000de .LFE156
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3434   .debug_loc:00000194 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3466   .debug_loc:000001d4 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3457   .debug_loc:000001cc .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6898   .debug_str:00000648 .LASF102
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3505   .debug_loc:0000021b .LLST6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3494   .debug_loc:00000211 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6818   .debug_str:00000454 .LASF103
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3558   .debug_loc:00000277 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3547   .debug_loc:0000026d .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6838   .debug_str:000004e2 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3611   .debug_loc:000002d3 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3600   .debug_loc:000002c9 .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6858   .debug_str:00000562 .LASF105
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3660   .debug_loc:0000032b .LLST9
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3653   .debug_loc:00000325 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6744   .debug_str:0000013f .LASF106
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3690   .debug_loc:00000362 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3677   .debug_loc:00000356 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6860   .debug_str:00000569 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3742   .debug_loc:000003c4 .LLST11
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 29
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3723   .debug_loc:000003b2 .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6836   .debug_str:000004d9 .LASF108
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3797   .debug_loc:0000043e .LLST12
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3786   .debug_loc:00000434 .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:470    .text.i2s_psc_config:000000ca .LVL47
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6712   .debug_str:0000006c .LASF109
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:233    .text.i2s_init:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:267    .text.i2s_init:0000001c .LFE155
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6728   .debug_str:000000c3 .LASF110
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6696   .debug_str:00000000 .LASF111
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6844   .debug_str:00000512 .LASF112
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3843   .debug_loc:00000493 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3830   .debug_loc:00000487 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6778   .debug_str:0000030c .LASF113
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:214    .text.spi_disable:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:225    .text.spi_disable:0000000a .LFE154
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6846   .debug_str:00000517 .LASF114
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:195    .text.spi_enable:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:206    .text.spi_enable:0000000a .LFE153
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6788   .debug_str:0000034a .LASF115
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:130    .text.spi_init:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:187    .text.spi_init:00000036 .LFE152
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6880   .debug_str:000005e7 .LASF116
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3918   .debug_loc:00000511 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:3895   .debug_loc:000004fb .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6774   .debug_str:000002f0 .LASF117
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:98     .text.spi_struct_para_init:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:122    .text.spi_struct_para_init:0000001a .LFE151
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:6828   .debug_str:00000497 .LASF122
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:15     .text.spi_i2s_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:90     .text.spi_i2s_deinit:0000006a .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:4084   .debug_loc:00000609 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:4130   .debug_loc:00000665 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:4117   .debug_loc:00000659 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:52     .text.spi_i2s_deinit:00000036 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:65     .text.spi_i2s_deinit:00000046 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:74     .text.spi_i2s_deinit:00000052 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:85     .text.spi_i2s_deinit:00000064 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1178   .text.spi_i2s_flag_get:00000000 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1185   .text.spi_i2s_flag_get:00000002 .LVL97
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1061   .text.spi_i2s_interrupt_flag_get:00000000 .LVL79
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1072   .text.spi_i2s_interrupt_flag_get:00000004 .LVL81
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1078   .text.spi_i2s_interrupt_flag_get:00000014 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1068   .text.spi_i2s_interrupt_flag_get:00000002 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1110   .text.spi_i2s_interrupt_flag_get:00000026 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1117   .text.spi_i2s_interrupt_flag_get:0000002e .LVL87
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1167   .text.spi_i2s_interrupt_flag_get:00000052 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1113   .text.spi_i2s_interrupt_flag_get:0000002a .LVL86
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:871    .text.spi_crc_get:00000000 .LVL69
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:881    .text.spi_crc_get:00000004 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:887    .text.spi_crc_get:0000000a .LVL71
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:892    .text.spi_crc_get:0000000c .LVL72
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:790    .text.spi_crc_polynomial_get:00000000 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:797    .text.spi_crc_polynomial_get:00000002 .LVL65
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:714    .text.spi_i2s_data_receive:00000000 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:721    .text.spi_i2s_data_receive:00000002 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:669    .text.spi_i2s_data_frame_format_config:00000000 .LVL57
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 30
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:684    .text.spi_i2s_data_frame_format_config:00000010 .LVL58
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:284    .text.i2s_psc_config:00000002 .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:442    .text.i2s_psc_config:000000ae .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:447    .text.i2s_psc_config:000000b0 .LCFI7
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:274    .text.i2s_psc_config:00000000 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:304    .text.i2s_psc_config:00000018 .LVL24
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:439    .text.i2s_psc_config:000000ac .LVL42
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:445    .text.i2s_psc_config:000000b0 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:360    .text.i2s_psc_config:00000060 .LVL30
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:476    .text.i2s_psc_config:000000d2 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:394    .text.i2s_psc_config:00000088 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:415    .text.i2s_psc_config:00000098 .LVL40
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:390    .text.i2s_psc_config:00000086 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:402    .text.i2s_psc_config:0000008e .LVL37
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:407    .text.i2s_psc_config:00000094 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:410    .text.i2s_psc_config:00000096 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:423    .text.i2s_psc_config:0000009e .LVL41
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:309    .text.i2s_psc_config:00000020 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:328    .text.i2s_psc_config:00000036 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:377    .text.i2s_psc_config:0000007a .LVL31
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:383    .text.i2s_psc_config:0000007e .LVL32
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:386    .text.i2s_psc_config:00000082 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:455    .text.i2s_psc_config:000000b8 .LVL44
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:458    .text.i2s_psc_config:000000ba .LVL45
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:462    .text.i2s_psc_config:000000bc .LVL46
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:343    .text.i2s_psc_config:00000046 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:350    .text.i2s_psc_config:00000050 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:399    .text.i2s_psc_config:0000008c .LVL36
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:232    .text.i2s_init:00000000 .LVL19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:240    .text.i2s_init:00000002 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:249    .text.i2s_init:0000000a .LVL21
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:260    .text.i2s_init:00000018 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:129    .text.spi_init:00000000 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:137    .text.spi_init:00000002 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:146    .text.spi_init:0000000c .LVL12
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:158    .text.spi_init:00000012 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:170    .text.spi_init:00000026 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:177    .text.spi_init:0000002a .LVL15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:183    .text.spi_init:00000034 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:21     .text.spi_i2s_deinit:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:41     .text.spi_i2s_deinit:00000028 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:45     .text.spi_i2s_deinit:0000002a .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:61     .text.spi_i2s_deinit:0000003e .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:67     .text.spi_i2s_deinit:00000046 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:14     .text.spi_i2s_deinit:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:49     .text.spi_i2s_deinit:0000002e .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:71     .text.spi_i2s_deinit:0000004a .LVL4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:78     .text.spi_i2s_deinit:00000058 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:82     .text.spi_i2s_deinit:0000005c .LVL7
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1216   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:16     .text.spi_i2s_deinit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:18     .text.spi_i2s_deinit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:19     .text.spi_i2s_deinit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:23     .text.spi_i2s_deinit:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:25     .text.spi_i2s_deinit:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:28     .text.spi_i2s_deinit:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:36     .text.spi_i2s_deinit:00000024 .LM7
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 31
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:47     .text.spi_i2s_deinit:0000002a .LM8
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:50     .text.spi_i2s_deinit:0000002e .LM9
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:53     .text.spi_i2s_deinit:00000036 .LM10
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:56     .text.spi_i2s_deinit:0000003a .LM11
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:63     .text.spi_i2s_deinit:0000003e .LM12
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:69     .text.spi_i2s_deinit:00000046 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:72     .text.spi_i2s_deinit:0000004a .LM14
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:75     .text.spi_i2s_deinit:00000052 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:80     .text.spi_i2s_deinit:00000058 .LM16
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:83     .text.spi_i2s_deinit:0000005c .LM17
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:86     .text.spi_i2s_deinit:00000064 .LM18
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:99     .text.spi_struct_para_init:00000000 .LM19
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:101    .text.spi_struct_para_init:00000000 .LM20
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:102    .text.spi_struct_para_init:00000000 .LM21
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:104    .text.spi_struct_para_init:00000004 .LM22
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:105    .text.spi_struct_para_init:00000004 .LM23
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:107    .text.spi_struct_para_init:00000008 .LM24
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:108    .text.spi_struct_para_init:00000008 .LM25
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:110    .text.spi_struct_para_init:0000000c .LM26
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:111    .text.spi_struct_para_init:0000000c .LM27
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:113    .text.spi_struct_para_init:00000010 .LM28
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:114    .text.spi_struct_para_init:00000010 .LM29
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:116    .text.spi_struct_para_init:00000014 .LM30
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:117    .text.spi_struct_para_init:00000014 .LM31
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:119    .text.spi_struct_para_init:00000018 .LM32
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:131    .text.spi_init:00000000 .LM33
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:133    .text.spi_init:00000000 .LM34
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:134    .text.spi_init:00000000 .LM35
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:135    .text.spi_init:00000000 .LM36
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:138    .text.spi_init:00000002 .LM37
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:139    .text.spi_init:00000002 .LM38
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:142    .text.spi_init:00000008 .LM39
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:144    .text.spi_init:0000000a .LM40
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:147    .text.spi_init:0000000c .LM41
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:148    .text.spi_init:0000000c .LM42
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:149    .text.spi_init:0000000c .LM43
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:150    .text.spi_init:0000000c .LM44
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:151    .text.spi_init:0000000c .LM45
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:152    .text.spi_init:0000000c .LM46
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:153    .text.spi_init:0000000c .LM47
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:154    .text.spi_init:0000000c .LM48
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:159    .text.spi_init:00000012 .LM49
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:171    .text.spi_init:00000026 .LM50
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:172    .text.spi_init:00000026 .LM51
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:174    .text.spi_init:00000028 .LM52
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:175    .text.spi_init:00000028 .LM53
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:178    .text.spi_init:0000002a .LM54
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:184    .text.spi_init:00000034 .LM55
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:196    .text.spi_enable:00000000 .LM56
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:198    .text.spi_enable:00000000 .LM57
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:200    .text.spi_enable:00000002 .LM58
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:203    .text.spi_enable:00000008 .LM59
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:215    .text.spi_disable:00000000 .LM60
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:217    .text.spi_disable:00000000 .LM61
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:218    .text.spi_disable:00000000 .LM62
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:222    .text.spi_disable:00000008 .LM63
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:234    .text.i2s_init:00000000 .LM64
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 32
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:236    .text.i2s_init:00000000 .LM65
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:237    .text.i2s_init:00000000 .LM66
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:238    .text.i2s_init:00000000 .LM67
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:241    .text.i2s_init:00000002 .LM68
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:242    .text.i2s_init:00000002 .LM69
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:243    .text.i2s_init:00000002 .LM70
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:244    .text.i2s_init:00000002 .LM71
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:245    .text.i2s_init:00000002 .LM72
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:250    .text.i2s_init:0000000a .LM73
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:253    .text.i2s_init:0000000e .LM74
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:256    .text.i2s_init:00000012 .LM75
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:257    .text.i2s_init:00000012 .LM76
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:261    .text.i2s_init:00000018 .LM77
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:262    .text.i2s_init:00000018 .LM78
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:264    .text.i2s_init:0000001a .LM79
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:276    .text.i2s_psc_config:00000000 .LM80
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:278    .text.i2s_psc_config:00000000 .LM81
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:279    .text.i2s_psc_config:00000000 .LM82
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:280    .text.i2s_psc_config:00000000 .LM83
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:281    .text.i2s_psc_config:00000000 .LM84
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:282    .text.i2s_psc_config:00000000 .LM85
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:287    .text.i2s_psc_config:00000004 .LM86
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:289    .text.i2s_psc_config:00000006 .LM87
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:293    .text.i2s_psc_config:00000008 .LM88
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:295    .text.i2s_psc_config:0000000a .LM89
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:296    .text.i2s_psc_config:0000000a .LM90
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:298    .text.i2s_psc_config:0000000e .LM91
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:300    .text.i2s_psc_config:00000010 .LM92
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:302    .text.i2s_psc_config:00000014 .LM93
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:305    .text.i2s_psc_config:00000018 .LM94
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:310    .text.i2s_psc_config:00000020 .LM95
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:311    .text.i2s_psc_config:00000020 .LM96
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:315    .text.i2s_psc_config:0000002a .LM97
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:317    .text.i2s_psc_config:0000002c .LM98
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:319    .text.i2s_psc_config:0000002e .LM99
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:320    .text.i2s_psc_config:0000002e .LM100
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:322    .text.i2s_psc_config:00000030 .LM101
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:324    .text.i2s_psc_config:00000032 .LM102
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:326    .text.i2s_psc_config:00000034 .LM103
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:329    .text.i2s_psc_config:00000036 .LM104
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:330    .text.i2s_psc_config:00000036 .LM105
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:332    .text.i2s_psc_config:0000003a .LM106
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:334    .text.i2s_psc_config:0000003e .LM107
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:335    .text.i2s_psc_config:0000003e .LM108
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:339    .text.i2s_psc_config:00000040 .LM109
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:340    .text.i2s_psc_config:00000040 .LM110
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:344    .text.i2s_psc_config:00000046 .LM111
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:345    .text.i2s_psc_config:00000046 .LM112
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:348    .text.i2s_psc_config:0000004e .LM113
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:351    .text.i2s_psc_config:00000050 .LM114
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:353    .text.i2s_psc_config:00000052 .LM115
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:355    .text.i2s_psc_config:00000054 .LM116
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:358    .text.i2s_psc_config:0000005c .LM117
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:362    .text.i2s_psc_config:00000060 .LM118
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:363    .text.i2s_psc_config:00000060 .LM119
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:367    .text.i2s_psc_config:0000006a .LM120
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:368    .text.i2s_psc_config:0000006a .LM121
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 33
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:371    .text.i2s_psc_config:0000006e .LM122
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:373    .text.i2s_psc_config:00000072 .LM123
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:375    .text.i2s_psc_config:00000076 .LM124
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:378    .text.i2s_psc_config:0000007a .LM125
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:379    .text.i2s_psc_config:0000007a .LM126
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:381    .text.i2s_psc_config:0000007c .LM127
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:384    .text.i2s_psc_config:0000007e .LM128
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:387    .text.i2s_psc_config:00000082 .LM129
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:388    .text.i2s_psc_config:00000082 .LM130
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:391    .text.i2s_psc_config:00000086 .LM131
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:392    .text.i2s_psc_config:00000086 .LM132
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:395    .text.i2s_psc_config:00000088 .LM133
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:396    .text.i2s_psc_config:00000088 .LM134
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:397    .text.i2s_psc_config:00000088 .LM135
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:400    .text.i2s_psc_config:0000008c .LM136
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:403    .text.i2s_psc_config:0000008e .LM137
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:405    .text.i2s_psc_config:00000092 .LM138
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:408    .text.i2s_psc_config:00000094 .LM139
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:412    .text.i2s_psc_config:00000096 .LM140
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:413    .text.i2s_psc_config:00000096 .LM141
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:416    .text.i2s_psc_config:00000098 .LM142
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:418    .text.i2s_psc_config:0000009a .LM143
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:420    .text.i2s_psc_config:0000009c .LM144
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:421    .text.i2s_psc_config:0000009c .LM145
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:424    .text.i2s_psc_config:0000009e .LM146
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:428    .text.i2s_psc_config:000000a0 .LM147
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:431    .text.i2s_psc_config:000000a4 .LM148
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:433    .text.i2s_psc_config:000000a6 .LM149
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:436    .text.i2s_psc_config:000000aa .LM150
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:440    .text.i2s_psc_config:000000ac .LM151
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:449    .text.i2s_psc_config:000000b0 .LM152
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:450    .text.i2s_psc_config:000000b0 .LM153
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:453    .text.i2s_psc_config:000000b6 .LM154
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:456    .text.i2s_psc_config:000000b8 .LM155
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:460    .text.i2s_psc_config:000000ba .LM156
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:463    .text.i2s_psc_config:000000bc .LM157
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:467    .text.i2s_psc_config:000000c2 .LM158
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:468    .text.i2s_psc_config:000000c2 .LM159
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:471    .text.i2s_psc_config:000000ca .LM160
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:478    .text.i2s_psc_config:000000d2 .LM161
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:479    .text.i2s_psc_config:000000d2 .LM162
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:481    .text.i2s_psc_config:000000d6 .LM163
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:483    .text.i2s_psc_config:000000d8 .LM164
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:484    .text.i2s_psc_config:000000d8 .LM165
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:497    .text.i2s_enable:00000000 .LM166
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:499    .text.i2s_enable:00000000 .LM167
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:501    .text.i2s_enable:00000002 .LM168
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:504    .text.i2s_enable:00000008 .LM169
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:516    .text.i2s_disable:00000000 .LM170
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:518    .text.i2s_disable:00000000 .LM171
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:519    .text.i2s_disable:00000000 .LM172
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:523    .text.i2s_disable:00000008 .LM173
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:535    .text.spi_nss_output_enable:00000000 .LM174
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:537    .text.spi_nss_output_enable:00000000 .LM175
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:539    .text.spi_nss_output_enable:00000002 .LM176
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:542    .text.spi_nss_output_enable:00000008 .LM177
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:554    .text.spi_nss_output_disable:00000000 .LM178
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:556    .text.spi_nss_output_disable:00000000 .LM179
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:557    .text.spi_nss_output_disable:00000000 .LM180
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:561    .text.spi_nss_output_disable:00000006 .LM181
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:573    .text.spi_nss_internal_high:00000000 .LM182
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:575    .text.spi_nss_internal_high:00000000 .LM183
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:577    .text.spi_nss_internal_high:00000002 .LM184
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:580    .text.spi_nss_internal_high:00000008 .LM185
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:592    .text.spi_nss_internal_low:00000000 .LM186
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:594    .text.spi_nss_internal_low:00000000 .LM187
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:595    .text.spi_nss_internal_low:00000000 .LM188
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:599    .text.spi_nss_internal_low:00000008 .LM189
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:611    .text.spi_dma_enable:00000000 .LM190
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:613    .text.spi_dma_enable:00000000 .LM191
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:614    .text.spi_dma_enable:00000000 .LM192
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:616    .text.spi_dma_enable:00000002 .LM193
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:618    .text.spi_dma_enable:00000004 .LM194
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:619    .text.spi_dma_enable:00000004 .LM195
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:622    .text.spi_dma_enable:00000008 .LM196
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:624    .text.spi_dma_enable:0000000a .LM197
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:627    .text.spi_dma_enable:0000000c .LM198
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:628    .text.spi_dma_enable:0000000c .LM199
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:641    .text.spi_dma_disable:00000000 .LM200
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:643    .text.spi_dma_disable:00000000 .LM201
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:644    .text.spi_dma_disable:00000000 .LM202
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:646    .text.spi_dma_disable:00000002 .LM203
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:648    .text.spi_dma_disable:00000004 .LM204
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:649    .text.spi_dma_disable:00000004 .LM205
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:652    .text.spi_dma_disable:00000006 .LM206
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:654    .text.spi_dma_disable:00000008 .LM207
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:657    .text.spi_dma_disable:0000000a .LM208
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:658    .text.spi_dma_disable:0000000a .LM209
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:671    .text.spi_i2s_data_frame_format_config:00000000 .LM210
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:673    .text.spi_i2s_data_frame_format_config:00000000 .LM211
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:674    .text.spi_i2s_data_frame_format_config:00000000 .LM212
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:680    .text.spi_i2s_data_frame_format_config:0000000c .LM213
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:682    .text.spi_i2s_data_frame_format_config:0000000e .LM214
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:685    .text.spi_i2s_data_frame_format_config:00000010 .LM215
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:687    .text.spi_i2s_data_frame_format_config:00000012 .LM216
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:699    .text.spi_i2s_data_transmit:00000000 .LM217
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:701    .text.spi_i2s_data_transmit:00000000 .LM218
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:702    .text.spi_i2s_data_transmit:00000000 .LM219
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:704    .text.spi_i2s_data_transmit:00000002 .LM220
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:716    .text.spi_i2s_data_receive:00000000 .LM221
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:718    .text.spi_i2s_data_receive:00000000 .LM222
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:719    .text.spi_i2s_data_receive:00000000 .LM223
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:722    .text.spi_i2s_data_receive:00000002 .LM224
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:736    .text.spi_bidirectional_transfer_config:00000000 .LM225
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:738    .text.spi_bidirectional_transfer_config:00000000 .LM226
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:739    .text.spi_bidirectional_transfer_config:00000000 .LM227
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:742    .text.spi_bidirectional_transfer_config:00000006 .LM228
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:744    .text.spi_bidirectional_transfer_config:00000008 .LM229
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:747    .text.spi_bidirectional_transfer_config:0000000a .LM230
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:749    .text.spi_bidirectional_transfer_config:0000000c .LM231
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:752    .text.spi_bidirectional_transfer_config:0000000e .LM232
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:753    .text.spi_bidirectional_transfer_config:0000000e .LM233
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:769    .text.spi_crc_polynomial_set:00000000 .LM234
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:771    .text.spi_crc_polynomial_set:00000000 .LM235
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:773    .text.spi_crc_polynomial_set:00000002 .LM236
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:777    .text.spi_crc_polynomial_set:00000008 .LM237
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:778    .text.spi_crc_polynomial_set:00000008 .LM238
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:780    .text.spi_crc_polynomial_set:0000000a .LM239
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:792    .text.spi_crc_polynomial_get:00000000 .LM240
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:794    .text.spi_crc_polynomial_get:00000000 .LM241
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:795    .text.spi_crc_polynomial_get:00000000 .LM242
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:798    .text.spi_crc_polynomial_get:00000002 .LM243
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:812    .text.spi_crc_on:00000000 .LM244
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:814    .text.spi_crc_on:00000000 .LM245
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:816    .text.spi_crc_on:00000002 .LM246
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:820    .text.spi_crc_on:00000008 .LM247
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:832    .text.spi_crc_off:00000000 .LM248
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:834    .text.spi_crc_off:00000000 .LM249
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:835    .text.spi_crc_off:00000000 .LM250
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:841    .text.spi_crc_off:0000000a .LM251
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:853    .text.spi_crc_next:00000000 .LM252
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:855    .text.spi_crc_next:00000000 .LM253
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:857    .text.spi_crc_next:00000002 .LM254
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:861    .text.spi_crc_next:00000008 .LM255
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:873    .text.spi_crc_get:00000000 .LM256
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:875    .text.spi_crc_get:00000000 .LM257
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:876    .text.spi_crc_get:00000000 .LM258
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:878    .text.spi_crc_get:00000002 .LM259
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:879    .text.spi_crc_get:00000002 .LM260
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:883    .text.spi_crc_get:00000004 .LM261
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:889    .text.spi_crc_get:0000000a .LM262
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:890    .text.spi_crc_get:0000000a .LM263
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:893    .text.spi_crc_get:0000000c .LM264
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:905    .text.spi_ti_mode_enable:00000000 .LM265
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:907    .text.spi_ti_mode_enable:00000000 .LM266
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:909    .text.spi_ti_mode_enable:00000002 .LM267
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:912    .text.spi_ti_mode_enable:00000008 .LM268
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:924    .text.spi_ti_mode_disable:00000000 .LM269
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:926    .text.spi_ti_mode_disable:00000000 .LM270
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:927    .text.spi_ti_mode_disable:00000000 .LM271
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:931    .text.spi_ti_mode_disable:00000006 .LM272
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:943    .text.spi_nssp_mode_enable:00000000 .LM273
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:945    .text.spi_nssp_mode_enable:00000000 .LM274
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:947    .text.spi_nssp_mode_enable:00000002 .LM275
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:950    .text.spi_nssp_mode_enable:00000008 .LM276
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:962    .text.spi_nssp_mode_disable:00000000 .LM277
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:964    .text.spi_nssp_mode_disable:00000000 .LM278
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:965    .text.spi_nssp_mode_disable:00000000 .LM279
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:969    .text.spi_nssp_mode_disable:00000006 .LM280
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:981    .text.spi_i2s_interrupt_enable:00000000 .LM281
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:983    .text.spi_i2s_interrupt_enable:00000000 .LM282
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:989    .text.spi_i2s_interrupt_enable:0000000e .LM283
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:991    .text.spi_i2s_interrupt_enable:00000010 .LM284
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:994    .text.spi_i2s_interrupt_enable:00000014 .LM285
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:996    .text.spi_i2s_interrupt_enable:00000016 .LM286
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:998    .text.spi_i2s_interrupt_enable:00000016 .LM287
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1001   .text.spi_i2s_interrupt_enable:00000018 .LM288
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1003   .text.spi_i2s_interrupt_enable:0000001a .LM289
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1007   .text.spi_i2s_interrupt_enable:00000020 .LM290
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1009   .text.spi_i2s_interrupt_enable:00000022 .LM291
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1022   .text.spi_i2s_interrupt_disable:00000000 .LM292
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1024   .text.spi_i2s_interrupt_disable:00000000 .LM293
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1030   .text.spi_i2s_interrupt_disable:0000000e .LM294
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1031   .text.spi_i2s_interrupt_disable:0000000e .LM295
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1035   .text.spi_i2s_interrupt_disable:00000014 .LM296
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1037   .text.spi_i2s_interrupt_disable:00000016 .LM297
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1039   .text.spi_i2s_interrupt_disable:00000016 .LM298
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1042   .text.spi_i2s_interrupt_disable:00000018 .LM299
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1043   .text.spi_i2s_interrupt_disable:00000018 .LM300
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1048   .text.spi_i2s_interrupt_disable:00000020 .LM301
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1049   .text.spi_i2s_interrupt_disable:00000020 .LM302
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1063   .text.spi_i2s_interrupt_flag_get:00000000 .LM303
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1065   .text.spi_i2s_interrupt_flag_get:00000000 .LM304
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1066   .text.spi_i2s_interrupt_flag_get:00000000 .LM305
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1069   .text.spi_i2s_interrupt_flag_get:00000002 .LM306
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1070   .text.spi_i2s_interrupt_flag_get:00000002 .LM307
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1073   .text.spi_i2s_interrupt_flag_get:00000004 .LM308
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1079   .text.spi_i2s_interrupt_flag_get:00000014 .LM309
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1097   .text.spi_i2s_interrupt_flag_get:0000001c .LM310
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1098   .text.spi_i2s_interrupt_flag_get:0000001c .LM311
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1101   .text.spi_i2s_interrupt_flag_get:0000001e .LM312
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1102   .text.spi_i2s_interrupt_flag_get:0000001e .LM313
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1105   .text.spi_i2s_interrupt_flag_get:00000022 .LM314
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1107   .text.spi_i2s_interrupt_flag_get:00000022 .LM315
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1108   .text.spi_i2s_interrupt_flag_get:00000022 .LM316
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1111   .text.spi_i2s_interrupt_flag_get:00000026 .LM317
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1114   .text.spi_i2s_interrupt_flag_get:0000002a .LM318
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1119   .text.spi_i2s_interrupt_flag_get:0000002e .LM319
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1120   .text.spi_i2s_interrupt_flag_get:0000002e .LM320
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1123   .text.spi_i2s_interrupt_flag_get:00000030 .LM321
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1124   .text.spi_i2s_interrupt_flag_get:00000030 .LM322
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1127   .text.spi_i2s_interrupt_flag_get:00000034 .LM323
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1130   .text.spi_i2s_interrupt_flag_get:00000036 .LM324
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1131   .text.spi_i2s_interrupt_flag_get:00000036 .LM325
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1134   .text.spi_i2s_interrupt_flag_get:0000003a .LM326
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1136   .text.spi_i2s_interrupt_flag_get:0000003a .LM327
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1137   .text.spi_i2s_interrupt_flag_get:0000003a .LM328
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1140   .text.spi_i2s_interrupt_flag_get:0000003e .LM329
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1143   .text.spi_i2s_interrupt_flag_get:00000040 .LM330
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1144   .text.spi_i2s_interrupt_flag_get:00000040 .LM331
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1147   .text.spi_i2s_interrupt_flag_get:00000044 .LM332
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1150   .text.spi_i2s_interrupt_flag_get:00000046 .LM333
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1151   .text.spi_i2s_interrupt_flag_get:00000046 .LM334
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1154   .text.spi_i2s_interrupt_flag_get:00000048 .LM335
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1157   .text.spi_i2s_interrupt_flag_get:0000004a .LM336
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1158   .text.spi_i2s_interrupt_flag_get:0000004a .LM337
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1161   .text.spi_i2s_interrupt_flag_get:0000004c .LM338
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1164   .text.spi_i2s_interrupt_flag_get:0000004e .LM339
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1165   .text.spi_i2s_interrupt_flag_get:0000004e .LM340
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1168   .text.spi_i2s_interrupt_flag_get:00000052 .LM341
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1180   .text.spi_i2s_flag_get:00000000 .LM342
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1182   .text.spi_i2s_flag_get:00000000 .LM343
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1183   .text.spi_i2s_flag_get:00000000 .LM344
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1186   .text.spi_i2s_flag_get:00000002 .LM345
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1188   .text.spi_i2s_flag_get:00000004 .LM346
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1201   .text.spi_crc_error_clear:00000000 .LM347
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1203   .text.spi_crc_error_clear:00000000 .LM348
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1204   .text.spi_crc_error_clear:00000000 .LM349
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3q7iUS.s:1208   .text.spi_crc_error_clear:00000006 .LM350
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable
+rcu_clock_freq_get

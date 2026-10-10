@@ -1,0 +1,134 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s 			page 1
+
+
+   1              		.file	"scanf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.scanf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	scanf_s
+  13              	scanf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22 0000 3971     		addi	sp,sp,-64
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 64
+  25 0002 2ED2     		sw	a1,36(sp)
+  26              	.LM6:
+  27 0004 4C10     		addi	a1,sp,36
+  28              	.LM7:
+  29 0006 06CE     		sw	ra,28(sp)
+  30              		.cfi_offset 1, -36
+  31              	.LM8:
+  32 0008 32D4     		sw	a2,40(sp)
+  33 000a 36D6     		sw	a3,44(sp)
+  34 000c 3AD8     		sw	a4,48(sp)
+  35 000e 3EDA     		sw	a5,52(sp)
+  36 0010 42DC     		sw	a6,56(sp)
+  37 0012 46DE     		sw	a7,60(sp)
+  38              	.LM9:
+  39 0014 2EC6     		sw	a1,12(sp)
+  40              	.LM10:
+  41              	.LM11:
+  42 0016 97000000 		call	vscanf_s
+  42      E7800000 
+  43              	.LVL1:
+  44              	.LM12:
+  45              	.LM13:
+  46              	.LM14:
+  47              	.LM15:
+  48 001e F240     		lw	ra,28(sp)
+  49              		.cfi_restore 1
+  50 0020 2161     		addi	sp,sp,64
+  51              	.LCFI1:
+  52              		.cfi_def_cfa_offset 0
+  53 0022 8280     		jr	ra
+  54              		.cfi_endproc
+  55              	.LFE4:
+  57              		.text
+  58              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s 			page 2
+
+
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 scanf_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:10     .text.scanf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:13     .text.scanf_s:00000000 scanf_s
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:17     .text.scanf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:24     .text.scanf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:30     .text.scanf_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:49     .text.scanf_s:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:52     .text.scanf_s:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:54     .text.scanf_s:00000024 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:221    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:666    .debug_str:00000029 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:678    .debug_str:00000139 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:690    .debug_str:000001ab .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:509    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:515    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:672    .debug_str:00000114 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:662    .debug_str:0000000e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:688    .debug_str:0000019f .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:664    .debug_str:0000001b .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:698    .debug_str:000001de .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:686    .debug_str:0000018c .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:676    .debug_str:00000130 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:670    .debug_str:00000102 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:660    .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:696    .debug_str:000001d2 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:694    .debug_str:000001c3 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:668    .debug_str:000000f0 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:680    .debug_str:00000175 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:674    .debug_str:0000012b .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:700    .debug_str:000001e8 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:684    .debug_str:00000184 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:15     .text.scanf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:55     .text.scanf_s:00000024 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:443    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:682    .debug_str:0000017d .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:466    .debug_loc:00000031 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:461    .debug_loc:0000002d .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:489    .debug_loc:0000005a .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:486    .debug_loc:00000058 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:692    .debug_str:000001bb .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:43     .text.scanf_s:0000001e .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:23     .text.scanf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:51     .text.scanf_s:00000022 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:14     .text.scanf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:60     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:16     .text.scanf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:18     .text.scanf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:19     .text.scanf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:20     .text.scanf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:21     .text.scanf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:26     .text.scanf_s:00000004 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:28     .text.scanf_s:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:31     .text.scanf_s:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:38     .text.scanf_s:00000014 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:40     .text.scanf_s:00000016 .LM10
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:41     .text.scanf_s:00000016 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:44     .text.scanf_s:0000001e .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:45     .text.scanf_s:0000001e .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:46     .text.scanf_s:0000001e .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccCxQ6a1.s:47     .text.scanf_s:0000001e .LM15
+
+UNDEFINED SYMBOLS
+vscanf_s

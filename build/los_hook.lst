@@ -1,0 +1,39 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s 			page 1
+
+
+   1              		.file	"los_hook.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 los_hook.c
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:80     .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:175    .debug_str:0000001b .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:197    .debug_str:00000169 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:195    .debug_str:00000159 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:130    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:181    .debug_str:0000010b .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:189    .debug_str:0000012e .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:173    .debug_str:0000000e .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:191    .debug_str:00000141 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:201    .debug_str:0000018a .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:199    .debug_str:00000184 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:187    .debug_str:00000127 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:183    .debug_str:00000119 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:179    .debug_str:000000f4 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:171    .debug_str:00000000 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:193    .debug_str:0000014d .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:185    .debug_str:0000011e .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:177    .debug_str:000000e2 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:11     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccIOagvD.s:9      .text:00000000 .Letext0
+
+NO UNDEFINED SYMBOLS

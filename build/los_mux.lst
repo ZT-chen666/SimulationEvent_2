@@ -1,0 +1,2049 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 1
+
+
+   1              		.file	"los_mux.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.OsMuxInit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	OsMuxInit
+  13              	OsMuxInit:
+  14              	.LFB162:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18              	.LVL0:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LBB24:
+  22              	.LBI24:
+  23              	.LM5:
+  24              	.LBB25:
+  25              	.LM6:
+  26              	.LBE25:
+  27              	.LBE24:
+  28              	.LM7:
+  29 0000 17050000 		lw	a0,m_aucSysMem0
+  29      03250500 
+  30              	.LM8:
+  31 0008 4111     		addi	sp,sp,-16
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 16
+  34 000a 22C4     		sw	s0,8(sp)
+  35 000c 06C6     		sw	ra,12(sp)
+  36              		.cfi_offset 8, -8
+  37              		.cfi_offset 1, -4
+  38              	.LBB28:
+  39              	.LBB26:
+  40              	.LM9:
+  41 000e 17040000 		lla	s0,g_unusedMuxList
+  41      13040400 
+  42              	.LBE26:
+  43              	.LBE28:
+  44              	.LM10:
+  45 0016 9305000F 		li	a1,240
+  46              	.LBB29:
+  47              	.LBB27:
+  48              	.LM11:
+  49 001a 40C0     		sw	s0,4(s0)
+  50              	.LM12:
+  51              	.LM13:
+  52 001c 00C0     		sw	s0,0(s0)
+  53              	.LVL1:
+  54              	.LM14:
+  55              	.LBE27:
+  56              	.LBE29:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 2
+
+
+  57              	.LM15:
+  58              	.LM16:
+  59              	.LM17:
+  60 001e 97000000 		call	LOS_MemAlloc
+  60      E7800000 
+  61              	.LVL2:
+  62              	.LM18:
+  63 0026 97070000 		sw	a0,g_allMux,a5
+  63      23A0A700 
+  64              	.LM19:
+  65              	.LM20:
+  66 002e 05C9     		beq	a0,zero,.L6
+  67 0030 2105     		addi	a0,a0,8
+  68              	.LM21:
+  69 0032 8147     		li	a5,0
+  70              	.LM22:
+  71 0034 2946     		li	a2,10
+  72              	.LVL3:
+  73              	.L3:
+  74              	.LM23:
+  75              	.LM24:
+  76              	.LM25:
+  77 0036 230C05FE 		sb	zero,-8(a0)
+  78              	.LBB30:
+  79              	.LBB31:
+  80              	.LM26:
+  81 003a 1840     		lw	a4,0(s0)
+  82              	.LBE31:
+  83              	.LBE30:
+  84              	.LM27:
+  85 003c 232EF5FE 		sw	a5,-4(a0)
+  86              	.LM28:
+  87              	.LM29:
+  88              	.LVL4:
+  89              	.LBB38:
+  90              	.LBI30:
+  91              	.LM30:
+  92              	.LBB36:
+  93              	.LM31:
+  94              	.LBB32:
+  95              	.LBI32:
+  96              	.LM32:
+  97              	.LBB33:
+  98              	.LM33:
+  99              	.LBE33:
+ 100              	.LBE32:
+ 101              	.LBE36:
+ 102              	.LBE38:
+ 103              	.LM34:
+ 104 0040 8507     		addi	a5,a5,1
+ 105              	.LVL5:
+ 106              	.LBB39:
+ 107              	.LBB37:
+ 108              	.LBB35:
+ 109              	.LBB34:
+ 110              	.LM35:
+ 111 0042 5443     		lw	a3,4(a4)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 3
+
+
+ 112              	.LM36:
+ 113 0044 18C1     		sw	a4,0(a0)
+ 114              	.LM37:
+ 115 0046 54C1     		sw	a3,4(a0)
+ 116              	.LM38:
+ 117              	.LM39:
+ 118              	.LM40:
+ 119 0048 88C2     		sw	a0,0(a3)
+ 120              	.LM41:
+ 121              	.LM42:
+ 122 004a 48C3     		sw	a0,4(a4)
+ 123              	.LVL6:
+ 124              	.LM43:
+ 125              	.LBE34:
+ 126              	.LBE35:
+ 127              	.LBE37:
+ 128              	.LBE39:
+ 129              	.LM44:
+ 130              	.LM45:
+ 131 004c 6105     		addi	a0,a0,24
+ 132              	.LVL7:
+ 133              	.LM46:
+ 134 004e E394C7FE 		bne	a5,a2,.L3
+ 135              	.LM47:
+ 136 0052 8147     		li	a5,0
+ 137              	.LVL8:
+ 138              	.L1:
+ 139              	.LM48:
+ 140 0054 B240     		lw	ra,12(sp)
+ 141              		.cfi_remember_state
+ 142              		.cfi_restore 1
+ 143 0056 2244     		lw	s0,8(sp)
+ 144              		.cfi_restore 8
+ 145 0058 3E85     		mv	a0,a5
+ 146 005a 4101     		addi	sp,sp,16
+ 147              	.LCFI1:
+ 148              		.cfi_def_cfa_offset 0
+ 149 005c 8280     		jr	ra
+ 150              	.LVL9:
+ 151              	.L6:
+ 152              	.LCFI2:
+ 153              		.cfi_restore_state
+ 154              	.LM49:
+ 155 005e B7270002 		li	a5,33562624
+ 156 0062 938707D0 		addi	a5,a5,-768
+ 157 0066 FDB7     		j	.L1
+ 158              		.cfi_endproc
+ 159              	.LFE162:
+ 161              		.section	.rodata.LOS_MuxCreate.str1.4,"aMS",@progbits,1
+ 162              		.align	2
+ 163              	.LC0:
+ 164 0000 6F735F75 		.string	"os_unspecific_file"
+ 164      6E737065 
+ 164      63696669 
+ 164      635F6669 
+ 164      6C6500
+ 165              		.section	.text.LOS_MuxCreate,"ax",@progbits
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 4
+
+
+ 166              		.align	1
+ 167              		.globl	LOS_MuxCreate
+ 169              	LOS_MuxCreate:
+ 170              	.LVL10:
+ 171              	.LFB163:
+ 172              	.LM50:
+ 173              		.cfi_startproc
+ 174              	.LM51:
+ 175              	.LM52:
+ 176              	.LM53:
+ 177              	.LM54:
+ 178              	.LM55:
+ 179              	.LM56:
+ 180              	.LM57:
+ 181 0000 51C5     		beq	a0,zero,.L11
+ 182              	.LM58:
+ 183 0002 4111     		addi	sp,sp,-16
+ 184              	.LCFI3:
+ 185              		.cfi_def_cfa_offset 16
+ 186 0004 22C4     		sw	s0,8(sp)
+ 187 0006 06C6     		sw	ra,12(sp)
+ 188              		.cfi_offset 8, -8
+ 189              		.cfi_offset 1, -4
+ 190 0008 2A84     		mv	s0,a0
+ 191              	.LM59:
+ 192              	.LM60:
+ 193 000a 97000000 		call	HalIntLock
+ 193      E7800000 
+ 194              	.LVL11:
+ 195              	.LM61:
+ 196              	.LBB46:
+ 197              	.LBI46:
+ 198              	.LM62:
+ 199              	.LBB47:
+ 200              	.LM63:
+ 201              	.LM64:
+ 202 0012 17070000 		lla	a4,g_unusedMuxList
+ 202      13070700 
+ 203 001a 5C43     		lw	a5,4(a4)
+ 204              	.LVL12:
+ 205              	.LM65:
+ 206              	.LBE47:
+ 207              	.LBE46:
+ 208              	.LM66:
+ 209 001c 6390E704 		bne	a5,a4,.L10
+ 210              	.LM67:
+ 211 0020 97000000 		call	HalIntRestore
+ 211      E7800000 
+ 212              	.LVL13:
+ 213              	.LM68:
+ 214              	.LM69:
+ 215              	.LM70:
+ 216              	.LM71:
+ 217              	.LDL1:
+ 218              	.LM72:
+ 219              	.LM73:
+ 220 0028 37260002 		li	a2,33562624
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 5
+
+
+ 221 002c B7C5B2A1 		li	a1,-1582120960
+ 222 0030 0147     		li	a4,0
+ 223 0032 8146     		li	a3,0
+ 224 0034 130636D0 		addi	a2,a2,-765
+ 225 0038 9385853F 		addi	a1,a1,1016
+ 226 003c 17050000 		lla	a0,.LC0
+ 226      13050500 
+ 227 0044 97000000 		call	LOS_ErrHandle
+ 227      E7800000 
+ 228              	.LVL14:
+ 229              	.LM74:
+ 230 004c 37250002 		li	a0,33562624
+ 231 0050 130535D0 		addi	a0,a0,-765
+ 232              	.LVL15:
+ 233              	.L8:
+ 234              	.LM75:
+ 235 0054 B240     		lw	ra,12(sp)
+ 236              		.cfi_remember_state
+ 237              		.cfi_restore 1
+ 238 0056 2244     		lw	s0,8(sp)
+ 239              		.cfi_restore 8
+ 240              	.LVL16:
+ 241              	.LM76:
+ 242 0058 4101     		addi	sp,sp,16
+ 243              	.LCFI4:
+ 244              		.cfi_def_cfa_offset 0
+ 245 005a 8280     		jr	ra
+ 246              	.LVL17:
+ 247              	.L10:
+ 248              	.LCFI5:
+ 249              		.cfi_restore_state
+ 250              	.LM77:
+ 251              	.LM78:
+ 252              	.LM79:
+ 253              	.LBB48:
+ 254              	.LBI48:
+ 255              	.LM80:
+ 256              	.LBB49:
+ 257              	.LM81:
+ 258              	.LM82:
+ 259 005c 9843     		lw	a4,0(a5)
+ 260              	.LM83:
+ 261 005e D443     		lw	a3,4(a5)
+ 262              	.LM84:
+ 263 0060 98C2     		sw	a4,0(a3)
+ 264              	.LM85:
+ 265              	.LM86:
+ 266 0062 54C3     		sw	a3,4(a4)
+ 267              	.LM87:
+ 268              	.LM88:
+ 269              	.LVL18:
+ 270              	.LM89:
+ 271              	.LBE49:
+ 272              	.LBE48:
+ 273              	.LM90:
+ 274              	.LM91:
+ 275              	.LM92:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 6
+
+
+ 276 0064 0547     		li	a4,1
+ 277              	.LM93:
+ 278 0066 239D07FE 		sh	zero,-6(a5)
+ 279              	.LM94:
+ 280              	.LM95:
+ 281 006a 238CE7FE 		sb	a4,-8(a5)
+ 282              	.LM96:
+ 283              	.LM97:
+ 284 006e 23960700 		sh	zero,12(a5)
+ 285              	.LM98:
+ 286              	.LM99:
+ 287 0072 23A40700 		sw	zero,8(a5)
+ 288              	.LM100:
+ 289              	.LVL19:
+ 290              	.LBB50:
+ 291              	.LBI50:
+ 292              	.LM101:
+ 293              	.LBB51:
+ 294              	.LM102:
+ 295              	.LM103:
+ 296 0076 DCC3     		sw	a5,4(a5)
+ 297              	.LM104:
+ 298              	.LM105:
+ 299 0078 9CC3     		sw	a5,0(a5)
+ 300              	.LVL20:
+ 301              	.LM106:
+ 302              	.LBE51:
+ 303              	.LBE50:
+ 304              	.LM107:
+ 305              	.LM108:
+ 306 007a 83A7C7FF 		lw	a5,-4(a5)
+ 307              	.LVL21:
+ 308              	.LM109:
+ 309 007e 1CC0     		sw	a5,0(s0)
+ 310              	.LM110:
+ 311 0080 97000000 		call	HalIntRestore
+ 311      E7800000 
+ 312              	.LVL22:
+ 313              	.LM111:
+ 314              	.LM112:
+ 315              	.LM113:
+ 316 0088 0145     		li	a0,0
+ 317 008a E9B7     		j	.L8
+ 318              	.LVL23:
+ 319              	.L11:
+ 320              	.LCFI6:
+ 321              		.cfi_def_cfa_offset 0
+ 322              		.cfi_restore 1
+ 323              		.cfi_restore 8
+ 324              	.LM114:
+ 325 008c 37250002 		li	a0,33562624
+ 326              	.LVL24:
+ 327              	.LM115:
+ 328 0090 130525D0 		addi	a0,a0,-766
+ 329              	.LM116:
+ 330              	.LM117:
+ 331 0094 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 7
+
+
+ 332              		.cfi_endproc
+ 333              	.LFE163:
+ 335              		.section	.text.LOS_MuxDelete,"ax",@progbits
+ 336              		.align	1
+ 337              		.globl	LOS_MuxDelete
+ 339              	LOS_MuxDelete:
+ 340              	.LVL25:
+ 341              	.LFB164:
+ 342              	.LM118:
+ 343              		.cfi_startproc
+ 344              	.LM119:
+ 345              	.LM120:
+ 346              	.LM121:
+ 347              	.LM122:
+ 348              	.LM123:
+ 349              	.LM124:
+ 350 0000 4111     		addi	sp,sp,-16
+ 351              	.LCFI7:
+ 352              		.cfi_def_cfa_offset 16
+ 353 0002 06C6     		sw	ra,12(sp)
+ 354 0004 22C4     		sw	s0,8(sp)
+ 355              		.cfi_offset 1, -4
+ 356              		.cfi_offset 8, -8
+ 357              	.LM125:
+ 358 0006 A547     		li	a5,9
+ 359 0008 63E6A702 		bgtu	a0,a5,.L17
+ 360              	.LM126:
+ 361              	.LM127:
+ 362              	.LM128:
+ 363 000c E147     		li	a5,24
+ 364 000e 3305F502 		mul	a0,a0,a5
+ 365              	.LVL26:
+ 366              	.LM129:
+ 367 0012 17040000 		lw	s0,g_allMux
+ 367      03240400 
+ 368 001a 2A94     		add	s0,s0,a0
+ 369              	.LVL27:
+ 370              	.LM130:
+ 371              	.LM131:
+ 372 001c 97000000 		call	HalIntLock
+ 372      E7800000 
+ 373              	.LVL28:
+ 374              	.LM132:
+ 375 0024 03470400 		lbu	a4,0(s0)
+ 376              	.LM133:
+ 377 0028 AA87     		mv	a5,a0
+ 378              	.LVL29:
+ 379              	.LM134:
+ 380              	.LM135:
+ 381 002a 11EB     		bne	a4,zero,.L18
+ 382              	.LM136:
+ 383 002c 97000000 		call	HalIntRestore
+ 383      E7800000 
+ 384              	.LVL30:
+ 385              	.LM137:
+ 386              	.LM138:
+ 387              	.LM139:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 8
+
+
+ 388              	.LM140:
+ 389              	.L17:
+ 390              	.LM141:
+ 391 0034 37240002 		li	s0,33562624
+ 392 0038 130414D0 		addi	s0,s0,-767
+ 393 003c 15A0     		j	.L21
+ 394              	.LVL31:
+ 395              	.L18:
+ 396              	.LM142:
+ 397              	.LM143:
+ 398              	.LM144:
+ 399 003e 5444     		lw	a3,12(s0)
+ 400              	.LM145:
+ 401 0040 13078400 		addi	a4,s0,8
+ 402              	.LVL32:
+ 403              	.LBB52:
+ 404              	.LBI52:
+ 405              	.LM146:
+ 406              	.LBB53:
+ 407              	.LM147:
+ 408              	.LM148:
+ 409              	.LBE53:
+ 410              	.LBE52:
+ 411              	.LM149:
+ 412 0044 6315D700 		bne	a4,a3,.L19
+ 413              	.LM150:
+ 414 0048 83562400 		lhu	a3,2(s0)
+ 415 004c 95CA     		beq	a3,zero,.L20
+ 416              	.L19:
+ 417              	.LM151:
+ 418 004e 3E85     		mv	a0,a5
+ 419              	.LVL33:
+ 420              	.LM152:
+ 421 0050 37240002 		li	s0,33562624
+ 422              	.LVL34:
+ 423              	.LM153:
+ 424 0054 97000000 		call	HalIntRestore
+ 424      E7800000 
+ 425              	.LVL35:
+ 426              	.LM154:
+ 427              	.LM155:
+ 428              	.LM156:
+ 429              	.LM157:
+ 430 005c 130494D0 		addi	s0,s0,-759
+ 431              	.LVL36:
+ 432              	.L21:
+ 433              	.LM158:
+ 434              	.LM159:
+ 435 0060 B7C5B2A1 		li	a1,-1582120960
+ 436 0064 0147     		li	a4,0
+ 437 0066 8146     		li	a3,0
+ 438 0068 2286     		mv	a2,s0
+ 439 006a 9385853F 		addi	a1,a1,1016
+ 440 006e 17050000 		lla	a0,.LC0
+ 440      13050500 
+ 441 0076 97000000 		call	LOS_ErrHandle
+ 441      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 9
+
+
+ 442              	.LVL37:
+ 443              	.LM160:
+ 444              	.LM161:
+ 445 007e 0DA0     		j	.L16
+ 446              	.LVL38:
+ 447              	.L20:
+ 448              	.LM162:
+ 449              	.LM163:
+ 450              	.LBB54:
+ 451              	.LBI54:
+ 452              	.LM164:
+ 453              	.LBB55:
+ 454              	.LM165:
+ 455              	.LM166:
+ 456 0080 97070000 		lla	a5,g_unusedMuxList
+ 456      93870700 
+ 457 0088 D443     		lw	a3,4(a5)
+ 458              	.LM167:
+ 459 008a 1CC4     		sw	a5,8(s0)
+ 460              	.LM168:
+ 461 008c 54C4     		sw	a3,12(s0)
+ 462              	.LM169:
+ 463              	.LM170:
+ 464              	.LM171:
+ 465 008e 98C2     		sw	a4,0(a3)
+ 466              	.LM172:
+ 467              	.LM173:
+ 468 0090 D8C3     		sw	a4,4(a5)
+ 469              	.LVL39:
+ 470              	.LM174:
+ 471              	.LBE55:
+ 472              	.LBE54:
+ 473              	.LM175:
+ 474              	.LM176:
+ 475 0092 23000400 		sb	zero,0(s0)
+ 476              	.LM177:
+ 477 0096 97000000 		call	HalIntRestore
+ 477      E7800000 
+ 478              	.LVL40:
+ 479              	.LM178:
+ 480              	.LM179:
+ 481              	.LM180:
+ 482 009e 0144     		li	s0,0
+ 483              	.LVL41:
+ 484              	.L16:
+ 485              	.LM181:
+ 486 00a0 B240     		lw	ra,12(sp)
+ 487              		.cfi_restore 1
+ 488 00a2 2285     		mv	a0,s0
+ 489 00a4 2244     		lw	s0,8(sp)
+ 490              		.cfi_restore 8
+ 491 00a6 4101     		addi	sp,sp,16
+ 492              	.LCFI8:
+ 493              		.cfi_def_cfa_offset 0
+ 494 00a8 8280     		jr	ra
+ 495              		.cfi_endproc
+ 496              	.LFE164:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 10
+
+
+ 498              		.section	.rodata.LOS_MuxPend.str1.4,"aMS",@progbits,1
+ 499              		.align	2
+ 500              	.LC1:
+ 501 0000 2121214C 		.string	"!!!LOS_ERRNO_MUX_PEND_IN_LOCK!!!"
+ 501      4F535F45 
+ 501      52524E4F 
+ 501      5F4D5558 
+ 501      5F50454E 
+ 502              		.section	.text.LOS_MuxPend,"ax",@progbits
+ 503              		.align	1
+ 504              		.globl	LOS_MuxPend
+ 506              	LOS_MuxPend:
+ 507              	.LVL42:
+ 508              	.LFB166:
+ 509              	.LM182:
+ 510              		.cfi_startproc
+ 511              	.LM183:
+ 512              	.LM184:
+ 513              	.LM185:
+ 514              	.LM186:
+ 515              	.LM187:
+ 516              	.LM188:
+ 517 0000 0111     		addi	sp,sp,-32
+ 518              	.LCFI9:
+ 519              		.cfi_def_cfa_offset 32
+ 520 0002 06CE     		sw	ra,28(sp)
+ 521 0004 22CC     		sw	s0,24(sp)
+ 522 0006 26CA     		sw	s1,20(sp)
+ 523 0008 4AC8     		sw	s2,16(sp)
+ 524 000a 4EC6     		sw	s3,12(sp)
+ 525 000c 52C4     		sw	s4,8(sp)
+ 526              		.cfi_offset 1, -4
+ 527              		.cfi_offset 8, -8
+ 528              		.cfi_offset 9, -12
+ 529              		.cfi_offset 18, -16
+ 530              		.cfi_offset 19, -20
+ 531              		.cfi_offset 20, -24
+ 532              	.LM189:
+ 533 000e A547     		li	a5,9
+ 534 0010 63F1A704 		bleu	a0,a5,.L25
+ 535              	.LM190:
+ 536              	.LM191:
+ 537 0014 37260002 		li	a2,33562624
+ 538 0018 B7C5B2A1 		li	a1,-1582120960
+ 539              	.LVL43:
+ 540              	.LM192:
+ 541 001c 0147     		li	a4,0
+ 542 001e 8146     		li	a3,0
+ 543 0020 130616D0 		addi	a2,a2,-767
+ 544 0024 9385853F 		addi	a1,a1,1016
+ 545 0028 17050000 		lla	a0,.LC0
+ 545      13050500 
+ 546              	.LVL44:
+ 547              	.LM193:
+ 548 0030 37240002 		li	s0,33562624
+ 549              	.LM194:
+ 550 0034 97000000 		call	LOS_ErrHandle
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 11
+
+
+ 550      E7800000 
+ 551              	.LVL45:
+ 552              	.LM195:
+ 553 003c 130414D0 		addi	s0,s0,-767
+ 554              	.LVL46:
+ 555              	.L24:
+ 556              	.LM196:
+ 557 0040 F240     		lw	ra,28(sp)
+ 558              		.cfi_remember_state
+ 559              		.cfi_restore 1
+ 560 0042 2285     		mv	a0,s0
+ 561 0044 6244     		lw	s0,24(sp)
+ 562              		.cfi_restore 8
+ 563 0046 D244     		lw	s1,20(sp)
+ 564              		.cfi_restore 9
+ 565 0048 4249     		lw	s2,16(sp)
+ 566              		.cfi_restore 18
+ 567 004a B249     		lw	s3,12(sp)
+ 568              		.cfi_restore 19
+ 569 004c 224A     		lw	s4,8(sp)
+ 570              		.cfi_restore 20
+ 571 004e 0561     		addi	sp,sp,32
+ 572              	.LCFI10:
+ 573              		.cfi_def_cfa_offset 0
+ 574 0050 8280     		jr	ra
+ 575              	.LVL47:
+ 576              	.L25:
+ 577              	.LCFI11:
+ 578              		.cfi_restore_state
+ 579              	.LM197:
+ 580 0052 E147     		li	a5,24
+ 581 0054 3305F502 		mul	a0,a0,a5
+ 582              	.LVL48:
+ 583              	.LM198:
+ 584 0058 97040000 		lw	s1,g_allMux
+ 584      83A40400 
+ 585 0060 2E8A     		mv	s4,a1
+ 586              	.LM199:
+ 587              	.LM200:
+ 588              	.LM201:
+ 589 0062 AA94     		add	s1,s1,a0
+ 590              	.LVL49:
+ 591              	.LM202:
+ 592              	.LM203:
+ 593 0064 97000000 		call	HalIntLock
+ 593      E7800000 
+ 594              	.LVL50:
+ 595              	.LBB58:
+ 596              	.LBB59:
+ 597              	.LM204:
+ 598 006c 83C70400 		lbu	a5,0(s1)
+ 599              	.LBE59:
+ 600              	.LBE58:
+ 601              	.LM205:
+ 602 0070 AA89     		mv	s3,a0
+ 603              	.LVL51:
+ 604              	.LM206:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 12
+
+
+ 605              	.LBB61:
+ 606              	.LBI58:
+ 607              	.LM207:
+ 608              	.LBB60:
+ 609              	.LM208:
+ 610              	.LM209:
+ 611 0072 63830710 		beq	a5,zero,.L35
+ 612              	.LM210:
+ 613              	.LM211:
+ 614 0076 97000000 		call	HalIsIntActive
+ 614      E7800000 
+ 615              	.LVL52:
+ 616              	.LM212:
+ 617 007e 2A84     		mv	s0,a0
+ 618              	.LM213:
+ 619 0080 63110510 		bne	a0,zero,.L36
+ 620              	.LM214:
+ 621              	.LM215:
+ 622 0084 97070000 		lhu	a5,g_losTaskLock
+ 622      83D70700 
+ 623 008c 85C7     		beq	a5,zero,.L28
+ 624              	.LM216:
+ 625              	.LM217:
+ 626 008e 0945     		li	a0,2
+ 627 0090 97000000 		call	OsLogLevelCheck
+ 627      E7800000 
+ 628              	.LVL53:
+ 629              	.LM218:
+ 630 0098 09E9     		bne	a0,zero,.L29
+ 631              	.LM219:
+ 632 009a 17050000 		lla	a0,.LC1
+ 632      13050500 
+ 633 00a2 97000000 		call	puts
+ 633      E7800000 
+ 634              	.LVL54:
+ 635              	.LM220:
+ 636              	.LBE60:
+ 637              	.LBE61:
+ 638              	.LM221:
+ 639              	.L29:
+ 640              	.LM222:
+ 641 00aa 37240002 		li	s0,33562624
+ 642 00ae 130464D0 		addi	s0,s0,-762
+ 643 00b2 71A8     		j	.L27
+ 644              	.LVL55:
+ 645              	.L28:
+ 646              	.LM223:
+ 647              	.LM224:
+ 648              	.LM225:
+ 649 00b4 83D72400 		lhu	a5,2(s1)
+ 650              	.LM226:
+ 651 00b8 17090000 		lw	s2,g_losTask
+ 651      03290900 
+ 652              	.LVL56:
+ 653              	.LM227:
+ 654              	.LM228:
+ 655 00c0 85E3     		bne	a5,zero,.L30
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 13
+
+
+ 656              	.LM229:
+ 657              	.LM230:
+ 658 00c2 8547     		li	a5,1
+ 659 00c4 2391F400 		sh	a5,2(s1)
+ 660              	.LM231:
+ 661              	.LM232:
+ 662 00c8 83576900 		lhu	a5,6(s2)
+ 663              	.LM233:
+ 664 00cc 23A82401 		sw	s2,16(s1)
+ 665              	.LM234:
+ 666              	.LM235:
+ 667 00d0 239AF400 		sh	a5,20(s1)
+ 668              	.LM236:
+ 669              	.L39:
+ 670              	.LM237:
+ 671 00d4 4E85     		mv	a0,s3
+ 672              	.LVL57:
+ 673              	.L34:
+ 674              	.LM238:
+ 675 00d6 97000000 		call	HalIntRestore
+ 675      E7800000 
+ 676              	.LVL58:
+ 677              	.LM239:
+ 678              	.LM240:
+ 679 00de 8DB7     		j	.L24
+ 680              	.L30:
+ 681              	.LM241:
+ 682              	.LM242:
+ 683 00e0 8848     		lw	a0,16(s1)
+ 684              	.LM243:
+ 685 00e2 63162501 		bne	a0,s2,.L32
+ 686              	.LM244:
+ 687              	.LM245:
+ 688 00e6 8507     		addi	a5,a5,1
+ 689 00e8 2391F400 		sh	a5,2(s1)
+ 690 00ec E5B7     		j	.L39
+ 691              	.L32:
+ 692              	.LM246:
+ 693              	.LM247:
+ 694 00ee 630F0A08 		beq	s4,zero,.L37
+ 695              	.LM248:
+ 696              	.LM249:
+ 697 00f2 83556900 		lhu	a1,6(s2)
+ 698              	.LM250:
+ 699 00f6 83576500 		lhu	a5,6(a0)
+ 700              	.LM251:
+ 701 00fa 232E9902 		sw	s1,60(s2)
+ 702              	.LM252:
+ 703              	.LM253:
+ 704 00fe 63F6F500 		bleu	a5,a1,.L33
+ 705              	.LM254:
+ 706              	.LM255:
+ 707 0102 97000000 		call	OsSchedModifyTaskSchedParam
+ 707      E7800000 
+ 708              	.LVL59:
+ 709              	.L33:
+ 710              	.LM256:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 14
+
+
+ 711 010a D285     		mv	a1,s4
+ 712 010c 13858400 		addi	a0,s1,8
+ 713 0110 97000000 		call	OsSchedTaskWait
+ 713      E7800000 
+ 714              	.LVL60:
+ 715              	.LM257:
+ 716 0118 4E85     		mv	a0,s3
+ 717 011a 97000000 		call	HalIntRestore
+ 717      E7800000 
+ 718              	.LVL61:
+ 719              	.LM258:
+ 720              	.LM259:
+ 721 0122 97000000 		call	LOS_Schedule
+ 721      E7800000 
+ 722              	.LVL62:
+ 723              	.LM260:
+ 724              	.LM261:
+ 725 012a 97000000 		call	HalIntLock
+ 725      E7800000 
+ 726              	.LVL63:
+ 727              	.LM262:
+ 728 0132 83574900 		lhu	a5,4(s2)
+ 729              	.LM263:
+ 730 0136 AA89     		mv	s3,a0
+ 731              	.LVL64:
+ 732              	.LM264:
+ 733              	.LM265:
+ 734 0138 13F70704 		andi	a4,a5,64
+ 735 013c 49DF     		beq	a4,zero,.L34
+ 736              	.LM266:
+ 737              	.LM267:
+ 738 013e 93F7F7FB 		andi	a5,a5,-65
+ 739              	.LM268:
+ 740 0142 37240002 		li	s0,33562624
+ 741              	.LM269:
+ 742 0146 2312F900 		sh	a5,4(s2)
+ 743              	.LM270:
+ 744              	.LVL65:
+ 745              	.LM271:
+ 746              	.LM272:
+ 747 014a 130474D0 		addi	s0,s0,-761
+ 748              	.LVL66:
+ 749              	.L27:
+ 750              	.LM273:
+ 751 014e 4E85     		mv	a0,s3
+ 752 0150 97000000 		call	HalIntRestore
+ 752      E7800000 
+ 753              	.LVL67:
+ 754              	.LM274:
+ 755              	.LM275:
+ 756 0158 B7C5B2A1 		li	a1,-1582120960
+ 757 015c 0147     		li	a4,0
+ 758 015e 8146     		li	a3,0
+ 759 0160 2286     		mv	a2,s0
+ 760 0162 9385853F 		addi	a1,a1,1016
+ 761 0166 17050000 		lla	a0,.LC0
+ 761      13050500 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 15
+
+
+ 762 016e 97000000 		call	LOS_ErrHandle
+ 762      E7800000 
+ 763              	.LVL68:
+ 764              	.LM276:
+ 765              	.LM277:
+ 766 0176 E9B5     		j	.L24
+ 767              	.LVL69:
+ 768              	.L35:
+ 769              	.LM278:
+ 770 0178 37240002 		li	s0,33562624
+ 771 017c 130414D0 		addi	s0,s0,-767
+ 772 0180 F9B7     		j	.L27
+ 773              	.LVL70:
+ 774              	.L36:
+ 775              	.LM279:
+ 776 0182 37240002 		li	s0,33562624
+ 777 0186 130454D0 		addi	s0,s0,-763
+ 778 018a D1B7     		j	.L27
+ 779              	.LVL71:
+ 780              	.L37:
+ 781              	.LM280:
+ 782 018c 37240002 		li	s0,33562624
+ 783 0190 130444D0 		addi	s0,s0,-764
+ 784 0194 6DBF     		j	.L27
+ 785              		.cfi_endproc
+ 786              	.LFE166:
+ 788              		.section	.text.LOS_MuxPost,"ax",@progbits
+ 789              		.align	1
+ 790              		.globl	LOS_MuxPost
+ 792              	LOS_MuxPost:
+ 793              	.LVL72:
+ 794              	.LFB167:
+ 795              	.LM281:
+ 796              		.cfi_startproc
+ 797              	.LM282:
+ 798              	.LM283:
+ 799              	.LM284:
+ 800 0000 4111     		addi	sp,sp,-16
+ 801              	.LCFI12:
+ 802              		.cfi_def_cfa_offset 16
+ 803 0002 22C4     		sw	s0,8(sp)
+ 804 0004 26C2     		sw	s1,4(sp)
+ 805 0006 4AC0     		sw	s2,0(sp)
+ 806              		.cfi_offset 8, -8
+ 807              		.cfi_offset 9, -12
+ 808              		.cfi_offset 18, -16
+ 809              	.LM285:
+ 810 0008 17040000 		lw	s0,g_allMux
+ 810      03240400 
+ 811              	.LM286:
+ 812 0010 06C6     		sw	ra,12(sp)
+ 813              		.cfi_offset 1, -4
+ 814              	.LM287:
+ 815 0012 AA84     		mv	s1,a0
+ 816              	.LVL73:
+ 817              	.LM288:
+ 818              	.LM289:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 16
+
+
+ 819              	.LM290:
+ 820              	.LM291:
+ 821 0014 97000000 		call	HalIntLock
+ 821      E7800000 
+ 822              	.LVL74:
+ 823              	.LM292:
+ 824 001c A547     		li	a5,9
+ 825              	.LM293:
+ 826 001e 2A89     		mv	s2,a0
+ 827              	.LVL75:
+ 828              	.LM294:
+ 829              	.LM295:
+ 830 0020 63E39702 		bgtu	s1,a5,.L41
+ 831              	.LM296:
+ 832 0024 E147     		li	a5,24
+ 833 0026 B384F402 		mul	s1,s1,a5
+ 834              	.LVL76:
+ 835              	.LM297:
+ 836 002a 2694     		add	s0,s0,s1
+ 837              	.LVL77:
+ 838              	.LM298:
+ 839 002c 83470400 		lbu	a5,0(s0)
+ 840 0030 99CB     		beq	a5,zero,.L41
+ 841              	.LM299:
+ 842              	.LM300:
+ 843              	.LVL78:
+ 844              	.LM301:
+ 845              	.LM302:
+ 846 0032 83572400 		lhu	a5,2(s0)
+ 847              	.LM303:
+ 848 0036 81CB     		beq	a5,zero,.L41
+ 849              	.LM304:
+ 850 0038 1848     		lw	a4,16(s0)
+ 851              	.LM305:
+ 852 003a 97060000 		lw	a3,g_losTask
+ 852      83A60600 
+ 853 0042 6303D704 		beq	a4,a3,.L42
+ 854              	.LVL79:
+ 855              	.L41:
+ 856              	.LM306:
+ 857 0046 4A85     		mv	a0,s2
+ 858              	.LVL80:
+ 859              	.LM307:
+ 860 0048 97000000 		call	HalIntRestore
+ 860      E7800000 
+ 861              	.LVL81:
+ 862              	.LM308:
+ 863              	.LM309:
+ 864 0050 37260002 		li	a2,33562624
+ 865 0054 B7C5B2A1 		li	a1,-1582120960
+ 866 0058 0147     		li	a4,0
+ 867 005a 8146     		li	a3,0
+ 868 005c 130616D0 		addi	a2,a2,-767
+ 869 0060 9385853F 		addi	a1,a1,1016
+ 870 0064 17050000 		lla	a0,.LC0
+ 870      13050500 
+ 871 006c 97000000 		call	LOS_ErrHandle
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 17
+
+
+ 871      E7800000 
+ 872              	.LVL82:
+ 873              	.LM310:
+ 874              	.LM311:
+ 875 0074 37250002 		li	a0,33562624
+ 876 0078 130515D0 		addi	a0,a0,-767
+ 877              	.LVL83:
+ 878              	.L40:
+ 879              	.LM312:
+ 880 007c B240     		lw	ra,12(sp)
+ 881              		.cfi_remember_state
+ 882              		.cfi_restore 1
+ 883 007e 2244     		lw	s0,8(sp)
+ 884              		.cfi_restore 8
+ 885 0080 9244     		lw	s1,4(sp)
+ 886              		.cfi_restore 9
+ 887 0082 0249     		lw	s2,0(sp)
+ 888              		.cfi_restore 18
+ 889              	.LVL84:
+ 890              	.LM313:
+ 891 0084 4101     		addi	sp,sp,16
+ 892              	.LCFI13:
+ 893              		.cfi_def_cfa_offset 0
+ 894 0086 8280     		jr	ra
+ 895              	.LVL85:
+ 896              	.L42:
+ 897              	.LCFI14:
+ 898              		.cfi_restore_state
+ 899              	.LM314:
+ 900              	.LM315:
+ 901              	.LM316:
+ 902 0088 FD17     		addi	a5,a5,-1
+ 903 008a C207     		slli	a5,a5,16
+ 904 008c C183     		srli	a5,a5,16
+ 905              	.LM317:
+ 906 008e 2311F400 		sh	a5,2(s0)
+ 907 0092 91C7     		beq	a5,zero,.L44
+ 908              	.LVL86:
+ 909              	.L55:
+ 910              	.LM318:
+ 911 0094 97000000 		call	HalIntRestore
+ 911      E7800000 
+ 912              	.LVL87:
+ 913              	.LM319:
+ 914 009c 91A8     		j	.L45
+ 915              	.LVL88:
+ 916              	.L44:
+ 917              	.LM320:
+ 918              	.LM321:
+ 919 009e 83554401 		lhu	a1,20(s0)
+ 920              	.LM322:
+ 921 00a2 83576700 		lhu	a5,6(a4)
+ 922 00a6 6387B700 		beq	a5,a1,.L46
+ 923              	.LM323:
+ 924              	.LM324:
+ 925 00aa 3A85     		mv	a0,a4
+ 926              	.LVL89:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 18
+
+
+ 927              	.LM325:
+ 928 00ac 97000000 		call	OsSchedModifyTaskSchedParam
+ 928      E7800000 
+ 929              	.LVL90:
+ 930              	.L46:
+ 931              	.LM326:
+ 932              	.LBB62:
+ 933              	.LBI62:
+ 934              	.LM327:
+ 935              	.LBB63:
+ 936              	.LM328:
+ 937              	.LM329:
+ 938 00b4 5C44     		lw	a5,12(s0)
+ 939              	.LVL91:
+ 940              	.LM330:
+ 941              	.LBE63:
+ 942              	.LBE62:
+ 943              	.LM331:
+ 944 00b6 13078400 		addi	a4,s0,8
+ 945              	.LM332:
+ 946 00ba 638DE702 		beq	a5,a4,.L47
+ 947              	.LM333:
+ 948              	.LM334:
+ 949 00be 0547     		li	a4,1
+ 950 00c0 2311E400 		sh	a4,2(s0)
+ 951              	.LM335:
+ 952 00c4 03D7E7FB 		lhu	a4,-66(a5)
+ 953              	.LM336:
+ 954 00c8 138587FB 		addi	a0,a5,-72
+ 955              	.LVL92:
+ 956              	.LM337:
+ 957              	.LM338:
+ 958              	.LM339:
+ 959 00cc 08C8     		sw	a0,16(s0)
+ 960              	.LM340:
+ 961              	.LM341:
+ 962 00ce 231AE400 		sh	a4,20(s0)
+ 963              	.LM342:
+ 964              	.LM343:
+ 965 00d2 23AA07FE 		sw	zero,-12(a5)
+ 966              	.LM344:
+ 967 00d6 97000000 		call	OsSchedTaskWake
+ 967      E7800000 
+ 968              	.LVL93:
+ 969              	.LM345:
+ 970 00de 4A85     		mv	a0,s2
+ 971 00e0 97000000 		call	HalIntRestore
+ 971      E7800000 
+ 972              	.LVL94:
+ 973              	.LM346:
+ 974              	.LM347:
+ 975 00e8 97000000 		call	LOS_Schedule
+ 975      E7800000 
+ 976              	.LVL95:
+ 977              	.L45:
+ 978              	.LM348:
+ 979 00f0 0145     		li	a0,0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 19
+
+
+ 980 00f2 69B7     		j	.L40
+ 981              	.LVL96:
+ 982              	.L47:
+ 983              	.LM349:
+ 984              	.LM350:
+ 985 00f4 23280400 		sw	zero,16(s0)
+ 986              	.LM351:
+ 987 00f8 4A85     		mv	a0,s2
+ 988 00fa 69BF     		j	.L55
+ 989              		.cfi_endproc
+ 990              	.LFE167:
+ 992              		.globl	g_unusedMuxList
+ 993              		.section	.sbss.g_unusedMuxList,"aw",@nobits
+ 994              		.align	2
+ 997              	g_unusedMuxList:
+ 998 0000 00000000 		.zero	8
+ 998      00000000 
+ 999              		.globl	g_allMux
+ 1000              		.section	.sbss.g_allMux,"aw",@nobits
+ 1001              		.align	2
+ 1004              	g_allMux:
+ 1005 0000 00000000 		.zero	4
+ 1006              		.text
+ 1007              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 los_mux.c
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:10     .text.OsMuxInit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:13     .text.OsMuxInit:00000000 OsMuxInit
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:16     .text.OsMuxInit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:33     .text.OsMuxInit:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:36     .text.OsMuxInit:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:37     .text.OsMuxInit:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:997    .sbss.g_unusedMuxList:00000000 g_unusedMuxList
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:1004   .sbss.g_allMux:00000000 g_allMux
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:141    .text.OsMuxInit:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:142    .text.OsMuxInit:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:144    .text.OsMuxInit:00000058 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:148    .text.OsMuxInit:0000005c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:153    .text.OsMuxInit:0000005e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:158    .text.OsMuxInit:00000068 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:166    .text.LOS_MuxCreate:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:169    .text.LOS_MuxCreate:00000000 LOS_MuxCreate
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:173    .text.LOS_MuxCreate:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:185    .text.LOS_MuxCreate:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:188    .text.LOS_MuxCreate:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:189    .text.LOS_MuxCreate:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:236    .text.LOS_MuxCreate:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:237    .text.LOS_MuxCreate:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:239    .text.LOS_MuxCreate:00000058 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:244    .text.LOS_MuxCreate:0000005a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:249    .text.LOS_MuxCreate:0000005c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:321    .text.LOS_MuxCreate:0000008c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:322    .text.LOS_MuxCreate:0000008c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:323    .text.LOS_MuxCreate:0000008c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:332    .text.LOS_MuxCreate:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:336    .text.LOS_MuxDelete:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:339    .text.LOS_MuxDelete:00000000 LOS_MuxDelete
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:343    .text.LOS_MuxDelete:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:352    .text.LOS_MuxDelete:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:355    .text.LOS_MuxDelete:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:356    .text.LOS_MuxDelete:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:487    .text.LOS_MuxDelete:000000a2 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:490    .text.LOS_MuxDelete:000000a6 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:493    .text.LOS_MuxDelete:000000a8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:495    .text.LOS_MuxDelete:000000aa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:503    .text.LOS_MuxPend:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:506    .text.LOS_MuxPend:00000000 LOS_MuxPend
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:510    .text.LOS_MuxPend:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:519    .text.LOS_MuxPend:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:526    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:527    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:528    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:529    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:530    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:531    .text.LOS_MuxPend:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:558    .text.LOS_MuxPend:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:559    .text.LOS_MuxPend:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:562    .text.LOS_MuxPend:00000046 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:564    .text.LOS_MuxPend:00000048 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:566    .text.LOS_MuxPend:0000004a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:568    .text.LOS_MuxPend:0000004c .L0 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 21
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:570    .text.LOS_MuxPend:0000004e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:573    .text.LOS_MuxPend:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:578    .text.LOS_MuxPend:00000052 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:785    .text.LOS_MuxPend:00000196 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:789    .text.LOS_MuxPost:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:792    .text.LOS_MuxPost:00000000 LOS_MuxPost
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:796    .text.LOS_MuxPost:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:802    .text.LOS_MuxPost:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:806    .text.LOS_MuxPost:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:807    .text.LOS_MuxPost:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:808    .text.LOS_MuxPost:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:813    .text.LOS_MuxPost:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:881    .text.LOS_MuxPost:0000007e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:882    .text.LOS_MuxPost:0000007e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:884    .text.LOS_MuxPost:00000080 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:886    .text.LOS_MuxPost:00000082 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:888    .text.LOS_MuxPost:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:893    .text.LOS_MuxPost:00000086 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:898    .text.LOS_MuxPost:00000088 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:989    .text.LOS_MuxPost:000000fc .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:29     .text.OsMuxInit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:41     .text.OsMuxInit:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:63     .text.OsMuxInit:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:151    .text.OsMuxInit:0000005e .L6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:73     .text.OsMuxInit:00000036 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:138    .text.OsMuxInit:00000054 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:202    .text.LOS_MuxCreate:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:163    .rodata.LOS_MuxCreate.str1.4:00000000 .LC0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:226    .text.LOS_MuxCreate:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:319    .text.LOS_MuxCreate:0000008c .L11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:247    .text.LOS_MuxCreate:0000005c .L10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:233    .text.LOS_MuxCreate:00000054 .L8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:367    .text.LOS_MuxDelete:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:440    .text.LOS_MuxDelete:0000006e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:456    .text.LOS_MuxDelete:00000080 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:389    .text.LOS_MuxDelete:00000034 .L17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:395    .text.LOS_MuxDelete:0000003e .L18
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:432    .text.LOS_MuxDelete:00000060 .L21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:416    .text.LOS_MuxDelete:0000004e .L19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:447    .text.LOS_MuxDelete:00000080 .L20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:484    .text.LOS_MuxDelete:000000a0 .L16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:545    .text.LOS_MuxPend:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:584    .text.LOS_MuxPend:00000058 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:622    .text.LOS_MuxPend:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:500    .rodata.LOS_MuxPend.str1.4:00000000 .LC1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:632    .text.LOS_MuxPend:0000009a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:651    .text.LOS_MuxPend:000000b8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:761    .text.LOS_MuxPend:00000166 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:576    .text.LOS_MuxPend:00000052 .L25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:768    .text.LOS_MuxPend:00000178 .L35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:774    .text.LOS_MuxPend:00000182 .L36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:645    .text.LOS_MuxPend:000000b4 .L28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:639    .text.LOS_MuxPend:000000aa .L29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:749    .text.LOS_MuxPend:0000014e .L27
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:680    .text.LOS_MuxPend:000000e0 .L30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:555    .text.LOS_MuxPend:00000040 .L24
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 22
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:691    .text.LOS_MuxPend:000000ee .L32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:669    .text.LOS_MuxPend:000000d4 .L39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:780    .text.LOS_MuxPend:0000018c .L37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:709    .text.LOS_MuxPend:0000010a .L33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:673    .text.LOS_MuxPend:000000d6 .L34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:810    .text.LOS_MuxPost:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:852    .text.LOS_MuxPost:0000003a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:870    .text.LOS_MuxPost:00000064 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:855    .text.LOS_MuxPost:00000046 .L41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:896    .text.LOS_MuxPost:00000088 .L42
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:916    .text.LOS_MuxPost:0000009e .L44
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:977    .text.LOS_MuxPost:000000f0 .L45
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:930    .text.LOS_MuxPost:000000b4 .L46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:982    .text.LOS_MuxPost:000000f4 .L47
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:878    .text.LOS_MuxPost:0000007c .L40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:909    .text.LOS_MuxPost:00000094 .L55
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:2754   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7195   .debug_str:00000660 .LASF142
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7187   .debug_str:0000061c .LASF143
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6991   .debug_str:000001de .LASF144
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4541   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4583   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6929   .debug_str:0000008c .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6997   .debug_str:00000206 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6939   .debug_str:000000c6 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7133   .debug_str:000004ff .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6941   .debug_str:000000d4 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6921   .debug_str:00000059 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7087   .debug_str:000003f6 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7101   .debug_str:00000446 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7019   .debug_str:0000028c .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6955   .debug_str:00000124 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6987   .debug_str:000001c9 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7003   .debug_str:00000224 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7179   .debug_str:000005f5 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7121   .debug_str:000004c3 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7043   .debug_str:00000313 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6985   .debug_str:000001c2 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7059   .debug_str:00000365 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7007   .debug_str:00000245 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7077   .debug_str:000003c8 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6971   .debug_str:0000017a .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6931   .debug_str:000000a3 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7135   .debug_str:0000050b .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7039   .debug_str:000002fe .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6957   .debug_str:0000012d .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7037   .debug_str:000002f6 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7203   .debug_str:00000745 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7111   .debug_str:0000047e .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7053   .debug_str:00000345 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7067   .debug_str:0000038e .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7201   .debug_str:0000073c .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6999   .debug_str:00000213 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7093   .debug_str:0000041c .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7035   .debug_str:000002eb .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7089   .debug_str:00000404 .LASF145
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6965   .debug_str:00000156 .LASF32
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 23
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7099   .debug_str:0000043a .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6969   .debug_str:0000016e .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7123   .debug_str:000004cc .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7103   .debug_str:00000450 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7051   .debug_str:00000339 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6911   .debug_str:00000025 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7069   .debug_str:00000396 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6995   .debug_str:000001f9 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7185   .debug_str:00000610 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6925   .debug_str:00000071 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7049   .debug_str:0000032b .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7163   .debug_str:0000059d .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7119   .debug_str:000004b7 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7143   .debug_str:00000537 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7165   .debug_str:000005ab .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7075   .debug_str:000003bc .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7199   .debug_str:0000072f .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7025   .debug_str:000002b7 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6945   .debug_str:000000e9 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6905   .debug_str:00000000 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7159   .debug_str:0000058a .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6933   .debug_str:000000a8 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7177   .debug_str:000005e7 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7147   .debug_str:00000549 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7097   .debug_str:0000042d .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7193   .debug_str:00000653 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7105   .debug_str:0000045d .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7191   .debug_str:00000645 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7125   .debug_str:000004da .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7073   .debug_str:000003af .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7047   .debug_str:0000031e .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6907   .debug_str:0000000e .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7115   .debug_str:0000049a .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6927   .debug_str:0000007f .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7173   .debug_str:000005d4 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7029   .debug_str:000002cc .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7153   .debug_str:0000056d .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6951   .debug_str:00000115 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6943   .debug_str:000000e0 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7189   .debug_str:0000063b .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7031   .debug_str:000002d5 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7181   .debug_str:000005fd .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7161   .debug_str:00000596 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7091   .debug_str:00000412 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7167   .debug_str:000005b7 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6919   .debug_str:00000051 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6963   .debug_str:0000014d .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7139   .debug_str:00000520 .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6975   .debug_str:0000018d .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7155   .debug_str:00000577 .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7065   .debug_str:00000383 .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7017   .debug_str:00000286 .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7061   .debug_str:0000036c .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6909   .debug_str:0000001b .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7109   .debug_str:00000476 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6959   .debug_str:00000134 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7131   .debug_str:000004f7 .LASF89
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 24
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7175   .debug_str:000005df .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7021   .debug_str:0000029f .LASF91
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7055   .debug_str:0000034d .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7141   .debug_str:00000529 .LASF94
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7149   .debug_str:00000555 .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7083   .debug_str:000003e5 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6935   .debug_str:000000b6 .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7183   .debug_str:00000608 .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7129   .debug_str:000004f1 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7027   .debug_str:000002c3 .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7169   .debug_str:000005bf .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7137   .debug_str:00000510 .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7113   .debug_str:0000048a .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7151   .debug_str:0000055d .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7079   .debug_str:000003ce .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7071   .debug_str:000003a2 .LASF146
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7041   .debug_str:00000303 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7009   .debug_str:0000024b .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7117   .debug_str:000004a9 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7107   .debug_str:00000468 .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6947   .debug_str:000000f7 .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7063   .debug_str:00000376 .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6973   .debug_str:00000181 .LASF116
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:794    .text.LOS_MuxPost:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:990    .text.LOS_MuxPost:000000fc .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3499   .debug_loc:00000000 .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7157   .debug_str:00000580 .LASF118
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3529   .debug_loc:0000003e .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3522   .debug_loc:00000038 .LVUS36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7085   .debug_str:000003ee .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3566   .debug_loc:0000007c .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3553   .debug_loc:00000070 .LVUS37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6937   .debug_str:000000bc .LASF113
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3600   .debug_loc:000000cc .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3593   .debug_loc:000000c6 .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6967   .debug_str:00000162 .LASF114
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3643   .debug_loc:00000110 .LLST39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3634   .debug_loc:00000108 .LVUS39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7171   .debug_str:000005c8 .LASF115
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3672   .debug_loc:0000014d .LLST40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3665   .debug_loc:00000147 .LVUS40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:933    .text.LOS_MuxPost:000000b4 .LBI62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:932    .text.LOS_MuxPost:000000b4 .LBB62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:942    .text.LOS_MuxPost:000000b6 .LBE62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3691   .debug_loc:00000179 .LLST41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3688   .debug_loc:00000177 .LVUS41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:822    .text.LOS_MuxPost:0000001c .LVL74
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:861    .text.LOS_MuxPost:00000050 .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:872    .text.LOS_MuxPost:00000074 .LVL82
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:912    .text.LOS_MuxPost:0000009c .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:929    .text.LOS_MuxPost:000000b4 .LVL90
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:968    .text.LOS_MuxPost:000000de .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:972    .text.LOS_MuxPost:000000e8 .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:976    .text.LOS_MuxPost:000000f0 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7011   .debug_str:00000267 .LASF117
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:508    .text.LOS_MuxPend:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:786    .text.LOS_MuxPend:00000196 .LFE166
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 25
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3700   .debug_loc:0000018e .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3732   .debug_loc:000001ce .LLST28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3723   .debug_loc:000001c6 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7197   .debug_str:00000727 .LASF119
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3778   .debug_loc:0000021c .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3769   .debug_loc:00000214 .LVUS29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3823   .debug_loc:00000269 .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3806   .debug_loc:00000259 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6989   .debug_str:000001d4 .LASF120
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3865   .debug_loc:000002cf .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3858   .debug_loc:000002c9 .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7001   .debug_str:0000021d .LASF121
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3893   .debug_loc:00000304 .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3882   .debug_loc:000002fa .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3933   .debug_loc:00000359 .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3922   .debug_loc:0000034f .LVUS33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6979   .debug_str:0000019d .LASF126
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6915   .debug_str:0000003f .LASF147
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:606    .text.LOS_MuxPend:00000072 .LBI58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3964   .debug_loc:0000039f .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3959   .debug_loc:0000039b .LVUS34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:615    .text.LOS_MuxPend:0000007e .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:628    .text.LOS_MuxPend:00000098 .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:634    .text.LOS_MuxPend:000000aa .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:551    .text.LOS_MuxPend:0000003c .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:594    .text.LOS_MuxPend:0000006c .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:676    .text.LOS_MuxPend:000000de .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:708    .text.LOS_MuxPend:0000010a .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:714    .text.LOS_MuxPend:00000118 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:718    .text.LOS_MuxPend:00000122 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:722    .text.LOS_MuxPend:0000012a .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:726    .text.LOS_MuxPend:00000132 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:753    .text.LOS_MuxPend:00000158 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:763    .text.LOS_MuxPend:00000176 .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7023   .debug_str:000002a7 .LASF134
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7057   .debug_str:00000357 .LASF122
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:341    .text.LOS_MuxDelete:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:496    .text.LOS_MuxDelete:000000aa .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3975   .debug_loc:000003bd .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3998   .debug_loc:000003ed .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:3993   .debug_loc:000003e9 .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4027   .debug_loc:0000041c .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4018   .debug_loc:00000414 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6993   .debug_str:000001ee .LASF123
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4057   .debug_loc:0000045a .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4046   .debug_loc:00000450 .LVUS21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6977   .debug_str:00000197 .LASF124
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4090   .debug_loc:000004a2 .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4083   .debug_loc:0000049c .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7013   .debug_str:00000273 .LASF125
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4114   .debug_loc:000004d9 .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4109   .debug_loc:000004d5 .LVUS23
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7033   .debug_str:000002df .LASF127
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:404    .text.LOS_MuxDelete:00000044 .LBI52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:403    .text.LOS_MuxDelete:00000044 .LBB52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:410    .text.LOS_MuxDelete:00000044 .LBE52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4132   .debug_loc:00000503 .LLST24
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 26
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4129   .debug_loc:00000501 .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:451    .text.LOS_MuxDelete:00000080 .LBI54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:450    .text.LOS_MuxDelete:00000080 .LBB54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:472    .text.LOS_MuxDelete:00000092 .LBE54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4142   .debug_loc:00000518 .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4139   .debug_loc:00000516 .LVUS25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4154   .debug_loc:00000532 .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4151   .debug_loc:00000530 .LVUS26
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:373    .text.LOS_MuxDelete:00000024 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:384    .text.LOS_MuxDelete:00000034 .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:425    .text.LOS_MuxDelete:0000005c .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:442    .text.LOS_MuxDelete:0000007e .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:478    .text.LOS_MuxDelete:0000009e .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6923   .debug_str:00000063 .LASF128
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:171    .text.LOS_MuxCreate:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:333    .text.LOS_MuxCreate:00000096 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4161   .debug_loc:00000545 .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4202   .debug_loc:00000595 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4189   .debug_loc:00000589 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4252   .debug_loc:000005f5 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4247   .debug_loc:000005f1 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7015   .debug_str:0000027b .LASF129
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4272   .debug_loc:0000061b .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4263   .debug_loc:00000613 .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7127   .debug_str:000004e7 .LASF130
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4305   .debug_loc:0000065c .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4296   .debug_loc:00000654 .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4330   .debug_loc:00000695 .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4327   .debug_loc:00000693 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4342   .debug_loc:000006af .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4339   .debug_loc:000006ad .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:217    .text.LOS_MuxCreate:00000028 .LDL1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:197    .text.LOS_MuxCreate:00000012 .LBI46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:196    .text.LOS_MuxCreate:00000012 .LBB46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:207    .text.LOS_MuxCreate:0000001c .LBE46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4354   .debug_loc:000006c9 .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4351   .debug_loc:000006c7 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:254    .text.LOS_MuxCreate:0000005c .LBI48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:253    .text.LOS_MuxCreate:0000005c .LBB48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:272    .text.LOS_MuxCreate:00000064 .LBE48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4366   .debug_loc:000006e3 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4363   .debug_loc:000006e1 .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:291    .text.LOS_MuxCreate:00000076 .LBI50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:290    .text.LOS_MuxCreate:00000076 .LBB50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:303    .text.LOS_MuxCreate:0000007a .LBE50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4376   .debug_loc:000006f8 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4373   .debug_loc:000006f6 .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:194    .text.LOS_MuxCreate:00000012 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:212    .text.LOS_MuxCreate:00000028 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:228    .text.LOS_MuxCreate:0000004c .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:312    .text.LOS_MuxCreate:00000088 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6983   .debug_str:000001b8 .LASF131
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:14     .text.OsMuxInit:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:159    .text.OsMuxInit:00000068 .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4383   .debug_loc:0000070b .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7081   .debug_str:000003dd .LASF132
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4415   .debug_loc:0000074b .LLST1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 27
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4406   .debug_loc:00000743 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7145   .debug_str:00000543 .LASF133
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4450   .debug_loc:0000078e .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4443   .debug_loc:00000788 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:22     .text.OsMuxInit:00000000 .LBI24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4469   .debug_loc:000007ba .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4466   .debug_loc:000007b8 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:90     .text.OsMuxInit:00000040 .LBI30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4481   .debug_loc:000007d4 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4478   .debug_loc:000007d2 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4493   .debug_loc:000007ee .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4490   .debug_loc:000007ec .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:95     .text.OsMuxInit:00000040 .LBI32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4503   .debug_loc:00000803 .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4500   .debug_loc:00000801 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4513   .debug_loc:00000818 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:4510   .debug_loc:00000816 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:61     .text.OsMuxInit:00000026 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6913   .debug_str:00000031 .LASF135
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7095   .debug_str:00000428 .LASF136
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7005   .debug_str:00000236 .LASF137
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6949   .debug_str:00000102 .LASF138
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6953   .debug_str:0000011f .LASF139
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6981   .debug_str:000001ac .LASF140
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6917   .debug_str:00000044 .LASF141
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:7045   .debug_str:00000319 .LASF148
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:6961   .debug_str:0000013e .LASF149
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:801    .text.LOS_MuxPost:00000002 .LCFI12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:892    .text.LOS_MuxPost:00000086 .LCFI13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:897    .text.LOS_MuxPost:00000088 .LCFI14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:793    .text.LOS_MuxPost:00000000 .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:834    .text.LOS_MuxPost:0000002a .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:827    .text.LOS_MuxPost:00000020 .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:858    .text.LOS_MuxPost:00000048 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:889    .text.LOS_MuxPost:00000084 .LVL84
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:895    .text.LOS_MuxPost:00000088 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:915    .text.LOS_MuxPost:0000009e .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:926    .text.LOS_MuxPost:000000ac .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:816    .text.LOS_MuxPost:00000014 .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:837    .text.LOS_MuxPost:0000002c .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:877    .text.LOS_MuxPost:0000007c .LVL83
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:955    .text.LOS_MuxPost:000000cc .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:981    .text.LOS_MuxPost:000000f4 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:843    .text.LOS_MuxPost:00000032 .LVL78
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:908    .text.LOS_MuxPost:00000094 .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:939    .text.LOS_MuxPost:000000b6 .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:518    .text.LOS_MuxPend:00000002 .LCFI9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:572    .text.LOS_MuxPend:00000050 .LCFI10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:577    .text.LOS_MuxPend:00000052 .LCFI11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:507    .text.LOS_MuxPend:00000000 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:546    .text.LOS_MuxPend:00000030 .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:575    .text.LOS_MuxPend:00000052 .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:582    .text.LOS_MuxPend:00000058 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:539    .text.LOS_MuxPend:0000001c .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:603    .text.LOS_MuxPend:00000072 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:672    .text.LOS_MuxPend:000000d6 .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:731    .text.LOS_MuxPend:00000138 .LVL64
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 28
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:748    .text.LOS_MuxPend:0000014e .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:767    .text.LOS_MuxPend:00000178 .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:773    .text.LOS_MuxPend:00000182 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:554    .text.LOS_MuxPend:00000040 .LVL46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:590    .text.LOS_MuxPend:00000064 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:644    .text.LOS_MuxPend:000000b4 .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:744    .text.LOS_MuxPend:0000014a .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:779    .text.LOS_MuxPend:0000018c .LVL71
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:652    .text.LOS_MuxPend:000000c0 .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:351    .text.LOS_MuxDelete:00000002 .LCFI7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:492    .text.LOS_MuxDelete:000000a8 .LCFI8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:340    .text.LOS_MuxDelete:00000000 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:365    .text.LOS_MuxDelete:00000012 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:378    .text.LOS_MuxDelete:0000002a .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:394    .text.LOS_MuxDelete:0000003e .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:419    .text.LOS_MuxDelete:00000050 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:446    .text.LOS_MuxDelete:00000080 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:369    .text.LOS_MuxDelete:0000001c .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:422    .text.LOS_MuxDelete:00000054 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:483    .text.LOS_MuxDelete:000000a0 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:431    .text.LOS_MuxDelete:00000060 .LVL36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:402    .text.LOS_MuxDelete:00000044 .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:469    .text.LOS_MuxDelete:00000092 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:184    .text.LOS_MuxCreate:00000004 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:243    .text.LOS_MuxCreate:0000005a .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:248    .text.LOS_MuxCreate:0000005c .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:320    .text.LOS_MuxCreate:0000008c .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:170    .text.LOS_MuxCreate:00000000 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:240    .text.LOS_MuxCreate:00000058 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:246    .text.LOS_MuxCreate:0000005c .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:318    .text.LOS_MuxCreate:0000008c .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:326    .text.LOS_MuxCreate:00000090 .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:232    .text.LOS_MuxCreate:00000054 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:269    .text.LOS_MuxCreate:00000064 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:307    .text.LOS_MuxCreate:0000007e .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:204    .text.LOS_MuxCreate:0000001c .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:289    .text.LOS_MuxCreate:00000076 .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:300    .text.LOS_MuxCreate:0000007a .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:32     .text.OsMuxInit:0000000a .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:147    .text.OsMuxInit:0000005c .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:152    .text.OsMuxInit:0000005e .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:18     .text.OsMuxInit:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:72     .text.OsMuxInit:00000036 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:132    .text.OsMuxInit:0000004e .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:137    .text.OsMuxInit:00000054 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:150    .text.OsMuxInit:0000005e .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:105    .text.OsMuxInit:00000042 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:123    .text.OsMuxInit:0000004c .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:53     .text.OsMuxInit:0000001e .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:88     .text.OsMuxInit:00000040 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:1009   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:21     .text.OsMuxInit:00000000 .LBB24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:27     .text.OsMuxInit:00000000 .LBE24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:38     .text.OsMuxInit:0000000e .LBB28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:43     .text.OsMuxInit:00000016 .LBE28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:46     .text.OsMuxInit:0000001a .LBB29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:56     .text.OsMuxInit:0000001e .LBE29
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 29
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:78     .text.OsMuxInit:0000003a .LBB30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:83     .text.OsMuxInit:0000003c .LBE30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:89     .text.OsMuxInit:00000040 .LBB38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:102    .text.OsMuxInit:00000040 .LBE38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:106    .text.OsMuxInit:00000042 .LBB39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:128    .text.OsMuxInit:0000004c .LBE39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:94     .text.OsMuxInit:00000040 .LBB32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:100    .text.OsMuxInit:00000040 .LBE32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:108    .text.OsMuxInit:00000042 .LBB35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:126    .text.OsMuxInit:0000004c .LBE35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:595    .text.LOS_MuxPend:0000006c .LBB58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:600    .text.LOS_MuxPend:00000070 .LBE58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:605    .text.LOS_MuxPend:00000072 .LBB61
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:637    .text.LOS_MuxPend:000000aa .LBE61
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:15     .text.OsMuxInit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:17     .text.OsMuxInit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:19     .text.OsMuxInit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:20     .text.OsMuxInit:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:23     .text.OsMuxInit:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:25     .text.OsMuxInit:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:28     .text.OsMuxInit:00000000 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:30     .text.OsMuxInit:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:40     .text.OsMuxInit:0000000e .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:44     .text.OsMuxInit:00000016 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:48     .text.OsMuxInit:0000001a .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:50     .text.OsMuxInit:0000001c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:51     .text.OsMuxInit:0000001c .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:54     .text.OsMuxInit:0000001e .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:57     .text.OsMuxInit:0000001e .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:58     .text.OsMuxInit:0000001e .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:59     .text.OsMuxInit:0000001e .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:62     .text.OsMuxInit:00000026 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:64     .text.OsMuxInit:0000002e .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:65     .text.OsMuxInit:0000002e .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:68     .text.OsMuxInit:00000032 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:70     .text.OsMuxInit:00000034 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:74     .text.OsMuxInit:00000036 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:75     .text.OsMuxInit:00000036 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:76     .text.OsMuxInit:00000036 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:80     .text.OsMuxInit:0000003a .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:84     .text.OsMuxInit:0000003c .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:86     .text.OsMuxInit:00000040 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:87     .text.OsMuxInit:00000040 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:91     .text.OsMuxInit:00000040 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:93     .text.OsMuxInit:00000040 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:96     .text.OsMuxInit:00000040 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:98     .text.OsMuxInit:00000040 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:103    .text.OsMuxInit:00000040 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:110    .text.OsMuxInit:00000042 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:112    .text.OsMuxInit:00000044 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:114    .text.OsMuxInit:00000046 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:116    .text.OsMuxInit:00000048 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:117    .text.OsMuxInit:00000048 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:118    .text.OsMuxInit:00000048 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:120    .text.OsMuxInit:0000004a .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:121    .text.OsMuxInit:0000004a .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:124    .text.OsMuxInit:0000004c .LM43
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 30
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:129    .text.OsMuxInit:0000004c .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:130    .text.OsMuxInit:0000004c .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:133    .text.OsMuxInit:0000004e .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:135    .text.OsMuxInit:00000052 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:139    .text.OsMuxInit:00000054 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:154    .text.OsMuxInit:0000005e .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:172    .text.LOS_MuxCreate:00000000 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:174    .text.LOS_MuxCreate:00000000 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:175    .text.LOS_MuxCreate:00000000 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:176    .text.LOS_MuxCreate:00000000 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:177    .text.LOS_MuxCreate:00000000 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:178    .text.LOS_MuxCreate:00000000 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:179    .text.LOS_MuxCreate:00000000 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:180    .text.LOS_MuxCreate:00000000 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:182    .text.LOS_MuxCreate:00000002 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:191    .text.LOS_MuxCreate:0000000a .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:192    .text.LOS_MuxCreate:0000000a .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:195    .text.LOS_MuxCreate:00000012 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:198    .text.LOS_MuxCreate:00000012 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:200    .text.LOS_MuxCreate:00000012 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:201    .text.LOS_MuxCreate:00000012 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:205    .text.LOS_MuxCreate:0000001c .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:208    .text.LOS_MuxCreate:0000001c .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:210    .text.LOS_MuxCreate:00000020 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:213    .text.LOS_MuxCreate:00000028 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:214    .text.LOS_MuxCreate:00000028 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:215    .text.LOS_MuxCreate:00000028 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:216    .text.LOS_MuxCreate:00000028 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:218    .text.LOS_MuxCreate:00000028 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:219    .text.LOS_MuxCreate:00000028 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:229    .text.LOS_MuxCreate:0000004c .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:234    .text.LOS_MuxCreate:00000054 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:241    .text.LOS_MuxCreate:00000058 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:250    .text.LOS_MuxCreate:0000005c .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:251    .text.LOS_MuxCreate:0000005c .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:252    .text.LOS_MuxCreate:0000005c .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:255    .text.LOS_MuxCreate:0000005c .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:257    .text.LOS_MuxCreate:0000005c .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:258    .text.LOS_MuxCreate:0000005c .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:260    .text.LOS_MuxCreate:0000005e .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:262    .text.LOS_MuxCreate:00000060 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:264    .text.LOS_MuxCreate:00000062 .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:265    .text.LOS_MuxCreate:00000062 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:267    .text.LOS_MuxCreate:00000064 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:268    .text.LOS_MuxCreate:00000064 .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:270    .text.LOS_MuxCreate:00000064 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:273    .text.LOS_MuxCreate:00000064 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:274    .text.LOS_MuxCreate:00000064 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:275    .text.LOS_MuxCreate:00000064 .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:277    .text.LOS_MuxCreate:00000066 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:279    .text.LOS_MuxCreate:0000006a .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:280    .text.LOS_MuxCreate:0000006a .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:282    .text.LOS_MuxCreate:0000006e .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:283    .text.LOS_MuxCreate:0000006e .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:285    .text.LOS_MuxCreate:00000072 .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:286    .text.LOS_MuxCreate:00000072 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:288    .text.LOS_MuxCreate:00000076 .LM100
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 31
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:292    .text.LOS_MuxCreate:00000076 .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:294    .text.LOS_MuxCreate:00000076 .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:295    .text.LOS_MuxCreate:00000076 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:297    .text.LOS_MuxCreate:00000078 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:298    .text.LOS_MuxCreate:00000078 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:301    .text.LOS_MuxCreate:0000007a .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:304    .text.LOS_MuxCreate:0000007a .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:305    .text.LOS_MuxCreate:0000007a .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:308    .text.LOS_MuxCreate:0000007e .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:310    .text.LOS_MuxCreate:00000080 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:313    .text.LOS_MuxCreate:00000088 .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:314    .text.LOS_MuxCreate:00000088 .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:315    .text.LOS_MuxCreate:00000088 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:324    .text.LOS_MuxCreate:0000008c .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:327    .text.LOS_MuxCreate:00000090 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:329    .text.LOS_MuxCreate:00000094 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:330    .text.LOS_MuxCreate:00000094 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:342    .text.LOS_MuxDelete:00000000 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:344    .text.LOS_MuxDelete:00000000 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:345    .text.LOS_MuxDelete:00000000 .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:346    .text.LOS_MuxDelete:00000000 .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:347    .text.LOS_MuxDelete:00000000 .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:348    .text.LOS_MuxDelete:00000000 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:349    .text.LOS_MuxDelete:00000000 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:357    .text.LOS_MuxDelete:00000006 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:360    .text.LOS_MuxDelete:0000000c .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:361    .text.LOS_MuxDelete:0000000c .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:362    .text.LOS_MuxDelete:0000000c .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:366    .text.LOS_MuxDelete:00000012 .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:370    .text.LOS_MuxDelete:0000001c .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:371    .text.LOS_MuxDelete:0000001c .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:374    .text.LOS_MuxDelete:00000024 .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:376    .text.LOS_MuxDelete:00000028 .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:379    .text.LOS_MuxDelete:0000002a .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:380    .text.LOS_MuxDelete:0000002a .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:382    .text.LOS_MuxDelete:0000002c .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:385    .text.LOS_MuxDelete:00000034 .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:386    .text.LOS_MuxDelete:00000034 .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:387    .text.LOS_MuxDelete:00000034 .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:388    .text.LOS_MuxDelete:00000034 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:390    .text.LOS_MuxDelete:00000034 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:396    .text.LOS_MuxDelete:0000003e .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:397    .text.LOS_MuxDelete:0000003e .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:398    .text.LOS_MuxDelete:0000003e .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:400    .text.LOS_MuxDelete:00000040 .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:405    .text.LOS_MuxDelete:00000044 .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:407    .text.LOS_MuxDelete:00000044 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:408    .text.LOS_MuxDelete:00000044 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:411    .text.LOS_MuxDelete:00000044 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:413    .text.LOS_MuxDelete:00000048 .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:417    .text.LOS_MuxDelete:0000004e .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:420    .text.LOS_MuxDelete:00000050 .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:423    .text.LOS_MuxDelete:00000054 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:426    .text.LOS_MuxDelete:0000005c .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:427    .text.LOS_MuxDelete:0000005c .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:428    .text.LOS_MuxDelete:0000005c .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:429    .text.LOS_MuxDelete:0000005c .LM157
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 32
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:433    .text.LOS_MuxDelete:00000060 .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:434    .text.LOS_MuxDelete:00000060 .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:443    .text.LOS_MuxDelete:0000007e .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:444    .text.LOS_MuxDelete:0000007e .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:448    .text.LOS_MuxDelete:00000080 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:449    .text.LOS_MuxDelete:00000080 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:452    .text.LOS_MuxDelete:00000080 .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:454    .text.LOS_MuxDelete:00000080 .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:455    .text.LOS_MuxDelete:00000080 .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:458    .text.LOS_MuxDelete:0000008a .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:460    .text.LOS_MuxDelete:0000008c .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:462    .text.LOS_MuxDelete:0000008e .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:463    .text.LOS_MuxDelete:0000008e .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:464    .text.LOS_MuxDelete:0000008e .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:466    .text.LOS_MuxDelete:00000090 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:467    .text.LOS_MuxDelete:00000090 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:470    .text.LOS_MuxDelete:00000092 .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:473    .text.LOS_MuxDelete:00000092 .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:474    .text.LOS_MuxDelete:00000092 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:476    .text.LOS_MuxDelete:00000096 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:479    .text.LOS_MuxDelete:0000009e .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:480    .text.LOS_MuxDelete:0000009e .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:481    .text.LOS_MuxDelete:0000009e .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:485    .text.LOS_MuxDelete:000000a0 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:509    .text.LOS_MuxPend:00000000 .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:511    .text.LOS_MuxPend:00000000 .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:512    .text.LOS_MuxPend:00000000 .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:513    .text.LOS_MuxPend:00000000 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:514    .text.LOS_MuxPend:00000000 .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:515    .text.LOS_MuxPend:00000000 .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:516    .text.LOS_MuxPend:00000000 .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:532    .text.LOS_MuxPend:0000000e .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:535    .text.LOS_MuxPend:00000014 .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:536    .text.LOS_MuxPend:00000014 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:540    .text.LOS_MuxPend:0000001c .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:547    .text.LOS_MuxPend:00000030 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:549    .text.LOS_MuxPend:00000034 .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:552    .text.LOS_MuxPend:0000003c .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:556    .text.LOS_MuxPend:00000040 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:579    .text.LOS_MuxPend:00000052 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:583    .text.LOS_MuxPend:00000058 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:586    .text.LOS_MuxPend:00000062 .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:587    .text.LOS_MuxPend:00000062 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:588    .text.LOS_MuxPend:00000062 .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:591    .text.LOS_MuxPend:00000064 .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:592    .text.LOS_MuxPend:00000064 .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:597    .text.LOS_MuxPend:0000006c .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:601    .text.LOS_MuxPend:00000070 .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:604    .text.LOS_MuxPend:00000072 .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:607    .text.LOS_MuxPend:00000072 .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:609    .text.LOS_MuxPend:00000072 .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:610    .text.LOS_MuxPend:00000072 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:612    .text.LOS_MuxPend:00000076 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:613    .text.LOS_MuxPend:00000076 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:616    .text.LOS_MuxPend:0000007e .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:618    .text.LOS_MuxPend:00000080 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:620    .text.LOS_MuxPend:00000084 .LM214
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 33
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:621    .text.LOS_MuxPend:00000084 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:624    .text.LOS_MuxPend:0000008e .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:625    .text.LOS_MuxPend:0000008e .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:629    .text.LOS_MuxPend:00000098 .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:631    .text.LOS_MuxPend:0000009a .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:635    .text.LOS_MuxPend:000000aa .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:638    .text.LOS_MuxPend:000000aa .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:640    .text.LOS_MuxPend:000000aa .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:646    .text.LOS_MuxPend:000000b4 .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:647    .text.LOS_MuxPend:000000b4 .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:648    .text.LOS_MuxPend:000000b4 .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:650    .text.LOS_MuxPend:000000b8 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:653    .text.LOS_MuxPend:000000c0 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:654    .text.LOS_MuxPend:000000c0 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:656    .text.LOS_MuxPend:000000c2 .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:657    .text.LOS_MuxPend:000000c2 .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:660    .text.LOS_MuxPend:000000c8 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:661    .text.LOS_MuxPend:000000c8 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:663    .text.LOS_MuxPend:000000cc .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:665    .text.LOS_MuxPend:000000d0 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:666    .text.LOS_MuxPend:000000d0 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:668    .text.LOS_MuxPend:000000d4 .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:670    .text.LOS_MuxPend:000000d4 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:674    .text.LOS_MuxPend:000000d6 .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:677    .text.LOS_MuxPend:000000de .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:678    .text.LOS_MuxPend:000000de .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:681    .text.LOS_MuxPend:000000e0 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:682    .text.LOS_MuxPend:000000e0 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:684    .text.LOS_MuxPend:000000e2 .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:686    .text.LOS_MuxPend:000000e6 .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:687    .text.LOS_MuxPend:000000e6 .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:692    .text.LOS_MuxPend:000000ee .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:693    .text.LOS_MuxPend:000000ee .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:695    .text.LOS_MuxPend:000000f2 .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:696    .text.LOS_MuxPend:000000f2 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:698    .text.LOS_MuxPend:000000f6 .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:700    .text.LOS_MuxPend:000000fa .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:702    .text.LOS_MuxPend:000000fe .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:703    .text.LOS_MuxPend:000000fe .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:705    .text.LOS_MuxPend:00000102 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:706    .text.LOS_MuxPend:00000102 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:710    .text.LOS_MuxPend:0000010a .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:715    .text.LOS_MuxPend:00000118 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:719    .text.LOS_MuxPend:00000122 .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:720    .text.LOS_MuxPend:00000122 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:723    .text.LOS_MuxPend:0000012a .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:724    .text.LOS_MuxPend:0000012a .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:727    .text.LOS_MuxPend:00000132 .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:729    .text.LOS_MuxPend:00000136 .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:732    .text.LOS_MuxPend:00000138 .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:733    .text.LOS_MuxPend:00000138 .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:736    .text.LOS_MuxPend:0000013e .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:737    .text.LOS_MuxPend:0000013e .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:739    .text.LOS_MuxPend:00000142 .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:741    .text.LOS_MuxPend:00000146 .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:743    .text.LOS_MuxPend:0000014a .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:745    .text.LOS_MuxPend:0000014a .LM271
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:746    .text.LOS_MuxPend:0000014a .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:750    .text.LOS_MuxPend:0000014e .LM273
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:754    .text.LOS_MuxPend:00000158 .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:755    .text.LOS_MuxPend:00000158 .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:764    .text.LOS_MuxPend:00000176 .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:765    .text.LOS_MuxPend:00000176 .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:769    .text.LOS_MuxPend:00000178 .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:775    .text.LOS_MuxPend:00000182 .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:781    .text.LOS_MuxPend:0000018c .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:795    .text.LOS_MuxPost:00000000 .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:797    .text.LOS_MuxPost:00000000 .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:798    .text.LOS_MuxPost:00000000 .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:799    .text.LOS_MuxPost:00000000 .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:809    .text.LOS_MuxPost:00000008 .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:811    .text.LOS_MuxPost:00000010 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:814    .text.LOS_MuxPost:00000012 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:817    .text.LOS_MuxPost:00000014 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:818    .text.LOS_MuxPost:00000014 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:819    .text.LOS_MuxPost:00000014 .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:820    .text.LOS_MuxPost:00000014 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:823    .text.LOS_MuxPost:0000001c .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:825    .text.LOS_MuxPost:0000001e .LM293
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:828    .text.LOS_MuxPost:00000020 .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:829    .text.LOS_MuxPost:00000020 .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:831    .text.LOS_MuxPost:00000024 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:835    .text.LOS_MuxPost:0000002a .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:838    .text.LOS_MuxPost:0000002c .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:841    .text.LOS_MuxPost:00000032 .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:842    .text.LOS_MuxPost:00000032 .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:844    .text.LOS_MuxPost:00000032 .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:845    .text.LOS_MuxPost:00000032 .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:847    .text.LOS_MuxPost:00000036 .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:849    .text.LOS_MuxPost:00000038 .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:851    .text.LOS_MuxPost:0000003a .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:856    .text.LOS_MuxPost:00000046 .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:859    .text.LOS_MuxPost:00000048 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:862    .text.LOS_MuxPost:00000050 .LM308
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:863    .text.LOS_MuxPost:00000050 .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:873    .text.LOS_MuxPost:00000074 .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:874    .text.LOS_MuxPost:00000074 .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:879    .text.LOS_MuxPost:0000007c .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:890    .text.LOS_MuxPost:00000084 .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:899    .text.LOS_MuxPost:00000088 .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:900    .text.LOS_MuxPost:00000088 .LM315
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:901    .text.LOS_MuxPost:00000088 .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:905    .text.LOS_MuxPost:0000008e .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:910    .text.LOS_MuxPost:00000094 .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:913    .text.LOS_MuxPost:0000009c .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:917    .text.LOS_MuxPost:0000009e .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:918    .text.LOS_MuxPost:0000009e .LM321
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:920    .text.LOS_MuxPost:000000a2 .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:923    .text.LOS_MuxPost:000000aa .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:924    .text.LOS_MuxPost:000000aa .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:927    .text.LOS_MuxPost:000000ac .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:931    .text.LOS_MuxPost:000000b4 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:934    .text.LOS_MuxPost:000000b4 .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:936    .text.LOS_MuxPost:000000b4 .LM328
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:937    .text.LOS_MuxPost:000000b4 .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:940    .text.LOS_MuxPost:000000b6 .LM330
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:943    .text.LOS_MuxPost:000000b6 .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:945    .text.LOS_MuxPost:000000ba .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:947    .text.LOS_MuxPost:000000be .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:948    .text.LOS_MuxPost:000000be .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:951    .text.LOS_MuxPost:000000c4 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:953    .text.LOS_MuxPost:000000c8 .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:956    .text.LOS_MuxPost:000000cc .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:957    .text.LOS_MuxPost:000000cc .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:958    .text.LOS_MuxPost:000000cc .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:960    .text.LOS_MuxPost:000000ce .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:961    .text.LOS_MuxPost:000000ce .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:963    .text.LOS_MuxPost:000000d2 .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:964    .text.LOS_MuxPost:000000d2 .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:966    .text.LOS_MuxPost:000000d6 .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:969    .text.LOS_MuxPost:000000de .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:973    .text.LOS_MuxPost:000000e8 .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:974    .text.LOS_MuxPost:000000e8 .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:978    .text.LOS_MuxPost:000000f0 .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:983    .text.LOS_MuxPost:000000f4 .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:984    .text.LOS_MuxPost:000000f4 .LM350
+C:\Users\Administrator\AppData\Local\Temp\ccDMkfFs.s:986    .text.LOS_MuxPost:000000f8 .LM351
+
+UNDEFINED SYMBOLS
+m_aucSysMem0
+LOS_MemAlloc
+HalIntLock
+HalIntRestore
+LOS_ErrHandle
+HalIsIntActive
+g_losTaskLock
+OsLogLevelCheck
+puts
+g_losTask
+OsSchedModifyTaskSchedParam
+OsSchedTaskWait
+LOS_Schedule
+OsSchedTaskWake

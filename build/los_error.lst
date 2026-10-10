@@ -1,0 +1,147 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s 			page 1
+
+
+   1              		.file	"los_error.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.LOS_ErrHandle,"ax",@progbits
+  10              		.align	1
+  11              		.globl	LOS_ErrHandle
+  13              	LOS_ErrHandle:
+  14              	.LVL0:
+  15              	.LFB1:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 97070000 		lw	a5,g_userErrFunc
+  20      83A70700 
+  21              	.LM4:
+  22 0008 81CB     		beq	a5,zero,.L7
+  23              	.LM5:
+  24              	.LM6:
+  25 000a 4111     		addi	sp,sp,-16
+  26              	.LCFI0:
+  27              		.cfi_def_cfa_offset 16
+  28 000c 06C6     		sw	ra,12(sp)
+  29              		.cfi_offset 1, -4
+  30              	.LM7:
+  31 000e 8297     		jalr	a5
+  32              	.LVL1:
+  33              	.LM8:
+  34              	.LM9:
+  35 0010 B240     		lw	ra,12(sp)
+  36              		.cfi_restore 1
+  37 0012 0145     		li	a0,0
+  38 0014 4101     		addi	sp,sp,16
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 0
+  41 0016 8280     		jr	ra
+  42              	.LVL2:
+  43              	.L7:
+  44              	.LM10:
+  45              	.LM11:
+  46 0018 0145     		li	a0,0
+  47              	.LVL3:
+  48              	.LM12:
+  49 001a 8280     		ret
+  50              		.cfi_endproc
+  51              	.LFE1:
+  53              		.globl	g_userErrFunc
+  54              		.section	.sbss.g_userErrFunc,"aw",@nobits
+  55              		.align	2
+  58              	g_userErrFunc:
+  59 0000 00000000 		.zero	4
+  60              		.text
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s 			page 2
+
+
+  61              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 los_error.c
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:10     .text.LOS_ErrHandle:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:13     .text.LOS_ErrHandle:00000000 LOS_ErrHandle
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:17     .text.LOS_ErrHandle:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:58     .sbss.g_userErrFunc:00000000 g_userErrFunc
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:27     .text.LOS_ErrHandle:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:29     .text.LOS_ErrHandle:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:36     .text.LOS_ErrHandle:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:40     .text.LOS_ErrHandle:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:50     .text.LOS_ErrHandle:0000001c .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:20     .text.LOS_ErrHandle:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:43     .text.LOS_ErrHandle:00000018 .L7
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:317    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:872    .debug_str:00000033 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:868    .debug_str:00000008 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:890    .debug_str:00000169 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:742    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:748    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:878    .debug_str:00000107 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:892    .debug_str:00000179 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:882    .debug_str:00000133 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:886    .debug_str:0000014f .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:904    .debug_str:000001ae .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:916    .debug_str:000001e7 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:910    .debug_str:000001cc .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:876    .debug_str:00000101 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:888    .debug_str:00000162 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:894    .debug_str:00000186 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:898    .debug_str:00000193 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:902    .debug_str:000001a0 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:880    .debug_str:0000011e .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:870    .debug_str:00000024 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:896    .debug_str:0000018b .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:914    .debug_str:000001db .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:884    .debug_str:00000141 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:908    .debug_str:000001be .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:15     .text.LOS_ErrHandle:00000000 .LFB1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:51     .text.LOS_ErrHandle:0000001c .LFE1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:541    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:906    .debug_str:000001b5 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:568    .debug_loc:00000034 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:559    .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:874    .debug_str:000000fa .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:612    .debug_loc:00000080 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:605    .debug_loc:0000007a .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:866    .debug_str:00000000 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:643    .debug_loc:000000b8 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:636    .debug_loc:000000b2 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:900    .debug_str:00000198 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:674    .debug_loc:000000f0 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:667    .debug_loc:000000ea .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:912    .debug_str:000001d6 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:705    .debug_loc:00000128 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:698    .debug_loc:00000122 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:32     .text.LOS_ErrHandle:00000010 .LVL1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:26     .text.LOS_ErrHandle:0000000c .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:39     .text.LOS_ErrHandle:00000016 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:14     .text.LOS_ErrHandle:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:42     .text.LOS_ErrHandle:00000018 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:47     .text.LOS_ErrHandle:0000001a .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:63     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:16     .text.LOS_ErrHandle:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:18     .text.LOS_ErrHandle:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:19     .text.LOS_ErrHandle:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:21     .text.LOS_ErrHandle:00000008 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:23     .text.LOS_ErrHandle:0000000a .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:24     .text.LOS_ErrHandle:0000000a .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:30     .text.LOS_ErrHandle:0000000e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:33     .text.LOS_ErrHandle:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:34     .text.LOS_ErrHandle:00000010 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:44     .text.LOS_ErrHandle:00000018 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:45     .text.LOS_ErrHandle:00000018 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccSlTLEq.s:48     .text.LOS_ErrHandle:0000001a .LM12
+
+NO UNDEFINED SYMBOLS

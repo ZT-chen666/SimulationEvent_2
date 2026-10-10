@@ -1,0 +1,197 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s 			page 1
+
+
+   1              		.file	"wmemcpy_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.wmemcpy_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	wmemcpy_s
+  13              	wmemcpy_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 B7070020 		li	a5,536870912
+  21              	.LM4:
+  22 0004 1388F5FF 		addi	a6,a1,-1
+  23              	.LM5:
+  24 0008 F917     		addi	a5,a5,-2
+  25 000a 63EC0703 		bgtu	a6,a5,.L4
+  26              	.LM6:
+  27              	.LM7:
+  28 000e 63F4D502 		bgeu	a1,a3,.L3
+  29              	.LM8:
+  30              	.LM9:
+  31              	.LM10:
+  32 0012 93072002 		li	a5,34
+  33              	.LM11:
+  34 0016 05C9     		beq	a0,zero,.L8
+  35              	.LM12:
+  36              	.LM13:
+  37 0018 4111     		addi	sp,sp,-16
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 16
+  40              	.LM14:
+  41 001a 13962500 		slli	a2,a1,2
+  42              	.LVL1:
+  43              	.LM15:
+  44 001e 8145     		li	a1,0
+  45              	.LVL2:
+  46              	.LM16:
+  47 0020 06C6     		sw	ra,12(sp)
+  48              		.cfi_offset 1, -4
+  49              	.LM17:
+  50 0022 97000000 		call	memset
+  50      E7800000 
+  51              	.LVL3:
+  52              	.LM18:
+  53              	.LM19:
+  54 002a B240     		lw	ra,12(sp)
+  55              		.cfi_restore 1
+  56              	.LM20:
+  57 002c 9307200A 		li	a5,162
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s 			page 2
+
+
+  58              	.LM21:
+  59 0030 3E85     		mv	a0,a5
+  60 0032 4101     		addi	sp,sp,16
+  61              	.LCFI1:
+  62              		.cfi_def_cfa_offset 0
+  63 0034 8280     		jr	ra
+  64              	.LVL4:
+  65              	.L3:
+  66              	.LM22:
+  67              	.LM23:
+  68 0036 8A06     		slli	a3,a3,2
+  69              	.LVL5:
+  70              	.LM24:
+  71 0038 8A05     		slli	a1,a1,2
+  72              	.LVL6:
+  73              	.LM25:
+  74 003a 17030000 		tail	memcpy_s
+  74      67000300 
+  75              	.LVL7:
+  76              	.L4:
+  77              	.LM26:
+  78 0042 93072002 		li	a5,34
+  79              	.L8:
+  80              	.LM27:
+  81 0046 3E85     		mv	a0,a5
+  82              	.LVL8:
+  83              	.LM28:
+  84 0048 8280     		ret
+  85              		.cfi_endproc
+  86              	.LFE4:
+  88              		.text
+  89              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 wmemcpy_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:10     .text.wmemcpy_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:13     .text.wmemcpy_s:00000000 wmemcpy_s
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:17     .text.wmemcpy_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:39     .text.wmemcpy_s:0000001a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:48     .text.wmemcpy_s:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:55     .text.wmemcpy_s:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:62     .text.wmemcpy_s:00000034 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:85     .text.wmemcpy_s:0000004a .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:76     .text.wmemcpy_s:00000042 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:65     .text.wmemcpy_s:00000036 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:79     .text.wmemcpy_s:00000046 .L8
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:349    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1101   .debug_str:0000001d .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1121   .debug_str:00000147 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1133   .debug_str:000001c5 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:869    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:875    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1107   .debug_str:000000fe .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1141   .debug_str:000001f2 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1129   .debug_str:000001af .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1113   .debug_str:00000125 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1139   .debug_str:000001e8 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1127   .debug_str:0000019c .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1119   .debug_str:0000013e .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1105   .debug_str:000000ec .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1125   .debug_str:0000018e .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1097   .debug_str:00000011 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1111   .debug_str:0000011d .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1135   .debug_str:000001d5 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1115   .debug_str:00000133 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1109   .debug_str:00000115 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1123   .debug_str:00000185 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1137   .debug_str:000001e1 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1131   .debug_str:000001bb .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:15     .text.wmemcpy_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:86     .text.wmemcpy_s:0000004a .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:599    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1099   .debug_str:00000018 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:630    .debug_loc:00000038 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:617    .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1103   .debug_str:000000e4 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:699    .debug_loc:000000ab .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:684    .debug_loc:0000009d .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:763    .debug_loc:00000120 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:752    .debug_loc:00000116 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1117   .debug_str:00000138 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:815    .debug_loc:0000017b .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:804    .debug_loc:00000171 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:51     .text.wmemcpy_s:0000002a .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:75     .text.wmemcpy_s:00000042 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:1095   .debug_str:00000000 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:38     .text.wmemcpy_s:0000001a .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:61     .text.wmemcpy_s:00000034 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:14     .text.wmemcpy_s:00000000 .LVL0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:64     .text.wmemcpy_s:00000036 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:82     .text.wmemcpy_s:00000048 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:45     .text.wmemcpy_s:00000020 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:72     .text.wmemcpy_s:0000003a .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:42     .text.wmemcpy_s:0000001e .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:69     .text.wmemcpy_s:00000038 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:91     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:16     .text.wmemcpy_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:18     .text.wmemcpy_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:19     .text.wmemcpy_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:21     .text.wmemcpy_s:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:23     .text.wmemcpy_s:00000008 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:26     .text.wmemcpy_s:0000000e .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:27     .text.wmemcpy_s:0000000e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:29     .text.wmemcpy_s:00000012 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:30     .text.wmemcpy_s:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:31     .text.wmemcpy_s:00000012 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:33     .text.wmemcpy_s:00000016 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:35     .text.wmemcpy_s:00000018 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:36     .text.wmemcpy_s:00000018 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:40     .text.wmemcpy_s:0000001a .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:43     .text.wmemcpy_s:0000001e .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:46     .text.wmemcpy_s:00000020 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:49     .text.wmemcpy_s:00000022 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:52     .text.wmemcpy_s:0000002a .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:53     .text.wmemcpy_s:0000002a .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:56     .text.wmemcpy_s:0000002c .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:58     .text.wmemcpy_s:00000030 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:66     .text.wmemcpy_s:00000036 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:67     .text.wmemcpy_s:00000036 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:70     .text.wmemcpy_s:00000038 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:73     .text.wmemcpy_s:0000003a .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:77     .text.wmemcpy_s:00000042 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:80     .text.wmemcpy_s:00000046 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccWEz5n0.s:83     .text.wmemcpy_s:00000048 .LM28
+
+UNDEFINED SYMBOLS
+memset
+memcpy_s

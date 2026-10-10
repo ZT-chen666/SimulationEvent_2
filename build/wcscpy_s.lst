@@ -1,0 +1,313 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 1
+
+
+   1              		.file	"wcscpy_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.wcscpy_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	wcscpy_s
+  13              	wcscpy_s:
+  14              	.LVL0:
+  15              	.LFB5:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              	.LM4:
+  24 0002 B7070020 		li	a5,536870912
+  25              	.LM5:
+  26 0006 22C4     		sw	s0,8(sp)
+  27 0008 06C6     		sw	ra,12(sp)
+  28              		.cfi_offset 8, -8
+  29              		.cfi_offset 1, -4
+  30              	.LM6:
+  31 000a 1387F5FF 		addi	a4,a1,-1
+  32              	.LM7:
+  33 000e F917     		addi	a5,a5,-2
+  34              	.LM8:
+  35 0010 13042002 		li	s0,34
+  36              	.LM9:
+  37 0014 63EAE700 		bgtu	a4,a5,.L1
+  38              	.LM10:
+  39              	.LM11:
+  40 0018 5944     		li	s0,22
+  41              	.LM12:
+  42 001a 19C5     		beq	a0,zero,.L1
+  43              	.LBB5:
+  44              	.LBB6:
+  45              	.LBB7:
+  46              	.LM13:
+  47 001c 8147     		li	a5,0
+  48              	.LBE7:
+  49              	.LBE6:
+  50              	.LBE5:
+  51              	.LM14:
+  52 001e 09EE     		bne	a2,zero,.L3
+  53              	.LM15:
+  54              	.LM16:
+  55              	.LM17:
+  56              	.LM18:
+  57 0020 23200500 		sw	zero,0(a0)
+  58              	.LM19:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 2
+
+
+  59              	.LM20:
+  60 0024 13046009 		li	s0,150
+  61              	.LVL1:
+  62              	.L1:
+  63              	.LM21:
+  64 0028 B240     		lw	ra,12(sp)
+  65              		.cfi_remember_state
+  66              		.cfi_restore 1
+  67 002a 2285     		mv	a0,s0
+  68 002c 2244     		lw	s0,8(sp)
+  69              		.cfi_restore 8
+  70 002e 4101     		addi	sp,sp,16
+  71              	.LCFI1:
+  72              		.cfi_def_cfa_offset 0
+  73 0030 8280     		jr	ra
+  74              	.LVL2:
+  75              	.L5:
+  76              	.LCFI2:
+  77              		.cfi_restore_state
+  78              	.LBB10:
+  79              	.LBB9:
+  80              	.LBB8:
+  81              	.LM22:
+  82              	.LM23:
+  83 0032 8507     		addi	a5,a5,1
+  84              	.LVL3:
+  85              	.LM24:
+  86              	.LM25:
+  87 0034 638AF500 		beq	a1,a5,.L4
+  88              	.LVL4:
+  89              	.L3:
+  90              	.LM26:
+  91 0038 13972700 		slli	a4,a5,2
+  92 003c B306E600 		add	a3,a2,a4
+  93 0040 8042     		lw	s0,0(a3)
+  94 0042 65F8     		bne	s0,zero,.L5
+  95              	.LM27:
+  96              	.LVL5:
+  97              	.LM28:
+  98              	.LBE8:
+  99              	.LM29:
+ 100              	.LM30:
+ 101              	.LM31:
+ 102 0044 6397F500 		bne	a1,a5,.L6
+ 103              	.LVL6:
+ 104              	.L4:
+ 105              	.LM32:
+ 106              	.LM33:
+ 107 0048 23200500 		sw	zero,0(a0)
+ 108              	.LM34:
+ 109              	.LM35:
+ 110              	.LM36:
+ 111 004c 1304200A 		li	s0,162
+ 112 0050 E1BF     		j	.L1
+ 113              	.LVL7:
+ 114              	.L6:
+ 115              	.LM37:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 3
+
+
+ 116              	.LM38:
+ 117 0052 E30BC5FC 		beq	a0,a2,.L1
+ 118              	.LM39:
+ 119              	.LM40:
+ 120 0056 637CA600 		bleu	a0,a2,.L8
+ 121              	.LM41:
+ 122 005a 63FEA600 		bleu	a0,a3,.L10
+ 123              	.L9:
+ 124 005e B285     		mv	a1,a2
+ 125              	.LVL8:
+ 126              	.LM42:
+ 127 0060 13064700 		addi	a2,a4,4
+ 128              	.LVL9:
+ 129              	.LM43:
+ 130 0064 97000000 		call	memcpy
+ 130      E7800000 
+ 131              	.LVL10:
+ 132              	.LM44:
+ 133              	.LM45:
+ 134 006c 75BF     		j	.L1
+ 135              	.LVL11:
+ 136              	.L8:
+ 137              	.LM46:
+ 138 006e B307E500 		add	a5,a0,a4
+ 139 0072 E3E6C7FE 		bgtu	a2,a5,.L9
+ 140              	.L10:
+ 141              	.LM47:
+ 142              	.LM48:
+ 143 0076 23200500 		sw	zero,0(a0)
+ 144              	.LM49:
+ 145              	.LM50:
+ 146              	.LM51:
+ 147 007a 1304600B 		li	s0,182
+ 148 007e 6DB7     		j	.L1
+ 149              	.LBE9:
+ 150              	.LBE10:
+ 151              		.cfi_endproc
+ 152              	.LFE5:
+ 154              		.text
+ 155              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 wcscpy_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:10     .text.wcscpy_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:13     .text.wcscpy_s:00000000 wcscpy_s
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:17     .text.wcscpy_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:22     .text.wcscpy_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:28     .text.wcscpy_s:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:29     .text.wcscpy_s:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:65     .text.wcscpy_s:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:66     .text.wcscpy_s:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:69     .text.wcscpy_s:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:72     .text.wcscpy_s:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:77     .text.wcscpy_s:00000032 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:151    .text.wcscpy_s:00000080 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:62     .text.wcscpy_s:00000028 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:89     .text.wcscpy_s:00000038 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:104    .text.wcscpy_s:00000048 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:75     .text.wcscpy_s:00000032 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:114    .text.wcscpy_s:00000052 .L6
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:136    .text.wcscpy_s:0000006e .L8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:140    .text.wcscpy_s:00000076 .L10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:123    .text.wcscpy_s:0000005e .L9
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:408    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1408   .debug_str:0000002e .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1434   .debug_str:00000174 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1442   .debug_str:000001d7 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:979    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:997    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1416   .debug_str:00000119 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1450   .debug_str:00000207 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1440   .debug_str:000001cb .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1422   .debug_str:00000140 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1448   .debug_str:000001fd .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1438   .debug_str:000001b8 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1428   .debug_str:0000015a .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1414   .debug_str:00000107 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1400   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1406   .debug_str:00000027 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1420   .debug_str:00000138 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1446   .debug_str:000001f1 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1452   .debug_str:00000214 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1418   .debug_str:00000130 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1436   .debug_str:000001b1 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1432   .debug_str:0000016b .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:15     .text.wcscpy_s:00000000 .LFB5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:152    .text.wcscpy_s:00000080 .LFE5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:733    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1402   .debug_str:0000000e .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:767    .debug_loc:00000042 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:756    .debug_loc:00000038 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1412   .debug_str:000000ff .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:819    .debug_loc:0000009d .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:808    .debug_loc:00000093 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1424   .debug_str:0000014e .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:873    .debug_loc:000000fa .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:860    .debug_loc:000000ee .LVUS3
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 5
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:923    .debug_loc:0000015a .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:918    .debug_loc:00000156 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:953    .debug_loc:0000018a .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:948    .debug_loc:00000186 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:131    .text.wcscpy_s:0000006c .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1410   .debug_str:000000f5 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1444   .debug_str:000001e7 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1430   .debug_str:00000163 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1426   .debug_str:00000155 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:1404   .debug_str:00000016 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:21     .text.wcscpy_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:71     .text.wcscpy_s:00000030 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:76     .text.wcscpy_s:00000032 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:14     .text.wcscpy_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:61     .text.wcscpy_s:00000028 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:74     .text.wcscpy_s:00000032 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:135    .text.wcscpy_s:0000006e .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:125    .text.wcscpy_s:00000060 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:128    .text.wcscpy_s:00000064 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:84     .text.wcscpy_s:00000034 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:88     .text.wcscpy_s:00000038 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:157    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:43     .text.wcscpy_s:0000001c .LBB5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:50     .text.wcscpy_s:0000001e .LBE5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:78     .text.wcscpy_s:00000032 .LBB10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:150    .text.wcscpy_s:00000080 .LBE10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:45     .text.wcscpy_s:0000001c .LBB7
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:48     .text.wcscpy_s:0000001e .LBE7
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:80     .text.wcscpy_s:00000032 .LBB8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:98     .text.wcscpy_s:00000044 .LBE8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:16     .text.wcscpy_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:18     .text.wcscpy_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:19     .text.wcscpy_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:23     .text.wcscpy_s:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:25     .text.wcscpy_s:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:30     .text.wcscpy_s:0000000a .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:32     .text.wcscpy_s:0000000e .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:34     .text.wcscpy_s:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:36     .text.wcscpy_s:00000014 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:38     .text.wcscpy_s:00000018 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:39     .text.wcscpy_s:00000018 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:41     .text.wcscpy_s:0000001a .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:46     .text.wcscpy_s:0000001c .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:51     .text.wcscpy_s:0000001e .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:53     .text.wcscpy_s:00000020 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:54     .text.wcscpy_s:00000020 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:55     .text.wcscpy_s:00000020 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:56     .text.wcscpy_s:00000020 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:58     .text.wcscpy_s:00000024 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:59     .text.wcscpy_s:00000024 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:63     .text.wcscpy_s:00000028 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:81     .text.wcscpy_s:00000032 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:82     .text.wcscpy_s:00000032 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:85     .text.wcscpy_s:00000034 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:86     .text.wcscpy_s:00000034 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:90     .text.wcscpy_s:00000038 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:95     .text.wcscpy_s:00000044 .LM27
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s 			page 6
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:97     .text.wcscpy_s:00000044 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:99     .text.wcscpy_s:00000044 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:100    .text.wcscpy_s:00000044 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:101    .text.wcscpy_s:00000044 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:105    .text.wcscpy_s:00000048 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:106    .text.wcscpy_s:00000048 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:108    .text.wcscpy_s:0000004c .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:109    .text.wcscpy_s:0000004c .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:110    .text.wcscpy_s:0000004c .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:115    .text.wcscpy_s:00000052 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:116    .text.wcscpy_s:00000052 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:118    .text.wcscpy_s:00000056 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:119    .text.wcscpy_s:00000056 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:121    .text.wcscpy_s:0000005a .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:126    .text.wcscpy_s:00000060 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:129    .text.wcscpy_s:00000064 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:132    .text.wcscpy_s:0000006c .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:133    .text.wcscpy_s:0000006c .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:137    .text.wcscpy_s:0000006e .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:141    .text.wcscpy_s:00000076 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:142    .text.wcscpy_s:00000076 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:144    .text.wcscpy_s:0000007a .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:145    .text.wcscpy_s:0000007a .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccg70T4G.s:146    .text.wcscpy_s:0000007a .LM51
+
+UNDEFINED SYMBOLS
+memcpy

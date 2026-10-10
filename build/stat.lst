@@ -1,0 +1,120 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s 			page 1
+
+
+   1              		.file	"stat.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._stat,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_stat
+  13              	_stat:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 8967     		li	a5,8192
+  21 0002 DCC1     		sw	a5,4(a1)
+  22              	.LM4:
+  23              	.LM5:
+  24 0004 0145     		li	a0,0
+  25              	.LVL1:
+  26              	.LM6:
+  27 0006 8280     		ret
+  28              		.cfi_endproc
+  29              	.LFE150:
+  31              		.text
+  32              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stat.c
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:10     .text._stat:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:13     .text._stat:00000000 _stat
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:17     .text._stat:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:28     .text._stat:00000008 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:435    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:797    .debug_str:00000055 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:839    .debug_str:000001e0 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:835    .debug_str:000001c8 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:661    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:667    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:885    .debug_str:000002df .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:841    .debug_str:00000213 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:861    .debug_str:00000267 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:877    .debug_str:000002ad .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:879    .debug_str:000002b9 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:811    .debug_str:0000014c .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:869    .debug_str:0000028c .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:881    .debug_str:000002c5 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:875    .debug_str:000002a4 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:833    .debug_str:000001bd .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:819    .debug_str:0000017c .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:813    .debug_str:0000015a .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:847    .debug_str:0000022c .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:857    .debug_str:00000254 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:827    .debug_str:000001a4 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:815    .debug_str:0000016a .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:785    .debug_str:00000023 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:855    .debug_str:0000024c .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:831    .debug_str:000001b5 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:863    .debug_str:00000275 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:787    .debug_str:0000002b .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:779    .debug_str:0000000c .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:843    .debug_str:00000220 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:845    .debug_str:00000225 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:803    .debug_str:0000012e .LASF35
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:859    .debug_str:00000260 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:793    .debug_str:00000045 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:791    .debug_str:0000003c .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:829    .debug_str:000001ab .LASF27
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:823    .debug_str:00000196 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:777    .debug_str:00000006 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:849    .debug_str:00000237 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:809    .debug_str:00000146 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:775    .debug_str:00000000 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:883    .debug_str:000002d8 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:783    .debug_str:0000001b .LASF34
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:781    .debug_str:00000016 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:871    .debug_str:00000296 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:799    .debug_str:0000011c .LASF38
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:821    .debug_str:0000018e .LASF39
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:789    .debug_str:00000033 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:853    .debug_str:00000245 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:873    .debug_str:0000029d .LASF42
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:837    .debug_str:000001d8 .LASF43
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s 			page 3
+
+
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:795    .debug_str:0000004d .LASF44
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:825    .debug_str:0000019c .LASF45
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:867    .debug_str:00000284 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:851    .debug_str:0000023d .LASF47
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:801    .debug_str:00000123 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:817    .debug_str:00000172 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:805    .debug_str:00000137 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:865    .debug_str:0000027e .LASF54
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:15     .text._stat:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:29     .text._stat:00000008 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:807    .debug_str:00000141 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:628    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:623    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:14     .text._stat:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:25     .text._stat:00000006 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:34     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:16     .text._stat:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:18     .text._stat:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:19     .text._stat:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:22     .text._stat:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:23     .text._stat:00000004 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cciQKVeV.s:26     .text._stat:00000006 .LM6
+
+NO UNDEFINED SYMBOLS

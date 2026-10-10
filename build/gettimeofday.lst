@@ -1,0 +1,1524 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 1
+
+
+   1              		.file	"gettimeofday.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._gettimeofday,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_gettimeofday
+  13              	_gettimeofday:
+  14              	.LVL0:
+  15              	.LFB172:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LBB8:
+  21              	.LBI8:
+  22              	.LM4:
+  23              	.LBB9:
+  24              	.LM5:
+  25              	.LM6:
+  26              	.LM7:
+  27              	.LBB10:
+  28              	.LM8:
+  29              	.LM9:
+  30              	.LBE10:
+  31              	.LBE9:
+  32              	.LBE8:
+  33              	.LM10:
+  34 0000 7971     		addi	sp,sp,-48
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 48
+  37 0002 22D4     		sw	s0,40(sp)
+  38 0004 06D6     		sw	ra,44(sp)
+  39 0006 26D2     		sw	s1,36(sp)
+  40 0008 4AD0     		sw	s2,32(sp)
+  41              		.cfi_offset 8, -8
+  42              		.cfi_offset 1, -4
+  43              		.cfi_offset 9, -12
+  44              		.cfi_offset 18, -16
+  45              	.LM11:
+  46 000a 2A84     		mv	s0,a0
+  47              	.LBB18:
+  48              	.LBB15:
+  49              	.LBB11:
+  50              	.LM12:
+  51              	 #APP
+  52              	# 1064 "liteos_m//kernel/arch/risc-v/nuclei/gcc/nmsis/Core/Include/core_feature_base.h" 1
+   1              	/*
+   2              	 * Copyright (c) 2019 Nuclei Limited. All rights reserved.
+   3              	 *
+   4              	 * SPDX-License-Identifier: Apache-2.0
+   5              	 *
+   6              	 * Licensed under the Apache License, Version 2.0 (the License); you may
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 2
+
+
+   7              	 * not use this file except in compliance with the License.
+   8              	 * You may obtain a copy of the License at
+   9              	 *
+  10              	 * www.apache.org/licenses/LICENSE-2.0
+  11              	 *
+  12              	 * Unless required by applicable law or agreed to in writing, software
+  13              	 * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  14              	 * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  15              	 * See the License for the specific language governing permissions and
+  16              	 * limitations under the License.
+  17              	 */
+  18              	
+  19              	#ifndef __CORE_FEATURE_BASE__
+  20              	#define __CORE_FEATURE_BASE__
+  21              	/*!
+  22              	 * @file     core_feature_base.h
+  23              	 * @brief    Base core feature API for Nuclei N/NX Core
+  24              	 */
+  25              	/*
+  26              	 * Core Base Feature Configuration Macro:
+  27              	 * 1. __HARTID_OFFSET:  Optional, define this macro when your cpu system first hart hartid and hart
+  28              	 *    eg. If your cpu system, first hart hartid is 2, hart index is 0, then set this macro to 2
+  29              	 *
+  30              	 */
+  31              	#include <stdint.h>
+  32              	
+  33              	#ifdef __cplusplus
+  34              	 extern "C" {
+  35              	#endif
+  36              	
+  37              	#include "nmsis_compiler.h"
+  38              	
+  39              	/**
+  40              	 * \defgroup NMSIS_Core_Registers     Register Define and Type Definitions
+  41              	 * \brief   Type definitions and defines for core registers.
+  42              	 *
+  43              	 * @{
+  44              	 */
+  45              	#ifndef __RISCV_XLEN
+  46              	  /** \brief Refer to the width of an integer register in bits(either 32 or 64) */
+  47              	  #ifndef __riscv_xlen
+  48              	    #define __RISCV_XLEN    32
+  49              	  #else
+  50              	    #define __RISCV_XLEN    __riscv_xlen
+  51              	  #endif
+  52              	#endif /* __RISCV_XLEN */
+  53              	
+  54              	/** \brief Type of Control and Status Register(CSR), depends on the XLEN defined in RISC-V */
+  55              	typedef unsigned long rv_csr_t;
+  56              	
+  57              	/** @} */ /* End of Doxygen Group NMSIS_Core_Registers */
+  58              	/**
+  59              	 * \defgroup NMSIS_Core_Base_Registers     Base Register Define and Type Definitions
+  60              	 * \ingroup NMSIS_Core_Registers
+  61              	 * \brief   Type definitions and defines for base core registers.
+  62              	 *
+  63              	 * @{
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 3
+
+
+  64              	 */
+  65              	/**
+  66              	 * \brief  Union type to access MISA CSR register.
+  67              	 */
+  68              	typedef union {
+  69              	    struct {
+  70              	        rv_csr_t a:1;                           /*!< bit: 0  Atomic extension */
+  71              	        rv_csr_t b:1;                           /*!< bit: 1  B extension */
+  72              	        rv_csr_t c:1;                           /*!< bit: 2  Compressed extension */
+  73              	        rv_csr_t d:1;                           /*!< bit: 3  Double-precision floating-point extens
+  74              	        rv_csr_t e:1;                           /*!< bit: 4  RV32E/64E base ISA */
+  75              	        rv_csr_t f:1;                           /*!< bit: 5  Single-precision floating-point extens
+  76              	        rv_csr_t g:1;                           /*!< bit: 6  Reserved */
+  77              	        rv_csr_t h:1;                           /*!< bit: 7  Hypervisor extension */
+  78              	        rv_csr_t i:1;                           /*!< bit: 8  RV32I/64I/128I base ISA */
+  79              	        rv_csr_t j:1;                           /*!< bit: 9  Reserved */
+  80              	        rv_csr_t k:1;                           /*!< bit: 10 Reserved */
+  81              	        rv_csr_t l:1;                           /*!< bit: 11 Reserved */
+  82              	        rv_csr_t m:1;                           /*!< bit: 12 Integer Multiply/Divide extension */
+  83              	        rv_csr_t n:1;                           /*!< bit: 13 Tentatively reserved for User-Level In
+  84              	        rv_csr_t o:1;                           /*!< bit: 14 Reserved */
+  85              	        rv_csr_t p:1;                           /*!< bit: 15 Tentatively reserved for Packed-SIMD e
+  86              	        rv_csr_t q:1;                           /*!< bit: 16 Quad-precision floating-point extensio
+  87              	        rv_csr_t r:1;                           /*!< bit: 17 Reserved */
+  88              	        rv_csr_t s:1;                           /*!< bit: 18 Supervisor mode implemented  */
+  89              	        rv_csr_t t:1;                           /*!< bit: 19 Reserved */
+  90              	        rv_csr_t u:1;                           /*!< bit: 20 User mode implemented  */
+  91              	        rv_csr_t v:1;                           /*!< bit: 21 Vector extension  */
+  92              	        rv_csr_t w:1;                           /*!< bit: 22 Reserved */
+  93              	        rv_csr_t x:1;                           /*!< bit: 23 Non-standard extensions present  */
+  94              	        rv_csr_t y:1;                           /*!< bit: 24 Reserved */
+  95              	        rv_csr_t z:1;                           /*!< bit: 25 Reserved */
+  96              	        rv_csr_t _reserved0:__RISCV_XLEN-28;    /*!< bit: 26..XLEN-3 Reserved  */
+  97              	        rv_csr_t mxl:2;                         /*!< bit: XLEN-2..XLEN-1 Machine XLEN  */
+  98              	    } b;                                        /*!< Structure used for bit  access */
+  99              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 100              	} CSR_MISA_Type;
+ 101              	
+ 102              	/**
+ 103              	 * \brief  Union type to access MSTATUS CSR register.
+ 104              	 */
+ 105              	typedef union {
+ 106              	    struct {
+ 107              	        rv_csr_t _reserved0:1;                  /*!< bit: 0  Reserved */
+ 108              	        rv_csr_t sie:1;                         /*!< bit: 1  supervisor interrupt enable flag */
+ 109              	        rv_csr_t _reserved1:1;                  /*!< bit: 2  Reserved */
+ 110              	        rv_csr_t mie:1;                         /*!< bit: 3  machine mode interrupt enable flag */
+ 111              	        rv_csr_t _reserved2:1;                  /*!< bit: 4  Reserved */
+ 112              	        rv_csr_t spie:1;                        /*!< bit: 5  supervisor mode interrupt enable flag 
+ 113              	        rv_csr_t ube:1;                         /*!< bit: 6  U-mode non-instruction-fetch memory ac
+ 114              	        rv_csr_t mpie:1;                        /*!< bit: 7  machine mode previous interrupt enable
+ 115              	        rv_csr_t spp:1;                         /*!< bit: 8  supervisor previous privilede mode */
+ 116              	        rv_csr_t vs:2;                          /*!< bit: 9..10  vector status flag */
+ 117              	        rv_csr_t mpp:2;                         /*!< bit: 11..12 machine previous privilede mode  *
+ 118              	        rv_csr_t fs:2;                          /*!< bit: 13..14 FS status flag */
+ 119              	        rv_csr_t xs:2;                          /*!< bit: 15..16 XS status flag */
+ 120              	        rv_csr_t mprv:1;                        /*!< bit: 17 Modify PRiVilege */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 4
+
+
+ 121              	        rv_csr_t sum:1;                         /*!< bit: 18 Supervisor Mode load and store protect
+ 122              	        rv_csr_t mxr:1;                         /*!< bit: 19 Make eXecutable Readable */
+ 123              	        rv_csr_t tvm:1;                         /*!< bit: 20 Trap Virtual Memory */
+ 124              	        rv_csr_t tw:1;                          /*!< bit: 21 Timeout Wait */
+ 125              	        rv_csr_t tsr:1;                         /*!< bit: 22 Trap SRET */
+ 126              	        rv_csr_t spelp:1;                       /*!< bit: 23 Supervisor mode Previous Expected Land
+ 127              	        rv_csr_t sdt:1;                         /*!< bit: 24 S-mode-disable-trap */
+ 128              	#if defined(__RISCV_XLEN) && __RISCV_XLEN == 64
+ 129              	        rv_csr_t _reserved3:7;                  /*!< bit: 25..31 Reserved  */
+ 130              	        rv_csr_t uxl:2;                         /*!< bit: 32..33 U-mode XLEN  */
+ 131              	        rv_csr_t sxl:2;                         /*!< bit: 34..35 S-mode XLEN  */
+ 132              	        rv_csr_t sbe:1;                         /*!< bit: 36 S-mode non-instruction-fetch memory ac
+ 133              	        rv_csr_t mbe:1;                         /*!< bit: 37 M-mode non-instruction-fetch memory ac
+ 134              	        rv_csr_t gva:1;                         /*!< bit: 38 Guest Virtual Address */
+ 135              	        rv_csr_t mpv:1;                         /*!< bit: 39 Machine Previous Virtualization Mode *
+ 136              	        rv_csr_t _reserved4:1;                  /*!< bit: 40 Reserved  */
+ 137              	        rv_csr_t mpelp:1;                       /*!< bit: 41 Machine mode Previous Expected Landing
+ 138              	        rv_csr_t mdt:1;                         /*!< bit: 42 M-mode-disable-trap */
+ 139              	        rv_csr_t _reserved5:20;                 /*!< bit: 43..62 Reserved  */
+ 140              	        rv_csr_t sd:1;                          /*!< bit: 63 Dirty status for XS or FS */
+ 141              	#else
+ 142              	        rv_csr_t _reserved3:6;                  /*!< bit: 25..30 Reserved  */
+ 143              	        rv_csr_t sd:1;                          /*!< bit: 31 Dirty status for XS or FS */
+ 144              	#endif
+ 145              	    } b;                                        /*!< Structure used for bit  access */
+ 146              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 147              	} CSR_MSTATUS_Type;
+ 148              	
+ 149              	#if defined(__RISCV_XLEN) && __RISCV_XLEN == 32
+ 150              	/**
+ 151              	 * \brief  Union type to access MSTATUSH CSR register.
+ 152              	 */
+ 153              	typedef union {
+ 154              	    struct {
+ 155              	        rv_csr_t _reserved0:4;                  /*!< bit: 0..3  Reserved */
+ 156              	        rv_csr_t sbe:1;                         /*!< bit: 4 S-mode non-instruction-fetch memory acc
+ 157              	        rv_csr_t mbe:1;                         /*!< bit: 5 M-mode non-instruction-fetch memory acc
+ 158              	        rv_csr_t gva:1;                         /*!< bit: 6 Guest Virtual Address */
+ 159              	        rv_csr_t mpv:1;                         /*!< bit: 7 Machine Previous Virtualization Mode */
+ 160              	        rv_csr_t _reserved1:1;                  /*!< bit: 8 Reserved  */
+ 161              	        rv_csr_t mpelp:1;                       /*!< bit: 9 Machine mode Previous Expected Landing 
+ 162              	        rv_csr_t mdt:1;                         /*!< bit: 10 M-mode-disable-trap */
+ 163              	        rv_csr_t _reserved5:21;                 /*!< bit: 11..31 Reserved  */
+ 164              	    } b;                                        /*!< Structure used for bit  access */
+ 165              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 166              	} CSR_MSTATUSH_Type;
+ 167              	#endif
+ 168              	
+ 169              	/**
+ 170              	 * \brief  Union type to access MTVEC CSR register.
+ 171              	 */
+ 172              	typedef union {
+ 173              	    struct {
+ 174              	        rv_csr_t mode:6;                        /*!< bit: 0..5   interrupt mode control */
+ 175              	        rv_csr_t addr:__RISCV_XLEN-6;           /*!< bit: 6..XLEN-1  mtvec address */
+ 176              	    } b;                                        /*!< Structure used for bit  access */
+ 177              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 5
+
+
+ 178              	} CSR_MTVEC_Type;
+ 179              	
+ 180              	/**
+ 181              	 * \brief  Union type to access MCAUSE CSR register.
+ 182              	 */
+ 183              	typedef union {
+ 184              	    struct {
+ 185              	        rv_csr_t exccode:12;                    /*!< bit: 0..11  exception or interrupt code */
+ 186              	        rv_csr_t _reserved0:4;                  /*!< bit: 12..15  Reserved */
+ 187              	        rv_csr_t mpil:8;                        /*!< bit: 16..23  Previous interrupt level */
+ 188              	        rv_csr_t _reserved1:3;                  /*!< bit: 24..26  Reserved */
+ 189              	        rv_csr_t mpie:1;                        /*!< bit: 27  Interrupt enable flag before enter in
+ 190              	        rv_csr_t mpp:2;                         /*!< bit: 28..29  Privilede mode flag before enter 
+ 191              	        rv_csr_t minhv:1;                       /*!< bit: 30  Machine interrupt vector table */
+ 192              	#if defined(__RISCV_XLEN) && __RISCV_XLEN == 64
+ 193              	        rv_csr_t _reserved2:__RISCV_XLEN-32;    /*!< bit: 31..XLEN-2  Reserved */
+ 194              	#endif
+ 195              	        rv_csr_t interrupt:1;                   /*!< bit: XLEN-1  trap type. 0 means exception and 
+ 196              	    } b;                                        /*!< Structure used for bit  access */
+ 197              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 198              	} CSR_MCAUSE_Type;
+ 199              	
+ 200              	/**
+ 201              	 * \brief  Union type to access MCOUNTINHIBIT CSR register.
+ 202              	 */
+ 203              	typedef union {
+ 204              	    struct {
+ 205              	        rv_csr_t cy:1;                          /*!< bit: 0     1 means disable mcycle counter */
+ 206              	        rv_csr_t _reserved0:1;                  /*!< bit: 1     Reserved */
+ 207              	        rv_csr_t ir:1;                          /*!< bit: 2     1 means disable minstret counter */
+ 208              	        rv_csr_t _reserved1:__RISCV_XLEN-3;     /*!< bit: 3..XLEN-1 Reserved */
+ 209              	    } b;                                        /*!< Structure used for bit  access */
+ 210              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 211              	} CSR_MCOUNTINHIBIT_Type;
+ 212              	
+ 213              	/**
+ 214              	 * \brief  Union type to access MSUBM CSR register.
+ 215              	 */
+ 216              	typedef union {
+ 217              	    struct {
+ 218              	        rv_csr_t _reserved0:6;                  /*!< bit: 0..5   Reserved */
+ 219              	        rv_csr_t typ:2;                         /*!< bit: 6..7   current trap type */
+ 220              	        rv_csr_t ptyp:2;                        /*!< bit: 8..9   previous trap type */
+ 221              	        rv_csr_t _reserved1:__RISCV_XLEN-10;    /*!< bit: 10..XLEN-1 Reserved */
+ 222              	    } b;                                        /*!< Structure used for bit  access */
+ 223              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 224              	} CSR_MSUBM_Type;
+ 225              	
+ 226              	/**
+ 227              	 * \brief  Union type to access MDCAUSE CSR register.
+ 228              	 */
+ 229              	typedef union {
+ 230              	    struct {
+ 231              	        rv_csr_t mdcause:3;                     /*!< bit: 0..2   More detailed exception informatio
+ 232              	        rv_csr_t _reserved0:__RISCV_XLEN-3;     /*!< bit: 3..XLEN-1 Reserved */
+ 233              	    } b;                                        /*!< Structure used for bit  access */
+ 234              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 6
+
+
+ 235              	} CSR_MDCAUSE_Type;
+ 236              	
+ 237              	/**
+ 238              	 * \brief  Union type to access MMISC_CTRL CSR register.
+ 239              	 */
+ 240              	typedef union {
+ 241              	    struct {
+ 242              	        rv_csr_t _reserved0:1;                  /*!< bit: 0     Reserved */
+ 243              	        rv_csr_t zclsd_en:1;                    /*!< bit: 1     Control the Zclsd will uses the Zcf
+ 244              	        rv_csr_t _reserved1:1;                  /*!< bit: 2     Reserved */
+ 245              	        rv_csr_t bpu:1;                         /*!< bit: 3     dynamic prediction enable flag */
+ 246              	        rv_csr_t _reserved2:2;                  /*!< bit: 4..5  Reserved */
+ 247              	        rv_csr_t misalign:1;                    /*!< bit: 6     misaligned access support flag */
+ 248              	        rv_csr_t zcmt_zcmp:1;                   /*!< bit: 7     Zc Ext uses the cfdsp of D Ext’s 
+ 249              	        rv_csr_t core_buserr:1;                 /*!< bit: 8     core bus error exception or interru
+ 250              	        rv_csr_t nmi_cause:1;                   /*!< bit: 9     mnvec control and nmi mcase exccode
+ 251              	        rv_csr_t imreturn_en:1;                 /*!< bit: 10    IMRETURN mode of trace */
+ 252              	        rv_csr_t sijump_en:1;                   /*!< bit: 11    SIJUMP mode of trace */
+ 253              	        rv_csr_t ldspec_en:1;                   /*!< bit: 12    enable load speculative goes to mem
+ 254              	        rv_csr_t _reserved3:1;                  /*!< bit: 13    Reserved */
+ 255              	        rv_csr_t dbg_sec:1;                     /*!< bit: 14    debug access mode, removed in lates
+ 256              	        rv_csr_t _reserved4:2;                  /*!< bit: 15..16 Reserved */
+ 257              	        rv_csr_t csr_excl_enable:1;             /*!< bit: 17    Exclusive instruction(lr,sc) on Non
+ 258              	        rv_csr_t _reserved5:__RISCV_XLEN-18;    /*!< bit: 18..XLEN-1 Reserved */
+ 259              	    } b;                                        /*!< Structure used for bit  access */
+ 260              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 261              	} CSR_MMISCCTRL_Type;
+ 262              	
+ 263              	typedef CSR_MMISCCTRL_Type CSR_MMISCCTL_Type;
+ 264              	typedef CSR_MMISCCTRL_Type CSR_MMISC_CTL_Type;
+ 265              	
+ 266              	/**
+ 267              	 * \brief  Union type to access MCACHE_CTL CSR register.
+ 268              	 */
+ 269              	typedef union {
+ 270              	    struct {
+ 271              	        rv_csr_t ic_en:1;                       /*!< bit: 0 I-Cache enable */
+ 272              	        rv_csr_t ic_scpd_mod:1;                 /*!< bit: 1 Scratchpad mode, 0: Scratchpad as ICach
+ 273              	        rv_csr_t ic_ecc_en:1;                   /*!< bit: 2 I-Cache ECC enable */
+ 274              	        rv_csr_t ic_ecc_excp_en:1;              /*!< bit: 3 I-Cache 2bit ECC error exception enable
+ 275              	        rv_csr_t ic_rwtecc:1;                   /*!< bit: 4 Control I-Cache Tag Ram ECC code inject
+ 276              	        rv_csr_t ic_rwdecc:1;                   /*!< bit: 5 Control I-Cache Data Ram ECC code injec
+ 277              	        rv_csr_t ic_pf_en:1;                    /*!< bit: 6 I-Cache prefetch enable */
+ 278              	        rv_csr_t ic_cancel_en:1;                /*!< bit: 7 I-Cache change flow canceling enable co
+ 279              	        rv_csr_t ic_ecc_chk_en:1;               /*!< bit: 8 I-Cache check ECC codes enable */
+ 280              	        rv_csr_t ic_prefetch_en:1;              /*!< bit: 9 I-Cache CMO prefetch enable control */
+ 281              	        rv_csr_t ic_burst_type:1;               /*!< bit: 10 I-Cache Burst type control */
+ 282              	        rv_csr_t _reserved0:5;                  /*!< bit: 11..15 Reserved */
+ 283              	        rv_csr_t dc_en:1;                       /*!< bit: 16 DCache enable */
+ 284              	        rv_csr_t dc_ecc_en:1;                   /*!< bit: 17 D-Cache ECC enable */
+ 285              	        rv_csr_t dc_ecc_excp_en:1;              /*!< bit: 18 D-Cache 2bit ECC error exception enabl
+ 286              	        rv_csr_t dc_rwtecc:1;                   /*!< bit: 19 Control D-Cache Tag Ram ECC code injec
+ 287              	        rv_csr_t dc_rwdecc:1;                   /*!< bit: 20 Control D-Cache Data Ram ECC code inje
+ 288              	        rv_csr_t dc_ecc_chk_en:1;               /*!< bit: 21 D-Cache check ECC codes enable */
+ 289              	        rv_csr_t dc_prefetch_en:1;              /*!< bit: 22 D-Cache CMO prefetch enable control */
+ 290              	        rv_csr_t dc_burst_type:1;               /*!< bit: 23 D-Cache Burst type control */
+ 291              	        rv_csr_t _reserved1:__RISCV_XLEN-24;    /*!< bit: 24..XLEN-1 Reserved */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 7
+
+
+ 292              	    } b;                                        /*!< Structure used for bit  access */
+ 293              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 294              	} CSR_MCACHECTL_Type;
+ 295              	
+ 296              	typedef CSR_MCACHECTL_Type CSR_MCACHE_CTL_Type;
+ 297              	
+ 298              	/**
+ 299              	 * \brief  Union type to access MSAVESTATUS CSR register.
+ 300              	 */
+ 301              	typedef union {
+ 302              	    struct {
+ 303              	        rv_csr_t mpie1:1;                       /*!< bit: 0     interrupt enable flag of fisrt leve
+ 304              	        rv_csr_t mpp1:2;                        /*!< bit: 1..2  privilede mode of fisrt level NMI/e
+ 305              	        rv_csr_t _reserved0:3;                  /*!< bit: 3..5  Reserved */
+ 306              	        rv_csr_t ptyp1:2;                       /*!< bit: 6..7  NMI/exception type of before first 
+ 307              	        rv_csr_t mpie2:1;                       /*!< bit: 8     interrupt enable flag of second lev
+ 308              	        rv_csr_t mpp2:2;                        /*!< bit: 9..10 privilede mode of second level NMI/
+ 309              	        rv_csr_t _reserved1:3;                  /*!< bit: 11..13     Reserved */
+ 310              	        rv_csr_t ptyp2:2;                       /*!< bit: 14..15     NMI/exception type of before s
+ 311              	        rv_csr_t _reserved2:__RISCV_XLEN-16;    /*!< bit: 16..XLEN-1 Reserved */
+ 312              	    } b;                                        /*!< Structure used for bit  access */
+ 313              	    rv_csr_t w;                                 /*!< Type      used for csr data access */
+ 314              	} CSR_MSAVESTATUS_Type;
+ 315              	
+ 316              	/**
+ 317              	 * \brief  Union type to access MILM_CTL CSR register.
+ 318              	 */
+ 319              	typedef union {
+ 320              	    struct {
+ 321              	        rv_csr_t ilm_en:1;                      /*!< bit: 0 ILM enable */
+ 322              	        rv_csr_t ilm_ecc_en:1;                  /*!< bit: 1 ILM ECC eanble */
+ 323              	        rv_csr_t ilm_ecc_excp_en:1;             /*!< bit: 2 ILM ECC exception enable */
+ 324              	        rv_csr_t ilm_rwecc:1;                   /*!< bit: 3 Control mecc_code write to ilm, simulat
+ 325              	        rv_csr_t ilm_ecc_chk_en:1;              /*!< bit: 4 ILM check ECC codes enable */
+ 326              	        rv_csr_t ilm_va_en:1;                   /*!< bit: 5 Using virtual address to judge ILM acce
+ 327              	        rv_csr_t _reserved0:4;                  /*!< bit: 6..9 Reserved */
+ 328              	        rv_csr_t ilm_bpa:__RISCV_XLEN-10;       /*!< bit: 10..XLEN-1 ILM base address */
+ 329              	    } b;                                        /*!< Structure used for bit  access */
+ 330              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 331              	} CSR_MILMCTL_Type;
+ 332              	
+ 333              	typedef CSR_MILMCTL_Type CSR_MILM_CTL_Type;
+ 334              	
+ 335              	/**
+ 336              	 * \brief  Union type to access MDLM_CTL CSR register.
+ 337              	 */
+ 338              	typedef union {
+ 339              	    struct {
+ 340              	        rv_csr_t dlm_en:1;                      /*!< bit: 0 DLM enable */
+ 341              	        rv_csr_t dlm_ecc_en:1;                  /*!< bit: 1 DLM ECC eanble */
+ 342              	        rv_csr_t dlm_ecc_excp_en:1;             /*!< bit: 2 DLM ECC exception enable */
+ 343              	        rv_csr_t dlm_rwecc:1;                   /*!< bit: 3 Control mecc_code write to dlm, simulat
+ 344              	        rv_csr_t dlm_ecc_chk_en:1;              /*!< bit: 4 DLM check ECC codes enable */
+ 345              	        rv_csr_t _reserved0:5;                  /*!< bit: 5..9 Reserved */
+ 346              	        rv_csr_t dlm_bpa:__RISCV_XLEN-10;       /*!< bit: 10..XLEN-1 DLM base address */
+ 347              	    } b;                                        /*!< Structure used for bit  access */
+ 348              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 8
+
+
+ 349              	} CSR_MDLMCTL_Type;
+ 350              	
+ 351              	typedef CSR_MDLMCTL_Type CSR_DILM_CTL_Type;
+ 352              	
+ 353              	/**
+ 354              	 * \brief  Union type to access MCFG_INFO CSR register.
+ 355              	 */
+ 356              	typedef union {
+ 357              	    struct {
+ 358              	        rv_csr_t tee:1;                         /*!< bit: 0 TEE present */
+ 359              	        rv_csr_t ecc:1;                         /*!< bit: 1 ECC present */
+ 360              	        rv_csr_t clic:1;                        /*!< bit: 2 CLIC present */
+ 361              	        rv_csr_t plic:1;                        /*!< bit: 3 PLIC present */
+ 362              	        rv_csr_t fio:1;                         /*!< bit: 4 FIO present */
+ 363              	        rv_csr_t ppi:1;                         /*!< bit: 5 PPI present */
+ 364              	        rv_csr_t nice:1;                        /*!< bit: 6 NICE present */
+ 365              	        rv_csr_t ilm:1;                         /*!< bit: 7 ILM present */
+ 366              	        rv_csr_t dlm:1;                         /*!< bit: 8 DLM present */
+ 367              	        rv_csr_t icache:1;                      /*!< bit: 9 ICache present */
+ 368              	        rv_csr_t dcache:1;                      /*!< bit: 10 DCache present */
+ 369              	        rv_csr_t smp:1;                         /*!< bit: 11 SMP present */
+ 370              	        rv_csr_t dsp_n1:1;                      /*!< bit: 12 DSP N1 present */
+ 371              	        rv_csr_t dsp_n2:1;                      /*!< bit: 13 DSP N2 present */
+ 372              	        rv_csr_t dsp_n3:1;                      /*!< bit: 14 DSP N3 present */
+ 373              	        rv_csr_t zc_xlcz:1;                     /*!< bit: 15 Zc and xlcz extension present */
+ 374              	        rv_csr_t iregion:1;                     /*!< bit: 16 IREGION present */
+ 375              	        rv_csr_t vpu_degree:2;                  /*!< bit: 17..18 Indicate the VPU degree of paralle
+ 376              	        rv_csr_t sec_mode:1;                    /*!< bit: 19 Smwg extension present */
+ 377              	        rv_csr_t etrace:1;                      /*!< bit: 20 Etrace present */
+ 378              	        rv_csr_t safety_mecha:2;                /*!< bit: 21..22 Indicate Core's safety mechanism *
+ 379              	        rv_csr_t vnice:1;                       /*!< bit: 23 VNICE present */
+ 380              	        rv_csr_t xlcz:1;                        /*!< bit: 24 XLCZ extension present */
+ 381              	        rv_csr_t zilsd:1;                       /*!< bit: 25 Zilsd/Zclsd extension present */
+ 382              	        rv_csr_t sstc:1;                        /*!< bit: 26 SSTC extension present */
+ 383              	        rv_csr_t _reserved1:__RISCV_XLEN-27;    /*!< bit: 27..XLEN-1 Reserved */
+ 384              	    } b;                                        /*!< Structure used for bit  access */
+ 385              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 386              	} CSR_MCFGINFO_Type;
+ 387              	
+ 388              	typedef CSR_MCFGINFO_Type CSR_MCFG_INFO_Type;
+ 389              	
+ 390              	/**
+ 391              	 * \brief  Union type to access MICFG_INFO CSR register.
+ 392              	 */
+ 393              	typedef union {
+ 394              	    struct {
+ 395              	        rv_csr_t set:4;                         /*!< bit: 0..3 I-Cache sets per way */
+ 396              	        rv_csr_t way:3;                         /*!< bit: 4..6 I-Cache way */
+ 397              	        rv_csr_t lsize:3;                       /*!< bit: 7..9 I-Cache line size */
+ 398              	        rv_csr_t ecc:1;                         /*!< bit: 10   I-Cache ECC support */
+ 399              	        rv_csr_t _reserved0:5;                  /*!< bit: 11..15 Reserved */
+ 400              	        rv_csr_t lm_size:5;                     /*!< bit: 16..20 ILM size, need to be 2^n size */
+ 401              	        rv_csr_t lm_xonly:1;                    /*!< bit: 21 ILM Execute only permission or Reserve
+ 402              	        rv_csr_t lm_ecc:1;                      /*!< bit: 22 ILM ECC support */
+ 403              	        rv_csr_t _reserved1:__RISCV_XLEN-23;    /*!< bit: 23..XLEN-1 Reserved */
+ 404              	    } b;                                        /*!< Structure used for bit  access */
+ 405              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 9
+
+
+ 406              	} CSR_MICFGINFO_Type;
+ 407              	
+ 408              	typedef CSR_MICFGINFO_Type CSR_MICFG_INFO_Type;
+ 409              	
+ 410              	/**
+ 411              	 * \brief  Union type to access MDCFG_INFO CSR register.
+ 412              	 */
+ 413              	typedef union {
+ 414              	    struct {
+ 415              	        rv_csr_t set:4;                         /*!< bit: 0..3 D-Cache sets per way */
+ 416              	        rv_csr_t way:3;                         /*!< bit: 4..6 D-Cache way */
+ 417              	        rv_csr_t lsize:3;                       /*!< bit: 7..9 D-Cache line size */
+ 418              	        rv_csr_t ecc:1;                         /*!< bit: 10   D-Cache ECC support */
+ 419              	        rv_csr_t _reserved0:5;                  /*!< bit: 11..15 Reserved */
+ 420              	        rv_csr_t lm_size:5;                     /*!< bit: 16..20 DLM size, need to be 2^n size */
+ 421              	        rv_csr_t lm_ecc:1;                      /*!< bit: 21 DLM ECC present */
+ 422              	        rv_csr_t _reserved1:__RISCV_XLEN-22;    /*!< bit: 22..XLEN-1 Reserved */
+ 423              	    } b;                                        /*!< Structure used for bit  access */
+ 424              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 425              	} CSR_MDCFGINFO_Type;
+ 426              	
+ 427              	typedef CSR_MDCFGINFO_Type CSR_MDCFG_INFO_Type;
+ 428              	
+ 429              	/**
+ 430              	 * \brief  Union type to access MTLBCFG_INFO CSR register.
+ 431              	 */
+ 432              	typedef union {
+ 433              	    struct {
+ 434              	        rv_csr_t set:4;                         /*!< bit: 0..3  Main TLB entry per way */
+ 435              	        rv_csr_t way:3;                         /*!< bit: 4..6  Main TLB ways */
+ 436              	        rv_csr_t lsize:3;                       /*!< bit: 7..9  Main TLB line size or Reserved */
+ 437              	        rv_csr_t ecc:1;                         /*!< bit: 10  Main TLB supports ECC or not */
+ 438              	        rv_csr_t napot:1;                       /*!< bit: 11  TLB supports Svnapot or not */
+ 439              	        rv_csr_t _reserved1:4;                  /*!< bit: 12..15  Reserved 0 */
+ 440              	        rv_csr_t i_size:3;                      /*!< bit: 16..18  ITLB size */
+ 441              	        rv_csr_t d_size:3;                      /*!< bit: 19..21  DTLB size */
+ 442              	        rv_csr_t _reserved2:__RISCV_XLEN-22;    /*!< bit: 22..XLEN-1  Reserved 0 */
+ 443              	    } b;                                        /*!< Structure used for bit  access */
+ 444              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 445              	} CSR_MTLBCFGINFO_Type;
+ 446              	
+ 447              	typedef CSR_MTLBCFGINFO_Type CSR_MTLBCFG_INFO_Type;
+ 448              	
+ 449              	/**
+ 450              	 * \brief  Union type to access MPPICFG_INFO CSR register.
+ 451              	 */
+ 452              	typedef union {
+ 453              	    struct {
+ 454              	        rv_csr_t _reserved0:1;                  /*!< bit: 0 Reserved 1 */
+ 455              	        rv_csr_t ppi_size:5;                    /*!< bit: 1..5 PPI size, need to be 2^n size */
+ 456              	        rv_csr_t _reserved1:3;                  /*!< bit: 6..8 Reserved 0 */
+ 457              	        rv_csr_t ppi_en:1;                      /*!< bit: 9 PPI Enable. Software can write this bit
+ 458              	        rv_csr_t ppi_bpa:__RISCV_XLEN-10;       /*!< bit: 10..XLEN-1 PPI base address */
+ 459              	    } b;                                        /*!< Structure used for bit  access */
+ 460              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 461              	} CSR_MPPICFGINFO_Type;
+ 462              	
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 10
+
+
+ 463              	typedef CSR_MPPICFGINFO_Type CSR_MPPICFG_INFO_Type;
+ 464              	
+ 465              	/**
+ 466              	 * \brief  Union type to access MFIOCFG_INFO CSR register.
+ 467              	 */
+ 468              	typedef union {
+ 469              	    struct {
+ 470              	        rv_csr_t _reserved0:1;                  /*!< bit: 0 Reserved */
+ 471              	        rv_csr_t fio_size:5;                    /*!< bit: 1..5 FIO size, need to be 2^n size */
+ 472              	        rv_csr_t _reserved1:4;                  /*!< bit: 6..9 Reserved */
+ 473              	        rv_csr_t fio_bpa:__RISCV_XLEN-10;       /*!< bit: 10..XLEN-1 FIO base address */
+ 474              	    } b;                                        /*!< Structure used for bit  access */
+ 475              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 476              	} CSR_MFIOCFGINFO_Type;
+ 477              	
+ 478              	typedef CSR_MFIOCFGINFO_Type CSR_MFIOCFG_INFO_Type;
+ 479              	
+ 480              	/**
+ 481              	 * \brief  Union type to access MECC_LOCK CSR register.
+ 482              	 */
+ 483              	typedef union {
+ 484              	    struct {
+ 485              	        rv_csr_t ecc_lock:1;                    /*!< bit: 0 RW permission, ECC Lock configure */
+ 486              	        rv_csr_t _reserved0:__RISCV_XLEN-1;     /*!< bit: 1..XLEN-1 Reserved */
+ 487              	    } b;                                        /*!< Structure used for bit  access */
+ 488              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 489              	} CSR_MECCLOCK_Type;
+ 490              	
+ 491              	typedef CSR_MECCLOCK_Type CSR_MECC_LOCK_Type;
+ 492              	
+ 493              	/**
+ 494              	 * \brief  Union type to access MECC_CODE CSR register.
+ 495              	 */
+ 496              	typedef union {
+ 497              	    struct {
+ 498              	        rv_csr_t code:9;                        /*!< bit: 0..8 Used to inject ECC check code */
+ 499              	        rv_csr_t _reserved0:7;                  /*!< bit: 9..15 Reserved 0 */
+ 500              	        rv_csr_t ramid:5;                       /*!< bit: 16..20 The ID of RAM that has 2bit ECC er
+ 501              	        rv_csr_t _reserved1:3;                  /*!< bit: 21..23 Reserved 0 */
+ 502              	        rv_csr_t sramid:5;                      /*!< bit: 24..28 The ID of RAM that has 1bit ECC er
+ 503              	        rv_csr_t _reserved2:__RISCV_XLEN-29;    /*!< bit: 29..XLEN-1 Reserved 0 */
+ 504              	    } b;                                        /*!< Structure used for bit  access */
+ 505              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 506              	} CSR_MECCCODE_Type;
+ 507              	
+ 508              	typedef CSR_MECCCODE_Type CSR_MECC_CODE_Type;
+ 509              	
+ 510              	/**
+ 511              	 * \brief  Union type to access MECC_CTL CSR register.
+ 512              	 */
+ 513              	typedef union {
+ 514              	    struct {
+ 515              	        rv_csr_t ilm_fch_msk:1;                 /*!< bit: 0 Write 1 to disable aggregate ILM fetch 
+ 516              	        rv_csr_t ilm_acc_msk:1;                 /*!< bit: 1 Write 1 to disable aggregate ILM load/s
+ 517              	        rv_csr_t dlm_acc_msk:1;                 /*!< bit: 2 Write 1 to disable aggregate DLM access
+ 518              	        rv_csr_t ic_fch_msk:1;                  /*!< bit: 3 Write 1 to disable aggregate ICache fet
+ 519              	        rv_csr_t dc_acc_msk:1;                  /*!< bit: 4 Write 1 to disable aggregate DCache acc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 11
+
+
+ 520              	        rv_csr_t ilm_ext_msk:1;                 /*!< bit: 5 Write 1 to disable aggregate ILM extern
+ 521              	        rv_csr_t dlm_ext_msk:1;                 /*!< bit: 6 Write 1 to disable aggregate DLM extern
+ 522              	        rv_csr_t ic_ccm_msk:1;                  /*!< bit: 7 Write 1 to disable aggregate ICache CCM
+ 523              	        rv_csr_t dc_ccm_msk:1;                  /*!< bit: 8 Write 1 to disable aggregate DCache CCM
+ 524              	        rv_csr_t dc_cpbk_msk:1;                 /*!< bit: 9 Write 1 to disable aggregate DCache CPB
+ 525              	        rv_csr_t _reserved0:__RISCV_XLEN-10;    /*!< bit: 10..XLEN-1 Reserved 0 */
+ 526              	    } b;                                        /*!< Structure used for bit  access */
+ 527              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 528              	} CSR_MECC_CTL_Type;
+ 529              	
+ 530              	/**
+ 531              	 * \brief  Union type to access MECC_STATUS CSR register.
+ 532              	 */
+ 533              	typedef union {
+ 534              	    struct {
+ 535              	        rv_csr_t ilm_fch_err:1;                 /*!< bit: 0 ILM fetch ECC fatal error has occurred 
+ 536              	        rv_csr_t ilm_acc_err:1;                 /*!< bit: 1 ILM load/store access ECC fatal error h
+ 537              	        rv_csr_t dlm_acc_err:1;                 /*!< bit: 2 DLM access ECC fatal error has occurred
+ 538              	        rv_csr_t ic_fch_err:1;                  /*!< bit: 3 ICache fetch ECC fatal error has occurr
+ 539              	        rv_csr_t dc_acc_err:1;                  /*!< bit: 4 DCache access ECC fatal error has occur
+ 540              	        rv_csr_t ilm_ext_err:1;                 /*!< bit: 5 ILM external access ECC fatal error has
+ 541              	        rv_csr_t dlm_ext_err:1;                 /*!< bit: 6 DLM external access ECC fatal error has
+ 542              	        rv_csr_t ic_ccm_err:1;                  /*!< bit: 7 ICache CCM ECC fatal error has occurred
+ 543              	        rv_csr_t dc_ccm_err:1;                  /*!< bit: 8 DCache CCM ECC fatal error has occurred
+ 544              	        rv_csr_t dc_cpbk_err:1;                 /*!< bit: 9 DCache CPBK ECC fatal error has occurre
+ 545              	        rv_csr_t _reserved0:__RISCV_XLEN-10;    /*!< bit: 10..XLEN-1 Reserved 0 */
+ 546              	    } b;                                        /*!< Structure used for bit  access */
+ 547              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 548              	} CSR_MECC_STATUS_Type;
+ 549              	
+ 550              	/**
+ 551              	 * \brief  Union type to access MIRGB_INFO CSR register.
+ 552              	 */
+ 553              	typedef union {
+ 554              	    struct {
+ 555              	        rv_csr_t _reserved0:1;                  /*!< bit: 0 Reserved */
+ 556              	        rv_csr_t iregion_size:5;                /*!< bit: 1..5 Indicates the size of IREGION and it
+ 557              	        rv_csr_t _reserved1:4;                  /*!< bit: 6..9 Reserved */
+ 558              	        rv_csr_t iregion_base:__RISCV_XLEN-10;  /*!< bit: 10..PA_SIZE IREGION Base Address */
+ 559              	    } b;                                        /*!< Structure used for bit  access */
+ 560              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 561              	} CSR_MIRGB_INFO_Type;
+ 562              	
+ 563              	/**
+ 564              	 * \brief  Union type to access MSTACK_CTL CSR register.
+ 565              	 */
+ 566              	typedef union {
+ 567              	    struct {
+ 568              	        rv_csr_t ovf_track_en:1;                /*!< bit: 0 Stack overflow check or track enable */
+ 569              	        rv_csr_t udf_en:1;                      /*!< bit: 1 Stack underflow check enable */
+ 570              	        rv_csr_t mode:1;                        /*!< bit: 2 Mode of stack checking */
+ 571              	        rv_csr_t _reserved0:__RISCV_XLEN-3;     /*!< bit: 3..XLEN-1 Reserved */
+ 572              	    } b;                                        /*!< Structure used for bit  access */
+ 573              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 574              	} CSR_MSTACK_CTL_Type;
+ 575              	
+ 576              	/**
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 12
+
+
+ 577              	 * \brief  Union type to access MTLB_CTL CSR register.
+ 578              	 */
+ 579              	typedef union {
+ 580              	    struct {
+ 581              	        rv_csr_t tlb_ecc_en:1;                  /*!< bit: 0 MTLB ECC eanble */
+ 582              	        rv_csr_t tlb_ecc_excp_en:1;             /*!< bit: 1 MTLB double bit ECC exception enable co
+ 583              	        rv_csr_t tlb_tram_ecc_inj_en:1;         /*!< bit: 2 Controls to inject the ECC Code in CSR 
+ 584              	        rv_csr_t tlb_dram_ecc_inj_en:1;         /*!< bit: 3 Controls to inject the ECC Code in CSR 
+ 585              	        rv_csr_t _reserved0:2;                  /*!< bit: 4..5 Reserved */
+ 586              	        rv_csr_t tlb_ecc_chk_en:1;              /*!< bit: 6 Controls to check the ECC when core acc
+ 587              	        rv_csr_t napot_en:1;                    /*!< bit: 7 NAPOT page enable */
+ 588              	        rv_csr_t _reserved1:__RISCV_XLEN-8;     /*!< bit: 8..XLEN-1 Reserved */
+ 589              	    } b;                                        /*!< Structure used for bit  access */
+ 590              	    rv_csr_t d;                                 /*!< Type      used for csr data access */
+ 591              	} CSR_MTLB_CTL_Type;
+ 592              	
+ 593              	
+ 594              	/** @} */ /* End of Doxygen Group NMSIS_Core_Base_Registers */
+ 595              	
+ 596              	/* ###########################  Core Function Access  ########################### */
+ 597              	/**
+ 598              	 * \defgroup NMSIS_Core_CSR_Register_Access    Core CSR Register Access
+ 599              	 * \ingroup  NMSIS_Core
+ 600              	 * \brief    Functions to access the Core CSR Registers
+ 601              	 * \details
+ 602              	 *
+ 603              	 * The following functions or macros provide access to Core CSR registers.
+ 604              	 * - \ref NMSIS_Core_CSR_Encoding
+ 605              	 * - \ref NMSIS_Core_CSR_Registers
+ 606              	 *   @{
+ 607              	 */
+ 608              	
+ 609              	
+ 610              	#ifndef __ASSEMBLY__
+ 611              	
+ 612              	#ifndef __ICCRISCV__
+ 613              	
+ 614              	/**
+ 615              	 * \brief CSR operation Macro for csrrw instruction.
+ 616              	 * \details
+ 617              	 * Read the content of csr register to __v,
+ 618              	 * then write content of val into csr register, then return __v
+ 619              	 * \param csr   CSR macro definition defined in
+ 620              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 621              	 * \param val   value to store into the CSR register
+ 622              	 * \return the CSR register value before written
+ 623              	 */
+ 624              	#define __RV_CSR_SWAP(csr, val)                                 \
+ 625              	    ({                                                          \
+ 626              	        rv_csr_t __v = (unsigned long)(val);                    \
+ 627              	        __ASM volatile("csrrw %0, " STRINGIFY(csr) ", %1"       \
+ 628              	                     : "=r"(__v)                                \
+ 629              	                     : "rK"(__v)                                \
+ 630              	                     : "memory");                               \
+ 631              	        __v;                                                    \
+ 632              	    })
+ 633              	
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 13
+
+
+ 634              	/**
+ 635              	 * \brief CSR operation Macro for csrr instruction.
+ 636              	 * \details
+ 637              	 * Read the content of csr register to __v and return it
+ 638              	 * \param csr   CSR macro definition defined in
+ 639              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 640              	 * \return the CSR register value
+ 641              	 */
+ 642              	#define __RV_CSR_READ(csr)                                      \
+ 643              	    ({                                                          \
+ 644              	        rv_csr_t __v;                                           \
+ 645              	        __ASM volatile("csrr %0, " STRINGIFY(csr)               \
+ 646              	                     : "=r"(__v)                                \
+ 647              	                     :                                          \
+ 648              	                     : "memory");                               \
+ 649              	        __v;                                                    \
+ 650              	    })
+ 651              	
+ 652              	/**
+ 653              	 * \brief CSR operation Macro for csrw instruction.
+ 654              	 * \details
+ 655              	 * Write the content of val to csr register
+ 656              	 * \param csr   CSR macro definition defined in
+ 657              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 658              	 * \param val   value to store into the CSR register
+ 659              	 */
+ 660              	#define __RV_CSR_WRITE(csr, val)                                \
+ 661              	    ({                                                          \
+ 662              	        rv_csr_t __v = (rv_csr_t)(val);                         \
+ 663              	        __ASM volatile("csrw " STRINGIFY(csr) ", %0"            \
+ 664              	                     :                                          \
+ 665              	                     : "rK"(__v)                                \
+ 666              	                     : "memory");                               \
+ 667              	    })
+ 668              	
+ 669              	/**
+ 670              	 * \brief CSR operation Macro for csrrs instruction.
+ 671              	 * \details
+ 672              	 * Read the content of csr register to __v,
+ 673              	 * then set csr register to be __v | val, then return __v
+ 674              	 * \param csr   CSR macro definition defined in
+ 675              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 676              	 * \param val   Mask value to be used wih csrrs instruction
+ 677              	 * \return the CSR register value before written
+ 678              	 */
+ 679              	#define __RV_CSR_READ_SET(csr, val)                             \
+ 680              	    ({                                                          \
+ 681              	        rv_csr_t __v = (rv_csr_t)(val);                         \
+ 682              	        __ASM volatile("csrrs %0, " STRINGIFY(csr) ", %1"       \
+ 683              	                     : "=r"(__v)                                \
+ 684              	                     : "rK"(__v)                                \
+ 685              	                     : "memory");                               \
+ 686              	        __v;                                                    \
+ 687              	    })
+ 688              	
+ 689              	/**
+ 690              	 * \brief CSR operation Macro for csrs instruction.
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 14
+
+
+ 691              	 * \details
+ 692              	 * Set csr register to be csr_content | val
+ 693              	 * \param csr   CSR macro definition defined in
+ 694              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 695              	 * \param val   Mask value to be used wih csrs instruction
+ 696              	 */
+ 697              	#define __RV_CSR_SET(csr, val)                                  \
+ 698              	    ({                                                          \
+ 699              	        rv_csr_t __v = (rv_csr_t)(val);                         \
+ 700              	        __ASM volatile("csrs " STRINGIFY(csr) ", %0"            \
+ 701              	                     :                                          \
+ 702              	                     : "rK"(__v)                                \
+ 703              	                     : "memory");                               \
+ 704              	    })
+ 705              	
+ 706              	/**
+ 707              	 * \brief CSR operation Macro for csrrc instruction.
+ 708              	 * \details
+ 709              	 * Read the content of csr register to __v,
+ 710              	 * then set csr register to be __v & ~val, then return __v
+ 711              	 * \param csr   CSR macro definition defined in
+ 712              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 713              	 * \param val   Mask value to be used wih csrrc instruction
+ 714              	 * \return the CSR register value before written
+ 715              	 */
+ 716              	#define __RV_CSR_READ_CLEAR(csr, val)                           \
+ 717              	    ({                                                          \
+ 718              	        rv_csr_t __v = (rv_csr_t)(val);                         \
+ 719              	        __ASM volatile("csrrc %0, " STRINGIFY(csr) ", %1"       \
+ 720              	                     : "=r"(__v)                                \
+ 721              	                     : "rK"(__v)                                \
+ 722              	                     : "memory");                               \
+ 723              	        __v;                                                    \
+ 724              	    })
+ 725              	
+ 726              	/**
+ 727              	 * \brief CSR operation Macro for csrc instruction.
+ 728              	 * \details
+ 729              	 * Set csr register to be csr_content & ~val
+ 730              	 * \param csr   CSR macro definition defined in
+ 731              	 *              \ref NMSIS_Core_CSR_Registers, eg. \ref CSR_MSTATUS
+ 732              	 * \param val   Mask value to be used wih csrc instruction
+ 733              	 */
+ 734              	#define __RV_CSR_CLEAR(csr, val)                                \
+ 735              	    ({                                                          \
+ 736              	        rv_csr_t __v = (rv_csr_t)(val);                         \
+ 737              	        __ASM volatile("csrc " STRINGIFY(csr) ", %0"            \
+ 738              	                     :                                          \
+ 739              	                     : "rK"(__v)                                \
+ 740              	                     : "memory");                               \
+ 741              	    })
+ 742              	#else
+ 743              	
+ 744              	#include <intrinsics.h>
+ 745              	
+ 746              	#define __RV_CSR_SWAP         __write_csr
+ 747              	#define __RV_CSR_READ         __read_csr
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 15
+
+
+ 748              	#define __RV_CSR_WRITE        __write_csr
+ 749              	#define __RV_CSR_READ_SET     __set_bits_csr
+ 750              	#define __RV_CSR_SET          __set_bits_csr
+ 751              	#define __RV_CSR_READ_CLEAR   __clear_bits_csr
+ 752              	#define __RV_CSR_CLEAR        __clear_bits_csr
+ 753              	
+ 754              	#endif /* __ICCRISCV__ */
+ 755              	
+ 756              	#endif /* __ASSEMBLY__ */
+ 757              	
+ 758              	/**
+ 759              	 * \brief switch privilege from machine mode to others.
+ 760              	 * \details
+ 761              	 *  Execute into \ref entry_point in \ref mode(supervisor or user) with given stack
+ 762              	 * \param mode   privilege mode
+ 763              	 * \param stack   predefined stack, size should set enough
+ 764              	 * \param entry_point   a function pointer to execute
+ 765              	 */
+ 766              	__STATIC_FORCEINLINE void __switch_mode(uint8_t mode, uintptr_t stack, void(*entry_point)(void))
+ 767              	{
+ 768              	    unsigned long val = 0;
+ 769              	
+ 770              	    /* Set MPP to the requested privilege mode */
+ 771              	    val = __RV_CSR_READ(CSR_MSTATUS);
+ 772              	    val = __RV_INSERT_FIELD(val, MSTATUS_MPP, mode);
+ 773              	
+ 774              	    /* Set previous MIE disabled */
+ 775              	    val = __RV_INSERT_FIELD(val, MSTATUS_MPIE, 0);
+ 776              	
+ 777              	    __RV_CSR_WRITE(CSR_MSTATUS, val);
+ 778              	
+ 779              	    /* Set the entry point in MEPC */
+ 780              	    __RV_CSR_WRITE(CSR_MEPC, (unsigned long)entry_point);
+ 781              	
+ 782              	    /* Set the register file */
+ 783              	    __ASM volatile("mv sp, %0" ::"r"(stack));
+ 784              	
+ 785              	    __ASM volatile("mret");
+ 786              	}
+ 787              	
+ 788              	/**
+ 789              	 * \brief   Enable IRQ Interrupts
+ 790              	 * \details Enables IRQ interrupts by setting the MIE-bit in the MSTATUS Register.
+ 791              	 * \remarks
+ 792              	 *          Can only be executed in Privileged modes.
+ 793              	 */
+ 794              	__STATIC_FORCEINLINE void __enable_irq(void)
+ 795              	{
+ 796              	    __RV_CSR_SET(CSR_MSTATUS, MSTATUS_MIE);
+ 797              	}
+ 798              	
+ 799              	/**
+ 800              	 * \brief   Disable IRQ Interrupts
+ 801              	 * \details Disables IRQ interrupts by clearing the MIE-bit in the MSTATUS Register.
+ 802              	 * \remarks
+ 803              	 *          Can only be executed in Privileged modes.
+ 804              	 */
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 16
+
+
+ 805              	__STATIC_FORCEINLINE void __disable_irq(void)
+ 806              	{
+ 807              	    __RV_CSR_CLEAR(CSR_MSTATUS, MSTATUS_MIE);
+ 808              	}
+ 809              	
+ 810              	/**
+ 811              	 * \brief   Enable External IRQ Interrupts
+ 812              	 * \details Enables External IRQ interrupts by setting the MEIE-bit in the MIE Register.
+ 813              	 * \remarks
+ 814              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 815              	 */
+ 816              	__STATIC_FORCEINLINE void __enable_ext_irq(void)
+ 817              	{
+ 818              	    __RV_CSR_SET(CSR_MIE, MIE_MEIE);
+ 819              	}
+ 820              	
+ 821              	/**
+ 822              	 * \brief   Disable External IRQ Interrupts
+ 823              	 * \details Disables External IRQ interrupts by clearing the MEIE-bit in the MIE Register.
+ 824              	 * \remarks
+ 825              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 826              	 */
+ 827              	__STATIC_FORCEINLINE void __disable_ext_irq(void)
+ 828              	{
+ 829              	    __RV_CSR_CLEAR(CSR_MIE, MIE_MEIE);
+ 830              	}
+ 831              	
+ 832              	/**
+ 833              	 * \brief   Enable Timer IRQ Interrupts
+ 834              	 * \details Enables Timer IRQ interrupts by setting the MTIE-bit in the MIE Register.
+ 835              	 * \remarks
+ 836              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 837              	 */
+ 838              	__STATIC_FORCEINLINE void __enable_timer_irq(void)
+ 839              	{
+ 840              	    __RV_CSR_SET(CSR_MIE, MIE_MTIE);
+ 841              	}
+ 842              	
+ 843              	/**
+ 844              	 * \brief   Disable Timer IRQ Interrupts
+ 845              	 * \details Disables Timer IRQ interrupts by clearing the MTIE-bit in the MIE Register.
+ 846              	 * \remarks
+ 847              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 848              	 */
+ 849              	__STATIC_FORCEINLINE void __disable_timer_irq(void)
+ 850              	{
+ 851              	    __RV_CSR_CLEAR(CSR_MIE, MIE_MTIE);
+ 852              	}
+ 853              	
+ 854              	/**
+ 855              	 * \brief   Enable software IRQ Interrupts
+ 856              	 * \details Enables software IRQ interrupts by setting the MSIE-bit in the MIE Register.
+ 857              	 * \remarks
+ 858              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 859              	 */
+ 860              	__STATIC_FORCEINLINE void __enable_sw_irq(void)
+ 861              	{
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 17
+
+
+ 862              	    __RV_CSR_SET(CSR_MIE, MIE_MSIE);
+ 863              	}
+ 864              	
+ 865              	/**
+ 866              	 * \brief   Disable software IRQ Interrupts
+ 867              	 * \details Disables software IRQ interrupts by clearing the MSIE-bit in the MIE Register.
+ 868              	 * \remarks
+ 869              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 870              	 */
+ 871              	__STATIC_FORCEINLINE void __disable_sw_irq(void)
+ 872              	{
+ 873              	    __RV_CSR_CLEAR(CSR_MIE, MIE_MSIE);
+ 874              	}
+ 875              	
+ 876              	/**
+ 877              	 * \brief   Disable Core IRQ Interrupt
+ 878              	 * \details Disable Core IRQ interrupt by clearing the irq bit in the MIE Register.
+ 879              	 * \remarks
+ 880              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 881              	 */
+ 882              	__STATIC_FORCEINLINE void __disable_core_irq(uint32_t irq)
+ 883              	{
+ 884              	    __RV_CSR_CLEAR(CSR_MIE, 1 << irq);
+ 885              	}
+ 886              	
+ 887              	/**
+ 888              	 * \brief   Enable Core IRQ Interrupt
+ 889              	 * \details Enable Core IRQ interrupt by setting the irq bit in the MIE Register.
+ 890              	 * \remarks
+ 891              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 892              	 */
+ 893              	__STATIC_FORCEINLINE void __enable_core_irq(uint32_t irq)
+ 894              	{
+ 895              	    __RV_CSR_SET(CSR_MIE, 1 << irq);
+ 896              	}
+ 897              	
+ 898              	/**
+ 899              	 * \brief   Get Core IRQ Interrupt Pending status
+ 900              	 * \details Get Core IRQ interrupt pending status of irq bit.
+ 901              	 * \remarks
+ 902              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 903              	 */
+ 904              	__STATIC_FORCEINLINE uint32_t __get_core_irq_pending(uint32_t irq)
+ 905              	{
+ 906              	    return ((__RV_CSR_READ(CSR_MIP) >> irq) & 0x1);
+ 907              	}
+ 908              	
+ 909              	/**
+ 910              	 * \brief   Clear Core IRQ Interrupt Pending status
+ 911              	 * \details Clear Core IRQ interrupt pending status of irq bit.
+ 912              	 * \remarks
+ 913              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 914              	 */
+ 915              	__STATIC_FORCEINLINE void __clear_core_irq_pending(uint32_t irq)
+ 916              	{
+ 917              	    __RV_CSR_SET(CSR_MIP, 1 << irq);
+ 918              	}
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 18
+
+
+ 919              	
+ 920              	/**
+ 921              	 * \brief   Enable IRQ Interrupts in supervisor mode
+ 922              	 * \details Enables IRQ interrupts by setting the SIE-bit in the SSTATUS Register.
+ 923              	 * \remarks
+ 924              	 *          Can only be executed in Privileged modes.
+ 925              	 */
+ 926              	__STATIC_FORCEINLINE void __enable_irq_s(void)
+ 927              	{
+ 928              	    __RV_CSR_SET(CSR_SSTATUS, SSTATUS_SIE);
+ 929              	}
+ 930              	
+ 931              	/**
+ 932              	 * \brief   Disable IRQ Interrupts in supervisor mode
+ 933              	 * \details Disables IRQ interrupts by clearing the SIE-bit in the SSTATUS Register.
+ 934              	 * \remarks
+ 935              	 *          Can only be executed in Privileged modes.
+ 936              	 */
+ 937              	__STATIC_FORCEINLINE void __disable_irq_s(void)
+ 938              	{
+ 939              	    __RV_CSR_CLEAR(CSR_SSTATUS, SSTATUS_SIE);
+ 940              	}
+ 941              	
+ 942              	/**
+ 943              	 * \brief   Enable External IRQ Interrupts in supervisor mode
+ 944              	 * \details Enables External IRQ interrupts by setting the SEIE-bit in the SIE Register.
+ 945              	 * \remarks
+ 946              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 947              	 */
+ 948              	__STATIC_FORCEINLINE void __enable_ext_irq_s(void)
+ 949              	{
+ 950              	    __RV_CSR_SET(CSR_SIE, MIE_SEIE);
+ 951              	}
+ 952              	
+ 953              	/**
+ 954              	 * \brief   Disable External IRQ Interrupts in supervisor mode
+ 955              	 * \details Disables External IRQ interrupts by clearing the SEIE-bit in the SIE Register.
+ 956              	 * \remarks
+ 957              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 958              	 */
+ 959              	__STATIC_FORCEINLINE void __disable_ext_irq_s(void)
+ 960              	{
+ 961              	    __RV_CSR_CLEAR(CSR_SIE, MIE_SEIE);
+ 962              	}
+ 963              	
+ 964              	/**
+ 965              	 * \brief   Enable Timer IRQ Interrupts in supervisor mode
+ 966              	 * \details Enables Timer IRQ interrupts by setting the STIE-bit in the SIE Register.
+ 967              	 * \remarks
+ 968              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 969              	 */
+ 970              	__STATIC_FORCEINLINE void __enable_timer_irq_s(void)
+ 971              	{
+ 972              	    __RV_CSR_SET(CSR_SIE, MIE_STIE);
+ 973              	}
+ 974              	
+ 975              	/**
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 19
+
+
+ 976              	 * \brief   Disable Timer IRQ Interrupts in supervisor mode
+ 977              	 * \details Disables Timer IRQ interrupts by clearing the STIE-bit in the SIE Register.
+ 978              	 * \remarks
+ 979              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 980              	 */
+ 981              	__STATIC_FORCEINLINE void __disable_timer_irq_s(void)
+ 982              	{
+ 983              	    __RV_CSR_CLEAR(CSR_SIE, MIE_STIE);
+ 984              	}
+ 985              	
+ 986              	/**
+ 987              	 * \brief   Enable software IRQ Interrupts in supervisor mode
+ 988              	 * \details Enables software IRQ interrupts by setting the SSIE-bit in the SIE Register.
+ 989              	 * \remarks
+ 990              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 991              	 */
+ 992              	__STATIC_FORCEINLINE void __enable_sw_irq_s(void)
+ 993              	{
+ 994              	    __RV_CSR_SET(CSR_MIE, MIE_SSIE);
+ 995              	}
+ 996              	
+ 997              	/**
+ 998              	 * \brief   Disable software IRQ Interrupts in supervisor mode
+ 999              	 * \details Disables software IRQ interrupts by clearing the SSIE-bit in the SIE Register.
+ 1000              	 * \remarks
+ 1001              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 1002              	 */
+ 1003              	__STATIC_FORCEINLINE void __disable_sw_irq_s(void)
+ 1004              	{
+ 1005              	    __RV_CSR_CLEAR(CSR_SIE, MIE_SSIE);
+ 1006              	}
+ 1007              	
+ 1008              	/**
+ 1009              	 * \brief   Disable Core IRQ Interrupt in supervisor mode
+ 1010              	 * \details Disable Core IRQ interrupt by clearing the irq bit in the SIE Register.
+ 1011              	 * \remarks
+ 1012              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 1013              	 */
+ 1014              	__STATIC_FORCEINLINE void __disable_core_irq_s(uint32_t irq)
+ 1015              	{
+ 1016              	    __RV_CSR_CLEAR(CSR_SIE, 1 << irq);
+ 1017              	}
+ 1018              	
+ 1019              	/**
+ 1020              	 * \brief   Enable Core IRQ Interrupt in supervisor mode
+ 1021              	 * \details Enable Core IRQ interrupt by setting the irq bit in the MIE Register.
+ 1022              	 * \remarks
+ 1023              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 1024              	 */
+ 1025              	__STATIC_FORCEINLINE void __enable_core_irq_s(uint32_t irq)
+ 1026              	{
+ 1027              	    __RV_CSR_SET(CSR_SIE, 1 << irq);
+ 1028              	}
+ 1029              	
+ 1030              	/**
+ 1031              	 * \brief   Get Core IRQ Interrupt Pending status in supervisor mode
+ 1032              	 * \details Get Core IRQ interrupt pending status of irq bit.
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 20
+
+
+ 1033              	 * \remarks
+ 1034              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 1035              	 */
+ 1036              	__STATIC_FORCEINLINE uint32_t __get_core_irq_pending_s(uint32_t irq)
+ 1037              	{
+ 1038              	    return ((__RV_CSR_READ(CSR_SIP) >> irq) & 0x1);
+ 1039              	}
+ 1040              	
+ 1041              	/**
+ 1042              	 * \brief   Clear Core IRQ Interrupt Pending status in supervisor mode
+ 1043              	 * \details Clear Core IRQ interrupt pending status of irq bit.
+ 1044              	 * \remarks
+ 1045              	 *          Can only be executed in Privileged modes, available for plic interrupt mode.
+ 1046              	 */
+ 1047              	__STATIC_FORCEINLINE void __clear_core_irq_pending_s(uint32_t irq)
+ 1048              	{
+ 1049              	    __RV_CSR_SET(CSR_SIP, 1 << irq);
+ 1050              	}
+ 1051              	
+ 1052              	/**
+ 1053              	 * \brief   Read whole 64 bits value of mcycle counter
+ 1054              	 * \details This function will read the whole 64 bits of MCYCLE register
+ 1055              	 * \return  The whole 64 bits value of MCYCLE
+ 1056              	 * \remarks It will work for both RV32 and RV64 to get full 64bits value of MCYCLE
+ 1057              	 */
+ 1058              	__STATIC_FORCEINLINE uint64_t __get_rv_cycle(void)
+ 1059              	{
+ 1060              	#if __RISCV_XLEN == 32
+ 1061              	    volatile uint32_t high0, low, high;
+ 1062              	    uint64_t full;
+ 1063              	
+ 1064 000c F32700B8 	    high0 = __RV_CSR_READ(CSR_MCYCLEH);
+ 1065              	    low = __RV_CSR_READ(CSR_MCYCLE);
+  53              		csrr a5, 0xb80
+  54              	# 0 "" 2
+  55              	.LVL1:
+  56              	.LM13:
+  57              	 #NO_APP
+  58              	.LBE11:
+  59              	.LM14:
+  60 0010 3ECA     		sw	a5,20(sp)
+  61              	.LM15:
+  62              	.LBB12:
+  63              	.LM16:
+  64              	.LM17:
+  65              	 #APP
+  66              	# 1065 "liteos_m//kernel/arch/risc-v/nuclei/gcc/nmsis/Core/Include/core_feature_base.h" 1
+ 1066              	    high = __RV_CSR_READ(CSR_MCYCLEH);
+  67              		csrr a5, 0xb00
+  68              	# 0 "" 2
+  69              	.LVL2:
+  70              	.LM18:
+  71              	 #NO_APP
+  72              	.LBE12:
+  73              	.LM19:
+  74 0016 3ECC     		sw	a5,24(sp)
+  75              	.LVL3:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 21
+
+
+  76              	.LM20:
+  77              	.LBB13:
+  78              	.LM21:
+  79              	.LM22:
+  80              	 #APP
+  81              	# 1066 "liteos_m//kernel/arch/risc-v/nuclei/gcc/nmsis/Core/Include/core_feature_base.h" 1
+ 1067              	    if (high0 != high) {
+  82              		csrr a5, 0xb80
+  83              	# 0 "" 2
+  84              	.LVL4:
+  85              	.LM23:
+  86              	 #NO_APP
+  87              	.LBE13:
+  88              	.LM24:
+  89 001c 3ECE     		sw	a5,28(sp)
+  90              	.LVL5:
+  91              	.LM25:
+  92              	.LM26:
+  93 001e 5247     		lw	a4,20(sp)
+  94 0020 F247     		lw	a5,28(sp)
+  95              	.LVL6:
+  96              	.LM27:
+  97 0022 6305F700 		beq	a4,a5,.L2
+  98              	.LM28:
+  99              	.LBB14:
+ 100              	.LM29:
+ 101              	.LM30:
+ 102              	 #APP
+ 103              	# 1068 "liteos_m//kernel/arch/risc-v/nuclei/gcc/nmsis/Core/Include/core_feature_base.h" 1
+ 1068 0026 F32700B0 	        low = __RV_CSR_READ(CSR_MCYCLE);
+ 1069              	    }
+ 104              		csrr a5, 0xb00
+ 105              	# 0 "" 2
+ 106              	.LVL7:
+ 107              	.LM31:
+ 108              	 #NO_APP
+ 109              	.LBE14:
+ 110              	.LM32:
+ 111 002a 3ECC     		sw	a5,24(sp)
+ 112              	.LVL8:
+ 113              	.L2:
+ 114              	.LM33:
+ 115              	.LM34:
+ 116 002c F247     		lw	a5,28(sp)
+ 117              	.LBE15:
+ 118              	.LBE18:
+ 119              	.LM35:
+ 120 002e 17060000 		lw	a2,SystemCoreClock
+ 120      03260600 
+ 121 0036 8146     		li	a3,0
+ 122              	.LBB19:
+ 123              	.LBB16:
+ 124              	.LM36:
+ 125 0038 BE84     		mv	s1,a5
+ 126              	.LM37:
+ 127 003a E247     		lw	a5,24(sp)
+ 128              	.LBE16:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 22
+
+
+ 129              	.LBE19:
+ 130              	.LM38:
+ 131 003c A685     		mv	a1,s1
+ 132              	.LVL9:
+ 133              	.LM39:
+ 134 003e 32C6     		sw	a2,12(sp)
+ 135 0040 3E85     		mv	a0,a5
+ 136              	.LVL10:
+ 137              	.LBB20:
+ 138              	.LBB17:
+ 139              	.LM40:
+ 140 0042 3E89     		mv	s2,a5
+ 141              	.LM41:
+ 142              	.LVL11:
+ 143              	.LM42:
+ 144              	.LBE17:
+ 145              	.LBE20:
+ 146              	.LM43:
+ 147              	.LM44:
+ 148 0044 97000000 		call	__udivdi3
+ 148      E7800000 
+ 149              	.LVL12:
+ 150              	.LM45:
+ 151 004c 3246     		lw	a2,12(sp)
+ 152              	.LM46:
+ 153 004e 08C0     		sw	a0,0(s0)
+ 154 0050 4CC0     		sw	a1,4(s0)
+ 155              	.LM47:
+ 156              	.LM48:
+ 157 0052 8146     		li	a3,0
+ 158 0054 4A85     		mv	a0,s2
+ 159 0056 A685     		mv	a1,s1
+ 160 0058 97000000 		call	__umoddi3
+ 160      E7800000 
+ 161              	.LVL13:
+ 162              	.LM49:
+ 163 0060 B7470F00 		li	a5,999424
+ 164 0064 93870724 		addi	a5,a5,576
+ 165 0068 B335F502 		mulhu	a1,a0,a5
+ 166              	.LM50:
+ 167 006c 3246     		lw	a2,12(sp)
+ 168 006e 8146     		li	a3,0
+ 169 0070 3305F502 		mul	a0,a0,a5
+ 170 0074 97000000 		call	__udivdi3
+ 170      E7800000 
+ 171              	.LVL14:
+ 172              	.LM51:
+ 173 007c 08C4     		sw	a0,8(s0)
+ 174              	.LM52:
+ 175              	.LM53:
+ 176 007e B250     		lw	ra,44(sp)
+ 177              		.cfi_restore 1
+ 178 0080 2254     		lw	s0,40(sp)
+ 179              		.cfi_restore 8
+ 180              	.LVL15:
+ 181              	.LM54:
+ 182 0082 9254     		lw	s1,36(sp)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 23
+
+
+ 183              		.cfi_restore 9
+ 184              	.LVL16:
+ 185              	.LM55:
+ 186 0084 0259     		lw	s2,32(sp)
+ 187              		.cfi_restore 18
+ 188              	.LM56:
+ 189 0086 0145     		li	a0,0
+ 190 0088 4561     		addi	sp,sp,48
+ 191              	.LCFI1:
+ 192              		.cfi_def_cfa_offset 0
+ 193 008a 8280     		jr	ra
+ 194              		.cfi_endproc
+ 195              	.LFE172:
+ 197              		.text
+ 198              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gettimeofday.c
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:10     .text._gettimeofday:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:13     .text._gettimeofday:00000000 _gettimeofday
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:17     .text._gettimeofday:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:36     .text._gettimeofday:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:41     .text._gettimeofday:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:42     .text._gettimeofday:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:43     .text._gettimeofday:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:44     .text._gettimeofday:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:177    .text._gettimeofday:00000080 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:179    .text._gettimeofday:00000082 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:183    .text._gettimeofday:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:187    .text._gettimeofday:00000086 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:192    .text._gettimeofday:0000008a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:194    .text._gettimeofday:0000008c .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:120    .text._gettimeofday:0000002e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:113    .text._gettimeofday:0000002c .L2
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:550    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1539   .debug_str:00000053 .LASF29
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1533   .debug_str:00000005 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1561   .debug_str:000001a7 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1097   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1119   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1543   .debug_str:00000129 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1567   .debug_str:000001c8 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1579   .debug_str:00000200 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1597   .debug_str:00000260 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1599   .debug_str:0000026c .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1545   .debug_str:00000140 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1589   .debug_str:00000239 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1551   .debug_str:00000170 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1595   .debug_str:00000257 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1555   .debug_str:00000191 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1549   .debug_str:0000015e .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1591   .debug_str:00000243 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1547   .debug_str:0000014e .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1571   .debug_str:000001dc .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1583   .debug_str:00000218 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1587   .debug_str:0000022d .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1573   .debug_str:000001ea .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1563   .debug_str:000001b7 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1577   .debug_str:000001f9 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1575   .debug_str:000001f1 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1593   .debug_str:0000024e .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1537   .debug_str:0000004a .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1565   .debug_str:000001bf .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1585   .debug_str:0000021d .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1553   .debug_str:00000183 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:15     .text._gettimeofday:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:195    .text._gettimeofday:0000008c .LFE172
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:923    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:948    .debug_loc:00000032 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:941    .debug_loc:0000002c .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:977    .debug_loc:00000068 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:972    .debug_loc:00000064 .LVUS2
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 25
+
+
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1569   .debug_str:000001d5 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1002   .debug_loc:00000093 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:997    .debug_loc:0000008f .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:21     .text._gettimeofday:00000000 .LBI8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1028   .debug_loc:000000bf .LLST4
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1023   .debug_loc:000000bb .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:62     .text._gettimeofday:00000012 .LBB12
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:72     .text._gettimeofday:00000016 .LBE12
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1045   .debug_loc:000000e2 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1040   .debug_loc:000000de .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:77     .text._gettimeofday:00000018 .LBB13
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:87     .text._gettimeofday:0000001c .LBE13
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1062   .debug_loc:00000105 .LLST6
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1057   .debug_loc:00000101 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:99     .text._gettimeofday:00000026 .LBB14
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:109    .text._gettimeofday:0000002a .LBE14
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1077   .debug_loc:00000126 .LLST7
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1074   .debug_loc:00000124 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:149    .text._gettimeofday:0000004c .LVL12
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:161    .text._gettimeofday:00000060 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:171    .text._gettimeofday:0000007c .LVL14
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1541   .debug_str:0000011a .LASF34
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1559   .debug_str:000001a1 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1531   .debug_str:00000000 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1557   .debug_str:0000019c .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1581   .debug_str:0000020e .LASF27
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:1535   .debug_str:00000040 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:35     .text._gettimeofday:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:191    .text._gettimeofday:0000008a .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:14     .text._gettimeofday:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:136    .text._gettimeofday:00000042 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:180    .text._gettimeofday:00000082 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:132    .text._gettimeofday:0000003e .LVL9
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:142    .text._gettimeofday:00000044 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:184    .text._gettimeofday:00000084 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:55     .text._gettimeofday:00000010 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:69     .text._gettimeofday:00000016 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:75     .text._gettimeofday:00000018 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:84     .text._gettimeofday:0000001c .LVL4
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:90     .text._gettimeofday:0000001e .LVL5
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:95     .text._gettimeofday:00000022 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:112    .text._gettimeofday:0000002c .LVL8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:106    .text._gettimeofday:0000002a .LVL7
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:200    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:20     .text._gettimeofday:00000000 .LBB8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:32     .text._gettimeofday:00000000 .LBE8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:47     .text._gettimeofday:0000000c .LBB18
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:118    .text._gettimeofday:0000002e .LBE18
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:122    .text._gettimeofday:00000038 .LBB19
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:129    .text._gettimeofday:0000003c .LBE19
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:137    .text._gettimeofday:00000042 .LBB20
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:145    .text._gettimeofday:00000044 .LBE20
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:27     .text._gettimeofday:00000000 .LBB10
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:30     .text._gettimeofday:00000000 .LBE10
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:49     .text._gettimeofday:0000000c .LBB11
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:58     .text._gettimeofday:00000010 .LBE11
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:16     .text._gettimeofday:00000000 .LM1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 26
+
+
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:18     .text._gettimeofday:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:19     .text._gettimeofday:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:22     .text._gettimeofday:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:24     .text._gettimeofday:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:25     .text._gettimeofday:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:26     .text._gettimeofday:00000000 .LM7
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:28     .text._gettimeofday:00000000 .LM8
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:29     .text._gettimeofday:00000000 .LM9
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:33     .text._gettimeofday:00000000 .LM10
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:45     .text._gettimeofday:0000000a .LM11
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:50     .text._gettimeofday:0000000c .LM12
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:56     .text._gettimeofday:00000010 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:59     .text._gettimeofday:00000010 .LM14
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:61     .text._gettimeofday:00000012 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:63     .text._gettimeofday:00000012 .LM16
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:64     .text._gettimeofday:00000012 .LM17
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:70     .text._gettimeofday:00000016 .LM18
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:73     .text._gettimeofday:00000016 .LM19
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:76     .text._gettimeofday:00000018 .LM20
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:78     .text._gettimeofday:00000018 .LM21
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:79     .text._gettimeofday:00000018 .LM22
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:85     .text._gettimeofday:0000001c .LM23
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:88     .text._gettimeofday:0000001c .LM24
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:91     .text._gettimeofday:0000001e .LM25
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:92     .text._gettimeofday:0000001e .LM26
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:96     .text._gettimeofday:00000022 .LM27
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:98     .text._gettimeofday:00000026 .LM28
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:100    .text._gettimeofday:00000026 .LM29
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:101    .text._gettimeofday:00000026 .LM30
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:107    .text._gettimeofday:0000002a .LM31
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:110    .text._gettimeofday:0000002a .LM32
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:114    .text._gettimeofday:0000002c .LM33
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:115    .text._gettimeofday:0000002c .LM34
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:119    .text._gettimeofday:0000002e .LM35
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:124    .text._gettimeofday:00000038 .LM36
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:126    .text._gettimeofday:0000003a .LM37
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:130    .text._gettimeofday:0000003c .LM38
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:133    .text._gettimeofday:0000003e .LM39
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:139    .text._gettimeofday:00000042 .LM40
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:141    .text._gettimeofday:00000044 .LM41
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:143    .text._gettimeofday:00000044 .LM42
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:146    .text._gettimeofday:00000044 .LM43
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:147    .text._gettimeofday:00000044 .LM44
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:150    .text._gettimeofday:0000004c .LM45
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:152    .text._gettimeofday:0000004e .LM46
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:155    .text._gettimeofday:00000052 .LM47
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:156    .text._gettimeofday:00000052 .LM48
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:162    .text._gettimeofday:00000060 .LM49
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:166    .text._gettimeofday:0000006c .LM50
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:172    .text._gettimeofday:0000007c .LM51
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:174    .text._gettimeofday:0000007e .LM52
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:175    .text._gettimeofday:0000007e .LM53
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:181    .text._gettimeofday:00000082 .LM54
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:185    .text._gettimeofday:00000084 .LM55
+C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s:188    .text._gettimeofday:00000086 .LM56
+
+UNDEFINED SYMBOLS
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cckN9Kzg.s 			page 27
+
+
+SystemCoreClock
+__udivdi3
+__umoddi3

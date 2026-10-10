@@ -1,0 +1,242 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s 			page 1
+
+
+   1              		.file	"memmove_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.memmove_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	memmove_s
+  13              	memmove_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 6358B004 		ble	a1,zero,.L6
+  21              	.LM4:
+  22              	.LM5:
+  23 0004 5947     		li	a4,22
+  24              	.LM6:
+  25 0006 39C5     		beq	a0,zero,.L15
+  26              	.LM7:
+  27 0008 4111     		addi	sp,sp,-16
+  28              	.LCFI0:
+  29              		.cfi_def_cfa_offset 16
+  30 000a AE87     		mv	a5,a1
+  31 000c 06C6     		sw	ra,12(sp)
+  32              		.cfi_offset 1, -4
+  33 000e B285     		mv	a1,a2
+  34              	.LVL1:
+  35              	.LM8:
+  36 0010 3E86     		mv	a2,a5
+  37              	.LVL2:
+  38              	.LM9:
+  39 0012 99E9     		bne	a1,zero,.L3
+  40              	.LM10:
+  41              	.LM11:
+  42              	.LM12:
+  43              	.LM13:
+  44 0014 97000000 		call	memset
+  44      E7800000 
+  45              	.LVL3:
+  46              	.LM14:
+  47              	.LM15:
+  48 001c 13076009 		li	a4,150
+  49              	.L1:
+  50              	.LM16:
+  51 0020 B240     		lw	ra,12(sp)
+  52              		.cfi_remember_state
+  53              		.cfi_restore 1
+  54 0022 3A85     		mv	a0,a4
+  55 0024 4101     		addi	sp,sp,16
+  56              	.LCFI1:
+  57              		.cfi_def_cfa_offset 0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s 			page 2
+
+
+  58 0026 8280     		jr	ra
+  59              	.LVL4:
+  60              	.L3:
+  61              	.LCFI2:
+  62              		.cfi_restore_state
+  63              	.LM17:
+  64              	.LM18:
+  65 0028 63FAD700 		bgeu	a5,a3,.L4
+  66              	.LM19:
+  67              	.LM20:
+  68 002c 8145     		li	a1,0
+  69              	.LVL5:
+  70              	.LM21:
+  71 002e 97000000 		call	memset
+  71      E7800000 
+  72              	.LVL6:
+  73              	.LM22:
+  74              	.LM23:
+  75              	.LM24:
+  76 0036 1307200A 		li	a4,162
+  77 003a DDB7     		j	.L1
+  78              	.LVL7:
+  79              	.L4:
+  80              	.LM25:
+  81              	.LM26:
+  82              	.LM27:
+  83 003c 81CA     		beq	a3,zero,.L5
+  84 003e 6307B500 		beq	a0,a1,.L5
+  85              	.LM28:
+  86              	.LM29:
+  87 0042 3686     		mv	a2,a3
+  88              	.LVL8:
+  89              	.LM30:
+  90 0044 97000000 		call	memmove
+  90      E7800000 
+  91              	.LVL9:
+  92              	.L5:
+  93              	.LM31:
+  94 004c 0147     		li	a4,0
+  95 004e C9BF     		j	.L1
+  96              	.LVL10:
+  97              	.L6:
+  98              	.LCFI3:
+  99              		.cfi_def_cfa_offset 0
+ 100              		.cfi_restore 1
+ 101              	.LM32:
+ 102 0050 13072002 		li	a4,34
+ 103              	.L15:
+ 104              	.LM33:
+ 105 0054 3A85     		mv	a0,a4
+ 106              	.LVL11:
+ 107              	.LM34:
+ 108 0056 8280     		ret
+ 109              		.cfi_endproc
+ 110              	.LFE4:
+ 112              		.text
+ 113              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s 			page 3
+
+
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 memmove_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:10     .text.memmove_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:13     .text.memmove_s:00000000 memmove_s
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:17     .text.memmove_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:29     .text.memmove_s:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:32     .text.memmove_s:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:52     .text.memmove_s:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:53     .text.memmove_s:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:57     .text.memmove_s:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:62     .text.memmove_s:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:99     .text.memmove_s:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:100    .text.memmove_s:00000050 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:109    .text.memmove_s:00000058 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:97     .text.memmove_s:00000050 .L6
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:103    .text.memmove_s:00000054 .L15
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:60     .text.memmove_s:00000028 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:79     .text.memmove_s:0000003c .L4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:49     .text.memmove_s:00000020 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:92     .text.memmove_s:0000004c .L5
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:355    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1229   .debug_str:00000025 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1265   .debug_str:000001b8 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1255   .debug_str:0000017e .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:947    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:953    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1233   .debug_str:000000fe .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1263   .debug_str:000001ab .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1253   .debug_str:00000172 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1241   .debug_str:0000012f .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1261   .debug_str:000001a1 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1251   .debug_str:0000015f .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1247   .debug_str:00000148 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1231   .debug_str:000000ec .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1249   .debug_str:00000151 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1225   .debug_str:00000019 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1257   .debug_str:0000018e .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1243   .debug_str:0000013d .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1237   .debug_str:0000011f .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1223   .debug_str:00000011 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1259   .debug_str:0000019a .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1235   .debug_str:00000115 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:15     .text.memmove_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:110    .text.memmove_s:00000058 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:581    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1227   .debug_str:00000020 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:626    .debug_loc:00000054 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:609    .debug_loc:00000044 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1239   .debug_str:00000127 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:716    .debug_loc:000000ea .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:697    .debug_loc:000000d8 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:799    .debug_loc:00000180 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:782    .debug_loc:00000170 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1245   .debug_str:00000142 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:876    .debug_loc:00000209 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:861    .debug_loc:000001fb .LVUS4
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s 			page 5
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:45     .text.memmove_s:0000001c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:72     .text.memmove_s:00000036 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:91     .text.memmove_s:0000004c .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:1221   .debug_str:00000000 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:28     .text.memmove_s:0000000a .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:56     .text.memmove_s:00000026 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:61     .text.memmove_s:00000028 .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:98     .text.memmove_s:00000050 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:14     .text.memmove_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:59     .text.memmove_s:00000028 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:78     .text.memmove_s:0000003c .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:96     .text.memmove_s:00000050 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:106    .text.memmove_s:00000056 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:34     .text.memmove_s:00000010 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:88     .text.memmove_s:00000044 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:37     .text.memmove_s:00000012 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:69     .text.memmove_s:0000002e .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:115    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:16     .text.memmove_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:18     .text.memmove_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:19     .text.memmove_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:21     .text.memmove_s:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:22     .text.memmove_s:00000004 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:24     .text.memmove_s:00000006 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:26     .text.memmove_s:00000008 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:35     .text.memmove_s:00000010 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:38     .text.memmove_s:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:40     .text.memmove_s:00000014 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:41     .text.memmove_s:00000014 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:42     .text.memmove_s:00000014 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:43     .text.memmove_s:00000014 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:46     .text.memmove_s:0000001c .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:47     .text.memmove_s:0000001c .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:50     .text.memmove_s:00000020 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:63     .text.memmove_s:00000028 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:64     .text.memmove_s:00000028 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:66     .text.memmove_s:0000002c .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:67     .text.memmove_s:0000002c .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:70     .text.memmove_s:0000002e .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:73     .text.memmove_s:00000036 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:74     .text.memmove_s:00000036 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:75     .text.memmove_s:00000036 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:80     .text.memmove_s:0000003c .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:81     .text.memmove_s:0000003c .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:82     .text.memmove_s:0000003c .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:85     .text.memmove_s:00000042 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:86     .text.memmove_s:00000042 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:89     .text.memmove_s:00000044 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:93     .text.memmove_s:0000004c .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:101    .text.memmove_s:00000050 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:104    .text.memmove_s:00000054 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccIICqJQ.s:107    .text.memmove_s:00000056 .LM34
+
+UNDEFINED SYMBOLS
+memset
+memmove

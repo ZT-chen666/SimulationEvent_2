@@ -1,0 +1,1502 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 1
+
+
+   1              		.file	"gd32vf103_gpio.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.gpio_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	gpio_deinit
+  13              	gpio_deinit:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23 0002 06C6     		sw	ra,12(sp)
+  24              		.cfi_offset 1, -4
+  25              	.LM4:
+  26 0004 B7170140 		li	a5,1073811456
+  27 0008 630DF506 		beq	a0,a5,.L2
+  28 000c 63EFA700 		bgtu	a0,a5,.L3
+  29 0010 93870780 		addi	a5,a5,-2048
+  30 0014 6300F504 		beq	a0,a5,.L4
+  31 0018 B7170140 		li	a5,1073811456
+  32 001c 938707C0 		addi	a5,a5,-1024
+  33 0020 6308F504 		beq	a0,a5,.L5
+  34              	.L1:
+  35              	.LM5:
+  36 0024 B240     		lw	ra,12(sp)
+  37              		.cfi_remember_state
+  38              		.cfi_restore 1
+  39 0026 4101     		addi	sp,sp,16
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 0
+  42 0028 8280     		jr	ra
+  43              	.L3:
+  44              	.LCFI2:
+  45              		.cfi_restore_state
+  46              	.LM6:
+  47 002a B7170140 		li	a5,1073811456
+  48 002e 93870740 		addi	a5,a5,1024
+  49 0032 6301F506 		beq	a0,a5,.L7
+  50 0036 B7270140 		li	a5,1073815552
+  51 003a 93870780 		addi	a5,a5,-2048
+  52 003e E313F5FE 		bne	a0,a5,.L1
+  53              	.LM7:
+  54 0042 13056030 		li	a0,774
+  55              	.LVL1:
+  56              	.LM8:
+  57 0046 97000000 		call	rcu_periph_reset_enable
+  57      E7800000 
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 2
+
+
+  58              	.LVL2:
+  59              	.LM9:
+  60 004e 13056030 		li	a0,774
+  61 0052 09A8     		j	.L10
+  62              	.LVL3:
+  63              	.L4:
+  64              	.LM10:
+  65 0054 13052030 		li	a0,770
+  66              	.LVL4:
+  67              	.LM11:
+  68 0058 97000000 		call	rcu_periph_reset_enable
+  68      E7800000 
+  69              	.LVL5:
+  70              	.LM12:
+  71 0060 13052030 		li	a0,770
+  72              	.L10:
+  73              	.LM13:
+  74 0064 B240     		lw	ra,12(sp)
+  75              		.cfi_remember_state
+  76              		.cfi_restore 1
+  77 0066 4101     		addi	sp,sp,16
+  78              	.LCFI3:
+  79              		.cfi_def_cfa_offset 0
+  80              	.LM14:
+  81 0068 17030000 		tail	rcu_periph_reset_disable
+  81      67000300 
+  82              	.LVL6:
+  83              	.L5:
+  84              	.LCFI4:
+  85              		.cfi_restore_state
+  86              	.LM15:
+  87 0070 13053030 		li	a0,771
+  88              	.LVL7:
+  89              	.LM16:
+  90 0074 97000000 		call	rcu_periph_reset_enable
+  90      E7800000 
+  91              	.LVL8:
+  92              	.LM17:
+  93 007c 13053030 		li	a0,771
+  94 0080 D5B7     		j	.L10
+  95              	.LVL9:
+  96              	.L2:
+  97              	.LM18:
+  98 0082 13054030 		li	a0,772
+  99              	.LVL10:
+ 100              	.LM19:
+ 101 0086 97000000 		call	rcu_periph_reset_enable
+ 101      E7800000 
+ 102              	.LVL11:
+ 103              	.LM20:
+ 104 008e 13054030 		li	a0,772
+ 105 0092 C9BF     		j	.L10
+ 106              	.LVL12:
+ 107              	.L7:
+ 108              	.LM21:
+ 109 0094 13055030 		li	a0,773
+ 110              	.LVL13:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 3
+
+
+ 111              	.LM22:
+ 112 0098 97000000 		call	rcu_periph_reset_enable
+ 112      E7800000 
+ 113              	.LVL14:
+ 114              	.LM23:
+ 115 00a0 13055030 		li	a0,773
+ 116 00a4 C1B7     		j	.L10
+ 117              		.cfi_endproc
+ 118              	.LFE150:
+ 120              		.section	.text.gpio_afio_deinit,"ax",@progbits
+ 121              		.align	1
+ 122              		.globl	gpio_afio_deinit
+ 124              	gpio_afio_deinit:
+ 125              	.LFB151:
+ 126              	.LM24:
+ 127              		.cfi_startproc
+ 128              	.LM25:
+ 129              	.LM26:
+ 130 0000 4111     		addi	sp,sp,-16
+ 131              	.LCFI5:
+ 132              		.cfi_def_cfa_offset 16
+ 133              	.LM27:
+ 134 0002 13050030 		li	a0,768
+ 135              	.LM28:
+ 136 0006 06C6     		sw	ra,12(sp)
+ 137              		.cfi_offset 1, -4
+ 138              	.LM29:
+ 139 0008 97000000 		call	rcu_periph_reset_enable
+ 139      E7800000 
+ 140              	.LVL15:
+ 141              	.LM30:
+ 142              	.LM31:
+ 143 0010 B240     		lw	ra,12(sp)
+ 144              		.cfi_restore 1
+ 145              	.LM32:
+ 146 0012 13050030 		li	a0,768
+ 147              	.LM33:
+ 148 0016 4101     		addi	sp,sp,16
+ 149              	.LCFI6:
+ 150              		.cfi_def_cfa_offset 0
+ 151              	.LM34:
+ 152 0018 17030000 		tail	rcu_periph_reset_disable
+ 152      67000300 
+ 153              	.LVL16:
+ 154              		.cfi_endproc
+ 155              	.LFE151:
+ 157              		.section	.text.gpio_init,"ax",@progbits
+ 158              		.align	1
+ 159              		.globl	gpio_init
+ 161              	gpio_init:
+ 162              	.LVL17:
+ 163              	.LFB152:
+ 164              	.LM35:
+ 165              		.cfi_startproc
+ 166              	.LM36:
+ 167              	.LM37:
+ 168              	.LM38:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 4
+
+
+ 169              	.LM39:
+ 170              	.LM40:
+ 171 0000 93F70501 		andi	a5,a1,16
+ 172              	.LM41:
+ 173 0004 93F8F500 		andi	a7,a1,15
+ 174              	.LVL18:
+ 175              	.LM42:
+ 176              	.LM43:
+ 177 0008 99C3     		beq	a5,zero,.L14
+ 178              	.LM44:
+ 179              	.LM45:
+ 180 000a B3E8C800 		or	a7,a7,a2
+ 181              	.LVL19:
+ 182              	.L14:
+ 183              	.LM46:
+ 184              	.LM47:
+ 185              	.LM48:
+ 186 000e 0147     		li	a4,0
+ 187              	.LM49:
+ 188 0010 054E     		li	t3,1
+ 189              	.LM50:
+ 190 0012 BD4E     		li	t4,15
+ 191              	.LM51:
+ 192 0014 130F8002 		li	t5,40
+ 193              	.LM52:
+ 194 0018 930F8004 		li	t6,72
+ 195              	.LM53:
+ 196 001c 2143     		li	t1,8
+ 197              	.LVL20:
+ 198              	.L18:
+ 199              	.LM54:
+ 200              	.LM55:
+ 201 001e 3316EE00 		sll	a2,t3,a4
+ 202              	.LM56:
+ 203 0022 758E     		and	a2,a2,a3
+ 204              	.LM57:
+ 205 0024 1DC2     		beq	a2,zero,.L15
+ 206              	.LM58:
+ 207 0026 93172700 		slli	a5,a4,2
+ 208              	.LM59:
+ 209 002a 83220500 		lw	t0,0(a0)
+ 210              	.LVL21:
+ 211              	.LM60:
+ 212              	.LM61:
+ 213 002e 3398FE00 		sll	a6,t4,a5
+ 214              	.LM62:
+ 215 0032 1348F8FF 		not	a6,a6
+ 216              	.LM63:
+ 217 0036 33785800 		and	a6,a6,t0
+ 218              	.LVL22:
+ 219              	.LM64:
+ 220              	.LM65:
+ 221 003a B397F800 		sll	a5,a7,a5
+ 222              	.LM66:
+ 223 003e B3E70701 		or	a5,a5,a6
+ 224              	.LVL23:
+ 225              	.LM67:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 5
+
+
+ 226              	.LM68:
+ 227 0042 639BE505 		bne	a1,t5,.L16
+ 228              	.LM69:
+ 229              	.LM70:
+ 230 0046 50C9     		sw	a2,20(a0)
+ 231              	.L17:
+ 232              	.LM71:
+ 233              	.LM72:
+ 234 0048 1CC1     		sw	a5,0(a0)
+ 235              	.LVL24:
+ 236              	.L15:
+ 237              	.LM73:
+ 238              	.LM74:
+ 239 004a 0507     		addi	a4,a4,1
+ 240              	.LVL25:
+ 241              	.LM75:
+ 242 004c E31967FC 		bne	a4,t1,.L18
+ 243 0050 0146     		li	a2,0
+ 244              	.LM76:
+ 245 0052 054E     		li	t3,1
+ 246              	.LM77:
+ 247 0054 BD4E     		li	t4,15
+ 248              	.LM78:
+ 249 0056 130F8002 		li	t5,40
+ 250              	.LM79:
+ 251 005a 930F8004 		li	t6,72
+ 252              	.LM80:
+ 253 005e 2143     		li	t1,8
+ 254              	.LVL26:
+ 255              	.L22:
+ 256              	.LM81:
+ 257              	.LM82:
+ 258 0060 93078600 		addi	a5,a2,8
+ 259 0064 B317FE00 		sll	a5,t3,a5
+ 260              	.LM83:
+ 261 0068 F58F     		and	a5,a5,a3
+ 262              	.LM84:
+ 263 006a 9DC3     		beq	a5,zero,.L19
+ 264              	.LM85:
+ 265 006c 13172600 		slli	a4,a2,2
+ 266              	.LM86:
+ 267 0070 83224500 		lw	t0,4(a0)
+ 268              	.LVL27:
+ 269              	.LM87:
+ 270              	.LM88:
+ 271 0074 3398EE00 		sll	a6,t4,a4
+ 272              	.LM89:
+ 273 0078 1348F8FF 		not	a6,a6
+ 274              	.LM90:
+ 275 007c 33785800 		and	a6,a6,t0
+ 276              	.LVL28:
+ 277              	.LM91:
+ 278              	.LM92:
+ 279 0080 3397E800 		sll	a4,a7,a4
+ 280              	.LM93:
+ 281 0084 33670701 		or	a4,a4,a6
+ 282              	.LVL29:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 6
+
+
+ 283              	.LM94:
+ 284              	.LM95:
+ 285 0088 639CE501 		bne	a1,t5,.L20
+ 286              	.LM96:
+ 287              	.LM97:
+ 288 008c 5CC9     		sw	a5,20(a0)
+ 289              	.L21:
+ 290              	.LM98:
+ 291              	.LM99:
+ 292 008e 58C1     		sw	a4,4(a0)
+ 293              	.LVL30:
+ 294              	.L19:
+ 295              	.LM100:
+ 296              	.LM101:
+ 297 0090 0506     		addi	a2,a2,1
+ 298              	.LVL31:
+ 299              	.LM102:
+ 300 0092 E31766FC 		bne	a2,t1,.L22
+ 301              	.LM103:
+ 302 0096 8280     		ret
+ 303              	.LVL32:
+ 304              	.L16:
+ 305              	.LM104:
+ 306              	.LM105:
+ 307 0098 E398F5FB 		bne	a1,t6,.L17
+ 308              	.LM106:
+ 309              	.LM107:
+ 310 009c 10C9     		sw	a2,16(a0)
+ 311 009e 6DB7     		j	.L17
+ 312              	.LVL33:
+ 313              	.L20:
+ 314              	.LM108:
+ 315              	.LM109:
+ 316 00a0 E397F5FF 		bne	a1,t6,.L21
+ 317              	.LM110:
+ 318              	.LM111:
+ 319 00a4 1CC9     		sw	a5,16(a0)
+ 320 00a6 E5B7     		j	.L21
+ 321              		.cfi_endproc
+ 322              	.LFE152:
+ 324              		.section	.text.gpio_bit_set,"ax",@progbits
+ 325              		.align	1
+ 326              		.globl	gpio_bit_set
+ 328              	gpio_bit_set:
+ 329              	.LVL34:
+ 330              	.LFB153:
+ 331              	.LM112:
+ 332              		.cfi_startproc
+ 333              	.LM113:
+ 334              	.LM114:
+ 335 0000 0CC9     		sw	a1,16(a0)
+ 336              	.LM115:
+ 337 0002 8280     		ret
+ 338              		.cfi_endproc
+ 339              	.LFE153:
+ 341              		.section	.text.gpio_bit_reset,"ax",@progbits
+ 342              		.align	1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 7
+
+
+ 343              		.globl	gpio_bit_reset
+ 345              	gpio_bit_reset:
+ 346              	.LVL35:
+ 347              	.LFB154:
+ 348              	.LM116:
+ 349              		.cfi_startproc
+ 350              	.LM117:
+ 351              	.LM118:
+ 352 0000 4CC9     		sw	a1,20(a0)
+ 353              	.LM119:
+ 354 0002 8280     		ret
+ 355              		.cfi_endproc
+ 356              	.LFE154:
+ 358              		.section	.text.gpio_bit_write,"ax",@progbits
+ 359              		.align	1
+ 360              		.globl	gpio_bit_write
+ 362              	gpio_bit_write:
+ 363              	.LVL36:
+ 364              	.LFB155:
+ 365              	.LM120:
+ 366              		.cfi_startproc
+ 367              	.LM121:
+ 368              	.LM122:
+ 369 0000 19C2     		beq	a2,zero,.L37
+ 370              	.LM123:
+ 371              	.LM124:
+ 372 0002 0CC9     		sw	a1,16(a0)
+ 373 0004 8280     		ret
+ 374              	.L37:
+ 375              	.LM125:
+ 376              	.LM126:
+ 377 0006 4CC9     		sw	a1,20(a0)
+ 378              	.LM127:
+ 379 0008 8280     		ret
+ 380              		.cfi_endproc
+ 381              	.LFE155:
+ 383              		.section	.text.gpio_port_write,"ax",@progbits
+ 384              		.align	1
+ 385              		.globl	gpio_port_write
+ 387              	gpio_port_write:
+ 388              	.LVL37:
+ 389              	.LFB156:
+ 390              	.LM128:
+ 391              		.cfi_startproc
+ 392              	.LM129:
+ 393              	.LM130:
+ 394 0000 4CC5     		sw	a1,12(a0)
+ 395              	.LM131:
+ 396 0002 8280     		ret
+ 397              		.cfi_endproc
+ 398              	.LFE156:
+ 400              		.section	.text.gpio_input_bit_get,"ax",@progbits
+ 401              		.align	1
+ 402              		.globl	gpio_input_bit_get
+ 404              	gpio_input_bit_get:
+ 405              	.LVL38:
+ 406              	.LFB157:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 8
+
+
+ 407              	.LM132:
+ 408              		.cfi_startproc
+ 409              	.LM133:
+ 410              	.LM134:
+ 411 0000 0845     		lw	a0,8(a0)
+ 412              	.LVL39:
+ 413              	.LM135:
+ 414 0002 6D8D     		and	a0,a0,a1
+ 415              	.LM136:
+ 416 0004 3335A000 		snez	a0,a0
+ 417 0008 8280     		ret
+ 418              		.cfi_endproc
+ 419              	.LFE157:
+ 421              		.section	.text.gpio_input_port_get,"ax",@progbits
+ 422              		.align	1
+ 423              		.globl	gpio_input_port_get
+ 425              	gpio_input_port_get:
+ 426              	.LVL40:
+ 427              	.LFB158:
+ 428              	.LM137:
+ 429              		.cfi_startproc
+ 430              	.LM138:
+ 431              	.LM139:
+ 432 0000 0845     		lw	a0,8(a0)
+ 433              	.LVL41:
+ 434              	.LM140:
+ 435 0002 4205     		slli	a0,a0,16
+ 436 0004 4181     		srli	a0,a0,16
+ 437 0006 8280     		ret
+ 438              		.cfi_endproc
+ 439              	.LFE158:
+ 441              		.section	.text.gpio_output_bit_get,"ax",@progbits
+ 442              		.align	1
+ 443              		.globl	gpio_output_bit_get
+ 445              	gpio_output_bit_get:
+ 446              	.LVL42:
+ 447              	.LFB159:
+ 448              	.LM141:
+ 449              		.cfi_startproc
+ 450              	.LM142:
+ 451              	.LM143:
+ 452 0000 4845     		lw	a0,12(a0)
+ 453              	.LVL43:
+ 454              	.LM144:
+ 455 0002 6D8D     		and	a0,a0,a1
+ 456              	.LM145:
+ 457 0004 3335A000 		snez	a0,a0
+ 458 0008 8280     		ret
+ 459              		.cfi_endproc
+ 460              	.LFE159:
+ 462              		.section	.text.gpio_output_port_get,"ax",@progbits
+ 463              		.align	1
+ 464              		.globl	gpio_output_port_get
+ 466              	gpio_output_port_get:
+ 467              	.LVL44:
+ 468              	.LFB160:
+ 469              	.LM146:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 9
+
+
+ 470              		.cfi_startproc
+ 471              	.LM147:
+ 472              	.LM148:
+ 473 0000 4845     		lw	a0,12(a0)
+ 474              	.LVL45:
+ 475              	.LM149:
+ 476 0002 4205     		slli	a0,a0,16
+ 477 0004 4181     		srli	a0,a0,16
+ 478 0006 8280     		ret
+ 479              		.cfi_endproc
+ 480              	.LFE160:
+ 482              		.section	.text.gpio_pin_remap_config,"ax",@progbits
+ 483              		.align	1
+ 484              		.globl	gpio_pin_remap_config
+ 486              	gpio_pin_remap_config:
+ 487              	.LVL46:
+ 488              	.LFB161:
+ 489              	.LM150:
+ 490              		.cfi_startproc
+ 491              	.LM151:
+ 492              	.LM152:
+ 493              	.LM153:
+ 494 0000 B7070140 		li	a5,1073807360
+ 495              	.LM154:
+ 496 0004 63550504 		bge	a0,zero,.L45
+ 497              	.LM155:
+ 498              	.LM156:
+ 499 0008 D44F     		lw	a3,28(a5)
+ 500              	.LVL47:
+ 501              	.L46:
+ 502              	.LM157:
+ 503              	.LM158:
+ 504              	.LM159:
+ 505 000a B7073000 		li	a5,3145728
+ 506              	.LM160:
+ 507 000e 13170501 		slli	a4,a0,16
+ 508              	.LM161:
+ 509 0012 3376F500 		and	a2,a0,a5
+ 510              	.LM162:
+ 511 0016 4183     		srli	a4,a4,16
+ 512              	.LVL48:
+ 513              	.LM163:
+ 514              	.LM164:
+ 515 0018 631DF602 		bne	a2,a5,.L47
+ 516              	.LM165:
+ 517              	.LM166:
+ 518 001c 370600F1 		li	a2,-251658240
+ 519 0020 7D16     		addi	a2,a2,-1
+ 520 0022 B3F7C600 		and	a5,a3,a2
+ 521              	.LVL49:
+ 522              	.LM167:
+ 523              	.LM168:
+ 524 0026 B7060140 		li	a3,1073807360
+ 525 002a 03A84600 		lw	a6,4(a3)
+ 526 002e 3376C800 		and	a2,a6,a2
+ 527 0032 D0C2     		sw	a2,4(a3)
+ 528              	.LVL50:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 10
+
+
+ 529              	.L48:
+ 530              	.LM169:
+ 531              	.LM170:
+ 532 0034 99C5     		beq	a1,zero,.L50
+ 533              	.LM171:
+ 534              	.LM172:
+ 535 0036 93565501 		srli	a3,a0,21
+ 536              	.LM173:
+ 537 003a 9206     		slli	a3,a3,4
+ 538              	.LM174:
+ 539 003c 3317D700 		sll	a4,a4,a3
+ 540              	.LVL51:
+ 541              	.LM175:
+ 542 0040 D98F     		or	a5,a5,a4
+ 543              	.LVL52:
+ 544              	.L50:
+ 545              	.LM176:
+ 546              	.LM177:
+ 547 0042 37070140 		li	a4,1073807360
+ 548              	.LM178:
+ 549 0046 635D0502 		bge	a0,zero,.L51
+ 550              	.LM179:
+ 551              	.LM180:
+ 552 004a 5CCF     		sw	a5,28(a4)
+ 553 004c 8280     		ret
+ 554              	.LVL53:
+ 555              	.L45:
+ 556              	.LM181:
+ 557              	.LM182:
+ 558 004e D443     		lw	a3,4(a5)
+ 559              	.LVL54:
+ 560              	.LM183:
+ 561 0050 6DBF     		j	.L46
+ 562              	.LVL55:
+ 563              	.L47:
+ 564              	.LM184:
+ 565              	.LM185:
+ 566 0052 9317B500 		slli	a5,a0,11
+ 567 0056 63DF0700 		bge	a5,zero,.L49
+ 568              	.LM186:
+ 569              	.LVL56:
+ 570              	.LM187:
+ 571              	.LM188:
+ 572 005a 13560501 		srli	a2,a0,16
+ 573              	.LM189:
+ 574 005e 3D8A     		andi	a2,a2,15
+ 575              	.LM190:
+ 576 0060 8D47     		li	a5,3
+ 577 0062 B397C700 		sll	a5,a5,a2
+ 578              	.LVL57:
+ 579              	.L56:
+ 580              	.LM191:
+ 581 0066 93C7F7FF 		not	a5,a5
+ 582              	.LM192:
+ 583 006a F58F     		and	a5,a5,a3
+ 584              	.LVL58:
+ 585              	.LM193:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 11
+
+
+ 586              	.LM194:
+ 587 006c B706000F 		li	a3,251658240
+ 588 0070 D58F     		or	a5,a5,a3
+ 589              	.LVL59:
+ 590              	.LM195:
+ 591 0072 C9B7     		j	.L48
+ 592              	.LVL60:
+ 593              	.L49:
+ 594              	.LM196:
+ 595              	.LM197:
+ 596 0074 93575501 		srli	a5,a0,21
+ 597              	.LM198:
+ 598 0078 9207     		slli	a5,a5,4
+ 599              	.LM199:
+ 600 007a B317F700 		sll	a5,a4,a5
+ 601 007e E5B7     		j	.L56
+ 602              	.LVL61:
+ 603              	.L51:
+ 604              	.LM200:
+ 605              	.LM201:
+ 606 0080 5CC3     		sw	a5,4(a4)
+ 607              	.LM202:
+ 608 0082 8280     		ret
+ 609              		.cfi_endproc
+ 610              	.LFE161:
+ 612              		.section	.text.gpio_exti_source_select,"ax",@progbits
+ 613              		.align	1
+ 614              		.globl	gpio_exti_source_select
+ 616              	gpio_exti_source_select:
+ 617              	.LVL62:
+ 618              	.LFB162:
+ 619              	.LM203:
+ 620              		.cfi_startproc
+ 621              	.LM204:
+ 622              	.LM205:
+ 623              	.LM206:
+ 624 0000 13F73500 		andi	a4,a1,3
+ 625              	.LM207:
+ 626 0004 0A07     		slli	a4,a4,2
+ 627              	.LVL63:
+ 628              	.LM208:
+ 629              	.LM209:
+ 630 0006 BD47     		li	a5,15
+ 631 0008 B397E700 		sll	a5,a5,a4
+ 632              	.LM210:
+ 633 000c 3315E500 		sll	a0,a0,a4
+ 634              	.LVL64:
+ 635              	.LM211:
+ 636 0010 0D47     		li	a4,3
+ 637              	.LVL65:
+ 638              	.LM212:
+ 639 0012 93C7F7FF 		not	a5,a5
+ 640              	.LM213:
+ 641 0016 636BB700 		bgtu	a1,a4,.L58
+ 642              	.LM214:
+ 643 001a 37070140 		li	a4,1073807360
+ 644 001e 1447     		lw	a3,8(a4)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 12
+
+
+ 645              	.LM215:
+ 646 0020 F58F     		and	a5,a3,a5
+ 647 0022 1CC7     		sw	a5,8(a4)
+ 648              	.LM216:
+ 649 0024 1C47     		lw	a5,8(a4)
+ 650              	.LM217:
+ 651 0026 C98F     		or	a5,a5,a0
+ 652 0028 1CC7     		sw	a5,8(a4)
+ 653 002a 8280     		ret
+ 654              	.L58:
+ 655              	.LM218:
+ 656              	.LM219:
+ 657 002c 1D47     		li	a4,7
+ 658 002e 636BB700 		bgtu	a1,a4,.L60
+ 659              	.LM220:
+ 660 0032 37070140 		li	a4,1073807360
+ 661 0036 5447     		lw	a3,12(a4)
+ 662              	.LM221:
+ 663 0038 F58F     		and	a5,a3,a5
+ 664 003a 5CC7     		sw	a5,12(a4)
+ 665              	.LM222:
+ 666 003c 5C47     		lw	a5,12(a4)
+ 667              	.LM223:
+ 668 003e C98F     		or	a5,a5,a0
+ 669 0040 5CC7     		sw	a5,12(a4)
+ 670 0042 8280     		ret
+ 671              	.L60:
+ 672              	.LM224:
+ 673              	.LM225:
+ 674 0044 2D47     		li	a4,11
+ 675 0046 636BB700 		bgtu	a1,a4,.L61
+ 676              	.LM226:
+ 677 004a 37070140 		li	a4,1073807360
+ 678 004e 144B     		lw	a3,16(a4)
+ 679              	.LM227:
+ 680 0050 F58F     		and	a5,a3,a5
+ 681 0052 1CCB     		sw	a5,16(a4)
+ 682              	.LM228:
+ 683 0054 1C4B     		lw	a5,16(a4)
+ 684              	.LM229:
+ 685 0056 C98F     		or	a5,a5,a0
+ 686 0058 1CCB     		sw	a5,16(a4)
+ 687 005a 8280     		ret
+ 688              	.L61:
+ 689              	.LM230:
+ 690 005c 37070140 		li	a4,1073807360
+ 691 0060 544B     		lw	a3,20(a4)
+ 692              	.LM231:
+ 693 0062 F58F     		and	a5,a3,a5
+ 694 0064 5CCB     		sw	a5,20(a4)
+ 695              	.LM232:
+ 696 0066 5C4B     		lw	a5,20(a4)
+ 697              	.LM233:
+ 698 0068 C98F     		or	a5,a5,a0
+ 699 006a 5CCB     		sw	a5,20(a4)
+ 700              	.LM234:
+ 701 006c 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 13
+
+
+ 702              		.cfi_endproc
+ 703              	.LFE162:
+ 705              		.section	.text.gpio_event_output_config,"ax",@progbits
+ 706              		.align	1
+ 707              		.globl	gpio_event_output_config
+ 709              	gpio_event_output_config:
+ 710              	.LVL66:
+ 711              	.LFB163:
+ 712              	.LM235:
+ 713              		.cfi_startproc
+ 714              	.LM236:
+ 715              	.LM237:
+ 716              	.LM238:
+ 717 0000 37070140 		li	a4,1073807360
+ 718 0004 1C43     		lw	a5,0(a4)
+ 719              	.LVL67:
+ 720              	.LM239:
+ 721              	.LM240:
+ 722              	.LM241:
+ 723              	.LM242:
+ 724 0006 1205     		slli	a0,a0,4
+ 725              	.LVL68:
+ 726              	.LM243:
+ 727 0008 93F707F8 		andi	a5,a5,-128
+ 728              	.LVL69:
+ 729              	.LM244:
+ 730 000c CD8F     		or	a5,a5,a1
+ 731              	.LM245:
+ 732 000e 5D8D     		or	a0,a0,a5
+ 733              	.LVL70:
+ 734              	.LM246:
+ 735              	.LM247:
+ 736 0010 08C3     		sw	a0,0(a4)
+ 737              	.LM248:
+ 738 0012 8280     		ret
+ 739              		.cfi_endproc
+ 740              	.LFE163:
+ 742              		.section	.text.gpio_event_output_enable,"ax",@progbits
+ 743              		.align	1
+ 744              		.globl	gpio_event_output_enable
+ 746              	gpio_event_output_enable:
+ 747              	.LFB164:
+ 748              	.LM249:
+ 749              		.cfi_startproc
+ 750              	.LM250:
+ 751 0000 37070140 		li	a4,1073807360
+ 752 0004 1C43     		lw	a5,0(a4)
+ 753              	.LM251:
+ 754 0006 93E70708 		ori	a5,a5,128
+ 755 000a 1CC3     		sw	a5,0(a4)
+ 756              	.LM252:
+ 757 000c 8280     		ret
+ 758              		.cfi_endproc
+ 759              	.LFE164:
+ 761              		.section	.text.gpio_event_output_disable,"ax",@progbits
+ 762              		.align	1
+ 763              		.globl	gpio_event_output_disable
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 14
+
+
+ 765              	gpio_event_output_disable:
+ 766              	.LFB165:
+ 767              	.LM253:
+ 768              		.cfi_startproc
+ 769              	.LM254:
+ 770              	.LM255:
+ 771 0000 37070140 		li	a4,1073807360
+ 772 0004 1C43     		lw	a5,0(a4)
+ 773 0006 93F7F7F7 		andi	a5,a5,-129
+ 774 000a 1CC3     		sw	a5,0(a4)
+ 775              	.LM256:
+ 776 000c 8280     		ret
+ 777              		.cfi_endproc
+ 778              	.LFE165:
+ 780              		.section	.text.gpio_pin_lock,"ax",@progbits
+ 781              		.align	1
+ 782              		.globl	gpio_pin_lock
+ 784              	gpio_pin_lock:
+ 785              	.LVL71:
+ 786              	.LFB166:
+ 787              	.LM257:
+ 788              		.cfi_startproc
+ 789              	.LM258:
+ 790              	.LM259:
+ 791              	.LM260:
+ 792 0000 C167     		li	a5,65536
+ 793 0002 CD8F     		or	a5,a1,a5
+ 794              	.LVL72:
+ 795              	.LM261:
+ 796              	.LM262:
+ 797 0004 1CCD     		sw	a5,24(a0)
+ 798              	.LM263:
+ 799              	.LM264:
+ 800 0006 0CCD     		sw	a1,24(a0)
+ 801              	.LM265:
+ 802              	.LM266:
+ 803 0008 1CCD     		sw	a5,24(a0)
+ 804              	.LM267:
+ 805              	.LM268:
+ 806 000a 1C4D     		lw	a5,24(a0)
+ 807              	.LVL73:
+ 808              	.LM269:
+ 809              	.LM270:
+ 810 000c 1C4D     		lw	a5,24(a0)
+ 811              	.LM271:
+ 812 000e 8280     		ret
+ 813              		.cfi_endproc
+ 814              	.LFE166:
+ 816              		.text
+ 817              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_gpio.c
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:10     .text.gpio_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:13     .text.gpio_deinit:00000000 gpio_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:17     .text.gpio_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:22     .text.gpio_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:24     .text.gpio_deinit:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:37     .text.gpio_deinit:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:38     .text.gpio_deinit:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:41     .text.gpio_deinit:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:45     .text.gpio_deinit:0000002a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:75     .text.gpio_deinit:00000066 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:76     .text.gpio_deinit:00000066 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:79     .text.gpio_deinit:00000068 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:85     .text.gpio_deinit:00000070 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:117    .text.gpio_deinit:000000a6 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:121    .text.gpio_afio_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:124    .text.gpio_afio_deinit:00000000 gpio_afio_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:127    .text.gpio_afio_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:132    .text.gpio_afio_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:137    .text.gpio_afio_deinit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:144    .text.gpio_afio_deinit:00000012 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:150    .text.gpio_afio_deinit:00000018 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:154    .text.gpio_afio_deinit:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:158    .text.gpio_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:161    .text.gpio_init:00000000 gpio_init
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:165    .text.gpio_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:321    .text.gpio_init:000000a8 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:325    .text.gpio_bit_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:328    .text.gpio_bit_set:00000000 gpio_bit_set
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:332    .text.gpio_bit_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:338    .text.gpio_bit_set:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:342    .text.gpio_bit_reset:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:345    .text.gpio_bit_reset:00000000 gpio_bit_reset
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:349    .text.gpio_bit_reset:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:355    .text.gpio_bit_reset:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:359    .text.gpio_bit_write:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:362    .text.gpio_bit_write:00000000 gpio_bit_write
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:366    .text.gpio_bit_write:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:380    .text.gpio_bit_write:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:384    .text.gpio_port_write:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:387    .text.gpio_port_write:00000000 gpio_port_write
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:391    .text.gpio_port_write:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:397    .text.gpio_port_write:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:401    .text.gpio_input_bit_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:404    .text.gpio_input_bit_get:00000000 gpio_input_bit_get
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:408    .text.gpio_input_bit_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:418    .text.gpio_input_bit_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:422    .text.gpio_input_port_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:425    .text.gpio_input_port_get:00000000 gpio_input_port_get
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:429    .text.gpio_input_port_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:438    .text.gpio_input_port_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:442    .text.gpio_output_bit_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:445    .text.gpio_output_bit_get:00000000 gpio_output_bit_get
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:449    .text.gpio_output_bit_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:459    .text.gpio_output_bit_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:463    .text.gpio_output_port_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 16
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:466    .text.gpio_output_port_get:00000000 gpio_output_port_get
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:470    .text.gpio_output_port_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:479    .text.gpio_output_port_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:483    .text.gpio_pin_remap_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:486    .text.gpio_pin_remap_config:00000000 gpio_pin_remap_config
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:490    .text.gpio_pin_remap_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:609    .text.gpio_pin_remap_config:00000084 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:613    .text.gpio_exti_source_select:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:616    .text.gpio_exti_source_select:00000000 gpio_exti_source_select
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:620    .text.gpio_exti_source_select:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:702    .text.gpio_exti_source_select:0000006e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:706    .text.gpio_event_output_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:709    .text.gpio_event_output_config:00000000 gpio_event_output_config
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:713    .text.gpio_event_output_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:739    .text.gpio_event_output_config:00000014 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:743    .text.gpio_event_output_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:746    .text.gpio_event_output_enable:00000000 gpio_event_output_enable
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:749    .text.gpio_event_output_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:758    .text.gpio_event_output_enable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:762    .text.gpio_event_output_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:765    .text.gpio_event_output_disable:00000000 gpio_event_output_disable
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:768    .text.gpio_event_output_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:777    .text.gpio_event_output_disable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:781    .text.gpio_pin_lock:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:784    .text.gpio_pin_lock:00000000 gpio_pin_lock
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:788    .text.gpio_pin_lock:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:813    .text.gpio_pin_lock:00000010 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:96     .text.gpio_deinit:00000082 .L2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:43     .text.gpio_deinit:0000002a .L3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:63     .text.gpio_deinit:00000054 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:83     .text.gpio_deinit:00000070 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:107    .text.gpio_deinit:00000094 .L7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:34     .text.gpio_deinit:00000024 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:72     .text.gpio_deinit:00000064 .L10
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:182    .text.gpio_init:0000000e .L14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:236    .text.gpio_init:0000004a .L15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:304    .text.gpio_init:00000098 .L16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:198    .text.gpio_init:0000001e .L18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:294    .text.gpio_init:00000090 .L19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:313    .text.gpio_init:000000a0 .L20
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:255    .text.gpio_init:00000060 .L22
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:231    .text.gpio_init:00000048 .L17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:289    .text.gpio_init:0000008e .L21
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:374    .text.gpio_bit_write:00000006 .L37
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:555    .text.gpio_pin_remap_config:0000004e .L45
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:563    .text.gpio_pin_remap_config:00000052 .L47
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:544    .text.gpio_pin_remap_config:00000042 .L50
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:603    .text.gpio_pin_remap_config:00000080 .L51
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:501    .text.gpio_pin_remap_config:0000000a .L46
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:593    .text.gpio_pin_remap_config:00000074 .L49
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:529    .text.gpio_pin_remap_config:00000034 .L48
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:579    .text.gpio_pin_remap_config:00000066 .L56
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:654    .text.gpio_exti_source_select:0000002c .L58
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:671    .text.gpio_exti_source_select:00000044 .L60
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:688    .text.gpio_exti_source_select:0000005c .L61
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:1735   .debug_abbrev:00000000 .Ldebug_abbrev0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 17
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5143   .debug_str:00000430 .LASF89
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5041   .debug_str:0000015c .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5085   .debug_str:000002af .LASF91
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:3141   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:3179   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5079   .debug_str:00000282 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5087   .debug_str:000002bf .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5067   .debug_str:0000022f .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5039   .debug_str:0000014e .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5065   .debug_str:00000223 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5075   .debug_str:0000026b .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5051   .debug_str:000001d2 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5025   .debug_str:000000ff .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5019   .debug_str:000000d0 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5101   .debug_str:00000310 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5043   .debug_str:0000019b .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5011   .debug_str:000000a9 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5129   .debug_str:000003d2 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5027   .debug_str:00000109 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5089   .debug_str:000002cc .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5083   .debug_str:000002a6 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5029   .debug_str:00000111 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5169   .debug_str:00000594 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5107   .debug_str:00000345 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5147   .debug_str:00000501 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5165   .debug_str:0000057d .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4993   .debug_str:00000021 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5109   .debug_str:00000353 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5031   .debug_str:00000119 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5059   .debug_str:000001f7 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5055   .debug_str:000001e3 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5119   .debug_str:0000038e .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5163   .debug_str:0000056f .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5173   .debug_str:000005a9 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5005   .debug_str:0000006b .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5049   .debug_str:000001c6 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5125   .debug_str:000003b0 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5171   .debug_str:0000059b .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5131   .debug_str:000003e4 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4995   .debug_str:0000002e .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5167   .debug_str:00000588 .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5139   .debug_str:00000419 .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4999   .debug_str:00000048 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5035   .debug_str:00000134 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5003   .debug_str:0000005f .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5141   .debug_str:00000425 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5077   .debug_str:00000277 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5069   .debug_str:0000023d .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5081   .debug_str:00000299 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5135   .debug_str:00000402 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4997   .debug_str:0000003b .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5033   .debug_str:00000127 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5091   .debug_str:000002d5 .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5097   .debug_str:000002ef .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5149   .debug_str:00000507 .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4991   .debug_str:00000013 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5153   .debug_str:0000051f .LASF51
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 18
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5063   .debug_str:00000215 .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5159   .debug_str:00000541 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5001   .debug_str:00000054 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5007   .debug_str:00000077 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5161   .debug_str:00000557 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5037   .debug_str:00000140 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:786    .text.gpio_pin_lock:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:814    .text.gpio_pin_lock:00000010 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5071   .debug_str:00000247 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5117   .debug_str:00000389 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2312   .debug_loc:00000004 .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2307   .debug_loc:00000000 .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5023   .debug_str:000000e5 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:766    .text.gpio_event_output_disable:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:778    .text.gpio_event_output_disable:0000000e .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5009   .debug_str:00000090 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:747    .text.gpio_event_output_enable:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:759    .text.gpio_event_output_enable:0000000e .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5105   .debug_str:0000032c .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:711    .text.gpio_event_output_config:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:740    .text.gpio_event_output_config:00000014 .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5047   .debug_str:000001ba .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2331   .debug_loc:00000029 .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2326   .debug_loc:00000025 .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5111   .debug_str:00000361 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2362   .debug_loc:0000005a .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2351   .debug_loc:00000050 .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5073   .debug_str:00000253 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:618    .text.gpio_exti_source_select:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:703    .text.gpio_exti_source_select:0000006e .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2413   .debug_loc:000000b4 .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2408   .debug_loc:000000b0 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5053   .debug_str:000001dc .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2440   .debug_loc:000000e1 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2433   .debug_loc:000000db .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5045   .debug_str:000001a4 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:488    .text.gpio_pin_remap_config:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:610    .text.gpio_pin_remap_config:00000084 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5057   .debug_str:000001f1 .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5103   .debug_str:00000323 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5157   .debug_str:0000053a .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2488   .debug_loc:0000012a .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2475   .debug_loc:0000011e .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5095   .debug_str:000002e8 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2538   .debug_loc:0000018a .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2529   .debug_loc:00000182 .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5113   .debug_str:0000036c .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2585   .debug_loc:000001d9 .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2568   .debug_loc:000001c9 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5145   .debug_str:000004f7 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2631   .debug_loc:00000243 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2622   .debug_loc:0000023b .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5099   .debug_str:000002fb .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:468    .text.gpio_output_port_get:00000000 .LFB160
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:480    .text.gpio_output_port_get:00000008 .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2669   .debug_loc:00000289 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2664   .debug_loc:00000285 .LVUS10
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 19
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5115   .debug_str:00000375 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:447    .text.gpio_output_bit_get:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:460    .text.gpio_output_bit_get:0000000a .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2694   .debug_loc:000002b4 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2689   .debug_loc:000002b0 .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5127   .debug_str:000003be .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:427    .text.gpio_input_port_get:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:439    .text.gpio_input_port_get:00000008 .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2719   .debug_loc:000002df .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2714   .debug_loc:000002db .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:4989   .debug_str:00000000 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:406    .text.gpio_input_bit_get:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:419    .text.gpio_input_bit_get:0000000a .LFE157
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2744   .debug_loc:0000030a .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2739   .debug_loc:00000306 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5061   .debug_str:00000205 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:389    .text.gpio_port_write:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:398    .text.gpio_port_write:00000004 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5123   .debug_str:000003ab .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5155   .debug_str:0000052b .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:364    .text.gpio_bit_write:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:381    .text.gpio_bit_write:0000000a .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5021   .debug_str:000000db .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5121   .debug_str:0000039c .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:347    .text.gpio_bit_reset:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:356    .text.gpio_bit_reset:00000004 .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5013   .debug_str:000000b4 .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:330    .text.gpio_bit_set:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:339    .text.gpio_bit_set:00000004 .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5137   .debug_str:0000040f .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:163    .text.gpio_init:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:322    .text.gpio_init:000000a8 .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5015   .debug_str:000000c1 .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5093   .debug_str:000002e2 .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2769   .debug_loc:00000335 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2764   .debug_loc:00000331 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2808   .debug_loc:0000036e .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2789   .debug_loc:0000035c .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5017   .debug_str:000000c6 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2865   .debug_loc:000003ea .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2860   .debug_loc:000003e6 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2896   .debug_loc:0000041b .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2877   .debug_loc:00000409 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5133   .debug_str:000003f1 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:125    .text.gpio_afio_deinit:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:155    .text.gpio_afio_deinit:00000020 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2936   .debug_loc:00000487 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:140    .text.gpio_afio_deinit:00000010 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:153    .text.gpio_afio_deinit:00000020 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:5151   .debug_str:00000513 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:15     .text.gpio_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:118    .text.gpio_deinit:000000a6 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2954   .debug_loc:000004b3 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:3008   .debug_loc:00000517 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:2987   .debug_loc:00000503 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:58     .text.gpio_deinit:0000004e .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:69     .text.gpio_deinit:00000060 .LVL5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 20
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:82     .text.gpio_deinit:00000070 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:91     .text.gpio_deinit:0000007c .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:102    .text.gpio_deinit:0000008e .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:113    .text.gpio_deinit:000000a0 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:785    .text.gpio_pin_lock:00000000 .LVL71
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:794    .text.gpio_pin_lock:00000004 .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:807    .text.gpio_pin_lock:0000000c .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:710    .text.gpio_event_output_config:00000000 .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:725    .text.gpio_event_output_config:00000008 .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:719    .text.gpio_event_output_config:00000006 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:728    .text.gpio_event_output_config:0000000c .LVL69
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:733    .text.gpio_event_output_config:00000010 .LVL70
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:617    .text.gpio_exti_source_select:00000000 .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:634    .text.gpio_exti_source_select:00000010 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:627    .text.gpio_exti_source_select:00000006 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:637    .text.gpio_exti_source_select:00000012 .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:487    .text.gpio_pin_remap_config:00000000 .LVL46
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:512    .text.gpio_pin_remap_config:00000018 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:540    .text.gpio_pin_remap_config:00000040 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:554    .text.gpio_pin_remap_config:0000004e .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:562    .text.gpio_pin_remap_config:00000052 .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:602    .text.gpio_pin_remap_config:00000080 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:528    .text.gpio_pin_remap_config:00000034 .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:569    .text.gpio_pin_remap_config:0000005a .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:578    .text.gpio_pin_remap_config:00000066 .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:592    .text.gpio_pin_remap_config:00000074 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:500    .text.gpio_pin_remap_config:0000000a .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:521    .text.gpio_pin_remap_config:00000026 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:559    .text.gpio_pin_remap_config:00000050 .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:584    .text.gpio_pin_remap_config:0000006c .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:589    .text.gpio_pin_remap_config:00000072 .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:467    .text.gpio_output_port_get:00000000 .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:474    .text.gpio_output_port_get:00000002 .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:446    .text.gpio_output_bit_get:00000000 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:453    .text.gpio_output_bit_get:00000002 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:426    .text.gpio_input_port_get:00000000 .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:433    .text.gpio_input_port_get:00000002 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:405    .text.gpio_input_bit_get:00000000 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:412    .text.gpio_input_bit_get:00000002 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:162    .text.gpio_init:00000000 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:197    .text.gpio_init:0000001e .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:181    .text.gpio_init:0000000e .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:235    .text.gpio_init:0000004a .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:240    .text.gpio_init:0000004c .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:254    .text.gpio_init:00000060 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:293    .text.gpio_init:00000090 .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:298    .text.gpio_init:00000092 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:303    .text.gpio_init:00000098 .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:312    .text.gpio_init:000000a0 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:174    .text.gpio_init:00000008 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:210    .text.gpio_init:0000002e .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:218    .text.gpio_init:0000003a .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:224    .text.gpio_init:00000042 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:268    .text.gpio_init:00000074 .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:276    .text.gpio_init:00000080 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:282    .text.gpio_init:00000088 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:131    .text.gpio_afio_deinit:00000002 .LCFI5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 21
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:149    .text.gpio_afio_deinit:00000018 .LCFI6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:21     .text.gpio_deinit:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:40     .text.gpio_deinit:00000028 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:44     .text.gpio_deinit:0000002a .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:78     .text.gpio_deinit:00000068 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:84     .text.gpio_deinit:00000070 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:14     .text.gpio_deinit:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:55     .text.gpio_deinit:00000046 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:62     .text.gpio_deinit:00000054 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:66     .text.gpio_deinit:00000058 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:88     .text.gpio_deinit:00000074 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:95     .text.gpio_deinit:00000082 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:99     .text.gpio_deinit:00000086 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:106    .text.gpio_deinit:00000094 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:110    .text.gpio_deinit:00000098 .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:819    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:16     .text.gpio_deinit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:18     .text.gpio_deinit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:19     .text.gpio_deinit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:25     .text.gpio_deinit:00000004 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:35     .text.gpio_deinit:00000024 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:46     .text.gpio_deinit:0000002a .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:53     .text.gpio_deinit:00000042 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:56     .text.gpio_deinit:00000046 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:59     .text.gpio_deinit:0000004e .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:64     .text.gpio_deinit:00000054 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:67     .text.gpio_deinit:00000058 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:70     .text.gpio_deinit:00000060 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:73     .text.gpio_deinit:00000064 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:80     .text.gpio_deinit:00000068 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:86     .text.gpio_deinit:00000070 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:89     .text.gpio_deinit:00000074 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:92     .text.gpio_deinit:0000007c .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:97     .text.gpio_deinit:00000082 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:100    .text.gpio_deinit:00000086 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:103    .text.gpio_deinit:0000008e .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:108    .text.gpio_deinit:00000094 .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:111    .text.gpio_deinit:00000098 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:114    .text.gpio_deinit:000000a0 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:126    .text.gpio_afio_deinit:00000000 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:128    .text.gpio_afio_deinit:00000000 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:129    .text.gpio_afio_deinit:00000000 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:133    .text.gpio_afio_deinit:00000002 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:135    .text.gpio_afio_deinit:00000006 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:138    .text.gpio_afio_deinit:00000008 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:141    .text.gpio_afio_deinit:00000010 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:142    .text.gpio_afio_deinit:00000010 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:145    .text.gpio_afio_deinit:00000012 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:147    .text.gpio_afio_deinit:00000016 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:151    .text.gpio_afio_deinit:00000018 .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:164    .text.gpio_init:00000000 .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:166    .text.gpio_init:00000000 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:167    .text.gpio_init:00000000 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:168    .text.gpio_init:00000000 .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:169    .text.gpio_init:00000000 .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:170    .text.gpio_init:00000000 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:172    .text.gpio_init:00000004 .LM41
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 22
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:175    .text.gpio_init:00000008 .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:176    .text.gpio_init:00000008 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:178    .text.gpio_init:0000000a .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:179    .text.gpio_init:0000000a .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:183    .text.gpio_init:0000000e .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:184    .text.gpio_init:0000000e .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:185    .text.gpio_init:0000000e .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:187    .text.gpio_init:00000010 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:189    .text.gpio_init:00000012 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:191    .text.gpio_init:00000014 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:193    .text.gpio_init:00000018 .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:195    .text.gpio_init:0000001c .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:199    .text.gpio_init:0000001e .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:200    .text.gpio_init:0000001e .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:202    .text.gpio_init:00000022 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:204    .text.gpio_init:00000024 .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:206    .text.gpio_init:00000026 .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:208    .text.gpio_init:0000002a .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:211    .text.gpio_init:0000002e .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:212    .text.gpio_init:0000002e .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:214    .text.gpio_init:00000032 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:216    .text.gpio_init:00000036 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:219    .text.gpio_init:0000003a .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:220    .text.gpio_init:0000003a .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:222    .text.gpio_init:0000003e .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:225    .text.gpio_init:00000042 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:226    .text.gpio_init:00000042 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:228    .text.gpio_init:00000046 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:229    .text.gpio_init:00000046 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:232    .text.gpio_init:00000048 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:233    .text.gpio_init:00000048 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:237    .text.gpio_init:0000004a .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:238    .text.gpio_init:0000004a .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:241    .text.gpio_init:0000004c .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:244    .text.gpio_init:00000052 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:246    .text.gpio_init:00000054 .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:248    .text.gpio_init:00000056 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:250    .text.gpio_init:0000005a .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:252    .text.gpio_init:0000005e .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:256    .text.gpio_init:00000060 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:257    .text.gpio_init:00000060 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:260    .text.gpio_init:00000068 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:262    .text.gpio_init:0000006a .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:264    .text.gpio_init:0000006c .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:266    .text.gpio_init:00000070 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:269    .text.gpio_init:00000074 .LM87
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:270    .text.gpio_init:00000074 .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:272    .text.gpio_init:00000078 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:274    .text.gpio_init:0000007c .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:277    .text.gpio_init:00000080 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:278    .text.gpio_init:00000080 .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:280    .text.gpio_init:00000084 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:283    .text.gpio_init:00000088 .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:284    .text.gpio_init:00000088 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:286    .text.gpio_init:0000008c .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:287    .text.gpio_init:0000008c .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:290    .text.gpio_init:0000008e .LM98
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 23
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:291    .text.gpio_init:0000008e .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:295    .text.gpio_init:00000090 .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:296    .text.gpio_init:00000090 .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:299    .text.gpio_init:00000092 .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:301    .text.gpio_init:00000096 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:305    .text.gpio_init:00000098 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:306    .text.gpio_init:00000098 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:308    .text.gpio_init:0000009c .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:309    .text.gpio_init:0000009c .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:314    .text.gpio_init:000000a0 .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:315    .text.gpio_init:000000a0 .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:317    .text.gpio_init:000000a4 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:318    .text.gpio_init:000000a4 .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:331    .text.gpio_bit_set:00000000 .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:333    .text.gpio_bit_set:00000000 .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:334    .text.gpio_bit_set:00000000 .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:336    .text.gpio_bit_set:00000002 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:348    .text.gpio_bit_reset:00000000 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:350    .text.gpio_bit_reset:00000000 .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:351    .text.gpio_bit_reset:00000000 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:353    .text.gpio_bit_reset:00000002 .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:365    .text.gpio_bit_write:00000000 .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:367    .text.gpio_bit_write:00000000 .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:368    .text.gpio_bit_write:00000000 .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:370    .text.gpio_bit_write:00000002 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:371    .text.gpio_bit_write:00000002 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:375    .text.gpio_bit_write:00000006 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:376    .text.gpio_bit_write:00000006 .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:378    .text.gpio_bit_write:00000008 .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:390    .text.gpio_port_write:00000000 .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:392    .text.gpio_port_write:00000000 .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:393    .text.gpio_port_write:00000000 .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:395    .text.gpio_port_write:00000002 .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:407    .text.gpio_input_bit_get:00000000 .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:409    .text.gpio_input_bit_get:00000000 .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:410    .text.gpio_input_bit_get:00000000 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:413    .text.gpio_input_bit_get:00000002 .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:415    .text.gpio_input_bit_get:00000004 .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:428    .text.gpio_input_port_get:00000000 .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:430    .text.gpio_input_port_get:00000000 .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:431    .text.gpio_input_port_get:00000000 .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:434    .text.gpio_input_port_get:00000002 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:448    .text.gpio_output_bit_get:00000000 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:450    .text.gpio_output_bit_get:00000000 .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:451    .text.gpio_output_bit_get:00000000 .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:454    .text.gpio_output_bit_get:00000002 .LM144
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:456    .text.gpio_output_bit_get:00000004 .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:469    .text.gpio_output_port_get:00000000 .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:471    .text.gpio_output_port_get:00000000 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:472    .text.gpio_output_port_get:00000000 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:475    .text.gpio_output_port_get:00000002 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:489    .text.gpio_pin_remap_config:00000000 .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:491    .text.gpio_pin_remap_config:00000000 .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:492    .text.gpio_pin_remap_config:00000000 .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:493    .text.gpio_pin_remap_config:00000000 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:495    .text.gpio_pin_remap_config:00000004 .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:497    .text.gpio_pin_remap_config:00000008 .LM155
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 24
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:498    .text.gpio_pin_remap_config:00000008 .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:502    .text.gpio_pin_remap_config:0000000a .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:503    .text.gpio_pin_remap_config:0000000a .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:504    .text.gpio_pin_remap_config:0000000a .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:506    .text.gpio_pin_remap_config:0000000e .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:508    .text.gpio_pin_remap_config:00000012 .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:510    .text.gpio_pin_remap_config:00000016 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:513    .text.gpio_pin_remap_config:00000018 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:514    .text.gpio_pin_remap_config:00000018 .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:516    .text.gpio_pin_remap_config:0000001c .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:517    .text.gpio_pin_remap_config:0000001c .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:522    .text.gpio_pin_remap_config:00000026 .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:523    .text.gpio_pin_remap_config:00000026 .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:530    .text.gpio_pin_remap_config:00000034 .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:531    .text.gpio_pin_remap_config:00000034 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:533    .text.gpio_pin_remap_config:00000036 .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:534    .text.gpio_pin_remap_config:00000036 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:536    .text.gpio_pin_remap_config:0000003a .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:538    .text.gpio_pin_remap_config:0000003c .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:541    .text.gpio_pin_remap_config:00000040 .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:545    .text.gpio_pin_remap_config:00000042 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:546    .text.gpio_pin_remap_config:00000042 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:548    .text.gpio_pin_remap_config:00000046 .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:550    .text.gpio_pin_remap_config:0000004a .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:551    .text.gpio_pin_remap_config:0000004a .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:556    .text.gpio_pin_remap_config:0000004e .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:557    .text.gpio_pin_remap_config:0000004e .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:560    .text.gpio_pin_remap_config:00000050 .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:564    .text.gpio_pin_remap_config:00000052 .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:565    .text.gpio_pin_remap_config:00000052 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:568    .text.gpio_pin_remap_config:0000005a .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:570    .text.gpio_pin_remap_config:0000005a .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:571    .text.gpio_pin_remap_config:0000005a .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:573    .text.gpio_pin_remap_config:0000005e .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:575    .text.gpio_pin_remap_config:00000060 .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:580    .text.gpio_pin_remap_config:00000066 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:582    .text.gpio_pin_remap_config:0000006a .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:585    .text.gpio_pin_remap_config:0000006c .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:586    .text.gpio_pin_remap_config:0000006c .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:590    .text.gpio_pin_remap_config:00000072 .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:594    .text.gpio_pin_remap_config:00000074 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:595    .text.gpio_pin_remap_config:00000074 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:597    .text.gpio_pin_remap_config:00000078 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:599    .text.gpio_pin_remap_config:0000007a .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:604    .text.gpio_pin_remap_config:00000080 .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:605    .text.gpio_pin_remap_config:00000080 .LM201
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:607    .text.gpio_pin_remap_config:00000082 .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:619    .text.gpio_exti_source_select:00000000 .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:621    .text.gpio_exti_source_select:00000000 .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:622    .text.gpio_exti_source_select:00000000 .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:623    .text.gpio_exti_source_select:00000000 .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:625    .text.gpio_exti_source_select:00000004 .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:628    .text.gpio_exti_source_select:00000006 .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:629    .text.gpio_exti_source_select:00000006 .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:632    .text.gpio_exti_source_select:0000000c .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:635    .text.gpio_exti_source_select:00000010 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:638    .text.gpio_exti_source_select:00000012 .LM212
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 25
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:640    .text.gpio_exti_source_select:00000016 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:642    .text.gpio_exti_source_select:0000001a .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:645    .text.gpio_exti_source_select:00000020 .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:648    .text.gpio_exti_source_select:00000024 .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:650    .text.gpio_exti_source_select:00000026 .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:655    .text.gpio_exti_source_select:0000002c .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:656    .text.gpio_exti_source_select:0000002c .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:659    .text.gpio_exti_source_select:00000032 .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:662    .text.gpio_exti_source_select:00000038 .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:665    .text.gpio_exti_source_select:0000003c .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:667    .text.gpio_exti_source_select:0000003e .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:672    .text.gpio_exti_source_select:00000044 .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:673    .text.gpio_exti_source_select:00000044 .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:676    .text.gpio_exti_source_select:0000004a .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:679    .text.gpio_exti_source_select:00000050 .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:682    .text.gpio_exti_source_select:00000054 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:684    .text.gpio_exti_source_select:00000056 .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:689    .text.gpio_exti_source_select:0000005c .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:692    .text.gpio_exti_source_select:00000062 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:695    .text.gpio_exti_source_select:00000066 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:697    .text.gpio_exti_source_select:00000068 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:700    .text.gpio_exti_source_select:0000006c .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:712    .text.gpio_event_output_config:00000000 .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:714    .text.gpio_event_output_config:00000000 .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:715    .text.gpio_event_output_config:00000000 .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:716    .text.gpio_event_output_config:00000000 .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:720    .text.gpio_event_output_config:00000006 .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:721    .text.gpio_event_output_config:00000006 .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:722    .text.gpio_event_output_config:00000006 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:723    .text.gpio_event_output_config:00000006 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:726    .text.gpio_event_output_config:00000008 .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:729    .text.gpio_event_output_config:0000000c .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:731    .text.gpio_event_output_config:0000000e .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:734    .text.gpio_event_output_config:00000010 .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:735    .text.gpio_event_output_config:00000010 .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:737    .text.gpio_event_output_config:00000012 .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:748    .text.gpio_event_output_enable:00000000 .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:750    .text.gpio_event_output_enable:00000000 .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:753    .text.gpio_event_output_enable:00000006 .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:756    .text.gpio_event_output_enable:0000000c .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:767    .text.gpio_event_output_disable:00000000 .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:769    .text.gpio_event_output_disable:00000000 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:770    .text.gpio_event_output_disable:00000000 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:775    .text.gpio_event_output_disable:0000000c .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:787    .text.gpio_pin_lock:00000000 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:789    .text.gpio_pin_lock:00000000 .LM258
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:790    .text.gpio_pin_lock:00000000 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:791    .text.gpio_pin_lock:00000000 .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:795    .text.gpio_pin_lock:00000004 .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:796    .text.gpio_pin_lock:00000004 .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:798    .text.gpio_pin_lock:00000006 .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:799    .text.gpio_pin_lock:00000006 .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:801    .text.gpio_pin_lock:00000008 .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:802    .text.gpio_pin_lock:00000008 .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:804    .text.gpio_pin_lock:0000000a .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:805    .text.gpio_pin_lock:0000000a .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:808    .text.gpio_pin_lock:0000000c .LM269
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s 			page 26
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:809    .text.gpio_pin_lock:0000000c .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccX7VelA.s:811    .text.gpio_pin_lock:0000000e .LM271
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

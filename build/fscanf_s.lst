@@ -1,0 +1,227 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s 			page 1
+
+
+   1              		.file	"fscanf_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.fscanf_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	fscanf_s
+  13              	fscanf_s:
+  14              	.LVL0:
+  15              	.LFB4:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20              	.LM4:
+  21              	.LM5:
+  22 0000 3971     		addi	sp,sp,-64
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 64
+  25 0002 32D4     		sw	a2,40(sp)
+  26              	.LM6:
+  27 0004 3010     		addi	a2,sp,40
+  28              	.LM7:
+  29 0006 06CE     		sw	ra,28(sp)
+  30              		.cfi_offset 1, -36
+  31              	.LM8:
+  32 0008 36D6     		sw	a3,44(sp)
+  33 000a 3AD8     		sw	a4,48(sp)
+  34 000c 3EDA     		sw	a5,52(sp)
+  35 000e 42DC     		sw	a6,56(sp)
+  36 0010 46DE     		sw	a7,60(sp)
+  37              	.LM9:
+  38 0012 32C6     		sw	a2,12(sp)
+  39              	.LM10:
+  40              	.LM11:
+  41 0014 97000000 		call	vfscanf_s
+  41      E7800000 
+  42              	.LVL1:
+  43              	.LM12:
+  44              	.LM13:
+  45              	.LM14:
+  46              	.LM15:
+  47 001c F240     		lw	ra,28(sp)
+  48              		.cfi_restore 1
+  49 001e 2161     		addi	sp,sp,64
+  50              	.LCFI1:
+  51              		.cfi_def_cfa_offset 0
+  52 0020 8280     		jr	ra
+  53              		.cfi_endproc
+  54              	.LFE4:
+  56              		.text
+  57              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 fscanf_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:10     .text.fscanf_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:13     .text.fscanf_s:00000000 fscanf_s
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:17     .text.fscanf_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:24     .text.fscanf_s:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:30     .text.fscanf_s:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:48     .text.fscanf_s:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:51     .text.fscanf_s:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:53     .text.fscanf_s:00000022 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1312   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2113   .debug_str:00000128 .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2245   .debug_str:00000448 .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2115   .debug_str:000001ef .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1886   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1892   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2073   .debug_str:0000004e .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2133   .debug_str:00000242 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2085   .debug_str:0000009f .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2185   .debug_str:00000350 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2191   .debug_str:0000036c .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2145   .debug_str:0000027e .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2095   .debug_str:000000c9 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2141   .debug_str:00000266 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2083   .debug_str:00000091 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2169   .debug_str:000002f0 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2171   .debug_str:000002fc .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2101   .debug_str:000000de .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2063   .debug_str:00000019 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2157   .debug_str:000002c0 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2177   .debug_str:0000031c .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2231   .debug_str:00000412 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2261   .debug_str:000004be .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2153   .debug_str:000002b2 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2135   .debug_str:0000024f .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2223   .debug_str:000003f5 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2227   .debug_str:00000404 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2199   .debug_str:0000038e .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2249   .debug_str:0000048a .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2155   .debug_str:000002b8 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2225   .debug_str:000003fd .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2119   .debug_str:00000205 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2123   .debug_str:00000216 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2241   .debug_str:00000435 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2217   .debug_str:000003e0 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2117   .debug_str:000001ff .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2255   .debug_str:000004a8 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2131   .debug_str:0000023d .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2081   .debug_str:00000088 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2237   .debug_str:00000426 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2091   .debug_str:000000b7 .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2281   .debug_str:0000051a .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2175   .debug_str:00000313 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2165   .debug_str:000002dc .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2257   .debug_str:000004ad .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2193   .debug_str:00000376 .LASF37
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s 			page 3
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2269   .debug_str:000004e1 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2195   .debug_str:00000380 .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2089   .debug_str:000000b1 .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2057   .debug_str:00000000 .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2201   .debug_str:00000399 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2097   .debug_str:000000d2 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2143   .debug_str:00000278 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2075   .debug_str:00000065 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2093   .debug_str:000000c1 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2127   .debug_str:0000022d .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2163   .debug_str:000002d5 .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2229   .debug_str:0000040c .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2273   .debug_str:000004fb .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2087   .debug_str:000000ab .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2267   .debug_str:000004db .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2103   .debug_str:000000f0 .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2107   .debug_str:00000101 .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2065   .debug_str:00000021 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2159   .debug_str:000002c7 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2203   .debug_str:000003a1 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2161   .debug_str:000002cd .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2219   .debug_str:000003e8 .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2233   .debug_str:0000041a .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2259   .debug_str:000004b7 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2137   .debug_str:00000256 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2121   .debug_str:0000020e .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2209   .debug_str:000003c2 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2061   .debug_str:0000000e .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2213   .debug_str:000003ce .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2215   .debug_str:000003d6 .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2151   .debug_str:000002aa .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2129   .debug_str:00000233 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2279   .debug_str:00000515 .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2179   .debug_str:00000323 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2139   .debug_str:0000025e .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2105   .debug_str:000000f9 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2187   .debug_str:0000035e .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2265   .debug_str:000004d1 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2235   .debug_str:00000421 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2197   .debug_str:00000387 .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2059   .debug_str:00000006 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2221   .debug_str:000003ef .LASF79
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2239   .debug_str:0000042f .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2247   .debug_str:00000485 .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2243   .debug_str:0000043b .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2149   .debug_str:0000029d .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2271   .debug_str:000004ec .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2125   .debug_str:0000021e .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2205   .debug_str:000003aa .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2275   .debug_str:00000502 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2207   .debug_str:000003b5 .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2277   .debug_str:00000507 .LASF89
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2183   .debug_str:00000342 .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2263   .debug_str:000004c7 .LASF91
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2147   .debug_str:00000291 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2251   .debug_str:00000492 .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2111   .debug_str:0000011a .LASF94
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s 			page 4
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2079   .debug_str:00000079 .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2109   .debug_str:00000109 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2069   .debug_str:0000002e .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2071   .debug_str:0000003d .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2189   .debug_str:00000363 .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2181   .debug_str:0000032d .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2077   .debug_str:0000006e .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2099   .debug_str:000000d9 .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2167   .debug_str:000002e6 .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2253   .debug_str:0000049f .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:15     .text.fscanf_s:00000000 .LFB4
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:54     .text.fscanf_s:00000022 .LFE4
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1795   .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2067   .debug_str:00000027 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1818   .debug_loc:00000031 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1813   .debug_loc:0000002d .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2211   .debug_str:000003c7 .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1843   .debug_loc:0000005c .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1838   .debug_loc:00000058 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1866   .debug_loc:00000085 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:1863   .debug_loc:00000083 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:2173   .debug_str:0000030b .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:42     .text.fscanf_s:0000001c .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:23     .text.fscanf_s:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:50     .text.fscanf_s:00000020 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:14     .text.fscanf_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:59     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:16     .text.fscanf_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:18     .text.fscanf_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:19     .text.fscanf_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:20     .text.fscanf_s:00000000 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:21     .text.fscanf_s:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:26     .text.fscanf_s:00000004 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:28     .text.fscanf_s:00000006 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:31     .text.fscanf_s:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:37     .text.fscanf_s:00000012 .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:39     .text.fscanf_s:00000014 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:40     .text.fscanf_s:00000014 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:43     .text.fscanf_s:0000001c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:44     .text.fscanf_s:0000001c .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:45     .text.fscanf_s:0000001c .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccSfjaEC.s:46     .text.fscanf_s:0000001c .LM15
+
+UNDEFINED SYMBOLS
+vfscanf_s

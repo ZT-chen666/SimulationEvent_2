@@ -1,0 +1,83 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s 			page 1
+
+
+   1              		.file	"open.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._open,"ax",@progbits
+  10              		.align	1
+  11              		.weak	_open
+  13              	_open:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 93078005 		li	a5,88
+  21 0004 17070000 		sw	a5,errno,a4
+  21      2320F700 
+  22              	.LM4:
+  23              	.LM5:
+  24 000c 7D55     		li	a0,-1
+  25              	.LVL1:
+  26              	.LM6:
+  27 000e 8280     		ret
+  28              		.cfi_endproc
+  29              	.LFE150:
+  31              		.text
+  32              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 open.c
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:10     .text._open:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:13     .text._open:00000000 _open
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:17     .text._open:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:28     .text._open:00000010 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:21     .text._open:00000004 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:150    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:431    .debug_str:00000087 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:417    .debug_str:0000000e .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:445    .debug_str:0000018f .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:333    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:339    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:429    .debug_str:00000070 .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:419    .debug_str:00000041 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:415    .debug_str:00000000 .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:449    .debug_str:000001a5 .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:443    .debug_str:00000183 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:433    .debug_str:0000014e .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:451    .debug_str:000001b1 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:441    .debug_str:00000170 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:437    .debug_str:00000161 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:425    .debug_str:00000059 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:435    .debug_str:0000015c .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:447    .debug_str:0000019f .LASF16
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:439    .debug_str:0000016a .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:15     .text._open:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:29     .text._open:00000010 .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:427    .debug_str:0000006b .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:300    .debug_loc:00000004 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:295    .debug_loc:00000000 .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:423    .debug_str:00000053 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:421    .debug_str:0000004e .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:14     .text._open:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:25     .text._open:0000000e .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:34     .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:16     .text._open:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:18     .text._open:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:19     .text._open:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:22     .text._open:0000000c .LM4
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:23     .text._open:0000000c .LM5
+C:\Users\Administrator\AppData\Local\Temp\cc8ozD2w.s:26     .text._open:0000000e .LM6
+
+UNDEFINED SYMBOLS
+errno

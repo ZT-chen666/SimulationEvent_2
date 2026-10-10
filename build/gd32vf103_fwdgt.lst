@@ -1,0 +1,418 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 1
+
+
+   1              		.file	"gd32vf103_fwdgt.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.fwdgt_write_enable,"ax",@progbits
+  10              		.align	1
+  11              		.globl	fwdgt_write_enable
+  13              	fwdgt_write_enable:
+  14              	.LFB150:
+  15              	.LM1:
+  16              		.cfi_startproc
+  17              	.LM2:
+  18              	.LM3:
+  19 0000 9567     		li	a5,20480
+  20 0002 37370040 		li	a4,1073754112
+  21 0006 93875755 		addi	a5,a5,1365
+  22 000a 1CC3     		sw	a5,0(a4)
+  23              	.LM4:
+  24 000c 8280     		ret
+  25              		.cfi_endproc
+  26              	.LFE150:
+  28              		.section	.text.fwdgt_write_disable,"ax",@progbits
+  29              		.align	1
+  30              		.globl	fwdgt_write_disable
+  32              	fwdgt_write_disable:
+  33              	.LFB151:
+  34              	.LM5:
+  35              		.cfi_startproc
+  36              	.LM6:
+  37              	.LM7:
+  38 0000 B7370040 		li	a5,1073754112
+  39 0004 23A00700 		sw	zero,0(a5)
+  40              	.LM8:
+  41 0008 8280     		ret
+  42              		.cfi_endproc
+  43              	.LFE151:
+  45              		.section	.text.fwdgt_enable,"ax",@progbits
+  46              		.align	1
+  47              		.globl	fwdgt_enable
+  49              	fwdgt_enable:
+  50              	.LFB152:
+  51              	.LM9:
+  52              		.cfi_startproc
+  53              	.LM10:
+  54              	.LM11:
+  55 0000 B567     		li	a5,53248
+  56 0002 37370040 		li	a4,1073754112
+  57 0006 9387C7CC 		addi	a5,a5,-820
+  58 000a 1CC3     		sw	a5,0(a4)
+  59              	.LM12:
+  60 000c 8280     		ret
+  61              		.cfi_endproc
+  62              	.LFE152:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 2
+
+
+  64              		.section	.text.fwdgt_counter_reload,"ax",@progbits
+  65              		.align	1
+  66              		.globl	fwdgt_counter_reload
+  68              	fwdgt_counter_reload:
+  69              	.LFB153:
+  70              	.LM13:
+  71              		.cfi_startproc
+  72              	.LM14:
+  73              	.LM15:
+  74 0000 AD67     		li	a5,45056
+  75 0002 37370040 		li	a4,1073754112
+  76 0006 9387A7AA 		addi	a5,a5,-1366
+  77 000a 1CC3     		sw	a5,0(a4)
+  78              	.LM16:
+  79 000c 8280     		ret
+  80              		.cfi_endproc
+  81              	.LFE153:
+  83              		.section	.text.fwdgt_config,"ax",@progbits
+  84              		.align	1
+  85              		.globl	fwdgt_config
+  87              	fwdgt_config:
+  88              	.LVL0:
+  89              	.LFB154:
+  90              	.LM17:
+  91              		.cfi_startproc
+  92              	.LM18:
+  93              	.LM19:
+  94              	.LM20:
+  95              	.LM21:
+  96 0000 9567     		li	a5,20480
+  97 0002 37370040 		li	a4,1073754112
+  98 0006 93875755 		addi	a5,a5,1365
+  99 000a 1CC3     		sw	a5,0(a4)
+ 100 000c B7071000 		li	a5,1048576
+ 101 0010 FD17     		addi	a5,a5,-1
+ 102              	.LM22:
+ 103 0012 9306C700 		addi	a3,a4,12
+ 104              	.LVL1:
+ 105              	.L7:
+ 106              	.LM23:
+ 107              	.LM24:
+ 108              	.LM25:
+ 109 0016 9842     		lw	a4,0(a3)
+ 110              	.LM26:
+ 111 0018 FD17     		addi	a5,a5,-1
+ 112              	.LVL2:
+ 113              	.LM27:
+ 114 001a 058B     		andi	a4,a4,1
+ 115              	.LVL3:
+ 116              	.LM28:
+ 117              	.LM29:
+ 118 001c 85CF     		beq	a5,zero,.L6
+ 119              	.LVL4:
+ 120              	.LM30:
+ 121 001e 65FF     		bne	a4,zero,.L7
+ 122              	.LVL5:
+ 123              	.L8:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 3
+
+
+ 124              	.LM31:
+ 125              	.LM32:
+ 126 0020 B7370040 		li	a5,1073754112
+ 127 0024 CCC3     		sw	a1,4(a5)
+ 128              	.LM33:
+ 129              	.LVL6:
+ 130              	.LM34:
+ 131 0026 B7360040 		li	a3,1073754112
+ 132              	.LM35:
+ 133 002a B7071000 		li	a5,1048576
+ 134 002e FD17     		addi	a5,a5,-1
+ 135              	.LM36:
+ 136 0030 B106     		addi	a3,a3,12
+ 137              	.LVL7:
+ 138              	.L11:
+ 139              	.LM37:
+ 140              	.LM38:
+ 141              	.LM39:
+ 142 0032 9842     		lw	a4,0(a3)
+ 143              	.LVL8:
+ 144              	.LM40:
+ 145 0034 FD17     		addi	a5,a5,-1
+ 146              	.LVL9:
+ 147              	.LM41:
+ 148 0036 098B     		andi	a4,a4,2
+ 149              	.LVL10:
+ 150              	.LM42:
+ 151              	.LM43:
+ 152 0038 8DC3     		beq	a5,zero,.L10
+ 153              	.LVL11:
+ 154              	.LM44:
+ 155 003a 65FF     		bne	a4,zero,.L11
+ 156              	.LVL12:
+ 157              	.L12:
+ 158              	.LM45:
+ 159              	.LM46:
+ 160 003c 5205     		slli	a0,a0,20
+ 161              	.LVL13:
+ 162              	.LM47:
+ 163 003e B7370040 		li	a5,1073754112
+ 164              	.LM48:
+ 165 0042 5181     		srli	a0,a0,20
+ 166              	.LM49:
+ 167 0044 88C7     		sw	a0,8(a5)
+ 168              	.LM50:
+ 169              	.LM51:
+ 170 0046 3E87     		mv	a4,a5
+ 171              	.LVL14:
+ 172              	.LM52:
+ 173 0048 AD67     		li	a5,45056
+ 174 004a 9387A7AA 		addi	a5,a5,-1366
+ 175 004e 1CC3     		sw	a5,0(a4)
+ 176              	.LM53:
+ 177              	.LM54:
+ 178 0050 0545     		li	a0,1
+ 179              	.LM55:
+ 180 0052 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 4
+
+
+ 181              	.LVL15:
+ 182              	.L6:
+ 183              	.LM56:
+ 184              	.LM57:
+ 185 0054 71D7     		beq	a4,zero,.L8
+ 186              	.LVL16:
+ 187              	.L13:
+ 188              	.LM58:
+ 189 0056 0145     		li	a0,0
+ 190              	.LVL17:
+ 191              	.LM59:
+ 192 0058 8280     		ret
+ 193              	.LVL18:
+ 194              	.L10:
+ 195              	.LM60:
+ 196              	.LM61:
+ 197 005a 75FF     		bne	a4,zero,.L13
+ 198 005c C5B7     		j	.L12
+ 199              		.cfi_endproc
+ 200              	.LFE154:
+ 202              		.section	.text.fwdgt_flag_get,"ax",@progbits
+ 203              		.align	1
+ 204              		.globl	fwdgt_flag_get
+ 206              	fwdgt_flag_get:
+ 207              	.LVL19:
+ 208              	.LFB155:
+ 209              	.LM62:
+ 210              		.cfi_startproc
+ 211              	.LM63:
+ 212              	.LM64:
+ 213 0000 B7370040 		li	a5,1073754112
+ 214 0004 DC47     		lw	a5,12(a5)
+ 215              	.LM65:
+ 216 0006 7D8D     		and	a0,a0,a5
+ 217              	.LVL20:
+ 218              	.LM66:
+ 219 0008 3335A000 		snez	a0,a0
+ 220 000c 8280     		ret
+ 221              		.cfi_endproc
+ 222              	.LFE155:
+ 224              		.text
+ 225              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_fwdgt.c
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:10     .text.fwdgt_write_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:13     .text.fwdgt_write_enable:00000000 fwdgt_write_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:16     .text.fwdgt_write_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:25     .text.fwdgt_write_enable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:29     .text.fwdgt_write_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:32     .text.fwdgt_write_disable:00000000 fwdgt_write_disable
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:35     .text.fwdgt_write_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:42     .text.fwdgt_write_disable:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:46     .text.fwdgt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:49     .text.fwdgt_enable:00000000 fwdgt_enable
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:52     .text.fwdgt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:61     .text.fwdgt_enable:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:65     .text.fwdgt_counter_reload:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:68     .text.fwdgt_counter_reload:00000000 fwdgt_counter_reload
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:71     .text.fwdgt_counter_reload:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:80     .text.fwdgt_counter_reload:0000000e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:84     .text.fwdgt_config:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:87     .text.fwdgt_config:00000000 fwdgt_config
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:91     .text.fwdgt_config:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:199    .text.fwdgt_config:0000005e .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:203    .text.fwdgt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:206    .text.fwdgt_flag_get:00000000 fwdgt_flag_get
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:210    .text.fwdgt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:221    .text.fwdgt_flag_get:0000000e .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:182    .text.fwdgt_config:00000054 .L6
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:105    .text.fwdgt_config:00000016 .L7
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:194    .text.fwdgt_config:0000005a .L10
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:138    .text.fwdgt_config:00000032 .L11
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:123    .text.fwdgt_config:00000020 .L8
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:187    .text.fwdgt_config:00000056 .L13
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:157    .text.fwdgt_config:0000003c .L12
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:492    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1472   .debug_str:0000007c .LASF31
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1464   .debug_str:0000000a .LASF32
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1496   .debug_str:000001ca .LASF33
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:936    .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:952    .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1506   .debug_str:0000020c .LASF0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1470   .debug_str:00000069 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1504   .debug_str:000001ff .LASF2
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1510   .debug_str:0000022b .LASF3
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1524   .debug_str:00000276 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1526   .debug_str:00000282 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1462   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1474   .debug_str:00000143 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1514   .debug_str:00000241 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1488   .debug_str:00000195 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1486   .debug_str:0000018c .LASF10
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1494   .debug_str:000001bf .LASF11
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1490   .debug_str:000001a0 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1508   .debug_str:00000223 .LASF13
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1516   .debug_str:0000024b .LASF14
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1520   .debug_str:00000267 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1528   .debug_str:0000028e .LASF16
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 6
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1478   .debug_str:00000159 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1522   .debug_str:00000270 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1476   .debug_str:00000151 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1466   .debug_str:0000004a .LASF20
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1530   .debug_str:00000294 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:208    .text.fwdgt_flag_get:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:222    .text.fwdgt_flag_get:0000000e .LFE155
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1500   .debug_str:000001ee .LASF23
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:748    .debug_loc:00000004 .LLST3
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:743    .debug_loc:00000000 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1492   .debug_str:000001b2 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:89     .text.fwdgt_config:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:200    .text.fwdgt_config:0000005e .LFE154
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1484   .debug_str:0000017f .LASF24
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:779    .debug_loc:00000035 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:768    .debug_loc:0000002b .LVUS0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1482   .debug_str:00000171 .LASF34
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1512   .debug_str:00000239 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:837    .debug_loc:00000096 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:820    .debug_loc:00000086 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1502   .debug_str:000001f3 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:893    .debug_loc:00000110 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:884    .debug_loc:00000108 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1468   .debug_str:00000054 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:69     .text.fwdgt_counter_reload:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:81     .text.fwdgt_counter_reload:0000000e .LFE153
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1480   .debug_str:00000164 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:50     .text.fwdgt_enable:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:62     .text.fwdgt_enable:0000000e .LFE152
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1498   .debug_str:000001da .LASF29
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:33     .text.fwdgt_write_disable:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:43     .text.fwdgt_write_disable:0000000a .LFE151
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:1518   .debug_str:00000254 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:14     .text.fwdgt_write_enable:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:26     .text.fwdgt_write_enable:0000000e .LFE150
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:207    .text.fwdgt_flag_get:00000000 .LVL19
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:217    .text.fwdgt_flag_get:00000008 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:88     .text.fwdgt_config:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:161    .text.fwdgt_config:0000003e .LVL13
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:181    .text.fwdgt_config:00000054 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:190    .text.fwdgt_config:00000058 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:193    .text.fwdgt_config:0000005a .LVL18
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:104    .text.fwdgt_config:00000016 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:112    .text.fwdgt_config:0000001a .LVL2
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:115    .text.fwdgt_config:0000001c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:119    .text.fwdgt_config:0000001e .LVL4
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:122    .text.fwdgt_config:00000020 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:129    .text.fwdgt_config:00000026 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:137    .text.fwdgt_config:00000032 .LVL7
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:146    .text.fwdgt_config:00000036 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:149    .text.fwdgt_config:00000038 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:153    .text.fwdgt_config:0000003a .LVL11
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:156    .text.fwdgt_config:0000003c .LVL12
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:143    .text.fwdgt_config:00000034 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:171    .text.fwdgt_config:00000048 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:227    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:15     .text.fwdgt_write_enable:00000000 .LM1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 7
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:17     .text.fwdgt_write_enable:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:18     .text.fwdgt_write_enable:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:23     .text.fwdgt_write_enable:0000000c .LM4
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:34     .text.fwdgt_write_disable:00000000 .LM5
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:36     .text.fwdgt_write_disable:00000000 .LM6
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:37     .text.fwdgt_write_disable:00000000 .LM7
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:40     .text.fwdgt_write_disable:00000008 .LM8
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:51     .text.fwdgt_enable:00000000 .LM9
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:53     .text.fwdgt_enable:00000000 .LM10
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:54     .text.fwdgt_enable:00000000 .LM11
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:59     .text.fwdgt_enable:0000000c .LM12
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:70     .text.fwdgt_counter_reload:00000000 .LM13
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:72     .text.fwdgt_counter_reload:00000000 .LM14
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:73     .text.fwdgt_counter_reload:00000000 .LM15
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:78     .text.fwdgt_counter_reload:0000000c .LM16
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:90     .text.fwdgt_config:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:92     .text.fwdgt_config:00000000 .LM18
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:93     .text.fwdgt_config:00000000 .LM19
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:94     .text.fwdgt_config:00000000 .LM20
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:95     .text.fwdgt_config:00000000 .LM21
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:102    .text.fwdgt_config:00000012 .LM22
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:106    .text.fwdgt_config:00000016 .LM23
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:107    .text.fwdgt_config:00000016 .LM24
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:108    .text.fwdgt_config:00000016 .LM25
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:110    .text.fwdgt_config:00000018 .LM26
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:113    .text.fwdgt_config:0000001a .LM27
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:116    .text.fwdgt_config:0000001c .LM28
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:117    .text.fwdgt_config:0000001c .LM29
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:120    .text.fwdgt_config:0000001e .LM30
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:124    .text.fwdgt_config:00000020 .LM31
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:125    .text.fwdgt_config:00000020 .LM32
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:128    .text.fwdgt_config:00000026 .LM33
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:130    .text.fwdgt_config:00000026 .LM34
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:132    .text.fwdgt_config:0000002a .LM35
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:135    .text.fwdgt_config:00000030 .LM36
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:139    .text.fwdgt_config:00000032 .LM37
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:140    .text.fwdgt_config:00000032 .LM38
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:141    .text.fwdgt_config:00000032 .LM39
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:144    .text.fwdgt_config:00000034 .LM40
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:147    .text.fwdgt_config:00000036 .LM41
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:150    .text.fwdgt_config:00000038 .LM42
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:151    .text.fwdgt_config:00000038 .LM43
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:154    .text.fwdgt_config:0000003a .LM44
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:158    .text.fwdgt_config:0000003c .LM45
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:159    .text.fwdgt_config:0000003c .LM46
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:162    .text.fwdgt_config:0000003e .LM47
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:164    .text.fwdgt_config:00000042 .LM48
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:166    .text.fwdgt_config:00000044 .LM49
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:168    .text.fwdgt_config:00000046 .LM50
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:169    .text.fwdgt_config:00000046 .LM51
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:172    .text.fwdgt_config:00000048 .LM52
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:176    .text.fwdgt_config:00000050 .LM53
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:177    .text.fwdgt_config:00000050 .LM54
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:179    .text.fwdgt_config:00000052 .LM55
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:183    .text.fwdgt_config:00000054 .LM56
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:184    .text.fwdgt_config:00000054 .LM57
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:188    .text.fwdgt_config:00000056 .LM58
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s 			page 8
+
+
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:191    .text.fwdgt_config:00000058 .LM59
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:195    .text.fwdgt_config:0000005a .LM60
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:196    .text.fwdgt_config:0000005a .LM61
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:209    .text.fwdgt_flag_get:00000000 .LM62
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:211    .text.fwdgt_flag_get:00000000 .LM63
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:212    .text.fwdgt_flag_get:00000000 .LM64
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:215    .text.fwdgt_flag_get:00000006 .LM65
+C:\Users\Administrator\AppData\Local\Temp\cc3Ah8Cx.s:218    .text.fwdgt_flag_get:00000008 .LM66
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,486 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 1
+
+
+   1              		.file	"strncat_s.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.strncat_s,"ax",@progbits
+  10              		.align	1
+  11              		.globl	strncat_s
+  13              	strncat_s:
+  14              	.LVL0:
+  15              	.LFB5:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 635AB00A 		ble	a1,zero,.L21
+  21 0004 AA87     		mv	a5,a0
+  22              	.LM4:
+  23              	.LM5:
+  24 0006 5945     		li	a0,22
+  25              	.LVL1:
+  26              	.LM6:
+  27 0008 CDCF     		beq	a5,zero,.L40
+  28              	.LM7:
+  29 000a 11E6     		bne	a2,zero,.L3
+  30              	.LM8:
+  31              	.LM9:
+  32              	.LM10:
+  33              	.LM11:
+  34 000c 23800700 		sb	zero,0(a5)
+  35              	.LM12:
+  36              	.LVL2:
+  37              	.L41:
+  38              	.LM13:
+  39 0010 13056009 		li	a0,150
+  40 0014 8280     		ret
+  41              	.LVL3:
+  42              	.L3:
+  43              	.LM14:
+  44              	.LM15:
+  45 0016 63C2060A 		blt	a3,zero,.L4
+  46 001a 3388B700 		add	a6,a5,a1
+  47              	.LBB6:
+  48              	.LBB7:
+  49              	.LBB8:
+  50              	.LM16:
+  51 001e 3E85     		mv	a0,a5
+  52              	.L5:
+  53              	.LVL4:
+  54              	.LM17:
+  55 0020 03470500 		lbu	a4,0(a0)
+  56 0024 01C7     		beq	a4,zero,.L6
+  57              	.LM18:
+  58              	.LVL5:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 2
+
+
+  59              	.LM19:
+  60 0026 0505     		addi	a0,a0,1
+  61              	.LVL6:
+  62              	.LM20:
+  63 0028 E31CA8FE 		bne	a6,a0,.L5
+  64              	.LVL7:
+  65              	.L6:
+  66              	.LM21:
+  67 002c 3308F540 		sub	a6,a0,a5
+  68              	.LVL8:
+  69              	.LM22:
+  70              	.LBE8:
+  71              	.LM23:
+  72              	.LM24:
+  73              	.LBB9:
+  74              	.LM25:
+  75              	.LM26:
+  76              	.LM27:
+  77 0030 B296     		add	a3,a2,a3
+  78              	.LVL9:
+  79              	.LM28:
+  80 0032 3287     		mv	a4,a2
+  81              	.LVL10:
+  82              	.L8:
+  83              	.LM29:
+  84 0034 6393E602 		bne	a3,a4,.L9
+  85              	.L13:
+  86              	.LM30:
+  87 0038 B306C740 		sub	a3,a4,a2
+  88              	.LVL11:
+  89              	.LM31:
+  90              	.LBE9:
+  91              	.LM32:
+  92              	.LM33:
+  93              	.LM34:
+  94 003c 63E5C702 		bltu	a5,a2,.L10
+  95              	.LM35:
+  96 0040 6378F602 		bleu	a5,a2,.L15
+  97 0044 6366F702 		bgtu	a5,a4,.L15
+  98              	.LVL12:
+  99              	.L14:
+ 100              	.LM36:
+ 101              	.LM37:
+ 102 0048 23800700 		sb	zero,0(a5)
+ 103              	.LM38:
+ 104              	.LM39:
+ 105 004c 63940501 		bne	a1,a6,.L24
+ 106 0050 E370A6FC 		bgeu	a2,a0,.L41
+ 107              	.L24:
+ 108              	.LM40:
+ 109 0054 1305600B 		li	a0,182
+ 110              	.LVL13:
+ 111              	.LM41:
+ 112 0058 8280     		ret
+ 113              	.LVL14:
+ 114              	.L9:
+ 115              	.LBB10:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 3
+
+
+ 116              	.LM42:
+ 117 005a 83480700 		lbu	a7,0(a4)
+ 118 005e E38D08FC 		beq	a7,zero,.L13
+ 119              	.LM43:
+ 120              	.LVL15:
+ 121              	.LM44:
+ 122 0062 0507     		addi	a4,a4,1
+ 123              	.LVL16:
+ 124              	.LM45:
+ 125 0064 C1BF     		j	.L8
+ 126              	.LVL17:
+ 127              	.L10:
+ 128              	.LM46:
+ 129              	.LBE10:
+ 130              	.LM47:
+ 131 0066 3307D800 		add	a4,a6,a3
+ 132              	.LVL18:
+ 133              	.LM48:
+ 134 006a 3E97     		add	a4,a5,a4
+ 135 006c E37EC7FC 		bleu	a2,a4,.L14
+ 136              	.L15:
+ 137              	.LM49:
+ 138              	.LBE7:
+ 139              	.LBE6:
+ 140              	.LM50:
+ 141 0070 0111     		addi	sp,sp,-32
+ 142              	.LCFI0:
+ 143              		.cfi_def_cfa_offset 32
+ 144 0072 22CC     		sw	s0,24(sp)
+ 145 0074 06CE     		sw	ra,28(sp)
+ 146              		.cfi_offset 8, -8
+ 147              		.cfi_offset 1, -4
+ 148              	.LBB14:
+ 149              	.LBB11:
+ 150              	.LM51:
+ 151 0076 3304D800 		add	s0,a6,a3
+ 152              	.LM52:
+ 153 007a 6384C700 		beq	a5,a2,.L25
+ 154 007e 636EB400 		bgtu	a1,s0,.L17
+ 155              	.L25:
+ 156              	.LM53:
+ 157              	.LM54:
+ 158 0082 23800700 		sb	zero,0(a5)
+ 159              	.LM55:
+ 160              	.LBE11:
+ 161              	.LBE14:
+ 162              	.LM56:
+ 163 0086 1305200A 		li	a0,162
+ 164              	.LVL19:
+ 165              	.LBB15:
+ 166              	.LBB12:
+ 167              	.LM57:
+ 168 008a 63940501 		bne	a1,a6,.L1
+ 169              	.LBE12:
+ 170              	.LBE15:
+ 171              	.LM58:
+ 172 008e 13056009 		li	a0,150
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 4
+
+
+ 173              	.LVL20:
+ 174              	.L1:
+ 175              	.LM59:
+ 176 0092 F240     		lw	ra,28(sp)
+ 177              		.cfi_remember_state
+ 178              		.cfi_restore 1
+ 179 0094 6244     		lw	s0,24(sp)
+ 180              		.cfi_restore 8
+ 181 0096 0561     		addi	sp,sp,32
+ 182              	.LCFI1:
+ 183              		.cfi_def_cfa_offset 0
+ 184 0098 8280     		jr	ra
+ 185              	.LVL21:
+ 186              	.L17:
+ 187              	.LCFI2:
+ 188              		.cfi_restore_state
+ 189              	.LM60:
+ 190 009a B285     		mv	a1,a2
+ 191              	.LVL22:
+ 192              	.LBB16:
+ 193              	.LBB13:
+ 194              	.LM61:
+ 195 009c 3686     		mv	a2,a3
+ 196              	.LVL23:
+ 197              	.LM62:
+ 198 009e 3EC6     		sw	a5,12(sp)
+ 199              	.LM63:
+ 200 00a0 97000000 		call	memcpy
+ 200      E7800000 
+ 201              	.LVL24:
+ 202              	.LM64:
+ 203              	.LM65:
+ 204 00a8 B247     		lw	a5,12(sp)
+ 205              	.LM66:
+ 206 00aa 0145     		li	a0,0
+ 207              	.LM67:
+ 208 00ac A297     		add	a5,a5,s0
+ 209 00ae 23800700 		sb	zero,0(a5)
+ 210              	.LM68:
+ 211              	.LM69:
+ 212 00b2 C5B7     		j	.L1
+ 213              	.LVL25:
+ 214              	.L21:
+ 215              	.LCFI3:
+ 216              		.cfi_def_cfa_offset 0
+ 217              		.cfi_restore 1
+ 218              		.cfi_restore 8
+ 219              	.LM70:
+ 220              	.LBE13:
+ 221              	.LBE16:
+ 222              	.LM71:
+ 223 00b4 13052002 		li	a0,34
+ 224              	.LVL26:
+ 225              	.LM72:
+ 226 00b8 8280     		ret
+ 227              	.LVL27:
+ 228              	.L4:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 5
+
+
+ 229              	.LM73:
+ 230              	.LM74:
+ 231 00ba 23800700 		sb	zero,0(a5)
+ 232              	.LM75:
+ 233              	.LM76:
+ 234              	.LM77:
+ 235 00be 1305200A 		li	a0,162
+ 236              	.L40:
+ 237              	.LM78:
+ 238 00c2 8280     		ret
+ 239              		.cfi_endproc
+ 240              	.LFE5:
+ 242              		.text
+ 243              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 strncat_s.c
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:10     .text.strncat_s:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:13     .text.strncat_s:00000000 strncat_s
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:17     .text.strncat_s:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:143    .text.strncat_s:00000072 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:146    .text.strncat_s:00000076 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:147    .text.strncat_s:00000076 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:177    .text.strncat_s:00000094 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:178    .text.strncat_s:00000094 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:180    .text.strncat_s:00000096 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:183    .text.strncat_s:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:188    .text.strncat_s:0000009a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:216    .text.strncat_s:000000b4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:217    .text.strncat_s:000000b4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:218    .text.strncat_s:000000b4 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:239    .text.strncat_s:000000c4 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:214    .text.strncat_s:000000b4 .L21
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:236    .text.strncat_s:000000c2 .L40
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:42     .text.strncat_s:00000016 .L3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:228    .text.strncat_s:000000ba .L4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:65     .text.strncat_s:0000002c .L6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:52     .text.strncat_s:00000020 .L5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:114    .text.strncat_s:0000005a .L9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:127    .text.strncat_s:00000066 .L10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:136    .text.strncat_s:00000070 .L15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:107    .text.strncat_s:00000054 .L24
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:37     .text.strncat_s:00000010 .L41
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:85     .text.strncat_s:00000038 .L13
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:82     .text.strncat_s:00000034 .L8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:99     .text.strncat_s:00000048 .L14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:155    .text.strncat_s:00000082 .L25
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:186    .text.strncat_s:0000009a .L17
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:174    .text.strncat_s:00000092 .L1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:547    .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2013   .debug_str:0000002d .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2055   .debug_str:000001e1 .LASF22
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2049   .debug_str:000001b6 .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1397   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1419   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2019   .debug_str:0000010e .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2057   .debug_str:0000021f .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2045   .debug_str:0000019c .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2029   .debug_str:0000014f .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2039   .debug_str:00000178 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2043   .debug_str:00000189 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2035   .debug_str:00000168 .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2017   .debug_str:000000fc .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2003   .debug_str:00000000 .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2009   .debug_str:0000001e .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2053   .debug_str:000001d5 .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2031   .debug_str:0000015d .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2025   .debug_str:00000140 .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2041   .debug_str:00000182 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2021   .debug_str:00000125 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:15     .text.strncat_s:00000000 .LFB5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 7
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:240    .text.strncat_s:000000c4 .LFE5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:870    .debug_loc:00000000 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2005   .debug_str:0000000e .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:915    .debug_loc:00000054 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:898    .debug_loc:00000044 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2015   .debug_str:000000f4 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:980    .debug_loc:000000d1 .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:969    .debug_loc:000000c7 .LVUS2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2027   .debug_str:00000148 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1034   .debug_loc:0000012e .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1021   .debug_loc:00000122 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2033   .debug_str:00000162 .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1090   .debug_loc:00000194 .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1079   .debug_loc:0000018a .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1136   .debug_loc:000001e9 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1131   .debug_loc:000001e5 .LVUS5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1154   .debug_loc:0000020d .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1147   .debug_loc:00000207 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:49     .text.strncat_s:0000001e .LBB8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:70     .text.strncat_s:00000030 .LBE8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1176   .debug_loc:0000023c .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1169   .debug_loc:00000236 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1198   .debug_loc:0000026b .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1191   .debug_loc:00000265 .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1249   .debug_loc:000002b7 .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1238   .debug_loc:000002ad .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1287   .debug_loc:00000304 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:1274   .debug_loc:000002f8 .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:201    .text.strncat_s:000000a8 .LVL24
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2047   .debug_str:000001a8 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2007   .debug_str:00000016 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2037   .debug_str:00000171 .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2011   .debug_str:00000025 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2051   .debug_str:000001c6 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:2023   .debug_str:0000012f .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:142    .text.strncat_s:00000072 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:182    .text.strncat_s:00000098 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:187    .text.strncat_s:0000009a .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:215    .text.strncat_s:000000b4 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:14     .text.strncat_s:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:25     .text.strncat_s:00000008 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:173    .text.strncat_s:00000092 .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:185    .text.strncat_s:0000009a .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:213    .text.strncat_s:000000b4 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:224    .text.strncat_s:000000b8 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:227    .text.strncat_s:000000ba .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:191    .text.strncat_s:0000009c .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:196    .text.strncat_s:0000009e .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:36     .text.strncat_s:00000010 .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:41     .text.strncat_s:00000016 .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:78     .text.strncat_s:00000032 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:68     .text.strncat_s:00000030 .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:88     .text.strncat_s:0000003c .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:113    .text.strncat_s:0000005a .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:126    .text.strncat_s:00000066 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:53     .text.strncat_s:00000020 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:110    .text.strncat_s:00000058 .LVL13
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 8
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:164    .text.strncat_s:0000008a .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:58     .text.strncat_s:00000026 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:61     .text.strncat_s:00000028 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:64     .text.strncat_s:0000002c .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:81     .text.strncat_s:00000034 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:98     .text.strncat_s:00000048 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:123    .text.strncat_s:00000064 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:132    .text.strncat_s:0000006a .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:120    .text.strncat_s:00000062 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:245    .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:47     .text.strncat_s:0000001e .LBB6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:139    .text.strncat_s:00000070 .LBE6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:148    .text.strncat_s:00000076 .LBB14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:161    .text.strncat_s:00000086 .LBE14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:165    .text.strncat_s:0000008a .LBB15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:170    .text.strncat_s:0000008e .LBE15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:192    .text.strncat_s:0000009c .LBB16
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:221    .text.strncat_s:000000b4 .LBE16
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:73     .text.strncat_s:00000030 .LBB9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:90     .text.strncat_s:0000003c .LBE9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:115    .text.strncat_s:0000005a .LBB10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:129    .text.strncat_s:00000066 .LBE10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:16     .text.strncat_s:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:18     .text.strncat_s:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:19     .text.strncat_s:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:22     .text.strncat_s:00000006 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:23     .text.strncat_s:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:26     .text.strncat_s:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:28     .text.strncat_s:0000000a .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:30     .text.strncat_s:0000000c .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:31     .text.strncat_s:0000000c .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:32     .text.strncat_s:0000000c .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:33     .text.strncat_s:0000000c .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:35     .text.strncat_s:00000010 .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:38     .text.strncat_s:00000010 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:43     .text.strncat_s:00000016 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:44     .text.strncat_s:00000016 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:50     .text.strncat_s:0000001e .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:54     .text.strncat_s:00000020 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:57     .text.strncat_s:00000026 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:59     .text.strncat_s:00000026 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:62     .text.strncat_s:00000028 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:66     .text.strncat_s:0000002c .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:69     .text.strncat_s:00000030 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:71     .text.strncat_s:00000030 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:72     .text.strncat_s:00000030 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:74     .text.strncat_s:00000030 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:75     .text.strncat_s:00000030 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:76     .text.strncat_s:00000030 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:79     .text.strncat_s:00000032 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:83     .text.strncat_s:00000034 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:86     .text.strncat_s:00000038 .LM30
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:89     .text.strncat_s:0000003c .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:91     .text.strncat_s:0000003c .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:92     .text.strncat_s:0000003c .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:93     .text.strncat_s:0000003c .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:95     .text.strncat_s:00000040 .LM35
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s 			page 9
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:100    .text.strncat_s:00000048 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:101    .text.strncat_s:00000048 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:103    .text.strncat_s:0000004c .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:104    .text.strncat_s:0000004c .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:108    .text.strncat_s:00000054 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:111    .text.strncat_s:00000058 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:116    .text.strncat_s:0000005a .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:119    .text.strncat_s:00000062 .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:121    .text.strncat_s:00000062 .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:124    .text.strncat_s:00000064 .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:128    .text.strncat_s:00000066 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:130    .text.strncat_s:00000066 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:133    .text.strncat_s:0000006a .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:137    .text.strncat_s:00000070 .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:140    .text.strncat_s:00000070 .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:150    .text.strncat_s:00000076 .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:152    .text.strncat_s:0000007a .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:156    .text.strncat_s:00000082 .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:157    .text.strncat_s:00000082 .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:159    .text.strncat_s:00000086 .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:162    .text.strncat_s:00000086 .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:167    .text.strncat_s:0000008a .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:171    .text.strncat_s:0000008e .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:175    .text.strncat_s:00000092 .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:189    .text.strncat_s:0000009a .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:194    .text.strncat_s:0000009c .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:197    .text.strncat_s:0000009e .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:199    .text.strncat_s:000000a0 .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:202    .text.strncat_s:000000a8 .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:203    .text.strncat_s:000000a8 .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:205    .text.strncat_s:000000aa .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:207    .text.strncat_s:000000ac .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:210    .text.strncat_s:000000b2 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:211    .text.strncat_s:000000b2 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:219    .text.strncat_s:000000b4 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:222    .text.strncat_s:000000b4 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:225    .text.strncat_s:000000b8 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:229    .text.strncat_s:000000ba .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:230    .text.strncat_s:000000ba .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:232    .text.strncat_s:000000be .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:233    .text.strncat_s:000000be .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:234    .text.strncat_s:000000be .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccnpFp8P.s:237    .text.strncat_s:000000c2 .LM78
+
+UNDEFINED SYMBOLS
+memcpy

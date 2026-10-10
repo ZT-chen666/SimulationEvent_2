@@ -1,0 +1,5 @@
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_exmc.c:58:6:exmc_norsram_deinit	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_exmc.c:74:6:exmc_norsram_struct_para_init	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_exmc.c:108:6:exmc_norsram_init	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_exmc.c:149:6:exmc_norsram_enable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_exmc.c:161:6:exmc_norsram_disable	0	static

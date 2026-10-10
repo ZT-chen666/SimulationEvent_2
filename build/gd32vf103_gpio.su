@@ -1,0 +1,17 @@
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:53:6:gpio_deinit	16	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:92:6:gpio_afio_deinit	16	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:123:6:gpio_init	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:198:6:gpio_bit_set	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:212:6:gpio_bit_reset	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:230:6:gpio_bit_write	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:246:6:gpio_port_write	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:260:12:gpio_input_bit_get	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:275:10:gpio_input_port_get	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:289:12:gpio_output_bit_get	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:304:10:gpio_output_port_get	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:341:6:gpio_pin_remap_config	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:397:6:gpio_exti_source_select	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:446:6:gpio_event_output_config	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:466:6:gpio_event_output_enable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:477:6:gpio_event_output_disable	0	static
+gd32vf103/SoC/gd32vf103/Common/Source/Drivers/gd32vf103_gpio.c:491:6:gpio_pin_lock	0	static

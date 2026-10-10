@@ -1,0 +1,5 @@
+liteos_m//kernel/src/los_mux.c:53:30:OsMuxInit	16	static
+liteos_m//kernel/src/los_mux.c:85:30:LOS_MuxCreate	16	static
+liteos_m//kernel/src/los_mux.c:126:30:LOS_MuxDelete	16	static
+liteos_m//kernel/src/los_mux.c:186:25:LOS_MuxPend	32	static
+liteos_m//kernel/src/los_mux.c:262:25:LOS_MuxPost	16	static

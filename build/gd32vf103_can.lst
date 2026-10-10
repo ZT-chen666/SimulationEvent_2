@@ -1,0 +1,3319 @@
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 1
+
+
+   1              		.file	"gd32vf103_can.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.can_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	can_deinit
+  13              	can_deinit:
+  14              	.LVL0:
+  15              	.LFB150:
+  16              	.LM1:
+  17              		.cfi_startproc
+  18              	.LM2:
+  19              	.LM3:
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              	.LM4:
+  24 0002 B7670040 		li	a5,1073766400
+  25              	.LM5:
+  26 0006 06C6     		sw	ra,12(sp)
+  27              		.cfi_offset 1, -4
+  28              	.LM6:
+  29 0008 93870740 		addi	a5,a5,1024
+  30 000c 6310F502 		bne	a0,a5,.L2
+  31              	.LM7:
+  32 0010 13059041 		li	a0,1049
+  33              	.LVL1:
+  34              	.LM8:
+  35 0014 97000000 		call	rcu_periph_reset_enable
+  35      E7800000 
+  36              	.LVL2:
+  37              	.LM9:
+  38 001c 13059041 		li	a0,1049
+  39              	.L4:
+  40              	.LM10:
+  41 0020 B240     		lw	ra,12(sp)
+  42              		.cfi_remember_state
+  43              		.cfi_restore 1
+  44 0022 4101     		addi	sp,sp,16
+  45              	.LCFI1:
+  46              		.cfi_def_cfa_offset 0
+  47              	.LM11:
+  48 0024 17030000 		tail	rcu_periph_reset_disable
+  48      67000300 
+  49              	.LVL3:
+  50              	.L2:
+  51              	.LCFI2:
+  52              		.cfi_restore_state
+  53              	.LM12:
+  54 002c 1305A041 		li	a0,1050
+  55              	.LVL4:
+  56              	.LM13:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 2
+
+
+  57 0030 97000000 		call	rcu_periph_reset_enable
+  57      E7800000 
+  58              	.LVL5:
+  59              	.LM14:
+  60 0038 1305A041 		li	a0,1050
+  61 003c D5B7     		j	.L4
+  62              		.cfi_endproc
+  63              	.LFE150:
+  65              		.section	.text.can_struct_para_init,"ax",@progbits
+  66              		.align	1
+  67              		.globl	can_struct_para_init
+  69              	can_struct_para_init:
+  70              	.LVL6:
+  71              	.LFB151:
+  72              	.LM15:
+  73              		.cfi_startproc
+  74              	.LM16:
+  75              	.LM17:
+  76              	.LM18:
+  77 0000 4111     		addi	sp,sp,-16
+  78              	.LCFI3:
+  79              		.cfi_def_cfa_offset 16
+  80 0002 22C4     		sw	s0,8(sp)
+  81 0004 06C6     		sw	ra,12(sp)
+  82              		.cfi_offset 8, -8
+  83              		.cfi_offset 1, -4
+  84              	.LM19:
+  85 0006 8947     		li	a5,2
+  86              	.LM20:
+  87 0008 2E84     		mv	s0,a1
+  88              	.LM21:
+  89 000a 630BF504 		beq	a0,a5,.L6
+  90 000e 63EAA702 		bgtu	a0,a5,.L7
+  91 0012 05ED     		bne	a0,zero,.L13
+  92              	.LM22:
+  93              	.LM23:
+  94              	.LM24:
+  95              	.LM25:
+  96              	.LM26:
+  97              	.LM27:
+  98              	.LM28:
+  99              	.LM29:
+ 100              	.LM30:
+ 101              	.LM31:
+ 102              	.LM32:
+ 103              	.LM33:
+ 104 0014 B7070200 		li	a5,131072
+ 105 0018 9CC1     		sw	a5,0(a1)
+ 106              	.LM34:
+ 107 001a 9307F03F 		li	a5,1023
+ 108              	.LM35:
+ 109 001e 23A20500 		sw	zero,4(a1)
+ 110              	.LM36:
+ 111 0022 23A40500 		sw	zero,8(a1)
+ 112              	.LM37:
+ 113 0026 23A60500 		sw	zero,12(a1)
+ 114              	.LM38:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 3
+
+
+ 115 002a 23A80500 		sw	zero,16(a1)
+ 116              	.LM39:
+ 117 002e 23AA0500 		sw	zero,20(a1)
+ 118              	.LM40:
+ 119 0032 23AC0500 		sw	zero,24(a1)
+ 120              	.LM41:
+ 121 0036 239EF500 		sh	a5,28(a1)
+ 122              	.LM42:
+ 123              	.LVL7:
+ 124              	.L5:
+ 125              	.LM43:
+ 126 003a B240     		lw	ra,12(sp)
+ 127              		.cfi_remember_state
+ 128              		.cfi_restore 1
+ 129 003c 2244     		lw	s0,8(sp)
+ 130              		.cfi_restore 8
+ 131              	.LVL8:
+ 132              	.LM44:
+ 133 003e 4101     		addi	sp,sp,16
+ 134              	.LCFI4:
+ 135              		.cfi_def_cfa_offset 0
+ 136 0040 8280     		jr	ra
+ 137              	.LVL9:
+ 138              	.L7:
+ 139              	.LCFI5:
+ 140              		.cfi_restore_state
+ 141              	.LM45:
+ 142 0042 8D47     		li	a5,3
+ 143 0044 630FF502 		beq	a0,a5,.L10
+ 144              	.L11:
+ 145              	.LM46:
+ 146              	.LM47:
+ 147              	.LM48:
+ 148 0048 01A0     		j	.L11
+ 149              	.L13:
+ 150              	.LM49:
+ 151              	.LM50:
+ 152              	.LM51:
+ 153              	.LM52:
+ 154              	.LM53:
+ 155              	.LM54:
+ 156              	.LM55:
+ 157              	.LM56:
+ 158              	.LM57:
+ 159              	.LM58:
+ 160 004a C167     		li	a5,65536
+ 161              	.LM59:
+ 162 004c 23A00500 		sw	zero,0(a1)
+ 163              	.LM60:
+ 164 0050 23A20500 		sw	zero,4(a1)
+ 165              	.LM61:
+ 166 0054 23A40500 		sw	zero,8(a1)
+ 167              	.LM62:
+ 168 0058 DCC5     		sw	a5,12(a1)
+ 169              	.LM63:
+ 170 005a 23A80500 		sw	zero,16(a1)
+ 171              	.LM64:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 4
+
+
+ 172 005e F1BF     		j	.L5
+ 173              	.L6:
+ 174              	.LM65:
+ 175 0060 2146     		li	a2,8
+ 176 0062 8145     		li	a1,0
+ 177 0064 1305B400 		addi	a0,s0,11
+ 178              	.LVL10:
+ 179              	.LM66:
+ 180 0068 97000000 		call	memset
+ 180      E7800000 
+ 181              	.LVL11:
+ 182              	.LM67:
+ 183              	.LM68:
+ 184              	.LM69:
+ 185              	.LM70:
+ 186              	.LM71:
+ 187              	.L15:
+ 188              	.LM72:
+ 189              	.LM73:
+ 190              	.LM74:
+ 191 0070 23200400 		sw	zero,0(s0)
+ 192              	.LM75:
+ 193 0074 23220400 		sw	zero,4(s0)
+ 194              	.LM76:
+ 195 0078 23140400 		sh	zero,8(s0)
+ 196              	.LM77:
+ 197 007c 23050400 		sb	zero,10(s0)
+ 198              	.LM78:
+ 199 0080 6DBF     		j	.L5
+ 200              	.LVL12:
+ 201              	.L10:
+ 202              	.LM79:
+ 203 0082 2146     		li	a2,8
+ 204 0084 8145     		li	a1,0
+ 205 0086 1305B400 		addi	a0,s0,11
+ 206              	.LVL13:
+ 207              	.LM80:
+ 208 008a 97000000 		call	memset
+ 208      E7800000 
+ 209              	.LVL14:
+ 210              	.LM81:
+ 211              	.LM82:
+ 212              	.LM83:
+ 213              	.LM84:
+ 214              	.LM85:
+ 215 0092 A3090400 		sb	zero,19(s0)
+ 216 0096 E9BF     		j	.L15
+ 217              		.cfi_endproc
+ 218              	.LFE151:
+ 220              		.section	.text.can_init,"ax",@progbits
+ 221              		.align	1
+ 222              		.globl	can_init
+ 224              	can_init:
+ 225              	.LVL15:
+ 226              	.LFB152:
+ 227              	.LM86:
+ 228              		.cfi_startproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 5
+
+
+ 229              	.LM87:
+ 230              	.LM88:
+ 231              	.LM89:
+ 232              	.LM90:
+ 233 0000 1841     		lw	a4,0(a0)
+ 234              	.LM91:
+ 235 0002 AA87     		mv	a5,a0
+ 236              	.LM92:
+ 237 0004 759B     		andi	a4,a4,-3
+ 238 0006 18C1     		sw	a4,0(a0)
+ 239              	.LM93:
+ 240 0008 1841     		lw	a4,0(a0)
+ 241              	.LM94:
+ 242 000a 13671700 		ori	a4,a4,1
+ 243 000e 18C1     		sw	a4,0(a0)
+ 244              	.LM95:
+ 245              	.LM96:
+ 246 0010 4167     		li	a4,65536
+ 247              	.LVL16:
+ 248              	.L18:
+ 249              	.LM97:
+ 250              	.LM98:
+ 251 0012 D443     		lw	a3,4(a5)
+ 252              	.LM99:
+ 253 0014 7D17     		addi	a4,a4,-1
+ 254              	.LVL17:
+ 255              	.LM100:
+ 256              	.LM101:
+ 257 0016 13864700 		addi	a2,a5,4
+ 258              	.LM102:
+ 259 001a 11C7     		beq	a4,zero,.L36
+ 260 001c 1395F601 		slli	a0,a3,31
+ 261 0020 9356F501 		srli	a3,a0,31
+ 262 0024 FDD6     		beq	a3,zero,.L18
+ 263              	.L36:
+ 264              	.LM103:
+ 265              	.LM104:
+ 266 0026 C843     		lw	a0,4(a5)
+ 267              	.LM105:
+ 268 0028 0589     		andi	a0,a0,1
+ 269              	.LM106:
+ 270 002a 4DC5     		beq	a0,zero,.L20
+ 271              	.LM107:
+ 272              	.LM108:
+ 273 002c 03C71500 		lbu	a4,1(a1)
+ 274              	.LVL18:
+ 275              	.LM109:
+ 276 0030 83C62500 		lbu	a3,2(a1)
+ 277              	.LM110:
+ 278 0034 0D8B     		andi	a4,a4,3
+ 279              	.LM111:
+ 280 0036 BD8A     		andi	a3,a3,15
+ 281 0038 C206     		slli	a3,a3,16
+ 282              	.LM112:
+ 283 003a 6207     		slli	a4,a4,24
+ 284              	.LM113:
+ 285 003c 558F     		or	a4,a4,a3
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 6
+
+
+ 286              	.LM114:
+ 287 003e 83C60500 		lbu	a3,0(a1)
+ 288 0042 FA06     		slli	a3,a3,30
+ 289              	.LM115:
+ 290 0044 558F     		or	a4,a4,a3
+ 291              	.LM116:
+ 292 0046 83C63500 		lbu	a3,3(a1)
+ 293 004a 9D8A     		andi	a3,a3,7
+ 294 004c D206     		slli	a3,a3,20
+ 295              	.LM117:
+ 296 004e 558F     		or	a4,a4,a3
+ 297              	.LM118:
+ 298 0050 83D6C501 		lhu	a3,28(a1)
+ 299 0054 FD16     		addi	a3,a3,-1
+ 300 0056 93F6F63F 		andi	a3,a3,1023
+ 301              	.LM119:
+ 302 005a 558F     		or	a4,a4,a3
+ 303              	.LM120:
+ 304 005c D441     		lw	a3,4(a1)
+ 305              	.LM121:
+ 306 005e D8CF     		sw	a4,28(a5)
+ 307              	.LM122:
+ 308              	.LM123:
+ 309 0060 0547     		li	a4,1
+ 310 0062 639AE60C 		bne	a3,a4,.L21
+ 311              	.LM124:
+ 312 0066 9843     		lw	a4,0(a5)
+ 313              	.LM125:
+ 314 0068 13670708 		ori	a4,a4,128
+ 315              	.L46:
+ 316              	.LM126:
+ 317 006c 9445     		lw	a3,8(a1)
+ 318              	.LM127:
+ 319 006e 98C3     		sw	a4,0(a5)
+ 320              	.LM128:
+ 321              	.LM129:
+ 322 0070 0547     		li	a4,1
+ 323 0072 6396E60C 		bne	a3,a4,.L23
+ 324              	.LM130:
+ 325 0076 9843     		lw	a4,0(a5)
+ 326              	.LM131:
+ 327 0078 13670704 		ori	a4,a4,64
+ 328              	.L47:
+ 329              	.LM132:
+ 330 007c D445     		lw	a3,12(a1)
+ 331              	.LM133:
+ 332 007e 98C3     		sw	a4,0(a5)
+ 333              	.LM134:
+ 334              	.LM135:
+ 335 0080 0547     		li	a4,1
+ 336 0082 6392E60C 		bne	a3,a4,.L25
+ 337              	.LM136:
+ 338 0086 9843     		lw	a4,0(a5)
+ 339              	.LM137:
+ 340 0088 13670702 		ori	a4,a4,32
+ 341              	.L48:
+ 342              	.LM138:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 7
+
+
+ 343 008c 9449     		lw	a3,16(a1)
+ 344              	.LM139:
+ 345 008e 98C3     		sw	a4,0(a5)
+ 346              	.LM140:
+ 347              	.LM141:
+ 348 0090 0547     		li	a4,1
+ 349 0092 639EE60A 		bne	a3,a4,.L27
+ 350              	.LM142:
+ 351 0096 9843     		lw	a4,0(a5)
+ 352              	.LM143:
+ 353 0098 13670701 		ori	a4,a4,16
+ 354              	.L49:
+ 355              	.LM144:
+ 356 009c D449     		lw	a3,20(a1)
+ 357              	.LM145:
+ 358 009e 98C3     		sw	a4,0(a5)
+ 359              	.LM146:
+ 360              	.LM147:
+ 361 00a0 0547     		li	a4,1
+ 362 00a2 6399E60A 		bne	a3,a4,.L29
+ 363              	.LM148:
+ 364 00a6 9843     		lw	a4,0(a5)
+ 365              	.LM149:
+ 366 00a8 13678700 		ori	a4,a4,8
+ 367              	.L50:
+ 368              	.LM150:
+ 369 00ac 944D     		lw	a3,24(a1)
+ 370              	.LM151:
+ 371 00ae 98C3     		sw	a4,0(a5)
+ 372              	.LM152:
+ 373              	.LM153:
+ 374 00b0 0547     		li	a4,1
+ 375 00b2 6394E60A 		bne	a3,a4,.L31
+ 376              	.LM154:
+ 377 00b6 9843     		lw	a4,0(a5)
+ 378              	.LM155:
+ 379 00b8 13674700 		ori	a4,a4,4
+ 380              	.L51:
+ 381              	.LM156:
+ 382 00bc 98C3     		sw	a4,0(a5)
+ 383              	.LM157:
+ 384              	.LM158:
+ 385 00be 9843     		lw	a4,0(a5)
+ 386              	.LM159:
+ 387 00c0 4165     		li	a0,65536
+ 388              	.LM160:
+ 389 00c2 799B     		andi	a4,a4,-2
+ 390 00c4 98C3     		sw	a4,0(a5)
+ 391              	.LM161:
+ 392              	.LVL19:
+ 393              	.LM162:
+ 394              	.L35:
+ 395              	.LM163:
+ 396              	.LM164:
+ 397 00c6 1842     		lw	a4,0(a2)
+ 398              	.LM165:
+ 399 00c8 7D15     		addi	a0,a0,-1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 8
+
+
+ 400              	.LVL20:
+ 401              	.LM166:
+ 402              	.LM167:
+ 403 00ca 058B     		andi	a4,a4,1
+ 404              	.LM168:
+ 405 00cc 11C3     		beq	a4,zero,.L34
+ 406              	.LM169:
+ 407 00ce 65FD     		bne	a0,zero,.L35
+ 408              	.L34:
+ 409              	.LM170:
+ 410              	.LM171:
+ 411 00d0 3335A000 		snez	a0,a0
+ 412              	.LVL21:
+ 413              	.L20:
+ 414              	.LM172:
+ 415 00d4 13870718 		addi	a4,a5,384
+ 416              	.LM173:
+ 417 00d8 23200700 		sw	zero,0(a4)
+ 418              	.LM174:
+ 419 00dc 13870719 		addi	a4,a5,400
+ 420              	.LM175:
+ 421 00e0 23200700 		sw	zero,0(a4)
+ 422              	.LM176:
+ 423 00e4 1387071A 		addi	a4,a5,416
+ 424              	.LM177:
+ 425 00e8 23200700 		sw	zero,0(a4)
+ 426              	.LM178:
+ 427 00ec 13874718 		addi	a4,a5,388
+ 428              	.LM179:
+ 429 00f0 23200700 		sw	zero,0(a4)
+ 430              	.LM180:
+ 431 00f4 13874719 		addi	a4,a5,404
+ 432              	.LM181:
+ 433 00f8 23200700 		sw	zero,0(a4)
+ 434              	.LM182:
+ 435 00fc 1387471A 		addi	a4,a5,420
+ 436              	.LM183:
+ 437 0100 23200700 		sw	zero,0(a4)
+ 438              	.LM184:
+ 439 0104 13878718 		addi	a4,a5,392
+ 440              	.LM185:
+ 441 0108 23200700 		sw	zero,0(a4)
+ 442              	.LM186:
+ 443 010c 13878719 		addi	a4,a5,408
+ 444              	.LM187:
+ 445 0110 23200700 		sw	zero,0(a4)
+ 446              	.LM188:
+ 447 0114 1387871A 		addi	a4,a5,424
+ 448              	.LM189:
+ 449 0118 23200700 		sw	zero,0(a4)
+ 450              	.LM190:
+ 451 011c 1387C718 		addi	a4,a5,396
+ 452              	.LM191:
+ 453 0120 23200700 		sw	zero,0(a4)
+ 454              	.LM192:
+ 455 0124 1387C719 		addi	a4,a5,412
+ 456              	.LM193:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 9
+
+
+ 457 0128 23200700 		sw	zero,0(a4)
+ 458              	.LM194:
+ 459 012c 9387C71A 		addi	a5,a5,428
+ 460              	.LVL22:
+ 461              	.LM195:
+ 462 0130 23A00700 		sw	zero,0(a5)
+ 463              	.LM196:
+ 464              	.LM197:
+ 465 0134 8280     		ret
+ 466              	.LVL23:
+ 467              	.L21:
+ 468              	.LM198:
+ 469              	.LM199:
+ 470 0136 9843     		lw	a4,0(a5)
+ 471 0138 1377F7F7 		andi	a4,a4,-129
+ 472 013c 05BF     		j	.L46
+ 473              	.L23:
+ 474              	.LM200:
+ 475              	.LM201:
+ 476 013e 9843     		lw	a4,0(a5)
+ 477 0140 1377F7FB 		andi	a4,a4,-65
+ 478 0144 25BF     		j	.L47
+ 479              	.L25:
+ 480              	.LM202:
+ 481              	.LM203:
+ 482 0146 9843     		lw	a4,0(a5)
+ 483 0148 1377F7FD 		andi	a4,a4,-33
+ 484 014c 81B7     		j	.L48
+ 485              	.L27:
+ 486              	.LM204:
+ 487              	.LM205:
+ 488 014e 9843     		lw	a4,0(a5)
+ 489 0150 3D9B     		andi	a4,a4,-17
+ 490 0152 A9B7     		j	.L49
+ 491              	.L29:
+ 492              	.LM206:
+ 493              	.LM207:
+ 494 0154 9843     		lw	a4,0(a5)
+ 495 0156 5D9B     		andi	a4,a4,-9
+ 496 0158 91BF     		j	.L50
+ 497              	.L31:
+ 498              	.LM208:
+ 499              	.LM209:
+ 500 015a 9843     		lw	a4,0(a5)
+ 501 015c 6D9B     		andi	a4,a4,-5
+ 502 015e B9BF     		j	.L51
+ 503              		.cfi_endproc
+ 504              	.LFE152:
+ 506              		.section	.text.can_filter_init,"ax",@progbits
+ 507              		.align	1
+ 508              		.globl	can_filter_init
+ 510              	can_filter_init:
+ 511              	.LVL24:
+ 512              	.LFB153:
+ 513              	.LM210:
+ 514              		.cfi_startproc
+ 515              	.LM211:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 10
+
+
+ 516              	.LM212:
+ 517              	.LM213:
+ 518 0000 37670040 		li	a4,1073766400
+ 519 0004 13070760 		addi	a4,a4,1536
+ 520 0008 1043     		lw	a2,0(a4)
+ 521              	.LM214:
+ 522 000a 0548     		li	a6,1
+ 523              	.LM215:
+ 524 000c 8357A500 		lhu	a5,10(a0)
+ 525              	.LM216:
+ 526 0010 33660601 		or	a2,a2,a6
+ 527 0014 10C3     		sw	a2,0(a4)
+ 528              	.LM217:
+ 529 0016 37660040 		li	a2,1073766400
+ 530 001a 1306C661 		addi	a2,a2,1564
+ 531 001e 0C42     		lw	a1,0(a2)
+ 532              	.LM218:
+ 533 0020 B316F800 		sll	a3,a6,a5
+ 534              	.LVL25:
+ 535              	.LM219:
+ 536              	.LM220:
+ 537              	.LM221:
+ 538 0024 13C7F6FF 		not	a4,a3
+ 539              	.LM222:
+ 540 0028 F98D     		and	a1,a1,a4
+ 541 002a 0CC2     		sw	a1,0(a2)
+ 542              	.LM223:
+ 543              	.LM224:
+ 544 002c 0356E500 		lhu	a2,14(a0)
+ 545              	.LM225:
+ 546 0030 59E2     		bne	a2,zero,.L53
+ 547              	.LM226:
+ 548 0032 37660040 		li	a2,1073766400
+ 549 0036 1306C660 		addi	a2,a2,1548
+ 550 003a 0C42     		lw	a1,0(a2)
+ 551              	.LM227:
+ 552 003c F98D     		and	a1,a4,a1
+ 553 003e 0CC2     		sw	a1,0(a2)
+ 554              	.LM228:
+ 555 0040 37160008 		li	a2,134221824
+ 556 0044 130686CC 		addi	a2,a2,-824
+ 557 0048 B297     		add	a5,a5,a2
+ 558              	.LM229:
+ 559 004a 03566500 		lhu	a2,6(a0)
+ 560              	.LM230:
+ 561 004e 83552500 		lhu	a1,2(a0)
+ 562              	.LM231:
+ 563 0052 8E07     		slli	a5,a5,3
+ 564              	.LM232:
+ 565 0054 4206     		slli	a2,a2,16
+ 566              	.LM233:
+ 567 0056 4D8E     		or	a2,a2,a1
+ 568              	.LM234:
+ 569 0058 90C3     		sw	a2,0(a5)
+ 570              	.LM235:
+ 571              	.LM236:
+ 572 005a 03564500 		lhu	a2,4(a0)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 11
+
+
+ 573              	.LM237:
+ 574 005e 83550500 		lhu	a1,0(a0)
+ 575              	.LM238:
+ 576 0062 4206     		slli	a2,a2,16
+ 577              	.L60:
+ 578              	.LM239:
+ 579 0064 4D8E     		or	a2,a2,a1
+ 580              	.LM240:
+ 581 0066 D0C3     		sw	a2,4(a5)
+ 582              	.L54:
+ 583              	.LM241:
+ 584              	.LM242:
+ 585 0068 0356C500 		lhu	a2,12(a0)
+ 586 006c B7670040 		li	a5,1073766400
+ 587 0070 93874760 		addi	a5,a5,1540
+ 588 0074 2DEE     		bne	a2,zero,.L55
+ 589              	.LM243:
+ 590 0076 9043     		lw	a2,0(a5)
+ 591              	.LM244:
+ 592 0078 798E     		and	a2,a4,a2
+ 593              	.L61:
+ 594              	.LM245:
+ 595 007a 90C3     		sw	a2,0(a5)
+ 596              	.LM246:
+ 597              	.LM247:
+ 598 007c 03568500 		lhu	a2,8(a0)
+ 599 0080 B7670040 		li	a5,1073766400
+ 600 0084 93874761 		addi	a5,a5,1556
+ 601 0088 35E6     		bne	a2,zero,.L57
+ 602              	.LM248:
+ 603 008a 9043     		lw	a2,0(a5)
+ 604              	.LM249:
+ 605 008c 718F     		and	a4,a4,a2
+ 606              	.L62:
+ 607              	.LM250:
+ 608 008e 98C3     		sw	a4,0(a5)
+ 609              	.LM251:
+ 610              	.LM252:
+ 611 0090 1849     		lw	a4,16(a0)
+ 612 0092 8547     		li	a5,1
+ 613 0094 6319F700 		bne	a4,a5,.L59
+ 614              	.LM253:
+ 615 0098 B7670040 		li	a5,1073766400
+ 616 009c 9387C761 		addi	a5,a5,1564
+ 617 00a0 9843     		lw	a4,0(a5)
+ 618              	.LM254:
+ 619 00a2 558F     		or	a4,a4,a3
+ 620 00a4 98C3     		sw	a4,0(a5)
+ 621              	.L59:
+ 622              	.LM255:
+ 623              	.LM256:
+ 624 00a6 B7670040 		li	a5,1073766400
+ 625 00aa 93870760 		addi	a5,a5,1536
+ 626 00ae 9843     		lw	a4,0(a5)
+ 627 00b0 799B     		andi	a4,a4,-2
+ 628 00b2 98C3     		sw	a4,0(a5)
+ 629              	.LM257:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 12
+
+
+ 630 00b4 8280     		ret
+ 631              	.L53:
+ 632              	.LM258:
+ 633              	.LM259:
+ 634 00b6 E31906FB 		bne	a2,a6,.L54
+ 635              	.LM260:
+ 636 00ba 37660040 		li	a2,1073766400
+ 637 00be 1306C660 		addi	a2,a2,1548
+ 638 00c2 0C42     		lw	a1,0(a2)
+ 639              	.LM261:
+ 640 00c4 D58D     		or	a1,a1,a3
+ 641 00c6 0CC2     		sw	a1,0(a2)
+ 642              	.LM262:
+ 643 00c8 37160008 		li	a2,134221824
+ 644 00cc 130686CC 		addi	a2,a2,-824
+ 645 00d0 B297     		add	a5,a5,a2
+ 646              	.LM263:
+ 647 00d2 03560500 		lhu	a2,0(a0)
+ 648              	.LM264:
+ 649 00d6 83552500 		lhu	a1,2(a0)
+ 650              	.LM265:
+ 651 00da 8E07     		slli	a5,a5,3
+ 652              	.LM266:
+ 653 00dc 4206     		slli	a2,a2,16
+ 654              	.LM267:
+ 655 00de 4D8E     		or	a2,a2,a1
+ 656              	.LM268:
+ 657 00e0 90C3     		sw	a2,0(a5)
+ 658              	.LM269:
+ 659              	.LM270:
+ 660 00e2 03564500 		lhu	a2,4(a0)
+ 661              	.LM271:
+ 662 00e6 83556500 		lhu	a1,6(a0)
+ 663              	.LM272:
+ 664 00ea 4206     		slli	a2,a2,16
+ 665 00ec A5BF     		j	.L60
+ 666              	.L55:
+ 667              	.LM273:
+ 668 00ee 9043     		lw	a2,0(a5)
+ 669              	.LM274:
+ 670 00f0 558E     		or	a2,a2,a3
+ 671 00f2 61B7     		j	.L61
+ 672              	.L57:
+ 673              	.LM275:
+ 674 00f4 9843     		lw	a4,0(a5)
+ 675              	.LM276:
+ 676 00f6 558F     		or	a4,a4,a3
+ 677 00f8 59BF     		j	.L62
+ 678              		.cfi_endproc
+ 679              	.LFE153:
+ 681              		.section	.text.can1_filter_start_bank,"ax",@progbits
+ 682              		.align	1
+ 683              		.globl	can1_filter_start_bank
+ 685              	can1_filter_start_bank:
+ 686              	.LVL26:
+ 687              	.LFB154:
+ 688              	.LM277:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 13
+
+
+ 689              		.cfi_startproc
+ 690              	.LM278:
+ 691 0000 B7670040 		li	a5,1073766400
+ 692 0004 93870760 		addi	a5,a5,1536
+ 693 0008 9843     		lw	a4,0(a5)
+ 694              	.LM279:
+ 695 000a F176     		li	a3,-16384
+ 696 000c 9386F60F 		addi	a3,a3,255
+ 697              	.LM280:
+ 698 0010 13671700 		ori	a4,a4,1
+ 699 0014 98C3     		sw	a4,0(a5)
+ 700              	.LM281:
+ 701              	.LM282:
+ 702 0016 9843     		lw	a4,0(a5)
+ 703              	.LM283:
+ 704 0018 1375F503 		andi	a0,a0,63
+ 705              	.LVL27:
+ 706              	.LM284:
+ 707 001c 2205     		slli	a0,a0,8
+ 708              	.LM285:
+ 709 001e 758F     		and	a4,a4,a3
+ 710 0020 98C3     		sw	a4,0(a5)
+ 711              	.LM286:
+ 712 0022 9843     		lw	a4,0(a5)
+ 713              	.LM287:
+ 714 0024 598D     		or	a0,a0,a4
+ 715 0026 88C3     		sw	a0,0(a5)
+ 716              	.LM288:
+ 717              	.LM289:
+ 718 0028 9843     		lw	a4,0(a5)
+ 719 002a 799B     		andi	a4,a4,-2
+ 720 002c 98C3     		sw	a4,0(a5)
+ 721              	.LM290:
+ 722 002e 8280     		ret
+ 723              		.cfi_endproc
+ 724              	.LFE154:
+ 726              		.section	.text.can_debug_freeze_enable,"ax",@progbits
+ 727              		.align	1
+ 728              		.globl	can_debug_freeze_enable
+ 730              	can_debug_freeze_enable:
+ 731              	.LVL28:
+ 732              	.LFB155:
+ 733              	.LM291:
+ 734              		.cfi_startproc
+ 735              	.LM292:
+ 736 0000 1C41     		lw	a5,0(a0)
+ 737              	.LM293:
+ 738 0002 4167     		li	a4,65536
+ 739 0004 D98F     		or	a5,a5,a4
+ 740 0006 1CC1     		sw	a5,0(a0)
+ 741              	.LM294:
+ 742              	.LM295:
+ 743 0008 B7670040 		li	a5,1073766400
+ 744 000c 93870740 		addi	a5,a5,1024
+ 745 0010 6317F500 		bne	a0,a5,.L65
+ 746              	.LM296:
+ 747 0014 1165     		li	a0,16384
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 14
+
+
+ 748              	.LVL29:
+ 749              	.L66:
+ 750              	.LM297:
+ 751 0016 17030000 		tail	dbg_periph_enable
+ 751      67000300 
+ 752              	.LVL30:
+ 753              	.L65:
+ 754              	.LM298:
+ 755 001e 37052000 		li	a0,2097152
+ 756              	.LVL31:
+ 757              	.LM299:
+ 758 0022 D5BF     		j	.L66
+ 759              		.cfi_endproc
+ 760              	.LFE155:
+ 762              		.section	.text.can_debug_freeze_disable,"ax",@progbits
+ 763              		.align	1
+ 764              		.globl	can_debug_freeze_disable
+ 766              	can_debug_freeze_disable:
+ 767              	.LVL32:
+ 768              	.LFB156:
+ 769              	.LM300:
+ 770              		.cfi_startproc
+ 771              	.LM301:
+ 772              	.LM302:
+ 773 0000 1C41     		lw	a5,0(a0)
+ 774 0002 4177     		li	a4,-65536
+ 775 0004 7D17     		addi	a4,a4,-1
+ 776 0006 F98F     		and	a5,a5,a4
+ 777 0008 1CC1     		sw	a5,0(a0)
+ 778              	.LM303:
+ 779              	.LM304:
+ 780 000a B7670040 		li	a5,1073766400
+ 781 000e 93870740 		addi	a5,a5,1024
+ 782 0012 6317F500 		bne	a0,a5,.L68
+ 783              	.LM305:
+ 784 0016 1165     		li	a0,16384
+ 785              	.LVL33:
+ 786              	.L69:
+ 787              	.LM306:
+ 788 0018 17030000 		tail	dbg_periph_disable
+ 788      67000300 
+ 789              	.LVL34:
+ 790              	.L68:
+ 791              	.LM307:
+ 792 0020 37052000 		li	a0,2097152
+ 793              	.LVL35:
+ 794              	.LM308:
+ 795 0024 D5BF     		j	.L69
+ 796              		.cfi_endproc
+ 797              	.LFE156:
+ 799              		.section	.text.can_time_trigger_mode_enable,"ax",@progbits
+ 800              		.align	1
+ 801              		.globl	can_time_trigger_mode_enable
+ 803              	can_time_trigger_mode_enable:
+ 804              	.LVL36:
+ 805              	.LFB157:
+ 806              	.LM309:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 15
+
+
+ 807              		.cfi_startproc
+ 808              	.LM310:
+ 809              	.LM311:
+ 810 0000 1C41     		lw	a5,0(a0)
+ 811              	.LM312:
+ 812 0002 93E70708 		ori	a5,a5,128
+ 813 0006 1CC1     		sw	a5,0(a0)
+ 814              	.LM313:
+ 815              	.LVL37:
+ 816              	.LM314:
+ 817 0008 93074518 		addi	a5,a0,388
+ 818 000c 1305451B 		addi	a0,a0,436
+ 819              	.LVL38:
+ 820              	.L71:
+ 821              	.LM315:
+ 822 0010 9843     		lw	a4,0(a5)
+ 823              	.LM316:
+ 824 0012 13670710 		ori	a4,a4,256
+ 825 0016 98C3     		sw	a4,0(a5)
+ 826              	.LM317:
+ 827              	.LVL39:
+ 828              	.LM318:
+ 829 0018 C107     		addi	a5,a5,16
+ 830              	.LVL40:
+ 831              	.LM319:
+ 832 001a E39BA7FE 		bne	a5,a0,.L71
+ 833              	.LM320:
+ 834 001e 8280     		ret
+ 835              		.cfi_endproc
+ 836              	.LFE157:
+ 838              		.section	.text.can_time_trigger_mode_disable,"ax",@progbits
+ 839              		.align	1
+ 840              		.globl	can_time_trigger_mode_disable
+ 842              	can_time_trigger_mode_disable:
+ 843              	.LVL41:
+ 844              	.LFB158:
+ 845              	.LM321:
+ 846              		.cfi_startproc
+ 847              	.LM322:
+ 848              	.LM323:
+ 849              	.LM324:
+ 850 0000 1C41     		lw	a5,0(a0)
+ 851 0002 93F7F7F7 		andi	a5,a5,-129
+ 852 0006 1CC1     		sw	a5,0(a0)
+ 853              	.LM325:
+ 854              	.LVL42:
+ 855              	.LM326:
+ 856 0008 93074518 		addi	a5,a0,388
+ 857 000c 1305451B 		addi	a0,a0,436
+ 858              	.LVL43:
+ 859              	.L74:
+ 860              	.LM327:
+ 861              	.LM328:
+ 862 0010 9843     		lw	a4,0(a5)
+ 863 0012 1377F7EF 		andi	a4,a4,-257
+ 864 0016 98C3     		sw	a4,0(a5)
+ 865              	.LM329:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 16
+
+
+ 866              	.LVL44:
+ 867              	.LM330:
+ 868 0018 C107     		addi	a5,a5,16
+ 869              	.LVL45:
+ 870              	.LM331:
+ 871 001a E39BA7FE 		bne	a5,a0,.L74
+ 872              	.LM332:
+ 873 001e 8280     		ret
+ 874              		.cfi_endproc
+ 875              	.LFE158:
+ 877              		.section	.text.can_message_transmit,"ax",@progbits
+ 878              		.align	1
+ 879              		.globl	can_message_transmit
+ 881              	can_message_transmit:
+ 882              	.LVL46:
+ 883              	.LFB159:
+ 884              	.LM333:
+ 885              		.cfi_startproc
+ 886              	.LM334:
+ 887              	.LM335:
+ 888              	.LM336:
+ 889 0000 1845     		lw	a4,8(a0)
+ 890              	.LM337:
+ 891 0002 AA87     		mv	a5,a0
+ 892              	.LM338:
+ 893 0004 93165700 		slli	a3,a4,5
+ 894 0008 63C5060A 		blt	a3,zero,.L81
+ 895              	.LM339:
+ 896              	.LM340:
+ 897 000c 1845     		lw	a4,8(a0)
+ 898              	.LM341:
+ 899 000e 93164700 		slli	a3,a4,4
+ 900 0012 63C2060A 		blt	a3,zero,.L82
+ 901              	.LM342:
+ 902              	.LM343:
+ 903 0016 1845     		lw	a4,8(a0)
+ 904              	.LM344:
+ 905 0018 0D45     		li	a0,3
+ 906              	.LVL47:
+ 907              	.LM345:
+ 908 001a 93163700 		slli	a3,a4,3
+ 909 001e 63D90608 		bge	a3,zero,.L78
+ 910              	.LM346:
+ 911 0022 0945     		li	a0,2
+ 912              	.L77:
+ 913              	.LVL48:
+ 914              	.LM347:
+ 915              	.LM348:
+ 916 0024 93164500 		slli	a3,a0,4
+ 917 0028 BE96     		add	a3,a3,a5
+ 918 002a 13870618 		addi	a4,a3,384
+ 919 002e 1C43     		lw	a5,0(a4)
+ 920              	.LVL49:
+ 921              	.LM349:
+ 922 0030 858B     		andi	a5,a5,1
+ 923 0032 1CC3     		sw	a5,0(a4)
+ 924              	.LM350:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 17
+
+
+ 925              	.LM351:
+ 926 0034 03C68500 		lbu	a2,8(a1)
+ 927              	.LM352:
+ 928 0038 03C89500 		lbu	a6,9(a1)
+ 929              	.LM353:
+ 930 003c 3DEE     		bne	a2,zero,.L79
+ 931              	.LM354:
+ 932              	.LM355:
+ 933 003e 9C41     		lw	a5,0(a1)
+ 934              	.LM356:
+ 935 0040 1043     		lw	a2,0(a4)
+ 936              	.LM357:
+ 937 0042 D607     		slli	a5,a5,21
+ 938              	.LM358:
+ 939 0044 B3E70701 		or	a5,a5,a6
+ 940              	.LM359:
+ 941 0048 D18F     		or	a5,a5,a2
+ 942              	.L85:
+ 943              	.LM360:
+ 944 004a 1CC3     		sw	a5,0(a4)
+ 945              	.LM361:
+ 946              	.LM362:
+ 947 004c 93874618 		addi	a5,a3,388
+ 948 0050 9043     		lw	a2,0(a5)
+ 949 0052 419A     		andi	a2,a2,-16
+ 950 0054 90C3     		sw	a2,0(a5)
+ 951              	.LM363:
+ 952 0056 03A80700 		lw	a6,0(a5)
+ 953              	.LM364:
+ 954 005a 03C6A500 		lbu	a2,10(a1)
+ 955              	.LM365:
+ 956 005e 33660601 		or	a2,a2,a6
+ 957 0062 90C3     		sw	a2,0(a5)
+ 958              	.LM366:
+ 959              	.LM367:
+ 960 0064 83C7C500 		lbu	a5,12(a1)
+ 961 0068 03C6B500 		lbu	a2,11(a1)
+ 962 006c A207     		slli	a5,a5,8
+ 963 006e D18F     		or	a5,a5,a2
+ 964 0070 03C6D500 		lbu	a2,13(a1)
+ 965 0074 4206     		slli	a2,a2,16
+ 966 0076 5D8E     		or	a2,a2,a5
+ 967 0078 83C7E500 		lbu	a5,14(a1)
+ 968 007c E207     		slli	a5,a5,24
+ 969 007e D18F     		or	a5,a5,a2
+ 970              	.LM368:
+ 971 0080 13868618 		addi	a2,a3,392
+ 972              	.LM369:
+ 973 0084 1CC2     		sw	a5,0(a2)
+ 974              	.LM370:
+ 975              	.LM371:
+ 976 0086 83C70501 		lbu	a5,16(a1)
+ 977 008a 03C6F500 		lbu	a2,15(a1)
+ 978              	.LM372:
+ 979 008e 9386C618 		addi	a3,a3,396
+ 980              	.LM373:
+ 981 0092 A207     		slli	a5,a5,8
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 18
+
+
+ 982 0094 D18F     		or	a5,a5,a2
+ 983 0096 03C61501 		lbu	a2,17(a1)
+ 984 009a 4206     		slli	a2,a2,16
+ 985 009c 5D8E     		or	a2,a2,a5
+ 986 009e 83C72501 		lbu	a5,18(a1)
+ 987 00a2 E207     		slli	a5,a5,24
+ 988 00a4 D18F     		or	a5,a5,a2
+ 989              	.LM374:
+ 990 00a6 9CC2     		sw	a5,0(a3)
+ 991              	.LM375:
+ 992 00a8 1C43     		lw	a5,0(a4)
+ 993              	.LM376:
+ 994 00aa 93E71700 		ori	a5,a5,1
+ 995 00ae 1CC3     		sw	a5,0(a4)
+ 996              	.LM377:
+ 997              	.L78:
+ 998              	.LM378:
+ 999 00b0 8280     		ret
+ 1000              	.LVL50:
+ 1001              	.L81:
+ 1002              	.LM379:
+ 1003 00b2 0145     		li	a0,0
+ 1004              	.LVL51:
+ 1005              	.LM380:
+ 1006 00b4 85BF     		j	.L77
+ 1007              	.LVL52:
+ 1008              	.L82:
+ 1009              	.LM381:
+ 1010 00b6 0545     		li	a0,1
+ 1011              	.LVL53:
+ 1012              	.LM382:
+ 1013 00b8 B5B7     		j	.L77
+ 1014              	.LVL54:
+ 1015              	.L79:
+ 1016              	.LM383:
+ 1017              	.LM384:
+ 1018 00ba DC41     		lw	a5,4(a1)
+ 1019              	.LM385:
+ 1020 00bc 83280700 		lw	a7,0(a4)
+ 1021              	.LM386:
+ 1022 00c0 8E07     		slli	a5,a5,3
+ 1023              	.LM387:
+ 1024 00c2 B3E70701 		or	a5,a5,a6
+ 1025 00c6 D18F     		or	a5,a5,a2
+ 1026              	.LM388:
+ 1027 00c8 B3E71701 		or	a5,a5,a7
+ 1028 00cc BDBF     		j	.L85
+ 1029              		.cfi_endproc
+ 1030              	.LFE159:
+ 1032              		.section	.text.can_transmit_states,"ax",@progbits
+ 1033              		.align	1
+ 1034              		.globl	can_transmit_states
+ 1036              	can_transmit_states:
+ 1037              	.LVL55:
+ 1038              	.LFB160:
+ 1039              	.LM389:
+ 1040              		.cfi_startproc
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 19
+
+
+ 1041              	.LM390:
+ 1042              	.LM391:
+ 1043              	.LM392:
+ 1044 0000 8546     		li	a3,1
+ 1045              	.LM393:
+ 1046 0002 AA87     		mv	a5,a0
+ 1047              	.LM394:
+ 1048 0004 638FD500 		beq	a1,a3,.L87
+ 1049 0008 0945     		li	a0,2
+ 1050              	.LVL56:
+ 1051              	.LM395:
+ 1052 000a 638CA502 		beq	a1,a0,.L88
+ 1053 000e A1E9     		bne	a1,zero,.L86
+ 1054              	.LM396:
+ 1055              	.LM397:
+ 1056 0010 9C47     		lw	a5,8(a5)
+ 1057              	.LVL57:
+ 1058              	.LM398:
+ 1059 0012 37070004 		li	a4,67108864
+ 1060 0016 0D07     		addi	a4,a4,3
+ 1061 0018 F98F     		and	a5,a5,a4
+ 1062              	.LM399:
+ 1063              	.LVL58:
+ 1064              	.LM400:
+ 1065 001a 3685     		mv	a0,a3
+ 1066 001c 639EE700 		bne	a5,a4,.L90
+ 1067 0020 8280     		ret
+ 1068              	.LVL59:
+ 1069              	.L87:
+ 1070              	.LM401:
+ 1071              	.LM402:
+ 1072 0022 1C45     		lw	a5,8(a0)
+ 1073              	.LM403:
+ 1074 0024 37070008 		li	a4,134217728
+ 1075 0028 13070730 		addi	a4,a4,768
+ 1076              	.LM404:
+ 1077 002c B7060004 		li	a3,67108864
+ 1078              	.LM405:
+ 1079 0030 F98F     		and	a5,a5,a4
+ 1080              	.LM406:
+ 1081              	.LVL60:
+ 1082              	.LM407:
+ 1083 0032 8D06     		addi	a3,a3,3
+ 1084 0034 63E2F602 		bgtu	a5,a3,.L91
+ 1085              	.LVL61:
+ 1086              	.L90:
+ 1087              	.LM408:
+ 1088 0038 93B71700 		seqz	a5,a5
+ 1089              	.LVL62:
+ 1090              	.LM409:
+ 1091 003c 13951700 		slli	a0,a5,1
+ 1092 0040 8280     		ret
+ 1093              	.LVL63:
+ 1094              	.L88:
+ 1095              	.LM410:
+ 1096              	.LM411:
+ 1097 0042 9C47     		lw	a5,8(a5)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 20
+
+
+ 1098              	.LVL64:
+ 1099              	.LM412:
+ 1100 0044 B7060310 		li	a3,268632064
+ 1101              	.LM413:
+ 1102 0048 37070004 		li	a4,67108864
+ 1103              	.LM414:
+ 1104 004c F58F     		and	a5,a5,a3
+ 1105              	.LM415:
+ 1106              	.LVL65:
+ 1107              	.LM416:
+ 1108 004e 0D07     		addi	a4,a4,3
+ 1109 0050 E374F7FE 		bleu	a5,a4,.L90
+ 1110 0054 958F     		sub	a5,a5,a3
+ 1111              	.LVL66:
+ 1112              	.LM417:
+ 1113 0056 11A0     		j	.L95
+ 1114              	.LVL67:
+ 1115              	.L91:
+ 1116              	.LM418:
+ 1117 0058 998F     		sub	a5,a5,a4
+ 1118              	.LVL68:
+ 1119              	.L95:
+ 1120              	.LM419:
+ 1121 005a 13B51700 		seqz	a0,a5
+ 1122              	.L86:
+ 1123              	.LM420:
+ 1124 005e 8280     		ret
+ 1125              		.cfi_endproc
+ 1126              	.LFE160:
+ 1128              		.section	.text.can_transmission_stop,"ax",@progbits
+ 1129              		.align	1
+ 1130              		.globl	can_transmission_stop
+ 1132              	can_transmission_stop:
+ 1133              	.LVL69:
+ 1134              	.LFB161:
+ 1135              	.LM421:
+ 1136              		.cfi_startproc
+ 1137              	.LM422:
+ 1138              	.LM423:
+ 1139 0000 81ED     		bne	a1,zero,.L97
+ 1140              	.LM424:
+ 1141 0002 1C45     		lw	a5,8(a0)
+ 1142 0004 13078500 		addi	a4,a0,8
+ 1143              	.LM425:
+ 1144 0008 93E70708 		ori	a5,a5,128
+ 1145 000c 1CC5     		sw	a5,8(a0)
+ 1146              	.LM426:
+ 1147              	.L98:
+ 1148              	.LM427:
+ 1149              	.LM428:
+ 1150              	.LM429:
+ 1151 000e 1C43     		lw	a5,0(a4)
+ 1152              	.LM430:
+ 1153 0010 93F70708 		andi	a5,a5,128
+ 1154              	.LM431:
+ 1155 0014 EDFF     		bne	a5,zero,.L98
+ 1156 0016 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 21
+
+
+ 1157              	.L97:
+ 1158              	.LM432:
+ 1159              	.LM433:
+ 1160 0018 8547     		li	a5,1
+ 1161 001a 639EF500 		bne	a1,a5,.L100
+ 1162              	.LM434:
+ 1163 001e 1C45     		lw	a5,8(a0)
+ 1164              	.LM435:
+ 1165 0020 A166     		li	a3,32768
+ 1166              	.LM436:
+ 1167 0022 13078500 		addi	a4,a0,8
+ 1168              	.LM437:
+ 1169 0026 D58F     		or	a5,a5,a3
+ 1170 0028 1CC5     		sw	a5,8(a0)
+ 1171              	.LM438:
+ 1172              	.L101:
+ 1173              	.LM439:
+ 1174              	.LM440:
+ 1175              	.LM441:
+ 1176 002a 1C43     		lw	a5,0(a4)
+ 1177              	.LM442:
+ 1178 002c 93960701 		slli	a3,a5,16
+ 1179 0030 E3CD06FE 		blt	a3,zero,.L101
+ 1180 0034 8280     		ret
+ 1181              	.L100:
+ 1182              	.LM443:
+ 1183              	.LM444:
+ 1184 0036 8947     		li	a5,2
+ 1185 0038 639EF500 		bne	a1,a5,.L96
+ 1186              	.LM445:
+ 1187 003c 1C45     		lw	a5,8(a0)
+ 1188              	.LM446:
+ 1189 003e B7068000 		li	a3,8388608
+ 1190              	.LM447:
+ 1191 0042 13078500 		addi	a4,a0,8
+ 1192              	.LM448:
+ 1193 0046 D58F     		or	a5,a5,a3
+ 1194 0048 1CC5     		sw	a5,8(a0)
+ 1195              	.LM449:
+ 1196              	.L102:
+ 1197              	.LM450:
+ 1198              	.LM451:
+ 1199              	.LM452:
+ 1200 004a 1C43     		lw	a5,0(a4)
+ 1201              	.LM453:
+ 1202 004c 93968700 		slli	a3,a5,8
+ 1203 0050 E3CD06FE 		blt	a3,zero,.L102
+ 1204              	.L96:
+ 1205              	.LM454:
+ 1206 0054 8280     		ret
+ 1207              		.cfi_endproc
+ 1208              	.LFE161:
+ 1210              		.section	.text.can_message_receive,"ax",@progbits
+ 1211              		.align	1
+ 1212              		.globl	can_message_receive
+ 1214              	can_message_receive:
+ 1215              	.LVL70:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 22
+
+
+ 1216              	.LFB162:
+ 1217              	.LM455:
+ 1218              		.cfi_startproc
+ 1219              	.LM456:
+ 1220              	.LM457:
+ 1221 0000 93974500 		slli	a5,a1,4
+ 1222 0004 AA97     		add	a5,a5,a0
+ 1223 0006 1387071B 		addi	a4,a5,432
+ 1224 000a 1443     		lw	a3,0(a4)
+ 1225              	.LM458:
+ 1226 000c 918A     		andi	a3,a3,4
+ 1227              	.LM459:
+ 1228 000e 2304D600 		sb	a3,8(a2)
+ 1229              	.LM460:
+ 1230              	.LM461:
+ 1231 0012 B5EA     		bne	a3,zero,.L109
+ 1232              	.LM462:
+ 1233              	.LM463:
+ 1234 0014 1443     		lw	a3,0(a4)
+ 1235              	.LM464:
+ 1236 0016 D582     		srli	a3,a3,21
+ 1237              	.LM465:
+ 1238 0018 14C2     		sw	a3,0(a2)
+ 1239              	.L110:
+ 1240              	.LM466:
+ 1241              	.LM467:
+ 1242 001a 1843     		lw	a4,0(a4)
+ 1243              	.LM468:
+ 1244 001c 9386471B 		addi	a3,a5,436
+ 1245              	.LM469:
+ 1246 0020 098B     		andi	a4,a4,2
+ 1247              	.LM470:
+ 1248 0022 A304E600 		sb	a4,9(a2)
+ 1249              	.LM471:
+ 1250              	.LM472:
+ 1251 0026 9842     		lw	a4,0(a3)
+ 1252 0028 2183     		srli	a4,a4,8
+ 1253              	.LM473:
+ 1254 002a A309E600 		sb	a4,19(a2)
+ 1255              	.LM474:
+ 1256              	.LM475:
+ 1257 002e 9842     		lw	a4,0(a3)
+ 1258              	.LM476:
+ 1259 0030 3D8B     		andi	a4,a4,15
+ 1260              	.LM477:
+ 1261 0032 2305E600 		sb	a4,10(a2)
+ 1262              	.LM478:
+ 1263              	.LM479:
+ 1264 0036 1387871B 		addi	a4,a5,440
+ 1265 003a 1443     		lw	a3,0(a4)
+ 1266              	.LM480:
+ 1267 003c 9387C71B 		addi	a5,a5,444
+ 1268              	.LM481:
+ 1269 0040 A305D600 		sb	a3,11(a2)
+ 1270              	.LM482:
+ 1271              	.LM483:
+ 1272 0044 1443     		lw	a3,0(a4)
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 23
+
+
+ 1273 0046 A182     		srli	a3,a3,8
+ 1274              	.LM484:
+ 1275 0048 2306D600 		sb	a3,12(a2)
+ 1276              	.LM485:
+ 1277              	.LM486:
+ 1278 004c 1443     		lw	a3,0(a4)
+ 1279 004e C182     		srli	a3,a3,16
+ 1280              	.LM487:
+ 1281 0050 A306D600 		sb	a3,13(a2)
+ 1282              	.LM488:
+ 1283              	.LM489:
+ 1284 0054 1843     		lw	a4,0(a4)
+ 1285 0056 6183     		srli	a4,a4,24
+ 1286              	.LM490:
+ 1287 0058 2307E600 		sb	a4,14(a2)
+ 1288              	.LM491:
+ 1289              	.LM492:
+ 1290 005c 9843     		lw	a4,0(a5)
+ 1291              	.LM493:
+ 1292 005e A307E600 		sb	a4,15(a2)
+ 1293              	.LM494:
+ 1294              	.LM495:
+ 1295 0062 9843     		lw	a4,0(a5)
+ 1296 0064 2183     		srli	a4,a4,8
+ 1297              	.LM496:
+ 1298 0066 2308E600 		sb	a4,16(a2)
+ 1299              	.LM497:
+ 1300              	.LM498:
+ 1301 006a 9843     		lw	a4,0(a5)
+ 1302 006c 4183     		srli	a4,a4,16
+ 1303              	.LM499:
+ 1304 006e A308E600 		sb	a4,17(a2)
+ 1305              	.LM500:
+ 1306              	.LM501:
+ 1307 0072 9C43     		lw	a5,0(a5)
+ 1308 0074 E183     		srli	a5,a5,24
+ 1309              	.LM502:
+ 1310 0076 2309F600 		sb	a5,18(a2)
+ 1311              	.LM503:
+ 1312              	.LM504:
+ 1313 007a 91E9     		bne	a1,zero,.L111
+ 1314              	.LM505:
+ 1315 007c 5C45     		lw	a5,12(a0)
+ 1316              	.LM506:
+ 1317 007e 93E70702 		ori	a5,a5,32
+ 1318 0082 5CC5     		sw	a5,12(a0)
+ 1319 0084 8280     		ret
+ 1320              	.L109:
+ 1321              	.LM507:
+ 1322              	.LM508:
+ 1323 0086 1443     		lw	a3,0(a4)
+ 1324              	.LM509:
+ 1325 0088 8D82     		srli	a3,a3,3
+ 1326              	.LM510:
+ 1327 008a 54C2     		sw	a3,4(a2)
+ 1328 008c 79B7     		j	.L110
+ 1329              	.L111:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 24
+
+
+ 1330              	.LM511:
+ 1331 008e 1C49     		lw	a5,16(a0)
+ 1332              	.LM512:
+ 1333 0090 93E70702 		ori	a5,a5,32
+ 1334 0094 1CC9     		sw	a5,16(a0)
+ 1335              	.LM513:
+ 1336 0096 8280     		ret
+ 1337              		.cfi_endproc
+ 1338              	.LFE162:
+ 1340              		.section	.text.can_fifo_release,"ax",@progbits
+ 1341              		.align	1
+ 1342              		.globl	can_fifo_release
+ 1344              	can_fifo_release:
+ 1345              	.LVL71:
+ 1346              	.LFB163:
+ 1347              	.LM514:
+ 1348              		.cfi_startproc
+ 1349              	.LM515:
+ 1350              	.LM516:
+ 1351 0000 91E5     		bne	a1,zero,.L114
+ 1352              	.LM517:
+ 1353 0002 5C45     		lw	a5,12(a0)
+ 1354              	.LM518:
+ 1355 0004 93E70702 		ori	a5,a5,32
+ 1356 0008 5CC5     		sw	a5,12(a0)
+ 1357 000a 8280     		ret
+ 1358              	.L114:
+ 1359              	.LM519:
+ 1360              	.LM520:
+ 1361 000c 8547     		li	a5,1
+ 1362 000e 6397F500 		bne	a1,a5,.L116
+ 1363              	.LM521:
+ 1364 0012 1C49     		lw	a5,16(a0)
+ 1365              	.LM522:
+ 1366 0014 93E70702 		ori	a5,a5,32
+ 1367 0018 1CC9     		sw	a5,16(a0)
+ 1368              	.LM523:
+ 1369 001a 8280     		ret
+ 1370              	.L116:
+ 1371              	.LM524:
+ 1372              	.LM525:
+ 1373              	.LM526:
+ 1374 001c 01A0     		j	.L116
+ 1375              		.cfi_endproc
+ 1376              	.LFE163:
+ 1378              		.section	.text.can_receive_message_length_get,"ax",@progbits
+ 1379              		.align	1
+ 1380              		.globl	can_receive_message_length_get
+ 1382              	can_receive_message_length_get:
+ 1383              	.LVL72:
+ 1384              	.LFB164:
+ 1385              	.LM527:
+ 1386              		.cfi_startproc
+ 1387              	.LM528:
+ 1388              	.LM529:
+ 1389              	.LM530:
+ 1390 0000 AA87     		mv	a5,a0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 25
+
+
+ 1391              	.LM531:
+ 1392 0002 81E5     		bne	a1,zero,.L119
+ 1393              	.LM532:
+ 1394              	.LM533:
+ 1395 0004 4845     		lw	a0,12(a0)
+ 1396              	.LVL73:
+ 1397              	.L122:
+ 1398              	.LM534:
+ 1399 0006 0D89     		andi	a0,a0,3
+ 1400              	.L120:
+ 1401              	.LVL74:
+ 1402              	.LM535:
+ 1403              	.LM536:
+ 1404              	.LM537:
+ 1405 0008 8280     		ret
+ 1406              	.LVL75:
+ 1407              	.L119:
+ 1408              	.LM538:
+ 1409              	.LM539:
+ 1410 000a 0547     		li	a4,1
+ 1411              	.LM540:
+ 1412 000c 0145     		li	a0,0
+ 1413              	.LVL76:
+ 1414              	.LM541:
+ 1415 000e E39DE5FE 		bne	a1,a4,.L120
+ 1416              	.LM542:
+ 1417              	.LM543:
+ 1418 0012 884B     		lw	a0,16(a5)
+ 1419 0014 CDBF     		j	.L122
+ 1420              		.cfi_endproc
+ 1421              	.LFE164:
+ 1423              		.section	.text.can_working_mode_set,"ax",@progbits
+ 1424              		.align	1
+ 1425              		.globl	can_working_mode_set
+ 1427              	can_working_mode_set:
+ 1428              	.LVL77:
+ 1429              	.LFB165:
+ 1430              	.LM544:
+ 1431              		.cfi_startproc
+ 1432              	.LM545:
+ 1433              	.LM546:
+ 1434              	.LM547:
+ 1435              	.LM548:
+ 1436 0000 0547     		li	a4,1
+ 1437              	.LM549:
+ 1438 0002 AA87     		mv	a5,a0
+ 1439              	.LM550:
+ 1440 0004 6394E502 		bne	a1,a4,.L124
+ 1441              	.LM551:
+ 1442              	.LM552:
+ 1443 0008 1841     		lw	a4,0(a0)
+ 1444 000a 759B     		andi	a4,a4,-3
+ 1445 000c 18C1     		sw	a4,0(a0)
+ 1446              	.LM553:
+ 1447 000e 1841     		lw	a4,0(a0)
+ 1448              	.LM554:
+ 1449 0010 4D8F     		or	a4,a4,a1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 26
+
+
+ 1450 0012 18C1     		sw	a4,0(a0)
+ 1451              	.LM555:
+ 1452              	.LM556:
+ 1453 0014 4167     		li	a4,65536
+ 1454              	.LVL78:
+ 1455              	.L126:
+ 1456              	.LM557:
+ 1457              	.LM558:
+ 1458 0016 D443     		lw	a3,4(a5)
+ 1459              	.LM559:
+ 1460 0018 7D17     		addi	a4,a4,-1
+ 1461              	.LVL79:
+ 1462              	.LM560:
+ 1463              	.LM561:
+ 1464 001a 1396F601 		slli	a2,a3,31
+ 1465 001e 9356F601 		srli	a3,a2,31
+ 1466 0022 91E2     		bne	a3,zero,.L137
+ 1467 0024 6DFB     		bne	a4,zero,.L126
+ 1468              	.L137:
+ 1469              	.LM562:
+ 1470              	.LM563:
+ 1471 0026 C843     		lw	a0,4(a5)
+ 1472              	.LVL80:
+ 1473              	.L149:
+ 1474              	.LM564:
+ 1475 0028 0589     		andi	a0,a0,1
+ 1476              	.LVL81:
+ 1477              	.L123:
+ 1478              	.LM565:
+ 1479 002a 8280     		ret
+ 1480              	.LVL82:
+ 1481              	.L124:
+ 1482              	.LM566:
+ 1483              	.LM567:
+ 1484 002c 0947     		li	a4,2
+ 1485 002e 6390E502 		bne	a1,a4,.L129
+ 1486              	.LM568:
+ 1487              	.LM569:
+ 1488 0032 1841     		lw	a4,0(a0)
+ 1489 0034 719B     		andi	a4,a4,-4
+ 1490 0036 18C1     		sw	a4,0(a0)
+ 1491              	.LM570:
+ 1492              	.LM571:
+ 1493 0038 4167     		li	a4,65536
+ 1494              	.LVL83:
+ 1495              	.L131:
+ 1496              	.LM572:
+ 1497              	.LM573:
+ 1498 003a D443     		lw	a3,4(a5)
+ 1499              	.LM574:
+ 1500 003c 7D17     		addi	a4,a4,-1
+ 1501              	.LVL84:
+ 1502              	.LM575:
+ 1503              	.LM576:
+ 1504 003e 8D8A     		andi	a3,a3,3
+ 1505              	.LM577:
+ 1506 0040 91C2     		beq	a3,zero,.L138
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 27
+
+
+ 1507 0042 65FF     		bne	a4,zero,.L131
+ 1508              	.L138:
+ 1509              	.LM578:
+ 1510              	.LM579:
+ 1511 0044 C843     		lw	a0,4(a5)
+ 1512              	.LVL85:
+ 1513              	.LM580:
+ 1514 0046 0D89     		andi	a0,a0,3
+ 1515              	.LM581:
+ 1516 0048 13351500 		seqz	a0,a0
+ 1517 004c 8280     		ret
+ 1518              	.LVL86:
+ 1519              	.L129:
+ 1520              	.LM582:
+ 1521              	.LM583:
+ 1522 004e 1147     		li	a4,4
+ 1523              	.LM584:
+ 1524 0050 0145     		li	a0,0
+ 1525              	.LVL87:
+ 1526              	.LM585:
+ 1527 0052 E39CE5FC 		bne	a1,a4,.L123
+ 1528              	.LM586:
+ 1529              	.LM587:
+ 1530 0056 9843     		lw	a4,0(a5)
+ 1531 0058 799B     		andi	a4,a4,-2
+ 1532 005a 98C3     		sw	a4,0(a5)
+ 1533              	.LM588:
+ 1534 005c 9843     		lw	a4,0(a5)
+ 1535              	.LM589:
+ 1536 005e 13672700 		ori	a4,a4,2
+ 1537 0062 98C3     		sw	a4,0(a5)
+ 1538              	.LM590:
+ 1539              	.LM591:
+ 1540 0064 4167     		li	a4,65536
+ 1541              	.LVL88:
+ 1542              	.L134:
+ 1543              	.LM592:
+ 1544              	.LM593:
+ 1545 0066 D443     		lw	a3,4(a5)
+ 1546              	.LM594:
+ 1547 0068 7D17     		addi	a4,a4,-1
+ 1548              	.LVL89:
+ 1549              	.LM595:
+ 1550 006a 8582     		srli	a3,a3,1
+ 1551 006c 858A     		andi	a3,a3,1
+ 1552              	.LM596:
+ 1553 006e 91E2     		bne	a3,zero,.L139
+ 1554 0070 7DFB     		bne	a4,zero,.L134
+ 1555              	.L139:
+ 1556              	.LM597:
+ 1557              	.LM598:
+ 1558 0072 C843     		lw	a0,4(a5)
+ 1559              	.LM599:
+ 1560 0074 0581     		srli	a0,a0,1
+ 1561 0076 4DBF     		j	.L149
+ 1562              		.cfi_endproc
+ 1563              	.LFE165:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 28
+
+
+ 1565              		.section	.text.can_wakeup,"ax",@progbits
+ 1566              		.align	1
+ 1567              		.globl	can_wakeup
+ 1569              	can_wakeup:
+ 1570              	.LVL90:
+ 1571              	.LFB166:
+ 1572              	.LM600:
+ 1573              		.cfi_startproc
+ 1574              	.LM601:
+ 1575              	.LM602:
+ 1576              	.LM603:
+ 1577              	.LM604:
+ 1578 0000 1C41     		lw	a5,0(a0)
+ 1579 0002 F59B     		andi	a5,a5,-3
+ 1580 0004 1CC1     		sw	a5,0(a0)
+ 1581              	.LM605:
+ 1582              	.LM606:
+ 1583 0006 C167     		li	a5,65536
+ 1584              	.LVL91:
+ 1585              	.L152:
+ 1586              	.LM607:
+ 1587              	.LM608:
+ 1588 0008 5841     		lw	a4,4(a0)
+ 1589              	.LM609:
+ 1590 000a FD17     		addi	a5,a5,-1
+ 1591              	.LVL92:
+ 1592              	.LM610:
+ 1593 000c 0583     		srli	a4,a4,1
+ 1594              	.LM611:
+ 1595 000e 058B     		andi	a4,a4,1
+ 1596 0010 11C3     		beq	a4,zero,.L154
+ 1597 0012 FDFB     		bne	a5,zero,.L152
+ 1598              	.L154:
+ 1599              	.LM612:
+ 1600              	.LM613:
+ 1601 0014 4841     		lw	a0,4(a0)
+ 1602              	.LVL93:
+ 1603              	.LM614:
+ 1604              	.LM615:
+ 1605 0016 0581     		srli	a0,a0,1
+ 1606              	.LVL94:
+ 1607              	.LM616:
+ 1608 0018 0589     		andi	a0,a0,1
+ 1609              	.LM617:
+ 1610 001a 13451500 		xori	a0,a0,1
+ 1611 001e 8280     		ret
+ 1612              		.cfi_endproc
+ 1613              	.LFE166:
+ 1615              		.section	.text.can_error_get,"ax",@progbits
+ 1616              		.align	1
+ 1617              		.globl	can_error_get
+ 1619              	can_error_get:
+ 1620              	.LVL95:
+ 1621              	.LFB167:
+ 1622              	.LM618:
+ 1623              		.cfi_startproc
+ 1624              	.LM619:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 29
+
+
+ 1625              	.LM620:
+ 1626              	.LM621:
+ 1627              	.LM622:
+ 1628 0000 084D     		lw	a0,24(a0)
+ 1629              	.LVL96:
+ 1630              	.LM623:
+ 1631              	.LM624:
+ 1632 0002 1181     		srli	a0,a0,4
+ 1633              	.LVL97:
+ 1634              	.LM625:
+ 1635 0004 1D89     		andi	a0,a0,7
+ 1636              	.LVL98:
+ 1637              	.LM626:
+ 1638 0006 8280     		ret
+ 1639              		.cfi_endproc
+ 1640              	.LFE167:
+ 1642              		.section	.text.can_receive_error_number_get,"ax",@progbits
+ 1643              		.align	1
+ 1644              		.globl	can_receive_error_number_get
+ 1646              	can_receive_error_number_get:
+ 1647              	.LVL99:
+ 1648              	.LFB168:
+ 1649              	.LM627:
+ 1650              		.cfi_startproc
+ 1651              	.LM628:
+ 1652              	.LM629:
+ 1653              	.LM630:
+ 1654 0000 084D     		lw	a0,24(a0)
+ 1655              	.LVL100:
+ 1656              	.LM631:
+ 1657              	.LM632:
+ 1658 0002 6181     		srli	a0,a0,24
+ 1659              	.LVL101:
+ 1660              	.LM633:
+ 1661 0004 8280     		ret
+ 1662              		.cfi_endproc
+ 1663              	.LFE168:
+ 1665              		.section	.text.can_transmit_error_number_get,"ax",@progbits
+ 1666              		.align	1
+ 1667              		.globl	can_transmit_error_number_get
+ 1669              	can_transmit_error_number_get:
+ 1670              	.LVL102:
+ 1671              	.LFB169:
+ 1672              	.LM634:
+ 1673              		.cfi_startproc
+ 1674              	.LM635:
+ 1675              	.LM636:
+ 1676              	.LM637:
+ 1677 0000 084D     		lw	a0,24(a0)
+ 1678              	.LVL103:
+ 1679              	.LM638:
+ 1680              	.LM639:
+ 1681 0002 4181     		srli	a0,a0,16
+ 1682              	.LVL104:
+ 1683              	.LM640:
+ 1684 0004 1375F50F 		andi	a0,a0,0xff
+ 1685 0008 8280     		ret
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 30
+
+
+ 1686              		.cfi_endproc
+ 1687              	.LFE169:
+ 1689              		.section	.text.can_interrupt_enable,"ax",@progbits
+ 1690              		.align	1
+ 1691              		.globl	can_interrupt_enable
+ 1693              	can_interrupt_enable:
+ 1694              	.LVL105:
+ 1695              	.LFB170:
+ 1696              	.LM641:
+ 1697              		.cfi_startproc
+ 1698              	.LM642:
+ 1699 0000 5C49     		lw	a5,20(a0)
+ 1700              	.LM643:
+ 1701 0002 CD8F     		or	a5,a5,a1
+ 1702 0004 5CC9     		sw	a5,20(a0)
+ 1703              	.LM644:
+ 1704 0006 8280     		ret
+ 1705              		.cfi_endproc
+ 1706              	.LFE170:
+ 1708              		.section	.text.can_interrupt_disable,"ax",@progbits
+ 1709              		.align	1
+ 1710              		.globl	can_interrupt_disable
+ 1712              	can_interrupt_disable:
+ 1713              	.LVL106:
+ 1714              	.LFB171:
+ 1715              	.LM645:
+ 1716              		.cfi_startproc
+ 1717              	.LM646:
+ 1718 0000 5C49     		lw	a5,20(a0)
+ 1719              	.LM647:
+ 1720 0002 93C5F5FF 		not	a1,a1
+ 1721              	.LVL107:
+ 1722              	.LM648:
+ 1723 0006 FD8D     		and	a1,a1,a5
+ 1724              	.LVL108:
+ 1725              	.LM649:
+ 1726 0008 4CC9     		sw	a1,20(a0)
+ 1727              	.LM650:
+ 1728 000a 8280     		ret
+ 1729              		.cfi_endproc
+ 1730              	.LFE171:
+ 1732              		.section	.text.can_flag_get,"ax",@progbits
+ 1733              		.align	1
+ 1734              		.globl	can_flag_get
+ 1736              	can_flag_get:
+ 1737              	.LVL109:
+ 1738              	.LFB172:
+ 1739              	.LM651:
+ 1740              		.cfi_startproc
+ 1741              	.LM652:
+ 1742              	.LM653:
+ 1743 0000 93D76500 		srli	a5,a1,6
+ 1744 0004 AA97     		add	a5,a5,a0
+ 1745 0006 8843     		lw	a0,0(a5)
+ 1746              	.LVL110:
+ 1747              	.LM654:
+ 1748 0008 3355B500 		srl	a0,a0,a1
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 31
+
+
+ 1749              	.LM655:
+ 1750 000c 0589     		andi	a0,a0,1
+ 1751 000e 8280     		ret
+ 1752              		.cfi_endproc
+ 1753              	.LFE172:
+ 1755              		.section	.text.can_flag_clear,"ax",@progbits
+ 1756              		.align	1
+ 1757              		.globl	can_flag_clear
+ 1759              	can_flag_clear:
+ 1760              	.LVL111:
+ 1761              	.LFB173:
+ 1762              	.LM656:
+ 1763              		.cfi_startproc
+ 1764              	.LM657:
+ 1765 0000 93D76500 		srli	a5,a1,6
+ 1766              	.LM658:
+ 1767 0004 0547     		li	a4,1
+ 1768              	.LM659:
+ 1769 0006 AA97     		add	a5,a5,a0
+ 1770              	.LM660:
+ 1771 0008 3317B700 		sll	a4,a4,a1
+ 1772              	.LM661:
+ 1773 000c 98C3     		sw	a4,0(a5)
+ 1774              	.LM662:
+ 1775 000e 8280     		ret
+ 1776              		.cfi_endproc
+ 1777              	.LFE173:
+ 1779              		.section	.text.can_interrupt_flag_get,"ax",@progbits
+ 1780              		.align	1
+ 1781              		.globl	can_interrupt_flag_get
+ 1783              	can_interrupt_flag_get:
+ 1784              	.LVL112:
+ 1785              	.LFB174:
+ 1786              	.LM663:
+ 1787              		.cfi_startproc
+ 1788              	.LM664:
+ 1789              	.LM665:
+ 1790              	.LM666:
+ 1791              	.LM667:
+ 1792 0000 93D7C500 		srli	a5,a1,12
+ 1793 0004 AA97     		add	a5,a5,a0
+ 1794 0006 9443     		lw	a3,0(a5)
+ 1795              	.LVL113:
+ 1796              	.LM668:
+ 1797              	.LM669:
+ 1798 0008 5849     		lw	a4,20(a0)
+ 1799              	.LVL114:
+ 1800              	.LM670:
+ 1801              	.LM671:
+ 1802 000a 8547     		li	a5,1
+ 1803 000c 13D56500 		srli	a0,a1,6
+ 1804              	.LVL115:
+ 1805              	.LM672:
+ 1806 0010 3395A700 		sll	a0,a5,a0
+ 1807              	.LM673:
+ 1808 0014 B397B700 		sll	a5,a5,a1
+ 1809              	.LM674:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 32
+
+
+ 1810 0018 758D     		and	a0,a0,a3
+ 1811              	.LM675:
+ 1812 001a F98F     		and	a5,a5,a4
+ 1813              	.LM676:
+ 1814 001c B337F000 		snez	a5,a5
+ 1815              	.LM677:
+ 1816 0020 3335A000 		snez	a0,a0
+ 1817              	.LM678:
+ 1818 0024 7D8D     		and	a0,a0,a5
+ 1819 0026 8280     		ret
+ 1820              		.cfi_endproc
+ 1821              	.LFE174:
+ 1823              		.section	.text.can_interrupt_flag_clear,"ax",@progbits
+ 1824              		.align	1
+ 1825              		.globl	can_interrupt_flag_clear
+ 1827              	can_interrupt_flag_clear:
+ 1828              	.LVL116:
+ 1829              	.LFB175:
+ 1830              	.LM679:
+ 1831              		.cfi_startproc
+ 1832              	.LM680:
+ 1833 0000 93D7C500 		srli	a5,a1,12
+ 1834              	.LM681:
+ 1835 0004 0547     		li	a4,1
+ 1836 0006 9981     		srli	a1,a1,6
+ 1837              	.LVL117:
+ 1838              	.LM682:
+ 1839 0008 AA97     		add	a5,a5,a0
+ 1840              	.LM683:
+ 1841 000a 3317B700 		sll	a4,a4,a1
+ 1842              	.LM684:
+ 1843 000e 98C3     		sw	a4,0(a5)
+ 1844              	.LM685:
+ 1845 0010 8280     		ret
+ 1846              		.cfi_endproc
+ 1847              	.LFE175:
+ 1849              		.text
+ 1850              	.Letext0:
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 33
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32vf103_can.c
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10     .text.can_deinit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:13     .text.can_deinit:00000000 can_deinit
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:17     .text.can_deinit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:22     .text.can_deinit:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:27     .text.can_deinit:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:42     .text.can_deinit:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:43     .text.can_deinit:00000022 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:46     .text.can_deinit:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:52     .text.can_deinit:0000002c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:62     .text.can_deinit:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:66     .text.can_struct_para_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:69     .text.can_struct_para_init:00000000 can_struct_para_init
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:73     .text.can_struct_para_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:79     .text.can_struct_para_init:00000002 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:82     .text.can_struct_para_init:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:83     .text.can_struct_para_init:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:127    .text.can_struct_para_init:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:128    .text.can_struct_para_init:0000003c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:130    .text.can_struct_para_init:0000003e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:135    .text.can_struct_para_init:00000040 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:140    .text.can_struct_para_init:00000042 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:217    .text.can_struct_para_init:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:221    .text.can_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:224    .text.can_init:00000000 can_init
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:228    .text.can_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:503    .text.can_init:00000160 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:507    .text.can_filter_init:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:510    .text.can_filter_init:00000000 can_filter_init
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:514    .text.can_filter_init:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:678    .text.can_filter_init:000000fa .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:682    .text.can1_filter_start_bank:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:685    .text.can1_filter_start_bank:00000000 can1_filter_start_bank
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:689    .text.can1_filter_start_bank:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:723    .text.can1_filter_start_bank:00000030 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:727    .text.can_debug_freeze_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:730    .text.can_debug_freeze_enable:00000000 can_debug_freeze_enable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:734    .text.can_debug_freeze_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:759    .text.can_debug_freeze_enable:00000024 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:763    .text.can_debug_freeze_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:766    .text.can_debug_freeze_disable:00000000 can_debug_freeze_disable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:770    .text.can_debug_freeze_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:796    .text.can_debug_freeze_disable:00000026 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:800    .text.can_time_trigger_mode_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:803    .text.can_time_trigger_mode_enable:00000000 can_time_trigger_mode_enable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:807    .text.can_time_trigger_mode_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:835    .text.can_time_trigger_mode_enable:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:839    .text.can_time_trigger_mode_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:842    .text.can_time_trigger_mode_disable:00000000 can_time_trigger_mode_disable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:846    .text.can_time_trigger_mode_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:874    .text.can_time_trigger_mode_disable:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:878    .text.can_message_transmit:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:881    .text.can_message_transmit:00000000 can_message_transmit
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:885    .text.can_message_transmit:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1029   .text.can_message_transmit:000000ce .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1033   .text.can_transmit_states:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 34
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1036   .text.can_transmit_states:00000000 can_transmit_states
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1040   .text.can_transmit_states:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1125   .text.can_transmit_states:00000060 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1129   .text.can_transmission_stop:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1132   .text.can_transmission_stop:00000000 can_transmission_stop
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1136   .text.can_transmission_stop:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1207   .text.can_transmission_stop:00000056 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1211   .text.can_message_receive:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1214   .text.can_message_receive:00000000 can_message_receive
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1218   .text.can_message_receive:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1337   .text.can_message_receive:00000098 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1341   .text.can_fifo_release:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1344   .text.can_fifo_release:00000000 can_fifo_release
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1348   .text.can_fifo_release:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1375   .text.can_fifo_release:0000001e .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1379   .text.can_receive_message_length_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1382   .text.can_receive_message_length_get:00000000 can_receive_message_length_get
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1386   .text.can_receive_message_length_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1420   .text.can_receive_message_length_get:00000016 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1424   .text.can_working_mode_set:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1427   .text.can_working_mode_set:00000000 can_working_mode_set
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1431   .text.can_working_mode_set:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1562   .text.can_working_mode_set:00000078 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1566   .text.can_wakeup:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1569   .text.can_wakeup:00000000 can_wakeup
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1573   .text.can_wakeup:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1612   .text.can_wakeup:00000020 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1616   .text.can_error_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1619   .text.can_error_get:00000000 can_error_get
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1623   .text.can_error_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1639   .text.can_error_get:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1643   .text.can_receive_error_number_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1646   .text.can_receive_error_number_get:00000000 can_receive_error_number_get
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1650   .text.can_receive_error_number_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1662   .text.can_receive_error_number_get:00000006 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1666   .text.can_transmit_error_number_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1669   .text.can_transmit_error_number_get:00000000 can_transmit_error_number_get
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1673   .text.can_transmit_error_number_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1686   .text.can_transmit_error_number_get:0000000a .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1690   .text.can_interrupt_enable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1693   .text.can_interrupt_enable:00000000 can_interrupt_enable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1697   .text.can_interrupt_enable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1705   .text.can_interrupt_enable:00000008 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1709   .text.can_interrupt_disable:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1712   .text.can_interrupt_disable:00000000 can_interrupt_disable
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1716   .text.can_interrupt_disable:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1729   .text.can_interrupt_disable:0000000c .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1733   .text.can_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1736   .text.can_flag_get:00000000 can_flag_get
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1740   .text.can_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1752   .text.can_flag_get:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1756   .text.can_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1759   .text.can_flag_clear:00000000 can_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1763   .text.can_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1776   .text.can_flag_clear:00000010 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1780   .text.can_interrupt_flag_get:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1783   .text.can_interrupt_flag_get:00000000 can_interrupt_flag_get
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 35
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1787   .text.can_interrupt_flag_get:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1820   .text.can_interrupt_flag_get:00000028 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1824   .text.can_interrupt_flag_clear:00000000 $xrv32i2p1_m2p0_a2p1_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1827   .text.can_interrupt_flag_clear:00000000 can_interrupt_flag_clear
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1831   .text.can_interrupt_flag_clear:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1846   .text.can_interrupt_flag_clear:00000012 .L0 
+                     .debug_frame:00000000 .L0 
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:50     .text.can_deinit:0000002c .L2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:39     .text.can_deinit:00000020 .L4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:173    .text.can_struct_para_init:00000060 .L6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:138    .text.can_struct_para_init:00000042 .L7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:149    .text.can_struct_para_init:0000004a .L13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:201    .text.can_struct_para_init:00000082 .L10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:144    .text.can_struct_para_init:00000048 .L11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:124    .text.can_struct_para_init:0000003a .L5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:187    .text.can_struct_para_init:00000070 .L15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:263    .text.can_init:00000026 .L36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:248    .text.can_init:00000012 .L18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:413    .text.can_init:000000d4 .L20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:467    .text.can_init:00000136 .L21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:473    .text.can_init:0000013e .L23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:479    .text.can_init:00000146 .L25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:485    .text.can_init:0000014e .L27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:491    .text.can_init:00000154 .L29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:497    .text.can_init:0000015a .L31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:408    .text.can_init:000000d0 .L34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:394    .text.can_init:000000c6 .L35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:315    .text.can_init:0000006c .L46
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:328    .text.can_init:0000007c .L47
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:341    .text.can_init:0000008c .L48
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:354    .text.can_init:0000009c .L49
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:367    .text.can_init:000000ac .L50
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:380    .text.can_init:000000bc .L51
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:631    .text.can_filter_init:000000b6 .L53
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:666    .text.can_filter_init:000000ee .L55
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:672    .text.can_filter_init:000000f4 .L57
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:621    .text.can_filter_init:000000a6 .L59
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:582    .text.can_filter_init:00000068 .L54
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:577    .text.can_filter_init:00000064 .L60
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:593    .text.can_filter_init:0000007a .L61
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:606    .text.can_filter_init:0000008e .L62
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:753    .text.can_debug_freeze_enable:0000001e .L65
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:749    .text.can_debug_freeze_enable:00000016 .L66
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:790    .text.can_debug_freeze_disable:00000020 .L68
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:786    .text.can_debug_freeze_disable:00000018 .L69
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:820    .text.can_time_trigger_mode_enable:00000010 .L71
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:859    .text.can_time_trigger_mode_disable:00000010 .L74
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1001   .text.can_message_transmit:000000b2 .L81
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1008   .text.can_message_transmit:000000b6 .L82
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:997    .text.can_message_transmit:000000b0 .L78
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1015   .text.can_message_transmit:000000ba .L79
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:912    .text.can_message_transmit:00000024 .L77
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:942    .text.can_message_transmit:0000004a .L85
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1069   .text.can_transmit_states:00000022 .L87
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1094   .text.can_transmit_states:00000042 .L88
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1122   .text.can_transmit_states:0000005e .L86
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1086   .text.can_transmit_states:00000038 .L90
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 36
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1115   .text.can_transmit_states:00000058 .L91
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1119   .text.can_transmit_states:0000005a .L95
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1157   .text.can_transmission_stop:00000018 .L97
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1147   .text.can_transmission_stop:0000000e .L98
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1181   .text.can_transmission_stop:00000036 .L100
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1172   .text.can_transmission_stop:0000002a .L101
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1204   .text.can_transmission_stop:00000054 .L96
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1196   .text.can_transmission_stop:0000004a .L102
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1320   .text.can_message_receive:00000086 .L109
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1329   .text.can_message_receive:0000008e .L111
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1239   .text.can_message_receive:0000001a .L110
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1358   .text.can_fifo_release:0000000c .L114
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1370   .text.can_fifo_release:0000001c .L116
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1407   .text.can_receive_message_length_get:0000000a .L119
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1400   .text.can_receive_message_length_get:00000008 .L120
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1397   .text.can_receive_message_length_get:00000006 .L122
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1481   .text.can_working_mode_set:0000002c .L124
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1468   .text.can_working_mode_set:00000026 .L137
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1455   .text.can_working_mode_set:00000016 .L126
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1519   .text.can_working_mode_set:0000004e .L129
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1508   .text.can_working_mode_set:00000044 .L138
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1495   .text.can_working_mode_set:0000003a .L131
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1477   .text.can_working_mode_set:0000002a .L123
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1555   .text.can_working_mode_set:00000072 .L139
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1542   .text.can_working_mode_set:00000066 .L134
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1473   .text.can_working_mode_set:00000028 .L149
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1598   .text.can_wakeup:00000014 .L154
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1585   .text.can_wakeup:00000008 .L152
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:3751   .debug_abbrev:00000000 .Ldebug_abbrev0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10163  .debug_str:0000034d .LASF199
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10177  .debug_str:00000472 .LASF200
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10321  .debug_str:000008ef .LASF201
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5732   .debug_ranges:00000000 .Ldebug_ranges0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5788   .debug_line:00000000 .Ldebug_line0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10151  .debug_str:000002ee .LASF0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10089  .debug_str:00000106 .LASF1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10395  .debug_str:00000afa .LASF2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10247  .debug_str:000006af .LASF3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10299  .debug_str:00000848 .LASF4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10431  .debug_str:00000c02 .LASF5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10349  .debug_str:000009b5 .LASF7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10325  .debug_str:0000090f .LASF6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10157  .debug_str:0000031f .LASF8
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10433  .debug_str:00000c0e .LASF9
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10329  .debug_str:00000923 .LASF10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10397  .debug_str:00000b08 .LASF11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10367  .debug_str:00000a2a .LASF12
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10227  .debug_str:0000060a .LASF13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10301  .debug_str:00000854 .LASF14
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10137  .debug_str:00000288 .LASF15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10217  .debug_str:000005cf .LASF16
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10363  .debug_str:00000a19 .LASF17
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10359  .debug_str:000009fd .LASF18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10341  .debug_str:00000983 .LASF19
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10107  .debug_str:00000190 .LASF20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10059  .debug_str:00000012 .LASF21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10213  .debug_str:000005ae .LASF22
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 37
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10205  .debug_str:0000057e .LASF23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10231  .debug_str:00000627 .LASF24
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10187  .debug_str:000004f2 .LASF25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10429  .debug_str:00000bf4 .LASF26
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10241  .debug_str:00000675 .LASF27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10071  .debug_str:00000062 .LASF28
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10307  .debug_str:0000087e .LASF29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10145  .debug_str:000002c4 .LASF30
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10413  .debug_str:00000b80 .LASF31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10095  .debug_str:0000012c .LASF32
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10319  .debug_str:000008e3 .LASF33
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10361  .debug_str:00000a0b .LASF34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10195  .debug_str:0000052b .LASF35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10353  .debug_str:000009cd .LASF36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10189  .debug_str:00000500 .LASF37
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10411  .debug_str:00000b74 .LASF38
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10225  .debug_str:000005fe .LASF39
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10333  .debug_str:0000093c .LASF40
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10159  .debug_str:0000032a .LASF41
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10437  .debug_str:00000c34 .LASF42
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10253  .debug_str:000006e3 .LASF43
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10077  .debug_str:00000097 .LASF44
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10327  .debug_str:00000919 .LASF45
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10233  .debug_str:00000634 .LASF46
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10067  .debug_str:0000004c .LASF47
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10297  .debug_str:0000083b .LASF48
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10135  .debug_str:0000027b .LASF49
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10381  .debug_str:00000aa0 .LASF50
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10179  .debug_str:000004b0 .LASF51
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10421  .debug_str:00000bbd .LASF52
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10351  .debug_str:000009bf .LASF53
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10255  .debug_str:000006ee .LASF54
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10141  .debug_str:000002a7 .LASF55
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10139  .debug_str:00000291 .LASF56
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10399  .debug_str:00000b13 .LASF57
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10377  .debug_str:00000a83 .LASF58
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10331  .debug_str:0000092c .LASF59
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10185  .debug_str:000004e2 .LASF60
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10409  .debug_str:00000b64 .LASF61
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10251  .debug_str:000006d3 .LASF62
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10335  .debug_str:00000948 .LASF63
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10373  .debug_str:00000a64 .LASF64
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10223  .debug_str:000005f0 .LASF65
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10113  .debug_str:000001b7 .LASF66
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10323  .debug_str:000008ff .LASF67
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10175  .debug_str:00000462 .LASF68
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10149  .debug_str:000002e0 .LASF69
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10453  .debug_str:00000cab .LASF70
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10267  .debug_str:00000744 .LASF71
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10265  .debug_str:00000736 .LASF72
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10263  .debug_str:00000728 .LASF73
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10291  .debug_str:0000080f .LASF74
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10289  .debug_str:00000801 .LASF75
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10287  .debug_str:000007f3 .LASF76
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10093  .debug_str:0000011e .LASF77
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10427  .debug_str:00000be6 .LASF78
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10257  .debug_str:000006fa .LASF79
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 38
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10439  .debug_str:00000c40 .LASF80
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10357  .debug_str:000009ee .LASF81
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10133  .debug_str:0000026d .LASF82
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10147  .debug_str:000002d2 .LASF83
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10155  .debug_str:00000311 .LASF84
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10371  .debug_str:00000a51 .LASF85
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10269  .debug_str:00000752 .LASF86
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10443  .debug_str:00000c59 .LASF87
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10119  .debug_str:000001eb .LASF88
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10117  .debug_str:000001d9 .LASF89
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10115  .debug_str:000001c7 .LASF90
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10083  .debug_str:000000c9 .LASF91
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10237  .debug_str:00000651 .LASF92
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10085  .debug_str:000000db .LASF93
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10239  .debug_str:00000663 .LASF94
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10171  .debug_str:0000043d .LASF95
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10347  .debug_str:000009a8 .LASF96
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10407  .debug_str:00000b52 .LASF97
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10123  .debug_str:0000021c .LASF98
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10125  .debug_str:0000022b .LASF99
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10203  .debug_str:0000056f .LASF100
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10191  .debug_str:0000050d .LASF101
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10173  .debug_str:00000455 .LASF102
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10451  .debug_str:00000c9b .LASF103
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10271  .debug_str:00000764 .LASF104
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10375  .debug_str:00000a72 .LASF105
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10283  .debug_str:000007d2 .LASF106
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10181  .debug_str:000004bc .LASF107
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10317  .debug_str:000008db .LASF108
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10209  .debug_str:00000597 .LASF109
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10105  .debug_str:0000018a .LASF110
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10111  .debug_str:000001b1 .LASF111
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10459  .debug_str:00000cc5 .LASF112
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10277  .debug_str:0000079d .LASF113
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10281  .debug_str:000007b6 .LASF114
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10193  .debug_str:00000523 .LASF115
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10425  .debug_str:00000bde .LASF116
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10385  .debug_str:00000acb .LASF117
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10167  .debug_str:0000042c .LASF118
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10389  .debug_str:00000ad7 .LASF119
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10221  .debug_str:000005e8 .LASF120
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10387  .debug_str:00000ad1 .LASF121
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10063  .debug_str:00000023 .LASF122
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10279  .debug_str:000007a5 .LASF123
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10445  .debug_str:00000c6c .LASF124
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10131  .debug_str:0000025c .LASF125
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10235  .debug_str:00000641 .LASF126
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10075  .debug_str:00000084 .LASF127
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10463  .debug_str:00000cdd .LASF128
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10305  .debug_str:00000872 .LASF129
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10153  .debug_str:00000305 .LASF130
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10259  .debug_str:00000708 .LASF131
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10401  .debug_str:00000b22 .LASF132
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10079  .debug_str:000000a2 .LASF133
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10275  .debug_str:0000078e .LASF134
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10057  .debug_str:00000000 .LASF135
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10065  .debug_str:0000003e .LASF136
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 39
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10161  .debug_str:00000336 .LASF137
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10081  .debug_str:000000b1 .LASF138
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10379  .debug_str:00000a92 .LASF139
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10109  .debug_str:0000019b .LASF140
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10143  .debug_str:000002b5 .LASF141
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10419  .debug_str:00000ba9 .LASF142
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10201  .debug_str:0000055f .LASF143
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10369  .debug_str:00000a3c .LASF144
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10243  .debug_str:00000683 .LASF145
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10313  .debug_str:000008b0 .LASF146
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10461  .debug_str:00000ccd .LASF147
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10261  .debug_str:00000716 .LASF148
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10393  .debug_str:00000ae4 .LASF149
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10099  .debug_str:00000155 .LASF150
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10229  .debug_str:00000612 .LASF151
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10315  .debug_str:000008c8 .LASF152
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10447  .debug_str:00000c7c .LASF153
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10129  .debug_str:00000243 .LASF154
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10165  .debug_str:00000414 .LASF155
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10087  .debug_str:000000ed .LASF160
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1829   .text.can_interrupt_flag_clear:00000000 .LFB175
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1847   .text.can_interrupt_flag_clear:00000012 .LFE175
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10441  .debug_str:00000c4e .LASF157
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10343  .debug_str:00000989 .LASF156
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4361   .debug_loc:00000004 .LLST38
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4356   .debug_loc:00000000 .LVUS38
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10285  .debug_str:000007dc .LASF162
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1785   .text.can_interrupt_flag_get:00000000 .LFB174
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1821   .text.can_interrupt_flag_get:00000028 .LFE174
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4386   .debug_loc:0000002f .LLST35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4381   .debug_loc:0000002b .LVUS35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10455  .debug_str:00000cbb .LASF158
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4411   .debug_loc:0000005a .LLST36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4406   .debug_loc:00000056 .LVUS36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10457  .debug_str:00000cc0 .LASF159
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4439   .debug_loc:00000088 .LLST37
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4434   .debug_loc:00000084 .LVUS37
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10207  .debug_str:00000588 .LASF161
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1761   .text.can_flag_clear:00000000 .LFB173
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1777   .text.can_flag_clear:00000010 .LFE173
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10449  .debug_str:00000c8e .LASF163
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1738   .text.can_flag_get:00000000 .LFB172
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1753   .text.can_flag_get:00000010 .LFE172
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4465   .debug_loc:000000b4 .LLST34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4460   .debug_loc:000000b0 .LVUS34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10249  .debug_str:000006bd .LASF164
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1714   .text.can_interrupt_disable:00000000 .LFB171
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1730   .text.can_interrupt_disable:0000000c .LFE171
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10365  .debug_str:00000a20 .LASF165
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4492   .debug_loc:000000e1 .LLST33
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4485   .debug_loc:000000db .LVUS33
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10423  .debug_str:00000bc9 .LASF166
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1695   .text.can_interrupt_enable:00000000 .LFB170
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1706   .text.can_interrupt_enable:00000008 .LFE170
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10309  .debug_str:0000088c .LASF167
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1671   .text.can_transmit_error_number_get:00000000 .LFB169
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1687   .text.can_transmit_error_number_get:0000000a .LFE169
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 40
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4524   .debug_loc:0000011a .LLST31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4519   .debug_loc:00000116 .LVUS31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4547   .debug_loc:00000143 .LLST32
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4544   .debug_loc:00000141 .LVUS32
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10097  .debug_str:00000138 .LASF168
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1648   .text.can_receive_error_number_get:00000000 .LFB168
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1663   .text.can_receive_error_number_get:00000006 .LFE168
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4563   .debug_loc:0000015e .LLST29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4558   .debug_loc:0000015a .LVUS29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4586   .debug_loc:00000187 .LLST30
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4583   .debug_loc:00000185 .LVUS30
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10293  .debug_str:0000081d .LASF169
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1621   .text.can_error_get:00000000 .LFB167
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1640   .text.can_error_get:00000008 .LFE167
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4602   .debug_loc:000001a2 .LLST27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4597   .debug_loc:0000019e .LVUS27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10311  .debug_str:000008aa .LASF170
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4629   .debug_loc:000001cf .LLST28
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4622   .debug_loc:000001c9 .LVUS28
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10169  .debug_str:00000432 .LASF171
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1571   .text.can_wakeup:00000000 .LFB166
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1613   .text.can_wakeup:00000020 .LFE166
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4656   .debug_loc:00000203 .LLST24
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4651   .debug_loc:000001ff .LVUS24
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4681   .debug_loc:0000022e .LLST25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4676   .debug_loc:0000022a .LVUS25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10403  .debug_str:00000b3e .LASF172
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4707   .debug_loc:0000025a .LLST26
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4702   .debug_loc:00000256 .LVUS26
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10303  .debug_str:0000085d .LASF173
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1429   .text.can_working_mode_set:00000000 .LFB165
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1563   .text.can_working_mode_set:00000078 .LFE165
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4733   .debug_loc:00000287 .LLST22
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4720   .debug_loc:0000027b .LVUS22
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4773   .debug_loc:000002dd .LLST23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4760   .debug_loc:000002d1 .LVUS23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10121  .debug_str:000001fd .LASF174
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1384   .text.can_receive_message_length_get:00000000 .LFB164
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1421   .text.can_receive_message_length_get:00000016 .LFE164
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4815   .debug_loc:00000338 .LLST20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4806   .debug_loc:00000330 .LVUS20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10405  .debug_str:00000b46 .LASF175
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4841   .debug_loc:00000372 .LLST21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4834   .debug_loc:0000036c .LVUS21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10219  .debug_str:000005d7 .LASF176
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1346   .text.can_fifo_release:00000000 .LFB163
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1376   .text.can_fifo_release:0000001e .LFE163
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10073  .debug_str:00000070 .LASF177
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1216   .text.can_message_receive:00000000 .LFB162
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1338   .text.can_message_receive:00000098 .LFE162
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10295  .debug_str:0000082b .LASF178
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10417  .debug_str:00000b93 .LASF179
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1134   .text.can_transmission_stop:00000000 .LFB161
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1208   .text.can_transmission_stop:00000056 .LFE161
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10211  .debug_str:0000059f .LASF180
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10355  .debug_str:000009da .LASF181
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1038   .text.can_transmit_states:00000000 .LFB160
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 41
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1126   .text.can_transmit_states:00000060 .LFE160
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4877   .debug_loc:000003af .LLST18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4858   .debug_loc:0000039d .LVUS18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10415  .debug_str:00000b8d .LASF182
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4969   .debug_loc:0000044e .LLST19
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:4952   .debug_loc:0000043e .LVUS19
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10199  .debug_str:0000054a .LASF183
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:883    .text.can_message_transmit:00000000 .LFB159
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1030   .text.can_message_transmit:000000ce .LFE159
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5026   .debug_loc:000004c7 .LLST16
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5009   .debug_loc:000004b7 .LVUS16
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10183  .debug_str:000004d1 .LASF184
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5084   .debug_loc:0000053d .LLST17
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5079   .debug_loc:00000539 .LVUS17
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10383  .debug_str:00000aad .LASF185
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:844    .text.can_time_trigger_mode_disable:00000000 .LFB158
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:875    .text.can_time_trigger_mode_disable:00000020 .LFE158
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5102   .debug_loc:00000561 .LLST14
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5097   .debug_loc:0000055d .LVUS14
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5124   .debug_loc:0000058a .LLST15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5115   .debug_loc:00000582 .LVUS15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10337  .debug_str:00000956 .LASF186
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:805    .text.can_time_trigger_mode_enable:00000000 .LFB157
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:836    .text.can_time_trigger_mode_enable:00000020 .LFE157
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5180   .debug_loc:000005e2 .LLST12
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5175   .debug_loc:000005de .LVUS12
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5202   .debug_loc:0000060b .LLST13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5193   .debug_loc:00000603 .LVUS13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10215  .debug_str:000005b6 .LASF187
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:768    .text.can_debug_freeze_disable:00000000 .LFB156
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:797    .text.can_debug_freeze_disable:00000026 .LFE156
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5262   .debug_loc:00000667 .LLST11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5253   .debug_loc:0000065f .LVUS11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:789    .text.can_debug_freeze_disable:00000020 .LVL34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10101  .debug_str:0000016b .LASF188
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:732    .text.can_debug_freeze_enable:00000000 .LFB155
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:760    .text.can_debug_freeze_enable:00000024 .LFE155
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5308   .debug_loc:000006b5 .LLST10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5299   .debug_loc:000006ad .LVUS10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:752    .text.can_debug_freeze_enable:0000001e .LVL30
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10273  .debug_str:00000777 .LASF189
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:687    .text.can1_filter_start_bank:00000000 .LFB154
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:724    .text.can1_filter_start_bank:00000030 .LFE154
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10091  .debug_str:00000113 .LASF190
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5350   .debug_loc:000006ff .LLST9
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5345   .debug_loc:000006fb .LVUS9
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10339  .debug_str:00000973 .LASF191
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:512    .text.can_filter_init:00000000 .LFB153
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:679    .text.can_filter_init:000000fa .LFE153
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10345  .debug_str:0000098e .LASF192
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5375   .debug_loc:0000072a .LLST8
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5370   .debug_loc:00000726 .LVUS8
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10127  .debug_str:0000023a .LASF193
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:226    .text.can_init:00000000 .LFB152
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:504    .text.can_init:00000160 .LFE152
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5396   .debug_loc:00000751 .LLST5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5387   .debug_loc:00000749 .LVUS5
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 42
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10435  .debug_str:00000c21 .LASF194
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5426   .debug_loc:0000078f .LLST6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5417   .debug_loc:00000787 .LVUS6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5456   .debug_loc:000007cf .LLST7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5449   .debug_loc:000007c9 .LVUS7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10245  .debug_str:0000069a .LASF195
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:71     .text.can_struct_para_init:00000000 .LFB151
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:218    .text.can_struct_para_init:00000098 .LFE151
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5473   .debug_loc:000007fa .LLST2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10391  .debug_str:00000adf .LASF196
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5509   .debug_loc:0000083e .LLST3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5496   .debug_loc:00000832 .LVUS3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10069  .debug_str:00000059 .LASF197
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5572   .debug_loc:000008ab .LLST4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5563   .debug_loc:000008a3 .LVUS4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:181    .text.can_struct_para_init:00000070 .LVL11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:209    .text.can_struct_para_init:00000092 .LVL14
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10061  .debug_str:00000018 .LASF198
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:15     .text.can_deinit:00000000 .LFB150
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:63     .text.can_deinit:0000003e .LFE150
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5600   .debug_loc:000008e8 .LLST0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5632   .debug_loc:00000928 .LLST1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:5623   .debug_loc:00000920 .LVUS1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:36     .text.can_deinit:0000001c .LVL2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:49     .text.can_deinit:0000002c .LVL3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:58     .text.can_deinit:00000038 .LVL5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10103  .debug_str:00000183 .LASF202
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:10197  .debug_str:00000539 .LASF203
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1828   .text.can_interrupt_flag_clear:00000000 .LVL116
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1837   .text.can_interrupt_flag_clear:00000008 .LVL117
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1784   .text.can_interrupt_flag_get:00000000 .LVL112
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1804   .text.can_interrupt_flag_get:00000010 .LVL115
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1795   .text.can_interrupt_flag_get:00000008 .LVL113
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1799   .text.can_interrupt_flag_get:0000000a .LVL114
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1737   .text.can_flag_get:00000000 .LVL109
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1746   .text.can_flag_get:00000008 .LVL110
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1713   .text.can_interrupt_disable:00000000 .LVL106
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1721   .text.can_interrupt_disable:00000006 .LVL107
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1724   .text.can_interrupt_disable:00000008 .LVL108
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1670   .text.can_transmit_error_number_get:00000000 .LVL102
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1678   .text.can_transmit_error_number_get:00000002 .LVL103
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1682   .text.can_transmit_error_number_get:00000004 .LVL104
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1647   .text.can_receive_error_number_get:00000000 .LVL99
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1655   .text.can_receive_error_number_get:00000002 .LVL100
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1659   .text.can_receive_error_number_get:00000004 .LVL101
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1620   .text.can_error_get:00000000 .LVL95
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1629   .text.can_error_get:00000002 .LVL96
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1633   .text.can_error_get:00000004 .LVL97
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1636   .text.can_error_get:00000006 .LVL98
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1570   .text.can_wakeup:00000000 .LVL90
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1602   .text.can_wakeup:00000016 .LVL93
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1606   .text.can_wakeup:00000018 .LVL94
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1584   .text.can_wakeup:00000008 .LVL91
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1591   .text.can_wakeup:0000000c .LVL92
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1428   .text.can_working_mode_set:00000000 .LVL77
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1472   .text.can_working_mode_set:00000028 .LVL80
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1480   .text.can_working_mode_set:0000002c .LVL82
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 43
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1512   .text.can_working_mode_set:00000046 .LVL85
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1518   .text.can_working_mode_set:0000004e .LVL86
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1525   .text.can_working_mode_set:00000052 .LVL87
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1454   .text.can_working_mode_set:00000016 .LVL78
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1461   .text.can_working_mode_set:0000001a .LVL79
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1476   .text.can_working_mode_set:0000002a .LVL81
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1494   .text.can_working_mode_set:0000003a .LVL83
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1501   .text.can_working_mode_set:0000003e .LVL84
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1541   .text.can_working_mode_set:00000066 .LVL88
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1548   .text.can_working_mode_set:0000006a .LVL89
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1383   .text.can_receive_message_length_get:00000000 .LVL72
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1396   .text.can_receive_message_length_get:00000006 .LVL73
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1406   .text.can_receive_message_length_get:0000000a .LVL75
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1413   .text.can_receive_message_length_get:0000000e .LVL76
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1401   .text.can_receive_message_length_get:00000008 .LVL74
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1037   .text.can_transmit_states:00000000 .LVL55
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1050   .text.can_transmit_states:0000000a .LVL56
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1057   .text.can_transmit_states:00000012 .LVL57
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1068   .text.can_transmit_states:00000022 .LVL59
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1085   .text.can_transmit_states:00000038 .LVL61
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1093   .text.can_transmit_states:00000042 .LVL63
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1098   .text.can_transmit_states:00000044 .LVL64
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1114   .text.can_transmit_states:00000058 .LVL67
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1118   .text.can_transmit_states:0000005a .LVL68
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1063   .text.can_transmit_states:0000001a .LVL58
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1081   .text.can_transmit_states:00000032 .LVL60
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1089   .text.can_transmit_states:0000003c .LVL62
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1106   .text.can_transmit_states:0000004e .LVL65
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1111   .text.can_transmit_states:00000056 .LVL66
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:882    .text.can_message_transmit:00000000 .LVL46
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:906    .text.can_message_transmit:0000001a .LVL47
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:920    .text.can_message_transmit:00000030 .LVL49
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1000   .text.can_message_transmit:000000b2 .LVL50
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1004   .text.can_message_transmit:000000b4 .LVL51
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1007   .text.can_message_transmit:000000b6 .LVL52
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1011   .text.can_message_transmit:000000b8 .LVL53
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1014   .text.can_message_transmit:000000ba .LVL54
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:913    .text.can_message_transmit:00000024 .LVL48
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:843    .text.can_time_trigger_mode_disable:00000000 .LVL41
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:858    .text.can_time_trigger_mode_disable:00000010 .LVL43
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:854    .text.can_time_trigger_mode_disable:00000008 .LVL42
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:866    .text.can_time_trigger_mode_disable:00000018 .LVL44
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:869    .text.can_time_trigger_mode_disable:0000001a .LVL45
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:804    .text.can_time_trigger_mode_enable:00000000 .LVL36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:819    .text.can_time_trigger_mode_enable:00000010 .LVL38
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:815    .text.can_time_trigger_mode_enable:00000008 .LVL37
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:827    .text.can_time_trigger_mode_enable:00000018 .LVL39
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:830    .text.can_time_trigger_mode_enable:0000001a .LVL40
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:767    .text.can_debug_freeze_disable:00000000 .LVL32
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:785    .text.can_debug_freeze_disable:00000018 .LVL33
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:793    .text.can_debug_freeze_disable:00000024 .LVL35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:731    .text.can_debug_freeze_enable:00000000 .LVL28
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:748    .text.can_debug_freeze_enable:00000016 .LVL29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:756    .text.can_debug_freeze_enable:00000022 .LVL31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:686    .text.can1_filter_start_bank:00000000 .LVL26
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:705    .text.can1_filter_start_bank:0000001c .LVL27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:511    .text.can_filter_init:00000000 .LVL24
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 44
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:534    .text.can_filter_init:00000024 .LVL25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:225    .text.can_init:00000000 .LVL15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:247    .text.can_init:00000012 .LVL16
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:460    .text.can_init:00000130 .LVL22
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:466    .text.can_init:00000136 .LVL23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:254    .text.can_init:00000016 .LVL17
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:274    .text.can_init:00000030 .LVL18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:392    .text.can_init:000000c6 .LVL19
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:400    .text.can_init:000000ca .LVL20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:412    .text.can_init:000000d4 .LVL21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:78     .text.can_struct_para_init:00000002 .LCFI3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:134    .text.can_struct_para_init:00000040 .LCFI4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:139    .text.can_struct_para_init:00000042 .LCFI5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:70     .text.can_struct_para_init:00000000 .LVL6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:123    .text.can_struct_para_init:0000003a .LVL7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:137    .text.can_struct_para_init:00000042 .LVL9
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:178    .text.can_struct_para_init:00000068 .LVL10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:200    .text.can_struct_para_init:00000082 .LVL12
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:206    .text.can_struct_para_init:0000008a .LVL13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:131    .text.can_struct_para_init:0000003e .LVL8
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:21     .text.can_deinit:00000002 .LCFI0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:45     .text.can_deinit:00000024 .LCFI1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:51     .text.can_deinit:0000002c .LCFI2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:14     .text.can_deinit:00000000 .LVL0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:33     .text.can_deinit:00000014 .LVL1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:55     .text.can_deinit:00000030 .LVL4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1852   .debug_info:00000000 .Ldebug_info0
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:16     .text.can_deinit:00000000 .LM1
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:18     .text.can_deinit:00000000 .LM2
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:19     .text.can_deinit:00000000 .LM3
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:23     .text.can_deinit:00000002 .LM4
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:25     .text.can_deinit:00000006 .LM5
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:28     .text.can_deinit:00000008 .LM6
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:31     .text.can_deinit:00000010 .LM7
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:34     .text.can_deinit:00000014 .LM8
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:37     .text.can_deinit:0000001c .LM9
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:40     .text.can_deinit:00000020 .LM10
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:47     .text.can_deinit:00000024 .LM11
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:53     .text.can_deinit:0000002c .LM12
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:56     .text.can_deinit:00000030 .LM13
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:59     .text.can_deinit:00000038 .LM14
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:72     .text.can_struct_para_init:00000000 .LM15
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:74     .text.can_struct_para_init:00000000 .LM16
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:75     .text.can_struct_para_init:00000000 .LM17
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:76     .text.can_struct_para_init:00000000 .LM18
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:84     .text.can_struct_para_init:00000006 .LM19
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:86     .text.can_struct_para_init:00000008 .LM20
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:88     .text.can_struct_para_init:0000000a .LM21
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:92     .text.can_struct_para_init:00000014 .LM22
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:93     .text.can_struct_para_init:00000014 .LM23
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:94     .text.can_struct_para_init:00000014 .LM24
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:95     .text.can_struct_para_init:00000014 .LM25
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:96     .text.can_struct_para_init:00000014 .LM26
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:97     .text.can_struct_para_init:00000014 .LM27
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:98     .text.can_struct_para_init:00000014 .LM28
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:99     .text.can_struct_para_init:00000014 .LM29
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:100    .text.can_struct_para_init:00000014 .LM30
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 45
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:101    .text.can_struct_para_init:00000014 .LM31
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:102    .text.can_struct_para_init:00000014 .LM32
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:103    .text.can_struct_para_init:00000014 .LM33
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:106    .text.can_struct_para_init:0000001a .LM34
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:108    .text.can_struct_para_init:0000001e .LM35
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:110    .text.can_struct_para_init:00000022 .LM36
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:112    .text.can_struct_para_init:00000026 .LM37
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:114    .text.can_struct_para_init:0000002a .LM38
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:116    .text.can_struct_para_init:0000002e .LM39
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:118    .text.can_struct_para_init:00000032 .LM40
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:120    .text.can_struct_para_init:00000036 .LM41
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:122    .text.can_struct_para_init:0000003a .LM42
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:125    .text.can_struct_para_init:0000003a .LM43
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:132    .text.can_struct_para_init:0000003e .LM44
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:141    .text.can_struct_para_init:00000042 .LM45
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:145    .text.can_struct_para_init:00000048 .LM46
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:146    .text.can_struct_para_init:00000048 .LM47
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:147    .text.can_struct_para_init:00000048 .LM48
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:150    .text.can_struct_para_init:0000004a .LM49
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:151    .text.can_struct_para_init:0000004a .LM50
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:152    .text.can_struct_para_init:0000004a .LM51
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:153    .text.can_struct_para_init:0000004a .LM52
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:154    .text.can_struct_para_init:0000004a .LM53
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:155    .text.can_struct_para_init:0000004a .LM54
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:156    .text.can_struct_para_init:0000004a .LM55
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:157    .text.can_struct_para_init:0000004a .LM56
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:158    .text.can_struct_para_init:0000004a .LM57
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:159    .text.can_struct_para_init:0000004a .LM58
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:161    .text.can_struct_para_init:0000004c .LM59
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:163    .text.can_struct_para_init:00000050 .LM60
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:165    .text.can_struct_para_init:00000054 .LM61
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:167    .text.can_struct_para_init:00000058 .LM62
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:169    .text.can_struct_para_init:0000005a .LM63
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:171    .text.can_struct_para_init:0000005e .LM64
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:174    .text.can_struct_para_init:00000060 .LM65
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:179    .text.can_struct_para_init:00000068 .LM66
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:182    .text.can_struct_para_init:00000070 .LM67
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:183    .text.can_struct_para_init:00000070 .LM68
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:184    .text.can_struct_para_init:00000070 .LM69
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:185    .text.can_struct_para_init:00000070 .LM70
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:186    .text.can_struct_para_init:00000070 .LM71
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:188    .text.can_struct_para_init:00000070 .LM72
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:189    .text.can_struct_para_init:00000070 .LM73
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:190    .text.can_struct_para_init:00000070 .LM74
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:192    .text.can_struct_para_init:00000074 .LM75
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:194    .text.can_struct_para_init:00000078 .LM76
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:196    .text.can_struct_para_init:0000007c .LM77
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:198    .text.can_struct_para_init:00000080 .LM78
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:202    .text.can_struct_para_init:00000082 .LM79
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:207    .text.can_struct_para_init:0000008a .LM80
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:210    .text.can_struct_para_init:00000092 .LM81
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:211    .text.can_struct_para_init:00000092 .LM82
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:212    .text.can_struct_para_init:00000092 .LM83
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:213    .text.can_struct_para_init:00000092 .LM84
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:214    .text.can_struct_para_init:00000092 .LM85
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:227    .text.can_init:00000000 .LM86
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:229    .text.can_init:00000000 .LM87
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 46
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:230    .text.can_init:00000000 .LM88
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:231    .text.can_init:00000000 .LM89
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:232    .text.can_init:00000000 .LM90
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:234    .text.can_init:00000002 .LM91
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:236    .text.can_init:00000004 .LM92
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:239    .text.can_init:00000008 .LM93
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:241    .text.can_init:0000000a .LM94
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:244    .text.can_init:00000010 .LM95
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:245    .text.can_init:00000010 .LM96
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:249    .text.can_init:00000012 .LM97
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:250    .text.can_init:00000012 .LM98
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:252    .text.can_init:00000014 .LM99
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:255    .text.can_init:00000016 .LM100
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:256    .text.can_init:00000016 .LM101
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:258    .text.can_init:0000001a .LM102
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:264    .text.can_init:00000026 .LM103
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:265    .text.can_init:00000026 .LM104
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:267    .text.can_init:00000028 .LM105
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:269    .text.can_init:0000002a .LM106
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:271    .text.can_init:0000002c .LM107
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:272    .text.can_init:0000002c .LM108
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:275    .text.can_init:00000030 .LM109
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:277    .text.can_init:00000034 .LM110
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:279    .text.can_init:00000036 .LM111
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:282    .text.can_init:0000003a .LM112
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:284    .text.can_init:0000003c .LM113
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:286    .text.can_init:0000003e .LM114
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:289    .text.can_init:00000044 .LM115
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:291    .text.can_init:00000046 .LM116
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:295    .text.can_init:0000004e .LM117
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:297    .text.can_init:00000050 .LM118
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:301    .text.can_init:0000005a .LM119
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:303    .text.can_init:0000005c .LM120
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:305    .text.can_init:0000005e .LM121
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:307    .text.can_init:00000060 .LM122
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:308    .text.can_init:00000060 .LM123
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:311    .text.can_init:00000066 .LM124
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:313    .text.can_init:00000068 .LM125
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:316    .text.can_init:0000006c .LM126
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:318    .text.can_init:0000006e .LM127
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:320    .text.can_init:00000070 .LM128
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:321    .text.can_init:00000070 .LM129
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:324    .text.can_init:00000076 .LM130
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:326    .text.can_init:00000078 .LM131
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:329    .text.can_init:0000007c .LM132
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:331    .text.can_init:0000007e .LM133
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:333    .text.can_init:00000080 .LM134
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:334    .text.can_init:00000080 .LM135
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:337    .text.can_init:00000086 .LM136
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:339    .text.can_init:00000088 .LM137
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:342    .text.can_init:0000008c .LM138
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:344    .text.can_init:0000008e .LM139
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:346    .text.can_init:00000090 .LM140
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:347    .text.can_init:00000090 .LM141
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:350    .text.can_init:00000096 .LM142
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:352    .text.can_init:00000098 .LM143
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:355    .text.can_init:0000009c .LM144
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 47
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:357    .text.can_init:0000009e .LM145
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:359    .text.can_init:000000a0 .LM146
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:360    .text.can_init:000000a0 .LM147
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:363    .text.can_init:000000a6 .LM148
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:365    .text.can_init:000000a8 .LM149
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:368    .text.can_init:000000ac .LM150
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:370    .text.can_init:000000ae .LM151
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:372    .text.can_init:000000b0 .LM152
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:373    .text.can_init:000000b0 .LM153
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:376    .text.can_init:000000b6 .LM154
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:378    .text.can_init:000000b8 .LM155
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:381    .text.can_init:000000bc .LM156
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:383    .text.can_init:000000be .LM157
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:384    .text.can_init:000000be .LM158
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:386    .text.can_init:000000c0 .LM159
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:388    .text.can_init:000000c2 .LM160
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:391    .text.can_init:000000c6 .LM161
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:393    .text.can_init:000000c6 .LM162
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:395    .text.can_init:000000c6 .LM163
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:396    .text.can_init:000000c6 .LM164
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:398    .text.can_init:000000c8 .LM165
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:401    .text.can_init:000000ca .LM166
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:402    .text.can_init:000000ca .LM167
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:404    .text.can_init:000000cc .LM168
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:406    .text.can_init:000000ce .LM169
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:409    .text.can_init:000000d0 .LM170
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:410    .text.can_init:000000d0 .LM171
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:414    .text.can_init:000000d4 .LM172
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:416    .text.can_init:000000d8 .LM173
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:418    .text.can_init:000000dc .LM174
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:420    .text.can_init:000000e0 .LM175
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:422    .text.can_init:000000e4 .LM176
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:424    .text.can_init:000000e8 .LM177
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:426    .text.can_init:000000ec .LM178
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:428    .text.can_init:000000f0 .LM179
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:430    .text.can_init:000000f4 .LM180
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:432    .text.can_init:000000f8 .LM181
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:434    .text.can_init:000000fc .LM182
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:436    .text.can_init:00000100 .LM183
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:438    .text.can_init:00000104 .LM184
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:440    .text.can_init:00000108 .LM185
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:442    .text.can_init:0000010c .LM186
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:444    .text.can_init:00000110 .LM187
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:446    .text.can_init:00000114 .LM188
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:448    .text.can_init:00000118 .LM189
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:450    .text.can_init:0000011c .LM190
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:452    .text.can_init:00000120 .LM191
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:454    .text.can_init:00000124 .LM192
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:456    .text.can_init:00000128 .LM193
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:458    .text.can_init:0000012c .LM194
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:461    .text.can_init:00000130 .LM195
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:463    .text.can_init:00000134 .LM196
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:464    .text.can_init:00000134 .LM197
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:468    .text.can_init:00000136 .LM198
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:469    .text.can_init:00000136 .LM199
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:474    .text.can_init:0000013e .LM200
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:475    .text.can_init:0000013e .LM201
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 48
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:480    .text.can_init:00000146 .LM202
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:481    .text.can_init:00000146 .LM203
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:486    .text.can_init:0000014e .LM204
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:487    .text.can_init:0000014e .LM205
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:492    .text.can_init:00000154 .LM206
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:493    .text.can_init:00000154 .LM207
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:498    .text.can_init:0000015a .LM208
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:499    .text.can_init:0000015a .LM209
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:513    .text.can_filter_init:00000000 .LM210
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:515    .text.can_filter_init:00000000 .LM211
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:516    .text.can_filter_init:00000000 .LM212
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:517    .text.can_filter_init:00000000 .LM213
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:521    .text.can_filter_init:0000000a .LM214
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:523    .text.can_filter_init:0000000c .LM215
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:525    .text.can_filter_init:00000010 .LM216
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:528    .text.can_filter_init:00000016 .LM217
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:532    .text.can_filter_init:00000020 .LM218
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:535    .text.can_filter_init:00000024 .LM219
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:536    .text.can_filter_init:00000024 .LM220
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:537    .text.can_filter_init:00000024 .LM221
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:539    .text.can_filter_init:00000028 .LM222
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:542    .text.can_filter_init:0000002c .LM223
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:543    .text.can_filter_init:0000002c .LM224
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:545    .text.can_filter_init:00000030 .LM225
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:547    .text.can_filter_init:00000032 .LM226
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:551    .text.can_filter_init:0000003c .LM227
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:554    .text.can_filter_init:00000040 .LM228
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:558    .text.can_filter_init:0000004a .LM229
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:560    .text.can_filter_init:0000004e .LM230
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:562    .text.can_filter_init:00000052 .LM231
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:564    .text.can_filter_init:00000054 .LM232
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:566    .text.can_filter_init:00000056 .LM233
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:568    .text.can_filter_init:00000058 .LM234
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:570    .text.can_filter_init:0000005a .LM235
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:571    .text.can_filter_init:0000005a .LM236
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:573    .text.can_filter_init:0000005e .LM237
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:575    .text.can_filter_init:00000062 .LM238
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:578    .text.can_filter_init:00000064 .LM239
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:580    .text.can_filter_init:00000066 .LM240
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:583    .text.can_filter_init:00000068 .LM241
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:584    .text.can_filter_init:00000068 .LM242
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:589    .text.can_filter_init:00000076 .LM243
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:591    .text.can_filter_init:00000078 .LM244
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:594    .text.can_filter_init:0000007a .LM245
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:596    .text.can_filter_init:0000007c .LM246
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:597    .text.can_filter_init:0000007c .LM247
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:602    .text.can_filter_init:0000008a .LM248
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:604    .text.can_filter_init:0000008c .LM249
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:607    .text.can_filter_init:0000008e .LM250
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:609    .text.can_filter_init:00000090 .LM251
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:610    .text.can_filter_init:00000090 .LM252
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:614    .text.can_filter_init:00000098 .LM253
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:618    .text.can_filter_init:000000a2 .LM254
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:622    .text.can_filter_init:000000a6 .LM255
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:623    .text.can_filter_init:000000a6 .LM256
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:629    .text.can_filter_init:000000b4 .LM257
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:632    .text.can_filter_init:000000b6 .LM258
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 49
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:633    .text.can_filter_init:000000b6 .LM259
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:635    .text.can_filter_init:000000ba .LM260
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:639    .text.can_filter_init:000000c4 .LM261
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:642    .text.can_filter_init:000000c8 .LM262
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:646    .text.can_filter_init:000000d2 .LM263
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:648    .text.can_filter_init:000000d6 .LM264
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:650    .text.can_filter_init:000000da .LM265
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:652    .text.can_filter_init:000000dc .LM266
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:654    .text.can_filter_init:000000de .LM267
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:656    .text.can_filter_init:000000e0 .LM268
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:658    .text.can_filter_init:000000e2 .LM269
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:659    .text.can_filter_init:000000e2 .LM270
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:661    .text.can_filter_init:000000e6 .LM271
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:663    .text.can_filter_init:000000ea .LM272
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:667    .text.can_filter_init:000000ee .LM273
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:669    .text.can_filter_init:000000f0 .LM274
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:673    .text.can_filter_init:000000f4 .LM275
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:675    .text.can_filter_init:000000f6 .LM276
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:688    .text.can1_filter_start_bank:00000000 .LM277
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:690    .text.can1_filter_start_bank:00000000 .LM278
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:694    .text.can1_filter_start_bank:0000000a .LM279
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:697    .text.can1_filter_start_bank:00000010 .LM280
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:700    .text.can1_filter_start_bank:00000016 .LM281
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:701    .text.can1_filter_start_bank:00000016 .LM282
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:703    .text.can1_filter_start_bank:00000018 .LM283
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:706    .text.can1_filter_start_bank:0000001c .LM284
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:708    .text.can1_filter_start_bank:0000001e .LM285
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:711    .text.can1_filter_start_bank:00000022 .LM286
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:713    .text.can1_filter_start_bank:00000024 .LM287
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:716    .text.can1_filter_start_bank:00000028 .LM288
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:717    .text.can1_filter_start_bank:00000028 .LM289
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:721    .text.can1_filter_start_bank:0000002e .LM290
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:733    .text.can_debug_freeze_enable:00000000 .LM291
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:735    .text.can_debug_freeze_enable:00000000 .LM292
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:737    .text.can_debug_freeze_enable:00000002 .LM293
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:741    .text.can_debug_freeze_enable:00000008 .LM294
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:742    .text.can_debug_freeze_enable:00000008 .LM295
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:746    .text.can_debug_freeze_enable:00000014 .LM296
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:750    .text.can_debug_freeze_enable:00000016 .LM297
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:754    .text.can_debug_freeze_enable:0000001e .LM298
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:757    .text.can_debug_freeze_enable:00000022 .LM299
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:769    .text.can_debug_freeze_disable:00000000 .LM300
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:771    .text.can_debug_freeze_disable:00000000 .LM301
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:772    .text.can_debug_freeze_disable:00000000 .LM302
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:778    .text.can_debug_freeze_disable:0000000a .LM303
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:779    .text.can_debug_freeze_disable:0000000a .LM304
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:783    .text.can_debug_freeze_disable:00000016 .LM305
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:787    .text.can_debug_freeze_disable:00000018 .LM306
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:791    .text.can_debug_freeze_disable:00000020 .LM307
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:794    .text.can_debug_freeze_disable:00000024 .LM308
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:806    .text.can_time_trigger_mode_enable:00000000 .LM309
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:808    .text.can_time_trigger_mode_enable:00000000 .LM310
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:809    .text.can_time_trigger_mode_enable:00000000 .LM311
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:811    .text.can_time_trigger_mode_enable:00000002 .LM312
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:814    .text.can_time_trigger_mode_enable:00000008 .LM313
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:816    .text.can_time_trigger_mode_enable:00000008 .LM314
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:821    .text.can_time_trigger_mode_enable:00000010 .LM315
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 50
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:823    .text.can_time_trigger_mode_enable:00000012 .LM316
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:826    .text.can_time_trigger_mode_enable:00000018 .LM317
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:828    .text.can_time_trigger_mode_enable:00000018 .LM318
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:831    .text.can_time_trigger_mode_enable:0000001a .LM319
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:833    .text.can_time_trigger_mode_enable:0000001e .LM320
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:845    .text.can_time_trigger_mode_disable:00000000 .LM321
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:847    .text.can_time_trigger_mode_disable:00000000 .LM322
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:848    .text.can_time_trigger_mode_disable:00000000 .LM323
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:849    .text.can_time_trigger_mode_disable:00000000 .LM324
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:853    .text.can_time_trigger_mode_disable:00000008 .LM325
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:855    .text.can_time_trigger_mode_disable:00000008 .LM326
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:860    .text.can_time_trigger_mode_disable:00000010 .LM327
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:861    .text.can_time_trigger_mode_disable:00000010 .LM328
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:865    .text.can_time_trigger_mode_disable:00000018 .LM329
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:867    .text.can_time_trigger_mode_disable:00000018 .LM330
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:870    .text.can_time_trigger_mode_disable:0000001a .LM331
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:872    .text.can_time_trigger_mode_disable:0000001e .LM332
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:884    .text.can_message_transmit:00000000 .LM333
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:886    .text.can_message_transmit:00000000 .LM334
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:887    .text.can_message_transmit:00000000 .LM335
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:888    .text.can_message_transmit:00000000 .LM336
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:890    .text.can_message_transmit:00000002 .LM337
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:892    .text.can_message_transmit:00000004 .LM338
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:895    .text.can_message_transmit:0000000c .LM339
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:896    .text.can_message_transmit:0000000c .LM340
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:898    .text.can_message_transmit:0000000e .LM341
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:901    .text.can_message_transmit:00000016 .LM342
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:902    .text.can_message_transmit:00000016 .LM343
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:904    .text.can_message_transmit:00000018 .LM344
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:907    .text.can_message_transmit:0000001a .LM345
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:910    .text.can_message_transmit:00000022 .LM346
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:914    .text.can_message_transmit:00000024 .LM347
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:915    .text.can_message_transmit:00000024 .LM348
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:921    .text.can_message_transmit:00000030 .LM349
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:924    .text.can_message_transmit:00000034 .LM350
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:925    .text.can_message_transmit:00000034 .LM351
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:927    .text.can_message_transmit:00000038 .LM352
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:929    .text.can_message_transmit:0000003c .LM353
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:931    .text.can_message_transmit:0000003e .LM354
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:932    .text.can_message_transmit:0000003e .LM355
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:934    .text.can_message_transmit:00000040 .LM356
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:936    .text.can_message_transmit:00000042 .LM357
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:938    .text.can_message_transmit:00000044 .LM358
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:940    .text.can_message_transmit:00000048 .LM359
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:943    .text.can_message_transmit:0000004a .LM360
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:945    .text.can_message_transmit:0000004c .LM361
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:946    .text.can_message_transmit:0000004c .LM362
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:951    .text.can_message_transmit:00000056 .LM363
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:953    .text.can_message_transmit:0000005a .LM364
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:955    .text.can_message_transmit:0000005e .LM365
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:958    .text.can_message_transmit:00000064 .LM366
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:959    .text.can_message_transmit:00000064 .LM367
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:970    .text.can_message_transmit:00000080 .LM368
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:972    .text.can_message_transmit:00000084 .LM369
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:974    .text.can_message_transmit:00000086 .LM370
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:975    .text.can_message_transmit:00000086 .LM371
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:978    .text.can_message_transmit:0000008e .LM372
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 51
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:980    .text.can_message_transmit:00000092 .LM373
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:989    .text.can_message_transmit:000000a6 .LM374
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:991    .text.can_message_transmit:000000a8 .LM375
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:993    .text.can_message_transmit:000000aa .LM376
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:996    .text.can_message_transmit:000000b0 .LM377
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:998    .text.can_message_transmit:000000b0 .LM378
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1002   .text.can_message_transmit:000000b2 .LM379
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1005   .text.can_message_transmit:000000b4 .LM380
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1009   .text.can_message_transmit:000000b6 .LM381
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1012   .text.can_message_transmit:000000b8 .LM382
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1016   .text.can_message_transmit:000000ba .LM383
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1017   .text.can_message_transmit:000000ba .LM384
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1019   .text.can_message_transmit:000000bc .LM385
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1021   .text.can_message_transmit:000000c0 .LM386
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1023   .text.can_message_transmit:000000c2 .LM387
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1026   .text.can_message_transmit:000000c8 .LM388
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1039   .text.can_transmit_states:00000000 .LM389
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1041   .text.can_transmit_states:00000000 .LM390
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1042   .text.can_transmit_states:00000000 .LM391
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1043   .text.can_transmit_states:00000000 .LM392
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1045   .text.can_transmit_states:00000002 .LM393
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1047   .text.can_transmit_states:00000004 .LM394
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1051   .text.can_transmit_states:0000000a .LM395
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1054   .text.can_transmit_states:00000010 .LM396
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1055   .text.can_transmit_states:00000010 .LM397
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1058   .text.can_transmit_states:00000012 .LM398
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1062   .text.can_transmit_states:0000001a .LM399
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1064   .text.can_transmit_states:0000001a .LM400
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1070   .text.can_transmit_states:00000022 .LM401
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1071   .text.can_transmit_states:00000022 .LM402
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1073   .text.can_transmit_states:00000024 .LM403
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1076   .text.can_transmit_states:0000002c .LM404
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1078   .text.can_transmit_states:00000030 .LM405
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1080   .text.can_transmit_states:00000032 .LM406
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1082   .text.can_transmit_states:00000032 .LM407
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1087   .text.can_transmit_states:00000038 .LM408
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1090   .text.can_transmit_states:0000003c .LM409
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1095   .text.can_transmit_states:00000042 .LM410
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1096   .text.can_transmit_states:00000042 .LM411
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1099   .text.can_transmit_states:00000044 .LM412
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1101   .text.can_transmit_states:00000048 .LM413
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1103   .text.can_transmit_states:0000004c .LM414
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1105   .text.can_transmit_states:0000004e .LM415
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1107   .text.can_transmit_states:0000004e .LM416
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1112   .text.can_transmit_states:00000056 .LM417
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1116   .text.can_transmit_states:00000058 .LM418
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1120   .text.can_transmit_states:0000005a .LM419
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1123   .text.can_transmit_states:0000005e .LM420
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1135   .text.can_transmission_stop:00000000 .LM421
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1137   .text.can_transmission_stop:00000000 .LM422
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1138   .text.can_transmission_stop:00000000 .LM423
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1140   .text.can_transmission_stop:00000002 .LM424
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1143   .text.can_transmission_stop:00000008 .LM425
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1146   .text.can_transmission_stop:0000000e .LM426
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1148   .text.can_transmission_stop:0000000e .LM427
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1149   .text.can_transmission_stop:0000000e .LM428
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1150   .text.can_transmission_stop:0000000e .LM429
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 52
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1152   .text.can_transmission_stop:00000010 .LM430
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1154   .text.can_transmission_stop:00000014 .LM431
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1158   .text.can_transmission_stop:00000018 .LM432
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1159   .text.can_transmission_stop:00000018 .LM433
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1162   .text.can_transmission_stop:0000001e .LM434
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1164   .text.can_transmission_stop:00000020 .LM435
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1166   .text.can_transmission_stop:00000022 .LM436
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1168   .text.can_transmission_stop:00000026 .LM437
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1171   .text.can_transmission_stop:0000002a .LM438
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1173   .text.can_transmission_stop:0000002a .LM439
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1174   .text.can_transmission_stop:0000002a .LM440
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1175   .text.can_transmission_stop:0000002a .LM441
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1177   .text.can_transmission_stop:0000002c .LM442
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1182   .text.can_transmission_stop:00000036 .LM443
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1183   .text.can_transmission_stop:00000036 .LM444
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1186   .text.can_transmission_stop:0000003c .LM445
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1188   .text.can_transmission_stop:0000003e .LM446
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1190   .text.can_transmission_stop:00000042 .LM447
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1192   .text.can_transmission_stop:00000046 .LM448
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1195   .text.can_transmission_stop:0000004a .LM449
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1197   .text.can_transmission_stop:0000004a .LM450
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1198   .text.can_transmission_stop:0000004a .LM451
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1199   .text.can_transmission_stop:0000004a .LM452
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1201   .text.can_transmission_stop:0000004c .LM453
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1205   .text.can_transmission_stop:00000054 .LM454
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1217   .text.can_message_receive:00000000 .LM455
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1219   .text.can_message_receive:00000000 .LM456
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1220   .text.can_message_receive:00000000 .LM457
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1225   .text.can_message_receive:0000000c .LM458
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1227   .text.can_message_receive:0000000e .LM459
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1229   .text.can_message_receive:00000012 .LM460
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1230   .text.can_message_receive:00000012 .LM461
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1232   .text.can_message_receive:00000014 .LM462
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1233   .text.can_message_receive:00000014 .LM463
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1235   .text.can_message_receive:00000016 .LM464
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1237   .text.can_message_receive:00000018 .LM465
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1240   .text.can_message_receive:0000001a .LM466
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1241   .text.can_message_receive:0000001a .LM467
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1243   .text.can_message_receive:0000001c .LM468
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1245   .text.can_message_receive:00000020 .LM469
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1247   .text.can_message_receive:00000022 .LM470
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1249   .text.can_message_receive:00000026 .LM471
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1250   .text.can_message_receive:00000026 .LM472
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1253   .text.can_message_receive:0000002a .LM473
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1255   .text.can_message_receive:0000002e .LM474
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1256   .text.can_message_receive:0000002e .LM475
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1258   .text.can_message_receive:00000030 .LM476
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1260   .text.can_message_receive:00000032 .LM477
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1262   .text.can_message_receive:00000036 .LM478
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1263   .text.can_message_receive:00000036 .LM479
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1266   .text.can_message_receive:0000003c .LM480
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1268   .text.can_message_receive:00000040 .LM481
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1270   .text.can_message_receive:00000044 .LM482
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1271   .text.can_message_receive:00000044 .LM483
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1274   .text.can_message_receive:00000048 .LM484
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1276   .text.can_message_receive:0000004c .LM485
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1277   .text.can_message_receive:0000004c .LM486
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 53
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1280   .text.can_message_receive:00000050 .LM487
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1282   .text.can_message_receive:00000054 .LM488
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1283   .text.can_message_receive:00000054 .LM489
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1286   .text.can_message_receive:00000058 .LM490
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1288   .text.can_message_receive:0000005c .LM491
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1289   .text.can_message_receive:0000005c .LM492
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1291   .text.can_message_receive:0000005e .LM493
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1293   .text.can_message_receive:00000062 .LM494
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1294   .text.can_message_receive:00000062 .LM495
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1297   .text.can_message_receive:00000066 .LM496
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1299   .text.can_message_receive:0000006a .LM497
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1300   .text.can_message_receive:0000006a .LM498
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1303   .text.can_message_receive:0000006e .LM499
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1305   .text.can_message_receive:00000072 .LM500
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1306   .text.can_message_receive:00000072 .LM501
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1309   .text.can_message_receive:00000076 .LM502
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1311   .text.can_message_receive:0000007a .LM503
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1312   .text.can_message_receive:0000007a .LM504
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1314   .text.can_message_receive:0000007c .LM505
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1316   .text.can_message_receive:0000007e .LM506
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1321   .text.can_message_receive:00000086 .LM507
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1322   .text.can_message_receive:00000086 .LM508
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1324   .text.can_message_receive:00000088 .LM509
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1326   .text.can_message_receive:0000008a .LM510
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1330   .text.can_message_receive:0000008e .LM511
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1332   .text.can_message_receive:00000090 .LM512
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1335   .text.can_message_receive:00000096 .LM513
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1347   .text.can_fifo_release:00000000 .LM514
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1349   .text.can_fifo_release:00000000 .LM515
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1350   .text.can_fifo_release:00000000 .LM516
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1352   .text.can_fifo_release:00000002 .LM517
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1354   .text.can_fifo_release:00000004 .LM518
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1359   .text.can_fifo_release:0000000c .LM519
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1360   .text.can_fifo_release:0000000c .LM520
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1363   .text.can_fifo_release:00000012 .LM521
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1365   .text.can_fifo_release:00000014 .LM522
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1368   .text.can_fifo_release:0000001a .LM523
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1371   .text.can_fifo_release:0000001c .LM524
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1372   .text.can_fifo_release:0000001c .LM525
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1373   .text.can_fifo_release:0000001c .LM526
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1385   .text.can_receive_message_length_get:00000000 .LM527
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1387   .text.can_receive_message_length_get:00000000 .LM528
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1388   .text.can_receive_message_length_get:00000000 .LM529
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1389   .text.can_receive_message_length_get:00000000 .LM530
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1391   .text.can_receive_message_length_get:00000002 .LM531
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1393   .text.can_receive_message_length_get:00000004 .LM532
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1394   .text.can_receive_message_length_get:00000004 .LM533
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1398   .text.can_receive_message_length_get:00000006 .LM534
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1402   .text.can_receive_message_length_get:00000008 .LM535
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1403   .text.can_receive_message_length_get:00000008 .LM536
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1404   .text.can_receive_message_length_get:00000008 .LM537
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1408   .text.can_receive_message_length_get:0000000a .LM538
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1409   .text.can_receive_message_length_get:0000000a .LM539
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1411   .text.can_receive_message_length_get:0000000c .LM540
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1414   .text.can_receive_message_length_get:0000000e .LM541
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1416   .text.can_receive_message_length_get:00000012 .LM542
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1417   .text.can_receive_message_length_get:00000012 .LM543
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 54
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1430   .text.can_working_mode_set:00000000 .LM544
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1432   .text.can_working_mode_set:00000000 .LM545
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1433   .text.can_working_mode_set:00000000 .LM546
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1434   .text.can_working_mode_set:00000000 .LM547
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1435   .text.can_working_mode_set:00000000 .LM548
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1437   .text.can_working_mode_set:00000002 .LM549
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1439   .text.can_working_mode_set:00000004 .LM550
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1441   .text.can_working_mode_set:00000008 .LM551
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1442   .text.can_working_mode_set:00000008 .LM552
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1446   .text.can_working_mode_set:0000000e .LM553
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1448   .text.can_working_mode_set:00000010 .LM554
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1451   .text.can_working_mode_set:00000014 .LM555
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1452   .text.can_working_mode_set:00000014 .LM556
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1456   .text.can_working_mode_set:00000016 .LM557
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1457   .text.can_working_mode_set:00000016 .LM558
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1459   .text.can_working_mode_set:00000018 .LM559
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1462   .text.can_working_mode_set:0000001a .LM560
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1463   .text.can_working_mode_set:0000001a .LM561
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1469   .text.can_working_mode_set:00000026 .LM562
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1470   .text.can_working_mode_set:00000026 .LM563
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1474   .text.can_working_mode_set:00000028 .LM564
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1478   .text.can_working_mode_set:0000002a .LM565
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1482   .text.can_working_mode_set:0000002c .LM566
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1483   .text.can_working_mode_set:0000002c .LM567
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1486   .text.can_working_mode_set:00000032 .LM568
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1487   .text.can_working_mode_set:00000032 .LM569
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1491   .text.can_working_mode_set:00000038 .LM570
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1492   .text.can_working_mode_set:00000038 .LM571
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1496   .text.can_working_mode_set:0000003a .LM572
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1497   .text.can_working_mode_set:0000003a .LM573
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1499   .text.can_working_mode_set:0000003c .LM574
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1502   .text.can_working_mode_set:0000003e .LM575
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1503   .text.can_working_mode_set:0000003e .LM576
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1505   .text.can_working_mode_set:00000040 .LM577
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1509   .text.can_working_mode_set:00000044 .LM578
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1510   .text.can_working_mode_set:00000044 .LM579
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1513   .text.can_working_mode_set:00000046 .LM580
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1515   .text.can_working_mode_set:00000048 .LM581
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1520   .text.can_working_mode_set:0000004e .LM582
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1521   .text.can_working_mode_set:0000004e .LM583
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1523   .text.can_working_mode_set:00000050 .LM584
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1526   .text.can_working_mode_set:00000052 .LM585
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1528   .text.can_working_mode_set:00000056 .LM586
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1529   .text.can_working_mode_set:00000056 .LM587
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1533   .text.can_working_mode_set:0000005c .LM588
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1535   .text.can_working_mode_set:0000005e .LM589
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1538   .text.can_working_mode_set:00000064 .LM590
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1539   .text.can_working_mode_set:00000064 .LM591
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1543   .text.can_working_mode_set:00000066 .LM592
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1544   .text.can_working_mode_set:00000066 .LM593
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1546   .text.can_working_mode_set:00000068 .LM594
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1549   .text.can_working_mode_set:0000006a .LM595
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1552   .text.can_working_mode_set:0000006e .LM596
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1556   .text.can_working_mode_set:00000072 .LM597
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1557   .text.can_working_mode_set:00000072 .LM598
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1559   .text.can_working_mode_set:00000074 .LM599
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1572   .text.can_wakeup:00000000 .LM600
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 55
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1574   .text.can_wakeup:00000000 .LM601
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1575   .text.can_wakeup:00000000 .LM602
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1576   .text.can_wakeup:00000000 .LM603
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1577   .text.can_wakeup:00000000 .LM604
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1581   .text.can_wakeup:00000006 .LM605
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1582   .text.can_wakeup:00000006 .LM606
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1586   .text.can_wakeup:00000008 .LM607
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1587   .text.can_wakeup:00000008 .LM608
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1589   .text.can_wakeup:0000000a .LM609
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1592   .text.can_wakeup:0000000c .LM610
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1594   .text.can_wakeup:0000000e .LM611
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1599   .text.can_wakeup:00000014 .LM612
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1600   .text.can_wakeup:00000014 .LM613
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1603   .text.can_wakeup:00000016 .LM614
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1604   .text.can_wakeup:00000016 .LM615
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1607   .text.can_wakeup:00000018 .LM616
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1609   .text.can_wakeup:0000001a .LM617
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1622   .text.can_error_get:00000000 .LM618
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1624   .text.can_error_get:00000000 .LM619
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1625   .text.can_error_get:00000000 .LM620
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1626   .text.can_error_get:00000000 .LM621
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1627   .text.can_error_get:00000000 .LM622
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1630   .text.can_error_get:00000002 .LM623
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1631   .text.can_error_get:00000002 .LM624
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1634   .text.can_error_get:00000004 .LM625
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1637   .text.can_error_get:00000006 .LM626
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1649   .text.can_receive_error_number_get:00000000 .LM627
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1651   .text.can_receive_error_number_get:00000000 .LM628
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1652   .text.can_receive_error_number_get:00000000 .LM629
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1653   .text.can_receive_error_number_get:00000000 .LM630
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1656   .text.can_receive_error_number_get:00000002 .LM631
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1657   .text.can_receive_error_number_get:00000002 .LM632
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1660   .text.can_receive_error_number_get:00000004 .LM633
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1672   .text.can_transmit_error_number_get:00000000 .LM634
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1674   .text.can_transmit_error_number_get:00000000 .LM635
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1675   .text.can_transmit_error_number_get:00000000 .LM636
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1676   .text.can_transmit_error_number_get:00000000 .LM637
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1679   .text.can_transmit_error_number_get:00000002 .LM638
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1680   .text.can_transmit_error_number_get:00000002 .LM639
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1683   .text.can_transmit_error_number_get:00000004 .LM640
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1696   .text.can_interrupt_enable:00000000 .LM641
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1698   .text.can_interrupt_enable:00000000 .LM642
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1700   .text.can_interrupt_enable:00000002 .LM643
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1703   .text.can_interrupt_enable:00000006 .LM644
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1715   .text.can_interrupt_disable:00000000 .LM645
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1717   .text.can_interrupt_disable:00000000 .LM646
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1719   .text.can_interrupt_disable:00000002 .LM647
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1722   .text.can_interrupt_disable:00000006 .LM648
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1725   .text.can_interrupt_disable:00000008 .LM649
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1727   .text.can_interrupt_disable:0000000a .LM650
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1739   .text.can_flag_get:00000000 .LM651
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1741   .text.can_flag_get:00000000 .LM652
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1742   .text.can_flag_get:00000000 .LM653
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1747   .text.can_flag_get:00000008 .LM654
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1749   .text.can_flag_get:0000000c .LM655
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1762   .text.can_flag_clear:00000000 .LM656
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1764   .text.can_flag_clear:00000000 .LM657
+GAS LISTING C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s 			page 56
+
+
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1766   .text.can_flag_clear:00000004 .LM658
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1768   .text.can_flag_clear:00000006 .LM659
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1770   .text.can_flag_clear:00000008 .LM660
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1772   .text.can_flag_clear:0000000c .LM661
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1774   .text.can_flag_clear:0000000e .LM662
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1786   .text.can_interrupt_flag_get:00000000 .LM663
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1788   .text.can_interrupt_flag_get:00000000 .LM664
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1789   .text.can_interrupt_flag_get:00000000 .LM665
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1790   .text.can_interrupt_flag_get:00000000 .LM666
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1791   .text.can_interrupt_flag_get:00000000 .LM667
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1796   .text.can_interrupt_flag_get:00000008 .LM668
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1797   .text.can_interrupt_flag_get:00000008 .LM669
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1800   .text.can_interrupt_flag_get:0000000a .LM670
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1801   .text.can_interrupt_flag_get:0000000a .LM671
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1805   .text.can_interrupt_flag_get:00000010 .LM672
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1807   .text.can_interrupt_flag_get:00000014 .LM673
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1809   .text.can_interrupt_flag_get:00000018 .LM674
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1811   .text.can_interrupt_flag_get:0000001a .LM675
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1813   .text.can_interrupt_flag_get:0000001c .LM676
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1815   .text.can_interrupt_flag_get:00000020 .LM677
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1817   .text.can_interrupt_flag_get:00000024 .LM678
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1830   .text.can_interrupt_flag_clear:00000000 .LM679
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1832   .text.can_interrupt_flag_clear:00000000 .LM680
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1834   .text.can_interrupt_flag_clear:00000004 .LM681
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1838   .text.can_interrupt_flag_clear:00000008 .LM682
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1840   .text.can_interrupt_flag_clear:0000000a .LM683
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1842   .text.can_interrupt_flag_clear:0000000e .LM684
+C:\Users\Administrator\AppData\Local\Temp\ccMy0Drd.s:1844   .text.can_interrupt_flag_clear:00000010 .LM685
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable
+memset
+dbg_periph_enable
+dbg_periph_disable
