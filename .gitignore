@@ -1,0 +1,76 @@
+# ============================================================
+# 椒苗智护 / SimulationEvent_2
+# GD32VF103 RISC-V + OpenHarmony LiteOS-M
+# 根目录忽略规则
+# ============================================================
+
+# ---------- 编译产物：目标文件与依赖 ----------
+*.o
+*.obj
+*.d
+*.a
+*.su
+
+# ---------- 可执行与固件镜像 ----------
+*.elf
+*.bin
+*.hex
+*.exe
+*.out
+
+# ---------- 调试与符号信息 ----------
+*.map
+*.lst
+*.dasm
+*.sym
+*.gcno
+*.gcda
+*.gcov
+
+# ---------- 临时 / 编辑器备份文件 ----------
+*~
+*.bak
+*.orig
+*.rej
+*.tmp
+*.swp
+*.swo
+
+# ---------- 构建与生成目录 ----------
+# 注意：build/ 目前已被 Git 跟踪（你选择连编译产物一起上传），
+# 因此下面这行对已跟踪文件不会生效。若将来想让 Git 不再跟踪它：
+#   git rm -r --cached build
+# 再提交一次即可。注意历史里的内容不会因此变小。
+build/
+
+# ---------- 工具链与 IDE ----------
+# 如果希望共享调试配置，可改为忽略 .vscode/* 但保留 launch.json
+.vscode/
+.idea/
+*.uvguix.*
+*.uvoptx
+*.uvprojx
+DebugConfig/
+RTE/
+JLinkLog.txt
+JLinkSettings.ini
+openocd*.log
+
+# ---------- 操作系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Python（仓库内有 .ps1 辅助脚本，保留 Python 相关规则）----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---------- 本地私有配置 ----------
+# 以下文件只存在于本机，不应上传
+.local/
+*.local
+secrets.*
+.env
+.env.*
